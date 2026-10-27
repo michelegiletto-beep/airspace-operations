@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/michelegiletto-beep/airspace-operations",
+  "release_source_commit": "921996c4db20c449b21dcd03bd21f438911eed62",
+  "full_suite_tested_code_commit": "de73be4567a30492c25f5689a4ff80f4d6cee3e3",
+  "subsequent_change": "Dataset-card metadata only; uniqueness check passed after fast-forward",
+  "commands": [
+    "git clone --depth 1 https://github.com/michelegiletto-beep/airspace-operations.git runtime/public-source-verification",
+    "python scripts/prepare_corpus.py",
+    "uv sync --frozen --extra dev",
+    ".venv/Scripts/python.exe -m pytest -q",
+    "git pull --ff-only",
+    "Dataset-card unique metadata validation"
+  ],
+  "result": {
+    "passed": 136,
+    "skipped": 1,
+    "failed": 0,
+    "seconds": 60.86,
+    "skip_reason": "Original licensed XML ZIP not bundled; actual upstream ZIP checks separately recorded"
+  },
+  "state": "Independently Retrieved",
+  "clean_environment": true
+}

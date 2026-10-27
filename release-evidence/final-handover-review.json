@@ -1,0 +1,77 @@
+{
+  "reviewed_at": "2026-10-27T19:10:24.175294+00:00",
+  "scope": "Final handover, publication metadata, source summary, release errata and supporting reports; no product code, frozen ZIP or source tag changed; no software suite rerun",
+  "documents_reviewed": [
+    "HANDOVER.md",
+    "SOURCE_REGISTER.md",
+    "RELEASE_ERRATA.md",
+    "publication/status.json",
+    "docs/model-card.md",
+    "docs/dataset-card.md",
+    "docs/domain-rules.md",
+    "docs/known-limitations.md"
+  ],
+  "checks": {
+    "markdown_local_links_resolve": true,
+    "publication_evidence_paths_exist": true,
+    "reviewed_json_parses": true,
+    "no_package_credential_patterns_matched": true,
+    "source_register_and_erratum_present": true,
+    "frozen_zip_identity_matches_status": true,
+    "model_weights_match_public_retrieval_digest": true,
+    "neural_claim_counts_match_run": true,
+    "stable_and_operational_acceptance_remain_false": true
+  },
+  "scanned_files": 59,
+  "secret_scan": {
+    "pattern_source": "scripts/package_release.py:SECRET_PATTERNS",
+    "matching_files": [],
+    "interpretation": "Bounded credential-pattern heuristic plus document provenance review; not a guarantee of absence of every secret or personal datum"
+  },
+  "missing_local_markdown_targets": [],
+  "invalid_json_files": [],
+  "claim_evidence": {
+    "local_tests": "137 passed; release-evidence/final-python-tests.txt",
+    "statement_coverage_percent": 74.93472584856397,
+    "exact_archive_tests": "136 passed,1 skipped,0 failed; release-evidence/standalone-archive-verification.json",
+    "frontend": "27 tests in7suites; frontend-tests.json; build evidence includes tsc -b",
+    "neural": "81.82% agreement on77 machine labels; deterministic baseline100%; experimental/not promoted; manifest and cards consistent",
+    "publication": "All5 configured destinations have independently retrieved evidence; this review checked those saved reports and did not repeat external downloads"
+  },
+  "corrections": [
+    {
+      "id": "DOC-001",
+      "issue": "Local source folder described as the product repository although the published release tag is not in its parent site checkout",
+      "resolution": "HANDOVER now says local product source directory; public tagged identity remains supported by saved release evidence"
+    },
+    {
+      "id": "DOC-002",
+      "issue": "Required named SOURCE_REGISTER.md missing from frozen ZIP",
+      "resolution": "Post-release summary and explicit HANDOVER/RELEASE_ERRATA disclosure; frozen ZIP and tag unchanged"
+    },
+    {
+      "id": "DOC-003",
+      "issue": "Broad catalogue EUR-Lex error could be read as every registered original individually fetched",
+      "resolution": "HANDOVER identifies only the three executed original-text attempts and two fresh EASA monitor checks; source summary distinguishes registered/retrieved/validated"
+    },
+    {
+      "id": "DOC-004",
+      "issue": "Frozen capability ingestion-evidence path sources/checks does not exist",
+      "resolution": "RELEASE_ERRATA points to actual isolated-source-parser.json and registered-monitor-real-check.json; frozen matrix unchanged"
+    },
+    {
+      "id": "DOC-005",
+      "issue": "Initial domain note identifies OR-Tools9.14.6206 while frozen lock/clean install use9.15.6755",
+      "resolution": "Current domain note and release errata distinguish early verification and locked release versions"
+    }
+  ],
+  "open_release_boundaries": [
+    "Full original specification incomplete",
+    "Stable release and operational deployment blocked",
+    "Actual PostgreSQL/container verification unexecuted",
+    "Qualified national/source and aviation acceptance outstanding",
+    "No accepted live operational feed or provider integration",
+    "Frozen release retains disclosed documentation errata"
+  ],
+  "outcome": "Passed document/evidence consistency review with disclosed frozen-release documentation errata"
+}

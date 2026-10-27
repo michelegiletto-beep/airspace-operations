@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-27T19:03:49.367679+00:00",
+  "state": "Independently Retrieved",
+  "authenticated_read": false,
+  "site_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+  "page_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+  "page_status": 200,
+  "home_link_verified": true,
+  "release_links_verified": true,
+  "download_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/System-Lab-Airspace-Operations-0.1.0-rc.1.zip",
+  "bytes": 2090705,
+  "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+  "matches_frozen_release": true,
+  "site_source_commit": "bb9ffcd968917e28ab085bcf098abeb417fa8147",
+  "version_number": 94,
+  "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_9c84a6f5f2088191a6ae7ac5f3bea44f",
+  "deployment_id": "appgdep_6ae0f566f8608191a87ff00bb5b9f5eb",
+  "deployment_status": "succeeded",
+  "operational_instance_published": false
+}

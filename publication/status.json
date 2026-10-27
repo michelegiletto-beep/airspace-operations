@@ -1,0 +1,57 @@
+{
+  "release": "0.1.0-rc.1",
+  "release_kind": "Engineering candidate",
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "frozen_release_sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+  "frozen_release_bytes": 2090705,
+  "destinations": [
+    {
+      "destination": "GitHub source",
+      "verified_account": "michelegiletto-beep",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations",
+      "release_commit": "921996c4db20c449b21dcd03bd21f438911eed62",
+      "state": "Independently Retrieved",
+      "evidence": "release-evidence/github-clean-source-verification.json"
+    },
+    {
+      "destination": "GitHub prerelease",
+      "verified_account": "michelegiletto-beep",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.1.0-rc.1",
+      "state": "Independently Retrieved",
+      "evidence": "release-evidence/github-release-public-verification.json"
+    },
+    {
+      "destination": "Hugging Face trained experimental model",
+      "verified_account": "Magic51",
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+      "revision": "ef543cdc76eb2850d49a8a1d9f5647922364a787",
+      "state": "Independently Retrieved",
+      "evidence": "release-evidence/huggingface-model-public-verification.json"
+    },
+    {
+      "destination": "Hugging Face machine-annotated source dataset",
+      "verified_account": "Magic51",
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+      "revision": "7ba43eed1c5bc0cc368fb78b1d046a3a1675a0aa",
+      "state": "Independently Retrieved",
+      "evidence": "release-evidence/huggingface-dataset-public-verification.json"
+    },
+    {
+      "destination": "Existing System Lab public website",
+      "role": "owner",
+      "audience": "public, unchanged",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "version_number": 94,
+      "source_commit": "bb9ffcd968917e28ab085bcf098abeb417fa8147",
+      "state": "Independently Retrieved",
+      "evidence": "release-evidence/system-lab-public-verification.json"
+    }
+  ],
+  "states_reached": ["Prepared", "Uploaded", "Published", "Independently Retrieved"],
+  "publication_access_blockers": [],
+  "not_published": ["Operational tenant data", "Uncleared source archives", "Pretrained third-party model weights", "Private credentials", "Hugging Face Space"],
+  "assurance_and_implementation_gaps": "See capabilities.json, REQUIREMENTS_TRACEABILITY.csv and docs/known-limitations.md. Publication does not close those gates.",
+  "release_note": "Post-release verification and handover files may be added on main. The v0.1.0-rc.1 tag and its frozen ZIP are not changed by those documentation additions."
+}

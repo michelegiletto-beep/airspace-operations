@@ -1,0 +1,11 @@
+{
+  "dataset": "Magic51/system-lab-airspace-source-annotations",
+  "revision": "7ba43eed1c5bc0cc368fb78b1d046a3a1675a0aa",
+  "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+  "download_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/7ba43eed1c5bc0cc368fb78b1d046a3a1675a0aa/dataset.jsonl.gz",
+  "compressed_bytes": 72466,
+  "rows": 288,
+  "uncompressed_sha256": "4dfc9580f3997ddf0d8c8cd72ca188409b786fd5127a11ba0ddcd4c4d6a04260",
+  "matches_actual_experiment": true,
+  "state": "Independently Retrieved"
+}
