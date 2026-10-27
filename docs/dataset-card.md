@@ -3,8 +3,6 @@ language: en
 license: other
 license_name: easa-eu-legal-text-reuse-with-attribution
 license_link: https://www.easa.europa.eu/en/copyright-disclaimer
-license_name: acknowledged-easa-and-eu-legal-text-reuse
-license_link: https://www.easa.europa.eu/en/copyright-disclaimer
 task_categories:
   - text-classification
 pretty_name: System Lab source-linked explicit-language annotations
