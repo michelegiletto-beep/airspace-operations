@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-27T18:16:39.394536+00:00",
+  "environment": "Local Windows process / SQLite / isolated empty organisation; real permitted regulatory corpus",
+  "health_seconds": {
+    "n": 30,
+    "median": 0.005824149993713945,
+    "p95": 0.006745399965438992
+  },
+  "lexical_retrieval_seconds": {
+    "n": 5,
+    "median": 0.911786500015296,
+    "max": 1.0725572999799624
+  },
+  "meaning": "Engineering latency probe, no production capacity or SLO acceptance claim"
+}

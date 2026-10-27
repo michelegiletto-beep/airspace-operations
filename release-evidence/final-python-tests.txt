@@ -1,0 +1,52 @@
+........................................................................ [ 52%]
+.................................................................        [100%]
+============================== warnings summary ===============================
+tests/test_change_jobs.py::test_source_change_creates_transitive_owned_review_tasks_without_overwrite
+  C:\Python313\Lib\weakref.py:414: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x000001AE5EBC06D0>
+    def __getitem__(self, key):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_change_jobs.py::test_source_change_creates_transitive_owned_review_tasks_without_overwrite
+  C:\Python313\Lib\weakref.py:414: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x000001AE5EDBDE40>
+    def __getitem__(self, key):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_change_jobs.py::test_source_change_creates_transitive_owned_review_tasks_without_overwrite
+  C:\Python313\Lib\weakref.py:414: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x000001AE5EBC07C0>
+    def __getitem__(self, key):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_monitoring_api.py::test_mission_aircraft_binding_is_enforced
+  C:\Users\gilet\Documents\ChatGPT\SYSTEM LABS\products\airspace-operations\.venv\Lib\site-packages\sqlalchemy\sql\cache_key.py:1031: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x000001AE5EE8F880>
+    tuple(
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.1-final-0 _______________
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+backend\airspace\__init__.py         1      0   100%
+backend\airspace\api.py            450    116    74%
+backend\airspace\cli.py            124    124     0%
+backend\airspace\evidence.py        82     13    84%
+backend\airspace\identity.py        77     25    68%
+backend\airspace\inference.py       39     39     0%
+backend\airspace\monitoring.py      92      5    95%
+backend\airspace\neural.py         157     93    41%
+backend\airspace\operations.py     471     41    91%
+backend\airspace\planning.py       167     25    85%
+backend\airspace\regulatory.py     404     96    76%
+backend\airspace\scheduler.py      397     48    88%
+backend\airspace\storage.py         85     16    81%
+backend\airspace\worker.py          88     13    85%
+backend\airspace\workflows.py       47     18    62%
+----------------------------------------------------
+TOTAL                             2681    672    75%
+Coverage JSON written to file release-evidence/coverage.json
+137 passed, 4 warnings in 100.39s (0:01:40)

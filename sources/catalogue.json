@@ -1,0 +1,551 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-27",
+  "sources": [
+    {
+      "id": "eu-2018-1139",
+      "title": "Regulation (EU) 2018/1139 \u2014 Common rules in civil aviation",
+      "issuer": "European Union",
+      "canonical_identifier": "eu-2018-1139",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "binding_legislation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1139",
+      "version": "OJ original 32018R1139; amendments require reconciliation",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": "2018-09-11",
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "EU legal-document reuse; source attribution required",
+        "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+        "redistribution": "EU legal text only; third-party content excluded",
+        "attribution": "\u00a9 European Union, https://eur-lex.europa.eu, 1998\u20132026"
+      },
+      "topics": [
+        "uas",
+        "operations"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved",
+      "last_check_error": "HTTP 202 challenge returned by EUR-Lex; not accepted as legal text"
+    },
+    {
+      "id": "eu-2019-947",
+      "title": "Regulation (EU) 2019/947 \u2014 Rules and procedures for operation of unmanned aircraft",
+      "issuer": "European Union",
+      "canonical_identifier": "eu-2019-947",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "binding_legislation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0947",
+      "version": "OJ original 32019R0947; amendments require reconciliation",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": "2020-12-31",
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "EU legal-document reuse; source attribution required",
+        "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+        "redistribution": "EU legal text only; third-party content excluded",
+        "attribution": "\u00a9 European Union, https://eur-lex.europa.eu, 1998\u20132026"
+      },
+      "topics": [
+        "uas",
+        "operations"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved",
+      "last_check_error": "HTTP 202 challenge returned by EUR-Lex; not accepted as legal text"
+    },
+    {
+      "id": "eu-2019-945",
+      "title": "Regulation (EU) 2019/945 \u2014 UAS and third-country operators of UAS",
+      "issuer": "European Union",
+      "canonical_identifier": "eu-2019-945",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "binding_legislation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0945",
+      "version": "OJ original 32019R0945; amendments require reconciliation",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "EU legal-document reuse; source attribution required",
+        "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+        "redistribution": "EU legal text only; third-party content excluded",
+        "attribution": "\u00a9 European Union, https://eur-lex.europa.eu, 1998\u20132026"
+      },
+      "topics": [
+        "uas",
+        "operations"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved",
+      "last_check_error": "HTTP 202 challenge returned by EUR-Lex; not accepted as legal text"
+    },
+    {
+      "id": "eu-2021-664",
+      "title": "Regulation (EU) 2021/664 \u2014 Regulatory framework for U-space",
+      "issuer": "European Union",
+      "canonical_identifier": "eu-2021-664",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "binding_legislation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32021R0664",
+      "version": "OJ original 32021R0664; amendments require reconciliation",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": "2023-01-26",
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "EU legal-document reuse; source attribution required",
+        "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+        "redistribution": "EU legal text only; third-party content excluded",
+        "attribution": "\u00a9 European Union, https://eur-lex.europa.eu, 1998\u20132026"
+      },
+      "topics": [
+        "uas",
+        "u-space"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved",
+      "last_check_error": "HTTP 202 challenge returned by EUR-Lex; not accepted as legal text"
+    },
+    {
+      "id": "eu-2021-665",
+      "title": "Regulation (EU) 2021/665 \u2014 Requirements for ATM/ANS and U-space",
+      "issuer": "European Union",
+      "canonical_identifier": "eu-2021-665",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "binding_legislation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32021R0665",
+      "version": "OJ original 32021R0665; amendments require reconciliation",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "EU legal-document reuse; source attribution required",
+        "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+        "redistribution": "EU legal text only; third-party content excluded",
+        "attribution": "\u00a9 European Union, https://eur-lex.europa.eu, 1998\u20132026"
+      },
+      "topics": [
+        "uas",
+        "u-space"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved",
+      "last_check_error": "HTTP 202 challenge returned by EUR-Lex; not accepted as legal text"
+    },
+    {
+      "id": "eu-2021-666",
+      "title": "Regulation (EU) 2021/666 \u2014 Rules of the air and U-space",
+      "issuer": "European Union",
+      "canonical_identifier": "eu-2021-666",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "binding_legislation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32021R0666",
+      "version": "OJ original 32021R0666; amendments require reconciliation",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "EU legal-document reuse; source attribution required",
+        "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+        "redistribution": "EU legal text only; third-party content excluded",
+        "attribution": "\u00a9 European Union, https://eur-lex.europa.eu, 1998\u20132026"
+      },
+      "topics": [
+        "uas",
+        "u-space"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved",
+      "last_check_error": "HTTP 202 challenge returned by EUR-Lex; not accepted as legal text"
+    },
+    {
+      "id": "easa-ear-uas-2026",
+      "title": "Easy Access Rules for UAS \u2014 June 2026",
+      "issuer": "EASA",
+      "canonical_identifier": "easa-ear-uas-2026",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "guidance",
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-unmanned-aircraft-systems",
+      "version": "June 2026",
+      "publication_date": "2026-06-30",
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "sora-2.5",
+        "amc",
+        "gm",
+        "pdra",
+        "sts",
+        "luc"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Retrieved",
+      "last_successful_check": "2026-10-27T17:50:11.312045+00:00",
+      "checksum": "21429d5b9c5afe174a00fc90da3acbf837ac6a657cc248a9e9fc551370b738f4",
+      "passage_count": 100
+    },
+    {
+      "id": "easa-uas-register",
+      "title": "UAS regulations register",
+      "issuer": "EASA",
+      "canonical_identifier": "easa-uas-register",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "official_information",
+      "url": "https://www.easa.europa.eu/en/regulations/unmanned-aircraft-systems-uas",
+      "version": "retrieval snapshot",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "currentness",
+        "amendments"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Retrieved",
+      "last_successful_check": "2026-10-27T17:50:35.973104+00:00",
+      "checksum": "543995ccb21270921438f50dd14d3fc954095666dcb270f0591259149fadd394",
+      "passage_count": 49
+    },
+    {
+      "id": "easa-decision-2025-018r",
+      "title": "ED Decision 2025/018/R and corrigendum",
+      "issuer": "EASA",
+      "canonical_identifier": "easa-decision-2025-018r",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "amc",
+      "url": "https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2025018r",
+      "version": "Issue 1 Amendment 4; corrigendum must be reconciled",
+      "publication_date": "2025-09-29",
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "sora-2.5"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved"
+    },
+    {
+      "id": "easa-uspace-register",
+      "title": "U-space regulations register",
+      "issuer": "EASA",
+      "canonical_identifier": "easa-uspace-register",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "official_information",
+      "url": "https://www.easa.europa.eu/en/regulations/u-space",
+      "version": "retrieval snapshot",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "u-space",
+        "part-is"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved"
+    },
+    {
+      "id": "lu-dac-sora",
+      "title": "DAC SORA application guidance",
+      "issuer": "Luxembourg Directorate of Civil Aviation",
+      "canonical_identifier": "lu-dac-sora",
+      "jurisdiction": "LU",
+      "language": "en",
+      "legal_status": "national_procedure",
+      "url": "https://dac.gouvernement.lu/en/drones/drones-let-me-fly/categorie-specifique/sora.html",
+      "version": "page last updated 2024-10-21",
+      "publication_date": "2024-10-21",
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "sora",
+        "application",
+        "air-risk"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Retrieved",
+      "last_successful_check": "2026-10-27T17:50:37.029351+00:00",
+      "checksum": "3dcb8fa597b8c4d8a6310679524c7fa4140298e0c00d9f26c09c5bebb5295943",
+      "passage_count": 86
+    },
+    {
+      "id": "it-enac-specific",
+      "title": "Specific category",
+      "issuer": "ENAC",
+      "canonical_identifier": "it-enac-specific",
+      "jurisdiction": "IT",
+      "language": "it",
+      "legal_status": "national_procedure",
+      "url": "https://www.enac.gov.it/sicurezza-aerea/droni/categoria-specifica-specific-category",
+      "version": "page displays 2024-05-14; later warning present",
+      "publication_date": "2024-05-14",
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "sts",
+        "luc",
+        "authorisation",
+        "remote-id"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved"
+    },
+    {
+      "id": "it-enac-authorisation",
+      "title": "Operational authorisation procedure",
+      "issuer": "ENAC",
+      "canonical_identifier": "it-enac-authorisation",
+      "jurisdiction": "IT",
+      "language": "it",
+      "legal_status": "national_procedure",
+      "url": "https://www.enac.gov.it/sicurezza-aerea/droni/categoria-specifica-specific-category/autorizzazione-operativa/",
+      "version": "page updated 2026-08-14",
+      "publication_date": "2026-08-14",
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "application",
+        "bvlos",
+        "pdra",
+        "cross-border"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Retrieved",
+      "last_successful_check": "2026-10-27T17:50:38.751180+00:00",
+      "checksum": "b0b7dafb7a6f4070bdf321e4128d2262225e41191ca6c4c116b5ff0d651b9edb",
+      "passage_count": 25
+    },
+    {
+      "id": "it-enac-forms",
+      "title": "UAS application forms",
+      "issuer": "ENAC",
+      "canonical_identifier": "it-enac-forms",
+      "jurisdiction": "IT",
+      "language": "it",
+      "legal_status": "national_procedure",
+      "url": "https://www.enac.gov.it/sicurezza-aerea/droni/modulistica-droni/",
+      "version": "page updated 2026-08-14",
+      "publication_date": "2026-08-14",
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "application"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved"
+    },
+    {
+      "id": "eurocontrol-ead",
+      "title": "EAD access and permitted use",
+      "issuer": "EUROCONTROL",
+      "canonical_identifier": "eurocontrol-ead",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "official_information",
+      "url": "https://www.eurocontrol.int/service/european-ais-database",
+      "version": "retrieval snapshot",
+      "publication_date": null,
+      "entry_into_force_date": null,
+      "valid_from": null,
+      "valid_to": null,
+      "temporal_status": "unverified",
+      "licence": {
+        "status": "Requires rights review before redistribution or training",
+        "url": null,
+        "redistribution": "not_cleared",
+        "attribution": null
+      },
+      "topics": [
+        "licensing",
+        "aeronautical-information"
+      ],
+      "amendment_relationships": [],
+      "coverage_status": "Registered \u2014 Requires retrieval and domain review",
+      "download_status": "Not Retrieved"
+    },
+    {
+      "id": "easa-uas-xml-2026",
+      "title": "EASA UAS structured XML consolidation",
+      "issuer": "EASA",
+      "canonical_identifier": "easa-uas-xml-2026",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "mixed_consolidation",
+      "url": "https://www.easa.europa.eu/en/downloads/137111/en",
+      "version": "June 2026",
+      "publication_date": "2026-06-30",
+      "entry_into_force_date": null,
+      "valid_from": "2026-10-27",
+      "valid_to": "2026-10-28",
+      "temporal_status": "snapshot_only",
+      "licence": {
+        "status": "Reproduction authorised with acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "download_status": "Retrieved and Parsed",
+      "checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "xml_checksum": "2ad52b86dc27bd7e5a721df68dedc66de32a07232b5584f95b04e1f5bf82d317",
+      "last_successful_check": "2026-10-27T17:52:51.434645+00:00",
+      "passage_count": 7512,
+      "amendment_relationships": [
+        "Commission Implementing Regulation (EU) 2021/1166",
+        "ED Decision 2019/021/R",
+        "ED Decision 2020/022/R",
+        "ED Decision 2022/002/R",
+        "ED Decision 2023/012/R",
+        "ED Decision 2025/018/R",
+        "Regulation (EU) 2019/945",
+        "Regulation (EU) 2019/947",
+        "Regulation (EU) 2020/1058",
+        "Regulation (EU) 2020/639",
+        "Regulation (EU) 2020/746",
+        "Regulation (EU) 2022/425",
+        "Regulation (EU) 2024/1108",
+        "Regulation (EU) 2024/1110"
+      ],
+      "coverage_status": "Requires Domain Review; date applicability not promoted",
+      "topics": [
+        "UAS",
+        "SORA 2.5 and retained SORA 2.0"
+      ]
+    },
+    {
+      "id": "easa-uspace-xml-2024",
+      "title": "EASA U-space structured XML consolidation",
+      "issuer": "EASA",
+      "canonical_identifier": "easa-uspace-xml-2024",
+      "jurisdiction": "EU",
+      "language": "en",
+      "legal_status": "mixed_consolidation",
+      "url": "https://www.easa.europa.eu/en/downloads/139565/en",
+      "version": "May 2024",
+      "publication_date": "2024-05-29",
+      "entry_into_force_date": null,
+      "valid_from": "2026-10-27",
+      "valid_to": "2026-10-28",
+      "temporal_status": "snapshot_only",
+      "licence": {
+        "status": "Reproduction authorised with acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "download_status": "Retrieved and Parsed",
+      "checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+      "xml_checksum": "208b51fbced27c97738428c31d4d768c2bb09e1cb1d6605c4d1f0a5aa0d4ef13",
+      "last_successful_check": "2026-10-27T17:53:02.106845+00:00",
+      "passage_count": 2321,
+      "amendment_relationships": [
+        "ED Decision 2022/022/R",
+        "Implementing Regulation (EU) 2021/664",
+        "Implementing Regulation (EU) 2023/203"
+      ],
+      "coverage_status": "Requires Domain Review; date applicability not promoted",
+      "topics": [
+        "U-space",
+        "Part-IS 2023/203"
+      ]
+    }
+  ]
+}

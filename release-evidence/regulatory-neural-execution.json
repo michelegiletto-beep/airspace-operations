@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-27",
+  "execution_environment": "Windows PowerShell; project .venv/Scripts/python.exe; command paths shown product-relative",
+  "commands": [
+    {
+      "command": "python scripts/ingest_regulatory.py --source eu-2019-947 --source eu-2019-945 --source eu-2021-664 --source easa-ear-uas-2026 --source easa-uas-register --source lu-dac-sora --source it-enac-authorisation",
+      "exit_code": 1,
+      "outcome": "EUR-Lex HTTP202 rejected; EASA page retrieved; Windows subprocess Unicode issue subsequently fixed"
+    },
+    {
+      "command": "python scripts/ingest_regulatory.py --source easa-uas-register --source lu-dac-sora --source it-enac-authorisation",
+      "exit_code": 0,
+      "outcome": "Three official pages retrieved and parsed after isolated-parser JSON encoding repair"
+    },
+    {
+      "command": "python scripts/import_easa_xml.py",
+      "exit_code": 0,
+      "outcome": "Actual June2026 structured UAS archive retrieved and parsed; subsequent parser regression repairs retain short/repeated rows"
+    },
+    {
+      "command": "python scripts/import_easa_xml.py --url https://www.easa.europa.eu/en/downloads/139565/en --source-id easa-uspace-xml-2024 --edition \"May 2024\"",
+      "exit_code": 0,
+      "outcome": "Actual U-space structured archive retrieved and parsed"
+    },
+    {
+      "command": "python scripts/prepare_neural.py",
+      "exit_code": 0,
+      "outcome": "Pinned encoder, reranker and small-teacher safetensors downloaded; no remote code"
+    },
+    {
+      "command": "python scripts/prepare_neural.py --component teacher-base",
+      "exit_code": 0,
+      "outcome": "Pinned Apache-2.0 base teacher downloaded"
+    },
+    {
+      "command": "python scripts/train_neural.py --device cuda --per-family 96",
+      "exit_code": 1,
+      "outcome": "Run1 blocked: all288 teacher outputs failed schema validation; no training claimed"
+    },
+    {
+      "command": "python scripts/train_neural.py --device cuda --per-family 96 --run-id explicit-obligation-20261027-2",
+      "exit_code": 1,
+      "outcome": "Run2 blocked: insufficient accepted label diversity; no training claimed"
+    },
+    {
+      "command": "python scripts/train_neural.py --device cuda --per-family 96 --run-id explicit-obligation-20261027-3 --teacher-component teacher-base",
+      "exit_code": 1,
+      "outcome": "Run3 blocked: insufficient accepted label diversity; no training claimed"
+    },
+    {
+      "command": "python scripts/train_neural.py --device cuda --per-family 96 --run-id explicit-shall-20261027-4 --teacher-component teacher-base",
+      "exit_code": 0,
+      "outcome": "Narrow explicit-language task: actual student training, validation architecture selection and heldout machine-agreement evaluation completed"
+    },
+    {
+      "command": "python scripts/evaluate_retrieval.py --device cuda",
+      "exit_code": 0,
+      "outcome": "Eight exact primary-source section-title target proxy evaluations; lexical/hybrid/reranked all recalled expected section@5"
+    },
+    {
+      "command": "python scripts/verify_neural.py",
+      "exit_code": 0,
+      "outcome": "CPU actual-source heldout batch inference executed"
+    },
+    {
+      "command": "python -m pytest tests/test_regulatory.py tests/test_neural.py -q",
+      "exit_code": 0,
+      "outcome": "25 passed in0.59sec; full stdout in regulatory-neural-tests.json"
+    }
+  ],
+  "diagnostics": "Additional local model prompt diagnostics used real selected passages. They are not training runs or expert validation.",
+  "training_scope_decision": "Semantic obligation teachers failed measured gates. Narrow literal-shall reviewer-routing experiment was completed with machine labels. It is experimental and fails to beat deterministic routing; semantic obligation extraction remains unvalidated."
+}

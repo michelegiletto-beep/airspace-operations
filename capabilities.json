@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0",
+  "release": "0.1.0-rc.1",
+  "stable_release": false,
+  "features": [
+    {
+      "capability": "Tenant identity, role enforcement and isolation",
+      "status": "Verified",
+      "implementation": "identity.py;api.py",
+      "evidence": "tests/test_api.py;tests/test_security_workflows.py",
+      "limitation": "SQLite software tests; live enterprise OIDC requires acceptance"
+    },
+    {
+      "capability": "Independent review and configured second reviewer",
+      "status": "Verified",
+      "implementation": "workflows.py;api.py",
+      "evidence": "tests/test_security_workflows.py;tests/test_security_review.py",
+      "limitation": "Internal electronic approval; no qualified signature claim"
+    },
+    {
+      "capability": "Controlled records, version history and case exports",
+      "status": "Verified",
+      "implementation": "api.py;evidence.py",
+      "evidence": "tests/test_api.py;tests/test_security_workflows.py",
+      "limitation": "Full route-specific authority package templates remain incomplete"
+    },
+    {
+      "capability": "Content-addressed evidence attachment integrity",
+      "status": "Verified",
+      "implementation": "evidence.py",
+      "evidence": "tests/test_security_review.py",
+      "limitation": "1MB per upload; object-store backup is separate"
+    },
+    {
+      "capability": "HMAC audit chain and SQLite restoration",
+      "status": "Verified",
+      "implementation": "storage.py;cli.py",
+      "evidence": "tests/test_api.py",
+      "limitation": "Requires private key and off-host checkpoint; not immutable storage"
+    },
+    {
+      "capability": "PostgreSQL/PostGIS/pgvector deployment",
+      "status": "Implemented",
+      "implementation": "compose.yaml;deploy/database.Dockerfile;migrations",
+      "evidence": "SQL dialect generation only",
+      "limitation": "Docker/PostgreSQL unavailable here; extensions and production queries not executed"
+    },
+    {
+      "capability": "Primary-source downloads and structured ingestion",
+      "status": "Verified",
+      "implementation": "regulatory.py;scripts/import_easa_xml.py",
+      "evidence": "release-evidence/isolated-source-parser.json;sources/checks",
+      "limitation": "Direct EUR-Lex requests blocked; no complete legal coverage"
+    },
+    {
+      "capability": "EU regulatory foundation currentness reconciliation",
+      "status": "Requires Domain Review",
+      "implementation": "sources/catalogue.json;sources/corpus.json",
+      "evidence": "SOURCE_REGISTER.md;docs/regulatory-coverage.md",
+      "limitation": "9,833 extracted passages; snapshot-only temporal coverage"
+    },
+    {
+      "capability": "Luxembourg deeply validated country pack",
+      "status": "Requires Domain Review",
+      "implementation": "sources/catalogue.json",
+      "evidence": "sources/coverage.json",
+      "limitation": "Published DAC material retrieved; current SORA and national reconciliation incomplete"
+    },
+    {
+      "capability": "Italy deeply validated country pack",
+      "status": "Requires Domain Review",
+      "implementation": "sources/catalogue.json",
+      "evidence": "sources/coverage.json",
+      "limitation": "ENAC material retrieved; national procedures/geozones/conditions not fully validated"
+    },
+    {
+      "capability": "Filtered lexical, pretrained embedding and reranked retrieval",
+      "status": "Verified",
+      "implementation": "regulatory.py;neural.py",
+      "evidence": "tests/test_regulatory.py;release-evidence/retrieval-evaluation.json",
+      "limitation": "Eight real title-target proxy queries; no legal-QA accuracy claim"
+    },
+    {
+      "capability": "Historical and future legal applicability conclusions",
+      "status": "Not Implemented",
+      "implementation": "regulatory.py date filters abstain",
+      "evidence": "tests/test_regulatory.py",
+      "limitation": "Verified historical/applicability corpus absent; fail closed"
+    },
+    {
+      "capability": "Source-grounded autonomous regulatory interpretation",
+      "status": "Not Implemented",
+      "implementation": "source_answer returns quotations and review requirement",
+      "evidence": "tests/test_regulatory.py",
+      "limitation": "No unsupported conclusions or invented legal confidence"
+    },
+    {
+      "capability": "Change-impact task preparation",
+      "status": "Verified",
+      "implementation": "regulatory.change_impact;api controlled revisions",
+      "evidence": "tests/test_regulatory.py",
+      "limitation": "Full transitive dependency graph and scheduled monitoring assurance incomplete"
+    },
+    {
+      "capability": "Durable bounded internal job execution",
+      "status": "Verified",
+      "implementation": "worker.py;api.py",
+      "evidence": "tests/test_api.py;tests/test_security_review.py",
+      "limitation": "External submissions and correspondence have no execution tool"
+    },
+    {
+      "capability": "SORA2.0/2.5 evidence compatibility workbench",
+      "status": "Verified",
+      "implementation": "operations.py",
+      "evidence": "tests/test_operations.py",
+      "limitation": "Full SORA risk classification/compliance remains incomplete"
+    },
+    {
+      "capability": "Published SORA2.5 SAIL/TMPR/adjacent-area subset calculations",
+      "status": "Verified",
+      "implementation": "operations.py",
+      "evidence": "tests/test_operations.py;docs/domain-rules.md",
+      "limitation": "Exact source anchors; requires qualified methodology applicability/domain review"
+    },
+    {
+      "capability": "Complete SORA methodology and DAA assurance acceptance",
+      "status": "Requires Domain Review",
+      "implementation": "operations.py;versioned evidence records",
+      "evidence": "SAFETY_BOUNDARY.md",
+      "limitation": "No complete GRC/ARC/SAIL determination or certified DAA claim"
+    },
+    {
+      "capability": "Geodesic candidate-site screening and vertical references",
+      "status": "Verified",
+      "implementation": "operations.py",
+      "evidence": "tests/test_operations.py",
+      "limitation": "No authoritative basemap, full route generation or obstacle-clearance acceptance"
+    },
+    {
+      "capability": "Fleet, personnel, qualifications and controlled procedures",
+      "status": "Implemented",
+      "implementation": "api.py;frontend",
+      "evidence": "tests/test_api.py;frontend/verification",
+      "limitation": "Generic versioned records; detailed battery charging/maintenance campaigns incomplete"
+    },
+    {
+      "capability": "CP-SAT scheduling and separately implemented verifier",
+      "status": "Verified",
+      "implementation": "scheduler.py",
+      "evidence": "tests/test_scheduler.py",
+      "limitation": "No full recurrence/charging model; timeout and optimum reported distinctly"
+    },
+    {
+      "capability": "Transactional schedule reservation and cancellation",
+      "status": "Verified",
+      "implementation": "planning.py",
+      "evidence": "tests/test_planning.py",
+      "limitation": "SQLite concurrency tested; PostgreSQL must be separately verified"
+    },
+    {
+      "capability": "Internal dispatch release and actual flight execution",
+      "status": "Not Implemented",
+      "implementation": "assess_dispatch is advisory only",
+      "evidence": "tests/test_operations.py",
+      "limitation": "Reservation does not grant release; aircraft command capability absent by design"
+    },
+    {
+      "capability": "Read-only authorised telemetry import and deterministic freshness",
+      "status": "Implemented",
+      "implementation": "monitoring.py;operations.py",
+      "evidence": "tests/test_operations.py",
+      "limitation": "Manual import boundary; no accepted live vendor feed; integration persistence checks pending"
+    },
+    {
+      "capability": "Alerts, accountable acknowledgement and event integrity",
+      "status": "Implemented",
+      "implementation": "monitoring.py",
+      "evidence": "tests/test_operations.py;frontend/verification",
+      "limitation": "External alert delivery/escalation transport not connected"
+    },
+    {
+      "capability": "Incident record, approved checklist and degraded export",
+      "status": "Implemented",
+      "implementation": "monitoring.py;operations.py;frontend",
+      "evidence": "tests/test_operations.py;frontend/verification",
+      "limitation": "Interactive offline mode and jurisdiction reporting automation incomplete"
+    },
+    {
+      "capability": "Provider-specific U-space network interfaces",
+      "status": "Requires External Access",
+      "implementation": "connector registry;permission contracts",
+      "evidence": "docs/data-provider-setup.md",
+      "limitation": "No documented contracted provider or credentials supplied; no live network adapter claimed"
+    },
+    {
+      "capability": "Weather, terrain, population and operational aeronautical feeds",
+      "status": "Requires External Access",
+      "implementation": "connector and manual-import boundaries",
+      "evidence": "docs/data-provider-setup.md",
+      "limitation": "Permitted purpose and operational acceptance required; EAD Basic research-only"
+    },
+    {
+      "capability": "Local trainable neural student and completed lineage",
+      "status": "Verified",
+      "implementation": "neural.py;models/runs/explicit-shall-20261027-4",
+      "evidence": "release-evidence/neural-cpu-verification.json;docs/model-card.md",
+      "limitation": "Literal shall-language routing; inferior to deterministic baseline, experimental and not promoted"
+    },
+    {
+      "capability": "Human-validated neural/legal evaluation and time-version holdout",
+      "status": "Requires Domain Review",
+      "implementation": "training split/evaluation code",
+      "evidence": "docs/dataset-card.md",
+      "limitation": "No human-labelled ground truth; one snapshot per source family; semantic teachers failed"
+    },
+    {
+      "capability": "Operational prediction model",
+      "status": "Not Implemented",
+      "implementation": "Disabled",
+      "evidence": "docs/model-card.md",
+      "limitation": "No suitable real operational records; not trained"
+    },
+    {
+      "capability": "Connected deployment economics and formulas",
+      "status": "Verified",
+      "implementation": "operations.py;commercial records;frontend",
+      "evidence": "tests/test_operations.py;frontend/verification",
+      "limitation": "Conditional forecasts only; no demand/ROI/approval-time evidence inferred"
+    },
+    {
+      "capability": "Enterprise privacy/retention automation and compliance assessment",
+      "status": "Requires Domain Review",
+      "implementation": "docs/legal-applicability.md;THREAT_MODEL.md",
+      "evidence": "docs/administrator-handbook.md",
+      "limitation": "Automatic erasure/retention not implemented; actual deployment applicability requires counsel"
+    },
+    {
+      "capability": "Accessible authenticated operations interface",
+      "status": "Verified",
+      "implementation": "frontend/src",
+      "evidence": "frontend/verification",
+      "limitation": "Browser verification scope recorded separately; no blanket accessibility certification"
+    },
+    {
+      "capability": "Container build, restoration and resilience at production scale",
+      "status": "Requires External Access",
+      "implementation": "Dockerfile;compose.yaml;recovery runbook",
+      "evidence": "release-evidence/release-gates.json",
+      "limitation": "No Docker/PostgreSQL runtime here; no measured production SLO or external pentest"
+    },
+    {
+      "capability": "Public downloadable release",
+      "status": "Implemented",
+      "implementation": "scripts/package_release.py;publication workflow",
+      "evidence": "release/package-result.json",
+      "limitation": "Publication state recorded separately; no invented URLs"
+    },
+    {
+      "capability": "Complete original master specification acceptance",
+      "status": "Not Implemented",
+      "implementation": "SPECIFICATION.md;REQUIREMENTS_TRACEABILITY.csv",
+      "evidence": "release-evidence/release-gates.json",
+      "limitation": "Candidate is substantial engineering implementation; baseline remains unmet in documented areas"
+    }
+  ]
+}

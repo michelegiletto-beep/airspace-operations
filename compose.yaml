@@ -1,0 +1,59 @@
+name: system-lab-airspace-operations
+services:
+  database:
+    build:
+      context: .
+      dockerfile: deploy/database.Dockerfile
+    environment:
+      POSTGRES_DB: airspace
+      POSTGRES_USER: airspace
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a private database password}
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airspace -d airspace"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+  api:
+    build: .
+    environment:
+      AIRSPACE_DATABASE_URL: ${AIRSPACE_DATABASE_URL:?Set the PostgreSQL SQLAlchemy URL}
+      AIRSPACE_AUDIT_KEY: ${AIRSPACE_AUDIT_KEY:?Set at least 32 random secret characters}
+      AIRSPACE_REQUIRE_TWO_REVIEWERS: "true"
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - evidence:/data
+    depends_on:
+      database:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+  worker:
+    build: .
+    command: ["python", "-m", "airspace.cli", "worker"]
+    environment:
+      AIRSPACE_DATABASE_URL: ${AIRSPACE_DATABASE_URL:?Set the PostgreSQL SQLAlchemy URL}
+      AIRSPACE_AUDIT_KEY: ${AIRSPACE_AUDIT_KEY:?Set at least 32 random secret characters}
+      AIRSPACE_REQUIRE_TWO_REVIEWERS: "true"
+    volumes:
+      - evidence:/data
+    depends_on:
+      database:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+volumes:
+  database:
+  evidence:

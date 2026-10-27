@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-27",
+  "easa_policy": {
+    "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+    "local_evidence": "local-research/copyright.html",
+    "decision": "Reproduce acknowledged EASA and EU legal text only; no logos or images. Respect any document-specific restrictions.",
+    "source_originals": "Original UAS and U-space archives retained unchanged with SHA-256",
+    "scope": "Text extraction and limited training examples; newly authored code licence does not relicense sources"
+  },
+  "national_sources": {
+    "decision": "Not cleared for public redistribution or model training; local research snapshots only"
+  },
+  "eu_official_journal": {
+    "decision": "Direct retrieval blocked. No claim that EASA reference consolidation is authentic OJ text."
+  },
+  "pretrained_models": {
+    "decision": "Apache-2.0 upstream metadata checked at pinned revisions; redistributable subject to licence and notices",
+    "weights": "Downloaded locally as safetensors; release installer downloads explicit revisions, core bundle excludes pretrained weights"
+  }
+}

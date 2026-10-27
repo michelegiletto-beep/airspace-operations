@@ -1,0 +1,8 @@
+{
+  "command": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe -I C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\scripts\\import_easa_xml.py --parse-file C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\sources\\snapshots\\easa-uas-xml-2026\\0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54\\original.zip --report-file C:\\Users\\gilet\\AppData\\Local\\Temp\\airspace-parser-verification-kd10ie4i\\result.json --source-id easa-uas-xml-2026 --edition June 2026",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "passage_count": 7512,
+  "archive_checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54"
+}

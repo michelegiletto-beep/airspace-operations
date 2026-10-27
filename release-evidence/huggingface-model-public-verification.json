@@ -1,0 +1,10 @@
+{
+  "model": "Magic51/system-lab-airspace-shall-router",
+  "revision": "ef543cdc76eb2850d49a8a1d9f5647922364a787",
+  "weights_url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/ef543cdc76eb2850d49a8a1d9f5647922364a787/student.safetensors",
+  "bytes": 49824,
+  "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+  "matches_trained_artifact": true,
+  "state": "Independently Retrieved",
+  "authenticated_read": false
+}

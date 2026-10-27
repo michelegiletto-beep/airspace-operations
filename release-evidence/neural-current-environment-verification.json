@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-10-27T18:17:14.017860+00:00",
+  "device": "cpu",
+  "samples": 8,
+  "model_load_seconds": 37.075352899963036,
+  "batch_inference_seconds": 0.20000220002839342,
+  "artifact_checksum": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+  "model_version": "explicit-shall-20261027-4",
+  "inference_environment": {
+    "torch": "2.14.1",
+    "transformers": "5.21.0",
+    "huggingface-hub": "2.3.0",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.4"
+  },
+  "historical_training_environment": {
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 2080",
+    "torch": "2.6.0+cu126",
+    "python": "3.13.1",
+    "teacher_seconds": 18.576603499997873,
+    "encoding_seconds": 0.6217308000195771,
+    "training_seconds": 1.144131799985189,
+    "total_seconds": 21.141158599988557
+  },
+  "historical_training_manifest_checksum": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+  "training_rerun": false,
+  "predictions": [
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0005",
+      "source_anchor": "ERULES-1963177438-21043:b0005",
+      "label": "explicit_shall",
+      "model_probability": 0.6461540460586548,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0014",
+      "source_anchor": "ERULES-1963177438-21046:b0014",
+      "label": "explicit_shall",
+      "model_probability": 0.8395412564277649,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0032",
+      "source_anchor": "ERULES-1963177438-21043:b0032",
+      "label": "no_explicit_shall",
+      "model_probability": 0.5682621598243713,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21050:b0013",
+      "source_anchor": "ERULES-1963177438-21050:b0013",
+      "label": "no_explicit_shall",
+      "model_probability": 0.9076933860778809,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0008",
+      "source_anchor": "ERULES-1963177438-21046:b0008",
+      "label": "no_explicit_shall",
+      "model_probability": 0.5074841380119324,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21055:b0004",
+      "source_anchor": "ERULES-1963177438-21055:b0004",
+      "label": "no_explicit_shall",
+      "model_probability": 0.5903916954994202,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0025",
+      "source_anchor": "ERULES-1963177438-21043:b0025",
+      "label": "explicit_shall",
+      "model_probability": 0.6925860643386841,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21048:b0005",
+      "source_anchor": "ERULES-1963177438-21048:b0005",
+      "label": "no_explicit_shall",
+      "model_probability": 0.6726962327957153,
+      "probability_meaning": "Uncalibrated classifier output; not legal confidence",
+      "model_version": "explicit-shall-20261027-4",
+      "status": "Experimental \u2014 requires reviewer validation",
+      "operational_decision_permitted": false
+    }
+  ],
+  "status": "CPU inference executed; experimental routing only; no operational or legal decision validation"
+}

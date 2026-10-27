@@ -1,0 +1,19 @@
+System Lab Airspace Operations
+Copyright 2026 System Lab contributors
+
+Newly authored project code is offered under Apache-2.0. Existing System Lab assets
+have not been copied or relicensed into this product. Third-party software,
+regulatory documents and pretrained models retain their respective rights.
+
+Regulatory extracts: European Union and European Union Aviation Safety Agency.
+Source attribution, archive checksums, exact anchors and reuse notices accompany
+the extracts in sources/ and SOURCE_REGISTER.md. Source reproduction does not
+establish current legal applicability or official endorsement.
+
+Pretrained components: sentence-transformers/all-MiniLM-L6-v2,
+cross-encoder/ms-marco-MiniLM-L6-v2, google/flan-t5-small and google/flan-t5-base
+retain upstream Apache-2.0 notices and pinned provenance. Base model weights are
+downloaded explicitly, not silently bundled as newly authored project weights.
+
+The trained downstream student and machine-derived annotation dataset are
+experimental. Their cards retain source/model lineage and evaluation limitations.

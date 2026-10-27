@@ -1,0 +1,461 @@
+{
+  "created_at": "2026-10-27T18:05:48.593599+00:00",
+  "benchmark": "Exact official section-title retrieval proxy; not natural-language legal-answer evaluation",
+  "query_count": 8,
+  "corpus_passages": 9833,
+  "corpus_checksum": "fa0a89fbda88a856de8e5565130bfde6c504b7c54b9c455c7c272eb51f5f28a7",
+  "device": "cuda",
+  "model_load_seconds": 24.025171100045554,
+  "human_reviewed_legal_queries": 0,
+  "runs": [
+    {
+      "query": "Article 8 - Rules and procedures for the competency of remote pilots",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15483",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.4773216000176035,
+      "source_anchors": [
+        "ERULES-1963177438-15483:b0001",
+        "ERULES-1963177438-15570:b0016",
+        "ERULES-1963177438-15487:b0016",
+        "ERULES-1963177438-15484:b0001",
+        "ERULES-1963177438-15483:b0012"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "Article 8 - Rules and procedures for the competency of remote pilots",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15483",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 10.774075500026811,
+      "source_anchors": [
+        "ERULES-1963177438-15483:b0001",
+        "ERULES-1963177438-15570:b0016",
+        "ERULES-1963177438-15487:b0016",
+        "ERULES-1963177438-15483:b0012",
+        "ERULES-1963177438-15589:b0032"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "Article 8 - Rules and procedures for the competency of remote pilots",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15483",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.0616287000011653,
+      "source_anchors": [
+        "ERULES-1963177438-15483:b0001",
+        "ERULES-1963177438-15525:b0013",
+        "ERULES-1963177438-15552:b0003",
+        "ERULES-1963177438-15483:b0012",
+        "ERULES-1963177438-15570:b0018"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "UAS.SPEC.030 Application for an operational authorisation",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15523",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.5030297999619506,
+      "source_anchors": [
+        "ERULES-1963177438-15523:b0001",
+        "ERULES-1963177438-15580:b0001",
+        "ERULES-1963177438-15582:b0001",
+        "ERULES-1963177438-19512:b0001",
+        "ERULES-1963177438-15584:b0001"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "UAS.SPEC.030 Application for an operational authorisation",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15523",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.0718293000245467,
+      "source_anchors": [
+        "ERULES-1963177438-15523:b0001",
+        "ERULES-1963177438-15582:b0001",
+        "ERULES-1963177438-15580:b0001",
+        "ERULES-1963177438-15584:b0001",
+        "ERULES-1963177438-19512:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "UAS.SPEC.030 Application for an operational authorisation",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15523",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.064482300018426,
+      "source_anchors": [
+        "ERULES-1963177438-15523:b0001",
+        "ERULES-1963177438-15578:b0001",
+        "ERULES-1963177438-15584:b0001",
+        "ERULES-1963177438-15580:b0001",
+        "ERULES-1963177438-19504:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "UAS.SPEC.080 Duration and validity of an operational authorisation",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15528",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.4441309000249021,
+      "source_anchors": [
+        "ERULES-1963177438-15528:b0001",
+        "ERULES-1963177438-15539:b0001",
+        "ERULES-1963177438-17777:b0001",
+        "ERULES-1963177438-15523:b0001",
+        "ERULES-1963177438-15524:b0001"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "UAS.SPEC.080 Duration and validity of an operational authorisation",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15528",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.1080213999957778,
+      "source_anchors": [
+        "ERULES-1963177438-15528:b0001",
+        "ERULES-1963177438-17777:b0001",
+        "ERULES-1963177438-15524:b0001",
+        "ERULES-1963177438-15523:b0001",
+        "ERULES-1963177438-15527:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "UAS.SPEC.080 Duration and validity of an operational authorisation",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15528",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.1272068999824114,
+      "source_anchors": [
+        "ERULES-1963177438-15528:b0001",
+        "ERULES-1963177438-17777:b0001",
+        "ERULES-1963177438-15589:b0109",
+        "ERULES-1963177438-15527:b0001",
+        "ERULES-1963177438-15524:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a08 \u2014 Network identification service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21051",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.32180900004459545,
+      "source_anchors": [
+        "ERULES-1963177438-21051:b0001",
+        "ERULES-1963177438-21046:b0004",
+        "ERULES-1963177438-21529:b0001",
+        "ERULES-1963177438-21533:b0001",
+        "ERULES-1963177438-21537:b0001"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a08 \u2014 Network identification service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21051",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.827977099979762,
+      "source_anchors": [
+        "ERULES-1963177438-21051:b0001",
+        "ERULES-1963177438-21046:b0004",
+        "ERULES-1963177438-21549:b0001",
+        "ERULES-1963177438-21545:b0001",
+        "ERULES-1963177438-21529:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a08 \u2014 Network identification service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21051",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.8886233000084758,
+      "source_anchors": [
+        "ERULES-1963177438-21051:b0001",
+        "ERULES-1963177438-21545:b0001",
+        "ERULES-1963177438-21533:b0001",
+        "ERULES-1963177438-21541:b0001",
+        "ERULES-1963177438-21537:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a09 \u2014 Geo-awareness service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21052",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.30835249996744096,
+      "source_anchors": [
+        "ERULES-1963177438-21052:b0001",
+        "ERULES-1963177438-21046:b0005",
+        "ERULES-1963177438-21339:b0001",
+        "ERULES-1963177438-21343:b0001",
+        "ERULES-1963177438-21347:b0001"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a09 \u2014 Geo-awareness service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21052",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.907220600056462,
+      "source_anchors": [
+        "ERULES-1963177438-21052:b0001",
+        "ERULES-1963177438-21046:b0005",
+        "ERULES-1963177438-21339:b0001",
+        "ERULES-1963177438-21351:b0001",
+        "ERULES-1963177438-21347:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a09 \u2014 Geo-awareness service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21052",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.1113662999705411,
+      "source_anchors": [
+        "ERULES-1963177438-21052:b0001",
+        "ERULES-1963177438-21343:b0001",
+        "ERULES-1963177438-21347:b0001",
+        "ERULES-1963177438-21339:b0003",
+        "ERULES-1963177438-21351:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a010 \u2014 UAS flight authorisation service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21053",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.5339261000044644,
+      "source_anchors": [
+        "ERULES-1963177438-21053:b0001",
+        "ERULES-1963177438-21460:b0001",
+        "ERULES-1963177438-21464:b0001",
+        "ERULES-1963177438-21468:b0001",
+        "ERULES-1963177438-21046:b0006"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a010 \u2014 UAS flight authorisation service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21053",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.1159767000353895,
+      "source_anchors": [
+        "ERULES-1963177438-21053:b0001",
+        "ERULES-1963177438-21046:b0006",
+        "ERULES-1963177438-21359:b0001",
+        "ERULES-1963177438-21464:b0001",
+        "ERULES-1963177438-21375:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a010 \u2014 UAS flight authorisation service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21053",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.3092320999712683,
+      "source_anchors": [
+        "ERULES-1963177438-21053:b0001",
+        "ERULES-1963177438-21460:b0001",
+        "ERULES-1963177438-21452:b0001",
+        "ERULES-1963177438-21363:b0001",
+        "ERULES-1963177438-21445:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a011 \u2014 Traffic information service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21054",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.3918705999967642,
+      "source_anchors": [
+        "ERULES-1963177438-21054:b0001",
+        "ERULES-1963177438-21046:b0007",
+        "ERULES-1963177438-21480:b0001",
+        "ERULES-1963177438-21484:b0001",
+        "ERULES-1963177438-21488:b0001"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a011 \u2014 Traffic information service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21054",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.0554374000057578,
+      "source_anchors": [
+        "ERULES-1963177438-21054:b0001",
+        "ERULES-1963177438-21046:b0007",
+        "ERULES-1963177438-21480:b0001",
+        "ERULES-1963177438-21484:b0001",
+        "ERULES-1963177438-21492:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "Article\u00a011 \u2014 Traffic information service",
+      "source_id": "easa-uspace-xml-2024",
+      "section_id": "ERULES-1963177438-21054",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.1870828999672085,
+      "source_anchors": [
+        "ERULES-1963177438-21054:b0001",
+        "ERULES-1963177438-21488:b0001",
+        "ERULES-1963177438-21492:b0001",
+        "ERULES-1963177438-21512:b0001",
+        "ERULES-1963177438-21500:b0001"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    },
+    {
+      "query": "Article 7 - Authorised representatives",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15446",
+      "mode": "lexical",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.6241981000057422,
+      "source_anchors": [
+        "ERULES-1963177438-15446:b0001",
+        "ERULES-1963177438-21374:b0102",
+        "ERULES-1963177438-15443:b0003",
+        "ERULES-1963177438-21526:b0014",
+        "ERULES-1963177438-15589:b0012"
+      ],
+      "engine": "BM25",
+      "failures": []
+    },
+    {
+      "query": "Article 7 - Authorised representatives",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15446",
+      "mode": "pretrained_hybrid",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 0.9988566999672912,
+      "source_anchors": [
+        "ERULES-1963177438-15446:b0001",
+        "ERULES-1963177438-15505:b0011",
+        "ERULES-1963177438-15507:b0050",
+        "ERULES-1963177438-15506:b0043",
+        "ERULES-1963177438-15443:b0003"
+      ],
+      "engine": "BM25 + pretrained neural embeddings",
+      "failures": []
+    },
+    {
+      "query": "Article 7 - Authorised representatives",
+      "source_id": "easa-uas-xml-2026",
+      "section_id": "ERULES-1963177438-15446",
+      "mode": "hybrid_reranked",
+      "reciprocal_rank_at_5": 1.0,
+      "target_found_at_5": true,
+      "seconds": 1.0844997999956831,
+      "source_anchors": [
+        "ERULES-1963177438-15446:b0001",
+        "ERULES-1963177438-15439:b0016",
+        "ERULES-1963177438-15507:b0050",
+        "ERULES-1963177438-15446:b0004",
+        "ERULES-1963177438-15446:b0003"
+      ],
+      "engine": "BM25 + pretrained neural embeddings + neural cross-encoder reranking",
+      "failures": []
+    }
+  ],
+  "summary": {
+    "lexical": {
+      "target_recall_at_5": 1.0,
+      "mean_reciprocal_rank_at_5": 1.0,
+      "total_seconds": 3.6046386000234634
+    },
+    "pretrained_hybrid": {
+      "target_recall_at_5": 1.0,
+      "mean_reciprocal_rank_at_5": 1.0,
+      "total_seconds": 17.859394700091798
+    },
+    "hybrid_reranked": {
+      "target_recall_at_5": 1.0,
+      "mean_reciprocal_rank_at_5": 1.0,
+      "total_seconds": 8.83412229991518
+    }
+  }
+}

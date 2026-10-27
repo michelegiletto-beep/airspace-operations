@@ -1,0 +1,85 @@
+{
+  "command": "Project Python: monitor_registered_source for easa-ear-uas-2026 and easa-uspace-xml-2024 in an isolated temporary source store; actual HTTPS fetches, no mock",
+  "external_http_requests": true,
+  "mocked": false,
+  "operational_validation": false,
+  "public_corpus_unchanged": true,
+  "results": [
+    {
+      "source_id": "easa-ear-uas-2026",
+      "organisation_id": null,
+      "checked_at": "2026-10-27T18:17:54.874062+00:00",
+      "rule_version": "regulatory-retrieval-1.0.0",
+      "registered_version": "June 2026",
+      "approved_metadata": {
+        "id": "easa-ear-uas-2026",
+        "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-unmanned-aircraft-systems",
+        "issuer": "EASA",
+        "canonical_identifier": "easa-ear-uas-2026",
+        "jurisdiction": "EU",
+        "language": "en",
+        "legal_status": "guidance",
+        "version": "June 2026",
+        "licence": {
+          "status": "Requires rights review before redistribution or training",
+          "url": null,
+          "redistribution": "not_cleared",
+          "attribution": null
+        }
+      },
+      "previous_checksum": null,
+      "last_successful_check": "2026-10-27T18:17:55.707057+00:00",
+      "external_actions": [],
+      "warning": "Notification silence does not establish absence of source changes; content checks do not establish legal applicability",
+      "success": true,
+      "state": "Snapshot Recorded",
+      "comparison": "initial_snapshot",
+      "current_checksum": "ae09a91f808f56f2b74ba22caea7e1ddc5bb6c82789281f2e74aa264b437cecd",
+      "content_changed": false,
+      "document_version": "June 2026",
+      "passage_count": 100,
+      "review_required": true,
+      "dependency_review_required": false,
+      "existing_decisions_modified": false,
+      "currentness_status": "Registered edition retained; upstream content and applicability require review"
+    },
+    {
+      "source_id": "easa-uspace-xml-2024",
+      "organisation_id": null,
+      "checked_at": "2026-10-27T18:17:56.169671+00:00",
+      "rule_version": "regulatory-retrieval-1.0.0",
+      "registered_version": "May 2024",
+      "approved_metadata": {
+        "id": "easa-uspace-xml-2024",
+        "url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "issuer": "EASA",
+        "canonical_identifier": "easa-uspace-xml-2024",
+        "jurisdiction": "EU",
+        "language": "en",
+        "legal_status": "mixed_consolidation",
+        "version": "May 2024",
+        "licence": {
+          "status": "Reproduction authorised with acknowledgement, except otherwise stated",
+          "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+          "redistribution": "cleared_text_only",
+          "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+        }
+      },
+      "previous_checksum": null,
+      "last_successful_check": "2026-10-27T18:17:56.542823+00:00",
+      "external_actions": [],
+      "warning": "Notification silence does not establish absence of source changes; content checks do not establish legal applicability",
+      "success": true,
+      "state": "Snapshot Recorded",
+      "comparison": "initial_snapshot",
+      "current_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+      "content_changed": false,
+      "document_version": "May 2024",
+      "passage_count": 2321,
+      "review_required": true,
+      "dependency_review_required": false,
+      "existing_decisions_modified": false,
+      "currentness_status": "Registered edition retained; upstream content and applicability require review"
+    }
+  ]
+}

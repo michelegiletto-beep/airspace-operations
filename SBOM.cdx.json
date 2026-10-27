@@ -1,0 +1,2572 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-27T18:27:42.129498+00:00",
+    "component": {
+      "type": "application",
+      "name": "System Lab Airspace Operations",
+      "version": "0.1.0-rc.1"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "absl-py",
+      "version": "2.5.1",
+      "purl": "pkg:pypi/absl-py@2.5.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "anyio",
+      "version": "4.15.1",
+      "purl": "pkg:pypi/anyio@4.15.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "boolean-py",
+      "version": "5.0",
+      "purl": "pkg:pypi/boolean-py@5.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cachecontrol",
+      "version": "0.14.4",
+      "purl": "pkg:pypi/cachecontrol@0.14.4",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "certifi",
+      "version": "2026.10.23",
+      "purl": "pkg:pypi/certifi@2026.10.23",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cffi",
+      "version": "2.1.1",
+      "purl": "pkg:pypi/cffi@2.1.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT-0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "purl": "pkg:pypi/charset-normalizer@3.5.2",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "click",
+      "version": "8.5.0",
+      "purl": "pkg:pypi/click@8.5.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "colorama",
+      "version": "0.4.6",
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "NOASSERTION"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "coverage",
+      "version": "7.17.0",
+      "purl": "pkg:pypi/coverage@7.17.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cryptography",
+      "version": "50.0.2",
+      "purl": "pkg:pypi/cryptography@50.0.2",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0 OR BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cyclonedx-python-lib",
+      "version": "11.12.0",
+      "purl": "pkg:pypi/cyclonedx-python-lib@11.12.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "PSFL"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fastapi",
+      "version": "0.162.0",
+      "purl": "pkg:pypi/fastapi@0.162.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "filelock",
+      "version": "4.2.4",
+      "purl": "pkg:pypi/filelock@4.2.4",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "greenlet",
+      "version": "3.5.6",
+      "purl": "pkg:pypi/greenlet@3.5.6",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT AND PSF-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "h11",
+      "version": "0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpx",
+      "version": "0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hypothesis",
+      "version": "6.151.9",
+      "purl": "pkg:pypi/hypothesis@6.151.9",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "idna",
+      "version": "3.20",
+      "purl": "pkg:pypi/idna@3.20",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "immutabledict",
+      "version": "4.3.1",
+      "purl": "pkg:pypi/immutabledict@4.3.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "purl": "pkg:pypi/iniconfig@2.3.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "license-expression",
+      "version": "30.4.4",
+      "purl": "pkg:pypi/license-expression@30.4.4",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "purl": "pkg:pypi/markdown-it-py@4.2.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "NOASSERTION"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mdurl",
+      "version": "0.1.2",
+      "purl": "pkg:pypi/mdurl@0.1.2",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "NOASSERTION"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "msgpack",
+      "version": "1.2.4",
+      "purl": "pkg:pypi/msgpack@1.2.4",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "2.5.4",
+      "purl": "pkg:pypi/numpy@2.5.4",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "opentelemetry-api",
+      "version": "1.45.1",
+      "purl": "pkg:pypi/opentelemetry-api@1.45.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ortools",
+      "version": "9.15.6755",
+      "purl": "pkg:pypi/ortools@9.15.6755",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache 2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "packageurl-python",
+      "version": "0.17.6",
+      "purl": "pkg:pypi/packageurl-python@0.17.6",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "packaging",
+      "version": "26.3",
+      "purl": "pkg:pypi/packaging@26.3",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pandas",
+      "version": "3.1.0",
+      "purl": "pkg:pypi/pandas@3.1.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pip",
+      "version": "26.2.2",
+      "purl": "pkg:pypi/pip@26.2.2",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pip-api",
+      "version": "0.0.35",
+      "purl": "pkg:pypi/pip-api@0.0.35",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "See upstream package licence text"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pip-audit",
+      "version": "2.10.1",
+      "purl": "pkg:pypi/pip-audit@2.10.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "NOASSERTION"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pip-requirements-parser",
+      "version": "32.0.1",
+      "purl": "pkg:pypi/pip-requirements-parser@32.0.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "platformdirs",
+      "version": "4.13.6",
+      "purl": "pkg:pypi/platformdirs@4.13.6",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pluggy",
+      "version": "1.7.0",
+      "purl": "pkg:pypi/pluggy@1.7.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "protobuf",
+      "version": "6.33.5",
+      "purl": "pkg:pypi/protobuf@6.33.5",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "3-Clause BSD License"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "psycopg",
+      "version": "3.2.13",
+      "purl": "pkg:pypi/psycopg@3.2.13",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "LGPL-3.0-only"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "psycopg-binary",
+      "version": "3.2.13",
+      "purl": "pkg:pypi/psycopg-binary@3.2.13",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "LGPL-3.0-only"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "py-serializable",
+      "version": "2.1.0",
+      "purl": "pkg:pypi/py-serializable@2.1.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pycparser",
+      "version": "3.12",
+      "purl": "pkg:pypi/pycparser@3.12",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydantic",
+      "version": "2.14.1",
+      "purl": "pkg:pypi/pydantic@2.14.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydantic-core",
+      "version": "2.50.1",
+      "purl": "pkg:pypi/pydantic-core@2.50.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pygments",
+      "version": "2.21.0",
+      "purl": "pkg:pypi/pygments@2.21.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyjwt",
+      "version": "2.15.1",
+      "purl": "pkg:pypi/pyjwt@2.15.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "purl": "pkg:pypi/pyparsing@3.3.3",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pypdf",
+      "version": "6.21.3",
+      "purl": "pkg:pypi/pypdf@6.21.3",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyproj",
+      "version": "3.7.2",
+      "purl": "pkg:pypi/pyproj@3.7.2",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "9.1.1",
+      "purl": "pkg:pypi/pytest@9.1.1",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-cov",
+      "version": "7.1.0",
+      "purl": "pkg:pypi/pytest-cov@7.1.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-dateutil",
+      "version": "3.0.0",
+      "purl": "pkg:pypi/python-dateutil@3.0.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Dual License"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.34.2",
+      "purl": "pkg:pypi/requests@2.34.2",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rich",
+      "version": "15.0.0",
+      "purl": "pkg:pypi/rich@15.0.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "six",
+      "version": "1.17.0",
+      "purl": "pkg:pypi/six@1.17.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sortedcontainers",
+      "version": "2.4.0",
+      "purl": "pkg:pypi/sortedcontainers@2.4.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache 2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sqlalchemy",
+      "version": "2.0.55",
+      "purl": "pkg:pypi/sqlalchemy@2.0.55",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "starlette",
+      "version": "1.10.0",
+      "purl": "pkg:pypi/starlette@1.10.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tomli",
+      "version": "2.5.0",
+      "purl": "pkg:pypi/tomli@2.5.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tomli-w",
+      "version": "1.2.0",
+      "purl": "pkg:pypi/tomli-w@1.2.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "NOASSERTION"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "PSF-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tzdata",
+      "version": "2026.5",
+      "purl": "pkg:pypi/tzdata@2026.5",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "purl": "pkg:pypi/urllib3@2.8.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "purl": "pkg:pypi/uvicorn@0.54.0",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@asamuzakjp/css-color",
+      "version": "3.2.0",
+      "purl": "pkg:npm/@asamuzakjp/css-color@3.2.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "purl": "pkg:npm/@babel/code-frame@7.29.7",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "purl": "pkg:npm/@babel/helper-validator-identifier@7.29.7",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/runtime",
+      "version": "7.29.10",
+      "purl": "pkg:npm/@babel/runtime@7.29.10",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/color-helpers",
+      "version": "5.1.0",
+      "purl": "pkg:npm/@csstools/color-helpers@5.1.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT-0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-calc",
+      "version": "2.1.4",
+      "purl": "pkg:npm/@csstools/css-calc@2.1.4",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-color-parser",
+      "version": "3.1.0",
+      "purl": "pkg:npm/@csstools/css-color-parser@3.1.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-parser-algorithms",
+      "version": "3.0.5",
+      "purl": "pkg:npm/@csstools/css-parser-algorithms@3.0.5",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-tokenizer",
+      "version": "3.0.4",
+      "purl": "pkg:npm/@csstools/css-tokenizer@3.0.4",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "purl": "pkg:npm/@jridgewell/sourcemap-codec@1.6.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@oxc-project/types",
+      "version": "0.155.0",
+      "purl": "pkg:npm/@oxc-project/types@0.155.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-android-arm-eabi",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-android-arm-eabi@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-android-arm64",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-android-arm64@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-darwin-arm64",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-darwin-arm64@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-darwin-x64",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-darwin-x64@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-freebsd-x64",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-freebsd-x64@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-arm-gnueabihf",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-arm-gnueabihf@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-arm64-gnu",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-arm64-gnu@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-arm64-musl",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-arm64-musl@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-ppc64-gnu",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-ppc64-gnu@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-s390x-gnu",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-s390x-gnu@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-x64-gnu",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-x64-gnu@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-x64-musl",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-linux-x64-musl@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-openharmony-arm64",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-openharmony-arm64@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-win32-arm64-msvc",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-win32-arm64-msvc@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.15",
+      "purl": "pkg:npm/@rolldown/binding-win32-x64-msvc@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/pluginutils",
+      "version": "1.0.1",
+      "purl": "pkg:npm/@rolldown/pluginutils@1.0.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@standard-schema/spec",
+      "version": "1.1.0",
+      "purl": "pkg:npm/@standard-schema/spec@1.1.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@testing-library/dom",
+      "version": "10.4.2",
+      "purl": "pkg:npm/@testing-library/dom@10.4.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@testing-library/react",
+      "version": "16.3.3",
+      "purl": "pkg:npm/@testing-library/react@16.3.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/aria-query",
+      "version": "5.0.4",
+      "purl": "pkg:npm/@types/aria-query@5.0.4",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/chai",
+      "version": "5.2.3",
+      "purl": "pkg:npm/@types/chai@5.2.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/deep-eql",
+      "version": "4.0.2",
+      "purl": "pkg:npm/@types/deep-eql@4.0.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "purl": "pkg:npm/@types/estree@1.0.9",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/node",
+      "version": "22.19.19",
+      "purl": "pkg:npm/@types/node@22.19.19",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/react",
+      "version": "19.2.14",
+      "purl": "pkg:npm/@types/react@19.2.14",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/react-dom",
+      "version": "19.2.3",
+      "purl": "pkg:npm/@types/react-dom@19.2.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitejs/plugin-react",
+      "version": "6.1.2",
+      "purl": "pkg:npm/@vitejs/plugin-react@6.1.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/expect",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/expect@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/mocker",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/mocker@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/pretty-format",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/pretty-format@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/runner",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/runner@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/snapshot",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/snapshot@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/spy",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/spy@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/utils",
+      "version": "4.1.12",
+      "purl": "pkg:npm/@vitest/utils@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "agent-base",
+      "version": "7.1.4",
+      "purl": "pkg:npm/agent-base@7.1.4",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-styles",
+      "version": "5.2.0",
+      "purl": "pkg:npm/ansi-styles@5.2.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "aria-query",
+      "version": "5.3.0",
+      "purl": "pkg:npm/aria-query@5.3.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "assertion-error",
+      "version": "2.0.1",
+      "purl": "pkg:npm/assertion-error@2.0.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chai",
+      "version": "6.3.0",
+      "purl": "pkg:npm/chai@6.3.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "convert-source-map",
+      "version": "2.0.0",
+      "purl": "pkg:npm/convert-source-map@2.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cssstyle",
+      "version": "4.6.0",
+      "purl": "pkg:npm/cssstyle@4.6.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "csstype",
+      "version": "3.2.3",
+      "purl": "pkg:npm/csstype@3.2.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "data-urls",
+      "version": "5.0.0",
+      "purl": "pkg:npm/data-urls@5.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "debug",
+      "version": "4.4.3",
+      "purl": "pkg:npm/debug@4.4.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "decimal.js",
+      "version": "10.6.0",
+      "purl": "pkg:npm/decimal.js@10.6.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dequal",
+      "version": "2.0.3",
+      "purl": "pkg:npm/dequal@2.0.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "purl": "pkg:npm/detect-libc@2.1.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dom-accessibility-api",
+      "version": "0.5.16",
+      "purl": "pkg:npm/dom-accessibility-api@0.5.16",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "entities",
+      "version": "6.0.1",
+      "purl": "pkg:npm/entities@6.0.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "es-module-lexer",
+      "version": "2.3.2",
+      "purl": "pkg:npm/es-module-lexer@2.3.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "estree-walker",
+      "version": "3.0.3",
+      "purl": "pkg:npm/estree-walker@3.0.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "expect-type",
+      "version": "1.4.0",
+      "purl": "pkg:npm/expect-type@1.4.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fdir",
+      "version": "6.5.0",
+      "purl": "pkg:npm/fdir@6.5.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fsevents",
+      "version": "2.3.3",
+      "purl": "pkg:npm/fsevents@2.3.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "html-encoding-sniffer",
+      "version": "4.0.0",
+      "purl": "pkg:npm/html-encoding-sniffer@4.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "purl": "pkg:npm/https-proxy-agent@7.0.6",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "iconv-lite",
+      "version": "0.6.3",
+      "purl": "pkg:npm/iconv-lite@0.6.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-potential-custom-element-name",
+      "version": "1.0.1",
+      "purl": "pkg:npm/is-potential-custom-element-name@1.0.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "purl": "pkg:npm/js-tokens@4.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jsdom",
+      "version": "26.1.0",
+      "purl": "pkg:npm/jsdom@26.1.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-android-arm64",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-android-arm64@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-darwin-arm64@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-darwin-x64",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-darwin-x64@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-freebsd-x64@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-linux-arm-gnueabihf@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-linux-arm64-gnu@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-linux-arm64-musl@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-linux-x64-gnu@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-linux-x64-musl@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-win32-arm64-msvc@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "purl": "pkg:npm/lightningcss-win32-x64-msvc@1.33.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MPL-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lru-cache",
+      "version": "10.4.3",
+      "purl": "pkg:npm/lru-cache@10.4.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "ISC"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lz-string",
+      "version": "1.5.0",
+      "purl": "pkg:npm/lz-string@1.5.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "magic-string",
+      "version": "0.30.21",
+      "purl": "pkg:npm/magic-string@0.30.21",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.3",
+      "purl": "pkg:npm/ms@2.1.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nanoid",
+      "version": "3.3.20",
+      "purl": "pkg:npm/nanoid@3.3.20",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nwsapi",
+      "version": "2.2.28",
+      "purl": "pkg:npm/nwsapi@2.2.28",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "obug",
+      "version": "2.2.1",
+      "purl": "pkg:npm/obug@2.2.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "parse5",
+      "version": "7.3.0",
+      "purl": "pkg:npm/parse5@7.3.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pathe",
+      "version": "2.0.3",
+      "purl": "pkg:npm/pathe@2.0.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "picocolors",
+      "version": "1.1.1",
+      "purl": "pkg:npm/picocolors@1.1.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "ISC"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "picomatch",
+      "version": "4.0.7",
+      "purl": "pkg:npm/picomatch@4.0.7",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "postcss",
+      "version": "8.5.32",
+      "purl": "pkg:npm/postcss@8.5.32",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pretty-format",
+      "version": "27.5.1",
+      "purl": "pkg:npm/pretty-format@27.5.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "punycode",
+      "version": "2.3.1",
+      "purl": "pkg:npm/punycode@2.3.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react",
+      "version": "19.3.1",
+      "purl": "pkg:npm/react@19.3.1",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react-dom",
+      "version": "19.3.1",
+      "purl": "pkg:npm/react-dom@19.3.1",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react-is",
+      "version": "17.0.2",
+      "purl": "pkg:npm/react-is@17.0.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rolldown",
+      "version": "1.2.15",
+      "purl": "pkg:npm/rolldown@1.2.15",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rrweb-cssom",
+      "version": "0.8.0",
+      "purl": "pkg:npm/rrweb-cssom@0.8.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "safer-buffer",
+      "version": "2.1.2",
+      "purl": "pkg:npm/safer-buffer@2.1.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "saxes",
+      "version": "6.0.0",
+      "purl": "pkg:npm/saxes@6.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "ISC"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "scheduler",
+      "version": "0.28.0",
+      "purl": "pkg:npm/scheduler@0.28.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "siginfo",
+      "version": "2.0.0",
+      "purl": "pkg:npm/siginfo@2.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "ISC"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "purl": "pkg:npm/source-map-js@1.2.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "stackback",
+      "version": "0.0.2",
+      "purl": "pkg:npm/stackback@0.0.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "std-env",
+      "version": "4.3.0",
+      "purl": "pkg:npm/std-env@4.3.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "symbol-tree",
+      "version": "3.2.4",
+      "purl": "pkg:npm/symbol-tree@3.2.4",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinybench",
+      "version": "2.9.0",
+      "purl": "pkg:npm/tinybench@2.9.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinyexec",
+      "version": "1.3.1",
+      "purl": "pkg:npm/tinyexec@1.3.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "purl": "pkg:npm/tinyglobby@0.2.17",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinyrainbow",
+      "version": "3.2.0",
+      "purl": "pkg:npm/tinyrainbow@3.2.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tldts",
+      "version": "6.1.86",
+      "purl": "pkg:npm/tldts@6.1.86",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tldts-core",
+      "version": "6.1.86",
+      "purl": "pkg:npm/tldts-core@6.1.86",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tough-cookie",
+      "version": "5.1.2",
+      "purl": "pkg:npm/tough-cookie@5.1.2",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tr46",
+      "version": "5.1.1",
+      "purl": "pkg:npm/tr46@5.1.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typescript",
+      "version": "5.9.3",
+      "purl": "pkg:npm/typescript@5.9.3",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "undici-types",
+      "version": "6.21.0",
+      "purl": "pkg:npm/undici-types@6.21.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "vite",
+      "version": "8.3.5",
+      "purl": "pkg:npm/vite@8.3.5",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "vitest",
+      "version": "4.1.12",
+      "purl": "pkg:npm/vitest@4.1.12",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "w3c-xmlserializer",
+      "version": "5.0.0",
+      "purl": "pkg:npm/w3c-xmlserializer@5.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "webidl-conversions",
+      "version": "7.0.0",
+      "purl": "pkg:npm/webidl-conversions@7.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-encoding",
+      "version": "3.1.1",
+      "purl": "pkg:npm/whatwg-encoding@3.1.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-mimetype",
+      "version": "4.0.0",
+      "purl": "pkg:npm/whatwg-mimetype@4.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-url",
+      "version": "14.2.0",
+      "purl": "pkg:npm/whatwg-url@14.2.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "why-is-node-running",
+      "version": "2.3.0",
+      "purl": "pkg:npm/why-is-node-running@2.3.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ws",
+      "version": "8.22.0",
+      "purl": "pkg:npm/ws@8.22.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "xml-name-validator",
+      "version": "5.0.0",
+      "purl": "pkg:npm/xml-name-validator@5.0.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "xmlchars",
+      "version": "2.2.0",
+      "purl": "pkg:npm/xmlchars@2.2.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "upstream-licence-metadata",
+          "value": "MIT"
+        }
+      ]
+    }
+  ]
+}

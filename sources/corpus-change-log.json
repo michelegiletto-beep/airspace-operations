@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-27",
+  "reason": "Preserve original download event timestamps separately from parser run timestamps. No source text or model input selected passages changed.",
+  "previous_corpus_index_checksum": "fa0a89fbda88a856de8e5565130bfde6c504b7c54b9c455c7c272eb51f5f28a7",
+  "current_corpus_index_checksum": "a287194e7c8148d33ffc7586d37a5fadfec1e34ca9ade41f241b15153654dc9b",
+  "source_archives_unchanged": true,
+  "training_selected_snapshot": "686d1fce32cb585d35ae257b922b82bdf6177e7a3da6c84eb56ffe48663353e2",
+  "reproducible_training_input": "models/runs/explicit-shall-20261027-4/selected-passages.json",
+  "historical_metadata_snapshot_retained_in_selected_dataset": true
+}

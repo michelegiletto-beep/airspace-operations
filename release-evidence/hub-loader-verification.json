@@ -1,0 +1,8 @@
+{
+  "path": "publication/hub-inference.py",
+  "actual_source_passages": 2,
+  "result_count": 2,
+  "elapsed_seconds": 20.81326230004197,
+  "status": "Executed successfully",
+  "operational_validation": false
+}

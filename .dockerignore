@@ -1,0 +1,12 @@
+.git
+.venv
+runtime
+release
+node_modules
+frontend/node_modules
+frontend/dist
+models/pretrained
+sources/local-research
+sources/snapshots
+__pycache__
+.env

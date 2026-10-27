@@ -1,0 +1,13 @@
+{
+  "name": "frontend-tests",
+  "command": [
+    "npm.cmd",
+    "test"
+  ],
+  "cwd": "frontend",
+  "started_at": "2026-10-27T18:24:10.273397+00:00",
+  "elapsed_seconds": 5.517,
+  "exit_code": 0,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.1.0-rc.1 test\n> vitest run\n\n\n RUN  v4.1.12 C:/Users/gilet/Documents/ChatGPT/SYSTEM LABS/products/airspace-operations/frontend\n\n\n Test Files  7 passed (7)\n      Tests  27 passed (27)\n   Start at  19:24:11\n   Duration  4.16s (transform 868ms, setup 0ms, import 3.75s, tests 3.25s, environment 15.15s)\n\n",
+  "stderr": ""
+}

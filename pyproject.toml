@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools==80.10.2", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "system-lab-airspace-operations"
+version = "0.1.0rc1"
+description = "Versioned civilian UAS operational management and decision support"
+requires-python = ">=3.13,<3.14"
+license = "Apache-2.0"
+dependencies = [
+  "fastapi==0.162.0",
+  "uvicorn==0.54.0",
+  "sqlalchemy==2.0.55",
+  "psycopg[binary]==3.2.13",
+  "pydantic==2.14.1",
+  "httpx==0.28.1",
+  "PyJWT[crypto]==2.15.1",
+  "ortools==9.15.6755",
+  "pyproj==3.7.2",
+  "defusedxml==0.7.1",
+  "pypdf==6.21.3",
+  "protobuf==6.33.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "pytest-cov==7.1.0", "hypothesis==6.151.9", "pip-audit==2.10.1"]
+
+[project.scripts]
+airspace = "airspace.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["backend"]

@@ -1,0 +1,14 @@
+{
+  "name": "frontend-dependency-audit",
+  "command": [
+    "npm.cmd",
+    "audit",
+    "--json"
+  ],
+  "cwd": "frontend",
+  "started_at": "2026-10-27T18:24:22.047685+00:00",
+  "elapsed_seconds": 1.931,
+  "exit_code": 0,
+  "stdout": "{\n  \"auditReportVersion\": 2,\n  \"vulnerabilities\": {},\n  \"metadata\": {\n    \"vulnerabilities\": {\n      \"info\": 0,\n      \"low\": 0,\n      \"moderate\": 0,\n      \"high\": 0,\n      \"critical\": 0,\n      \"total\": 0\n    },\n    \"dependencies\": {\n      \"prod\": 4,\n      \"dev\": 130,\n      \"optional\": 27,\n      \"peer\": 0,\n      \"peerOptional\": 0,\n      \"total\": 133\n    }\n  }\n}\n",
+  "stderr": ""
+}

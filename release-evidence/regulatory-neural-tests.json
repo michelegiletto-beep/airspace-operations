@@ -1,0 +1,6 @@
+{
+  "command": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe -m pytest C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\tests\\test_regulatory.py C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\tests\\test_neural.py -q",
+  "exit_code": 0,
+  "stdout": ".................................                                        [100%]\n33 passed in 3.73s\n",
+  "stderr": ""
+}

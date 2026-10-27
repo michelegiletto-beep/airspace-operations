@@ -1,0 +1,54 @@
+import { useEffect, useState } from 'react';
+import type { FormEvent } from 'react';
+import { displayDate, downloadFile, errorMessage, fileToBase64, request, saveBlob } from './api';
+import type { DomainRecord, User } from './api';
+import { Empty, JsonView, Notice, StateTag, Updated, useRemote } from './components';
+
+const mediaTypes = ['application/pdf', 'application/xml', 'text/plain', 'text/html', 'application/json', 'text/csv'];
+export function EvidenceAttachment({ record, token, user, unsaved, onSaved }: { record: DomainRecord; token: string; user: User; unsaved: boolean; onSaved: (message: string) => void }) {
+  const [file, setFile] = useState<File | null>(null); const [mediaType, setMediaType] = useState(''); const [busy, setBusy] = useState(false); const [error, setError] = useState('');
+  const attachment = record.data.attachment as { original_name?: string; media_type?: string; bytes?: number; sha256?: string } | undefined;
+  const canUpload = ['regulatory', 'fleet_manager', 'planner'].includes(user.role) && ['Draft', 'Missing Evidence'].includes(record.status);
+  function selectFile(selected: File | null) {
+    setFile(selected); setError('');
+    if (!selected) { setMediaType(''); return; }
+    const extension = selected.name.split('.').pop()?.toLowerCase();
+    const inferred = extension === 'xml' ? 'application/xml' : extension === 'csv' ? 'text/csv' : selected.type;
+    setMediaType(mediaTypes.includes(inferred) ? inferred : '');
+    if (selected.size === 0 || selected.size > 1_000_000) setError('Select a non-empty evidence file up to 1 MB (1,000,000 bytes).');
+  }
+  async function upload(event: FormEvent) {
+    event.preventDefault(); if (!file || !canUpload || unsaved) return; setBusy(true); setError('');
+    try { const content_base64 = await fileToBase64(file); await request(`/evidence/${encodeURIComponent(record.id)}/content`, token, { method: 'PUT', body: JSON.stringify({ original_name: file.name, media_type: mediaType, content_base64, expected_version: record.version }) }); onSaved('Evidence content stored. The server recorded its SHA-256 digest and a new draft revision.'); }
+    catch (cause) { setError(errorMessage(cause)); } finally { setBusy(false); }
+  }
+  async function download() {
+    setBusy(true); setError('');
+    try { await downloadFile(`/evidence/${encodeURIComponent(record.id)}/content`, token, attachment?.original_name ?? `evidence-${record.id}.bin`); }
+    catch (cause) { setError(errorMessage(cause)); } finally { setBusy(false); }
+  }
+  return <section className="record-action-section"><h3>Evidence content</h3>{attachment ? <div className="attachment-detail"><strong>{attachment.original_name ?? 'Name not recorded'}</strong><p className="small muted">{attachment.media_type ?? 'Type not recorded'} · {attachment.bytes === undefined ? 'Size not recorded' : `${attachment.bytes.toLocaleString('en-GB')} bytes`}</p><p className="record-digest">SHA-256 {attachment.sha256 ?? 'Not recorded'}</p><button type="button" className="secondary" disabled={busy} onClick={download}>Download verified evidence content</button></div> : <p className="small muted">No attachment is recorded. Register the source, provenance and rights before attaching genuine evidence.</p>}{error ? <Notice danger>{error}</Notice> : null}{canUpload ? <form onSubmit={upload} className="attachment-form"><label>Evidence file (maximum 1 MB)<input type="file" accept=".pdf,.xml,.txt,.html,.json,.csv,application/pdf,application/xml,text/plain,text/html,application/json,text/csv" disabled={busy || unsaved} onChange={event => selectFile(event.target.files?.[0] ?? null)} /></label><label>Recorded media type<select required value={mediaType} disabled={busy || unsaved} onChange={event => setMediaType(event.target.value)}><option value="">Select the actual content type</option>{mediaTypes.map(type => <option key={type}>{type}</option>)}</select></label>{unsaved ? <Notice>Save record edits before attaching content to the saved revision.</Notice> : null}<p className="small muted">Upload stores a controlled draft and resets review. Content is downloaded as an attachment and is not executed in the application.</p><button className="secondary" disabled={busy || unsaved || !file || file.size === 0 || file.size > 1_000_000 || !mediaType}>{busy ? 'Processing evidence…' : attachment ? 'Attach replacement as new draft revision' : 'Upload evidence content'}</button></form> : <p className="small muted">Uploading requires a regulatory, fleet manager or planner account and an editable draft revision.</p>}</section>;
+}
+
+export function AlertAcknowledgement({ record, token, user, onSaved }: { record: DomainRecord; token: string; user: User; onSaved: (message: string) => void }) {
+  const [reason, setReason] = useState(''); const [busy, setBusy] = useState(false); const [error, setError] = useState('');
+  const canAcknowledge = ['pilot', 'incident_coordinator', 'fleet_manager'].includes(user.role);
+  const notification = record.data.notification as Record<string, unknown> | undefined;
+  async function acknowledge(event: FormEvent) {
+    event.preventDefault(); setBusy(true); setError('');
+    try { await request(`/alerts/${encodeURIComponent(record.id)}/acknowledge`, token, { method: 'POST', body: JSON.stringify({ expected_version: record.version, reason }) }); onSaved('Alert acknowledged. Accountable ownership and acknowledgement time were recorded; action completion remains separate.'); }
+    catch (cause) { setError(errorMessage(cause)); } finally { setBusy(false); }
+  }
+  return <section className="record-action-section"><h3>Alert acknowledgement</h3>{record.data.mode ? <StateTag state={String(record.data.mode)} /> : null}<dl className="definition-list"><dt>Owner</dt><dd>{String(record.data.owner_id ?? 'Unassigned')}</dd><dt>Acknowledged at</dt><dd>{displayDate(record.data.acknowledged_at)}</dd>{['sent', 'delivered', 'acknowledged', 'action_completed'].map(key => <div className="definition-row" key={key}><dt>{key.replaceAll('_', ' ')}</dt><dd>{notification?.[key] === true ? 'Recorded' : 'Not recorded'}</dd></div>)}</dl>{error ? <Notice danger>{error}</Notice> : null}{record.status === 'Unacknowledged' && canAcknowledge ? <form onSubmit={acknowledge}><label>Acknowledgement reason<textarea required maxLength={4000} rows={3} value={reason} onChange={event => setReason(event.target.value)} /></label><p className="small muted">Acknowledgement records ownership. It does not record a delivered external message or a completed response action.</p><button className="secondary" disabled={busy}>{busy ? 'Recording acknowledgement…' : 'Acknowledge alert and take ownership'}</button></form> : <p className="small muted">{record.status === 'Acknowledged' ? String(record.data.acknowledgement_reason ?? 'No rationale recorded') : 'Acknowledgement requires a pilot, incident coordinator or fleet manager account.'}</p>}</section>;
+}
+
+interface IncidentSnapshot { incident: DomainRecord; assessment: { status: string; findings?: string[]; checklist?: { order: number; text: string; status: string; procedure_id: string; procedure_version: string; source_ref: string }[]; owner?: string; escalation?: string; [key: string]: unknown }; timeline: DomainRecord[]; cache_generated_at: string; external_notification_status: string; degraded_export_notice: string }
+export function IncidentWorkspace({ record, token }: { record: DomainRecord; token: string }) {
+  const [revision, setRevision] = useState(0); const [clock, setClock] = useState(Date.now());
+  const result = useRemote<IncidentSnapshot>(`/incidents/${encodeURIComponent(record.id)}/workspace`, token, revision);
+  useEffect(() => { const timer = window.setInterval(() => setClock(Date.now()), 5000); return () => window.clearInterval(timer); }, []);
+  const snapshot = result.data;
+  const age = snapshot ? Math.floor((clock - new Date(snapshot.cache_generated_at).getTime()) / 1000) : null;
+  function download() { if (snapshot) saveBlob(new Blob([JSON.stringify(snapshot, null, 2)], { type: 'application/json' }), `incident-${record.id}-snapshot.json`); }
+  return <section className="record-action-section incident-workspace"><div className="section-toolbar"><h3>Incident response workspace</h3><button type="button" className="secondary" onClick={() => { setClock(Date.now()); setRevision(value => value + 1); }}>Refresh verified state</button></div>{result.error ? <Notice danger>{result.error}</Notice> : null}{result.loading ? <p className="small muted">Retrieving saved incident, procedure and timeline…</p> : snapshot ? <><div className="incident-snapshot-meta"><StateTag state={snapshot.assessment.status} /><Updated time={result.checkedAt} /></div><dl className="definition-list"><dt>Command owner</dt><dd>{snapshot.assessment.owner ?? 'Unassigned — accountable action required'}</dd><dt>Escalation</dt><dd>{snapshot.assessment.escalation ?? 'Not assessed'}</dd><dt>External notification</dt><dd>{snapshot.external_notification_status}</dd><dt>Snapshot generated</dt><dd>{displayDate(snapshot.cache_generated_at)}</dd><dt>Snapshot age</dt><dd>{age === null || !Number.isFinite(age) ? 'Unknown' : age < 0 ? 'Clock mismatch — verify server time' : `${age} seconds at last local check`}</dd></dl>{snapshot.assessment.findings?.length ? <Notice><ul>{snapshot.assessment.findings.map(finding => <li key={finding}>{finding}</li>)}</ul></Notice> : null}<h4>Approved procedure steps</h4>{snapshot.assessment.checklist?.length ? <ol className="procedure-steps">{snapshot.assessment.checklist.map(step => <li key={`${step.procedure_id}-${step.order}`}><p>{step.text}</p><span className="small muted">{step.status} · Procedure {step.procedure_id} revision {step.procedure_version} · {step.source_ref}</span></li>)}</ol> : <p className="small muted">No approved procedure steps were returned. Escalate to the accountable person; flight-critical instructions are not generated.</p>}<h4>Linked event timeline</h4>{snapshot.timeline.length ? <ol className="event-timeline">{snapshot.timeline.map(event => <li key={event.id}><span className="small muted">{displayDate(event.created_at)} · {event.kind}</span><strong>{event.title}</strong><StateTag state={event.status} /><details><summary>Inspect verified event record</summary><JsonView value={event} /></details></li>)}</ol> : <Empty title="No linked event records">Only events explicitly linked to this incident appear in the timeline. Missing telemetry is not reconstructed.</Empty>}<Notice>{snapshot.degraded_export_notice}. External notification and completed actions require their own evidence.</Notice><button type="button" className="secondary" onClick={download}>Download incident snapshot for degraded access</button><details className="advanced"><summary>Saved incident and assessment provenance</summary><JsonView value={snapshot} /></details></> : null}</section>;
+}

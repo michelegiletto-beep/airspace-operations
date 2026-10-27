@@ -1,0 +1,13 @@
+# Executable delivery plan
+
+Baseline: SPECIFICATION.md, SHA-256 43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30. Requirements are ASO-section-paragraph in REQUIREMENTS_TRACEABILITY.csv. The plan implements the whole baseline; unfinished scope remains explicit.
+
+1. Governance and persistent foundation: inspect workspace; isolate product; tenant identity, database schema and migrations, audit chain, versioned records, outbox and durable jobs; source metadata and retrieval. Verify tenant separation, concurrent edits, approval controls, source filters and malicious inputs.
+2. Authorisation vertical flow: proposed operations, evidence requirements, independent review, distinct permission instruments and receipt-backed submission, controlled export. Verify missing evidence, expired permission and configuration changes.
+3. Operational engines: spatial checks, methodology-specific risk completeness, fleet/personnel records, constraint scheduler and independent verifier. Verify infeasibility, stale inputs, overlap and timezone boundaries.
+4. Monitoring and incidents: read-only telemetry, deterministic alert records, procedural incident workspace, connector status and recoverable jobs. Verify duplicates, out-of-order data, outage and escalation.
+5. Neural experiments: real primary-source ingestion, pretrained retrieval, local trainable student, machine annotation lineage and grouped evaluation. Run and retain actual outputs; do not call machine labels expert truth.
+6. Release preparation: economics, UI refinement, security review, E2E and restoration, package locks, SBOM, checksums, handbooks and capability matrix. Stable release remains blocked for failed mandatory gates.
+7. Publication: confirm namespaces and rights; publish only releasable assets. Retrieve public releases independently. Update the existing System Lab site only with verified links and accurate release status. If access is absent, retain ready publication workflow and exact blocker.
+
+Each milestone has passing targeted checks before integration proceeds. STATUS.md and release-evidence/commands.jsonl are the checkpoint and executed-command ledger. README documents the current runnable path. Next action after interruption: read STATUS.md, then inspect the failed or pending evidence entries before changing code.

@@ -1,0 +1,12 @@
+{
+  "run_id": "explicit-obligation-20261027-1",
+  "status": "Blocked \u2014 teacher produced insufficient validated label diversity",
+  "counts": {
+    "train": {},
+    "validation": {},
+    "test": {}
+  },
+  "teacher_seconds": 15.414781700004824,
+  "annotations_checksum": "b3d50db143419faa8a12c73d162acb0a7081c1e2d4f6d97eb010bc4b458a3eea",
+  "ground_truth": false
+}
