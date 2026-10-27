@@ -191,8 +191,10 @@ def test_sora_sail_and_tmpr_all_rows_match_preserved_official_source():
     # second transcription of the implementation's lookup matrix.
     import json
     from pathlib import Path
-    path = next((Path(__file__).resolve().parents[1] / "sources" / "snapshots" / "easa-uas-xml-2026").glob("*/passages.json"))
-    by_anchor = {p["anchor"]: p for p in json.loads(path.read_text(encoding="utf-8"))}
+    # The cleared corpus preserves these exact independently extracted rows.
+    # Original XML archives remain separate when redistribution is not cleared.
+    path = Path(__file__).resolve().parents[1] / "sources" / "corpus.json"
+    by_anchor = {p["anchor"]: p for p in json.loads(path.read_text(encoding="utf-8")) if p["source_id"] == "easa-uas-xml-2026"}
     for grc in range(1, 8):
         source = by_anchor[f"ERULES-1963177438-24086:b{461 + max(2, grc) - 2:04d}"]
         expected = [part.strip() for part in source["text"].split("|")][1:]
