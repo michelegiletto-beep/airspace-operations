@@ -11,7 +11,7 @@ from pathlib import Path
 from uuid import uuid4
 
 from sqlalchemy import (JSON, Column, ForeignKey, Integer, MetaData, String, Table, inspect,
-                        Text, UniqueConstraint, create_engine, event, select, update)
+                        Text, UniqueConstraint, create_engine, event, select, update, text)
 
 metadata = MetaData()
 organisations = Table("organisations", metadata, Column("id", String, primary_key=True), Column("name", String, nullable=False), Column("audit_seq", Integer, nullable=False, default=0))
@@ -71,17 +71,31 @@ class Store:
         if url.startswith("sqlite"):
             @event.listens_for(self.engine, "connect")
             def sqlite_config(connection, _):
+                import sqlite3
+                import time
                 connection.execute("PRAGMA foreign_keys=ON")
-                connection.execute("PRAGMA journal_mode=WAL")
+                for attempt in range(8):
+                    try:
+                        connection.execute("PRAGMA journal_mode=WAL")
+                        break
+                    except sqlite3.OperationalError as error:
+                        if (getattr(error, "sqlite_errorcode", 0) & 255) not in {sqlite3.SQLITE_BUSY, sqlite3.SQLITE_LOCKED} or attempt == 7:
+                            raise
+                        time.sleep(min(0.05 * 2 ** attempt, 0.5))
 
     def migrate(self):
-        if inspect(self.engine).has_table("schema_versions"):
-            with self.engine.connect() as conn:
+        with self.engine.begin() as conn:
+            # API and worker may start together. Hold the deployment migration
+            # lock across inspection, transactional DDL and version recording.
+            if self.engine.dialect.name == "postgresql":
+                conn.execute(text("SELECT pg_advisory_xact_lock(719443302)"))
+            elif self.engine.dialect.name == "sqlite":
+                conn.exec_driver_sql("BEGIN IMMEDIATE")
+            if inspect(conn).has_table("schema_versions"):
                 existing = set(conn.execute(select(schema_versions.c.version)).scalars())
                 if any(version > CURRENT_SCHEMA_VERSION for version in existing):
                     raise ValueError("Database schema is newer than this software; use the matching release")
-        metadata.create_all(self.engine)
-        with self.engine.begin() as conn:
+            metadata.create_all(conn)
             applied = set(conn.execute(select(schema_versions.c.version)).scalars())
             if any(version > CURRENT_SCHEMA_VERSION for version in applied):
                 raise ValueError("Database schema is newer than this software; use the matching release")

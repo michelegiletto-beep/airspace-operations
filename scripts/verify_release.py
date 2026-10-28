@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 
 ROOT=Path(__file__).resolve().parents[1]
 VERSION=re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT/'backend/airspace/__init__.py').read_text()).group(1)
-EVIDENCE=ROOT/'release-evidence'/VERSION
+EVIDENCE=ROOT/'release-evidence'/('v'+VERSION)
 
 
 def execute(name,command,cwd=ROOT,timeout=300):

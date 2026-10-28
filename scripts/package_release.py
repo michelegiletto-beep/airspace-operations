@@ -71,7 +71,7 @@ def build_metadata():
 
 
 def main():
-    gate=json.loads((ROOT/'release-evidence'/VERSION/'release-gates.json').read_text())
+    gate=json.loads((ROOT/'release-evidence'/('v'+VERSION)/'release-gates.json').read_text())
     if not gate.get('engineering_checks_passed'): raise SystemExit('Engineering gates have not passed; packaging blocked')
     if gate.get('version') != VERSION: raise SystemExit('Release gates belong to another software version')
     if not (ROOT/'frontend/dist/index.html').exists(): raise SystemExit('Build the interface first')

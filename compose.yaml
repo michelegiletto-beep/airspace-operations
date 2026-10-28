@@ -49,7 +49,11 @@ services:
       database:
         condition: service_healthy
     healthcheck:
-      disable: true
+      test: ["CMD", "python", "-m", "airspace.worker_health"]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
     read_only: true
     tmpfs: [/tmp]
     cap_drop: [ALL]

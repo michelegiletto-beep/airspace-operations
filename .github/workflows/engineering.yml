@@ -32,12 +32,15 @@ jobs:
           database_password=$(openssl rand -hex 24)
           application_password=$(openssl rand -hex 24)
           audit_key=$(openssl rand -hex 32)
+          verification_password=$(openssl rand -hex 24)
           echo "::add-mask::$database_password"
           echo "::add-mask::$application_password"
           echo "::add-mask::$audit_key"
+          echo "::add-mask::$verification_password"
           echo "POSTGRES_PASSWORD=$database_password" >> "$GITHUB_ENV"
           echo "AIRSPACE_DB_APP_PASSWORD=$application_password" >> "$GITHUB_ENV"
           echo "AIRSPACE_AUDIT_KEY=$audit_key" >> "$GITHUB_ENV"
+          echo "AIRSPACE_INITIAL_PASSWORD=$verification_password" >> "$GITHUB_ENV"
           echo "AIRSPACE_DATABASE_URL=postgresql+psycopg://airspace:$application_password@database:5432/airspace" >> "$GITHUB_ENV"
           docker version
           docker compose version
@@ -55,6 +58,10 @@ jobs:
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace -c 'CREATE DATABASE airspace_verification OWNER airspace'
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace_verification -c 'CREATE EXTENSION postgis; CREATE EXTENSION vector;'
           echo "AIRSPACE_TEST_POSTGRES_URL=postgresql+psycopg://airspace:$AIRSPACE_DB_APP_PASSWORD@127.0.0.1:5432/airspace_verification" >> "$GITHUB_ENV"
+      - name: Actual running container worker and authenticated API
+        run: |
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T -e AIRSPACE_INITIAL_PASSWORD api python -m airspace.cli user-add --organisation 'Isolated container verification' --email container-worker@test.invalid --role regulatory
+          uv run python scripts/verify_container_worker.py
       - name: PostgreSQL extensions, concurrency and workflow isolation
         run: uv run pytest -q tests/test_postgres_integration.py tests/test_postgres_coordination.py
       - name: Actual PostgreSQL backup and restoration
@@ -62,7 +69,7 @@ jobs:
           uv run python scripts/verify_postgres_recovery.py seed
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_dump -U airspace_admin --format=custom --file=/tmp/airspace.dump airspace_verification
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database createdb -U airspace_admin -O airspace airspace_restoration
-          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_restore -U airspace_admin --dbname=airspace_restoration --exit-on-error /tmp/airspace.dump
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_restore -U airspace_admin --dbname=airspace_restoration --exit-on-error --single-transaction /tmp/airspace.dump
           uv run python scripts/verify_postgres_recovery.py verify
       - name: Stop this isolated verification deployment
         if: always()

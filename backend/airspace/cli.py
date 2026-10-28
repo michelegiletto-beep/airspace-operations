@@ -75,13 +75,15 @@ def main():
         uvicorn.run(create_app(store), host=args.host, port=args.port, access_log=False)
     elif args.command == "worker":
         from .worker import run_once
-        while True:
-            result = run_once(store)
-            if result:
-                print(json.dumps(result), flush=True)
-            if args.once:
-                break
-            time.sleep(2)
+        from .worker_health import WorkerHeartbeat
+        with WorkerHeartbeat():
+            while True:
+                result = run_once(store)
+                if result:
+                    print(json.dumps(result), flush=True)
+                if args.once:
+                    break
+                time.sleep(2)
     elif args.command == "verify":
         result = store.verify_audit(args.organisation_id)
         print(json.dumps(result, indent=2))

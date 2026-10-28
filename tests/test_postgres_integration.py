@@ -19,8 +19,8 @@ def pg():
 
 def test_actual_postgis_geodesic_and_vector_extensions(pg):
     with pg.engine.begin() as conn:
-        privileges = conn.execute(text("SELECT rolsuper, rolcreatedb, rolcreaterole FROM pg_roles WHERE rolname=current_user")).one()
-        assert privileges == (False, False, False), "The ordinary application role must not be a database administrator"
+        privileges = conn.execute(text("SELECT rolsuper, rolcreatedb, rolcreaterole, rolreplication FROM pg_roles WHERE rolname=current_user")).one()
+        assert privileges == (False, False, False, False), "The ordinary application role must not be a database administrator or replication role"
         distance = conn.execute(text("SELECT ST_Distance(ST_GeogFromText('POINT(0 0)'), ST_GeogFromText('POINT(1 0)'))")).scalar_one()
         assert abs(distance - 111319.49079327357) < 0.00001
         assert conn.execute(text("SELECT '[1,0,0]'::vector <=> '[1,0,0]'::vector")).scalar_one() == 0

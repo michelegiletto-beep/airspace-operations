@@ -166,3 +166,20 @@ def test_late_pause_cleanup_does_not_cancel_a_newer_resume(environment, monkeypa
     for _ in range(4):
         assert run_once(store)["state"] == "Completed"
     assert client.get(url, headers=auth).json()["status"] == "Needs Review"
+
+
+def test_simultaneous_fresh_service_migrations_are_serialised(tmp_path):
+    url = "sqlite:///" + (tmp_path / "fresh-start.db").as_posix()
+    def migrate(_):
+        service = Store(url, b"isolated-startup-migration-key-32bytes")
+        try:
+            service.migrate()
+        finally:
+            service.engine.dispose()
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        list(pool.map(migrate, range(8)))
+    service = Store(url, b"isolated-startup-migration-key-32bytes")
+    with service.engine.connect() as conn:
+        assert set(conn.execute(select(schema_versions.c.version)).scalars()) == {1, 2}
+        assert {"sharing_agreements", "fleet_reservations", "resource_locks"} <= set(__import__('sqlalchemy').inspect(conn).get_table_names())
+    service.engine.dispose()

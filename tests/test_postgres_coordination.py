@@ -13,7 +13,7 @@ from uuid import uuid4
 import pytest
 from fastapi import HTTPException
 from fastapi.testclient import TestClient
-from sqlalchemy import create_engine, event, select, text, update
+from sqlalchemy import create_engine, event, inspect, select, text, update
 from sqlalchemy.engine import make_url
 from sqlalchemy.schema import CreateSchema, DropSchema
 
@@ -23,7 +23,8 @@ from airspace.planning import cancel_schedule
 from airspace.scheduler import ScheduleRequest, solve_schedule
 from airspace.sharing import (decide_agreement, lock_physical_aircraft,
                               reserve_physical_aircraft)
-from airspace.storage import Store, audit, fleet_reservations, jobs, records
+from airspace.storage import (Store, audit, fleet_reservations, jobs, records,
+                              metadata, schema_versions, CURRENT_SCHEMA_VERSION)
 from airspace.worker import run_once
 from test_dispatch import (
     test_actual_assigned_pilot_and_internal_dispatch_are_distinct as exercise_pilot_dispatch,
@@ -318,3 +319,54 @@ def test_postgres_worker_pause_and_finish_use_consistent_lock_order(pg_environme
                 assert row["state"] == "Completed" and row["result"] is not None
             assert row["version"] == 3
     assert store.verify_audit(author["organisation_id"])["valid"]
+
+
+def test_postgres_concurrent_first_start_migrations_are_serialized():
+    """Two independent engines initialise one fresh schema without DDL races."""
+    base_url = make_url(os.environ["AIRSPACE_TEST_POSTGRES_URL"])
+    assert base_url.get_backend_name() == "postgresql"
+    schema = "verification_" + uuid4().hex
+    assert re.fullmatch(r"verification_[0-9a-f]{32}", schema)
+    administrator = create_engine(base_url, pool_pre_ping=True)
+    stores = []
+    created = False
+    try:
+        with administrator.begin() as conn:
+            conn.execute(CreateSchema(schema))
+        created = True
+        isolated_url = base_url.update_query_dict({"options": "-csearch_path=" + schema})
+        for _ in range(2):
+            store = Store(isolated_url.render_as_string(hide_password=False),
+                          b"isolated-first-start-migration-test-key")
+
+            @event.listens_for(store.engine, "connect")
+            def bound_database_waits(connection, _):
+                with connection.cursor() as cursor:
+                    cursor.execute("SET lock_timeout = '5s'")
+                    cursor.execute("SET statement_timeout = '10s'")
+                connection.commit()
+
+            stores.append(store)
+        barrier = Barrier(2, timeout=5)
+
+        def migrate(store):
+            barrier.wait()
+            store.migrate()
+            return "Migrated"
+
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            futures = [pool.submit(migrate, store) for store in stores]
+            assert [future.result(timeout=20) for future in futures] == ["Migrated", "Migrated"]
+        with stores[0].engine.connect() as conn:
+            assert conn.execute(text("SELECT current_schema()")).scalar_one() == schema
+            assert conn.execute(text("SELECT current_schemas(false)")).scalar_one() == [schema]
+            assert set(inspect(conn).get_table_names()) == set(metadata.tables)
+            assert set(conn.execute(select(schema_versions.c.version)).scalars()) == set(range(1, CURRENT_SCHEMA_VERSION + 1))
+    finally:
+        for store in stores:
+            store.engine.dispose()
+        if created:
+            assert re.fullmatch(r"verification_[0-9a-f]{32}", schema)
+            with administrator.begin() as conn:
+                conn.execute(DropSchema(schema, cascade=True))
+        administrator.dispose()
