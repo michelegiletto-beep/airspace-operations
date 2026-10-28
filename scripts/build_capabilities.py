@@ -69,6 +69,15 @@ if ci_path.exists():
                 feature.update(capability='Container build, running-worker health and PostgreSQL restoration',status='Verified',evidence='release-evidence/v0.2.0-rc.1/ci-verification.json',limitation='Actual isolated deployment/restoration verified; deployment-scale SLO, network partitions and external pentest remain unverified.')
             elif feature['capability']=='Transactional schedule reservation and cancellation':
                 feature['limitation']='SQLite and isolated PostgreSQL concurrency exercised; real operator/provider acceptance remains separate'
+publication_path=ROOT/'publication/status.json'
+publication_verified=False
+if publication_path.exists():
+    publication=json.loads(publication_path.read_text(encoding='utf-8'))
+    publication_verified=publication.get('release')==VERSION and all(destination.get('state')=='Independently Retrieved' for destination in publication.get('destinations',[])) and len(publication.get('destinations',[]))>=6
+    if publication_verified:
+        for feature in items:
+            if feature['capability']=='Public downloadable release':
+                feature.update(status='Verified',evidence='publication/status.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;system-lab-public-verification.json;standalone-archive-verification.json',limitation='Frozen engineering candidate; exact public bytes independently retrieved and installed. Full original baseline, stable and operational acceptance remain incomplete.')
 (ROOT/'capabilities.json').write_text(json.dumps({'schema_version':'1.0','release':VERSION,'stable_release':False,'features':items},indent=2),encoding='utf-8')
 
 mapping={1:('README.md;capabilities.json','release-evidence/release-gates.json'),2:('SAFETY_BOUNDARY.md;api.py','tests/test_api.py'),3:('AGENTS.md;PLAN.md;STATUS.md','release-evidence/commands.jsonl'),4:('workflows.py;planning.py','tests/test_security_workflows.py'),5:('api.py;storage.py;compose.yaml','tests/test_api.py'),6:('regulatory.py;sources/catalogue.json','tests/test_regulatory.py'),7:('regulatory.py;neural.py','tests/test_regulatory.py'),8:('neural.py;scripts/train_neural.py','models/runs;release-evidence/neural-cpu-verification.json'),9:('worker.py','tests/test_security_review.py'),10:('api.py;workflows.py;evidence.py','tests/test_api.py'),11:('operations.py','tests/test_operations.py'),12:('operations.py;frontend','tests/test_operations.py'),13:('connector registry;permission records','docs/data-provider-setup.md'),14:('scheduler.py;planning.py','tests/test_scheduler.py;tests/test_planning.py'),15:('monitoring.py;operations.py','tests/test_operations.py'),16:('monitoring.py;operations.py','tests/test_operations.py'),17:('versioned aircraft/personnel/qualification records','frontend/verification'),18:('operations.py;commercial records','tests/test_operations.py'),19:('connector registry;source ingestion','SOURCE_REGISTER.md'),20:('identity.py;storage.py;THREAT_MODEL.md','tests/test_security_review.py'),21:('frontend/src','frontend/verification'),22:('tests;scripts/verify_release.py','release-evidence'),23:('PLAN.md;STATUS.md','release-evidence/commands.jsonl'),24:('README.md;docs;scripts/package_release.py','release-evidence/release-gates.json'),25:('publication workflow','publication/status.json'),26:('STATUS.md;RELEASE_NOTES.md','release-evidence'),27:('SOURCE_REGISTER.md','sources/checks')}
@@ -106,5 +115,10 @@ for line in (ROOT/'SPECIFICATION_V2_ADDENDUM.md').read_text(encoding='utf-8').sp
     cells=[x.strip() for x in line.strip('|').split('|')]
     number=int(cells[0].split('-')[1]);impl,evidence=revision_map[number]
     rows.append(dict(requirement_id=cells[0],section='Revision 2',baseline_text=cells[1],implementation=impl,tests_evidence=evidence,release_status='Implemented - verification and publication states recorded separately',limitations='See versioned evidence and publication/status.json; no full original-baseline or operational acceptance inferred.'))
+if publication_verified:
+    for row in rows:
+        if row['requirement_id'] in {'ASO2-012','ASO2-013','ASO2-015'}:
+            row['release_status']='Verified - engineering publication only'
+            row['tests_evidence']='publication/status.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;release-evidence/v0.2.0-rc.1/system-lab-public-verification.json;release-evidence/v0.2.0-rc.1/hf-space-final-public-verification.json'
 with path.open('w',newline='',encoding='utf-8') as file: writer=csv.DictWriter(file,fields);writer.writeheader();writer.writerows(rows)
 print(json.dumps({'capabilities':len(items),'baseline_requirements':sum(x['requirement_id'].startswith('ASO-') for x in rows),'revision_requirements':sum(x['requirement_id'].startswith('ASO2-') for x in rows),'full_acceptance_claimed':False}))

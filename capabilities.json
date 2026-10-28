@@ -250,10 +250,10 @@
     },
     {
       "capability": "Public downloadable release",
-      "status": "Implemented",
+      "status": "Verified",
       "implementation": "scripts/package_release.py;publication workflow",
-      "evidence": "release/package-result.json",
-      "limitation": "Publication state recorded separately; no invented URLs"
+      "evidence": "publication/status.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;system-lab-public-verification.json;standalone-archive-verification.json",
+      "limitation": "Frozen engineering candidate; exact public bytes independently retrieved and installed. Full original baseline, stable and operational acceptance remain incomplete."
     },
     {
       "capability": "Complete original master specification acceptance",

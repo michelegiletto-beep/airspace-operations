@@ -1,0 +1,1094 @@
+TAP version 13
+# Python non � stato trovato; eseguire senza argomenti da installare dal Microsoft Store o disabilitare questo collegamento da Impostazioni > App > Impostazioni app avanzate > alias di esecuzione dell'app.
+# Subtest: AQOS publication exposes the new editorial programme without source artefacts
+ok 1 - AQOS publication exposes the new editorial programme without source artefacts
+  ---
+  duration_ms: 4.2985
+  ...
+# Subtest: chapter links resolve to actual reading-page ids
+ok 2 - chapter links resolve to actual reading-page ids
+  ---
+  duration_ms: 0.9244
+  ...
+# Subtest: AQOS catalogue presents exactly three bounded product studies
+ok 3 - AQOS catalogue presents exactly three bounded product studies
+  ---
+  duration_ms: 0.5667
+  ...
+# Subtest: render assets have the approved 3:2 production dimensions
+ok 4 - render assets have the approved 3:2 production dimensions
+  ---
+  duration_ms: 121.3147
+  ...
+# Subtest: vector plates encode exact architecture and capacity claims
+ok 5 - vector plates encode exact architecture and capacity claims
+  ---
+  duration_ms: 28.8316
+  ...
+# Subtest: reference benchmark is deterministic and agrees with exact enumeration
+not ok 6 - reference benchmark is deterministic and agrees with exact enumeration
+  ---
+  duration_ms: 586.2918
+  location: 'C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-baseline-bb9ffcd\\tests\\aqos-integrity.test.mjs:79:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Command failed: python3 C:\Users\gilet\Documents\ChatGPT\SYSTEM LABS\products\airspace-operations\work\site-baseline-bb9ffcd\public\aqos\benchmark.py
+    Python non � stato trovato; eseguire senza argomenti da installare dal Microsoft Store o disabilitare questo collegamento da Impostazioni > App > Impostazioni app avanzate > alias di esecuzione dell'app.
+    
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    genericNodeError (node:internal/errors:983:15)
+    wrappedFn (node:internal/errors:537:14)
+    checkExecSyncError (node:child_process:882:11)
+    execFileSync (node:child_process:918:15)
+    TestContext.<anonymous> (file:///C:/Users/gilet/Documents/ChatGPT/SYSTEM%20LABS/products/airspace-operations/work/site-baseline-bb9ffcd/tests/aqos-integrity.test.mjs:83:3)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:931:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:629:18)
+    Test.postRun (node:internal/test_runner/test:1042:19)
+    Test.run (node:internal/test_runner/test:970:12)
+  ...
+# Subtest: AQOS local asset references exist
+ok 7 - AQOS local asset references exist
+  ---
+  duration_ms: 8.7038
+  ...
+# Subtest: ASPIDES HORMUZ has a dedicated register and maritime programme entry
+ok 8 - ASPIDES HORMUZ has a dedicated register and maritime programme entry
+  ---
+  duration_ms: 91.8513
+  ...
+# Subtest: the project presents the application, preview and same-origin download
+ok 9 - the project presents the application, preview and same-origin download
+  ---
+  duration_ms: 8.6888
+  ...
+# Subtest: the complete downloadable application matches its release fingerprint and starts empty
+ok 10 - the complete downloadable application matches its release fingerprint and starts empty
+  ---
+  duration_ms: 101.221
+  ...
+# Subtest: CIRCA publication separates ecosystem, invention, evidence and engagement
+ok 11 - CIRCA publication separates ecosystem, invention, evidence and engagement
+  ---
+  duration_ms: 2.6758
+  ...
+# Subtest: CIRCA public model remains explicitly parametric and internally consistent
+ok 12 - CIRCA public model remains explicitly parametric and internally consistent
+  ---
+  duration_ms: 0.7732
+  ...
+# Subtest: Systems Lab registers CIRCA and its commercial pathways
+ok 13 - Systems Lab registers CIRCA and its commercial pathways
+  ---
+  duration_ms: 0.4365
+  ...
+# Subtest: LYRA3 scientific structure remains complete
+ok 14 - LYRA3 scientific structure remains complete
+  ---
+  duration_ms: 5.0462
+  ...
+# Subtest: LYRA3 equation, table and figure sequences are explicit
+ok 15 - LYRA3 equation, table and figure sequences are explicit
+  ---
+  duration_ms: 4.2268
+  ...
+# Subtest: LYRA3 edition, assets and internal links pass the release gate
+ok 16 - LYRA3 edition, assets and internal links pass the release gate
+  ---
+  duration_ms: 52.5039
+  ...
+# Subtest: LYRA3 embedded evidence is byte-locked and visibly bounded
+not ok 17 - LYRA3 embedded evidence is byte-locked and visibly bounded
+  ---
+  duration_ms: 1.8586
+  location: 'C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-baseline-bb9ffcd\\tests\\lyra3-integrity.test.mjs:109:1'
+  failureType: 'testCodeFailure'
+  error: 'embedded DATA literal must exist'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/gilet/Documents/ChatGPT/SYSTEM%20LABS/products/airspace-operations/work/site-baseline-bb9ffcd/tests/lyra3-integrity.test.mjs:111:10)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:931:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:629:18)
+    Test.postRun (node:internal/test_runner/test:1042:19)
+    Test.run (node:internal/test_runner/test:970:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:629:7)
+  ...
+# Subtest: LYRA3 scripts and semantic metadata parse
+ok 18 - LYRA3 scripts and semantic metadata parse
+  ---
+  duration_ms: 4.1273
+  ...
+# Subtest: LYRA3 accessibility and editorial redlines remain in force
+ok 19 - LYRA3 accessibility and editorial redlines remain in force
+  ---
+  duration_ms: 1.656
+  ...
+# Subtest: LYRA3 generator no longer depends on an ephemeral source or author substring
+ok 20 - LYRA3 generator no longer depends on an ephemeral source or author substring
+  ---
+  duration_ms: 2.4637
+  ...
+# Subtest: The homepage presents all thirty projects once in six primary classes
+ok 21 - The homepage presents all thirty projects once in six primary classes
+  ---
+  duration_ms: 8.5509
+  ...
+# Subtest: The project page describes the evaluation and server boundary
+ok 22 - The project page describes the evaluation and server boundary
+  ---
+  duration_ms: 0.7972
+  ...
+# Subtest: Every project card preserves its catalogue identity and materials, including Orbital
+ok 23 - Every project card preserves its catalogue identity and materials, including Orbital
+  ---
+  duration_ms: 23.8297
+  ...
+# Subtest: The showcase contains eight complete application screenshots with enlargement links
+ok 24 - The showcase contains eight complete application screenshots with enlargement links
+  ---
+  duration_ms: 68.8606
+  ...
+# Subtest: Image sequence tabs and enlargement dialog have complete accessible references
+ok 25 - Image sequence tabs and enlargement dialog have complete accessible references
+  ---
+  duration_ms: 1.4344
+  ...
+# Subtest: The page keeps numerical boundaries and agent development status explicit
+ok 26 - The page keeps numerical boundaries and agent development status explicit
+  ---
+  duration_ms: 1.3547
+  ...
+# Subtest: Showcase downloads and social previews resolve to the actual public release assets
+ok 27 - Showcase downloads and social previews resolve to the actual public release assets
+  ---
+  duration_ms: 7.0831
+  ...
+# Subtest: SCILLA PASSIVE is project 01, followed by LYRA3 and PHASE CELL
+not ok 28 - SCILLA PASSIVE is project 01, followed by LYRA3 and PHASE CELL
+  ---
+  duration_ms: 4.0959
+  location: 'C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-baseline-bb9ffcd\\tests\\phase-cell-integrity.test.mjs:44:1'
+  failureType: 'testCodeFailure'
+  error: 'SCILLA PASSIVE must be numbered 01'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/gilet/Documents/ChatGPT/SYSTEM%20LABS/products/airspace-operations/work/site-baseline-bb9ffcd/tests/phase-cell-integrity.test.mjs:48:10)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:931:25)
+    Test.start (node:internal/test_runner/test:829:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: the complete PHASE CELL family remains cross-linked and evidence bounded
+ok 29 - the complete PHASE CELL family remains cross-linked and evidence bounded
+  ---
+  duration_ms: 28.7361
+  ...
+# Subtest: each PHASE CELL opening carries one complete-product sector study
+ok 30 - each PHASE CELL opening carries one complete-product sector study
+  ---
+  duration_ms: 20.7233
+  ...
+# Subtest: PHASE CELL publication framing is restrained and date-only
+ok 31 - PHASE CELL publication framing is restrained and date-only
+  ---
+  duration_ms: 50.5262
+  ...
+# Subtest: PHASE CELL concept catalogue separates renders from evidence
+ok 32 - PHASE CELL concept catalogue separates renders from evidence
+  ---
+  duration_ms: 13.1916
+  ...
+# Subtest: PHASE CELL vector plates are complete, exact and non-sensational
+ok 33 - PHASE CELL vector plates are complete, exact and non-sensational
+  ---
+  duration_ms: 6.4831
+  ...
+# Subtest: PHASE CELL local assets and internal anchors resolve
+ok 34 - PHASE CELL local assets and internal anchors resolve
+  ---
+  duration_ms: 12.8878
+  ...
+# Subtest: PHASE CELL formulas retain semantic plates and corrected notation
+ok 35 - PHASE CELL formulas retain semantic plates and corrected notation
+  ---
+  duration_ms: 17.0724
+  ...
+# Subtest: PHASE CELL Sigma remains a cross-linked derived platform with bounded evidence
+ok 36 - PHASE CELL Sigma remains a cross-linked derived platform with bounded evidence
+  ---
+  duration_ms: 84.8689
+  ...
+# Subtest: PHASE CELL Sigma assets, anchors and reproducibility record resolve
+ok 37 - PHASE CELL Sigma assets, anchors and reproducibility record resolve
+  ---
+  duration_ms: 98.5209
+  ...
+# Subtest: every catalogue project retains its materials and receives a classified editorial image
+ok 38 - every catalogue project retains its materials and receives a classified editorial image
+  ---
+  duration_ms: 85.7986
+  ...
+# Subtest: editorial images cover the full catalogue
+ok 39 - editorial images cover the full catalogue
+  ---
+  duration_ms: 590.5321
+  ...
+# Subtest: new pages preserve documented limits and real software imagery
+ok 40 - new pages preserve documented limits and real software imagery
+  ---
+  duration_ms: 71.4998
+  ...
+# Subtest: Q-AXXELE publication defines the product before the research
+ok 41 - Q-AXXELE publication defines the product before the research
+  ---
+  duration_ms: 4.4398
+  ...
+# Subtest: Q-AXXELE public benchmark is internally consistent
+ok 42 - Q-AXXELE public benchmark is internally consistent
+  ---
+  duration_ms: 38.8354
+  ...
+# Subtest: Q-AXXELE v2 computational trial is preregistered and paired
+ok 43 - Q-AXXELE v2 computational trial is preregistered and paired
+  ---
+  duration_ms: 20.4007
+  ...
+# Subtest: Q-AXXELE release files and archive are present and locked
+ok 44 - Q-AXXELE release files and archive are present and locked
+  ---
+  duration_ms: 10.3653
+  ...
+# Subtest: Q-AXXELE Industrial Evidence Pack publishes complete statistical outputs
+ok 45 - Q-AXXELE Industrial Evidence Pack publishes complete statistical outputs
+  ---
+  duration_ms: 4.5235
+  ...
+# Subtest: Q-AXXELE v3 replays verified external demand with a peak-safety boundary
+ok 46 - Q-AXXELE v3 replays verified external demand with a peak-safety boundary
+  ---
+  duration_ms: 44.2563
+  ...
+# Subtest: Q-AXXELE Trace Evidence Pack is complete and locked
+ok 47 - Q-AXXELE Trace Evidence Pack is complete and locked
+  ---
+  duration_ms: 35.3145
+  ...
+# Subtest: Q-AXXELE scripts and links parse
+ok 48 - Q-AXXELE scripts and links parse
+  ---
+  duration_ms: 18.5957
+  ...
+# Subtest: Systems Lab register exposes Q-AXXELE pathways
+ok 49 - Systems Lab register exposes Q-AXXELE pathways
+  ---
+  duration_ms: 19.4968
+  ...
+# Subtest: omits development-only preview metadata from production output
+ok 50 - omits development-only preview metadata from production output
+  ---
+  duration_ms: 162.8429
+  ...
+# Subtest: SCILLA PASSIVE is the first Systems Lab project
+not ok 51 - SCILLA PASSIVE is the first Systems Lab project
+  ---
+  duration_ms: 8.4637
+  location: 'C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-baseline-bb9ffcd\\tests\\scilla-passive-integrity.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /Current register · 16 projects/. Input:
+    
+    'const projects = [\r\n' +
+      '  {\r\n' +
+      '    number: "01",\r\n' +
+      '    title: "SCILLA PASSIVE",\r\n' +
+      '    subtitle: "Cue-driven opportunistic maritime verification",\r\n' +
+      '    abstract:\r\n' +
+      '      "Tests whether a valid non-cooperative bistatic second observation can reduce uncertainty in an existing maritime track. The public release supports the observation architecture in simulation while explicitly rejecting a demonstrated optimiser moat.",\r\n' +
+      '    status: "Public Evidence v1.0.0 · simulation only · partner RF validation sought",\r\n' +
+      '    artefact: "Zenodo DOI · corrected-model audit · partner validation dossier",\r\n' +
+      '    domain: "Passive radar · maritime tracking · sensor fusion",\r\n' +
+      '    revision: "Corrected-model audit · 2 September 2026",\r\n' +
+      '    href: "/scilla-passive",\r\n' +
+      '    external: false,\r\n' +
+      '    pathways: [\r\n' +
+      '      { label: "Open SCILLA PASSIVE evidence", href: "/scilla-passive" },\r\n' +
+      '      { label: "Open the partner validation gate", href: "/scilla-passive/validation" },\r\n' +
+      '      { label: "Partner validation dossier", href: "https://github.com/michelegiletto-beep/scilla-passive-evidence/blob/main/docs/SCILLA_PASSIVE_PARTNER_VALIDATION_DOSSIER_2026-09-02.pdf", external: true },\r\n' +
+      '      { label: "Canonical DOI archive", href: "https://doi.org/10.5281/zenodo.22229086", external: true },\r\n' +
+      '      { label: "Reproduce on GitHub", href: "https://github.com/michelegiletto-beep/scilla-passive-evidence", external: true },\r\n' +
+      '    ],\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "02",\r\n' +
+      '    title: "LYRA³",\r\n' +
+      '    subtitle: "Orbital intelligence fabric",\r\n' +
+      '    abstract:\r\n' +
+      '      "Enters industrial evaluation through MANIFEST, with an open reference benchmark that publishes its non-confirmation of the earlier positive value effect. PULSE and LOOP remain bounded expansion proposals on the same typed constraint and evidence-preserving architecture.",\r\n' +
+      '    status: "Independent technical preprint · open synthetic falsification record",\r\n' +
+      '    artefact: "MANIFEST code, raw replay and hashes · industrial evaluation pathway",\r\n' +
+      '    domain: "Orbital lifecycle operations",\r\n' +
+      '    revision: "Version III · 28 August 2026",\r\n' +
+      '    href: "/lyra3-orbital-intelligence-fabric.html",\r\n' +
+      '    external: false,\r\n' +
+      '    pathways: [\r\n' +
+      '      { label: "Read the technical preprint", href: "/lyra3-orbital-intelligence-fabric.html" },\r\n' +
+      '      { label: "Download MANIFEST reproducibility pack", href: "/lyra3/reproducibility/manifest-v1/LYRA3_MANIFEST_reproducibility_pack_v1.zip" },\r\n' +
+      '    ],\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "03",\r\n' +
+      '    title: "PHASE CELL",\r\n' +
+      '    subtitle: "Cryothermal pressure generation and cumulative mechanical storage",\r\n' +
+      '    abstract:\r\n' +
+      '      "Examines whether confined ice expansion can drive a thermally rechargeable hydraulic accumulator. PHASE CELL Σ extends the core record with rectified micro-strokes, pressure-matched storage, an open analytical benchmark and product pathways for stratospheric and data-centre thermal systems.",\r\n' +
+      '    status: "Analytical feasibility · Σ systems model released · hardware validation pending",\r\n' +
+      '    artefact: "Core engineering record · open reproducibility pack · modular product platform",\r\n' +
+      '    domain: "Thermal storage · stratosphere · data-centre thermal resilience · subsea",\r\n' +
+      '    revision: "PHASE CELL Σ edition · 28 August 2026",\r\n' +
+      '    href: "/phase-cell-pressure-battery.html",\r\n' +
+      '    external: false,\r\n' +
+      '    pathways: [\r\n' +
+      '      { label: "01 · Core engineering record", href: "/phase-cell-pressure-battery.html" },\r\n' +
+      '      { label: "02 · Acquisition and patent pathway", href: "/phase-cell-commercial-dossier.html" },\r\n' +
+      '      { label: "03 · Derived masking research", href: "/phase-cell-explosive-free-masking.html" },\r\n' +
+      '      { label: "04 · PHASE CELL Σ cumulative storage", href: "/phase-cell-sigma.html" },\r\n' +
+      '      { label: "Download Σ reproducibility pack", href: "/phase-cell-sigma/model/PHASE_CELL_SIGMA_reproducibility_pack_v1.zip" },\r\n' +
+      '    ],\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "04",\r\n' +
+      '    title: "LAGRANGE",\r\n' +
+      '    subtitle: "Decision optimisation under uncertainty",\r\n' +
+      '    abstract:\r\n' +
+      '      "Defines a solver-neutral decision layer that preserves uncertainty and exposes constraint violations. Matched classical and hybrid benchmarks test allocation performance without hiding infeasible solutions under operational constraints.",\r\n' +
+      '    status: "Simulated proof of concept",\r\n' +
+      '    artefact: "Engineering publication · benchmark specification",\r\n' +
+      '    domain: "Decision systems",\r\n' +
+      '    revision: "Edition 03 · 27 August 2026",\r\n' +
+      '    href: "/lagrange-q2-iamd.html",\r\n' +
+      '    external: false,\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "05",\r\n' +
+      '    title: "HATG",\r\n' +
+      '    subtitle: "Entropy-certified quantum token generation",\r\n' +
+      '    abstract:\r\n' +
+      '      "Tests quantum annealing as a physical entropy source for context-bound token issuance. The study specifies certification tests, threat assumptions, experimental controls and a preliminary claim map.",\r\n' +
+      '    status: "Engineering analysis",\r\n' +
+      '    artefact: "Technical publication · patent-oriented study",\r\n' +
+      '    domain: "Quantum security",\r\n' +
+      '    revision: "August 2026",\r\n' +
+      '    href: "/hatg-quantum-token-generator.html",\r\n' +
+      '    external: false,\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "06",\r\n' +
+      '    title: "AQOS",\r\n' +
+      '    subtitle: "Quantum-ready aviation optimisation",\r\n' +
+      '    abstract:\r\n' +
+      '      "Classically executed, quantum-ready decision optimisation for aviation operations. The programme now separates a 15-opportunity commercial atlas from the evidence ladder, synthetic benchmarks and detailed airline IROPS recovery dossier.",\r\n' +
+      '    status: "Opportunity catalog · synthetic E1 evidence · customer replay sought",\r\n' +
+      '    artefact: "Engineering record · evaluation lab · Recovery dossier · reproducibility packs",\r\n' +
+      '    domain: "Aviation operations",\r\n' +
+      '    revision: "Evaluation edition 01 · 28 August 2026",\r\n' +
+      '    href: "/aviation-quantum-optimization.html",\r\n' +
+      '    external: false,\r\n' +
+      '    pathways: [\r\n' +
+      '      { label: "Read engineering record", href: "/aviation-quantum-optimization.html" },\r\n' +
+      '      { label: "Opportunity catalog & evaluation", href: "/aqos-product-catalog.html" },\r\n' +
+      '      { label: "AQOS Recovery dossier", href: "/aqos-recovery-irops.html" },\r\n' +
+      '      { label: "Download reference benchmark", href: "/aqos/AQOS_PUBLIC_REFERENCE_BENCHMARK_v1.0.zip" },\r\n' +
+      '    ],\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "07",\r\n' +
+      '    title: "MIST",\r\n' +
+      '    subtitle: "Operational decision systems",\r\n' +
+      '    abstract:\r\n' +
+      '      "Links reports, tracks, operator judgement and mission procedures in a traceable operational workflow. The research focuses on auditability and decision continuity across maritime, polar, orbital and remote environments.",\r\n' +
+      '    status: "Research preprint",\r\n' +
+      '    artefact: "Operational decision systems monograph",\r\n' +
+      '    domain: "Mission software",\r\n' +
+      '    revision: "2026",\r\n' +
+      '    href: "https://mist-mission-systems.michele-giletto.chatgpt.site/research/mist-operational-decision-systems",\r\n' +
+      '    external: true,\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "08",\r\n' +
+      '    title: "Q STAR",\r\n' +
+      '    subtitle: "Quantum-native constellation operations",\r\n' +
+      '    abstract:\r\n' +
+      '      "Formulates service assignment, gateway selection, spectrum allocation, handovers and recovery as constrained optimisation problems for large satellite constellations. The dossier compares classical and hybrid quantum approaches.",\r\n' +
+      '    status: "Engineering analysis",\r\n' +
+      '    artefact: "Technical and commercial dossier",\r\n' +
+      '    domain: "Satellite networks",\r\n' +
+      '    revision: "August 2026",\r\n' +
+      '    href: "/q-star-constellation-operations.html",\r\n' +
+      '    external: false,\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "09",\r\n' +
+      '    title: "QUANTUM MANAGEMENT PLANE",\r\n' +
+      '    subtitle: "Hybrid optimisation for physical AI",\r\n' +
+      '    abstract:\r\n' +
+      '      "Places slower resource-allocation optimisation above real-time control in multi-agent physical systems. The architecture separates safety-critical control from task, route, energy and time allocation at supervisory timescales.",\r\n' +
+      '    status: "Simulated proof of concept",\r\n' +
+      '    artefact: "Technical monograph · experimental study",\r\n' +
+      '    domain: "Physical AI coordination",\r\n' +
+      '    revision: "August 2026",\r\n' +
+      '    href: "/quantum-management-plane.html",\r\n' +
+      '    external: false,\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "10",\r\n' +
+      '    title: "FIB TERMINAL",\r\n' +
+      '    subtitle: "Neural market intelligence research",\r\n' +
+      '    abstract:\r\n' +
+      '      "Studies market structure and portfolio decisions through neural-inspired models and auditable analytical rules. The public research record and community channel remain distinct from any live terminal implementation.",\r\n' +
+      '    status: "Research preprint",\r\n' +
+      '    artefact: "Institutional research edition",\r\n' +
+      '    domain: "Market structure",\r\n' +
+      '    revision: "Monograph 01 · 27 August 2026",\r\n' +
+      '    href: "/fib-neural-geometry.html",\r\n' +
+      '    external: false,\r\n' +
+      '    pathways: [\r\n' +
+      '      { label: "Read the research", href: "/fib-neural-geometry.html" },\r\n' +
+      '      { label: "TASKING ORDER community", href: "https://t.me/TASKINGORDER", external: true },\r\n' +
+      '    ],\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "11",\r\n' +
+      '    title: "ECHOFORM",\r\n' +
+      '    subtitle: "Physics-constrained remote sensing",\r\n' +
+      '    abstract:\r\n' +
+      '      "Investigates whether SAR coherence, phase and micro-dynamic signals can support physics-constrained inference beyond visible reflectivity. The monograph states the sensing assumptions, inversion limits and validation requirements.",\r\n' +
+      '    status: "Research preprint",\r\n' +
+      '    artefact: "Remote sensing monograph",\r\n' +
+      '    domain: "Synthetic aperture radar",\r\n' +
+      '    revision: "2026",\r\n' +
+      '    href: "https://remote-sensing-sar-mg.michele-giletto.chatgpt.site/echoform",\r\n' +
+      '    external: true,\r\n' +
+      '  },\r\n' +
+      '  {\r\n' +
+      '    number: "12",\r\n' +
+      '    title: "EORA",\r\n' +
+      '    subtitle: "Evidence-calibrated embodied operations allocation",\r\n' +
+      '    abstract:\r\n' +
+      '      "Determines which combination of people, humanoids, AMRs, cobots and fixed automation should perform one bounded industrial workflow. The programme compares feasible alternatives on the same operational, uncertainty and total-cost boundary, and is explicitly allowed to return PILOT, HOLD, NO-GO or INSUFFICIENT EVIDENCE.",\r\n' +
+      '    status: "Synthetic D0 proof of concept · customer-log replay sought",\r\n' +
+      '    artefact: "Decision Evidence Sprint · three-volume technical programme · reproducibility pack",\r\n' +
+      '    domain: "Industrial automation · physical A'... 18655 more characters
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    const projects = [
+      {
+        number: "01",
+        title: "SCILLA PASSIVE",
+        subtitle: "Cue-driven opportunistic maritime verification",
+        abstract:
+          "Tests whether a valid non-cooperative bistatic second observation can reduce uncertainty in an existing maritime track. The public release supports the observation architecture in simulation while explicitly rejecting a demonstrated optimiser moat.",
+        status: "Public Evidence v1.0.0 · simulation only · partner RF validation sought",
+        artefact: "Zenodo DOI · corrected-model audit · partner validation dossier",
+        domain: "Passive radar · maritime tracking · sensor fusion",
+        revision: "Corrected-model audit · 2 September 2026",
+        href: "/scilla-passive",
+        external: false,
+        pathways: [
+          { label: "Open SCILLA PASSIVE evidence", href: "/scilla-passive" },
+          { label: "Open the partner validation gate", href: "/scilla-passive/validation" },
+          { label: "Partner validation dossier", href: "https://github.com/michelegiletto-beep/scilla-passive-evidence/blob/main/docs/SCILLA_PASSIVE_PARTNER_VALIDATION_DOSSIER_2026-09-02.pdf", external: true },
+          { label: "Canonical DOI archive", href: "https://doi.org/10.5281/zenodo.22229086", external: true },
+          { label: "Reproduce on GitHub", href: "https://github.com/michelegiletto-beep/scilla-passive-evidence", external: true },
+        ],
+      },
+      {
+        number: "02",
+        title: "LYRA³",
+        subtitle: "Orbital intelligence fabric",
+        abstract:
+          "Enters industrial evaluation through MANIFEST, with an open reference benchmark that publishes its non-confirmation of the earlier positive value effect. PULSE and LOOP remain bounded expansion proposals on the same typed constraint and evidence-preserving architecture.",
+        status: "Independent technical preprint · open synthetic falsification record",
+        artefact: "MANIFEST code, raw replay and hashes · industrial evaluation pathway",
+        domain: "Orbital lifecycle operations",
+        revision: "Version III · 28 August 2026",
+        href: "/lyra3-orbital-intelligence-fabric.html",
+        external: false,
+        pathways: [
+          { label: "Read the technical preprint", href: "/lyra3-orbital-intelligence-fabric.html" },
+          { label: "Download MANIFEST reproducibility pack", href: "/lyra3/reproducibility/manifest-v1/LYRA3_MANIFEST_reproducibility_pack_v1.zip" },
+        ],
+      },
+      {
+        number: "03",
+        title: "PHASE CELL",
+        subtitle: "Cryothermal pressure generation and cumulative mechanical storage",
+        abstract:
+          "Examines whether confined ice expansion can drive a thermally rechargeable hydraulic accumulator. PHASE CELL Σ extends the core record with rectified micro-strokes, pressure-matched storage, an open analytical benchmark and product pathways for stratospheric and data-centre thermal systems.",
+        status: "Analytical feasibility · Σ systems model released · hardware validation pending",
+        artefact: "Core engineering record · open reproducibility pack · modular product platform",
+        domain: "Thermal storage · stratosphere · data-centre thermal resilience · subsea",
+        revision: "PHASE CELL Σ edition · 28 August 2026",
+        href: "/phase-cell-pressure-battery.html",
+        external: false,
+        pathways: [
+          { label: "01 · Core engineering record", href: "/phase-cell-pressure-battery.html" },
+          { label: "02 · Acquisition and patent pathway", href: "/phase-cell-commercial-dossier.html" },
+          { label: "03 · Derived masking research", href: "/phase-cell-explosive-free-masking.html" },
+          { label: "04 · PHASE CELL Σ cumulative storage", href: "/phase-cell-sigma.html" },
+          { label: "Download Σ reproducibility pack", href: "/phase-cell-sigma/model/PHASE_CELL_SIGMA_reproducibility_pack_v1.zip" },
+        ],
+      },
+      {
+        number: "04",
+        title: "LAGRANGE",
+        subtitle: "Decision optimisation under uncertainty",
+        abstract:
+          "Defines a solver-neutral decision layer that preserves uncertainty and exposes constraint violations. Matched classical and hybrid benchmarks test allocation performance without hiding infeasible solutions under operational constraints.",
+        status: "Simulated proof of concept",
+        artefact: "Engineering publication · benchmark specification",
+        domain: "Decision systems",
+        revision: "Edition 03 · 27 August 2026",
+        href: "/lagrange-q2-iamd.html",
+        external: false,
+      },
+      {
+        number: "05",
+        title: "HATG",
+        subtitle: "Entropy-certified quantum token generation",
+        abstract:
+          "Tests quantum annealing as a physical entropy source for context-bound token issuance. The study specifies certification tests, threat assumptions, experimental controls and a preliminary claim map.",
+        status: "Engineering analysis",
+        artefact: "Technical publication · patent-oriented study",
+        domain: "Quantum security",
+        revision: "August 2026",
+        href: "/hatg-quantum-token-generator.html",
+        external: false,
+      },
+      {
+        number: "06",
+        title: "AQOS",
+        subtitle: "Quantum-ready aviation optimisation",
+        abstract:
+          "Classically executed, quantum-ready decision optimisation for aviation operations. The programme now separates a 15-opportunity commercial atlas from the evidence ladder, synthetic benchmarks and detailed airline IROPS recovery dossier.",
+        status: "Opportunity catalog · synthetic E1 evidence · customer replay sought",
+        artefact: "Engineering record · evaluation lab · Recovery dossier · reproducibility packs",
+        domain: "Aviation operations",
+        revision: "Evaluation edition 01 · 28 August 2026",
+        href: "/aviation-quantum-optimization.html",
+        external: false,
+        pathways: [
+          { label: "Read engineering record", href: "/aviation-quantum-optimization.html" },
+          { label: "Opportunity catalog & evaluation", href: "/aqos-product-catalog.html" },
+          { label: "AQOS Recovery dossier", href: "/aqos-recovery-irops.html" },
+          { label: "Download reference benchmark", href: "/aqos/AQOS_PUBLIC_REFERENCE_BENCHMARK_v1.0.zip" },
+        ],
+      },
+      {
+        number: "07",
+        title: "MIST",
+        subtitle: "Operational decision systems",
+        abstract:
+          "Links reports, tracks, operator judgement and mission procedures in a traceable operational workflow. The research focuses on auditability and decision continuity across maritime, polar, orbital and remote environments.",
+        status: "Research preprint",
+        artefact: "Operational decision systems monograph",
+        domain: "Mission software",
+        revision: "2026",
+        href: "https://mist-mission-systems.michele-giletto.chatgpt.site/research/mist-operational-decision-systems",
+        external: true,
+      },
+      {
+        number: "08",
+        title: "Q STAR",
+        subtitle: "Quantum-native constellation operations",
+        abstract:
+          "Formulates service assignment, gateway selection, spectrum allocation, handovers and recovery as constrained optimisation problems for large satellite constellations. The dossier compares classical and hybrid quantum approaches.",
+        status: "Engineering analysis",
+        artefact: "Technical and commercial dossier",
+        domain: "Satellite networks",
+        revision: "August 2026",
+        href: "/q-star-constellation-operations.html",
+        external: false,
+      },
+      {
+        number: "09",
+        title: "QUANTUM MANAGEMENT PLANE",
+        subtitle: "Hybrid optimisation for physical AI",
+        abstract:
+          "Places slower resource-allocation optimisation above real-time control in multi-agent physical systems. The architecture separates safety-critical control from task, route, energy and time allocation at supervisory timescales.",
+        status: "Simulated proof of concept",
+        artefact: "Technical monograph · experimental study",
+        domain: "Physical AI coordination",
+        revision: "August 2026",
+        href: "/quantum-management-plane.html",
+        external: false,
+      },
+      {
+        number: "10",
+        title: "FIB TERMINAL",
+        subtitle: "Neural market intelligence research",
+        abstract:
+          "Studies market structure and portfolio decisions through neural-inspired models and auditable analytical rules. The public research record and community channel remain distinct from any live terminal implementation.",
+        status: "Research preprint",
+        artefact: "Institutional research edition",
+        domain: "Market structure",
+        revision: "Monograph 01 · 27 August 2026",
+        href: "/fib-neural-geometry.html",
+        external: false,
+        pathways: [
+          { label: "Read the research", href: "/fib-neural-geometry.html" },
+          { label: "TASKING ORDER community", href: "https://t.me/TASKINGORDER", external: true },
+        ],
+      },
+      {
+        number: "11",
+        title: "ECHOFORM",
+        subtitle: "Physics-constrained remote sensing",
+        abstract:
+          "Investigates whether SAR coherence, phase and micro-dynamic signals can support physics-constrained inference beyond visible reflectivity. The monograph states the sensing assumptions, inversion limits and validation requirements.",
+        status: "Research preprint",
+        artefact: "Remote sensing monograph",
+        domain: "Synthetic aperture radar",
+        revision: "2026",
+        href: "https://remote-sensing-sar-mg.michele-giletto.chatgpt.site/echoform",
+        external: true,
+      },
+      {
+        number: "12",
+        title: "EORA",
+        subtitle: "Evidence-calibrated embodied operations allocation",
+        abstract:
+          "Determines which combination of people, humanoids, AMRs, cobots and fixed automation should perform one bounded industrial workflow. The programme compares feasible alternatives on the same operational, uncertainty and total-cost boundary, and is explicitly allowed to return PILOT, HOLD, NO-GO or INSUFFICIENT EVIDENCE.",
+        status: "Synthetic D0 proof of concept · customer-log replay sought",
+        artefact: "Decision Evidence Sprint · three-volume technical programme · reproducibility pack",
+        domain: "Industrial automation · physical AI",
+        revision: "Volumes I–III · 28 August 2026",
+        href: "/eora-embodied-operations-allocation",
+        external: false,
+        pathways: [
+          { label: "Open EORA programme", href: "/eora-embodied-operations-allocation" },
+          { label: "Volume I · Scientific basis", href: "/eora/volume-i-scientific-engineering.html" },
+          { label: "Volume II · Product dossiers", href: "/eora/volume-ii-product-engineering.html" },
+          { label: "Volume III · Industrialization", href: "/eora/volume-iii-industrialization-assurance.html" },
+          { label: "Download technical pack", href: "/eora/GSL_EORA_Public_Technical_Pack_v1.0.zip" },
+        ],
+      },
+      {
+        number: "13",
+        title: "Q-AXXELE",
+        subtitle: "AI-factory decision evidence",
+        abstract:
+          "A supervisory optimisation system for AI infrastructure, now challenged against 732,611 observed GPU task rows. The external replay rejects an energy-only policy that worsens peak demand and advances a peak-constrained classical shadow route with a complete auditable record.",
+        status: "External trace evidence · partner telemetry sought",
+        artefact: "Decision Evidence Engine for AI infrastructure",
+        domain: "AI infrastructure · energy optimisation · hybrid quantum systems",
+        revision: "Trace Evidence Edition · 28 August 2026",
+        href: "/q-axele-data-center-quantum-optimization.html",
+        external: false,
+        pathways: [
+          { label: "Open the trace evidence study", href: "/q-axele-data-center-quantum-optimization.html" },
+          { label: "Download trace replay and data", href: "/q-axele/GSL_Q_AXXELE_TRACE_EVIDENCE_PACK_v3.0.zip" },
+          { label: "HATG evidence architecture", href: "/hatg-quantum-token-generator.html" },
+        ],
+      },
+      {
+        number: "14",
+        title: "THERMESH",
+        subtitle: "Decision intelligence for AI heat infrastructure",
+        abstract:
+          "Evaluates where data-centre heat reuse can create value before capital is committed. THERMESH aligns source, sink, network, electricity, carbon and CAPEX assumptions in one auditable pre-FEED decision workflow, with explicit gates for advancing, redesigning or stopping an architecture.",
+        status: "Decision Evidence Edition · public Python software released · external site replay sought",
+        artefact: "Pre-FEED evidence sprint · installable reference model · industrial dossier · audit pack",
+        domain: "AI infrastructure · heat reuse · thermal systems · decision evidence",
+        revision: "Decision Evidence v2 · 1 September 2026",
+        href: "/thermesh-ai-heat-infrastructure",
+        external: false,
+        pathways: [
+          { label: "Explore THERMESH decision evidence", href: "/thermesh-ai-heat-infrastructure" },
+          { label: "Read the technical evidence", href: "/thermesh/v2/THERMESH_v2_technical_preprint.pdf" },
+          { label: "Review the industrial dossier", href: "/thermesh/v2/THERMESH_v2_industrial_evaluation_dossier.pdf" },
+          { label: "Download the Python software", href: "/thermesh/software/v2.0.0/thermesh_reference-2.0.0-py3-none-any.whl" },
+          { label: "Download the reference pack", href: "/thermesh/v2/THERMESH_EVIDENCE_PACK_v2.0.zip" },
+        ],
+      },
+      {
+        number: "15",
+        title: "CIRCA",
+        subtitle: "Circular orbital waste systems",
+        abstract:
+          "A modular programme for zero-debris spacecraft design, end-of-life transformation, capture preparation, remediation mission planning and independent assurance. CHRYSALIS defines a dual-mode satellite architecture that compacts for collection or expands for physically gated demise.",
+        status: "Industrial research edition · parametric screen · pre-demonstrator / pre-filing",
+        artefact: "Ecosystem architecture · invention map · consultancy catalogue · reproducibility pack",
+        domain: "Orbital sustainability · spacecraft lifecycle · mission assurance",
+        revision: "Industrial Research Edition 01 · 28 August 2026",
+        href: "/circa-orbital-waste-systems.html",
+        external: false,
+        pathways: [
+          { label: "Open CIRCA programme", href: "/circa-orbital-waste-systems.html" },
+          { label: "Examine CHRYSALIS", href: "/circa-orbital-waste-systems.html#invention" },
+          { label: "Consulting and co-development", href: "/circa-orbital-waste-systems.html#offers" },
+          { label: "Download public reference model", href: "/circa/model/CIRCA_CHRYSALIS_Public_Reference_Pack_v1.0.zip" },
+        ],
+      },
+      {
+        number: "16",
+        title: "EMPTIO",
+        subtitle: "The Physical AI Exchange",
+        abstract:
+          "Tests whether Physical AI data need a specialized standard, discovery and procurement layer. The alpha defines a Data Standard and Passport, a license-declared public metadata candidate corpus, simulated buyer requirements and a falsifiable path from bilateral matching to exchange-like infrastructure.",
+        status: "Protocol and prototype pre-release · no real buyers, sellers, prices or transactions",
+        artefact: "Data Standard v0.1 · Data Passport · lexical PoC · protocol-stage preprint",
+        domain: "Physical AI data · market design · provenance · procurement",
+        revision: "Alpha 0.1.0-alpha.1 · 2 September 2026",
+        href: "https://emptio-exchange.michele-giletto.chatgpt.site",
+        external: true,
+        pathways: [
+          { label: "Open EMPTIO research platform", href: "https://emptio-exchange.michele-giletto.chatgpt.site", external: true },
+          { label: "Read the private protocol-stage preprint", href: "https://emptio-exchange.michele-giletto.chatgpt.site/research/EMPTIO_From_Repositories_to_Markets_v0.1.0-alpha.1_preprint.pdf", external: true },
+        ],
+      },
+      {
+        number: "17",
+        title: "MECYRON",
+        subtitle: "Physical AI aftermarket and uptime infrastructure",
+        abstract:
+          "Audited research on robotic fleet availability, restoration commitments, spare inventory and service economics. Corrected baseline models and synthetic experiments are public; operational investment remains on HOLD pending OEM access and paid demand. The full research programme is not complete.",
+        status: "Operational HOLD · audited supplement · no commercial validation",
+        artefact: "Research supplement · corrected models · synthetic experiments · risk register",
+        domain: "Physical AI · robotics MRO · reliability · service networks · lifecycle data",
+        revision: "Audit supplement 1.1 · 5 September 2026",
+        href: "/mecyron-physical-ai-uptime",
+        external: false,
+        pathways: [
+          { label: "Open MECYRON programme", href: "/mecyron-physical-ai-uptime" },
+          { label: "Read the audited research supplement", href: "/mecyron-physical-ai-uptime/research" },
+          { label: "Download corrected models and evidence", href: "/mecyron/MECYRON_Audit_Supplement_v1.1.zip" },
+        ],
+      },
+    ] as const;
+    
+    const displayProjects = projects;
+    
+    function ExternalMark() {
+      return <span aria-hidden="true">↗</span>;
+    }
+    
+    export default function Home() {
+      const personJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Michele Giletto",
+        homeLocation: { "@type": "Place", name: "Rome, Italy" },
+        url: "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+        sameAs: ["https://www.linkedin.com/in/michele-giletto-361425312/"],
+        jobTitle: "Aerospace Mission Operations and Systems Integration",
+      };
+    
+      const collectionJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "System Labs",
+        description:
+          "Independent technical publications and research prototypes across aerospace systems, mission software, sensing and quantum optimisation.",
+        author: { "@type": "Person", name: "Michele Giletto" },
+        hasPart: [{
+          "@type": "SoftwareApplication",
+          name: "Orbital",
+          description: "Mission simulation for docking, recovery and deorbiting with editable client scenarios and command replay.",
+          applicationCategory: "EngineeringApplication",
+          operatingSystem: "Web browser",
+          url: "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/orbital.html",
+        }, ...projects.map((project) => ({
+          "@type": "CreativeWork",
+          name: project.title,
+          description: project.abstract,
+          url: project.href,
+        }))],
+      };
+    
+      return (
+        <>
+          <a className="skip-link" href="#main-content">Skip to main content</a>
+          <header className="site-header">
+            <a className="wordmark" href="#top" aria-label="System Labs home">
+              <strong>System Labs</strong>
+            </a>
+            <nav aria-label="Primary navigation">
+              <a href="#research">Research</a>
+              <a href="#author">Author</a>
+              <a href="#contact">Contact</a>
+              <a href="https://www.linkedin.com/in/michele-giletto-361425312/" target="_blank" rel="noopener noreferrer">
+                LinkedIn <ExternalMark />
+              </a>
+            </nav>
+          </header>
+    
+          <main id="main-content">
+            <section className="hero" id="top" aria-labelledby="hero-title">
+              <div className="hero-copy">
+                <h1 id="hero-title">System Labs</h1>
+                <p className="hero-deck">
+                  System Labs develops software and independent research in multiagent systems, resource allocation and mission simulation. The portfolio brings together applications, statistical models and technical publications by Michele Giletto.
+                </p>
+                <div className="hero-actions">
+                  <a className="action action-primary" href="#research">Explore research <span aria-hidden="true">↓</span></a>
+                  <a className="action" href="#contact">Discuss technical collaboration <span aria-hidden="true">→</span></a>
+                </div>
+              </div>
+    
+            </section>
+    
+            <section className="research-section" id="flagship" aria-labelledby="platform-title">
+              <header className="section-heading">
+                <h2 id="platform-title">Multiagentic Platform</h2>
+                <p>In development</p>
+              </header>
+              <div style={{ width: "var(--page)", margin: "0 auto", maxWidth: 860, paddingBottom: 40 }}>
+                <p>Multiagent software for shared resource allocation, first applied to an equity portfolio. Agents work on market observations, portfolio state and allocation decisions.</p>
+                <p>Public release 1.1.25 includes native SPINS policy components and broker adapters, based on the inspected 1.1.25-rc.49 implementation. Documented SPINS fits use local CPU training on synthetic policies. Optional LLM paths are disabled in this build; operational qualification continues.</p>
+                <div className="hero-actions"><a className="action action-primary" href="/reasoning-agent.html">Explore the platform <ExternalMark /></a></div>
+              </div>
+            </section>
+    
+            <section className="research-section" id="orbital" aria-labelledby="orbital-title">
+              <header className="section-heading">
+                <h2 id="orbital-title" style={{ fontSize: "clamp(29px, 3vw, 38px)", lineHeight: 1.1 }}>Orbital</h2>
+                <p>A Mission Simulation Hub for docking, recovery and deorbiting. Create a client scenario, execute the mission and inspect its replay and assessment.</p>
+              </header>
+              <div style={{ width: "var(--page)", margin: "0 auto", paddingBottom: 48 }}>
+                <a href="/orbital/index.html" aria-label="Open Orbital Mission Simulation Hub">
+                  <img src="/orbital/mission-hub.jpg" width="1600" height="1000" alt="Orbital mission workspace showing the Earth, spacecraft state and mission controls" loading="lazy" style={{ width: "100%", maxWidth: 500, height: "auto", border: "1px solid var(--rule)", borderRadius: 9 }} />
+                </a>
+                <div className="hero-actions">
+                  <a className="action action-primary" href="/orbital/index.html">Open Mission Simulation Hub <ExternalMark /></a>
+                  <a className="action" href="/projects/orbital.html">Project and materials <ExternalMark /></a>
+                </div>
+                <p style={{ color: "var(--ink-muted)", fontSize: 12, lineHeight: 1.8, maxWidth: 850, marginTop: 20 }}>The public evaluation runs synthetic scenarios on your device. The downloadable software includes the client scenario editor and a local API for signed mission records. Internal evaluation is permitted for 30 days.</p>
+              </div>
+            </section>
+    
+            <section className="scope-section" aria-labelledby="scope-title">
+              <div className="section-index">01</div>
+              <div>
+                <p className="section-kicker">Research method</p>
+                <h2 id="scope-title">Research scope</h2>
+              </div>
+              <p className="scope-copy">
+                The work published here examines decision, allocation and sensing problems in aerospace and high-reliability operations. Each project record separates proposed architecture, simulated evidence and validated implementation. Available publications, prototypes and technical limitations are identified explicitly.
+              </p>
+            </section>
+    
+            <section className="research-section" id="research" aria-labelledby="research-title">
+              <header className="section-heading">
+                <div>
+                  <p className="section-kicker">02 · Current register · 17 projects</p>
+                  <h2 id="research-title">Research index</h2>
+                </div>
+                <p>Problem, contribution and present evidence are stated before each publication is opened.</p>
+              </header>
+    
+              <div className="research-register">
+                {displayProjects.map((project) => (
+                  <article className="project-record" key={project.number} id={`project-${project.number}`}>
+                    <div className="project-number" aria-hidden="true">{project.number}</div>
+                    <header className="project-heading">
+                      <h3>
+                        <a href={project.href} target={project.external ? "_blank" : undefined} rel={project.external ? "noopener noreferrer" : undefined}>
+                          {project.title}
+                        </a>
+                      </h3>
+                      <p>{project.subtitle}</p>
+                    </header>
+                    <p className="project-abstract">{project.abstract}</p>
+                    <dl className="project-metadata">
+                      <div><dt>Status</dt><dd>{project.status}</dd></div>
+                      <div><dt>Artefact</dt><dd>{project.artefact}</dd></div>
+                      <div><dt>Domain</dt><dd>{project.domain}</dd></div>
+                      <div><dt>Revision</dt><dd>{project.revision}</dd></div>
+                    </dl>
+                    <div className="project-links">
+                      {"pathways" in project ? (
+                        project.pathways.map((pathway) => (
+                          <a
+                            key={pathway.href}
+                            href={pathway.href}
+                            target={"external" in pathway && pathway.external ? "_blank" : undefined}
+                            rel={"external" in pathway && pathway.external ? "noopener noreferrer" : undefined}
+                          >
+                            {pathway.label} <ExternalMark />
+                          </a>
+                        ))
+                      ) : (
+                        <a href={project.href} target={project.external ? "_blank" : undefined} rel={project.external ? "noopener noreferrer" : undefined}>
+                          Open project <ExternalMark />
+                        </a>
+                      )}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+    
+            <section className="author-section" id="author" aria-labelledby="author-title">
+              <div className="section-index">03</div>
+              <figure className="portrait">
+                <picture>
+                  <source srcSet="/michele-giletto-portrait.webp" type="image/webp" />
+                  <img src="/michele-giletto-portrait.jpg" width="1122" height="1402" alt="Portrait of Michele Giletto" loading="lazy" />
+                </picture>
+              </figure>
+              <div className="author-copy">
+                <p className="section-kicker">Author</p>
+                <h2 id="author-title">Michele Giletto</h2>
+                <p className="author-descriptor">Aerospace Mission Operations · Systems Integration · Independent Research</p>
+                <p className="author-bio">
+                  Michele Giletto is an Italian Air Force Captain, pilot and aerospace systems professional working in mission operations and systems integration. His independent research develops analytical models, software concepts and research prototypes for operational decision problems, drawing on experience in multinational planning, aviation, force protection and software engineering.
+                </p>
+                <p className="independence-note">
+                  Research presented here is independent and does not imply endorsement by the Italian Air Force, the Italian Ministry of Defence, any government, employer or organisation cited. Publication and validation status are stated for each project.
+                </p>
+              </div>
+            </section>
+    
+            <section className="contact-section" id="contact" aria-labelledby="contact-title">
+              <div>
+                <p className="section-kicker">Technical collaboration</p>
+                <h2 id="contact-title">Review the work. Define the next evidence gate.</h2>
+              </div>
+              <div className="contact-copy">
+                <p>For technical review, co-development, research collaboration and licensing enquiries.</p>
+                <address>
+                  <a href="mailto:michele.giletto@gmail.com">michele.giletto@gmail.com</a>
+                  <a href="https://www.linkedin.com/in/michele-giletto-361425312/" target="_blank" rel="noopener noreferrer">LinkedIn <ExternalMark /></a>
+                  <span>Rome, Italy</span>
+                </address>
+              </div>
+            </section>
+          </main>
+    
+          <footer className="site-footer">
+            <p>© 2026 Michele Giletto. Publications and original materials are released for inspection; no licence or institutional endorsement is implied. Technical collaboration and licensing enquiries are welcome.</p>
+            <a href="#top">Back to top ↑</a>
+          </footer>
+    
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
+        </>
+      );
+    }
+    
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/gilet/Documents/ChatGPT/SYSTEM%20LABS/products/airspace-operations/work/site-baseline-bb9ffcd/tests/scilla-passive-integrity.test.mjs:11:10)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:931:25)
+    Test.start (node:internal/test_runner/test:829:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: SCILLA PASSIVE publishes the positive result and negative result together
+ok 52 - SCILLA PASSIVE publishes the positive result and negative result together
+  ---
+  duration_ms: 0.4877
+  ...
+# Subtest: SCILLA PASSIVE exposes reproducibility and physical falsification gates
+ok 53 - SCILLA PASSIVE exposes reproducibility and physical falsification gates
+  ---
+  duration_ms: 0.8598
+  ...
+# Subtest: SCILLA PASSIVE publishes the corrected-model audit without promoting it
+ok 54 - SCILLA PASSIVE publishes the corrected-model audit without promoting it
+  ---
+  duration_ms: 0.4602
+  ...
+# Subtest: partner validation route freezes tracks, gates and integration boundary
+ok 55 - partner validation route freezes tracks, gates and integration boundary
+  ---
+  duration_ms: 0.6016
+  ...
+# Subtest: THERMESH publication leads with the decision offer and preserves bounded evidence
+not ok 56 - THERMESH publication leads with the decision offer and preserves bounded evidence
+  ---
+  duration_ms: 14.4961
+  location: 'C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-baseline-bb9ffcd\\tests\\thermesh-integrity.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'missing Decide where heat reuse'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/gilet/Documents/ChatGPT/SYSTEM%20LABS/products/airspace-operations/work/site-baseline-bb9ffcd/tests/thermesh-integrity.test.mjs:48:13)
+    async Test.run (node:internal/test_runner/test:932:9)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: THERMESH calculator fails closed for blank, non-finite and out-of-domain inputs
+ok 57 - THERMESH calculator fails closed for blank, non-finite and out-of-domain inputs
+  ---
+  duration_ms: 54.0713
+  ...
+# Subtest: THERMESH evidence artefacts and renders are present
+ok 58 - THERMESH evidence artefacts and renders are present
+  ---
+  duration_ms: 59.0879
+  ...
+# Subtest: THERMESH public software manifest binds the released artefacts
+ok 59 - THERMESH public software manifest binds the released artefacts
+  ---
+  duration_ms: 12.2896
+  ...
+# Subtest: homepage registers THERMESH as project 14
+ok 60 - homepage registers THERMESH as project 14
+  ---
+  duration_ms: 12.2445
+  ...
+# Subtest: THERMESH v2 source declares the protected 2x2 study and full ledger
+ok 61 - THERMESH v2 source declares the protected 2x2 study and full ledger
+  ---
+  duration_ms: 5.0351
+  ...
+# Subtest: THERMESH v2 ships executable scientific invariant tests
+ok 62 - THERMESH v2 ships executable scientific invariant tests
+  ---
+  duration_ms: 6.5489
+  ...
+# Subtest: emits the catalog's animation and scrolling utilities
+ok 63 - emits the catalog's animation and scrolling utilities
+  ---
+  duration_ms: 123.6987
+  ...
+# Subtest: forwards progress semantics to the primitive
+ok 64 - forwards progress semantics to the primitive
+  ---
+  duration_ms: 3514.5488
+  ...
+# Subtest: emits chart themes for the starter's media dark mode
+ok 65 - emits chart themes for the starter's media dark mode
+  ---
+  duration_ms: 1361.1623
+  ...
+# Subtest: renders sidebar skeletons deterministically
+ok 66 - renders sidebar skeletons deterministically
+  ---
+  duration_ms: 786.2314
+  ...
+1..66
+# tests 66
+# suites 0
+# pass 61
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7323.2074

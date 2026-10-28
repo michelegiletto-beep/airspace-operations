@@ -22,7 +22,7 @@ The bundled evidence contains:
 
 The main application's local Qwen controller, pretrained retrieval/reranking, deterministic operational specialists and new reusable `systemlab_agentic` core are separate from this static viewer. Its owner-authorised 2.5D WebGL presentation resources are UI assets, not neural inference or permission logic. The reserved renderer is not executed or redistributed in this Space; screenshots and an identity summary document its application role.
 
-New download links remain **Prepared** until the release owner verifies them. This Space is an evaluation-documentation interface, not the production operations platform, a hosted inference endpoint or aviation acceptance evidence.
+Download links are enabled only after the release owner verifies the actual published assets. The verified current candidate is recorded below. This Space is an evaluation-documentation interface, not the production operations platform, a hosted inference endpoint or aviation acceptance evidence.
 
 ## Provenance and rights
 
@@ -37,3 +37,8 @@ From the full Airspace source checkout, run `python publication/hf-space/prepare
 For local inspection, serve this directory with `python -m http.server 8792 --bind 127.0.0.1` and open the printed local URL. The viewer fetches only its own bundled JSON and media. Selection, filtering and trace navigation do not launch a new evaluation.
 
 Static Space metadata follows the [official Hugging Face static Space documentation](https://huggingface.co/docs/hub/spaces-sdks-static). Publication is performed separately by the release owner; source preparation does not prove a public deployment.
+
+
+## Published application candidate
+
+[Version 0.2.0-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) is published as an engineering candidate, with 9 independently retrieved assets. The 10,122,929-byte application ZIP has SHA-256 `a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f`; its exact bytes were independently installed and tested (266 passed, 17 skipped). This does not change the recorded model trials, dataset labels or operational-acceptance boundary. The preserved data index/provenance describe their earlier assembly step; their Prepared/publication-performed fields are historical, not a live release-status feed.

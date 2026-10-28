@@ -5,27 +5,43 @@
   "stable_release_allowed": false,
   "operational_acceptance": false,
   "states_reached": [
-    "Prepared"
+    "Prepared",
+    "Uploaded",
+    "Published",
+    "Independently Retrieved"
   ],
   "history": [
     "publication/history/0.1.0-rc.1.json"
   ],
   "destinations": [
     {
-      "destination": "GitHub candidate source branch",
+      "destination": "GitHub frozen release source",
       "verified_account": "michelegiletto-beep",
-      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/codex/airspace-0.2",
-      "state": "Uploaded",
-      "commit": "4f1d45c20b5e0957ee817e3c165f128b91ec6417"
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/v0.2.0-rc.1",
+      "state": "Independently Retrieved",
+      "commit": "3d5376758493f8e791dce85968947878990c6b6f",
+      "evidence": "release-evidence/v0.2.0-rc.1/ci-release-source-verification.json",
+      "note": "Main additionally contains post-publication documentation; frozen tag remains unchanged."
     },
     {
       "destination": "GitHub tagged candidate release",
-      "state": "Prepared"
+      "state": "Independently Retrieved",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1",
+      "release_id": 426614412,
+      "assets": 9,
+      "evidence": "release-evidence/v0.2.0-rc.1/github-public-verification.json"
     },
     {
       "destination": "System Lab project dossier revision",
-      "state": "Prepared",
-      "previous_live_site_version": 94
+      "state": "Independently Retrieved",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "version_number": 95,
+      "source_commit": "e16bc8f396878a38d4f48db1f005df8fa1043820",
+      "deployment_id": "appgdep_6ae1e98d67cc81918c55fa96e9c51e6f",
+      "resources_verified": 26,
+      "previous_live_site_version": 94,
+      "evidence": "release-evidence/v0.2.0-rc.1/system-lab-public-verification.json",
+      "browser_evidence": "release-evidence/v0.2.0-rc.1/site-browser-final-verification.json"
     },
     {
       "destination": "Hugging Face model presentation",
@@ -50,12 +66,19 @@
       "verified_account": "Magic51",
       "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
       "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space",
-      "revision": "2e7c96760d968f304d9b157f9b63f7b34accf982",
+      "revision": "9108be3ecbc724a84d5d169eff869b58b17de1cc",
       "state": "Independently Retrieved",
       "files_verified": 21,
       "live_inference": false,
-      "evidence": "release-evidence/v0.2.0-rc.1/hf-space-public-verification.json"
+      "evidence": "release-evidence/v0.2.0-rc.1/hf-space-final-public-verification.json",
+      "prior_revision": "2e7c96760d968f304d9b157f9b63f7b34accf982"
     }
   ],
-  "states_reached_scope": "Downloadable 0.2 application release; each destination has its own separate state"
+  "states_reached_scope": "Downloadable 0.2 application release; each destination has its own separate state",
+  "frozen_release_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+  "frozen_release_bytes": 10122929,
+  "release_commit": "3d5376758493f8e791dce85968947878990c6b6f",
+  "last_checked_at": "2026-10-28T12:41:15.007488+00:00",
+  "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
+  "final_recheck": "release-evidence/v0.2.0-rc.1/publication-final-recheck.json"
 }

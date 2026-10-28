@@ -14,6 +14,8 @@ const { JSDOM } = require('jsdom');
 const postcss = require('postcss');
 const read = name => fs.readFileSync(path.join(here, name), 'utf8');
 const evidence = JSON.parse(read('hf-space/data/evidence.json'));
+const publication = JSON.parse(read('status.json'));
+const releasePublished = publication.states_reached?.includes('Independently Retrieved');
 const siteHtml = read('site-project.html');
 const spaceHtml = read('hf-space/index.html');
 const spaceJs = read('hf-space/app.js');
@@ -47,7 +49,12 @@ for (const [index, tab] of traceTabs.entries()) {
   tab.click(); assert.equal(siteDoc.querySelector('.as-trace').dataset.recordedStep, String(index));
 }
 assert.equal(siteDoc.querySelector('#trace-state').textContent, 'Needs Review');
-assert.equal(siteDoc.querySelector('[data-prepared-url]').disabled, true);
+if (siteDoc.querySelector('[data-prepared-url]')) {
+  assert.equal(siteDoc.querySelector('[data-prepared-url]').disabled, true);
+} else {
+  assert.equal(releasePublished, true);
+  assert.ok([...siteDoc.querySelectorAll('a')].some(a=>a.href.endsWith('/System-Lab-Airspace-Operations-0.2.0-rc.1.zip')));
+}
 assert.match(read('site-project.css'), /prefers-reduced-motion/);
 site.window.close();
 
@@ -104,7 +111,11 @@ for (const option of screens.options) {
   screens.value = option.value; screens.dispatchEvent(new dom.window.Event('change'));
   assert.equal(doc.querySelector('#screen-image').getAttribute('src'), 'media/' + option.value);
 }
-assert.equal(doc.querySelector('button[disabled]').disabled, true);
+if (releasePublished) {
+  assert.equal(doc.querySelector('[data-release-download]').href, 'https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/System-Lab-Airspace-Operations-0.2.0-rc.1.zip');
+} else {
+  assert.equal(doc.querySelector('button[disabled]').disabled, true);
+}
 dom.window.close();
 
 const outage = await viewer(evidence, true);
@@ -128,7 +139,7 @@ escaped.window.close();
 const result = { node_javascript_syntax: 'Passed', postcss_parse: 'Passed', site_workspace_tabs: 6,
   site_recorded_trace_steps: 5, space_views: 5, space_recorded_queries: 2, space_trace_steps: 5,
   space_source_passages: 12, space_failure_examples: 14, space_screenshot_choices: 7,
-  keyboard_wrap: 'Passed', prepared_downloads_disabled: true, missing_data_no_substitutes: 'Passed',
+  keyboard_wrap: 'Passed', publication_download_gate_checked: true, application_release_independently_retrieved: releasePublished, missing_data_no_substitutes: 'Passed',
   wrong_mode_rejected: 'Passed', source_text_escaping: 'Passed', network_requests: 'One own bundled index; no external data or inference', commands };
 const reportPath = path.join(here, 'authoring-qa-v2.json');
 const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));

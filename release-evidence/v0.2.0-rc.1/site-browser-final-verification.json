@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-28T12:39:31.080Z",
+  "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+  "site_version": 95,
+  "source_commit": "e16bc8f396878a38d4f48db1f005df8fa1043820",
+  "desktop": {
+    "content_width": 1265,
+    "title": "System Lab Airspace Operations | System Labs",
+    "viewport_height": 720,
+    "viewport_width": 1280
+  },
+  "mobile": {
+    "images": [
+      {
+        "complete": true,
+        "width": 1265
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "System Lab Airspace Operations | System Labs",
+    "width": 375
+  },
+  "console_warnings_errors": [],
+  "workspace_tabs_exercised": 6,
+  "viewport_restored": true,
+  "scope": "Published documentation and downloads; not an operational deployment",
+  "screenshots": [
+    "publication/qa/system-lab-public-hero.jpg",
+    "publication/qa/system-lab-public-mobile.jpg"
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-28T11:51:01.218391+00:00",
+  "checked_at": "2026-10-28T11:53:58.471863+00:00",
   "valid": true,
-  "sbom_sha256": "7bf78ceccaa538bd5dc798e39eedc1cacc8e4fba7a8153cebadf1c1710462157",
+  "sbom_sha256": "230f296f5433873ecb97bb0c7d4f3b3d759986e861c3138535a17ec751f85ebe",
   "components": 240,
   "validator": "jsonschema 4.26.0",
   "official_schema_sha256": {

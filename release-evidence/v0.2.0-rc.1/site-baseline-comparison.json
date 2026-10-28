@@ -1,0 +1,32 @@
+{
+  "previous": {
+    "commit": "bb9ffcd968917e28ab085bcf098abeb417fa8147",
+    "passed": 61,
+    "failed": 5,
+    "failing_tests": [
+      "reference benchmark is deterministic and agrees with exact enumeration",
+      "LYRA3 embedded evidence is byte-locked and visibly bounded",
+      "SCILLA PASSIVE is project 01, followed by LYRA3 and PHASE CELL",
+      "SCILLA PASSIVE is the first Systems Lab project",
+      "THERMESH publication leads with the decision offer and preserves bounded evidence"
+    ],
+    "raw_output": "site-full-baseline-built.txt"
+  },
+  "candidate": {
+    "commit": "e16bc8f396878a38d4f48db1f005df8fa1043820",
+    "passed": 64,
+    "failed": 5,
+    "failing_tests": [
+      "reference benchmark is deterministic and agrees with exact enumeration",
+      "LYRA3 embedded evidence is byte-locked and visibly bounded",
+      "SCILLA PASSIVE is project 01, followed by LYRA3 and PHASE CELL",
+      "SCILLA PASSIVE is the first Systems Lab project",
+      "THERMESH publication leads with the decision offer and preserves bounded evidence"
+    ],
+    "raw_output": "site-full-current.txt"
+  },
+  "checked_at": "2026-10-28T12:23:36.809281+00:00",
+  "new_failures_observed": 0,
+  "scope": "Same full Site suite after building both exact previous/candidate sources with unchanged dependencies; no claim that inherited full Site suite passed",
+  "boundary": "Airspace-specific/product tests passed. Existing unrelated Site assertions and unavailable Windows python3 test command were preserved; unrelated project content unchanged."
+}

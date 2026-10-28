@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-28T12:03:07.179153+00:00",
+  "release_id": 426614412,
+  "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1",
+  "tag": "v0.2.0-rc.1",
+  "source_commit": "3d5376758493f8e791dce85968947878990c6b6f",
+  "prerelease": true,
+  "state": "Independently Retrieved",
+  "assets": [
+    {
+      "name": "ci-release-source-verification.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/ci-release-source-verification.json",
+      "bytes": 4157,
+      "sha256": "fdf966cc477d9a533fd693227e89378c2317751265d08b188e9c68710c34de5f",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "publication-dependency-audit-current.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/publication-dependency-audit-current.json",
+      "bytes": 389,
+      "sha256": "a86bbdfdc41e56f421e6e3eca0ff181f0e48da12f15a26ef5ed1ceec8df8d2a7",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "release-gates.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/release-gates.json",
+      "bytes": 1075,
+      "sha256": "d3415f8fed896f1e109e9e0eba662b47adee817162a63f25e84ea133450c6054",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/RELEASE_PROVENANCE.json",
+      "bytes": 47464,
+      "sha256": "74c6a0d9d3d0bc620945615323f17617ce0091826d692a2c4344e0932cd76304",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "sbom-validation.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/sbom-validation.json",
+      "bytes": 757,
+      "sha256": "695fa0440aed83b6d87af83308cb01ceb5adba629afcb2d617ed57e6bd7d5d9f",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/SBOM.cdx.json",
+      "bytes": 82424,
+      "sha256": "230f296f5433873ecb97bb0c7d4f3b3d759986e861c3138535a17ec751f85ebe",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/SHA256SUMS.txt",
+      "bytes": 775,
+      "sha256": "ce96d2bc949031b17904807983bcc0bb9009f70e1b77a1b5d49f6477f0424c92",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/standalone-archive-verification.json",
+      "bytes": 5690,
+      "sha256": "e981c080457a59de1a67b8a22f062094e9832f0ff1fcc21bc68400a7ccd63109",
+      "matches_frozen_local": true
+    },
+    {
+      "name": "System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+      "bytes": 10122929,
+      "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+      "matches_frozen_local": true
+    }
+  ]
+}

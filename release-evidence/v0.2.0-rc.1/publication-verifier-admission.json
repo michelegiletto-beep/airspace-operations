@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-28T12:54:43.889950+00:00",
+  "script_sha256": "f4674f6efb1efb19acbc4212b776dc97c52cf0b31b63128b489428eaf8d34c3a",
+  "checks": [
+    {
+      "check": "plain-http",
+      "passed": true
+    },
+    {
+      "check": "private-ip",
+      "passed": true
+    },
+    {
+      "check": "foreign-host",
+      "passed": true
+    },
+    {
+      "check": "url-credentials",
+      "passed": true
+    },
+    {
+      "check": "wrong-port",
+      "passed": true
+    },
+    {
+      "check": "fragment",
+      "passed": true
+    },
+    {
+      "check": "control-character",
+      "passed": true
+    },
+    {
+      "check": "manifest-traversal",
+      "passed": true
+    },
+    {
+      "check": "oversized-manifest",
+      "passed": true
+    },
+    {
+      "check": "historical-overwrite",
+      "passed": true
+    },
+    {
+      "check": "github-https",
+      "passed": true
+    },
+    {
+      "check": "site-https",
+      "passed": true
+    },
+    {
+      "check": "hf-official-cdn",
+      "passed": true
+    },
+    {
+      "check": "redirect-query-not-persisted",
+      "passed": true
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "scope": "Deterministic helper admission checks; resolve=False intentionally avoids network. Full anonymous network recheck recorded separately."
+}

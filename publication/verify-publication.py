@@ -120,9 +120,14 @@ def main() -> None:
         (HERE / name).is_file() and sha(HERE / name) == value
         for name, value in browser_review.get("reviewed_file_sha256", {}).items()
     )
+    ledger = json.loads((HERE / "status.json").read_text(encoding="utf-8"))
+    ledger_state = (ledger.get("states_reached") or ["Prepared"])[-1]
     result = {
-        "checked_at": datetime.now(timezone.utc).isoformat(), "release_state": "Prepared",
+        "checked_at": datetime.now(timezone.utc).isoformat(), "check_scope": "Local authoring validation",
+        "release_state_from_separate_ledger": ledger_state,
         "native_publication_performed": False, "browser_rendering_verified": browser_matches,
+        "browser_rendering_scope": "Earlier local preview only; final published browser verification is separate",
+        "published_browser_report": "../release-evidence/v0.2.0-rc.1/site-browser-final-verification.json",
         "browser_review": {"report": "qa/browser-review.json", "reviewed_files_still_match": browser_matches,
                            "responsive_breakpoints_verified": False} if browser_review else None,
         "checks": {"site": verify_page(HERE / "site-project.html", False), "static_space": verify_page(SPACE / "index.html", True),
@@ -131,9 +136,9 @@ def main() -> None:
                    "new_weights_or_renderer_bundled": False, "credential_patterns_found": secret_findings},
         "media": media, "pending_root_assets": [],
         "notes": ["Local checks do not prove browser rendering, clean installation or public publication.",
-                  "Rerun prepare.py and both publication checks after the release owner refreshes screenshots."]}
+                  "Current publication receipts are separate. Preserve frozen assets and do not overwrite them by rerunning preparation."]}
     (HERE / "authoring-qa-v2.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-    print(json.dumps({"passed": True, "raw_reports": 4, "media": len(media), "trials": 4, "ui_steps": 5, "citations": 12, "failure_cases": 14, "published": False}))
+    print(json.dumps({"passed": True, "raw_reports": 4, "media": len(media), "trials": 4, "ui_steps": 5, "citations": 12, "failure_cases": 14, "check_performed_publication": False, "release_state_from_separate_ledger": ledger_state}))
 
 
 if __name__ == "__main__":

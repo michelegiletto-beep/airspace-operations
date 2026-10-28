@@ -1,7 +1,6 @@
-<!-- Publication draft for the repository-root README.md. Image paths are relative to that final destination. Version 0.2.0-rc.1 remains Prepared until the release owner verifies publication. -->
 # System Lab Airspace Operations
 
-Installable operational management and decision support for civilian unmanned-aircraft services. **0.2.0-rc.1 is an engineering release candidate, prepared for publication.** The original specification and incomplete acceptance gates remain inspectable.
+Installable operational management and decision support for civilian unmanned-aircraft services. **0.2.0-rc.1 is a published engineering release candidate.** The original specification and incomplete acceptance gates remain inspectable.
 
 ![Mission Control workspace](publication/media/mission-control.jpg)
 
@@ -94,13 +93,15 @@ Luxembourg and Italy require qualified reconciliation and review. Other countrie
 
 ## Releases and acceptance
 
-**0.2.0-rc.1: Prepared.** Final public download URLs, checksums and clean-install results must be verified before this status is changed. Source preparation or an upload command is not publication evidence.
+**0.2.0-rc.1: Published and independently retrieved.** [Download the application ZIP](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/System-Lab-Airspace-Operations-0.2.0-rc.1.zip) or inspect the [release and its nine assets](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1), including checksums, SBOM, provenance and verification evidence. The ZIP is **10,122,929 bytes**, SHA-256 `a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f`; its source tag is `3d5376758493f8e791dce85968947878990c6b6f`. The exact archive was separately extracted, installed and tested: **266 passed, 17 skipped**. The skips include the PostgreSQL profile and the licensed original XML snapshot excluded from the public package.
+
+The tag and application ZIP are frozen. Their embedded publication records describe the assembly checkpoint; [the current publication ledger](publication/status.json) and [handover](HANDOVER.md) record subsequent public retrievals without rewriting the released bytes.
 
 The [public static evaluation viewer](https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation) makes the four recorded comparison trials, five-step UI workflow, 12 cited passages and original student failure cases inspectable without model compute or an operational instance. It runs no live inference. Its source and evidence are independently retrievable; it is not the production platform.
 
 The [previous v0.1.0-rc.1 release](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.1.0-rc.1) and frozen ZIP remain available and unchanged. The public [System Labs project dossier](https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations) separates documentation/download hosting from authenticated operational deployment.
 
-The exercised local portability profile uses SQLite. [Actual isolated CI](https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40678178924) also built and started the containers, completed a job through the running worker/API, passed 16 PostgreSQL/PostGIS/vector/concurrency tests and verified pg_dump/pg_restore with the ordinary application role. Local verification passed 267 Python tests with 16 PostgreSQL skips,69 frontend tests and dependency audits; those separate environments are not added into a fabricated single test total. National packs, accepted live operational feeds, complete methodology coverage and production-scale resilience retain separate assurance gates. Inspect [capabilities](capabilities.json), [requirement traceability](REQUIREMENTS_TRACEABILITY.csv), [known limitations](docs/known-limitations.md), [threat model](THREAT_MODEL.md) and [safety boundary](SAFETY_BOUNDARY.md).
+The exercised local portability profile uses SQLite. [Actual isolated CI on the exact released source](https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40683325217) also built and started the containers, completed a job through the running worker/API, passed 16 PostgreSQL/PostGIS/vector/concurrency tests and verified pg_dump/pg_restore with the ordinary application role. Local verification passed 267 Python tests with 16 PostgreSQL skips, 69 frontend tests and dependency audits; those separate environments are not added into a fabricated single test total. National packs, accepted live operational feeds, complete methodology coverage and production-scale resilience retain separate assurance gates. Inspect [capabilities](capabilities.json), [requirement traceability](REQUIREMENTS_TRACEABILITY.csv), [known limitations](docs/known-limitations.md), [threat model](THREAT_MODEL.md) and [safety boundary](SAFETY_BOUNDARY.md).
 
 This is decision-support software. It is not an autopilot, certified Detect and Avoid system, separation service, air traffic control system, competent authority or U-space provider. Software tests do not approve flights.
 

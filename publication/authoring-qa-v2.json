@@ -1,8 +1,11 @@
 {
-  "checked_at": "2026-10-28T11:37:11.534Z",
-  "release_state": "Prepared",
+  "checked_at": "2026-10-28T12:44:47.058345+00:00",
+  "check_scope": "Local authoring validation",
+  "release_state_from_separate_ledger": "Independently Retrieved",
   "native_publication_performed": false,
   "browser_rendering_verified": false,
+  "browser_rendering_scope": "Earlier local preview only; final published browser verification is separate",
+  "published_browser_report": "../release-evidence/v0.2.0-rc.1/site-browser-final-verification.json",
   "browser_review": {
     "report": "qa/browser-review.json",
     "reviewed_files_still_match": false,
@@ -50,35 +53,7 @@
     "unchanged_student_sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
     "official_static_metadata": true,
     "new_weights_or_renderer_bundled": false,
-    "credential_patterns_found": [],
-    "dom_and_syntax": {
-      "node_javascript_syntax": "Passed",
-      "postcss_parse": "Passed",
-      "site_workspace_tabs": 6,
-      "site_recorded_trace_steps": 5,
-      "space_views": 5,
-      "space_recorded_queries": 2,
-      "space_trace_steps": 5,
-      "space_source_passages": 12,
-      "space_failure_examples": 14,
-      "space_screenshot_choices": 7,
-      "keyboard_wrap": "Passed",
-      "prepared_downloads_disabled": true,
-      "missing_data_no_substitutes": "Passed",
-      "wrong_mode_rejected": "Passed",
-      "source_text_escaping": "Passed",
-      "network_requests": "One own bundled index; no external data or inference",
-      "commands": [
-        {
-          "command": "node --check publication/hf-space/app.js",
-          "exit_code": 0
-        },
-        {
-          "command": "node --check publication/verify-publication.mjs",
-          "exit_code": 0
-        }
-      ]
-    }
+    "credential_patterns_found": []
   },
   "media": {
     "mission-control.jpg": {
@@ -153,6 +128,6 @@
   "pending_root_assets": [],
   "notes": [
     "Local checks do not prove browser rendering, clean installation or public publication.",
-    "Rerun prepare.py and both publication checks after the release owner refreshes screenshots."
+    "Current publication receipts are separate. Preserve frozen assets and do not overwrite them by rerunning preparation."
   ]
 }

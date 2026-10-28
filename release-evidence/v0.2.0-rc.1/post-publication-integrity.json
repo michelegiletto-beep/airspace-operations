@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-28T12:45:12.207371+00:00",
+  "frozen_digests_match": {
+    "SPECIFICATION.md": true,
+    "release/System-Lab-Airspace-Operations-0.1.0-rc.1.zip": true,
+    "release/System-Lab-Airspace-Operations-0.2.0-rc.1.zip": true,
+    "SBOM.cdx.json": true,
+    "models/runs/explicit-shall-20261027-4/student.safetensors": true
+  },
+  "verified_software_inputs_unchanged": 126,
+  "changed_software_inputs": [],
+  "destinations_independently_retrieved": 6,
+  "baseline_requirements": 170,
+  "revision_requirements": 16,
+  "full_baseline_acceptance": false,
+  "published_assets_rebuilt": false,
+  "tag_moved": false,
+  "scope": "Post-publication document and receipt reconciliation; not a new application build"
+}

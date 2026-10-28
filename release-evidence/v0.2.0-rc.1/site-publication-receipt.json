@@ -1,0 +1,40 @@
+{
+  "saved": {
+    "id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_f0a6e05d2d5c819188c65e7d27721c7a",
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "version_number": 95,
+    "source": {
+      "commit_sha": "e16bc8f396878a38d4f48db1f005df8fa1043820"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000002be08211af1c7c49e63cd528",
+      "content_hash": "sha256:7c5eb8f7bf3aea1d0d6780766b19ca3b183bed1ece78ca0bb918fa7252f62d9e",
+      "size_bytes": 169400320,
+      "file_count": 633
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ae1e98d67cc81918c55fa96e9c51e6f",
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "title": "Michele Giletto | Systems Portfolio",
+    "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_f0a6e05d2d5c819188c65e7d27721c7a",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a8fdd39ede88191898e6f386864c331",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-28T12:25:15.928526+00:00"
+  },
+  "source": {
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "checkout_path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-publishing",
+    "commit_sha": "e16bc8f396878a38d4f48db1f005df8fa1043820",
+    "archive": "C:/Users/gilet/Documents/ChatGPT/SYSTEM LABS/products/airspace-operations/release/site-airspace-0.2.0-rc.1.tar.gz"
+  }
+}

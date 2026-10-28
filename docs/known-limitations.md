@@ -14,3 +14,8 @@ Publication states are recorded separately as Prepared, Uploaded, Published and 
 
 
 Revision 0.2 adds genuine local generative orchestration and constrained maintenance/shared-fleet/country/dispatch workflows, with actual execution and isolated fault tests. The local controller uses cooperative generation cancellation and bounded calls; arbitrary native-code preemption, OS process quotas and production queue SLOs require deployment-specific engineering. Cross-country readiness consumes documented instruments and source reviews, not a universal European authorisation API. The50-entry country catalogue is geographical registration, with no automatically validated national pack. The source currentness recheck on 28 October 2026 leaves the original cleared corpus unchanged.
+
+
+## Existing public-site verification boundary
+
+The scoped Airspace dossier, catalogue integration, screenshots and downloads pass their targeted checks. The complete pre-existing System Lab site suite has five inherited unrelated failures: built prior source 61 passed / 5 failed; revised source 64 passed / the same 5 failed. See release-evidence/v0.2.0-rc.1/site-baseline-comparison.json and preserved command outputs. This is not a claim that the entire site suite passes. No unrelated project content or assertions were weakened to conceal those failures.

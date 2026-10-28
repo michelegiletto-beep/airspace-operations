@@ -1,0 +1,124 @@
+{
+  "checked_at": "2026-10-28T12:00:00.967Z",
+  "repository": "michelegiletto-beep/airspace-operations",
+  "source_commit": "3d5376758493f8e791dce85968947878990c6b6f",
+  "run_id": 40683325217,
+  "job_id": 122799307313,
+  "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40683325217",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 122799307313,
+      "name": "containers-postgresql",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 40683325217,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Prepare isolated ephemeral configuration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Full software suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Build actual application and spatial database containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Start and verify container health",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Actual running container worker and authenticated API",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "PostgreSQL extensions, concurrency and workflow isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Actual PostgreSQL backup and restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Stop this isolated verification deployment",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22
+        },
+        {
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23
+        },
+        {
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        }
+      ]
+    }
+  ],
+  "observed_results": [
+    "2026-10-28T11:53:44.7089432Z 266 passed, 17 skipped, 3 warnings in 54.17s",
+    "2026-10-28T11:54:40.9388316Z {\"actual_running_container_worker_completed_job\": true, \"result\": {\"cases\": [], \"external_actions\": []}, \"audit_valid\": true, \"operational_acceptance\": false}",
+    "2026-10-28T11:54:48.7310913Z 16 passed, 1 warning in 6.88s",
+    "2026-10-28T11:54:51.4902291Z {\"postgresql_restoration_verified\": true, \"audit_count\": 2, \"audit_valid\": true, \"operational_acceptance\": false}"
+  ],
+  "scope": "Actual final release-source checkout, container deployment, running-worker/API, PostgreSQL and recovery checks; not operational acceptance"
+}

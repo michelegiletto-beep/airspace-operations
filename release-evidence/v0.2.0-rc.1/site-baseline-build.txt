@@ -1,0 +1,73 @@
+
+> giletto-systems-lab@0.1.0 build
+> node scripts/build-verified.mjs
+
+
+  vinext build  (Vite 8.0.13)
+
+(node:22224) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[1/5] analyze client references...
+[2K
+(node:22224) ExperimentalWarning: glob is an experimental feature and might change at any time
+transforming...✓ 143 modules transformed.
+rendering chunks...
+[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
+  - vinext:optimize-imports (14%)
+  - vinext:react-canary (14%)
+  - rsc:scan-strip (12%)
+  - rsc:virtual-client-package (11%)
+  - vite:css (10%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 5.01s
+[2/5] analyze server references...
+[2K
+transforming...✓ 92 modules transformed.
+rendering chunks...
+✓ built in 398ms
+[3/5] build rsc environment...
+[2K
+transforming...✓ 149 modules transformed.
+rendering chunks...
+computing gzip size...
+[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
+  - rsc:scan-strip (30%)
+  - vinext:react-canary (10%)
+  - vinext:optimize-imports (9%)
+  - rsc:use-server (9%)
+  - rsc:scan-strip (7%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 3.23s
+[4/5] build client environment...
+[2K
+transforming...✓ 209 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.52s
+[5/5] build ssr environment...
+[2K
+transforming...✓ 98 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 881ms
+[0m
+  Route (app)
+  ┌ ? /                                    
+  ├ ? /eora-embodied-operations-allocation 
+  ├ ? /mecyron-physical-ai-uptime          
+  ├ ? /mecyron-physical-ai-uptime/audit    
+  ├ ? /mecyron-physical-ai-uptime/dashboard
+  ├ ? /mecyron-physical-ai-uptime/research 
+  ├ ? /research-lab                        
+  ├ ? /scilla-passive                      
+  └ ? /scilla-passive/validation           
+
+  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+  Build complete. Run `vinext start` to start the production server.
+

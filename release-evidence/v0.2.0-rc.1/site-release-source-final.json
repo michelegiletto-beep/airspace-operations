@@ -1,0 +1,230 @@
+{
+  "schema_version": "1",
+  "recorded_at": "2026-10-28T12:09:51.959457+00:00",
+  "state": "Verified release assets integrated into prepared Site source; Site publication not performed",
+  "checkout": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-publishing",
+  "base_site_commit": "bb9ffcd968917e28ab085bcf098abeb417fa8147",
+  "github_proof": {
+    "release_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1",
+    "source_commit": "3d5376758493f8e791dce85968947878990c6b6f",
+    "evidence": "github-public-verification.json",
+    "all_nine_assets_independently_retrieved": true
+  },
+  "final_source_ci": {
+    "run_id": 40683325217,
+    "evidence": "ci-release-source-verification.json",
+    "python_passed": 266,
+    "python_skipped": 17,
+    "postgresql_passed": 16,
+    "running_worker_and_restoration_passed": true
+  },
+  "archive_clean_install": {
+    "python_passed": 266,
+    "python_skipped": 17,
+    "empty_workspace_verified": true,
+    "evidence": "standalone-archive-verification.json"
+  },
+  "commands": [
+    {
+      "command": "node scripts/build-home.mjs",
+      "exit_code": 0,
+      "stdout": "Homepage built with 31 project records.",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/build-projects.mjs --project=airspace-operations --project=multiagentic-systems",
+      "exit_code": 0,
+      "stdout": "Built selected project records and affected catalogue pages: airspace-operations, multiagentic-systems",
+      "stderr": ""
+    },
+    {
+      "command": "node --test tests/airspace-operations.test.mjs tests/project-dossiers.test.mjs tests/orbital-flagship.test.mjs",
+      "exit_code": 0,
+      "stdout": "TAP version 13\n# Subtest: Airspace belongs to the real catalogue and uses an authentic capture card\nok 1 - Airspace belongs to the real catalogue and uses an authentic capture card\n  ---\n  duration_ms: 23.7443\n  ...\n# Subtest: Published candidate downloads match the release checksums and the old release stays frozen\nok 2 - Published candidate downloads match the release checksums and the old release stays frozen\n  ---\n  duration_ms: 163.6647\n  ...\n# Subtest: programme keeps its existing application boundaries and Interval relationship\nok 3 - programme keeps its existing application boundaries and Interval relationship\n  ---\n  duration_ms: 4.2668\n  ...\n# Subtest: The homepage presents all thirty-one projects once in six primary classes\nok 4 - The homepage presents all thirty-one projects once in six primary classes\n  ---\n  duration_ms: 9.8232\n  ...\n# Subtest: The project page describes the evaluation and server boundary\nok 5 - The project page describes the evaluation and server boundary\n  ---\n  duration_ms: 0.7397\n  ...\n# Subtest: Every project card preserves its catalogue identity and materials, including Orbital\nok 6 - Every project card preserves its catalogue identity and materials, including Orbital\n  ---\n  duration_ms: 14.5148\n  ...\n# Subtest: every catalogue project retains its materials and its declared image type\nok 7 - every catalogue project retains its materials and its declared image type\n  ---\n  duration_ms: 137.8672\n  ...\n# Subtest: editorial images cover the full catalogue\nok 8 - editorial images cover the full catalogue\n  ---\n  duration_ms: 169.091\n  ...\n# Subtest: new pages preserve documented limits and real software imagery\nok 9 - new pages preserve documented limits and real software imagery\n  ---\n  duration_ms: 11.3235\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1009.9184",
+      "stderr": ""
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'public/assets/airspace-project.css', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/index.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-frontier.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-intelligent-systems.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-maritime.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-resilience.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/programs.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/research-records.json', LF will be replaced by CRLF the next time Git touches it"
+    }
+  ],
+  "focused_site_tests": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "local_links": {
+    "pages": [
+      "index.html",
+      "projects/airspace-operations.html",
+      "projects/multiagentic-systems.html",
+      "program-ai-methods.html",
+      "programs.html"
+    ],
+    "internal_targets_checked": 366,
+    "unresolved": [],
+    "existing_app_routes_recognised": [
+      "/eora-embodied-operations-allocation",
+      "/mecyron-physical-ai-uptime",
+      "/mecyron-physical-ai-uptime/dashboard",
+      "/mecyron-physical-ai-uptime/research",
+      "/research-lab",
+      "/scilla-passive",
+      "/scilla-passive/validation"
+    ],
+    "existing_spa_routes_recognised": [
+      "/work-agent-orchestration.html#/work/agent-orchestration",
+      "/work-aqos-recovery.html#/work/aqos-recovery",
+      "/work-orchestration-risk.html#/work/orchestration-risk",
+      "/work-pq-zptd.html#/work/pq-zptd",
+      "/work-safety-mirrors.html#/work/safety-mirrors"
+    ]
+  },
+  "assets": [
+    {
+      "name": "ci-release-source-verification.json",
+      "bytes": 4157,
+      "sha256": "fdf966cc477d9a533fd693227e89378c2317751265d08b188e9c68710c34de5f",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "publication-dependency-audit-current.json",
+      "bytes": 389,
+      "sha256": "a86bbdfdc41e56f421e6e3eca0ff181f0e48da12f15a26ef5ed1ceec8df8d2a7",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "release-gates.json",
+      "bytes": 1075,
+      "sha256": "d3415f8fed896f1e109e9e0eba662b47adee817162a63f25e84ea133450c6054",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "bytes": 47464,
+      "sha256": "74c6a0d9d3d0bc620945615323f17617ce0091826d692a2c4344e0932cd76304",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "sbom-validation.json",
+      "bytes": 757,
+      "sha256": "695fa0440aed83b6d87af83308cb01ceb5adba629afcb2d617ed57e6bd7d5d9f",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "bytes": 82424,
+      "sha256": "230f296f5433873ecb97bb0c7d4f3b3d759986e861c3138535a17ec751f85ebe",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 775,
+      "sha256": "ce96d2bc949031b17904807983bcc0bb9009f70e1b77a1b5d49f6477f0424c92",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "bytes": 5690,
+      "sha256": "e981c080457a59de1a67b8a22f062094e9832f0ff1fcc21bc68400a7ccd63109",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    },
+    {
+      "name": "System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+      "bytes": 10122929,
+      "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+      "local_http_status": 200,
+      "matches_frozen_release_and_independently_retrieved_github_asset": true
+    }
+  ],
+  "old_release": {
+    "name": "System-Lab-Airspace-Operations-0.1.0-rc.1.zip",
+    "bytes": 2090705,
+    "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+    "unchanged": true,
+    "checksum_link": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.1.0-rc.1/SHA256SUMS.txt"
+  },
+  "generated_outputs": {
+    "idempotent": true,
+    "sha256": {
+      "public/index.html": "dbad83aa333c48a8e4f02a68b717f92d0a126b96de4be9c03a40c4ff8e8aad4d",
+      "public/research-records.json": "4f3a89c6a1e17f912ddf1f89f1d15adc31d0d93bb7f1fb336b668f0810093658",
+      "public/projects/airspace-operations.html": "1e90ec6f787be456043a9ff39ebcd56e416289aecdbbf428910bbeea1baf5b2c",
+      "public/projects/multiagentic-systems.html": "01af99b6202e4ac3c6e5b08b55f65f79f0b09b0b4a6de523fa323d608286392b",
+      "public/program-ai-methods.html": "fc76702b4cee3d364042f4cb2e15fc1c74f87cc59f85af912777818afb20a860",
+      "public/programs.html": "ffe633c9fc8a8177a15df28d9e4cf71139f74312772d0ffa363931a9fd8d9109",
+      "public/program-frontier.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf",
+      "public/program-intelligent-systems.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf",
+      "public/program-maritime.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf",
+      "public/program-resilience.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf"
+    }
+  },
+  "browser_review": {
+    "tool": "cua_repl Chrome ephemeral review tab",
+    "release_section_rendered": true,
+    "enabled_download_target": "/airspace-operations/System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+    "displayed_release_state": "Published engineering candidate",
+    "displayed_hash": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+    "viewport_width": 1920,
+    "document_scroll_width": 1905,
+    "mobile_emulation_executed": false,
+    "responsive_hash_rules": [
+      "min-width:0",
+      "overflow-wrap:anywhere",
+      "word-break:break-word",
+      "white-space:normal"
+    ]
+  },
+  "publication_source_mirrors": [
+    {
+      "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\publication\\site-project.html",
+      "sha256": "1e90ec6f787be456043a9ff39ebcd56e416289aecdbbf428910bbeea1baf5b2c"
+    },
+    {
+      "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\publication\\site-project.css",
+      "sha256": "0e55796eda0fb84b51f7c5c4f45feca67f65fdc8d3a5b1fb2f9391a8c563c6b5"
+    }
+  ],
+  "site_files_changed_this_checkpoint": [
+    "templates/airspace-operations.html",
+    "public/assets/airspace-project.css",
+    "internal/site-redesign/additional-projects.json",
+    "scripts/build-home.mjs",
+    "scripts/build-projects.mjs",
+    "templates/multiagentic-systems.html",
+    "tests/airspace-operations.test.mjs",
+    "public/index.html",
+    "public/research-records.json",
+    "public/projects/airspace-operations.html",
+    "public/projects/multiagentic-systems.html",
+    "public/program-ai-methods.html",
+    "public/programs.html",
+    "public/program-frontier.html",
+    "public/program-intelligent-systems.html",
+    "public/program-maritime.html",
+    "public/program-resilience.html",
+    "public/airspace-operations/ci-release-source-verification.json",
+    "public/airspace-operations/publication-dependency-audit-current.json",
+    "public/airspace-operations/release-gates.json",
+    "public/airspace-operations/RELEASE_PROVENANCE.json",
+    "public/airspace-operations/sbom-validation.json",
+    "public/airspace-operations/SBOM.cdx.json",
+    "public/airspace-operations/SHA256SUMS.txt",
+    "public/airspace-operations/standalone-archive-verification.json",
+    "public/airspace-operations/System-Lab-Airspace-Operations-0.2.0-rc.1.zip"
+  ],
+  "interval_preserved": true,
+  "full_site_build_performed": false,
+  "native_site_save_or_deploy_performed": false,
+  "next_action": "Root performs official final Site build, save and deployment, then independently retrieves the live page and artifact hashes. Frozen release archive and runtime code were not changed."
+}
