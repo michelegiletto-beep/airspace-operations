@@ -82,8 +82,8 @@ def test_actual_context_refreshes_during_main_thread_work_and_stops_cleanly(tmp_
         assert latest["pid"] == os.getpid()
         assert set(latest) == {"hostname", "pid", "updated_at"}
         assert check_worker_health(tmp_path)["healthy"]
-        assert not list(heartbeat.path.parent.glob("*.tmp"))
     assert not heartbeat.thread.is_alive()
+    assert not list(heartbeat.path.parent.glob("*.tmp"))
 
 
 def test_health_command_exit_status_and_liveness_boundary(tmp_path, monkeypatch, capsys):
