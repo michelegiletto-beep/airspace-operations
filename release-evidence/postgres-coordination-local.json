@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-28",
+  "engineering_version": "0.2.0-rc.1",
+  "test_module": "tests/test_postgres_coordination.py",
+  "database_execution_status": "Skipped locally; AIRSPACE_TEST_POSTGRES_URL was absent",
+  "postgresql_success_claimed": false,
+  "schema_isolation": {
+    "creation": "One newly generated verification_<uuid> schema per test",
+    "connection_options": "-csearch_path=verification_<uuid>, with no public search-path entry",
+    "assertions": ["current_schema matches generated schema", "current_schemas(false) contains only generated schema"],
+    "teardown": "Dispose test client/store and DROP SCHEMA only the generated name after verifying its strict prefix/UUID pattern",
+    "database_boundary": "An explicitly configured isolated software-verification database is required; no operational database is provisioned or dropped",
+    "wait_bounds": "Test sessions use 5-second lock timeout and 10-second statement timeout; thread futures are bounded"
+  },
+  "postgresql_test_scope": [
+    "Owner-private readiness and correspondence are excluded from counterpart projection and API access",
+    "Owner and counterpart cannot reserve the same physical aircraft concurrently",
+    "Concurrent borrower proposals have one successful reservation",
+    "Owner version is rechecked after canonical resource locking",
+    "An aircraft alias cannot remove its agreement/owner/asset binding",
+    "Pilot acknowledgement and internal dispatch review remain distinct",
+    "Changed country instruments block dispatch and material changes invalidate releases",
+    "A revoked agreement does not prevent cancellation of its old internal schedule and release of exclusions",
+    "Worker pause can prevent an inflight completion from overwriting controlled job state",
+    "Four concurrent worker-finish/pause races check organisation-before-job lock ordering"
+  ],
+  "commands_executed": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_postgres_coordination.py -q",
+      "environment": "PowerShell; PYTHONPATH=backend; no isolated PostgreSQL URL",
+      "result": "12 skipped in 0.41s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_europe.py tests/test_dispatch.py tests/test_revision_integration.py tests/test_postgres_coordination.py -q",
+      "environment": "PowerShell; PYTHONPATH=backend; no isolated PostgreSQL URL",
+      "result": "35 passed, 12 skipped in 6.46s"
+    }
+  ],
+  "additional_sqlite_harness": {
+    "purpose": "Exercise the five newly written coordination test bodies against fresh temporary SQLite stores before remote PostgreSQL execution; this does not test PostgreSQL locks",
+    "executed_via": "PowerShell stdin script to .venv/Scripts/python.exe with PYTHONPATH=backend;tests",
+    "result": "5 SQLite-only harness checks passed; PostgreSQL remains unexecuted",
+    "checks": ["private_shared_projection_and_record_access", "revoked_agreement_still_allows_internal_schedule_cancellation", "owner_and_counterpart_simultaneous_booking_have_one_winner", "worker_pause_wins_over_inflight_finish", "worker_pause_and_finish_use_consistent_lock_order"],
+    "initial_failures_and_repairs": [
+      "First manual fixture invocation incorrectly closed the generator at yield and skipped its normal teardown, leaving a temporary SQLite handle open until process exit; subsequent harness invocation resumed the generator to execute teardown",
+      "The new revoked-cancellation assertion initially expected an already-suspended dispatch history record to become Cancelled; corrected it to preserve Suspended while asserting that the schedule is Cancelled and the physical exclusion Released"
+    ]
+  },
+  "article13_correction": {
+    "rule_version": "europe-country-segments-2.0.1",
+    "finding": "The initial STS/LUC host-receipt gates overstated the preserved Article 13(3)/(4) requirements",
+    "change": "Operator-documented host_declaration_submission and luc_host_notification replace invented host-issued receipts; require origin country, actual host recipient, provision timestamp and reviewed delivery evidence",
+    "authority_distinction": "Operational-authorisation route retains host_confirmation under Article 13(2); internal approval of submission evidence never issues an authority permission",
+    "independent_reference": "tests/references/article13-2026.json",
+    "source_archive_sha256": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+    "source_anchors": "ERULES-1963177438-15488:b0005-b0009",
+    "source_retrieved_at": "2026-10-27T17:52:51.434645+00:00",
+    "online_recheck": "Root reported EASA online retrieval unavailable on 28 October; no fresh currentness assertion is made",
+    "qualification_boundary": "Source-grounded software regression evidence does not constitute qualified national applicability review or authority acceptance"
+  },
+  "remaining_gates": [
+    "Run the test module against the real isolated CI PostgreSQL service and retain its actual output",
+    "Deployment-specific database recovery, network interruption and production transaction checks remain separate",
+    "Qualified regulatory review and real operator/provider acceptance remain required"
+  ]
+}

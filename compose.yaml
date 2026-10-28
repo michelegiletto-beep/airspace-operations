@@ -6,12 +6,13 @@ services:
       dockerfile: deploy/database.Dockerfile
     environment:
       POSTGRES_DB: airspace
-      POSTGRES_USER: airspace
+      POSTGRES_USER: airspace_admin
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a private database password}
+      AIRSPACE_DB_APP_PASSWORD: ${AIRSPACE_DB_APP_PASSWORD:?Set a separate private application database password}
     volumes:
       - database:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U airspace -d airspace"]
+      test: ["CMD-SHELL", "pg_isready -U airspace_admin -d airspace"]
       interval: 10s
       timeout: 5s
       retries: 10

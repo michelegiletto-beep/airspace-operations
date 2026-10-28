@@ -3,7 +3,7 @@ import type { FormEvent, ReactNode } from 'react';
 import { ApiError, displayDate, errorMessage, request } from './api';
 
 export function StateTag({ state }: { state: string }) {
-  const style = ['Approved', 'Verified', 'Connected'].includes(state) ? 'positive' : ['Rejected', 'Suspended', 'Critical', 'Expired'].includes(state) ? 'danger' : ['Missing Evidence', 'Not Connected', 'Requires Domain Review'].includes(state) ? 'warning' : '';
+  const style = ['Approved', 'Verified', 'Connected'].includes(state) ? 'positive' : ['Rejected', 'Suspended', 'Critical', 'Expired','Failed'].includes(state) ? 'danger' : ['Missing Evidence', 'Not Connected', 'Requires Domain Review','Blocked','Needs Review','Reconciliation Required','Incomplete','INCOMPLETE','INFEASIBLE'].includes(state) ? 'warning' : '';
   return <span className={`state ${style}`}><span aria-hidden="true" className="state-dot" />{state}</span>;
 }
 export function Notice({ children, danger = false }: { children: ReactNode; danger?: boolean }) {

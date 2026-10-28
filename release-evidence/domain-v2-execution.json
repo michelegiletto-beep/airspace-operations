@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-28",
+  "engineering_version": "0.2.0-rc.1",
+  "scope": [
+    "Maintenance programs, measured utilisation and work-order lifecycle",
+    "CP-SAT maintenance planning and separately implemented verification",
+    "European country segments and distinct Article 13 evidence routes",
+    "Bilateral sharing and canonical physical-resource reservations",
+    "Pilot acknowledgement and accountable internal dispatch review"
+  ],
+  "implementation": [
+    "backend/airspace/fleet.py",
+    "backend/airspace/europe.py",
+    "backend/airspace/sharing.py",
+    "backend/airspace/dispatch.py",
+    "docs/fleet-and-cross-border.md"
+  ],
+  "commands_executed": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_fleet.py tests/test_europe.py -q",
+      "result": "30 passed in 16.23s",
+      "stage": "Initial maintenance and country engines"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_planning.py tests/test_fleet.py tests/test_europe.py -q",
+      "result": "44 passed in 6.25s",
+      "stage": "Legacy planning fixtures upgraded with isolated maintenance records"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_sharing.py -q",
+      "result": "7 passed in 3.99s",
+      "stage": "Initial sharing and physical exclusion"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_dispatch.py tests/test_sharing.py -q",
+      "result": "14 passed in 10.98s",
+      "stage": "Initial internal dispatch and sharing hazards"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_maintenance_workflow.py -q",
+      "result": "4 passed in 3.85s",
+      "stage": "Maintenance lifecycle and independent qualified review"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_fleet.py tests/test_europe.py tests/test_sharing.py tests/test_dispatch.py tests/test_maintenance_workflow.py tests/test_planning.py tests/test_scheduler.py tests/test_operations.py tests/test_api.py -q",
+      "result": "123 passed in 23.92s",
+      "stage": "Final selected domain regression checkpoint after lock, allocation and dispatch-invalidation fixes"
+    }
+  ],
+  "command_environment": "Product directory; PowerShell with PYTHONPATH=backend; isolated temporary stores",
+  "verification_coverage": [
+    "Calendar/hour/cycle trigger boundaries and forecast limits",
+    "Changed configuration, program and record versions",
+    "Actual end remains missing while work is in progress",
+    "Work completion, task release and aircraft serviceability remain distinct",
+    "Qualified technicians, facility scope/capacity and aircraft exclusions",
+    "Configured independent second maintenance and dispatch reviewers",
+    "Country chronology and host confirmation/declaration/LUC distinctions",
+    "Registered geography does not confer validated legal coverage",
+    "Owner/operator identity, counterpart acceptance/rejection and scope/expiry",
+    "Tenant-private drafts and allowlisted shared readiness claims",
+    "Owner/borrower double booking and cumulative physical flight-time budgets",
+    "Owner maintenance limits across shared allocations",
+    "Post-lock revalidation and nonmutating readiness assessment",
+    "Mirrored legacy/physical reservation budget deduplication",
+    "Assigned pilot identity and exact acknowledgement",
+    "Material input changes and agreement revocation invalidate internal release"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/specific-category-civil-drones/operations-specific-category-state-different-one-registration",
+      "checked_date": "2026-10-28"
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-unmanned-aircraft-systems?erules-id=ERULES-1963177438-15488",
+      "preserved_archive_sha256": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "anchors": "b0002-b0009",
+      "meaning": "Article 13 reference consolidation; no complete national-currentness claim"
+    }
+  ],
+  "data_integrity": "Artificial aircraft, users, permissions, maintenance and proposed flights occur only in isolated software tests. No operational records, correspondence, provider activation or aircraft commands were created.",
+  "limitations": [
+    "PostgreSQL cross-organisation locking and recovery require actual deployment verification",
+    "Geographical catalogue entries are Registered; country packs are not automatically validated",
+    "Physical identity and ownership remain accountable evidenced records, not an external registry attestation",
+    "Borrowed aliases cannot perform owner maintenance; the owner records work and refreshed readiness",
+    "Scheduled flight cycles are future allocations, not historical observations",
+    "Maintenance task release does not restore aircraft readiness or charge a battery automatically",
+    "Complete recurrence/charging optimisation and live provider acceptance remain incomplete",
+    "The published 0.1.0-rc.1 tag and archive were not changed"
+  ],
+  "adversarial_followup": {
+    "identity_guard": "sharing.validate_aircraft_identity preserves the bound agreement/owner/asset trio, rejects ordinary owned-to-borrowed conversion, and admits a new alias only under the actual named counterpart's accepted unexpired matching agreement",
+    "identity_regression_command": ".venv/Scripts/python.exe -m pytest tests/test_sharing.py -q",
+    "identity_regression_result": "16 passed in 17.07s",
+    "root_integration_review": "Reviewed API, coordination routes, worker, planning and typed-record normalisation. Protected record roles, dedicated transitions, tenant predicates, current snapshot gates and cancellation after revocation were inspected.",
+    "root_findings_reported": [
+      "Worker/generic job-control lock order must consistently acquire organisation before mutating job rows to avoid PostgreSQL inversion",
+      "Country-review source_refs and applicability_review_ref need semantic completeness gates before a Validated status",
+      "Owner mutation and cancellation need ordered explicit-counterparty prelocks before caller-only tenant locks; supplied helpers implement this"
+    ],
+    "scope_limit": "This report does not assert that later root changes or actual PostgreSQL deployment have been verified by these selected test runs"
+  },
+  "acceptance": "Selected software mechanisms verified; full original-specification and operational acceptance remain separate gates",
+  "execution_note": "A shell attempt to write this report was blocked by tool policy. The same nonsecret documentation record was created with the structured file-edit tool; no permission escalation or external action was required."
+}

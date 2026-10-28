@@ -1,0 +1,69 @@
+name: Engineering verification
+on:
+  push:
+    branches: [main, 'codex/airspace-0.2', 'release/**']
+    paths: ['backend/**', 'frontend/**', 'tests/**', 'scripts/**', 'deploy/**', 'migrations/**', 'Dockerfile', 'compose.yaml', 'pyproject.toml', 'uv.lock', '.github/workflows/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: engineering-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  containers-postgresql:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      COMPOSE_PROJECT_NAME: airspace-ci-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.11.23'
+          enable-cache: false
+      - name: Prepare isolated ephemeral configuration
+        shell: bash
+        run: |
+          database_password=$(openssl rand -hex 24)
+          application_password=$(openssl rand -hex 24)
+          audit_key=$(openssl rand -hex 32)
+          echo "::add-mask::$database_password"
+          echo "::add-mask::$application_password"
+          echo "::add-mask::$audit_key"
+          echo "POSTGRES_PASSWORD=$database_password" >> "$GITHUB_ENV"
+          echo "AIRSPACE_DB_APP_PASSWORD=$application_password" >> "$GITHUB_ENV"
+          echo "AIRSPACE_AUDIT_KEY=$audit_key" >> "$GITHUB_ENV"
+          echo "AIRSPACE_DATABASE_URL=postgresql+psycopg://airspace:$application_password@database:5432/airspace" >> "$GITHUB_ENV"
+          docker version
+          docker compose version
+          uv sync --frozen --extra dev
+          uv run python scripts/prepare_corpus.py
+      - name: Full software suite
+        run: uv run pytest -q
+      - name: Build actual application and spatial database containers
+        run: docker compose -f compose.yaml -f deploy/compose.ci.yaml build
+      - name: Start and verify container health
+        run: |
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml up -d --wait --wait-timeout 180
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml ps
+          python -c "import json,urllib.request,urllib.error; d=json.load(urllib.request.urlopen('http://127.0.0.1:8787/api/v1/health')); assert d['version']=='0.2.0-rc.1' and d['status']=='ok'; print(d)"
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace -c 'CREATE DATABASE airspace_verification OWNER airspace'
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace_verification -c 'CREATE EXTENSION postgis; CREATE EXTENSION vector;'
+          echo "AIRSPACE_TEST_POSTGRES_URL=postgresql+psycopg://airspace:$AIRSPACE_DB_APP_PASSWORD@127.0.0.1:5432/airspace_verification" >> "$GITHUB_ENV"
+      - name: PostgreSQL extensions, concurrency and workflow isolation
+        run: uv run pytest -q tests/test_postgres_integration.py tests/test_postgres_coordination.py
+      - name: Actual PostgreSQL backup and restoration
+        run: |
+          uv run python scripts/verify_postgres_recovery.py seed
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_dump -U airspace_admin --format=custom --file=/tmp/airspace.dump airspace_verification
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database createdb -U airspace_admin -O airspace airspace_restoration
+          docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_restore -U airspace_admin --dbname=airspace_restoration --exit-on-error /tmp/airspace.dump
+          uv run python scripts/verify_postgres_recovery.py verify
+      - name: Stop this isolated verification deployment
+        if: always()
+        run: docker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans

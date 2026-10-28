@@ -8,5 +8,10 @@ frontend/dist
 models/pretrained
 sources/local-research
 sources/snapshots
+work
+publication
+release-evidence
+frontend/verification
+models
 __pycache__
 .env

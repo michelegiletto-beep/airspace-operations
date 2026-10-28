@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-28",
+  "engineering_version": "0.2.0-rc.1",
+  "review_type": "Adversarial source-code inspection and isolated software fault-injection regressions; not aviation certification or independent professional validation",
+  "scope": [
+    "backend/airspace/fleet.py",
+    "backend/airspace/europe.py",
+    "backend/airspace/sharing.py",
+    "backend/airspace/dispatch.py",
+    "backend/airspace/api.py",
+    "backend/airspace/coordination_api.py",
+    "backend/airspace/worker.py",
+    "backend/airspace/planning.py",
+    "backend/airspace/domain_records.py"
+  ],
+  "closed_findings": [
+    {
+      "id": "DOMAIN-20261028-01",
+      "finding": "A returned or replaced maintenance completion could retain an earlier review signature and count it toward release of changed work",
+      "repair": "Replacing completion clears signatures; signatures now bind exact completion, source evidence versions, aircraft/program/configuration and resource revisions. Changed earlier reviewer authority or qualifications also require a fresh review",
+      "tests": "tests/test_maintenance_workflow.py"
+    },
+    {
+      "id": "DOMAIN-20261028-02",
+      "finding": "Dispatch checked that some local reservation existed, allowing a partially lost ledger to support a release",
+      "repair": "Require exact aircraft, personnel and site reservation intervals plus the current Reserved canonical physical asset, agreement and owner revision",
+      "tests": "tests/test_dispatch.py"
+    },
+    {
+      "id": "DOMAIN-20261028-03",
+      "finding": "Owner maintenance source changes did not invalidate borrower releases, and the next proposal could reuse stale Released completion strings",
+      "repair": "Ordered complete-counterparty dependency locks and source-change invalidation propagate only through explicit owned assets and physical ledger links. Dependent Approved programs become Suspended with new versions and audit snapshots. New reservation/dispatch requires current independently reviewed tenant evidence and exact evidence_version for measured usage and latest released completion baselines",
+      "tests": "tests/test_sharing.py and tests/test_planning.py fixtures with real isolated evidence-record relationships"
+    },
+    {
+      "id": "DOMAIN-20261028-04",
+      "finding": "A scheduled maintenance job could start after its assigned facility revision or approval had changed",
+      "repair": "Current facility status and exact planned facility revision are rechecked before recording work start",
+      "tests": "tests/test_maintenance_workflow.py"
+    },
+    {
+      "id": "DOMAIN-20261028-05",
+      "finding": "Equally recent completion records with conflicting counters were resolved by arbitrary first-record selection",
+      "repair": "Contradictory latest counters block readiness",
+      "tests": "tests/test_fleet.py"
+    },
+    {
+      "id": "DOMAIN-20261028-06",
+      "finding": "Article 13 STS/LUC evidence initially demanded a host-issued response that the preserved paragraphs do not require",
+      "repair": "Require operator-documented host_declaration_submission or luc_host_notification with actual host recipient, provision time and reviewed delivery evidence. Keep host_confirmation for the operational-authorisation route. Future-dated provision cannot support current internal dispatch",
+      "tests": "tests/test_europe.py, tests/test_dispatch.py and independently preserved tests/references/article13-2026.json",
+      "source_boundary": "Preserved 27 October source snapshot; attempted online recheck was unavailable. No later-currentness claim"
+    }
+  ],
+  "integration_contracts": {
+    "prelock": "fleet.lock_maintenance_dependency_mutation(conn, tenant, record_id), before any caller-only tenant lock for maintenance_program/evidence edits or transitions",
+    "invalidate": "fleet.suspend_maintenance_dependants(conn, store, tenant, record_id, user, reason), after mutation in the same locked transaction",
+    "multi_asset_lock": "sharing.lock_owned_aircraft_set_mutation(conn, tenant, aircraft_ids), complete sorted party set before sorted canonical resources",
+    "source_contract": "UtilisationSnapshot.evidence_version and MaintenanceCompletion.evidence_version are optional for incomplete drafts/advisory inputs but mandatory and exact at persisted reservation/dispatch",
+    "source_release": "Controlled work completion binds actual evidence revision; independent release binds current Approved evidence and rejects reuse of stale earlier signatures",
+    "privacy": "Owner maintenance records stay owner-scoped. Borrowers receive scoped release invalidation, not private source contents"
+  },
+  "commands_executed": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_maintenance_workflow.py tests/test_dispatch.py tests/test_sharing.py tests/test_europe.py -q",
+      "result": "64 passed in 22.34s",
+      "stage": "Initial final-review repairs, before strict persisted source-version follow-up"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_fleet.py tests/test_maintenance_workflow.py tests/test_dispatch.py tests/test_sharing.py tests/test_europe.py tests/test_planning.py tests/test_revision_integration.py tests/test_postgres_coordination.py -q",
+      "result": "1 failed, 108 passed, 12 skipped in 36.10s",
+      "failure": "New future-provision regression used a fractional-second timestamp contrary to the engine's declared whole-second contract; fixture corrected to whole seconds"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_fleet.py tests/test_maintenance_workflow.py tests/test_dispatch.py tests/test_sharing.py tests/test_europe.py tests/test_planning.py tests/test_revision_integration.py tests/test_postgres_coordination.py -q",
+      "result": "109 passed, 12 skipped in 39.28s",
+      "stage": "Final domain freeze after the recorded repairs"
+    }
+  ],
+  "execution_environment": "PowerShell with PYTHONPATH=backend; isolated temporary SQLite records. No PostgreSQL URL was present",
+  "reported_integration_issue": {
+    "id": "WORKFLOW-20261028-01",
+    "status_at_report": "Reported to root integration owner; repair and verification pending in this evidence record",
+    "finding": "Workflow control commits its state before a second job-cleanup transaction. Stale pause cleanup can cancel a newer concurrent resume's queued job",
+    "recommended_repair": "Recheck exact controlled workflow version/status before any job cleanup, or atomically commit workflow control and job mutation",
+    "boundary": "Durable-workflow liveness race; not an aircraft command, cross-tenant disclosure or approval grant"
+  },
+  "remaining_acceptance": [
+    "Actual PostgreSQL sharing/dispatch lock and worker-control races remain unexecuted locally; retain genuine CI output before claiming database verification",
+    "Root API-hook integration and the separately reported workflow-control race require their own final evidence",
+    "Approved operator inputs, lawful actual records, qualified national legal review, provider access and real operational acceptance remain necessary",
+    "No stable-release, certification or universal national coverage assertion follows from these tests"
+  ],
+  "final_domain_status": "No known unresolved critical domain approval bypass in the inspected paths after these repairs and passing focused SQLite tests; integration and operational boundaries above remain explicit"
+}

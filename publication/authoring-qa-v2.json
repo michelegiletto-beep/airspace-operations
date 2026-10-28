@@ -1,0 +1,153 @@
+{
+  "checked_at": "2026-10-28T10:59:02.626Z",
+  "release_state": "Prepared",
+  "native_publication_performed": false,
+  "browser_rendering_verified": false,
+  "checks": {
+    "site": {
+      "unique_ids": 40,
+      "id_references": 20,
+      "resolved_local_resources": [
+        "/assets/lab.css",
+        "/assets/airspace-project.css",
+        "/airspace-operations/media/mission-control.jpg",
+        "/airspace-operations/media/mission-control.jpg",
+        "/airspace-operations/media/mission-control.jpg",
+        "/airspace-operations/media/mission-control.jpg",
+        "/airspace-operations/media/orchestration-pipeline.svg",
+        "/airspace-operations/media/indigo.webp",
+        "/airspace-operations/media/coral.webp"
+      ]
+    },
+    "static_space": {
+      "unique_ids": 36,
+      "id_references": 13,
+      "resolved_local_resources": [
+        "styles.css",
+        "app.js",
+        "data/first-causal-run.json",
+        "data/actual-ui-workflow.json",
+        "media/orchestration-pipeline.svg",
+        "NOTICE.md",
+        "media/agent-orchestration-detail.jpg",
+        "media/agent-orchestration-detail.jpg",
+        "data/student-run.json",
+        "media/mission-control.jpg",
+        "media/mission-control.jpg",
+        "data/causal-comparison.json",
+        "data/actual-ui-workflow.json",
+        "data/provenance.json",
+        "NOTICE.md"
+      ]
+    },
+    "raw_report_copies": 4,
+    "media_copies": 8,
+    "unchanged_student_sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+    "official_static_metadata": true,
+    "new_weights_or_renderer_bundled": false,
+    "credential_patterns_found": [],
+    "dom_and_syntax": {
+      "node_javascript_syntax": "Passed",
+      "postcss_parse": "Passed",
+      "site_workspace_tabs": 6,
+      "site_recorded_trace_steps": 5,
+      "space_views": 5,
+      "space_recorded_queries": 2,
+      "space_trace_steps": 5,
+      "space_source_passages": 12,
+      "space_failure_examples": 14,
+      "space_screenshot_choices": 7,
+      "keyboard_wrap": "Passed",
+      "prepared_downloads_disabled": true,
+      "missing_data_no_substitutes": "Passed",
+      "wrong_mode_rejected": "Passed",
+      "source_text_escaping": "Passed",
+      "network_requests": "One own bundled index; no external data or inference",
+      "commands": [
+        {
+          "command": "node --check publication/hf-space/app.js",
+          "exit_code": 0
+        },
+        {
+          "command": "node --check publication/verify-publication.mjs",
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "media": {
+    "mission-control.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        1138
+      ],
+      "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "bytes": 129906
+    },
+    "airspace-planning.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        1066
+      ],
+      "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "bytes": 112044
+    },
+    "fleet-maintenance.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        891
+      ],
+      "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "bytes": 75096
+    },
+    "european-coordination.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        1277
+      ],
+      "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "bytes": 127424
+    },
+    "scheduling.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        1162
+      ],
+      "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "bytes": 98935
+    },
+    "agent-orchestration.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        2602
+      ],
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "bytes": 211029
+    },
+    "agent-orchestration-detail.jpg": {
+      "state": "Present; decoded",
+      "pixels": [
+        1265,
+        712
+      ],
+      "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "bytes": 71132
+    },
+    "orchestration-pipeline.svg": {
+      "state": "Present; SVG XML parsed",
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "bytes": 4561
+    }
+  },
+  "pending_root_assets": [],
+  "notes": [
+    "Local checks do not prove browser rendering, clean installation or public publication.",
+    "Rerun prepare.py and both publication checks after the release owner refreshes screenshots."
+  ]
+}

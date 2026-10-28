@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { FormEvent } from 'react';
 import { displayDate, downloadPackage, errorMessage, parseObject, request, writableData } from './api';
 import type { Collection, DomainRecord, User } from './api';
@@ -8,13 +8,14 @@ import { AlertAcknowledgement, EvidenceAttachment, IncidentWorkspace } from './R
 import type { Field, Kind } from './schema';
 function inputValue(value: unknown, field: Field): string { return value === undefined ? '' : typeof value === 'object' && (!Array.isArray(value) || field.type === 'json') ? JSON.stringify(value, null, 2) : Array.isArray(value) ? value.join(', ') : String(value); }
 
-interface Props { kindId: string; token: string; user: User; revision: number; changed: () => void }
-export default function Records({ kindId, token, user, revision, changed }: Props) {
+interface Props { kindId: string; token: string; user: User; revision: number; changed: () => void; createIntent?:number }
+export default function Records({ kindId, token, user, revision, changed, createIntent=0 }: Props) {
   const kind = kinds[kindId];
   const result = useRemote<Collection<DomainRecord>>(`/records/${kindId}`, token, revision);
   const [search, setSearch] = useState(''); const [status, setStatus] = useState('');
   const [selected, setSelected] = useState<DomainRecord | 'new' | null>(null);
   const [notice, setNotice] = useState('');
+  useEffect(()=>{if(createIntent>0)setSelected('new');},[createIntent]);
   const items = result.data?.items ?? [];
   const filterStates = Array.from(new Set([...states, ...items.map(item => item.status)]));
   const filtered = useMemo(() => items.filter(item => (!status || item.status === status) && (!search || `${item.title} ${item.id} ${JSON.stringify(item.data)}`.toLowerCase().includes(search.toLowerCase()))), [items, search, status]);
@@ -28,7 +29,7 @@ export default function Records({ kindId, token, user, revision, changed }: Prop
   </>;
 }
 interface EditorProps { kind: Kind; record?: DomainRecord; token: string; user: User; close: () => void; onSaved: (message: string) => void }
-function RecordEditor({ kind, record, token, user, close, onSaved }: EditorProps) {
+export function RecordEditor({ kind, record, token, user, close, onSaved }: EditorProps) {
   const draftKey = `sl-airspace-draft:${user.organisation_id}:${user.id}:${kind.id}:${record?.id ?? 'new'}:${record?.version ?? 'new'}`;
   const savedDraft = (() => { try { const saved = sessionStorage.getItem(draftKey); return saved ? JSON.parse(saved) as { title: string; values: Record<string, string>; extra: string } : null; } catch { return null; } })();
   const [title, setTitle] = useState(savedDraft?.title ?? record?.title ?? '');
@@ -73,7 +74,7 @@ function RecordEditor({ kind, record, token, user, close, onSaved }: EditorProps
     {kind.id !== 'alert' ? <form onSubmit={save} className="record-form"><label>Title<input required maxLength={240} value={title} disabled={!canWrite} onChange={event => { setTitle(event.target.value); preserve({ title: event.target.value }); }} /></label>
       <div className="field-grid">{kind.fields.map(field => <label key={field.key} className={field.type === 'textarea' || field.type === 'json' ? 'wide' : ''}>{field.label}{field.required ? ' *' : ''}{field.type === 'textarea' || field.type === 'json' ? <textarea rows={field.key === 'geometry' ? 6 : 3} required={field.required} disabled={!canWrite} value={values[field.key] ?? ''} onChange={event => { const next = { ...values, [field.key]: event.target.value }; setValues(next); preserve({ values: next }); }} /> : field.type === 'select' ? <select required={field.required} disabled={!canWrite} value={values[field.key] ?? ''} onChange={event => { const next = { ...values, [field.key]: event.target.value }; setValues(next); preserve({ values: next }); }}><option value="">Not recorded</option>{field.options?.map(option => <option key={option}>{option}</option>)}</select> : <input type={field.type === 'number' ? 'number' : field.type === 'date' ? 'date' : 'text'} step="any" required={field.required} disabled={!canWrite || (field.key === 'checksum' && Boolean(record?.data.attachment))} value={values[field.key] ?? ''} onChange={event => { const next = { ...values, [field.key]: event.target.value }; setValues(next); preserve({ values: next }); }} />}{field.help ? <span className="field-help">{field.help}</span> : null}</label>)}</div>
       <fieldset className="reviewer-field"><legend>Assigned independent reviewers</legend>{users.data?.items.filter(item => item.role === 'reviewer').length ? users.data.items.filter(item => item.role === 'reviewer').map(item => <label className="checkbox-row" key={item.id}><input type="checkbox" disabled={!canWrite || item.id === record?.created_by} checked={reviewerIds.includes(item.id)} onChange={event => setReviewerIds(previous => event.target.checked ? [...previous, item.id] : previous.filter(id => id !== item.id))} /><span>{item.email}<small>{item.id === record?.created_by ? 'Record creator — cannot approve this record' : item.id}</small></span></label>) : <p className="small muted">No active reviewer accounts returned. Your administrator must provision accountable reviewers.</p>}</fieldset>
-      <details className="advanced"><summary>Additional structured fields</summary><p className="small muted">JSON object for additional domain fields. Named form fields take precedence. All changes are validated by the server.</p><label><span className="sr-only">Additional data JSON</span><textarea className="code-input" rows={5} value={extra} disabled={!canWrite} onChange={event => { setExtra(event.target.value); preserve({ extra: event.target.value }); }} /></label></details>
+      <details className="advanced"><summary>Additional structured fields</summary><p className="small muted">JSON object for additional domain fields. Named form fields take precedence. All changes are validated by the server.</p>{kind.id==='aircraft'?<p className="small muted">Imported utilisation and maintenance_completions must retain evidence_ref and the exact evidence_version of each source. Unknown revisions stay missing and block reservation/dispatch. Controlled work-order completion captures the actual evidence revision on the server.</p>:null}<label><span className="sr-only">Additional data JSON</span><textarea className="code-input" rows={5} value={extra} disabled={!canWrite} onChange={event => { setExtra(event.target.value); preserve({ extra: event.target.value }); }} /></label></details>
       {canWrite ? <div className="form-actions"><span className="small muted">* Required · Unsaved work retained for this session</span><button className="primary" disabled={busy}>{busy ? 'Saving…' : record ? 'Save revision' : 'Create draft'}</button></div> : null}
     </form> : null}
     {record && kind.id === 'evidence' ? <EvidenceAttachment record={record} token={token} user={user} unsaved={hasChanges} onSaved={onSaved} /> : null}

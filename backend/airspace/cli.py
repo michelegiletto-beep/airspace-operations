@@ -9,7 +9,7 @@ import sqlite3
 import sys
 import time
 from pathlib import Path
-from .storage import local_store, Store, metadata, now, organisations
+from .storage import local_store, Store, metadata, now, organisations, CURRENT_SCHEMA_VERSION
 
 
 def main():
@@ -61,9 +61,9 @@ def main():
     store = local_store()
     store.migrate()
     if args.command == "migrate":
-        print(json.dumps({"schema_version": 1, "status": "Applied"}))
+        print(json.dumps({"schema_version": CURRENT_SCHEMA_VERSION, "status": "Applied"}))
     elif args.command == "check":
-        print(json.dumps({"python": sys.version.split()[0], "database_profile": "SQLite portability" if store.url.startswith("sqlite") else "PostgreSQL", "schema_version": 1, "docker": bool(shutil.which("docker")), "pg_dump": bool(shutil.which("pg_dump")), "runtime": str(Path(os.getenv("AIRSPACE_RUNTIME", "runtime")).resolve()), "operational_acceptance": False}, indent=2))
+        print(json.dumps({"python": sys.version.split()[0], "database_profile": "SQLite portability" if store.url.startswith("sqlite") else "PostgreSQL", "schema_version": CURRENT_SCHEMA_VERSION, "docker": bool(shutil.which("docker")), "pg_dump": bool(shutil.which("pg_dump")), "runtime": str(Path(os.getenv("AIRSPACE_RUNTIME", "runtime")).resolve()), "operational_acceptance": False}, indent=2))
     elif args.command == "user-add":
         from .identity import provision
         password = os.environ.get("AIRSPACE_INITIAL_PASSWORD") or getpass.getpass("New password (at least 12 characters): ")

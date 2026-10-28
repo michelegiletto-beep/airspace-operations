@@ -22,6 +22,7 @@ from .identity import authenticate, login, require_role
 from .storage import (Store, audit, canonical, identifier, idempotency, jobs,
                       local_store, now, outbox, records, sessions, users, versions)
 from .workflows import KINDS, check_transition, missing_evidence
+from .domain_records import PROTECTED_KINDS, normalise_domain_record, require_domain_review_evidence
 
 ROOT = Path(__file__).resolve().parents[2]
 WRITERS = {"administrator", "regulatory", "reviewer", "planner", "pilot", "fleet_manager", "incident_coordinator", "analyst"}
@@ -34,6 +35,9 @@ KIND_ROLES = {
     "procedure": {"regulatory", "reviewer"}, "commercial": {"analyst"},
     "mission": {"planner", "pilot"}, "schedule": {"planner"},
     "telemetry": set(), "alert": set(), "approval": set(), "connector": {"administrator"},
+    "maintenance_program": {"fleet_manager", "reviewer"}, "maintenance_work_order": {"fleet_manager"},
+    "country_review": {"regulatory", "reviewer"}, "country_instrument": {"regulatory", "reviewer"},
+    "agent_workflow": set(), "pilot_acknowledgement": set(), "dispatch_release": set(),
 }
 
 
@@ -234,7 +238,11 @@ def create_app(store: Store | None = None, serve_frontend=True):
                         raise HTTPException(409, "Idempotency key was already used for different input")
                     return prior["response"]
             check_references(conn, tenant, payload.data)
+            if kind == "aircraft":
+                from .sharing import validate_aircraft_identity
+                validate_aircraft_identity(conn, tenant, payload.data)
             row = dict(id=identifier(), organisation_id=tenant, kind=kind, title=payload.title.strip(), status="Draft", data={**payload.data, "_prepared_by": user["id"]}, version=1, created_by=user["id"], created_at=now(), updated_at=now())
+            row = normalise_domain_record(row)
             conn.execute(records.insert().values(**row))
             store.snapshot(conn, row)
             store.append_audit(conn, tenant, user["id"], f"{kind}.created", {"record_id": row["id"], "version": 1, "snapshot_sha256": hashlib.sha256(canonical(row).encode()).hexdigest()})
@@ -255,8 +263,19 @@ def create_app(store: Store | None = None, serve_frontend=True):
         can_write(user, kind)
         tenant = user["organisation_id"]
         with store.engine.begin() as conn:
+            if kind == "aircraft":
+                from .sharing import lock_aircraft_mutation
+                lock_aircraft_mutation(conn, tenant, item_id)
+            elif kind in {"maintenance_program", "evidence"}:
+                from .fleet import lock_maintenance_dependency_mutation
+                lock_maintenance_dependency_mutation(conn, tenant, item_id)
             lock_tenant(conn, tenant)
             row = row_get(conn, tenant, kind, item_id)
+            if kind == "aircraft":
+                from .sharing import _lock_resource
+                _lock_resource(conn, tenant, item_id)
+            if kind == "maintenance_work_order" and row["status"] != "Draft":
+                raise HTTPException(422, "Use the controlled maintenance work-order lifecycle")
             if row["version"] != payload.expected_version:
                 raise HTTPException(409, "Record changed; reload before saving")
             if row["status"] in {"Submitted", "Superseded", "Expired"}:
@@ -265,6 +284,9 @@ def create_app(store: Store | None = None, serve_frontend=True):
                 raise HTTPException(409, "Reserved schedules require explicit cancellation; cancelled schedules require a new proposal")
             if payload.data is not None:
                 check_references(conn, tenant, payload.data)
+                if kind == "aircraft":
+                    from .sharing import validate_aircraft_identity
+                    validate_aircraft_identity(conn, tenant, payload.data, current_row=row)
                 if kind == "evidence" and row["data"].get("attachment") and any(payload.data.get(key) != row["data"].get(key) for key in ("attachment", "checksum")):
                     raise HTTPException(422, "Upload-bound attachment integrity metadata cannot be changed through record editing")
                 if kind == "evidence" and payload.data.get("attachment") and not row["data"].get("attachment"):
@@ -277,11 +299,19 @@ def create_app(store: Store | None = None, serve_frontend=True):
             if payload.title is not None:
                 row["title"] = payload.title.strip()
             row.update(version=row["version"] + 1, updated_at=now(), status="Draft")
+            row = normalise_domain_record(row)
             result = conn.execute(update(records).where(records.c.id == item_id, records.c.organisation_id == tenant, records.c.version == payload.expected_version).values(**row))
             if result.rowcount != 1:
                 raise HTTPException(409, "Concurrent update rejected")
             store.snapshot(conn, row)
             store.append_audit(conn, tenant, user["id"], f"{kind}.revised", {"record_id": item_id, "version": row["version"], "approval_reset": True})
+            from .dispatch import suspend_dispatch_dependencies, suspend_dispatch_for_aircraft
+            suspend_dispatch_dependencies(conn, store, tenant, item_id, user, "A bound record was revised")
+            if kind == "aircraft":
+                suspend_dispatch_for_aircraft(conn, store, tenant, item_id, user, "Owner aircraft readiness was revised")
+            elif kind in {"maintenance_program", "evidence"}:
+                from .fleet import suspend_maintenance_dependants
+                suspend_maintenance_dependants(conn, store, tenant, item_id, user, "Owner maintenance evidence was revised")
             # Material revisions produce an explicit impact task; never silently rewrite dependent records.
             if kind in {"aircraft", "route", "evidence", "procedure", "permission", "obligation"}:
                 task = dict(id=identifier(), organisation_id=tenant, kind="review_task", title=f"Review impact: {row['title']}", status="Draft", data={"changed_record_id": item_id, "changed_version": row["version"], "owner": user["id"], "reason": "Controlled input changed; dependent cases and schedules require assessment"}, version=1, created_by=user["id"], created_at=now(), updated_at=now())
@@ -292,6 +322,8 @@ def create_app(store: Store | None = None, serve_frontend=True):
     @app.post("/api/v1/records/{kind}/{item_id}/transition")
     def transition(kind: str, item_id: str, payload: Transition, user=Depends(current)):
         kind_check(kind)
+        if kind in PROTECTED_KINDS or kind == "maintenance_work_order":
+            raise HTTPException(422, "Use the dedicated accountable workflow for this record kind")
         if kind == "schedule":
             raise HTTPException(422, "Use the independently verified schedule reservation workflow")
         if payload.state == "Approved":
@@ -300,11 +332,22 @@ def create_app(store: Store | None = None, serve_frontend=True):
             can_write(user, kind)
         tenant = user["organisation_id"]
         with store.engine.begin() as conn:
+            if kind == "aircraft":
+                from .sharing import lock_aircraft_mutation
+                lock_aircraft_mutation(conn, tenant, item_id)
+            elif kind in {"maintenance_program", "evidence"}:
+                from .fleet import lock_maintenance_dependency_mutation
+                lock_maintenance_dependency_mutation(conn, tenant, item_id)
             lock_tenant(conn, tenant)
             row = row_get(conn, tenant, kind, item_id)
             if row["version"] != payload.expected_version:
                 raise HTTPException(409, "Record changed; reload before deciding")
+            if kind == "aircraft":
+                from .sharing import _lock_resource
+                _lock_resource(conn, tenant, item_id)
             check_transition(row, user, payload.state, payload.reason, payload.evidence_ids)
+            if payload.state == "Approved":
+                require_domain_review_evidence(conn, row, payload.evidence_ids)
             for evidence_id in payload.evidence_ids:
                 evidence = row_get(conn, tenant, "evidence", evidence_id)
                 if missing_evidence(evidence):
@@ -322,11 +365,19 @@ def create_app(store: Store | None = None, serve_frontend=True):
                 if payload.state in {"Draft", "Missing Evidence", "Under Review", "Rejected"}:
                     row["data"] = {k: v for k, v in row["data"].items() if k != "_approvals"}
             row.update(version=row["version"] + 1, updated_at=now())
+            row = normalise_domain_record(row)
             result = conn.execute(update(records).where(records.c.id == item_id, records.c.organisation_id == tenant, records.c.version == payload.expected_version).values(**row))
             if result.rowcount != 1:
                 raise HTTPException(409, "Concurrent decision rejected")
             store.snapshot(conn, row)
             store.append_audit(conn, tenant, user["id"], f"{kind}.transition", {"record_id": item_id, "requested_state": payload.state, "recorded_state": row["status"], "version": row["version"], "reason": payload.reason, "evidence_ids": payload.evidence_ids, "meaning": "Recorded internal review; authority instruments require their separate issuer evidence"})
+            from .dispatch import suspend_dispatch_dependencies, suspend_dispatch_for_aircraft
+            suspend_dispatch_dependencies(conn, store, tenant, item_id, user, "A bound decision changed")
+            if kind == "aircraft":
+                suspend_dispatch_for_aircraft(conn, store, tenant, item_id, user, "Owner aircraft decision changed")
+            elif kind in {"maintenance_program", "evidence"}:
+                from .fleet import suspend_maintenance_dependants
+                suspend_maintenance_dependants(conn, store, tenant, item_id, user, "Owner maintenance evidence decision changed")
         return row
 
     @app.get("/api/v1/records/{kind}/{item_id}/history")
@@ -413,6 +464,7 @@ def create_app(store: Store | None = None, serve_frontend=True):
                 raise HTTPException(422, "Deadline must be a future timezone-aware timestamp")
         row = dict(id=identifier(), organisation_id=user["organisation_id"], kind=payload.kind, actor_id=user["id"], state="Queued", payload=payload.payload, result=None, attempts=0, lease_until=None, deadline=payload.deadline, error=None, version=1, created_at=now())
         with store.engine.begin() as conn:
+            lock_tenant(conn, user["organisation_id"])
             conn.execute(jobs.insert().values(**row))
             store.append_audit(conn, user["organisation_id"], user["id"], "job.created", {"job_id": row["id"], "kind": row["kind"]})
         return row
@@ -431,9 +483,12 @@ def create_app(store: Store | None = None, serve_frontend=True):
             raise HTTPException(404, "Unknown job action")
         before, after = allowed[action]
         with store.engine.begin() as conn:
+            lock_tenant(conn, user["organisation_id"])
             job = conn.execute(select(jobs).where(jobs.c.id == job_id, jobs.c.organisation_id == user["organisation_id"])).mappings().first()
             if not job:
                 raise HTTPException(409, "Job unavailable or state changed")
+            if job["kind"] == "agent_orchestration":
+                raise HTTPException(422, "Use the agent-workflow control so model execution and durable state pause together")
             from .worker import TOOL_ROLES
             require_role(user, TOOL_ROLES.get(job["kind"], set()))
             if action == "resume" and job["attempts"] >= 3:
@@ -503,7 +558,12 @@ def create_app(store: Store | None = None, serve_frontend=True):
     def contracts(user=Depends(current)):
         from .operations import RiskRequest, SiteScreenRequest, TelemetryRequest, IncidentRequest, EconomicsRequest, DispatchRequest
         from .scheduler import ScheduleRequest
-        return {"schema_version": "1.0", "contracts": {model.__name__: model.model_json_schema() for model in (ScheduleRequest, RiskRequest, SiteScreenRequest, TelemetryRequest, IncidentRequest, EconomicsRequest, DispatchRequest)}, "actor_id": "Server replaces actor_id with authenticated user"}
+        from .fleet import MaintenanceAssessment, MaintenancePlanRequest, MaintenanceProgram, MaintenanceWorkOrder, SavedMaintenanceAssessment, WorkOrderControl
+        from .europe import CrossBorderPlan, CountryReview, CountryInstrument
+        from .sharing import SharingTerms, SharingDecision
+        from .dispatch import DispatchDecision
+        from .orchestration import WorkflowRequest
+        return {"schema_version": "2.0", "contracts": {model.__name__: model.model_json_schema() for model in (ScheduleRequest, RiskRequest, SiteScreenRequest, TelemetryRequest, IncidentRequest, EconomicsRequest, DispatchRequest, MaintenanceAssessment, MaintenancePlanRequest, MaintenanceProgram, MaintenanceWorkOrder, SavedMaintenanceAssessment, WorkOrderControl, CrossBorderPlan, CountryReview, CountryInstrument, SharingTerms, SharingDecision, DispatchDecision, WorkflowRequest)}, "actor_id": "Server replaces actor_id with authenticated user"}
 
     @app.post("/api/v1/site/screen")
     def site_screen(payload: dict, user=Depends(current)):
@@ -529,6 +589,8 @@ def create_app(store: Store | None = None, serve_frontend=True):
     install_evidence_routes(app, store, current)
     from .monitoring import install_monitoring_routes
     install_monitoring_routes(app, store, current)
+    from .coordination_api import install_coordination_routes
+    install_coordination_routes(app, store, current)
     if serve_frontend and (ROOT / "frontend" / "dist").exists():
         app.mount("/", StaticFiles(directory=ROOT / "frontend" / "dist", html=True), name="interface")
     return app

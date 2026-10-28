@@ -1,0 +1,64 @@
+{
+  "scope": "Actual local HTTP static-asset integration and byte identity; not a browser GPU or aviation test",
+  "checked_at": "2026-10-28T10:29:14.116529+00:00",
+  "source_package_version": null,
+  "files": [
+    {
+      "path": "/vendor/systemlab-companion/mascot-renderer.mjs",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "bytes": 16003,
+      "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b",
+      "matches_owned_original": true
+    },
+    {
+      "path": "/vendor/systemlab-companion/motion-core.mjs",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "bytes": 2487,
+      "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb",
+      "matches_owned_original": true
+    },
+    {
+      "path": "/vendor/systemlab-companion/catalog.mjs",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "bytes": 53579,
+      "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c",
+      "matches_owned_original": true
+    },
+    {
+      "path": "/vendor/systemlab-companion/assets/originals/mascotte_01_indaco.png",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1274382,
+      "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a",
+      "matches_owned_original": true
+    },
+    {
+      "path": "/vendor/systemlab-companion/assets/originals/mascotte_06_coral_compact.png",
+      "status": 200,
+      "content_type": "image/png",
+      "bytes": 1138958,
+      "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284",
+      "matches_owned_original": true
+    }
+  ],
+  "installation_directory_identifier": "1.1.25-rc.31-91768008c6",
+  "source_package_version_observations": [
+    {
+      "version": "1.1.25-rc.50",
+      "observer": "Release owner",
+      "observed_at": null,
+      "note": "Earlier package.json observation reported by the release owner; exact observation timestamp was not recorded."
+    },
+    {
+      "version": "1.1.25-rc.51",
+      "observer": "Frontend asset review",
+      "observed_at": "2026-10-28T10:33:35.837094+00:00",
+      "package_metadata_sha256": "02a5ba9fd219d0f9f01b2829138af3ece607b5d34bbc1de9d38927fd30a9d2ab",
+      "note": "Later read of only the package version; the five source files still matched the frozen copied-file hashes."
+    }
+  ],
+  "source_package_version_status": "Not verified synchronously at copy time. The source installation was updating in place; exact copied-file hashes are the primary identity."
+}

@@ -1,0 +1,7 @@
+{
+  "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "verified_files": 11,
+  "bytes": 4079448540,
+  "seconds": 15.995472300041001,
+  "scope": "Actual local controller file identities verified; model inference evidence recorded separately"
+}

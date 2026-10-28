@@ -91,6 +91,15 @@ def approve_schedule(store, schedule_id, expected_version, user, reason):
         raise HTTPException(403, "Accountable assigned reviewer required")
     tenant = user["organisation_id"]
     with store.engine.begin() as conn:
+        initial = conn.execute(select(records).where(records.c.id == schedule_id, records.c.organisation_id == tenant, records.c.kind == "schedule")).mappings().first()
+        if initial is None:
+            raise HTTPException(404, "Schedule not found")
+        if initial["version"] != expected_version or initial["status"] not in {"Draft", "Under Review"}:
+            raise HTTPException(409, "Schedule changed or already reserved")
+        if user["id"] in {initial["created_by"], initial["data"].get("_prepared_by")} or user["id"] not in initial["data"].get("reviewer_ids", []):
+            raise HTTPException(403, "Assigned independent reviewer required")
+        from .sharing import lock_physical_aircraft
+        lock_physical_aircraft(conn, tenant, ScheduleRequest.model_validate(initial["data"]["input"]), initial["data"]["result"])
         conn.execute(update(organisations).where(organisations.c.id == tenant).values(audit_seq=organisations.c.audit_seq))
         found = conn.execute(select(records).where(records.c.id == schedule_id, records.c.organisation_id == tenant, records.c.kind == "schedule")).mappings().first()
         if not found:
@@ -124,6 +133,10 @@ def approve_schedule(store, schedule_id, expected_version, user, reason):
             store.append_audit(conn, tenant, user["id"], "schedule.reviewed", {"record_id": schedule_id, "version": row["version"], "input_snapshot": result["input_snapshot"], "required_reviewers": required_count})
             return row
         _validate_shared_budgets(conn, tenant, request, result, row["data"].get("input_record_versions", {}))
+        from .fleet import validate_fleet_for_schedule
+        from .sharing import reserve_physical_aircraft
+        validate_fleet_for_schedule(conn, tenant, request, result)
+        physical_reservations = reserve_physical_aircraft(conn, tenant, request, result, schedule_id)
         crafts = {a.id: a for a in request.aircraft}
         sites = {s.id: s for s in request.sites}
         for assignment in result["assignments"]:
@@ -165,6 +178,8 @@ def cancel_schedule(store, schedule_id, expected_version, user, reason):
         raise HTTPException(422, "Cancellation rationale is required")
     tenant = user["organisation_id"]
     with store.engine.begin() as conn:
+        from .sharing import lock_schedule_parties
+        lock_schedule_parties(conn, tenant, schedule_id)
         conn.execute(update(organisations).where(organisations.c.id == tenant).values(audit_seq=organisations.c.audit_seq))
         principal = conn.execute(select(users).where(users.c.id == user["id"], users.c.organisation_id == tenant, users.c.disabled == 0)).mappings().first()
         if not principal or principal["role"] != user["role"]:
@@ -178,7 +193,9 @@ def cancel_schedule(store, schedule_id, expected_version, user, reason):
         if user["role"] == "reviewer" and (user["id"] not in row["data"].get("reviewer_ids", []) or user["id"] in {row["created_by"], row["data"].get("_prepared_by")}):
             raise HTTPException(403, "Reviewer must be assigned and independent of schedule preparation")
         released = conn.execute(update(reservations).where(reservations.c.organisation_id == tenant, reservations.c.schedule_id == schedule_id, reservations.c.state == "Reserved").values(state="Released")).rowcount
-        decision = {"actor_id": user["id"], "at": now(), "reason": reason.strip(), "released_reservations": released,
+        from .sharing import release_physical_reservations
+        physical_released = release_physical_reservations(conn, tenant, schedule_id)
+        decision = {"actor_id": user["id"], "at": now(), "reason": reason.strip(), "released_reservations": released, "released_physical_aircraft": physical_released,
                     "meaning": "Internal reservation cancellation only; no aircraft command, provider withdrawal or external notification"}
         row.update(status="Cancelled", version=row["version"] + 1, updated_at=now(), data={**row["data"], "_cancellation": decision})
         changed = conn.execute(update(records).where(records.c.id == schedule_id, records.c.organisation_id == tenant, records.c.version == expected_version).values(**row))
@@ -186,4 +203,6 @@ def cancel_schedule(store, schedule_id, expected_version, user, reason):
             raise HTTPException(409, "Concurrent schedule cancellation rejected")
         store.snapshot(conn, row)
         store.append_audit(conn, tenant, user["id"], "schedule.cancelled", {"record_id": schedule_id, "version": row["version"], **decision})
+        from .dispatch import suspend_dispatch_for_schedule
+        suspend_dispatch_for_schedule(conn, store, tenant, schedule_id, user, "Internal resource reservation was cancelled")
     return row

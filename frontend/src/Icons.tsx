@@ -1,0 +1,38 @@
+import type { CSSProperties } from 'react';
+const paths: Record<string, string> = {
+ operations: 'M3 11h18M12 3v18M5.5 5.5l13 13M18.5 5.5l-13 13M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0',
+ scheduling: 'M5 3v4M19 3v4M3 10h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2M7 14h3M14 14h3M7 18h3',
+ airspace: 'M9 4 3 6v15l6-3 6 3 6-3V3l-6 3-6-2M9 4v14M15 6v15',
+ authorisations: 'M14 3H5v18h14V8l-5-5M14 3v5h5M8 12h8M8 16h5',
+ safety: 'M12 3 3 6v6c0 4 4 7 9 9 5-2 9-5 9-9V6l-9-3M8 12l3 3 5-6',
+ library: 'M3 4h6a4 4 0 0 1 3 2 4 4 0 0 1 3-2h6v15h-6a4 4 0 0 0-3 2 4 4 0 0 0-3-2H3V4M12 6v15',
+ incidents: 'm12 3 10 18H2L12 3M12 9v5M12 17v.5',
+ fleet: 'M3 8h18M5 8l2-4h10l2 4M3 8v9h18V8M6 17v3M18 17v3M7 12h2M15 12h2',
+ crossborder: 'M3 4v16M21 4v16M3 6h5l4 4 4-4h5M3 17h5l4-4 4 4h5M9 8l6 6',
+ agents: 'M12 3v3M8 3h8M5 8h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2M8 12v2M16 12v2M8 17h8',
+ commercial: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
+ administration: 'M4 7h16M4 17h16M8 3v8M16 13v8',
+ arrow: 'M5 12h14M14 7l5 5-5 5',
+ plus: 'M12 5v14M5 12h14',
+ refresh: 'M20 7v5h-5M4 17v-5h5M6 7a7 7 0 0 1 12-1l2 2M18 17a7 7 0 0 1-12 1l-2-2',
+ chevron: 'm9 5 7 7-7 7',
+ location: 'M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0M9 10a3 3 0 1 0 6 0 3 3 0 0 0-6 0',
+ route: 'M6 6h10a4 4 0 0 1 0 8H8a4 4 0 0 0 0 8M3 6a3 3 0 1 0 6 0 3 3 0 0 0-6 0M8 19v3',
+ clock: 'M12 7v5l4 2M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0',
+ people: 'M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M1 21v-3a5 5 0 0 1 5-4h4a5 5 0 0 1 5 4v3M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 5 5v2',
+ lock: 'M6 11h12v10H6V11M8 11V7a4 4 0 0 1 8 0v4M12 15v3',
+ check: 'm5 12 4 4L19 6',
+ maintenance: 'M14 3a6 6 0 0 0-6 8l-5 6a3 3 0 0 0 4 4l6-5a6 6 0 0 0 8-6l-4 2-4-4 2-5',
+ close: 'm6 6 12 12M18 6 6 18',
+ expand: 'M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5',
+ link: 'm8 16 8-8M9 7l2-2a5 5 0 0 1 7 7l-2 2M15 17l-2 2a5 5 0 0 1-7-7l2-2',
+ download: 'M12 3v12M7 10l5 5 5-5M4 17v4h16v-4',
+ play: 'm8 4 12 8-12 8V4',
+ pause: 'M8 4v16M16 4v16',
+ layers: 'm12 3 10 5-10 5L2 8l10-5M3 12l9 5 9-5M3 16l9 5 9-5',
+ document: 'M5 3h10l4 4v14H5V3M14 3v5h5M8 12h8M8 16h8',
+ menu: 'M4 6h16M4 12h16M4 18h16',
+};
+export function Icon({ name, size = 18, style }: { name: string; size?: number; style?: CSSProperties }) {
+ return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round" style={style}><path d={paths[name] ?? paths.document}/></svg>;
+}

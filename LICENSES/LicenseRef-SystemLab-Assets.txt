@@ -1,0 +1,5 @@
+SYSTEM LABS CHARACTER ASSETS
+
+The owned companion imagery under frontend/public/mascots is distributed with this application and official publication material at the rights owner's express direction. Copyright and all other rights remain reserved to the original rights owner. The Apache-2.0 licence for newly authored project code does not license these images as standalone character assets, training material or reusable third-party mascots.
+
+The asset provenance and exact source-file hashes are recorded in frontend/public/mascots/provenance.json and RIGHTS.md. This notice does not relicense any existing System Labs software, model, source document or character asset.

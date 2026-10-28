@@ -19,7 +19,7 @@ for file,rel in source_files():
         files.append({'path':'sources/corpus.json.gz','local_path':str(target),'bytes':target.stat().st_size,'binary':True})
     elif rel.parts[:2]==('models','runs') and file.stat().st_size>100000:
         experiments.append((file,rel))
-    else:files.append({'path':rel.as_posix(),'local_path':str(file),'bytes':file.stat().st_size,'binary':file.suffix=='.safetensors'})
+    else:files.append({'path':rel.as_posix(),'local_path':str(file),'bytes':file.stat().st_size,'binary':file.suffix.lower() in {'.safetensors','.png','.jpg','.jpeg','.webp','.zip','.gz','.ico','.woff','.woff2'} or b'\x00' in data[:8192]})
 bundle=out/'experiment-artifacts.zip'
 with zipfile.ZipFile(bundle,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
     for file,rel in experiments:archive.write(file,Path(*rel.parts[1:]).as_posix())

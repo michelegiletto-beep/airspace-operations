@@ -1,0 +1,845 @@
+{
+  "schema_version": "1.0",
+  "prepared_at": "2026-10-28T10:56:18.016270+00:00",
+  "release_state": "Prepared",
+  "mode": "Recorded software evidence",
+  "live_inference": false,
+  "live_flights": false,
+  "operational_acceptance": false,
+  "first_experiment": {
+    "elapsed_seconds": 204.91,
+    "steps": 5,
+    "state": "Needs Review",
+    "source": "data/first-causal-run.json"
+  },
+  "comparison": {
+    "query_count": 2,
+    "trials": [
+      {
+        "mode": "native",
+        "question": "What source provisions describe the U-space UAS flight authorisation service?",
+        "source_target": "ERULES-1963177438-21053",
+        "operation_date": "2026-10-27",
+        "seconds": 177.396948300011,
+        "state": "Needs Review",
+        "target_section_retrieved": true,
+        "citation_count": 12,
+        "legal_conclusion_generated": false,
+        "review_gate_preserved": true,
+        "record_order": 1,
+        "model_calls_with_generation": 0,
+        "completed_tools": [
+          "regulatory.retrieve",
+          "neural.rerank",
+          "neural.student",
+          "artifact.assemble",
+          "review.checkpoint"
+        ]
+      },
+      {
+        "mode": "local_causal",
+        "question": "What source provisions describe the U-space UAS flight authorisation service?",
+        "source_target": "ERULES-1963177438-21053",
+        "operation_date": "2026-10-27",
+        "seconds": 66.74146369996015,
+        "state": "Needs Review",
+        "target_section_retrieved": true,
+        "citation_count": 12,
+        "legal_conclusion_generated": false,
+        "review_gate_preserved": true,
+        "record_order": 2,
+        "model_calls_with_generation": 5,
+        "completed_tools": [
+          "regulatory.retrieve",
+          "neural.rerank",
+          "neural.student",
+          "artifact.assemble",
+          "review.checkpoint"
+        ]
+      },
+      {
+        "mode": "native",
+        "question": "Which recorded Article 13 provisions concern cross-border UAS operations?",
+        "source_target": "ERULES-1963177438-15488",
+        "operation_date": "2026-10-27",
+        "seconds": 1.6402298999601044,
+        "state": "Needs Review",
+        "target_section_retrieved": true,
+        "citation_count": 12,
+        "legal_conclusion_generated": false,
+        "review_gate_preserved": true,
+        "record_order": 3,
+        "model_calls_with_generation": 0,
+        "completed_tools": [
+          "regulatory.retrieve",
+          "neural.rerank",
+          "neural.student",
+          "artifact.assemble",
+          "review.checkpoint"
+        ]
+      },
+      {
+        "mode": "local_causal",
+        "question": "Which recorded Article 13 provisions concern cross-border UAS operations?",
+        "source_target": "ERULES-1963177438-15488",
+        "operation_date": "2026-10-27",
+        "seconds": 50.76870640000561,
+        "state": "Needs Review",
+        "target_section_retrieved": true,
+        "citation_count": 12,
+        "legal_conclusion_generated": false,
+        "review_gate_preserved": true,
+        "record_order": 4,
+        "model_calls_with_generation": 5,
+        "completed_tools": [
+          "regulatory.retrieve",
+          "neural.rerank",
+          "neural.student",
+          "artifact.assemble",
+          "review.checkpoint"
+        ]
+      }
+    ],
+    "limitations": [
+      "Tiny source-title-grounded research sample; not representative operator queries",
+      "Target-section matching does not establish legal-answer correctness",
+      "No comparative benefit is assumed; model failures and latency are retained",
+      "Experimental student remains unpromoted regardless of orchestration success",
+      "Run order and cache reuse confound timings; no speed benefit is established."
+    ],
+    "source": "data/causal-comparison.json"
+  },
+  "ui_workflow": {
+    "id": "d3a4f85e-3c01-4803-bb27-8ffcc23652b9",
+    "question": "What source provisions describe the U-space UAS flight authorisation service?",
+    "state": "Needs Review",
+    "request": {
+      "task_kind": "regulatory_research",
+      "objective": "What source provisions describe the U-space UAS flight authorisation service?",
+      "jurisdiction": "EU",
+      "operation_date": "2026-10-27",
+      "context_record_ids": [],
+      "methodology": null,
+      "include_experimental_student": true,
+      "controller_mode": "local_causal",
+      "budget": {
+        "max_steps": 8,
+        "max_model_calls": 8,
+        "max_wall_seconds": 900,
+        "model_timeout_seconds": 90,
+        "tool_timeout_seconds": 180,
+        "max_retries": 1
+      }
+    },
+    "trace_start": "2026-10-28T10:01:24.400858+00:00",
+    "trace_end": "2026-10-28T10:06:30.194794+00:00",
+    "trace_span_seconds": 305.793936,
+    "trace": [
+      {
+        "sequence": 1,
+        "tool": "regulatory.retrieve",
+        "specialist": "Regulatory specialist",
+        "state": "Completed",
+        "proposal": {
+          "tool": "regulatory.retrieve",
+          "reason_code": "find_source_evidence"
+        },
+        "model": {
+          "mode": "local_causal",
+          "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "generative_model_used": true,
+          "prompt_checksum": "c0e09645f4976eeedcdd91060d4b8ae560a0da2f5f240f713f4e5cb6ead8903e",
+          "response_checksum": "baa4b023eb154d41027a2ce65f39f7d0484c7465a2b7b6ac96414da6fe76978d",
+          "input_tokens": 189,
+          "output_tokens": 19,
+          "seconds": 17.306398899992928,
+          "remote_code": false,
+          "hosted_provider": false,
+          "thinking_output_requested": false
+        },
+        "input_snapshot": "9793b904b1f205f3c72575f3bbd0de89ed38d4013f6dff4278aae4da85b6283c",
+        "started_at": "2026-10-28T10:01:24.400858+00:00",
+        "finished_at": "2026-10-28T10:05:37.079287+00:00",
+        "artifact_id": "dc884fbe-183b-4b1f-9850-54c717f8dfbe",
+        "step_seconds": 252.678429
+      },
+      {
+        "sequence": 2,
+        "tool": "neural.rerank",
+        "specialist": "Neural evidence specialist",
+        "state": "Completed",
+        "proposal": {
+          "tool": "neural.rerank",
+          "reason_code": "rank_evidence"
+        },
+        "model": {
+          "mode": "local_causal",
+          "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "generative_model_used": true,
+          "prompt_checksum": "698312e7ee6f10279bce1b3816ba6bd15748a6095b6c4bdee748b73260d239ea",
+          "response_checksum": "f2858c25de3f7a7d191faedbab3542a42ad8e913f92325af80a2c8f2c45782c5",
+          "input_tokens": 242,
+          "output_tokens": 20,
+          "seconds": 10.707264300028328,
+          "remote_code": false,
+          "hosted_provider": false,
+          "thinking_output_requested": false
+        },
+        "input_snapshot": "ec1a2340db022185f1dbbc04bb07ad7bbd749bdfac8a38399e349002219f1b82",
+        "started_at": "2026-10-28T10:05:39.111191+00:00",
+        "finished_at": "2026-10-28T10:05:50.431388+00:00",
+        "artifact_id": "6eec4fa6-34d3-4d84-8fac-597f23b674ee",
+        "step_seconds": 11.320197
+      },
+      {
+        "sequence": 3,
+        "tool": "neural.student",
+        "specialist": "Experimental model specialist",
+        "state": "Completed",
+        "proposal": {
+          "tool": "neural.student",
+          "reason_code": "inspect_experimental_signal"
+        },
+        "model": {
+          "mode": "local_causal",
+          "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "generative_model_used": true,
+          "prompt_checksum": "f50c5d722938cf22d3ff2004043fbd94da13b3ad3a3325678afb64fd6ffd2b44",
+          "response_checksum": "247f4433dc2ab5044cdccf23490727875818addcb5f4d87292caee68e1971e83",
+          "input_tokens": 263,
+          "output_tokens": 19,
+          "seconds": 10.772391400008928,
+          "remote_code": false,
+          "hosted_provider": false,
+          "thinking_output_requested": false
+        },
+        "input_snapshot": "4ec1d1cc093a2dbc7f469548e443e2b9734bf83ce9bee23d7cabcad89a80d4e3",
+        "started_at": "2026-10-28T10:05:52.463811+00:00",
+        "finished_at": "2026-10-28T10:06:03.489679+00:00",
+        "artifact_id": "da688ceb-bd8e-4f63-aadb-15c409a978bf",
+        "step_seconds": 11.025868
+      },
+      {
+        "sequence": 4,
+        "tool": "artifact.assemble",
+        "specialist": "Evidence package specialist",
+        "state": "Completed",
+        "proposal": {
+          "tool": "artifact.assemble",
+          "reason_code": "assemble_evidence"
+        },
+        "model": {
+          "mode": "local_causal",
+          "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "generative_model_used": true,
+          "prompt_checksum": "c99b224e59eb3830c7dcfba3aa21b8b5b8b67db302e074f9e1b2801ec8d5a191",
+          "response_checksum": "975d1e612de7ce6915d4dd6c221ec9109a0ccdd12ce95264839c2ee62751b690",
+          "input_tokens": 305,
+          "output_tokens": 18,
+          "seconds": 10.762303699972108,
+          "remote_code": false,
+          "hosted_provider": false,
+          "thinking_output_requested": false
+        },
+        "input_snapshot": "e58b82a34a8a2f8711b79431c5a84e5247b9389c5473fedb42c04b7595dac8a6",
+        "started_at": "2026-10-28T10:06:05.521787+00:00",
+        "finished_at": "2026-10-28T10:06:16.307187+00:00",
+        "artifact_id": "ab9568a9-9f63-4c40-b908-bbb0e5b84338",
+        "step_seconds": 10.7854
+      },
+      {
+        "sequence": 5,
+        "tool": "review.checkpoint",
+        "specialist": "Review coordinator",
+        "state": "Completed",
+        "proposal": {
+          "tool": "review.checkpoint",
+          "reason_code": "request_independent_review"
+        },
+        "model": {
+          "mode": "local_causal",
+          "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "generative_model_used": true,
+          "prompt_checksum": "b81f589407f4e6cd69df080306adc0fb53f2b5897788c8a943ed39843dab0821",
+          "response_checksum": "d0bf20fee1c54b841b28066ad67f68fb97884f2a08b0cc9d7cbef3ff41e8224e",
+          "input_tokens": 351,
+          "output_tokens": 19,
+          "seconds": 11.833224300004076,
+          "remote_code": false,
+          "hosted_provider": false,
+          "thinking_output_requested": false
+        },
+        "input_snapshot": "0331d598455624568b5ed3add6c03eb2eac3a14910bf5683a4eb9987cb334cec",
+        "started_at": "2026-10-28T10:06:18.329051+00:00",
+        "finished_at": "2026-10-28T10:06:30.194794+00:00",
+        "artifact_id": "42a83792-c609-4f0a-ae59-34e313618e1f",
+        "step_seconds": 11.865743
+      }
+    ],
+    "review_gate": {
+      "required": true,
+      "independent_reviewer_required": true,
+      "approval_granted": false,
+      "prepared_by": "5d57bf85-ba87-4230-bccc-588057dd3d62",
+      "status": "Needs Review",
+      "external_submission_permitted": false,
+      "reviewed_by": null
+    },
+    "citation_count": 12,
+    "citations": [
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21049:b0008",
+        "title": "Article 6 — UAS operators",
+        "text": "4.Before each individual flight, the UAS operator shall submit an UAS flight authorisation request to its U-space service provider, through the UAS flight authorisation service referred to in Article 10, in compliance with Annex IV.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21049:b0008",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21359:b0003",
+        "title": "GM1 Article 10 UAS flight authorisation service",
+        "text": "(a)The UAS flight authorisation service provides authorisations to UAS operators for each individual flight based on other notified flight requests that may conflict with other unmanned operations within the same U-space airspace. It is a strategic deconfliction tool. The UAS flight authorisation service is provided to a UAS operator under the condition that it has submitted the UAS flight authorisation request before the flight. The content of this request is detailed in Annex IV to Regulation (EU) 2021/664.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21359:b0003",
+        "legal_status": "guidance",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21053:b0002",
+        "title": "Article 10 — UAS flight authorisation service",
+        "text": "1.The U-space service providers shall provide UAS operators with the UAS flight authorisation for each individual flight, setting the terms and conditions of that flight, through a UAS flight authorisation service.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21053:b0002",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21053:b0016",
+        "title": "Article 10 — UAS flight authorisation service",
+        "text": "11.U-space service providers shall issue a unique authorisation number for each UAS flight authorisation. This number shall enable the identification of the authorised flight, the UAS operator and the U-space service provider issuing the UAS flight authorisation.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21053:b0016",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21049:b0009",
+        "title": "Article 6 — UAS operators",
+        "text": "5.When ready to start the flight, the UAS operator shall request the U-space service provider for the activation of the UAS flight authorisation. Upon receiving the confirmation of the activation for the UAS flight authorisation from the U-space service provider, the UAS operator shall be entitled to start its flight.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21049:b0009",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21053:b0009",
+        "title": "Article 10 — UAS flight authorisation service",
+        "text": "4.Where U-space service providers are unable to grant an UAS flight authorisation in accordance with the UAS operator’s request, U-space service providers may propose an alternative UAS flight authorisation to the UAS operator.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21053:b0009",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21053:b0003",
+        "title": "Article 10 — UAS flight authorisation service",
+        "text": "2.Where U-space service providers receive from the UAS operator an UAS flight authorisation request, they shall:",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21053:b0003",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0006",
+        "title": "Article 3 — U-space airspace",
+        "text": "(c)the UAS flight authorisation service referred to in Article 10;",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21046:b0006",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21375:b0001",
+        "title": "GM1 Article 10(2) UAS flight authorisation service",
+        "text": "GM1 Article 10(2) UAS flight authorisation service",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21375:b0001",
+        "legal_status": "guidance",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21395:b0001",
+        "title": "GM1 Article 10(2)(d) UAS flight authorisation service",
+        "text": "GM1 Article 10(2)(d) UAS flight authorisation service",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21395:b0001",
+        "legal_status": "guidance",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21053:b0001",
+        "title": "Article 10 — UAS flight authorisation service",
+        "text": "Article 10 — UAS flight authorisation service",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21053:b0001",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      },
+      {
+        "id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21069:b0022",
+        "title": "Certificate for U-space service provider referred to in Article 14(3)",
+        "text": "| UAS flight authorisation service | |",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21069:b0022",
+        "legal_status": "binding_legislation",
+        "methodology": null,
+        "valid_from": "2026-10-27",
+        "valid_to": "2026-10-28"
+      }
+    ],
+    "audit_valid": true,
+    "source": "data/actual-ui-workflow.json"
+  },
+  "student": {
+    "run_id": "explicit-shall-20261027-4",
+    "promotion_status": "Experimental — Not promoted",
+    "task": "Classify the literal presence of shall in real source passages for reviewer routing; no assertion of legal obligation or dispatch authority",
+    "architecture": {
+      "type": "Frozen pretrained MiniLM encoder + trained two-layer ReLU MLP",
+      "input_size": 384,
+      "hidden_size": 32,
+      "outputs": [
+        "no_explicit_shall",
+        "explicit_shall"
+      ],
+      "trainable_parameters": 12386
+    },
+    "dataset": {
+      "input_corpus_checksum": "fa0a89fbda88a856de8e5565130bfde6c504b7c54b9c455c7c272eb51f5f28a7",
+      "selected_checksum": "686d1fce32cb585d35ae257b922b82bdf6177e7a3da6c84eb56ffe48663353e2",
+      "annotations_checksum": "65c621af95fde10a9965f4cf7dfeb81a883af7d9a000f15fbe856c600c2db591",
+      "rows": 288,
+      "accepted_rows": 246,
+      "quarantined_rows": 42,
+      "split_label_counts": {
+        "train": {
+          "no_explicit_shall": 42,
+          "explicit_shall": 40
+        },
+        "validation": {
+          "no_explicit_shall": 45,
+          "explicit_shall": 42
+        },
+        "test": {
+          "no_explicit_shall": 36,
+          "explicit_shall": 41
+        }
+      },
+      "split_policy": {
+        "eu-2019-947": "train",
+        "eu-2019-945": "validation",
+        "eu-2021-664": "test"
+      },
+      "exact_text_overlap": false,
+      "human_reviewed_rows": 0,
+      "ground_truth": false,
+      "stratification": "Deterministic explicit-modal marker used for balanced sampling only",
+      "selection_bias": "Source-span validation removes inconsistent teacher labels; metrics are conditioned on that filter"
+    },
+    "evaluation": {
+      "student": {
+        "samples": 77,
+        "accuracy": 0.8181818181818182,
+        "accuracy_wilson_95": [
+          0.7176351000395189,
+          0.8884884798995225
+        ],
+        "brier_score": 0.152995200182148,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            26,
+            10
+          ],
+          [
+            4,
+            37
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "deterministic_modal": {
+        "samples": 77,
+        "accuracy": 1.0,
+        "accuracy_wilson_95": [
+          0.9524799113327793,
+          1.0000000000000002
+        ],
+        "brier_score": 0.0,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            36,
+            0
+          ],
+          [
+            0,
+            41
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "lexical_trained_linear": {
+        "samples": 77,
+        "accuracy": 0.6363636363636364,
+        "accuracy_wilson_95": [
+          0.5248199544762014,
+          0.7349472940691019
+        ],
+        "brier_score": 0.21835635303969367,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            20,
+            16
+          ],
+          [
+            12,
+            29
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "pretrained_prototype": {
+        "samples": 77,
+        "accuracy": 0.5844155844155844,
+        "accuracy_wilson_95": [
+          0.472898399364154,
+          0.6879098973543671
+        ],
+        "brier_score": 0.2775363497216964,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            4,
+            32
+          ],
+          [
+            0,
+            41
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "majority": {
+        "samples": 77,
+        "accuracy": 0.4675324675324675,
+        "accuracy_wilson_95": [
+          0.36029890673598886,
+          0.5778517483722723
+        ],
+        "brier_score": 0.5324675324675324,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            36,
+            0
+          ],
+          [
+            41,
+            0
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      }
+    },
+    "failure_cases": [
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0005",
+        "source_anchor": "ERULES-1963177438-21043:b0005",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "(1)Commission Delegated Regulation (EU) 2019/945 and Commission Implementing Regulation (EU) 2019/947 established a first set of detailed provisions for the harmonised operation of unmanned aircraft systems (‘UAS’) and minimum technical requirements for UAS.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21043:b0005"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0014",
+        "source_anchor": "ERULES-1963177438-21046:b0014",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "(a)the UAS operators registration system, referred to in Article 14 of Implementing Regulation (EU) 2019/947, of the Member State in which U-space service providers offer their services; and",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21046:b0014"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0025",
+        "source_anchor": "ERULES-1963177438-21043:b0025",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "(21)A traffic information service should alert UAS operators about other air traffic that may be present in proximity to their UAS.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21043:b0025"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0007",
+        "source_anchor": "ERULES-1963177438-21046:b0007",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "(d)the traffic information service referred to in Article 11.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21046:b0007"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21069:b0010",
+        "source_anchor": "ERULES-1963177438-21069:b0010",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "This certificate is limited to the conditions and the scope of providing services as listed in the attached service provision conditions.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21069:b0010"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21058:b0011",
+        "source_anchor": "ERULES-1963177438-21058:b0011",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "[applicable from 22 February 2026 — Implementing Regulation (EU) 2023/203]",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21058:b0011"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21066:b0001",
+        "source_anchor": "ERULES-1963177438-21066:b0001",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "Data quality, data latency and data protection requirements referred to in Article 5(4)(b) and Article 7(5)(c)",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21066:b0001"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0023",
+        "source_anchor": "ERULES-1963177438-21043:b0023",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "(19)A geo-awareness service should provide UAS operators with the information about the latest airspace constraints and defined UAS geographical zones information made available as part of the common information services. In accordance with Implementing Regulation (EU) 2019/947, the establishment of UAS geographical zones should take into account safety, security, privacy and environmental requirements.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21043:b0023"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21058:b0009",
+        "source_anchor": "ERULES-1963177438-21058:b0009",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "[applicable until 21 February 2026 — Implementing Regulation (EU) 2021/664]",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21058:b0009"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21050:b0008",
+        "source_anchor": "ERULES-1963177438-21050:b0008",
+        "machine_label": "no_explicit_shall",
+        "student_label": "explicit_shall",
+        "text": "(b)adhere to a common secure interoperable open communication protocol and use the latest information made available in accordance with Annex II;",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21050:b0008"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21066:b0013",
+        "source_anchor": "ERULES-1963177438-21066:b0013",
+        "machine_label": "explicit_shall",
+        "student_label": "no_explicit_shall",
+        "text": "5.describe a policy for employee awareness and training and tools to reduce insider risks, and protection of data – including intellectual property. In doing so, they shall monitor the user and network activity to provide insight into ecosystem vulnerabilities and threats.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21066:b0013"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21059:b0006",
+        "source_anchor": "ERULES-1963177438-21059:b0006",
+        "machine_label": "explicit_shall",
+        "student_label": "no_explicit_shall",
+        "text": "3.The competent authority or the Agency, as applicable, shall assess the operational and financial performance of a U-space service provider or a single common information service provider under its responsibility.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21059:b0006"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0002",
+        "source_anchor": "ERULES-1963177438-21046:b0002",
+        "machine_label": "explicit_shall",
+        "student_label": "no_explicit_shall",
+        "text": "1.Where Member States designate U-space airspace for safety, security, privacy or environmental reasons such designation shall be supported by an airspace risk assessment.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21046:b0002"
+      },
+      {
+        "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21050:b0004",
+        "source_anchor": "ERULES-1963177438-21050:b0004",
+        "machine_label": "explicit_shall",
+        "student_label": "no_explicit_shall",
+        "text": "3.U-space service providers shall establish arrangements with the air traffic services providers to ensure adequate coordination of activities, as well as the exchange of relevant operational data and information in accordance with Annex V.",
+        "source_id": "easa-uspace-xml-2024",
+        "source_url": "https://www.easa.europa.eu/en/downloads/139565/en",
+        "document_version": "May 2024",
+        "source_checksum": "0db50106a4d58ab95f21228eef781ef63f5098b9c4550e7c15b2e9cfc42286a5",
+        "anchor": "ERULES-1963177438-21050:b0004"
+      }
+    ],
+    "artifact_checksum": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+    "training_resources": {
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 2080",
+      "torch": "2.6.0+cu126",
+      "python": "3.13.1",
+      "teacher_seconds": 18.576603499997873,
+      "encoding_seconds": 0.6217308000195771,
+      "training_seconds": 1.144131799985189,
+      "total_seconds": 21.141158599988557
+    },
+    "source": "data/student-run.json",
+    "new_weights": false,
+    "new_training": false
+  },
+  "owned_presentation": {
+    "owner": "Michele Giletto",
+    "rights": "Reserved proprietary rights; excluded from the Apache-2.0 code licence",
+    "file_count": 5,
+    "files": [
+      {
+        "file": "mascot-renderer.mjs",
+        "bytes": 16003,
+        "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b",
+        "transformation": "None; byte-identical distributed browser presentation resource"
+      },
+      {
+        "file": "motion-core.mjs",
+        "bytes": 2487,
+        "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb",
+        "transformation": "None; byte-identical distributed browser presentation resource"
+      },
+      {
+        "file": "catalog.mjs",
+        "bytes": 53579,
+        "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c",
+        "transformation": "None; byte-identical distributed browser presentation resource"
+      },
+      {
+        "file": "assets/originals/mascotte_01_indaco.png",
+        "bytes": 1274382,
+        "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a",
+        "transformation": "None; byte-identical distributed browser presentation resource"
+      },
+      {
+        "file": "assets/originals/mascotte_06_coral_compact.png",
+        "bytes": 1138958,
+        "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284",
+        "transformation": "None; byte-identical distributed browser presentation resource"
+      }
+    ],
+    "scope": "Application UI presentation only; the static viewer does not execute the reserved renderer.",
+    "source_package_version_status": "Not verified synchronously at copy time. The source installation was updating in place; exact copied-file hashes are the primary identity."
+  },
+  "media": [
+    "mission-control.jpg",
+    "airspace-planning.jpg",
+    "fleet-maintenance.jpg",
+    "european-coordination.jpg",
+    "scheduling.jpg",
+    "agent-orchestration.jpg",
+    "agent-orchestration-detail.jpg",
+    "orchestration-pipeline.svg"
+  ],
+  "source_attribution": "European Union Aviation Safety Agency, Easy Access Rules; copyright EASA 2003–2026. EU legal documents: copyright European Union 1998–2026. Acknowledged reproduction except where otherwise stated."
+}

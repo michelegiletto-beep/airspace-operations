@@ -1,0 +1,7 @@
+{
+  "command": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe -m pytest C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\tests\\test_orchestration.py -q --tb=short",
+  "exit_code": 0,
+  "stdout": "...................                                                      [100%]\n19 passed in 6.82s\n",
+  "stderr": "",
+  "scope": "Isolated fixtures and fault injection; actual causal inference evidence is recorded separately"
+}

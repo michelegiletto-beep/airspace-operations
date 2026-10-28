@@ -38,7 +38,21 @@ def persist_schedule(store, author, reviewer, payload, *, persist_resources=True
             for resource in collection:
                 existing = conn.execute(select(records).where(records.c.id == resource.id)).mappings().first()
                 if not existing:
-                    insert_record(conn, tenant, kind, resource.id, {"scheduler": resource.model_dump(mode="json")}, author["id"], "Draft" if kind == "mission" else "Approved")
+                    data = {"scheduler": resource.model_dump(mode="json")}
+                    if kind == "aircraft":
+                        baseline = request.missions[0].window.start - timedelta(days=1)
+                        program_id = "test-only-maintenance-" + resource.id
+                        task_id = "test-only-maintenance-task"
+                        program = {"id": program_id, "version": 1, "aircraft_id": resource.id, "configuration_id": resource.configuration_id, "status": "Approved", "approved_by": reviewer["id"], "valid_from": baseline.isoformat(), "valid_until": (baseline + timedelta(days=365)).isoformat(), "tasks": [{"id": task_id, "title": "Isolated software-test maintenance instruction", "source_ref": "test-only-maintenance-instruction", "source_version": "test-only", "interval_calendar_days": 300, "interval_flight_seconds": 100000, "interval_cycles": 1000, "required_qualifications": ["test-only-maintenance-scope"]}]}
+                        insert_record(conn, tenant, "maintenance_program", program_id, {"program": program, "_approvals": [{"actor_id": reviewer["id"]}]}, author["id"])
+                        data.update(maintenance_program_id=program_id, utilisation={"aircraft_id": resource.id, "configuration_id": resource.configuration_id, "record_version": 1, "measured_at": baseline.isoformat(), "total_flight_seconds": 0, "total_cycles": 0, "evidence_ref": "test-only-measured-usage"}, maintenance_completions=[{"task_id": task_id, "configuration_id": resource.configuration_id, "completed_at": baseline.isoformat(), "total_flight_seconds": 0, "total_cycles": 0, "evidence_ref": "test-only-maintenance-baseline", "performed_by": author["id"], "reviewed_by": reviewer["id"], "state": "Released"}])
+                        data["utilisation"]["evidence_ref"] += "-" + resource.id
+                        data["utilisation"]["evidence_version"] = 1
+                        data["maintenance_completions"][0]["evidence_ref"] += "-" + resource.id
+                        data["maintenance_completions"][0]["evidence_version"] = 1
+                        for source_ref in (data["utilisation"]["evidence_ref"], data["maintenance_completions"][0]["evidence_ref"]):
+                            insert_record(conn, tenant, "evidence", source_ref, {"checksum": hashlib.sha256(b"Isolated maintenance source fixture").hexdigest(), "provenance": "Isolated software test; no real maintenance observation", "evidence_type": "Software Test", "_approvals": [{"actor_id": reviewer["id"]}]}, author["id"])
+                    insert_record(conn, tenant, kind, resource.id, data, author["id"], "Draft" if kind == "mission" else "Approved")
                 bindings[resource.id] = existing["version"] if existing else 1
         for mission in request.missions:
             for permission in mission.permissions:

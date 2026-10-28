@@ -1,0 +1,148 @@
+{
+  "release": "0.2.0-rc.1",
+  "recorded_at": "2026-10-28T10:35:08.240507+00:00",
+  "scope": "Frontend software verification only; isolated fixtures are not operational observations.",
+  "commands": [
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "result": {
+        "passed": 47,
+        "failed": 0,
+        "test_files": 13
+      },
+      "evidence": [
+        "tests.log"
+      ],
+      "note": "Earlier full run, before the Article13 and owned-runtime checks; final direct Vitest invocation below is authoritative."
+    },
+    {
+      "command": "node node_modules/vitest/vitest.mjs run --reporter=json --outputFile=verification/0.2.0-rc.1/tests.json",
+      "exit_code": 0,
+      "evidence": [
+        "tests.json",
+        "tests-json.log"
+      ],
+      "result": {
+        "passed": 67,
+        "failed": 0,
+        "test_files": 14
+      }
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "evidence": [
+        "build.log"
+      ]
+    }
+  ],
+  "repaired_failures": [
+    {
+      "evidence": "repaired-typecheck-attempt.log",
+      "description": "Unused test callback argument and unsupported testing-library getByRole exact option corrected. The final TypeScript build passes."
+    }
+  ],
+  "package_lock_sha256": "a62776bf2987df56998915fafb89cade6ddb4a838cfb14bd165361740ab2156a",
+  "build_assets": [
+    {
+      "path": "dist/assets/index-Cgj26qmY.css",
+      "bytes": 88736,
+      "sha256": "016c8e9b688603e219c15dc04a616ec9d2126b33e30fd64378528264af1bbbc7"
+    },
+    {
+      "path": "dist/assets/index-DPr0T7OP.js",
+      "bytes": 445943,
+      "sha256": "993001c0f2105e8a6088f58dddd458f33a6bde895b09f8f050e6a362fa790717"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 539,
+      "sha256": "044ba43f4bf0f9fd70ac6b31a6c3b5d1017a7cdafed16789aa3913e00e6640a8"
+    },
+    {
+      "path": "dist/map/europe.geojson",
+      "bytes": 497373,
+      "sha256": "e8e9864b5a97dd64e9f6aa1c77878a048646d0c64eb6e7397c76c763fefdcea4"
+    },
+    {
+      "path": "dist/map/provenance.json",
+      "bytes": 859,
+      "sha256": "dbdf9125f8cae11595739eec341b294fd0f7bb50d4ddd7c1ec09a9c3b6a4f84e"
+    },
+    {
+      "path": "dist/mascots/coral.webp",
+      "bytes": 30036,
+      "sha256": "37b2a36c2d8829af8942da772f79ae8c1ad4d0a528fb974487577298c969e432"
+    },
+    {
+      "path": "dist/mascots/indigo.webp",
+      "bytes": 35496,
+      "sha256": "f9b5f823f7de8e046608166a22ed93b8a8148a61f329da9282f4fe932003e3e1"
+    },
+    {
+      "path": "dist/mascots/provenance.json",
+      "bytes": 931,
+      "sha256": "bfade8db2652ba9faac6a0ef9320a6e6fe0556fcf1ea98c3a7b54174d69753c4"
+    },
+    {
+      "path": "dist/mascots/RIGHTS.md",
+      "bytes": 756,
+      "sha256": "c54f19970c649ce627101fe9c85caac7c77dc0074174015ad8d8e221967e3689"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/assets/originals/mascotte_01_indaco.png",
+      "bytes": 1274382,
+      "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/assets/originals/mascotte_06_coral_compact.png",
+      "bytes": 1138958,
+      "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/catalog.mjs",
+      "bytes": 53579,
+      "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/mascot-renderer.mjs",
+      "bytes": 16003,
+      "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/motion-core.mjs",
+      "bytes": 2487,
+      "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/NOTICE.md",
+      "bytes": 1806,
+      "sha256": "9eb2db85612f9118a1786f5d9d0723a3973a37b1cf10d74866242bdeffc5da67"
+    },
+    {
+      "path": "dist/vendor/systemlab-companion/provenance.json",
+      "bytes": 3965,
+      "sha256": "555b4bbfb2ccec8bd42d6ea622f73131794ae5670e97472cf04c15376c4730d1"
+    }
+  ],
+  "boundaries": [
+    "Mocked frontend response tests do not establish live provider integration or aviation acceptance.",
+    "No generated operational fixtures are shipped in the built frontend.",
+    "Map geography is public-domain context only; owned companion artwork and original presentation runtime retain reserved rights.",
+    "Static-asset HTTP checks and execution of actual copied presentation modules are separate from browser GPU validation, maintained by the release owner."
+  ],
+  "capture_evidence": "Maintained separately by the release owner under publication/media and release-evidence; no image was fabricated by the frontend tests.",
+  "result": {
+    "tests_passed": 67,
+    "tests_failed": 0,
+    "test_files": 14,
+    "typescript_and_vite": "Passed"
+  },
+  "owned_runtime_evidence": [
+    "owned-runtime-assets.json",
+    "owned-runtime-module-checks.json",
+    "../../public/vendor/systemlab-companion/provenance.json"
+  ],
+  "owned_runtime_boundary": "Five byte-identical owned presentation resources, reserved rights, separate fresh Apache React adapter. Package version observations differ because the installed distribution updates in place; exact file hashes identify the frozen copy."
+}

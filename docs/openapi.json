@@ -3,7 +3,7 @@
   "info": {
     "title": "System Lab Airspace Operations",
     "description": "Decision support. No aircraft control or authority-issued permissions.",
-    "version": "0.1.0-rc.1"
+    "version": "0.2.0-rc.1"
   },
   "paths": {
     "/api/v1/health": {
@@ -1769,6 +1769,1054 @@
           }
         }
       }
+    },
+    "/api/v1/workflow-tools": {
+      "get": {
+        "summary": "Agent Capabilities",
+        "operationId": "agent_capabilities_api_v1_workflow_tools_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agent-capabilities": {
+      "get": {
+        "summary": "Agent Capabilities",
+        "operationId": "agent_capabilities_api_v1_agent_capabilities_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agent-workflows": {
+      "get": {
+        "summary": "Workflow List",
+        "operationId": "workflow_list_api_v1_agent_workflows_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Workflow Create",
+        "operationId": "workflow_create_api_v1_agent_workflows_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkflowRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agent-workflows/{workflow_id}": {
+      "get": {
+        "summary": "Workflow Get",
+        "operationId": "workflow_get_api_v1_agent_workflows__workflow_id__get",
+        "parameters": [
+          {
+            "name": "workflow_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Workflow Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agent-workflows/{workflow_id}/control": {
+      "post": {
+        "summary": "Workflow Control",
+        "operationId": "workflow_control_api_v1_agent_workflows__workflow_id__control_post",
+        "parameters": [
+          {
+            "name": "workflow_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Workflow Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Control"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agent-workflows/{workflow_id}/advance": {
+      "post": {
+        "summary": "Workflow Advance",
+        "operationId": "workflow_advance_api_v1_agent_workflows__workflow_id__advance_post",
+        "parameters": [
+          {
+            "name": "workflow_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Workflow Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Advance"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/coordination/countries": {
+      "get": {
+        "summary": "Countries",
+        "operationId": "countries_api_v1_coordination_countries_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/coordination/assess": {
+      "post": {
+        "summary": "Coordinate",
+        "operationId": "coordinate_api_v1_coordination_assess_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrossBorderPlan"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fleet/aircraft/{aircraft_id}/maintenance": {
+      "get": {
+        "summary": "Aircraft Maintenance",
+        "operationId": "aircraft_maintenance_api_v1_fleet_aircraft__aircraft_id__maintenance_get",
+        "parameters": [
+          {
+            "name": "aircraft_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Aircraft Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fleet/aircraft/{aircraft_id}/maintenance/assess": {
+      "post": {
+        "summary": "Aircraft Maintenance Assess",
+        "operationId": "aircraft_maintenance_assess_api_v1_fleet_aircraft__aircraft_id__maintenance_assess_post",
+        "parameters": [
+          {
+            "name": "aircraft_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Aircraft Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SavedMaintenanceAssessment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fleet/maintenance/assess": {
+      "post": {
+        "summary": "Maintenance Assess",
+        "operationId": "maintenance_assess_api_v1_fleet_maintenance_assess_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaintenanceAssessment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fleet/maintenance/plan": {
+      "post": {
+        "summary": "Maintenance Plan",
+        "operationId": "maintenance_plan_api_v1_fleet_maintenance_plan_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaintenancePlanRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fleet/work-orders/{work_order_id}/control": {
+      "post": {
+        "summary": "Work Order Control",
+        "operationId": "work_order_control_api_v1_fleet_work_orders__work_order_id__control_post",
+        "parameters": [
+          {
+            "name": "work_order_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Work Order Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkOrderControl"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sharing/agreements": {
+      "get": {
+        "summary": "Agreements",
+        "operationId": "agreements_api_v1_sharing_agreements_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Agreement Create",
+        "operationId": "agreement_create_api_v1_sharing_agreements_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SharingTerms"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sharing/agreements/{agreement_id}/{action}": {
+      "post": {
+        "summary": "Agreement Decide",
+        "operationId": "agreement_decide_api_v1_sharing_agreements__agreement_id___action__post",
+        "parameters": [
+          {
+            "name": "agreement_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Agreement Id"
+            }
+          },
+          {
+            "name": "action",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "enum": [
+                "offer",
+                "accept",
+                "reject",
+                "revoke"
+              ],
+              "type": "string",
+              "title": "Action"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SharingDecision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/schedule/{schedule_id}/pilot-acknowledgement": {
+      "post": {
+        "summary": "Pilot Ack",
+        "operationId": "pilot_ack_api_v1_schedule__schedule_id__pilot_acknowledgement_post",
+        "parameters": [
+          {
+            "name": "schedule_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Schedule Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DispatchDecision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/schedule/{schedule_id}/dispatch-release": {
+      "post": {
+        "summary": "Dispatch Release",
+        "operationId": "dispatch_release_api_v1_schedule__schedule_id__dispatch_release_post",
+        "parameters": [
+          {
+            "name": "schedule_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Schedule Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DispatchDecision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1794,6 +2842,46 @@
           "reason"
         ],
         "title": "Acknowledge"
+      },
+      "Advance": {
+        "properties": {
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "expected_version"
+        ],
+        "title": "Advance"
+      },
+      "AircraftBusyInterval": {
+        "properties": {
+          "aircraft_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Aircraft Id"
+          },
+          "interval": {
+            "$ref": "#/components/schemas/Window"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Evidence Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "aircraft_id",
+          "interval",
+          "evidence_ref"
+        ],
+        "title": "AircraftBusyInterval"
       },
       "Attachment": {
         "properties": {
@@ -1828,6 +2916,470 @@
         ],
         "title": "Attachment"
       },
+      "BorderHandover": {
+        "properties": {
+          "from_segment_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "From Segment Id"
+          },
+          "to_segment_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "To Segment Id"
+          },
+          "procedure_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Procedure Ref"
+          },
+          "responsible_person_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Responsible Person Id"
+          },
+          "acknowledgement_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Acknowledgement Ref"
+          },
+          "contingency_coordination_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Contingency Coordination Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "from_segment_id",
+          "to_segment_id",
+          "procedure_ref",
+          "responsible_person_id"
+        ],
+        "title": "BorderHandover"
+      },
+      "Budget": {
+        "properties": {
+          "max_steps": {
+            "type": "integer",
+            "maximum": 16.0,
+            "minimum": 4.0,
+            "title": "Max Steps",
+            "default": 8
+          },
+          "max_model_calls": {
+            "type": "integer",
+            "maximum": 16.0,
+            "minimum": 1.0,
+            "title": "Max Model Calls",
+            "default": 8
+          },
+          "max_wall_seconds": {
+            "type": "integer",
+            "maximum": 3600.0,
+            "minimum": 30.0,
+            "title": "Max Wall Seconds",
+            "default": 900
+          },
+          "model_timeout_seconds": {
+            "type": "integer",
+            "maximum": 300.0,
+            "minimum": 1.0,
+            "title": "Model Timeout Seconds",
+            "default": 90
+          },
+          "tool_timeout_seconds": {
+            "type": "integer",
+            "maximum": 300.0,
+            "minimum": 1.0,
+            "title": "Tool Timeout Seconds",
+            "default": 120
+          },
+          "max_retries": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Max Retries",
+            "default": 1
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Budget"
+      },
+      "Control": {
+        "properties": {
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "pause",
+              "resume",
+              "cancel"
+            ],
+            "title": "Action"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "expected_version",
+          "action"
+        ],
+        "title": "Control"
+      },
+      "CountryInstrument": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "operational_authorisation",
+              "declaration_home_receipt",
+              "host_confirmation",
+              "host_declaration_submission",
+              "luc_terms",
+              "luc_host_notification",
+              "site_airspace",
+              "u_space",
+              "national_operating_basis"
+            ],
+            "title": "Kind"
+          },
+          "issuer": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Issuer"
+          },
+          "issuing_country": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "title": "Issuing Country"
+          },
+          "recipient_country": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recipient Country"
+          },
+          "provided_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provided At"
+          },
+          "operation_countries": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Operation Countries"
+          },
+          "operator_organisation_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Operator Organisation Id"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "route_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Route Version"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Draft",
+              "Under Review",
+              "Recorded",
+              "Approved",
+              "Expired",
+              "Suspended",
+              "Superseded"
+            ],
+            "title": "Status"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid From"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Evidence Ref"
+          },
+          "legal_source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Legal Source Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "kind",
+          "issuer",
+          "issuing_country",
+          "operation_countries",
+          "operator_organisation_id",
+          "configuration_id",
+          "route_version",
+          "status",
+          "valid_from",
+          "valid_until",
+          "evidence_ref",
+          "legal_source_ref"
+        ],
+        "title": "CountryInstrument"
+      },
+      "CountryReview": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "country": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "title": "Country"
+          },
+          "pack_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Pack Version"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Registered",
+              "Requires Domain Review",
+              "Validated",
+              "Suspended",
+              "Superseded"
+            ],
+            "title": "Status",
+            "default": "Registered"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid From"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "framework": {
+            "type": "string",
+            "enum": [
+              "EU UAS",
+              "Reviewed EASA-state adoption",
+              "National framework"
+            ],
+            "title": "Framework"
+          },
+          "source_refs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Refs"
+          },
+          "reviewed_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reviewed By"
+          },
+          "applicability_review_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Applicability Review Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "country",
+          "pack_version",
+          "valid_from",
+          "valid_until",
+          "framework"
+        ],
+        "title": "CountryReview"
+      },
+      "CountrySegment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "country": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "title": "Country"
+          },
+          "interval": {
+            "$ref": "#/components/schemas/Window"
+          },
+          "country_review_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Country Review Id"
+          },
+          "country_review_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Country Review Version"
+          },
+          "legal_route": {
+            "type": "string",
+            "enum": [
+              "Operational Authorisation",
+              "STS Declaration",
+              "LUC Privilege",
+              "Open Category",
+              "National or Certified"
+            ],
+            "title": "Legal Route"
+          },
+          "permission_requirements_reviewed": {
+            "type": "boolean",
+            "title": "Permission Requirements Reviewed",
+            "default": false
+          },
+          "required_instrument_kinds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Required Instrument Kinds"
+          },
+          "instrument_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Instrument Ids"
+          },
+          "local_conditions_review_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Local Conditions Review Ref"
+          },
+          "local_mitigations_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Local Mitigations Ref"
+          },
+          "source_freshness_review_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Freshness Review Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "country",
+          "interval",
+          "country_review_id",
+          "country_review_version",
+          "legal_route"
+        ],
+        "title": "CountrySegment"
+      },
       "Credentials": {
         "properties": {
           "email": {
@@ -1850,6 +3402,123 @@
           "password"
         ],
         "title": "Credentials"
+      },
+      "CrossBorderPlan": {
+        "properties": {
+          "actor_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Actor Id"
+          },
+          "mission_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Mission Id"
+          },
+          "mission_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Mission Version"
+          },
+          "operator_organisation_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Operator Organisation Id"
+          },
+          "registration_country": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "title": "Registration Country"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "route_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Route Version"
+          },
+          "operation_interval": {
+            "$ref": "#/components/schemas/Window"
+          },
+          "segments": {
+            "items": {
+              "$ref": "#/components/schemas/CountrySegment"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Segments"
+          },
+          "country_reviews": {
+            "items": {
+              "$ref": "#/components/schemas/CountryReview"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "title": "Country Reviews"
+          },
+          "instruments": {
+            "items": {
+              "$ref": "#/components/schemas/CountryInstrument"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "title": "Instruments"
+          },
+          "handovers": {
+            "items": {
+              "$ref": "#/components/schemas/BorderHandover"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "title": "Handovers"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "actor_id",
+          "mission_id",
+          "mission_version",
+          "operator_organisation_id",
+          "registration_country",
+          "configuration_id",
+          "route_version",
+          "operation_interval",
+          "segments"
+        ],
+        "title": "CrossBorderPlan"
+      },
+      "DispatchDecision": {
+        "properties": {
+          "mission_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Mission Id"
+          },
+          "expected_schedule_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Schedule Version"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "mission_id",
+          "expected_schedule_version",
+          "reason"
+        ],
+        "title": "DispatchDecision"
       },
       "EditRecord": {
         "properties": {
@@ -1933,6 +3602,678 @@
           "kind"
         ],
         "title": "JobRequest"
+      },
+      "MaintenanceAssessment": {
+        "properties": {
+          "actor_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Actor Id"
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "At"
+          },
+          "program": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MaintenanceProgram"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "usage": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/UtilisationSnapshot"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "completions": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceCompletion"
+            },
+            "type": "array",
+            "maxItems": 5000,
+            "title": "Completions"
+          },
+          "work_orders": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceWorkOrder"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "title": "Work Orders"
+          },
+          "forecast_end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Forecast End"
+          },
+          "forecast_flight_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Forecast Flight Seconds",
+            "default": 0
+          },
+          "forecast_cycles": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Forecast Cycles",
+            "default": 0
+          },
+          "open_safety_defects": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Open Safety Defects"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "actor_id",
+          "at"
+        ],
+        "title": "MaintenanceAssessment"
+      },
+      "MaintenanceCompletion": {
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Task Id"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Completed At"
+          },
+          "total_flight_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total Flight Seconds"
+          },
+          "total_cycles": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total Cycles"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Evidence Ref"
+          },
+          "evidence_version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Version"
+          },
+          "performed_by": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Performed By"
+          },
+          "reviewed_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reviewed By"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "Recorded",
+              "Under Review",
+              "Released",
+              "Rejected",
+              "Superseded"
+            ],
+            "title": "State"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "task_id",
+          "configuration_id",
+          "completed_at",
+          "total_flight_seconds",
+          "total_cycles",
+          "evidence_ref",
+          "performed_by",
+          "state"
+        ],
+        "title": "MaintenanceCompletion"
+      },
+      "MaintenanceFacility": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "availability": {
+            "items": {
+              "$ref": "#/components/schemas/Window"
+            },
+            "type": "array",
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Availability"
+          },
+          "capacity": {
+            "type": "integer",
+            "maximum": 100.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Capacity"
+          },
+          "scope_task_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Scope Task Ids"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Evidence Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "availability",
+          "capacity",
+          "scope_task_ids",
+          "evidence_ref"
+        ],
+        "title": "MaintenanceFacility"
+      },
+      "MaintenancePlanRequest": {
+        "properties": {
+          "actor_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Actor Id"
+          },
+          "work_orders": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceWorkOrder"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Work Orders"
+          },
+          "technicians": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceTechnician"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Technicians"
+          },
+          "facilities": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceFacility"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Facilities"
+          },
+          "aircraft_busy": {
+            "items": {
+              "$ref": "#/components/schemas/AircraftBusyInterval"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "title": "Aircraft Busy"
+          },
+          "max_solver_seconds": {
+            "type": "number",
+            "maximum": 30.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Max Solver Seconds",
+            "default": 5
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "actor_id",
+          "work_orders",
+          "technicians",
+          "facilities"
+        ],
+        "title": "MaintenancePlanRequest"
+      },
+      "MaintenanceProgram": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "aircraft_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Aircraft Id"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Draft",
+              "Under Review",
+              "Approved",
+              "Suspended",
+              "Superseded"
+            ],
+            "title": "Status"
+          },
+          "approved_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approved By"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid From"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "tasks": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceTask"
+            },
+            "type": "array",
+            "maxItems": 500,
+            "minItems": 1,
+            "title": "Tasks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "aircraft_id",
+          "configuration_id",
+          "status",
+          "valid_from",
+          "valid_until",
+          "tasks"
+        ],
+        "title": "MaintenanceProgram"
+      },
+      "MaintenanceTask": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Title"
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Source Ref"
+          },
+          "source_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Source Version"
+          },
+          "interval_calendar_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interval Calendar Days"
+          },
+          "interval_flight_seconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interval Flight Seconds"
+          },
+          "interval_cycles": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interval Cycles"
+          },
+          "required_qualifications": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Required Qualifications"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "source_ref",
+          "source_version",
+          "required_qualifications"
+        ],
+        "title": "MaintenanceTask"
+      },
+      "MaintenanceTechnician": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "availability": {
+            "items": {
+              "$ref": "#/components/schemas/Window"
+            },
+            "type": "array",
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Availability"
+          },
+          "qualifications": {
+            "additionalProperties": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "type": "object",
+            "title": "Qualifications"
+          },
+          "qualification_evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Qualification Evidence Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "availability",
+          "qualifications",
+          "qualification_evidence_ref"
+        ],
+        "title": "MaintenanceTechnician"
+      },
+      "MaintenanceWorkOrder": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "aircraft_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Aircraft Id"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "aircraft_record_version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Aircraft Record Version"
+          },
+          "program_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Program Id"
+          },
+          "program_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Program Version"
+          },
+          "task_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Task Ids"
+          },
+          "window": {
+            "$ref": "#/components/schemas/Window"
+          },
+          "duration_seconds": {
+            "type": "integer",
+            "maximum": 2678400.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Duration Seconds"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "Draft",
+              "Scheduled",
+              "In Progress",
+              "Work Complete",
+              "Under Review",
+              "Released",
+              "Cancelled"
+            ],
+            "title": "State",
+            "default": "Draft"
+          },
+          "required_qualifications": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Required Qualifications"
+          },
+          "technician_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Technician Id"
+          },
+          "facility_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Facility Id"
+          },
+          "technician_record_version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Technician Record Version"
+          },
+          "facility_record_version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Facility Record Version"
+          },
+          "actual_start": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actual Start"
+          },
+          "actual_end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actual End"
+          },
+          "completion": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceCompletion"
+            },
+            "type": "array",
+            "title": "Completion"
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Source Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "aircraft_id",
+          "configuration_id",
+          "program_id",
+          "program_version",
+          "task_ids",
+          "window",
+          "duration_seconds",
+          "required_qualifications",
+          "source_ref"
+        ],
+        "title": "MaintenanceWorkOrder"
       },
       "NewRecord": {
         "properties": {
@@ -2096,6 +4437,185 @@
           "operation_date"
         ],
         "title": "Query"
+      },
+      "SavedMaintenanceAssessment": {
+        "properties": {
+          "at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "At"
+          },
+          "forecast_end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Forecast End"
+          },
+          "forecast_flight_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Forecast Flight Seconds",
+            "default": 0
+          },
+          "forecast_cycles": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Forecast Cycles",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "SavedMaintenanceAssessment"
+      },
+      "SharingDecision": {
+        "properties": {
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "expected_version",
+          "reason"
+        ],
+        "title": "SharingDecision"
+      },
+      "SharingTerms": {
+        "properties": {
+          "owner_organisation_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Owner Organisation Id"
+          },
+          "operator_organisation_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Operator Organisation Id"
+          },
+          "aircraft_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Aircraft Id"
+          },
+          "aircraft_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Aircraft Version"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "agreement_reference": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Agreement Reference"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid From"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "countries": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Countries"
+          },
+          "route_versions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Route Versions"
+          },
+          "permitted_purposes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Permitted Purposes"
+          },
+          "maintenance_responsible_organisation_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Maintenance Responsible Organisation Id"
+          },
+          "operating_responsibility_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Operating Responsibility Ref"
+          },
+          "maintenance_responsibility_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Maintenance Responsibility Ref"
+          },
+          "insurance_evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Insurance Evidence Ref"
+          },
+          "data_sharing_rights_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Data Sharing Rights Ref"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "owner_organisation_id",
+          "operator_organisation_id",
+          "aircraft_id",
+          "aircraft_version",
+          "configuration_id",
+          "agreement_reference",
+          "valid_from",
+          "valid_until",
+          "countries",
+          "route_versions",
+          "permitted_purposes",
+          "maintenance_responsible_organisation_id",
+          "operating_responsibility_ref",
+          "maintenance_responsibility_ref",
+          "insurance_evidence_ref",
+          "data_sharing_rights_ref"
+        ],
+        "title": "SharingTerms"
       },
       "TelemetryEvent": {
         "properties": {
@@ -2261,6 +4781,69 @@
         ],
         "title": "Transition"
       },
+      "UtilisationSnapshot": {
+        "properties": {
+          "aircraft_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Aircraft Id"
+          },
+          "configuration_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Configuration Id"
+          },
+          "record_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Record Version"
+          },
+          "measured_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Measured At"
+          },
+          "total_flight_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total Flight Seconds"
+          },
+          "total_cycles": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total Cycles"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Evidence Ref"
+          },
+          "evidence_version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Version"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "aircraft_id",
+          "configuration_id",
+          "record_version",
+          "measured_at",
+          "total_flight_seconds",
+          "total_cycles",
+          "evidence_ref"
+        ],
+        "title": "UtilisationSnapshot"
+      },
       "ValidationError": {
         "properties": {
           "loc": {
@@ -2300,6 +4883,198 @@
           "type"
         ],
         "title": "ValidationError"
+      },
+      "Window": {
+        "properties": {
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "title": "End"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "start",
+          "end"
+        ],
+        "title": "Window"
+      },
+      "WorkOrderControl": {
+        "properties": {
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "target": {
+            "type": "string",
+            "enum": [
+              "Scheduled",
+              "In Progress",
+              "Work Complete",
+              "Under Review",
+              "Released",
+              "Cancelled"
+            ],
+            "title": "Target"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason"
+          },
+          "technician_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Technician Id"
+          },
+          "facility_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Facility Id"
+          },
+          "scheduled_start": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scheduled Start"
+          },
+          "scheduled_end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scheduled End"
+          },
+          "completions": {
+            "items": {
+              "$ref": "#/components/schemas/MaintenanceCompletion"
+            },
+            "type": "array",
+            "title": "Completions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "expected_version",
+          "target",
+          "reason"
+        ],
+        "title": "WorkOrderControl"
+      },
+      "WorkflowRequest": {
+        "properties": {
+          "task_kind": {
+            "type": "string",
+            "enum": [
+              "regulatory_research",
+              "authorisation_preparation",
+              "site_assessment",
+              "scheduling_proposal",
+              "maintenance_planning",
+              "cross_border_readiness",
+              "fleet_sharing_review"
+            ],
+            "title": "Task Kind"
+          },
+          "objective": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 5,
+            "title": "Objective"
+          },
+          "jurisdiction": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "title": "Jurisdiction"
+          },
+          "operation_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Operation Date"
+          },
+          "context_record_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Context Record Ids"
+          },
+          "methodology": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "SORA 2.0",
+                  "SORA 2.5"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Methodology"
+          },
+          "include_experimental_student": {
+            "type": "boolean",
+            "title": "Include Experimental Student",
+            "default": false
+          },
+          "controller_mode": {
+            "type": "string",
+            "enum": [
+              "local_causal",
+              "local_flan",
+              "native"
+            ],
+            "title": "Controller Mode",
+            "default": "local_causal"
+          },
+          "budget": {
+            "$ref": "#/components/schemas/Budget"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "task_kind",
+          "objective",
+          "jurisdiction",
+          "operation_date"
+        ],
+        "title": "WorkflowRequest"
       }
     }
   }

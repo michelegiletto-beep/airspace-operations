@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from fastapi import HTTPException
 
 KINDS = {"case", "evidence", "permission", "aircraft", "personnel", "site", "route", "mission", "incident", "procedure", "stakeholder", "commercial", "qualification", "alert", "review_task", "requirement", "risk_assessment", "corrective_action", "interpretation", "obligation", "operational_volume", "resource", "schedule", "telemetry", "approval", "correspondence", "connector", "saved_search"}
+KINDS |= {"maintenance_program", "maintenance_work_order", "country_review", "country_instrument", "agent_workflow", "pilot_acknowledgement", "dispatch_release"}
 TRANSITIONS = {
     "Draft": {"Missing Evidence", "Under Review"},
     "Missing Evidence": {"Draft", "Under Review"},
@@ -32,6 +33,8 @@ def missing_evidence(row):
     missing.extend(f"requirement:{value}" for value in data.get("missing_requirement_ids", []))
     if row["kind"] == "case" and not data.get("evidence_ids"):
         missing.append("evidence_ids")
+    from .domain_records import domain_missing
+    missing.extend(domain_missing(row))
     return sorted(set(missing))
 
 

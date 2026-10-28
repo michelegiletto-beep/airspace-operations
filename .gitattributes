@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.png -text
+*.jpg -text
+*.webp -text
+*.safetensors -text
+*.zip -text
+*.gz -text
+# Preserve the exact bytes and ownership of the existing presentation runtime.
+frontend/public/vendor/systemlab-companion/** -text
+frontend/dist/vendor/systemlab-companion/** -text

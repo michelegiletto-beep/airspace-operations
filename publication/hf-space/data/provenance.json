@@ -1,0 +1,63 @@
+{
+  "prepared_at": "2026-10-28T10:56:18.016270+00:00",
+  "source_reports": {
+    "causal-comparison.json": {
+      "project_path": "release-evidence/v0.2.0-rc.1/causal-comparison.json",
+      "sha256": "2c1fda31cb48b2308ee68de062957b4d9c458903de4a77000e6945079ae2eb75",
+      "bytes": 546869
+    },
+    "actual-ui-workflow.json": {
+      "project_path": "release-evidence/v0.2.0-rc.1/actual-ui-workflow.json",
+      "sha256": "f6e8d7927bb9ffdd6a2355e8b0f2b8a33c327155c2cb33eba03e6b6ab6ed549f",
+      "bytes": 133118
+    },
+    "first-causal-run.json": {
+      "project_path": "release-evidence/v0.2.0-rc.1/orchestration-local-20261028T092208Z.json",
+      "sha256": "52e2a1bbf7d022bbe6540c28036e8136ce0a93c707c9222848485639d4936747",
+      "bytes": 129419
+    },
+    "student-run.json": {
+      "project_path": "models/runs/explicit-shall-20261027-4/run.json",
+      "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "bytes": 18937
+    }
+  },
+  "media": {
+    "mission-control.jpg": {
+      "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "bytes": 129906
+    },
+    "airspace-planning.jpg": {
+      "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "bytes": 112044
+    },
+    "fleet-maintenance.jpg": {
+      "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "bytes": 75096
+    },
+    "european-coordination.jpg": {
+      "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "bytes": 127424
+    },
+    "scheduling.jpg": {
+      "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "bytes": 98935
+    },
+    "agent-orchestration.jpg": {
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "bytes": 211029
+    },
+    "agent-orchestration-detail.jpg": {
+      "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "bytes": 71132
+    },
+    "orchestration-pipeline.svg": {
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "bytes": 4561
+    }
+  },
+  "data_index_sha256": "b2bc32950ddd50ac1df1e4d0cacdbc6b2ee8e1ba155c1eb2f11b285c7ad9ae69",
+  "publication_performed": false,
+  "operational_records_created": false,
+  "model_execution_performed": false
+}

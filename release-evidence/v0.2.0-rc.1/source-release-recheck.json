@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-28T10:56:55.772775+00:00",
+  "method": "Official web page retrieval through web tool; no correspondence, subscription or submission",
+  "corpus_changed": false,
+  "legal_currentness_reconciled": false,
+  "checks": [
+    {
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-unmanned-aircraft-systems",
+      "observed": "Publication page still identifies June 2026 revision, 30 June 2026, and SORA 2.5 adoption through ED Decision 2025/018/R. Its regulations-register link was also opened.",
+      "status": "Retrieved"
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/regulations/unmanned-aircraft-systems-uas",
+      "observed": "Register includes 2025/018/R and a corrigendum reference; no item dated after June 2026 was shown in this retrieved register. Absence in this page is not complete amendment reconciliation.",
+      "status": "Retrieved"
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2025018r",
+      "observed": "Decision page includes explanatory note, decision, corrigendum and annex. Those separate PDFs were not redownloaded in this check.",
+      "status": "Retrieved"
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/regulations/u-space",
+      "observed": "Register still identifies amended 2021/664, 2021/665 and 2021/666 and associated AMC/GM. Not a local designation or provider-status check.",
+      "status": "Retrieved"
+    },
+    {
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2019/947/oj/eng",
+      "observed": "JavaScript robot-verification challenge, not authentic legal text. No challenge bypass attempted.",
+      "status": "Blocked upstream"
+    },
+    {
+      "url": "https://dac.gouvernement.lu/en/drones/drones-let-me-fly/categorie-specifique/sora.html",
+      "observed": "National page dated 21 October 2024. Its older methodology explanations require reconciliation with the separately preserved June 2026 EASA edition.",
+      "status": "Retrieved; national reconciliation required"
+    },
+    {
+      "url": "https://www.enac.gov.it/sicurezza-aerea/droni/categoria-specifica-specific-category",
+      "observed": "Original Italian page dated 14 May 2024 includes national-STS expiry warning for 1 January 2026. No English translation asserted as authoritative.",
+      "status": "Retrieved; national reconciliation required"
+    },
+    {
+      "url": "https://www.enac.gov.it/sicurezza-aerea/droni/categoria-specifica-specific-category/autorizzazione-operativa/",
+      "observed": "Original Italian procedure identifies update 14 August 2026. Application requirements and Article 13 coordination remain subject to national review; no filing or guaranteed timeline claimed.",
+      "status": "Retrieved; national reconciliation required"
+    },
+    {
+      "url": "https://www.eurocontrol.int/service/european-ais-database",
+      "observed": "EAD Basic remains for general purposes and prohibited for operational use. Contracted services have separate access, rights and validation requirements. No account or agreement created.",
+      "status": "Retrieved; research-only boundary retained"
+    }
+  ],
+  "limitations": [
+    "No complete authentic OJ amendment reconciliation",
+    "No qualified Luxembourg/Italy pack validation",
+    "No national source redistribution or training rights inferred",
+    "No current or historical flight permission inferred"
+  ]
+}

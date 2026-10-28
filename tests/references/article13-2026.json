@@ -1,0 +1,105 @@
+{
+  "purpose": "Independent preserved primary-source reference for Article 13 evidence requirements; not an assertion of currentness or qualified legal validation",
+  "passages": [
+    {
+      "id": "easa-uas-xml-2026:0d35166d3740:ERULES-1963177438-15488:b0005",
+      "source_id": "easa-uas-xml-2026",
+      "source_family": "eu-2019-947",
+      "document_version": "June 2026",
+      "source_checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "anchor": "ERULES-1963177438-15488:b0005",
+      "text": "2.Upon receipt of the application set out in paragraph 1, the competent authority of the Member State of intended operation shall assess it without undue delay and provide the competent authority of the Member State of registration and the UAS operator with a confirmation that the updated mitigation measures referred to in point (b) of paragraph 1 are satisfactory for the operation at the intended location. Upon receipt of that confirmation, the UAS operator may start the intended operation and the Member State of registration shall record the updated mitigation measures that the UAS operator has to apply in the operational authorisation issued in accordance with Article 12.",
+      "legal_status": "binding_legislation",
+      "source_url": "https://www.easa.europa.eu/en/downloads/137111/en",
+      "retrieved_at": "2026-10-27T17:52:51.434645+00:00",
+      "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026.",
+      "licence": {
+        "status": "Reproduction authorised with source acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "extraction_warning": "Consolidated reference text. Local anchor resolves in preserved XML; article applicability metadata may contain several dates. No earlier or future temporal applicability is inferred."
+    },
+    {
+      "id": "easa-uas-xml-2026:0d35166d3740:ERULES-1963177438-15488:b0006",
+      "source_id": "easa-uas-xml-2026",
+      "source_family": "eu-2019-947",
+      "document_version": "June 2026",
+      "source_checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "anchor": "ERULES-1963177438-15488:b0006",
+      "text": "3.When an UAS operator intends to conduct an operation in the ‘specific’ category for which a declaration has been made in accordance with paragraph 5 of Article 5, and which is intended to take place partially or entirely in the airspace of a Member State other than the Member State of registration, the UAS operator shall provide the competent authority of the Member State of the intended operation with a copy of the declaration submitted to the Member State of registration, as well as a copy of the confirmation of receipt and completeness.",
+      "legal_status": "binding_legislation",
+      "source_url": "https://www.easa.europa.eu/en/downloads/137111/en",
+      "retrieved_at": "2026-10-27T17:52:51.434645+00:00",
+      "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026.",
+      "licence": {
+        "status": "Reproduction authorised with source acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "extraction_warning": "Consolidated reference text. Local anchor resolves in preserved XML; article applicability metadata may contain several dates. No earlier or future temporal applicability is inferred."
+    },
+    {
+      "id": "easa-uas-xml-2026:0d35166d3740:ERULES-1963177438-15488:b0007",
+      "source_id": "easa-uas-xml-2026",
+      "source_family": "eu-2019-947",
+      "document_version": "June 2026",
+      "source_checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "anchor": "ERULES-1963177438-15488:b0007",
+      "text": "4.Where a UAS operator holding an LUC with privileges in accordance with point UAS.LUC.060 of the Annex intends to conduct an operation in the ‘specific category’ taking place partially or entirely in the airspace of a Member State other than the Member State of registration, the UAS operator shall provide the competent authority of the Member State of intended operation with the following information:",
+      "legal_status": "binding_legislation",
+      "source_url": "https://www.easa.europa.eu/en/downloads/137111/en",
+      "retrieved_at": "2026-10-27T17:52:51.434645+00:00",
+      "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026.",
+      "licence": {
+        "status": "Reproduction authorised with source acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "extraction_warning": "Consolidated reference text. Local anchor resolves in preserved XML; article applicability metadata may contain several dates. No earlier or future temporal applicability is inferred."
+    },
+    {
+      "id": "easa-uas-xml-2026:0d35166d3740:ERULES-1963177438-15488:b0008",
+      "source_id": "easa-uas-xml-2026",
+      "source_family": "eu-2019-947",
+      "document_version": "June 2026",
+      "source_checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "anchor": "ERULES-1963177438-15488:b0008",
+      "text": "(a)a copy of the term of approval received in accordance with point UAS.LUC.050 of the Annex; and",
+      "legal_status": "binding_legislation",
+      "source_url": "https://www.easa.europa.eu/en/downloads/137111/en",
+      "retrieved_at": "2026-10-27T17:52:51.434645+00:00",
+      "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026.",
+      "licence": {
+        "status": "Reproduction authorised with source acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "extraction_warning": "Consolidated reference text. Local anchor resolves in preserved XML; article applicability metadata may contain several dates. No earlier or future temporal applicability is inferred."
+    },
+    {
+      "id": "easa-uas-xml-2026:0d35166d3740:ERULES-1963177438-15488:b0009",
+      "source_id": "easa-uas-xml-2026",
+      "source_family": "eu-2019-947",
+      "document_version": "June 2026",
+      "source_checksum": "0d35166d374084346d6f4b3ac962102ef75d13963ab8d1d0360cb988ab85dc54",
+      "anchor": "ERULES-1963177438-15488:b0009",
+      "text": "(b)the location or locations of the intended operation in accordance with paragraph 1(b) of this Article.",
+      "legal_status": "binding_legislation",
+      "source_url": "https://www.easa.europa.eu/en/downloads/137111/en",
+      "retrieved_at": "2026-10-27T17:52:51.434645+00:00",
+      "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026.",
+      "licence": {
+        "status": "Reproduction authorised with source acknowledgement, except otherwise stated",
+        "url": "https://www.easa.europa.eu/en/copyright-disclaimer",
+        "redistribution": "cleared_text_only",
+        "attribution": "Source: European Union Aviation Safety Agency, Easy Access Rules. Copyright EASA 2003-2026. EU legal documents: copyright European Union 1998-2026."
+      },
+      "extraction_warning": "Consolidated reference text. Local anchor resolves in preserved XML; article applicability metadata may contain several dates. No earlier or future temporal applicability is inferred."
+    }
+  ]
+}

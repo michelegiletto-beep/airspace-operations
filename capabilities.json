@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "release": "0.1.0-rc.1",
+  "release": "0.2.0-rc.1",
   "stable_release": false,
   "features": [
     {
@@ -141,7 +141,7 @@
       "status": "Implemented",
       "implementation": "api.py;frontend",
       "evidence": "tests/test_api.py;frontend/verification",
-      "limitation": "Generic versioned records; detailed battery charging/maintenance campaigns incomplete"
+      "limitation": "Detailed aircraft-specific maintenance and qualified work-order release added in 0.2; full charging/recurrence and real operator acceptance remain incomplete"
     },
     {
       "capability": "CP-SAT scheduling and separately implemented verifier",
@@ -158,11 +158,11 @@
       "limitation": "SQLite concurrency tested; PostgreSQL must be separately verified"
     },
     {
-      "capability": "Internal dispatch release and actual flight execution",
-      "status": "Not Implemented",
-      "implementation": "assess_dispatch is advisory only",
-      "evidence": "tests/test_operations.py",
-      "limitation": "Reservation does not grant release; aircraft command capability absent by design"
+      "capability": "Accountable internal dispatch release and pilot acknowledgement",
+      "status": "Verified",
+      "implementation": "backend/airspace/dispatch.py;coordination_api.py",
+      "evidence": "tests/test_dispatch.py;tests/test_postgres_coordination.py",
+      "limitation": "Provider activation and actual execution remain separate and not performed; no aircraft command integration"
     },
     {
       "capability": "Read-only authorised telemetry import and deterministic freshness",
@@ -261,6 +261,62 @@
       "implementation": "SPECIFICATION.md;REQUIREMENTS_TRACEABILITY.csv",
       "evidence": "release-evidence/release-gates.json",
       "limitation": "Candidate is substantial engineering implementation; baseline remains unmet in documented areas"
+    },
+    {
+      "capability": "Local generative LLM orchestration of actual specialist tools",
+      "status": "Verified",
+      "implementation": "backend/airspace/orchestration.py;worker.py",
+      "evidence": "release-evidence/v0.2.0-rc.1/actual-ui-workflow.json;causal-comparison.json;tests/test_orchestration.py",
+      "limitation": "Two source-title proxy questions; no legal-QA quality or speed advantage established; independent review required"
+    },
+    {
+      "capability": "Reusable domain-neutral multiagentic core",
+      "status": "Verified",
+      "implementation": "backend/systemlab_agentic;airspace/orchestration.py",
+      "evidence": "tests/test_orchestration.py;docs/multiagentic-contract-mapping.md",
+      "limitation": "Fresh shared implementation aligned with the in-house programme; no transferred domain qualification"
+    },
+    {
+      "capability": "Pause, resume, cancellation and revocation-safe model workflow",
+      "status": "Verified",
+      "implementation": "backend/airspace/orchestration.py;coordination_api.py;worker.py",
+      "evidence": "tests/test_revision_integration.py;tests/test_orchestration.py",
+      "limitation": "Cooperative inference cancellation; process isolation/hard preemption remains deployment work"
+    },
+    {
+      "capability": "Owned animated companion presentation runtime",
+      "status": "Verified",
+      "implementation": "frontend/public/vendor/systemlab-companion;frontend/src",
+      "evidence": "frontend/verification/0.2.0-rc.1;publication/media",
+      "limitation": "Existing five byte-identical presentation files; reserved rights; WebGL activation, reduced motion and static fallback are separate from inference"
+    },
+    {
+      "capability": "Aircraft-specific maintenance, completion evidence and independent release",
+      "status": "Verified",
+      "implementation": "backend/airspace/fleet.py;coordination_api.py",
+      "evidence": "tests/test_fleet.py;tests/test_revision_integration.py",
+      "limitation": "Intervals and limitations come from actual operator/aircraft evidence; no universal defaults"
+    },
+    {
+      "capability": "Constrained maintenance scheduler and separate verifier",
+      "status": "Verified",
+      "implementation": "backend/airspace/fleet.py",
+      "evidence": "tests/test_fleet.py",
+      "limitation": "Requires real technician/facility/task inputs; proposed plan is not a serviceability release"
+    },
+    {
+      "capability": "European country segments, handovers and Article 13 instrument distinctions",
+      "status": "Verified",
+      "implementation": "backend/airspace/europe.py;tests/references/article13-2026.json",
+      "evidence": "tests/test_europe.py;docs/fleet-and-cross-border.md",
+      "limitation": "50 geographical registrations are not 50 validated legal packs; STS/LUC documented host provision differs from operational-authorisation confirmation"
+    },
+    {
+      "capability": "Bilateral aircraft sharing and physical global reservation ledger",
+      "status": "Verified",
+      "implementation": "backend/airspace/sharing.py;planning.py;storage.py",
+      "evidence": "tests/test_sharing.py;tests/test_postgres_coordination.py",
+      "limitation": "Consent is not transfer of operational permission; PostgreSQL concurrency result is recorded separately"
     }
   ]
 }

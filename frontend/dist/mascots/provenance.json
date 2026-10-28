@@ -1,0 +1,21 @@
+{
+  "owner": "Michele Giletto",
+  "permission": "Owner explicitly authorised reuse of existing owned mascots for this application in the current task.",
+  "licence": "Reserved proprietary rights; excluded from Apache-2.0 grant",
+  "assets": [
+    {
+      "file": "indigo.webp",
+      "original_workspace_path": "public/assets/agent-indigo.webp",
+      "sha256": "f9b5f823f7de8e046608166a22ed93b8a8148a61f329da9282f4fe932003e3e1",
+      "bytes": 35496,
+      "transformation": "None. Original image copied byte-for-byte; UI motion is implemented separately in CSS."
+    },
+    {
+      "file": "coral.webp",
+      "original_workspace_path": "public/assets/reasoning-companion.webp",
+      "sha256": "37b2a36c2d8829af8942da772f79ae8c1ad4d0a528fb974487577298c969e432",
+      "bytes": 30036,
+      "transformation": "None. Original image copied byte-for-byte; UI motion is implemented separately in CSS."
+    }
+  ]
+}

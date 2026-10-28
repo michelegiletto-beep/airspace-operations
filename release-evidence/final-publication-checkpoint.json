@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-27T19:11:52.857494+00:00",
+  "public_repository": "https://github.com/michelegiletto-beep/airspace-operations",
+  "verified_main_commit": "0d0480e1112d765510e14e8e0cc81a1f9564b749",
+  "release_tag_unchanged": "921996c4db20c449b21dcd03bd21f438911eed62",
+  "method": "Unauthenticated public git pull --ff-only and text comparison against18 prepared publication files",
+  "files": [
+    "HANDOVER.md",
+    "STATUS.md",
+    "SOURCE_REGISTER.md",
+    "RELEASE_ERRATA.md",
+    "docs/domain-rules.md",
+    "publication/README.md",
+    "publication/status.json",
+    "publication/site-project.html",
+    "publication/site-project.css",
+    "scripts/verify_site_publication.py",
+    "release-evidence/github-clean-source-verification.json",
+    "release-evidence/github-source-public-verification.json",
+    "release-evidence/github-release-public-verification.json",
+    "release-evidence/huggingface-model-public-verification.json",
+    "release-evidence/huggingface-dataset-public-verification.json",
+    "release-evidence/system-lab-public-verification.json",
+    "release-evidence/standalone-archive-verification.json",
+    "release-evidence/final-handover-review.json"
+  ],
+  "missing": [],
+  "mismatches": [],
+  "frozen_zip_sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+  "product_test_suite_repeated": false,
+  "reason": "Documentation and public-verification script only; product code and archive unchanged"
+}

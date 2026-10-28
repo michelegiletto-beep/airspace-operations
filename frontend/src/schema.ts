@@ -20,18 +20,25 @@ export const kinds: Record<string, Kind> = {
   stakeholder: { id: 'stakeholder', label: 'Stakeholders', singular: 'stakeholder record', empty: 'Add verified authority, ANSP, provider and consultant contacts with provenance. External correspondence requires scoped authorisation.', fields: [jurisdiction, { key: 'organisation', label: 'Organisation', required: true }, { key: 'responsibility', label: 'Responsibility / engagement scope', type: 'textarea', required: true }, { key: 'contact_source', label: 'Verified contact source' }, { key: 'owner', label: 'Engagement owner' }, { key: 'deadline', label: 'Next deadline (ISO 8601)' }] },
   commercial: { id: 'commercial', label: 'Deployment scenarios', singular: 'deployment scenario', empty: 'Add documented costs, capacity and requirements. Forecasts remain scenarios and missing financial inputs remain missing.', fields: [jurisdiction, { key: 'site_id', label: 'Candidate site ID' }, { key: 'currency', label: 'ISO currency code' }, { key: 'cost_per_mission', label: 'Variable cost per mission', type: 'number' }, { key: 'revenue_per_mission', label: 'Revenue assumption per mission', type: 'number' }, { key: 'fixed_cost', label: 'Fixed cost per period', type: 'number' }, { key: 'missions', label: 'Mission count assumption per period', type: 'number' }, { key: 'assumptions', label: 'Facts, assumptions, units, dates and uncertainty', type: 'textarea', required: true }, { key: 'blockers', label: 'Regulatory and evidence blockers', type: 'textarea' }] },
 };
+Object.assign(kinds, {
+ maintenance_program:{id:'maintenance_program',label:'Maintenance programmes',singular:'maintenance programme',empty:'Register source-defined aircraft maintenance requirements.',fields:[{key:'program',label:'Controlled programme snapshot (JSON)',type:'json',required:true},linked]},
+ country_review:{id:'country_review',label:'Country reviews',singular:'country review',empty:'Record actual national-source scope before requesting review.',fields:[{key:'country_review',label:'Country applicability and source snapshot (JSON)',type:'json',required:true},linked]},
+ country_instrument:{id:'country_instrument',label:'Country instruments',singular:'country instrument',empty:'Record actual authority instruments or documented operator submissions with their country-specific scope.',fields:[{key:'instrument',label:'Source instrument or operator submission snapshot (JSON)',type:'json',required:true,help:'host_declaration_submission and luc_host_notification require actual recipient_country, provided_at and provision evidence; no host-authority response is implied.'},linked]},
+});
 export interface Workspace { id: string; label: string; code: string; description: string; kinds: string[] }
 export const workspaces: Workspace[] = [
-  { id: 'operations', label: 'Operations', code: '01', description: 'Proposed missions, recorded events and dispatch prerequisites.', kinds: ['mission', 'alert'] },
+  { id: 'operations', label: 'Mission Control', code: '01', description: 'Plan intended operations, connect resources and keep every readiness decision traceable.', kinds: ['mission', 'alert'] },
   { id: 'scheduling', label: 'Scheduling', code: '02', description: 'Constraint-based proposals with a separate verification gate.', kinds: ['mission'] },
-  { id: 'airspace', label: 'Airspace', code: '03', description: 'Candidate sites, routes and spatial evidence.', kinds: ['site', 'route', 'stakeholder'] },
+  { id: 'airspace', label: 'Airspace & Sites', code: '03', description: 'Build your operating geography with proposed sites, route geometry and source-linked screening.', kinds: ['site', 'route', 'stakeholder'] },
   { id: 'authorisations', label: 'Authorisations', code: '04', description: 'Controlled cases and distinct permission instruments.', kinds: ['case', 'permission', 'review_task'] },
   { id: 'safety', label: 'Safety Evidence', code: '05', description: 'Source-linked requirements, evidence and controlled procedures.', kinds: ['requirement', 'evidence', 'procedure'] },
   { id: 'library', label: 'Regulatory Library', code: '06', description: 'Versioned primary sources and grounded retrieval.', kinds: [] },
   { id: 'incidents', label: 'Incidents', code: '07', description: 'Command ownership, verified facts and approved procedures.', kinds: ['incident', 'procedure'] },
-  { id: 'fleet', label: 'Fleet and Personnel', code: '08', description: 'Configuration baselines, availability and qualifications.', kinds: ['aircraft', 'personnel', 'qualification'] },
-  { id: 'commercial', label: 'Deployment Planning', code: '09', description: 'Documented deployment scenarios and operating dependencies.', kinds: ['commercial', 'stakeholder'] },
-  { id: 'administration', label: 'Administration', code: '10', description: 'Connector status and the organisation audit trail.', kinds: [] },
+  { id: 'fleet', label: 'Fleet & Personnel', code: '08', description: 'Manage aircraft baselines, maintenance work, qualifications and accountable mission teams.', kinds: ['aircraft', 'personnel', 'qualification'] },
+  { id: 'crossborder', label: 'European Coordination', code: '09', description: 'Review country segments and handovers, and manage explicit bilateral aircraft-sharing agreements.', kinds: [] },
+  { id: 'agents', label: 'Agent Workflows', code: '10', description: 'Coordinate bounded specialist work through scoped tools, durable state and reviewable receipts.', kinds: [] },
+  { id: 'commercial', label: 'Deployment Planning', code: '11', description: 'Documented deployment scenarios and operating dependencies.', kinds: ['commercial', 'stakeholder'] },
+  { id: 'administration', label: 'Administration', code: '12', description: 'Connector status and the organisation audit trail.', kinds: [] },
 ];
 export const states = ['Draft', 'Missing Evidence', 'Under Review', 'Submitted', 'Approved', 'Rejected', 'Expired', 'Suspended', 'Superseded'];
 export const transitions: Record<string, string[]> = {
@@ -41,6 +48,7 @@ export const transitions: Record<string, string[]> = {
 };
 const writers = ['administrator', 'regulatory', 'reviewer', 'planner', 'pilot', 'fleet_manager', 'incident_coordinator', 'analyst'];
 const kindRoles: Record<string, string[]> = {
+  maintenance_program:['fleet_manager','reviewer'],maintenance_work_order:['fleet_manager'],country_review:['regulatory','reviewer'],country_instrument:['regulatory','reviewer'],
   permission: ['regulatory', 'reviewer'], case: ['regulatory', 'reviewer'], evidence: ['regulatory', 'reviewer', 'fleet_manager', 'planner'],
   aircraft: ['fleet_manager'], qualification: ['fleet_manager', 'reviewer'], personnel: ['fleet_manager'], incident: ['incident_coordinator', 'pilot'],
   procedure: ['regulatory', 'reviewer'], commercial: ['analyst'], mission: ['planner', 'pilot'], schedule: ['planner'], telemetry: [], alert: [], approval: [], connector: ['administrator'],
@@ -59,6 +67,7 @@ export function formData(kind: Kind, values: Record<string, string>, extra: Reco
   }
   return data;
 }
+
 
 
 

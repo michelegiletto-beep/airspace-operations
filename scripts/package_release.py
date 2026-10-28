@@ -14,7 +14,7 @@ import zipfile
 from datetime import datetime, timezone
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='0.1.0-rc.1'
+VERSION=re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT/'backend/airspace/__init__.py').read_text()).group(1)
 EXCLUDED={'.git','.venv','node_modules','__pycache__','.pytest_cache','.hypothesis','runtime','release','work','local-research','snapshots','.cache'}
 SECRET_PATTERNS=[re.compile(rb'\b(?:ghp|gho|ghu|ghs)_[A-Za-z0-9]{30,}\b'),re.compile(rb'\bhf_[A-Za-z0-9]{30,}\b'),re.compile(rb'\bsk-(?:proj-)?[A-Za-z0-9_-]{35,}\b'),re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')]
 
@@ -32,8 +32,8 @@ def source_files():
         if rel.parts[:2]==('models','pretrained'):
             if file.name not in {'provenance.json','LICENSE','LICENSE.txt','README.md'}: continue
         if rel.parts[0]=='sources' and not (file.suffix in {'.json','.md'}): continue
-        if len(rel.parts)==1 and not (file.suffix in top_extensions or file.name in {'LICENSE','NOTICE','Dockerfile','.env.example','.gitignore','.dockerignore'}): continue
-        if rel.parts[0] in {'work','deploy','backend','frontend','tests','scripts','docs','sources','models','release-evidence','migrations','publication'} or len(rel.parts)==1:
+        if len(rel.parts)==1 and not (file.suffix in top_extensions or file.name in {'LICENSE','NOTICE','Dockerfile','.env.example','.gitignore','.dockerignore','.gitattributes'}): continue
+        if rel.parts[0] in {'.github','LICENSES','work','deploy','backend','frontend','tests','scripts','docs','sources','models','release-evidence','migrations','publication'} or len(rel.parts)==1:
             if file.name.endswith('.tsbuildinfo'): continue
             yield file,rel
 
@@ -56,18 +56,33 @@ def build_metadata():
         name=path.split('node_modules/')[-1];version=item.get('version','unknown');licence=item.get('license','NOASSERTION')
         components.append({'type':'library','name':name,'version':version,'purl':f'pkg:npm/{name}@{version}','scope':'optional' if item.get('dev') else 'required','properties':[{'name':'upstream-licence-metadata','value':str(licence)}]})
         notices.append(f'| npm | {name} | {version} | {licence} |')
+    owned=ROOT/'frontend/public/vendor/systemlab-companion'
+    for relative in ('mascot-renderer.mjs','motion-core.mjs','catalog.mjs','assets/originals/mascotte_01_indaco.png','assets/originals/mascotte_06_coral_compact.png'):
+        path=owned/relative
+        components.append({'type':'file','name':'System Lab companion presentation runtime / '+relative,
+            'hashes':[{'alg':'SHA-256','content':hashlib.sha256(path.read_bytes()).hexdigest()}],
+            'licenses':[{'license':{'name':'LicenseRef-SystemLab-Assets — all rights reserved; see LICENSES/LicenseRef-SystemLab-Assets.txt'}}],
+            'properties':[{'name':'ownership','value':'Existing System Lab owned presentation asset; not relicensed under Apache-2.0'},
+                          {'name':'distribution-scope','value':'Presentation only; no broker, account, trading or aircraft command integration'}]})
+    notices.append('| System Lab | Existing companion renderer and character assets | SHA-256 in SBOM and owned-runtime-assets.json | All rights reserved; LICENSES/LicenseRef-SystemLab-Assets.txt |')
     sbom={'bomFormat':'CycloneDX','specVersion':'1.6','version':1,'metadata':{'timestamp':datetime.now(timezone.utc).isoformat(),'component':{'type':'application','name':'System Lab Airspace Operations','version':VERSION}},'components':components}
     (ROOT/'SBOM.cdx.json').write_text(json.dumps(sbom,indent=2),encoding='utf-8')
     (ROOT/'THIRD_PARTY_NOTICES.md').write_text('# Third-party notices\n\nDependency metadata is recorded below; original licences remain controlling. Python dependencies are installed from the hash-locked requirements. The frontend bundle includes production npm code. Dev tools are identified in the SBOM. No source document or pretrained weight is relicensed by the project code licence. Models and legal extracts have separate provenance and rights records. NOASSERTION requires deployment licence review before redistribution of those third-party packages themselves.\n\n| Ecosystem | Component | Version | Upstream licence metadata |\n|---|---|---|---|\n'+'\n'.join(notices)+'\n',encoding='utf-8')
 
 
 def main():
-    gate=json.loads((ROOT/'release-evidence/release-gates.json').read_text())
+    gate=json.loads((ROOT/'release-evidence'/VERSION/'release-gates.json').read_text())
     if not gate.get('engineering_checks_passed'): raise SystemExit('Engineering gates have not passed; packaging blocked')
+    if gate.get('version') != VERSION: raise SystemExit('Release gates belong to another software version')
     if not (ROOT/'frontend/dist/index.html').exists(): raise SystemExit('Build the interface first')
     build_metadata()
     output=ROOT/'release';output.mkdir(exist_ok=True)
     package=output/f'System-Lab-Airspace-Operations-{VERSION}.zip'
+    status_path=ROOT/'publication/status.json'
+    if package.exists() and status_path.exists():
+        publication=json.loads(status_path.read_text())
+        if publication.get('release')==VERSION and 'Published' in publication.get('states_reached',[]):
+            raise SystemExit('Published release bytes are frozen; choose a new software version')
     files=list(source_files());failures=[];manifest={}
     for source,rel in files:
         data=source.read_bytes()

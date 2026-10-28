@@ -1,0 +1,67 @@
+{
+  "owner": "Michele Giletto",
+  "rights": "Reserved proprietary rights; excluded from the Apache-2.0 code licence",
+  "authorization": "The owner explicitly authorised reuse of the existing in-house animation technology and owned mascot assets for Airspace Operations in this task. No general sublicence is granted.",
+  "source_package_version": null,
+  "source_directory": "C:\\Users\\gilet\\AppData\\Local\\Programs\\Multiagentic Platform\\1.1.25-rc.31-91768008c6\\public\\companion",
+  "source_form": "Already distributed, readable browser ESM and original PNG images. No assertion of a private source build or minification.",
+  "copied_at": "2026-10-28T10:24:29.602730+00:00",
+  "files": [
+    {
+      "file": "mascot-renderer.mjs",
+      "bytes": 16003,
+      "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b",
+      "transformation": "None; byte-identical distributed browser presentation resource"
+    },
+    {
+      "file": "motion-core.mjs",
+      "bytes": 2487,
+      "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb",
+      "transformation": "None; byte-identical distributed browser presentation resource"
+    },
+    {
+      "file": "catalog.mjs",
+      "bytes": 53579,
+      "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c",
+      "transformation": "None; byte-identical distributed browser presentation resource"
+    },
+    {
+      "file": "assets/originals/mascotte_01_indaco.png",
+      "bytes": 1274382,
+      "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a",
+      "transformation": "None; byte-identical distributed browser presentation resource"
+    },
+    {
+      "file": "assets/originals/mascotte_06_coral_compact.png",
+      "bytes": 1138958,
+      "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284",
+      "transformation": "None; byte-identical distributed browser presentation resource"
+    }
+  ],
+  "dependencies": "Native browser Canvas, WebGL, Image, requestAnimationFrame, media queries and observers. Only the two other copied ESM files are imported. No npm dependencies or external service requests.",
+  "exposed_asset_ids": [
+    "mascot-01",
+    "mascot-06"
+  ],
+  "network_boundary": "Only same-origin static module and selected mascot image requests; no operational API, account, broker, model, telemetry or external communication integration.",
+  "catalogue_note": "The byte-identical catalogue contains metadata and unused Italian presentation copy from the source distribution. The Airspace adapter uses only the two declared mascot IDs. The original copy is not rendered.",
+  "adapter": "Newly authored Apache-2.0 React adapter, separate from these reserved files. Reduced-motion and application pause force upstream motion off.",
+  "installation_directory_identifier": "1.1.25-rc.31-91768008c6",
+  "version_evidence": "Installation-directory identifier is separate from package version. Neither observed package version is asserted as a synchronously verified version at the copy event.",
+  "source_package_version_status": "Not verified synchronously at copy time. The source installation was updating in place; exact copied-file hashes are the primary identity.",
+  "source_package_version_observations": [
+    {
+      "version": "1.1.25-rc.50",
+      "observer": "Release owner",
+      "observed_at": null,
+      "note": "Earlier package.json observation reported by the release owner; exact observation timestamp was not recorded."
+    },
+    {
+      "version": "1.1.25-rc.51",
+      "observer": "Frontend asset review",
+      "observed_at": "2026-10-28T10:33:35.837094+00:00",
+      "package_metadata_sha256": "02a5ba9fd219d0f9f01b2829138af3ece607b5d34bbc1de9d38927fd30a9d2ab",
+      "note": "Later read of only the package version; the five source files still matched the frozen copied-file hashes."
+    }
+  ]
+}

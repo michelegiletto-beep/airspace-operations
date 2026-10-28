@@ -1,0 +1,576 @@
+{
+  "run_id": "explicit-shall-20261027-4",
+  "created_at": "2026-10-27T18:04:34.485983+00:00",
+  "status": "Training and held-out machine-agreement evaluation completed",
+  "promotion_status": "Experimental \u2014 Not promoted",
+  "task": "Classify the literal presence of shall in real source passages for reviewer routing; no assertion of legal obligation or dispatch authority",
+  "architecture": {
+    "type": "Frozen pretrained MiniLM encoder + trained two-layer ReLU MLP",
+    "input_size": 384,
+    "hidden_size": 32,
+    "outputs": [
+      "no_explicit_shall",
+      "explicit_shall"
+    ],
+    "trainable_parameters": 12386
+  },
+  "seed": 20261027,
+  "epochs_max": 120,
+  "dataset": {
+    "input_corpus_checksum": "fa0a89fbda88a856de8e5565130bfde6c504b7c54b9c455c7c272eb51f5f28a7",
+    "selected_checksum": "686d1fce32cb585d35ae257b922b82bdf6177e7a3da6c84eb56ffe48663353e2",
+    "annotations_checksum": "65c621af95fde10a9965f4cf7dfeb81a883af7d9a000f15fbe856c600c2db591",
+    "rows": 288,
+    "accepted_rows": 246,
+    "quarantined_rows": 42,
+    "split_label_counts": {
+      "train": {
+        "no_explicit_shall": 42,
+        "explicit_shall": 40
+      },
+      "validation": {
+        "no_explicit_shall": 45,
+        "explicit_shall": 42
+      },
+      "test": {
+        "no_explicit_shall": 36,
+        "explicit_shall": 41
+      }
+    },
+    "split_policy": {
+      "eu-2019-947": "train",
+      "eu-2019-945": "validation",
+      "eu-2021-664": "test"
+    },
+    "exact_text_overlap": false,
+    "human_reviewed_rows": 0,
+    "ground_truth": false,
+    "stratification": "Deterministic explicit-modal marker used for balanced sampling only",
+    "selection_bias": "Source-span validation removes inconsistent teacher labels; metrics are conditioned on that filter"
+  },
+  "base_models": {
+    "teacher-base": {
+      "repository": "google/flan-t5-base",
+      "licence": "Apache-2.0",
+      "max_tokens": 512,
+      "revision": "7bcac572ce56db69c1ea7c8af255c5d7c9672fc2",
+      "retrieved_at": "2026-10-27T18:01:32.568868+00:00",
+      "download_mode": "Explicit public model file download; no hosted inference",
+      "files": {
+        "config.json": "7c1853dbfa0e4aac093eb109a358b6ab25fe86b7c15185a91322f0ed26f0f940",
+        "generation_config.json": "f5a1c7e2be8092018d8835128987edf0111637dd98e90599cc80310fef75d95a",
+        "model.safetensors": "1dfb70afdcedceb9f9fae2f9b68e004ad934361fb35b9b2bd50b45ea90790fc8",
+        "README.md": "b6fb54f6831f3677f537cdb83d6f822e8705d203c605a9ec4c8192bda5a89828",
+        "special_tokens_map.json": "5c87151ef0f72a99d1f766a4c418bd2a1f90aaa30a8e22fe5eca9641daebb64f",
+        "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+        "tokenizer.json": "fe2ebbbbde2985be723e0ce18217853e4020c5e9d35bd07be2c27ab9d3ead57a",
+        "tokenizer_config.json": "4c55124402e4ce48c7125d04b9af152a125eda9e7c80829f8f99f2ec69f3f68d"
+      },
+      "remote_code": false,
+      "weight_serialisation": "safetensors",
+      "review_status": "Upstream licence metadata checked; experimental downstream use"
+    },
+    "encoder": {
+      "repository": "sentence-transformers/all-MiniLM-L6-v2",
+      "licence": "Apache-2.0",
+      "max_tokens": 256,
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "retrieved_at": "2026-10-27T17:51:07.224872+00:00",
+      "download_mode": "Explicit public model file download; no hosted inference",
+      "files": {
+        "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+        "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "README.md": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+        "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "remote_code": false,
+      "weight_serialisation": "safetensors",
+      "review_status": "Upstream licence metadata checked; experimental downstream use"
+    }
+  },
+  "experiments": [
+    {
+      "hidden_size": 16,
+      "validation_loss": 0.5933386087417603,
+      "validation": {
+        "samples": 87,
+        "accuracy": 0.6896551724137931,
+        "accuracy_wilson_95": [
+          0.5861598330932992,
+          0.7771098583256103
+        ],
+        "brier_score": 0.2013220955266615,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            20,
+            25
+          ],
+          [
+            2,
+            40
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.692841112613678,
+          "validation_loss": 0.6890593767166138
+        },
+        {
+          "epoch": 11,
+          "training_loss": 0.5085439682006836,
+          "validation_loss": 0.6224028468132019
+        },
+        {
+          "epoch": 21,
+          "training_loss": 0.26821205019950867,
+          "validation_loss": 0.598075270652771
+        },
+        {
+          "epoch": 31,
+          "training_loss": 0.11011441051959991,
+          "validation_loss": 0.6874773502349854
+        },
+        {
+          "epoch": 41,
+          "training_loss": 0.03978976234793663,
+          "validation_loss": 0.8144419193267822
+        },
+        {
+          "epoch": 51,
+          "training_loss": 0.016593359410762787,
+          "validation_loss": 0.9279944896697998
+        },
+        {
+          "epoch": 61,
+          "training_loss": 0.009028428234159946,
+          "validation_loss": 1.0073679685592651
+        },
+        {
+          "epoch": 71,
+          "training_loss": 0.006007345858961344,
+          "validation_loss": 1.0619702339172363
+        },
+        {
+          "epoch": 81,
+          "training_loss": 0.004508586600422859,
+          "validation_loss": 1.1031149625778198
+        },
+        {
+          "epoch": 91,
+          "training_loss": 0.003625147510319948,
+          "validation_loss": 1.1330646276474
+        },
+        {
+          "epoch": 101,
+          "training_loss": 0.0030366696882992983,
+          "validation_loss": 1.1578861474990845
+        },
+        {
+          "epoch": 111,
+          "training_loss": 0.0026074338238686323,
+          "validation_loss": 1.1802140474319458
+        },
+        {
+          "epoch": 120,
+          "training_loss": 0.002305594738572836,
+          "validation_loss": 1.1964445114135742
+        }
+      ]
+    },
+    {
+      "hidden_size": 32,
+      "validation_loss": 0.5872495174407959,
+      "validation": {
+        "samples": 87,
+        "accuracy": 0.7241379310344828,
+        "accuracy_wilson_95": [
+          0.6222603074671171,
+          0.8070584187552303
+        ],
+        "brier_score": 0.19735706296614472,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            23,
+            22
+          ],
+          [
+            2,
+            40
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.6977648138999939,
+          "validation_loss": 0.6891876459121704
+        },
+        {
+          "epoch": 11,
+          "training_loss": 0.45293375849723816,
+          "validation_loss": 0.6009208559989929
+        },
+        {
+          "epoch": 21,
+          "training_loss": 0.17402362823486328,
+          "validation_loss": 0.6379116773605347
+        },
+        {
+          "epoch": 31,
+          "training_loss": 0.045299552381038666,
+          "validation_loss": 0.7945361137390137
+        },
+        {
+          "epoch": 41,
+          "training_loss": 0.012410221621394157,
+          "validation_loss": 0.9726599454879761
+        },
+        {
+          "epoch": 51,
+          "training_loss": 0.0052085923962295055,
+          "validation_loss": 1.0925161838531494
+        },
+        {
+          "epoch": 61,
+          "training_loss": 0.0031382841989398003,
+          "validation_loss": 1.1464033126831055
+        },
+        {
+          "epoch": 71,
+          "training_loss": 0.0023082324769347906,
+          "validation_loss": 1.1868383884429932
+        },
+        {
+          "epoch": 81,
+          "training_loss": 0.0018741171807050705,
+          "validation_loss": 1.213912010192871
+        },
+        {
+          "epoch": 91,
+          "training_loss": 0.0015956301940605044,
+          "validation_loss": 1.2383530139923096
+        },
+        {
+          "epoch": 101,
+          "training_loss": 0.001392831327393651,
+          "validation_loss": 1.255204439163208
+        },
+        {
+          "epoch": 111,
+          "training_loss": 0.0012329339515417814,
+          "validation_loss": 1.2708011865615845
+        },
+        {
+          "epoch": 120,
+          "training_loss": 0.0011127894977107644,
+          "validation_loss": 1.283341407775879
+        }
+      ]
+    },
+    {
+      "hidden_size": 64,
+      "validation_loss": 0.5936842560768127,
+      "validation": {
+        "samples": 87,
+        "accuracy": 0.7126436781609196,
+        "accuracy_wilson_95": [
+          0.6101583136540148,
+          0.7971440676338534
+        ],
+        "brier_score": 0.20078640029488437,
+        "confusion_rows_actual_columns_predicted": [
+          [
+            21,
+            24
+          ],
+          [
+            1,
+            41
+          ]
+        ],
+        "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.6924728155136108,
+          "validation_loss": 0.6833390593528748
+        },
+        {
+          "epoch": 11,
+          "training_loss": 0.31457215547561646,
+          "validation_loss": 0.5956079959869385
+        },
+        {
+          "epoch": 21,
+          "training_loss": 0.05574176833033562,
+          "validation_loss": 0.8333033323287964
+        },
+        {
+          "epoch": 31,
+          "training_loss": 0.007081806659698486,
+          "validation_loss": 1.1417248249053955
+        },
+        {
+          "epoch": 41,
+          "training_loss": 0.0018363831331953406,
+          "validation_loss": 1.3577193021774292
+        },
+        {
+          "epoch": 51,
+          "training_loss": 0.0009209029376506805,
+          "validation_loss": 1.446204662322998
+        },
+        {
+          "epoch": 61,
+          "training_loss": 0.0006456889677792788,
+          "validation_loss": 1.4899864196777344
+        },
+        {
+          "epoch": 71,
+          "training_loss": 0.000530231453012675,
+          "validation_loss": 1.513245701789856
+        },
+        {
+          "epoch": 81,
+          "training_loss": 0.00046741534606553614,
+          "validation_loss": 1.5281327962875366
+        },
+        {
+          "epoch": 91,
+          "training_loss": 0.000424702389864251,
+          "validation_loss": 1.5432382822036743
+        },
+        {
+          "epoch": 101,
+          "training_loss": 0.00039139026193879545,
+          "validation_loss": 1.5544419288635254
+        },
+        {
+          "epoch": 111,
+          "training_loss": 0.0003627485712058842,
+          "validation_loss": 1.5646190643310547
+        },
+        {
+          "epoch": 120,
+          "training_loss": 0.00033986635389737785,
+          "validation_loss": 1.573535442352295
+        }
+      ]
+    }
+  ],
+  "evaluation": {
+    "student": {
+      "samples": 77,
+      "accuracy": 0.8181818181818182,
+      "accuracy_wilson_95": [
+        0.7176351000395189,
+        0.8884884798995225
+      ],
+      "brier_score": 0.152995200182148,
+      "confusion_rows_actual_columns_predicted": [
+        [
+          26,
+          10
+        ],
+        [
+          4,
+          37
+        ]
+      ],
+      "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+    },
+    "deterministic_modal": {
+      "samples": 77,
+      "accuracy": 1.0,
+      "accuracy_wilson_95": [
+        0.9524799113327793,
+        1.0000000000000002
+      ],
+      "brier_score": 0.0,
+      "confusion_rows_actual_columns_predicted": [
+        [
+          36,
+          0
+        ],
+        [
+          0,
+          41
+        ]
+      ],
+      "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+    },
+    "lexical_trained_linear": {
+      "samples": 77,
+      "accuracy": 0.6363636363636364,
+      "accuracy_wilson_95": [
+        0.5248199544762014,
+        0.7349472940691019
+      ],
+      "brier_score": 0.21835635303969367,
+      "confusion_rows_actual_columns_predicted": [
+        [
+          20,
+          16
+        ],
+        [
+          12,
+          29
+        ]
+      ],
+      "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+    },
+    "pretrained_prototype": {
+      "samples": 77,
+      "accuracy": 0.5844155844155844,
+      "accuracy_wilson_95": [
+        0.472898399364154,
+        0.6879098973543671
+      ],
+      "brier_score": 0.2775363497216964,
+      "confusion_rows_actual_columns_predicted": [
+        [
+          4,
+          32
+        ],
+        [
+          0,
+          41
+        ]
+      ],
+      "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+    },
+    "majority": {
+      "samples": 77,
+      "accuracy": 0.4675324675324675,
+      "accuracy_wilson_95": [
+        0.36029890673598886,
+        0.5778517483722723
+      ],
+      "brier_score": 0.5324675324675324,
+      "confusion_rows_actual_columns_predicted": [
+        [
+          36,
+          0
+        ],
+        [
+          41,
+          0
+        ]
+      ],
+      "meaning": "Agreement against unreviewed machine labels after source-span validation; not domain accuracy"
+    }
+  },
+  "failure_cases": [
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0005",
+      "source_anchor": "ERULES-1963177438-21043:b0005",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0014",
+      "source_anchor": "ERULES-1963177438-21046:b0014",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0025",
+      "source_anchor": "ERULES-1963177438-21043:b0025",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0007",
+      "source_anchor": "ERULES-1963177438-21046:b0007",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21069:b0010",
+      "source_anchor": "ERULES-1963177438-21069:b0010",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21058:b0011",
+      "source_anchor": "ERULES-1963177438-21058:b0011",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21066:b0001",
+      "source_anchor": "ERULES-1963177438-21066:b0001",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21043:b0023",
+      "source_anchor": "ERULES-1963177438-21043:b0023",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21058:b0009",
+      "source_anchor": "ERULES-1963177438-21058:b0009",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21050:b0008",
+      "source_anchor": "ERULES-1963177438-21050:b0008",
+      "machine_label": "no_explicit_shall",
+      "student_label": "explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21066:b0013",
+      "source_anchor": "ERULES-1963177438-21066:b0013",
+      "machine_label": "explicit_shall",
+      "student_label": "no_explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21059:b0006",
+      "source_anchor": "ERULES-1963177438-21059:b0006",
+      "machine_label": "explicit_shall",
+      "student_label": "no_explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21046:b0002",
+      "source_anchor": "ERULES-1963177438-21046:b0002",
+      "machine_label": "explicit_shall",
+      "student_label": "no_explicit_shall"
+    },
+    {
+      "passage_id": "easa-uspace-xml-2024:0db50106a4d5:ERULES-1963177438-21050:b0004",
+      "source_anchor": "ERULES-1963177438-21050:b0004",
+      "machine_label": "explicit_shall",
+      "student_label": "no_explicit_shall"
+    }
+  ],
+  "resources": {
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 2080",
+    "torch": "2.6.0+cu126",
+    "python": "3.13.1",
+    "teacher_seconds": 18.576603499997873,
+    "encoding_seconds": 0.6217308000195771,
+    "training_seconds": 1.144131799985189,
+    "total_seconds": 21.141158599988557
+  },
+  "artifact_checksum": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+  "promotion_blockers": [
+    "No qualified human-labelled evaluation",
+    "Single snapshot per source family; time/version holdout unexecuted",
+    "No established benefit over deterministic explicit-marker routing",
+    "No calibrated legal reliability",
+    "No operational records or operational prediction training",
+    "Retrieval quality and legal citation support need expert evaluation"
+  ]
+}

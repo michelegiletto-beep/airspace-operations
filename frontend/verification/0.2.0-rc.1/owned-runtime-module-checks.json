@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-28T10:33:20.890Z",
+  "scope": "Execution of actual copied presentation modules and stopped-motion math; no browser GPU, operational or performance claim",
+  "module_exports": [
+    "mountMascot",
+    "rendererDiagnostics"
+  ],
+  "selected_image_ids": [
+    "mascot-01",
+    "mascot-06"
+  ],
+  "off_motion_stable": true,
+  "no_account_storage_or_external_request_apis": true
+}

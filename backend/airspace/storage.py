@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from sqlalchemy import (JSON, Column, ForeignKey, Integer, MetaData, String, Table,
+from sqlalchemy import (JSON, Column, ForeignKey, Integer, MetaData, String, Table, inspect,
                         Text, UniqueConstraint, create_engine, event, select, update)
 
 metadata = MetaData()
@@ -25,6 +25,27 @@ jobs = Table("jobs", metadata, Column("id", String, primary_key=True), Column("o
 idempotency = Table("idempotency", metadata, Column("organisation_id", String, primary_key=True), Column("key", String, primary_key=True), Column("request_hash", String, nullable=False), Column("response", JSON, nullable=False))
 schema_versions = Table("schema_versions", metadata, Column("version", Integer, primary_key=True), Column("applied_at", String, nullable=False))
 reservations = Table("resource_reservations", metadata, Column("id", String, primary_key=True), Column("organisation_id", ForeignKey("organisations.id"), nullable=False), Column("schedule_id", ForeignKey("records.id"), nullable=False), Column("mission_id", String, nullable=False), Column("resource_kind", String, nullable=False), Column("resource_id", String, nullable=False), Column("start", String, nullable=False), Column("end", String, nullable=False), Column("state", String, nullable=False), UniqueConstraint("schedule_id", "mission_id", "resource_kind", "resource_id"))
+sharing_agreements = Table("sharing_agreements", metadata,
+    Column("id", String, primary_key=True),
+    Column("owner_organisation_id", ForeignKey("organisations.id"), nullable=False, index=True),
+    Column("operator_organisation_id", ForeignKey("organisations.id"), nullable=False, index=True),
+    Column("aircraft_id", ForeignKey("records.id"), nullable=False),
+    Column("version", Integer, nullable=False), Column("state", String, nullable=False),
+    Column("terms", JSON, nullable=False), Column("offer_actor_id", String, nullable=False),
+    Column("accepted_actor_id", String), Column("created_at", String, nullable=False), Column("updated_at", String, nullable=False))
+resource_locks = Table("resource_locks", metadata,
+    Column("resource_key", String, primary_key=True), Column("generation", Integer, nullable=False, default=0))
+fleet_reservations = Table("fleet_reservations", metadata,
+    Column("id", String, primary_key=True),
+    Column("owner_organisation_id", ForeignKey("organisations.id"), nullable=False, index=True),
+    Column("operator_organisation_id", ForeignKey("organisations.id"), nullable=False, index=True),
+    Column("aircraft_id", ForeignKey("records.id"), nullable=False),
+    Column("agreement_id", ForeignKey("sharing_agreements.id")),
+    Column("schedule_id", ForeignKey("records.id"), nullable=False), Column("mission_id", String, nullable=False),
+    Column("owner_record_version", Integer), Column("flight_seconds", Integer),
+    Column("start", String, nullable=False), Column("end", String, nullable=False), Column("state", String, nullable=False),
+    UniqueConstraint("schedule_id", "mission_id", "aircraft_id"))
+CURRENT_SCHEMA_VERSION = 2
 
 
 def now() -> str:
@@ -54,10 +75,20 @@ class Store:
                 connection.execute("PRAGMA journal_mode=WAL")
 
     def migrate(self):
+        if inspect(self.engine).has_table("schema_versions"):
+            with self.engine.connect() as conn:
+                existing = set(conn.execute(select(schema_versions.c.version)).scalars())
+                if any(version > CURRENT_SCHEMA_VERSION for version in existing):
+                    raise ValueError("Database schema is newer than this software; use the matching release")
         metadata.create_all(self.engine)
         with self.engine.begin() as conn:
-            if not conn.execute(select(schema_versions)).first():
+            applied = set(conn.execute(select(schema_versions.c.version)).scalars())
+            if any(version > CURRENT_SCHEMA_VERSION for version in applied):
+                raise ValueError("Database schema is newer than this software; use the matching release")
+            if 1 not in applied:
                 conn.execute(schema_versions.insert().values(version=1, applied_at=now()))
+            if 2 not in applied:
+                conn.execute(schema_versions.insert().values(version=2, applied_at=now()))
 
     def append_audit(self, conn, tenant, actor, action, payload):
         # This atomic tenant-row update serialises chain writers on PostgreSQL and SQLite.

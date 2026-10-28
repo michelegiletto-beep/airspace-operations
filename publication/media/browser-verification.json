@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-28T10:55:18.391Z",
+  "actualEmptyOperationalWorkspace": true,
+  "actualPublicSourceResearchWorkflow": true,
+  "mobile": {
+    "scrollWidth": 390,
+    "title": "Mission Control · System Lab Airspace Operations",
+    "width": 390
+  },
+  "desktop": {
+    "buildScripts": [
+      "http://127.0.0.1:8787/assets/index-B-1bRLm-.js"
+    ],
+    "companions": [
+      {
+        "engine": "webgl-mesh-2.5d",
+        "runtime": "active"
+      },
+      {
+        "engine": "webgl-mesh-2.5d",
+        "runtime": "active"
+      }
+    ],
+    "scrollWidth": 1265,
+    "title": "Agent Workflows · System Lab Airspace Operations",
+    "viewportWidth": 1265
+  },
+  "console": [],
+  "scope": "Actual browser rendering, navigation, source-query trace and responsive layout. Not operational acceptance."
+}

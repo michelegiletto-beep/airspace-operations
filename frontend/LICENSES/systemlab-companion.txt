@@ -1,0 +1,12 @@
+System Lab owned companion assets and presentation runtime
+
+Copyright (c) 2026 Michele Giletto. All rights reserved.
+
+The existing files under public/vendor/systemlab-companion/ and the artwork under
+public/mascots/ retain reserved proprietary rights. The owner expressly authorised
+their reuse in System Lab Airspace Operations during this task. They are not
+relicensed under Apache-2.0 and no general sublicense for another product is granted.
+
+See public/vendor/systemlab-companion/NOTICE.md and provenance.json, and
+public/mascots/RIGHTS.md and provenance.json, for exact scope and source checksums.
+Newly authored React integration code remains separate from these reserved files.

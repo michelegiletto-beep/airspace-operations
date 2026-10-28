@@ -9,10 +9,12 @@ import subprocess
 import sys
 import tempfile
 import time
+import re
 from datetime import datetime, timezone
 
 ROOT=Path(__file__).resolve().parents[1]
-EVIDENCE=ROOT/'release-evidence'
+VERSION=re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT/'backend/airspace/__init__.py').read_text()).group(1)
+EVIDENCE=ROOT/'release-evidence'/VERSION
 
 
 def execute(name,command,cwd=ROOT,timeout=300):
@@ -31,17 +33,17 @@ def execute(name,command,cwd=ROOT,timeout=300):
 
 
 def main():
-    EVIDENCE.mkdir(exist_ok=True)
+    EVIDENCE.mkdir(parents=True,exist_ok=True)
     npm='npm.cmd' if os.name=='nt' else 'npm'
     checks={}
-    checks['python_tests']=execute('python-tests',[sys.executable,'-m','pytest','-q','--junitxml=release-evidence/pytest.xml','--cov=airspace','--cov-report=json:release-evidence/coverage.json','--cov-report=term'])
+    checks['python_tests']=execute('python-tests',[sys.executable,'-m','pytest','-q',f'--junitxml={EVIDENCE}/pytest.xml','--cov=airspace','--cov=systemlab_agentic',f'--cov-report=json:{EVIDENCE}/coverage.json','--cov-report=term'])
     checks['frontend_tests']=execute('frontend-tests',[npm,'test'],ROOT/'frontend')
     checks['frontend_build']=execute('frontend-build',[npm,'run','build'],ROOT/'frontend')
     checks['frontend_dependency_audit']=execute('frontend-dependency-audit',[npm,'audit','--json'],ROOT/'frontend')
     checks['python_dependency_audit']=execute('python-dependency-audit',[sys.executable,'-m','pip_audit','--no-deps','--disable-pip','-r','requirements.lock.txt','--format=json'],timeout=300)
     checks['optional_neural_dependency_audit']=execute('optional-neural-dependency-audit',[sys.executable,'-m','pip_audit','--no-deps','--disable-pip','-r','requirements-neural.lock.txt','--format=json'],timeout=300)
     checks['baseline_integrity']=hashlib.sha256((ROOT/'SPECIFICATION.md').read_bytes()).hexdigest()=='43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30'
-    result={'version':'0.1.0-rc.1','at':datetime.now(timezone.utc).isoformat(),'checks':checks,'engineering_checks_passed':all(checks.values()),'stable_release_allowed':False,'operational_acceptance':False,'unverified_gates':['PostgreSQL/PostGIS/pgvector deployment and concurrency','Docker build and health checks','Qualified Luxembourg/Italy pack validation','Full methodology and operational data acceptance','Live provider and enterprise identity integration','Complete baseline feature/assurance acceptance']}
+    result={'version':VERSION,'at':datetime.now(timezone.utc).isoformat(),'checks':checks,'engineering_checks_passed':all(checks.values()),'stable_release_allowed':False,'operational_acceptance':False,'unverified_gates':['PostgreSQL/PostGIS/pgvector deployment and concurrency','Docker build and health checks','Qualified Luxembourg/Italy pack validation','Full methodology and operational data acceptance','Live provider and enterprise identity integration','Complete baseline feature/assurance acceptance']}
     (EVIDENCE/'release-gates.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     print(json.dumps(result,indent=2))
     return 0 if all(checks.values()) else 1
