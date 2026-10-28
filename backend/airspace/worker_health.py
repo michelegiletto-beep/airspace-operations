@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import socket
+import time
 from threading import Event, Thread
 from uuid import uuid4
 
@@ -53,8 +54,19 @@ def process_exists(pid: int) -> bool:
 def check_worker_health(runtime: str | Path | None = None, *, current: datetime | None = None) -> dict:
     result = {"healthy": False, "scope": "Process liveness only; queue progress is not verified"}
     try:
-        with heartbeat_path(runtime).open("rb") as stream:
-            content = stream.read(4097)
+        path = heartbeat_path(runtime)
+        # Windows can briefly deny opening the target while another thread
+        # atomically replaces it. Retry only that access error, within 20 ms;
+        # persistent denial and all invalid or stale content still fail closed.
+        for attempt in range(3):
+            try:
+                with path.open("rb") as stream:
+                    content = stream.read(4097)
+                break
+            except PermissionError:
+                if attempt == 2:
+                    raise
+                time.sleep(0.01)
         if len(content) > 4096:
             raise ValueError("Oversized heartbeat")
         record = json.loads(content)

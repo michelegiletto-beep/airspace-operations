@@ -5,6 +5,7 @@ import os
 import socket
 import sys
 import time
+from pathlib import Path
 
 import pytest
 
@@ -65,6 +66,30 @@ def test_invalid_or_oversized_heartbeat_fails_closed(tmp_path, content):
 def test_naive_timestamp_is_rejected(tmp_path):
     write_record(tmp_path, updated=datetime(2030, 1, 1))
     assert not check_worker_health(tmp_path)["healthy"]
+
+
+@pytest.mark.parametrize("denials,healthy", [(1, True), (2, True), (3, False)])
+def test_windows_replace_contention_has_bounded_read_retries(tmp_path, monkeypatch, denials, healthy):
+    path = write_record(tmp_path)
+    original_open = Path.open
+    attempts = []
+    delays = []
+
+    def contended_open(self, *args, **kwargs):
+        if self == path:
+            attempts.append(self)
+            if len(attempts) <= denials:
+                raise PermissionError(13, "Isolated sharing contention")
+        return original_open(self, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", contended_open)
+    monkeypatch.setattr("airspace.worker_health.time.sleep", delays.append)
+    result = check_worker_health(tmp_path)
+    assert result["healthy"] is healthy
+    assert len(attempts) == min(denials + 1, 3)
+    assert delays == [0.01] * min(denials, 2)
+    if not healthy:
+        assert result["reason"] == "Worker heartbeat is missing or invalid"
 
 
 def test_actual_context_refreshes_during_main_thread_work_and_stops_cleanly(tmp_path):
