@@ -11,11 +11,23 @@ sys.path.insert(0, str(ROOT / "backend"))
 from airspace.storage import Store
 from airspace.identity import provision
 from airspace.orchestration import WorkflowRepository, advance_workflow, default_services
+from release_support import assert_release_writable, current_version
+
+
+def evaluation_paths(root, run_id):
+    version = current_version(root)
+    assert_release_writable(root, version)
+    runtime = root / "runtime" / "orchestration-evaluation" / run_id
+    output = root / "release-evidence" / ("v" + version)
+    path = output / ("orchestration-local-" + run_id + ".json")
+    if runtime.exists() or path.exists():
+        raise FileExistsError("Evaluation identity already exists; preserve its recorded result")
+    return runtime, path
 
 
 def main():
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    runtime = ROOT / "runtime" / "orchestration-evaluation" / run_id
+    runtime, path = evaluation_paths(ROOT, run_id)
     runtime.mkdir(parents=True, exist_ok=False)
     os.environ["AIRSPACE_RUNTIME"] = str(runtime)
     os.environ["AIRSPACE_AGENT_MODEL_DIR"] = str(ROOT / "models/pretrained/controller")
@@ -42,9 +54,7 @@ def main():
                 "records_scope": "Isolated software-verification identity; no aircraft, missions, customers, approvals or telemetry created", "request": request,
                 "elapsed_seconds": round(time.perf_counter()-started, 3), "steps": steps, "workflow": row,
                 "audit_verification": store.verify_audit(actor["organisation_id"])}
-    output = ROOT / "release-evidence/v0.2.0-rc.1"
-    output.mkdir(parents=True, exist_ok=True)
-    path = output / ("orchestration-local-" + run_id + ".json")
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(evidence, indent=2, default=str) + "\n", encoding="utf-8")
     print(json.dumps({"evidence": str(path.relative_to(ROOT)), "final_state": row["status"], "seconds": evidence["elapsed_seconds"]}), flush=True)
     store.engine.dispose()

@@ -1,0 +1,198 @@
+{
+  "checked_at": "2026-10-28T19:32:49.878529+00:00",
+  "scope": "Isolated browser test server on127.0.0.1:8791. Renderer module deliberately returns503; no operational records or model calls",
+  "success": true,
+  "normal_motion_unique_roi_frames": 5,
+  "paused_unique_roi_frames": 1,
+  "pause_settled_identical_last_two_frames": true,
+  "static_img_elements": 0,
+  "motion_restored": true,
+  "phases": [
+    {
+      "phase": "animated",
+      "frames": [
+        {
+          "at": "2026-10-28T19:32:28.203Z",
+          "pixel_sha256": "16b09a98f7dd2f7e7b69593ca1c1832b9c8f2bb190a2c5bb7a2b27da6b4ba02c",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:28.565Z",
+          "pixel_sha256": "ca85e20043b8b3b0871322c5d7e07589837239192e9f59a3ed082177c1d4ba31",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:28.810Z",
+          "pixel_sha256": "33022be01f1259ca6e3f2043da7b3dddd0d5d9f9b6cc6618e8da62b2799387e7",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:29.025Z",
+          "pixel_sha256": "8e87f2934ecdbdc587237c9d8c152176c72f9d27aebbc610c91ec7e223592a25",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:29.255Z",
+          "pixel_sha256": "526660801a3baf4a528f0518d84584fce6e251442ebf62003921044e6638b6d5",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        }
+      ],
+      "unique_pixel_hashes": 5,
+      "surfaces": [
+        {
+          "canvas": {
+            "companionEngine": "procedural-css",
+            "companionRuntime": "fallback"
+          },
+          "images": 0,
+          "svg": {
+            "motion": "animated",
+            "visible": "true"
+          }
+        },
+        {
+          "canvas": {
+            "companionEngine": "procedural-css",
+            "companionRuntime": "fallback"
+          },
+          "images": 0,
+          "svg": {
+            "motion": "animated",
+            "visible": "true"
+          }
+        },
+        {
+          "canvas": {
+            "companionEngine": "procedural-css",
+            "companionRuntime": "fallback"
+          },
+          "images": 0,
+          "svg": {
+            "motion": "animated",
+            "visible": "true"
+          }
+        }
+      ]
+    },
+    {
+      "phase": "paused",
+      "frames": [
+        {
+          "at": "2026-10-28T19:32:29.930Z",
+          "pixel_sha256": "dfcb7052554047aefe8d790d0b9760ac9f9654bcf04eedbac48bffadd0dc28d9",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:30.111Z",
+          "pixel_sha256": "dfcb7052554047aefe8d790d0b9760ac9f9654bcf04eedbac48bffadd0dc28d9",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:30.306Z",
+          "pixel_sha256": "dfcb7052554047aefe8d790d0b9760ac9f9654bcf04eedbac48bffadd0dc28d9",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:30.507Z",
+          "pixel_sha256": "dfcb7052554047aefe8d790d0b9760ac9f9654bcf04eedbac48bffadd0dc28d9",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        },
+        {
+          "at": "2026-10-28T19:32:30.699Z",
+          "pixel_sha256": "dfcb7052554047aefe8d790d0b9760ac9f9654bcf04eedbac48bffadd0dc28d9",
+          "roi_box": [
+            791,
+            154,
+            867,
+            230
+          ]
+        }
+      ],
+      "unique_pixel_hashes": 1,
+      "surfaces": [
+        {
+          "canvas": {
+            "companionEngine": "procedural-css",
+            "companionRuntime": "fallback"
+          },
+          "images": 0,
+          "svg": {
+            "motion": "paused",
+            "visible": "true"
+          }
+        },
+        {
+          "canvas": {
+            "companionEngine": "procedural-css",
+            "companionRuntime": "fallback"
+          },
+          "images": 0,
+          "svg": {
+            "motion": "paused",
+            "visible": "true"
+          }
+        },
+        {
+          "canvas": {
+            "companionEngine": "procedural-css",
+            "companionRuntime": "fallback"
+          },
+          "images": 0,
+          "svg": {
+            "motion": "paused",
+            "visible": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "harness_sha256": "2df0790aad9d35577fdc851943099e3047c18925419fb64ec198577bc5fa5792",
+  "harness_source": "\"\"\"Isolated browser fault injection; no operational records or model calls.\"\"\"\nimport json\nimport secrets\nimport sys\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[2]\nsys.path.insert(0, str(ROOT / \"backend\"))\nfrom airspace.api import create_app\nfrom airspace.identity import provision\nfrom airspace.storage import Store, users\nfrom sqlalchemy import select\nfrom fastapi.responses import PlainTextResponse\nimport uvicorn\n\nHERE = Path(__file__).resolve().parent / \"companion-fallback-browser\"\nHERE.mkdir(exist_ok=True)\nkey_path = HERE / \"audit.key\"\nif not key_path.exists():\n    key_path.write_bytes(secrets.token_bytes(48))\nstore = Store(\"sqlite:///\" + (HERE / \"isolated-test.db\").as_posix(), key_path.read_bytes())\nstore.migrate()\ncredentials_path = HERE / \"credentials.json\"\ncredentials = json.loads(credentials_path.read_text()) if credentials_path.exists() else {\"email\": \"fallback@test.invalid\", \"password\": secrets.token_urlsafe(24)}\nwith store.engine.connect() as conn:\n    exists = conn.execute(select(users.c.id).where(users.c.email == credentials[\"email\"])).first()\nif not exists:\n    provision(store, \"Isolated animation browser software test\", credentials[\"email\"], \"viewer\", credentials[\"password\"])\ncredentials_path.write_text(json.dumps(credentials), encoding=\"utf-8\")\napp = create_app(store)\n\n@app.middleware(\"http\")\nasync def unavailable_renderer(request, call_next):\n    if request.url.path == \"/vendor/systemlab-companion/mascot-renderer.mjs\":\n        return PlainTextResponse(\"Isolated renderer-unavailability test\", status_code=503)\n    return await call_next(request)\n\nuvicorn.run(app, host=\"127.0.0.1\", port=8791, access_log=False)\n",
+  "method": "Full browser screenshot crops at observedDOMbounds; original timedframes retained privately, no generated pixels. Direct clip API captures were discarded as unreliable.",
+  "reduced_motion_scope": "Existing frontend unit tests; actual browser system preference was no-preference and was not changed."
+}

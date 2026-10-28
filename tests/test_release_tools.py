@@ -48,6 +48,29 @@ def test_freeze_refusal_happens_before_metadata_or_archive_writes(tmp_path, monk
     assert not (tmp_path / "release").exists()
 
 
+def test_model_evaluation_records_current_version_and_refuses_duplicate_identity(tmp_path):
+    from evaluate_orchestration import evaluation_paths
+    write_version(tmp_path)
+    runtime, output = evaluation_paths(tmp_path, "isolated-run")
+    assert runtime.is_relative_to(tmp_path / "runtime")
+    assert output.is_relative_to(tmp_path / "release-evidence/v0.3.0-rc.1")
+    output.parent.mkdir(parents=True)
+    output.write_text("isolated prior result")
+    with pytest.raises(FileExistsError, match="preserve"):
+        evaluation_paths(tmp_path, "isolated-run")
+    assert output.read_text() == "isolated prior result"
+
+
+def test_model_evaluation_cannot_write_a_frozen_release(tmp_path):
+    from evaluate_orchestration import evaluation_paths
+    write_version(tmp_path, "0.2.0-rc.1")
+    receipt(tmp_path, "history/0.2.0-rc.1.json", "0.2.0-rc.1", ["Published"])
+    with pytest.raises(SystemExit, match="frozen"):
+        evaluation_paths(tmp_path, "isolated-run")
+    assert not (tmp_path / "runtime").exists()
+    assert not (tmp_path / "release-evidence").exists()
+
+
 @pytest.mark.parametrize("version", ["0.3.0-rc.1", "1.0.0"])
 def test_version_is_read_from_actual_project_identity(tmp_path, version):
     write_version(tmp_path, version)

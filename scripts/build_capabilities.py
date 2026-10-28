@@ -51,13 +51,13 @@ add('Complete original master specification acceptance','Not Implemented','SPECI
 add('Local generative LLM orchestration of actual specialist tools','Verified','backend/airspace/orchestration.py;worker.py','release-evidence/v0.2.0-rc.1/actual-ui-workflow.json;causal-comparison.json;tests/test_orchestration.py','Two source-title proxy questions; no legal-QA quality or speed advantage established; independent review required')
 add('Reusable domain-neutral multiagentic core','Verified','backend/systemlab_agentic;airspace/orchestration.py','tests/test_orchestration.py;docs/multiagentic-contract-mapping.md','Fresh shared implementation aligned with the in-house programme; no transferred domain qualification')
 add('Pause, resume, cancellation and revocation-safe model workflow','Verified','backend/airspace/orchestration.py;coordination_api.py;worker.py','tests/test_revision_integration.py;tests/test_orchestration.py','Cooperative inference cancellation; process isolation/hard preemption remains deployment work')
-add('Owned animated companion presentation runtime','Verified','frontend/public/vendor/systemlab-companion;frontend/src','frontend/verification/0.2.0-rc.1;publication/media','Existing five byte-identical presentation files; reserved rights; WebGL activation, reduced motion and static fallback are separate from inference')
+add('Owned animated companion presentation runtime','Verified','frontend/public/vendor/systemlab-companion;frontend/src','frontend/verification/0.3.0-rc.1;'+CURRENT_EVIDENCE+'/companion-fallback-browser-verification.json','Five existing presentation resources retain reserved rights. Current adapter supports animated procedural fallback, user pause and reduced motion; animation is separate from inference.')
 add('Aircraft-specific maintenance, completion evidence and independent release','Verified','backend/airspace/fleet.py;coordination_api.py','tests/test_fleet.py;tests/test_revision_integration.py','Intervals and limitations come from actual operator/aircraft evidence; no universal defaults')
 add('Constrained maintenance scheduler and separate verifier','Verified','backend/airspace/fleet.py','tests/test_fleet.py','Requires real technician/facility/task inputs; proposed plan is not a serviceability release')
 add('European country segments, handovers and Article 13 instrument distinctions','Verified','backend/airspace/europe.py;tests/references/article13-2026.json','tests/test_europe.py;docs/fleet-and-cross-border.md','50 geographical registrations are not 50 validated legal packs; STS/LUC documented host provision differs from operational-authorisation confirmation')
 add('Bilateral aircraft sharing and physical global reservation ledger','Verified','backend/airspace/sharing.py;planning.py;storage.py','tests/test_sharing.py;tests/test_postgres_coordination.py','Consent is not transfer of operational permission; PostgreSQL concurrency result is recorded separately')
-add('Private local-model companion conversations','Implemented','backend/airspace/assistant.py;companion_api.py;worker.py','tests/test_assistant.py;tests/test_companion_boundaries.py;'+CURRENT_EVIDENCE,'Actor-private conversations; actual model execution and current release verification are recorded separately')
-add('Personal tasks and confirmed internal draft actions','Implemented','backend/airspace/assistant.py;frontend/src/CompanionDock.tsx','tests/test_assistant.py;tests/test_companion_boundaries.py','Personal tasks and explicit typed drafts do not approve an operation or communicate externally')
+add('Private local-model companion conversations','Implemented','backend/airspace/assistant.py;companion_api.py;worker.py','tests/test_companion.py;tests/test_companion_boundaries.py;'+CURRENT_EVIDENCE,'Actor-private conversations; actual model execution and current release verification are recorded separately')
+add('Personal tasks and confirmed internal draft actions','Implemented','backend/airspace/assistant.py;frontend/src/CompanionDock.tsx','tests/test_companion.py;tests/test_companion_boundaries.py','Personal tasks and explicit typed drafts do not approve an operation or communicate externally')
 add('Animated companion fallback and reactive workspace','Implemented','frontend/src/CompanionArtwork.tsx;frontend/src','frontend/verification;'+CURRENT_EVIDENCE,'Continuous normal-motion animation; user pause and reduced-motion preferences remain authoritative')
 add('Recurring engineering verification and improvement','Implemented','improvement/RECURRING_PROMPT.md;docs/recurring-improvement.md','improvement/automation-receipt.json','Six-hour development heartbeat on the configured host; distinct from operational scheduling and not proof of completed future cycles')
 # Preserve the distinction between a prepared deployment and an actual CI run.
@@ -131,15 +131,15 @@ revision3={
 1:('frontend/src;publication/v0.3','publication/v0.3/ablation-inventory.json;frontend/verification'),
 2:('SPECIFICATION_V3_ADDENDUM.md;source registers','tests;'+CURRENT_EVIDENCE+'/prior-release-preservation.json'),
 3:('backend/airspace/assistant.py;companion_api.py;worker.py',CURRENT_EVIDENCE+'/companion-local-verification.json'),
-4:('backend/airspace/assistant.py;api.py;orchestration.py','tests/test_assistant.py;tests/test_companion_boundaries.py'),
-5:('backend/airspace/assistant.py;coordination_api.py','tests/test_assistant.py;tests/test_companion_boundaries.py'),
+4:('backend/airspace/assistant.py;api.py;orchestration.py','tests/test_companion.py;tests/test_companion_boundaries.py'),
+5:('backend/airspace/assistant.py;coordination_api.py','tests/test_companion.py;tests/test_companion_boundaries.py'),
 6:('frontend/src;backend/airspace/companion_api.py','frontend/verification;'+CURRENT_EVIDENCE),
 7:('frontend/src/CompanionArtwork.tsx;frontend/public/vendor/systemlab-companion','frontend/verification;'+CURRENT_EVIDENCE),
 8:('frontend/src','frontend/verification;'+CURRENT_EVIDENCE),
 9:('publication/v0.3;publication/status.json',CURRENT_EVIDENCE),
-10:('scripts/package_release.py;verify_archive.py;.github/workflows','tests/test_release_safety.py;'+CURRENT_EVIDENCE),
+10:('scripts/package_release.py;verify_archive.py;.github/workflows','tests/test_release_tools.py;'+CURRENT_EVIDENCE),
 11:('improvement/RECURRING_PROMPT.md;docs/recurring-improvement.md','improvement/automation-receipt.json'),
-12:('AGENTS.md;companion typed tool boundary','tests/test_assistant.py;docs/recurring-improvement.md')}
+12:('AGENTS.md;companion typed tool boundary','tests/test_companion.py;docs/recurring-improvement.md')}
 rows=[row for row in rows if not row['requirement_id'].startswith('ASO3-')]
 revision3_path=ROOT/'SPECIFICATION_V3_ADDENDUM.md'
 if revision3_path.exists():

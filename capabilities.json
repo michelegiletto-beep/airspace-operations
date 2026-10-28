@@ -287,8 +287,8 @@
       "capability": "Owned animated companion presentation runtime",
       "status": "Verified",
       "implementation": "frontend/public/vendor/systemlab-companion;frontend/src",
-      "evidence": "frontend/verification/0.2.0-rc.1;publication/media",
-      "limitation": "Existing five byte-identical presentation files; reserved rights; WebGL activation, reduced motion and static fallback are separate from inference"
+      "evidence": "frontend/verification/0.3.0-rc.1;release-evidence/v0.3.0-rc.1/companion-fallback-browser-verification.json",
+      "limitation": "Five existing presentation resources retain reserved rights. Current adapter supports animated procedural fallback, user pause and reduced motion; animation is separate from inference."
     },
     {
       "capability": "Aircraft-specific maintenance, completion evidence and independent release",
@@ -322,14 +322,14 @@
       "capability": "Private local-model companion conversations",
       "status": "Implemented",
       "implementation": "backend/airspace/assistant.py;companion_api.py;worker.py",
-      "evidence": "tests/test_assistant.py;tests/test_companion_boundaries.py;release-evidence/v0.3.0-rc.1",
+      "evidence": "tests/test_companion.py;tests/test_companion_boundaries.py;release-evidence/v0.3.0-rc.1",
       "limitation": "Actor-private conversations; actual model execution and current release verification are recorded separately"
     },
     {
       "capability": "Personal tasks and confirmed internal draft actions",
       "status": "Implemented",
       "implementation": "backend/airspace/assistant.py;frontend/src/CompanionDock.tsx",
-      "evidence": "tests/test_assistant.py;tests/test_companion_boundaries.py",
+      "evidence": "tests/test_companion.py;tests/test_companion_boundaries.py",
       "limitation": "Personal tasks and explicit typed drafts do not approve an operation or communicate externally"
     },
     {
