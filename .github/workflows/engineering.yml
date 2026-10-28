@@ -54,7 +54,7 @@ jobs:
         run: |
           docker compose -f compose.yaml -f deploy/compose.ci.yaml up -d --wait --wait-timeout 180
           docker compose -f compose.yaml -f deploy/compose.ci.yaml ps
-          python -c "import json,urllib.request,urllib.error; d=json.load(urllib.request.urlopen('http://127.0.0.1:8787/api/v1/health')); assert d['version']=='0.2.0-rc.1' and d['status']=='ok'; print(d)"
+          uv run python -c "import json,runpy,urllib.request; expected=runpy.run_path('backend/airspace/__init__.py')['__version__']; d=json.load(urllib.request.urlopen('http://127.0.0.1:8787/api/v1/health',timeout=15)); assert d['version']==expected and d['status']=='ok', 'Running container differs from verified source'; print(d)"
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace -c 'CREATE DATABASE airspace_verification OWNER airspace'
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace_verification -c 'CREATE EXTENSION postgis; CREATE EXTENSION vector;'
           echo "AIRSPACE_TEST_POSTGRES_URL=postgresql+psycopg://airspace:$AIRSPACE_DB_APP_PASSWORD@127.0.0.1:5432/airspace_verification" >> "$GITHUB_ENV"
