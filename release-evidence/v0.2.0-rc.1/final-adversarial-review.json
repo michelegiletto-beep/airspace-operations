@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-28",
+  "release": "0.2.0-rc.1",
+  "review_mode": "Read-only final claim, credential-risk, rights and consequential-boundary inspection. Only this review JSON was authored; frozen application code was not changed",
+  "ci_evidence": {
+    "run_id": 40678178924,
+    "commit": "e2c5e4ec55ec5bbb25901fee27b143d2b06ec35c",
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40678178924",
+    "machine_record": "release-evidence/v0.2.0-rc.1/ci-verification.json",
+    "raw_record": "release-evidence/v0.2.0-rc.1/ci-success.log.txt",
+    "observed_raw_evidence": [
+      "Actual application/database builds and healthy database/API/worker containers",
+      "An actual API-created case_preparation job completed through the already-running worker; cases and external_actions remained empty and audit verification was valid",
+      "16 PostgreSQL extension, tenant, concurrency, sharing, dispatch and initial-migration tests passed",
+      "pg_dump and pg_restore executed under the bootstrap administrator; subsequent ordinary-role HMAC verification returned audit_count 2 and audit_valid true"
+    ],
+    "source_identity_check": "All 126 local_software_input_hashes matched their current files; no mismatches or missing files",
+    "scope": "Isolated software deployment and database verification. This is not live operational integration, universal legal coverage, production-scale resilience or aviation certification"
+  },
+  "credential_scan": {
+    "method": "Imported source_files and SECRET_PATTERNS from scripts/package_release.py; scanned the exact releasable-file selection at review time without printing matching bytes",
+    "file_count_at_scan": 397,
+    "matched_paths": [],
+    "additional_inspection": [
+      "Raw CI environment values for database, ordinary-role password, audit key and initial verification password were masked",
+      "Compose gives API/worker the ordinary-role database URL and audit key; the separate bootstrap administrator password is restricted to the database service",
+      "Runtime databases, object-store contents, private keys, original source snapshots with uncleared rights and model caches remain excluded by the release selection",
+      "Fixed isolated software-test keys/passwords are explicitly test fixtures, not operational credentials"
+    ],
+    "limit": "Bounded heuristic and code inspection; not a guarantee that every possible secret representation or private-data class has been detected"
+  },
+  "reserved_asset_review": {
+    "provenance": "frontend/public/vendor/systemlab-companion/provenance.json",
+    "rights_notice": "frontend/public/vendor/systemlab-companion/NOTICE.md",
+    "central_notice": "LICENSES/LicenseRef-SystemLab-Assets.txt",
+    "http_identity_evidence": "frontend/verification/0.2.0-rc.1/owned-runtime-assets.json",
+    "sbom": "SBOM.cdx.json",
+    "verified_files": [
+      "mascot-renderer.mjs",
+      "motion-core.mjs",
+      "catalog.mjs",
+      "assets/originals/mascotte_01_indaco.png",
+      "assets/originals/mascotte_06_coral_compact.png"
+    ],
+    "result": "All five actual SHA-256 values match both provenance and SBOM; every corresponding SBOM entry retains reserved rights and excludes the Apache-2.0 grant",
+    "resolved_notice_findings": [
+      "THIRD_PARTY_NOTICES.md initially referenced absent owned-runtime-assets.json; the release owner corrected it to the actual vendor provenance and frontend verification paths, both checked present",
+      "The central LicenseRef notice initially described only the fallback mascot images; the release owner expanded it to the existing five presentation resources, built/publication copies and the separate Apache-2.0 adapter boundary. The updated notice was reread"
+    ],
+    "ownership_boundary": "Owner-authorised reproduction is documented. No general right to sublicense the artwork/runtime for another product, and no exact synchronously observed source-package version, is invented"
+  },
+  "backup_and_role_review": {
+    "documents": ["docs/recovery-runbook.md", "docs/administrator-handbook.md", ".env.example"],
+    "findings": [
+      "The audit key is explicitly backed up separately and kept private; database restoration alone is not claimed to restore attachment bytes or supply that key",
+      "The actual isolated restoration proves one recorded tenant's HMAC round trip; it does not claim that every attachment, tenant or production recovery scenario was verified",
+      "The ordinary application role's rolsuper, rolcreatedb, rolcreaterole and rolreplication flags are all asserted false by the passed PostgreSQL test",
+      "Extension creation and dump/restore use the separate administrator path, while application and restored-audit reads use the ordinary role",
+      "Off-host checkpointing, coordinated object-store recovery and deployment-specific cutover remain documented operator responsibilities"
+    ]
+  },
+  "claim_scope_review": {
+    "documents": ["HANDOVER.md", "README.md", "publication/status.json", "publication/site-project.html", "publication/github-readme-v2.md", "docs/known-limitations.md", "capabilities.json", "RELEASE_ERRATA.md"],
+    "result": "No new stable-release, production-ready, certification, accepted-live-provider, universal-national-pack or full-baseline-acceptance claim found in the inspected release prose",
+    "separate_results": {
+      "local_final": "267 Python passes and 16 PostgreSQL skips; 69 frontend passes",
+      "actual_ci": "266 passes and 17 skips in the public-source software suite, then 16 PostgreSQL passes in the separate configured stage",
+      "preliminary_archive": "266 passes and 17 skips after independent extraction/installation and an empty authenticated workspace",
+      "interpretation": "Different environments and repeated mechanisms are not added into a fabricated combined unique-test total"
+    },
+    "publication_boundary": "The inspected publication ledger still described 0.2.0-rc.1 as Prepared and candidate source as Uploaded. Packaging, final exact-archive verification, tagging, Site publication and independent public retrieval must update their own records before final publication claims",
+    "neural_boundary": "Actual Qwen orchestration is distinguished from student training. The existing student remains experimental, inferior to its deterministic literal-word baseline on machine labels, and unpromoted. No new operational prediction training or expert-validated benchmark is claimed"
+  },
+  "remaining_requirements": [
+    "Verify the final archive after its actual digest is frozen; the preliminary archive result does not identify the final package automatically",
+    "Retain genuine publication/retrieval evidence and update the ledger for destinations as each action actually completes",
+    "Qualified national reconciliation, lawful operator/provider data, actual procedures and permissions, enterprise acceptance and production-scale assurance remain separate adoption gates",
+    "The original full specification and operational acceptance remain incomplete as disclosed"
+  ],
+  "conclusion": "No unresolved critical consequence-path defect, credential-pattern exposure or misleading certification/operational-acceptance claim identified in this final read-only pass. Notice issues reported during the pass were corrected and rechecked. This review is software evidence, not professional aviation certification"
+}
