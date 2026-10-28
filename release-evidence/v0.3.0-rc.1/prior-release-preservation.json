@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-28T13:12:40.420486+00:00",
+  "checks": {
+    "0.1.0-rc.1": {
+      "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+      "bytes": 2090705,
+      "preserved": true
+    },
+    "0.2.0-rc.1": {
+      "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+      "bytes": 10122929,
+      "preserved": true
+    }
+  }
+}

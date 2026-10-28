@@ -1,0 +1,30 @@
+{
+  "started_at": "2026-10-28T15:45:20.191154+01:00",
+  "success": true,
+  "scope": "Actual development API process restart followed by authenticated reads; no new model call or operational record.",
+  "credentials_logged": false,
+  "worker_restarted": false,
+  "health_after_restart": {
+    "status": "ok",
+    "version": "0.3.0-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "conversation_id": "9fb908a0-7c62-4b90-80f0-1e5b06550c23",
+  "task_id": "671d9408-85f1-463b-923d-99104313a338",
+  "task_status": "Open",
+  "task_version": 1,
+  "task_exactly_preserved": true,
+  "assistant_message_count": 2,
+  "active_job": null,
+  "original_evidence_sha256": "83be4168f2cf27ba6023e201a66acf0aea89ef342485092cf89897275f221f78",
+  "process_restart": {
+    "started_at": "2026-10-28T14:44:58.1759567Z",
+    "credentials_logged": false,
+    "after_api_launcher_pid": 31836,
+    "before_api_pid": 33300,
+    "worker_restarted": false,
+    "after_api_pid": 37052
+  },
+  "finished_at": "2026-10-28T15:45:20.444915+01:00"
+}

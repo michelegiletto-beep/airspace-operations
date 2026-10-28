@@ -1,0 +1,217 @@
+{
+  "started_at": "2026-10-28T14:22:34.013769+00:00",
+  "scope": "Actual local model through authenticated API and separate running worker in an isolated development store. Real software-help requests only; no fabricated flights, customers or authority decisions.",
+  "rule_version": "companion/1.1",
+  "turns": [
+    {
+      "request": "How do I prepare a source review using the actual regulatory library?",
+      "job_id": "bc530cd3-e5fb-410c-ac50-5c8e3e9ee258",
+      "user_message_id": "e89aa21c-1d55-4c5f-8e40-8aff6e1ae8a0",
+      "reply": {
+        "id": "d859ddcf-75cd-45e5-a0d8-ba91c317c781",
+        "organisation_id": "1b49f564-a1c0-4137-84c2-3a353990c97c",
+        "kind": "companion_message",
+        "title": "Local companion reply",
+        "status": "Completed",
+        "data": {
+          "conversation_id": "c1f15aab-d197-4851-a8be-431bf9a8af7b",
+          "role": "assistant",
+          "text": "Review the selected context and choose a recorded next step.\n\nChoose the operating country and intended operation date.",
+          "reply_kind": "local_llm",
+          "turn_sequence": 1,
+          "reply_to_message_id": "e89aa21c-1d55-4c5f-8e40-8aff6e1ae8a0",
+          "facts": [],
+          "next_steps": [
+            {
+              "id": "step_0",
+              "text": "Choose the operating country and intended operation date."
+            }
+          ],
+          "missing_inputs": [
+            "Select the actual case, site, aircraft or other record relevant to this request."
+          ],
+          "source_refs": [],
+          "action_ids": [],
+          "model": {
+            "attempts": [
+              {
+                "mode": "local_causal",
+                "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+                "generative_model_used": true,
+                "hosted_provider": false,
+                "input_tokens": 492,
+                "output_tokens": 25,
+                "seconds": 23.864403399988078,
+                "model_load_seconds": 84.10974849993363,
+                "prompt_checksum": "95f5ccf4bc97c51a6f33cfb2051e4ad43aa7714536a70a740a5cce1efe87e6ac",
+                "response_checksum": "60611f399462a7b44698fe771ba58c238fbb0c3db21d45afe7d7b18d42983b7e",
+                "remote_code": false,
+                "thinking_output_requested": false
+              }
+            ],
+            "model_calls": 1,
+            "failure_type": null,
+            "status": {
+              "state": "Ready",
+              "mode": "local_causal",
+              "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+              "message": "A local reply passed the advisory output and reference checks.",
+              "hosted_provider": false,
+              "generative_model_used": true
+            }
+          },
+          "assistance_selection": {
+            "guidance_id": "review_context",
+            "guidance": "Review the selected context and choose a recorded next step.",
+            "fact_ids": [],
+            "next_step_ids": [
+              "step_0"
+            ],
+            "action_ids": []
+          },
+          "context_snapshot": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "rule_version": "companion/1.1",
+          "legal_conclusion_generated": false,
+          "external_actions": [],
+          "owner_actor_id": "4a0c228c-346c-44b1-933e-d9d3cb9e1961"
+        },
+        "version": 1,
+        "created_by": "4a0c228c-346c-44b1-933e-d9d3cb9e1961",
+        "created_at": "2026-10-28T14:24:23.635971+00:00",
+        "updated_at": "2026-10-28T14:24:23.635971+00:00"
+      },
+      "observed_progress": [
+        {
+          "at": "2026-10-28T14:22:34.281773+00:00",
+          "phase": "Queued",
+          "job_state": "Queued"
+        },
+        {
+          "at": "2026-10-28T14:22:36.293557+00:00",
+          "phase": "Preparing local inference",
+          "job_state": "Running"
+        },
+        {
+          "at": "2026-10-28T14:24:25.034877+00:00",
+          "phase": "Ready",
+          "job_state": null
+        }
+      ],
+      "observed_completion_seconds": 110.76,
+      "actual_local_generation": true
+    },
+    {
+      "request": "Remember to review the actual source register before preparing an authorisation case",
+      "job_id": "a62ddda2-1c0f-4592-9fea-e9ccbae60c43",
+      "user_message_id": "e8e4cf7c-c4fd-407f-8e99-c5f8ec9da108",
+      "reply": {
+        "id": "f865f6f4-a313-48f6-8c55-5208647f5be2",
+        "organisation_id": "1b49f564-a1c0-4137-84c2-3a353990c97c",
+        "kind": "companion_message",
+        "title": "Local companion reply",
+        "status": "Completed",
+        "data": {
+          "conversation_id": "c1f15aab-d197-4851-a8be-431bf9a8af7b",
+          "role": "assistant",
+          "text": "Review the selected context and choose a recorded next step.\n\nChoose the operating country and intended operation date.",
+          "reply_kind": "local_llm",
+          "turn_sequence": 2,
+          "reply_to_message_id": "e8e4cf7c-c4fd-407f-8e99-c5f8ec9da108",
+          "facts": [],
+          "next_steps": [
+            {
+              "id": "step_0",
+              "text": "Choose the operating country and intended operation date."
+            }
+          ],
+          "missing_inputs": [
+            "Select the actual case, site, aircraft or other record relevant to this request."
+          ],
+          "source_refs": [],
+          "action_ids": [],
+          "model": {
+            "attempts": [
+              {
+                "mode": "local_causal",
+                "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+                "generative_model_used": true,
+                "hosted_provider": false,
+                "input_tokens": 603,
+                "output_tokens": 25,
+                "seconds": 25.115562400082126,
+                "model_load_seconds": 8.159992285072803e-05,
+                "prompt_checksum": "984f2abf1d37eff6e28d252435137fc8921c1d6486a5edd570bae1df7df1f484",
+                "response_checksum": "60611f399462a7b44698fe771ba58c238fbb0c3db21d45afe7d7b18d42983b7e",
+                "remote_code": false,
+                "thinking_output_requested": false
+              }
+            ],
+            "model_calls": 1,
+            "failure_type": null,
+            "status": {
+              "state": "Ready",
+              "mode": "local_causal",
+              "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+              "message": "A local reply passed the advisory output and reference checks.",
+              "hosted_provider": false,
+              "generative_model_used": true
+            }
+          },
+          "assistance_selection": {
+            "guidance_id": "review_context",
+            "guidance": "Review the selected context and choose a recorded next step.",
+            "fact_ids": [],
+            "next_step_ids": [
+              "step_0"
+            ],
+            "action_ids": []
+          },
+          "context_snapshot": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "rule_version": "companion/1.1",
+          "legal_conclusion_generated": false,
+          "external_actions": [],
+          "owner_actor_id": "4a0c228c-346c-44b1-933e-d9d3cb9e1961"
+        },
+        "version": 1,
+        "created_by": "4a0c228c-346c-44b1-933e-d9d3cb9e1961",
+        "created_at": "2026-10-28T14:24:50.799074+00:00",
+        "updated_at": "2026-10-28T14:24:50.799074+00:00"
+      },
+      "observed_progress": [
+        {
+          "at": "2026-10-28T14:24:25.081936+00:00",
+          "phase": "Queued",
+          "job_state": "Queued"
+        },
+        {
+          "at": "2026-10-28T14:24:27.092833+00:00",
+          "phase": "Preparing local inference",
+          "job_state": "Running"
+        },
+        {
+          "at": "2026-10-28T14:24:51.279408+00:00",
+          "phase": "Ready",
+          "job_state": null
+        }
+      ],
+      "observed_completion_seconds": 26.204,
+      "actual_local_generation": true
+    }
+  ],
+  "success": false,
+  "new_training": false,
+  "hosted_provider": false,
+  "conversation_id": "c1f15aab-d197-4851-a8be-431bf9a8af7b",
+  "health": {
+    "status": "ok",
+    "version": "0.3.0-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "owned_source_sha256": {
+    "backend/airspace/assistant.py": "1968e0cbfc6059f26af341d8b5d2c6f6c8d6910ada2c4de3fd8b9468b7746779",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f"
+  },
+  "error": "StopIteration: ",
+  "finished_at": "2026-10-28T14:24:51.280563+00:00"
+}

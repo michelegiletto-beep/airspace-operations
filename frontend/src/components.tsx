@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
+import { AgentCompanion } from './AgentCompanion';
+import { AmbientBackground } from './AmbientBackground';
 import { ApiError, displayDate, errorMessage, request } from './api';
 
 export function StateTag({ state }: { state: string }) {
@@ -44,5 +46,5 @@ export function Login({ onLogin }: { onLogin: (session: import('./api').Session)
     catch (cause) { setError(cause instanceof ApiError && cause.status === 401 ? 'The email or password was not accepted.' : errorMessage(cause)); }
     finally { setBusy(false); }
   }
-  return <main className="login-shell"><div className="login-brand"><span className="wordmark">SYSTEM LAB</span><span>Airspace Operations</span></div><section className="login-panel"><p className="eyebrow">Organisation access</p><h1>Sign in to your workspace</h1><p className="muted">Operational management and decision support for civilian UAS services.</p>{error ? <Notice danger>{error}</Notice> : null}<form onSubmit={submit}><label>Email<input type="email" autoComplete="username" required value={email} onChange={event => setEmail(event.target.value)} /></label><label>Password<input type="password" autoComplete="current-password" required value={password} onChange={event => setPassword(event.target.value)} /></label><button className="primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button></form><p className="small muted">Accounts are provisioned by your administrator. Contact your organisation administrator if you need access.</p></section><footer>Engineering release candidate · Operational deployment requires acceptance and applicable permissions.</footer></main>;
+  return <main className="login-shell"><AmbientBackground/><div className="login-brand"><span className="wordmark">SYSTEM LAB</span><span>Airspace Operations</span></div><section className="login-panel"><AgentCompanion label="Sign in to ask for help"/><h1>Sign in to your workspace</h1><p className="muted">Use your organisation account to continue.</p>{error ? <Notice danger>{error}</Notice> : null}<form onSubmit={submit}><label>Email<input type="email" autoComplete="username" required value={email} onChange={event => setEmail(event.target.value)} /></label><label>Password<input type="password" autoComplete="current-password" required value={password} onChange={event => setPassword(event.target.value)} /></label><button className="primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button></form><p className="small muted">Your organisation administrator manages access to this workspace.</p></section><footer>Engineering candidate. Operational use requires your organisation’s acceptance and the applicable permissions.</footer></main>;
 }

@@ -1,0 +1,60 @@
+{
+  "version": "0.3.0-rc.1",
+  "checked_at_utc": "2026-10-28T14:49:38.356956+00:00",
+  "kind": "Read-only source/build consistency check with evidence-only JSON updates",
+  "final_assets": [
+    {
+      "path": "dist/assets/index-BwDooYcZ.css",
+      "bytes": 103754,
+      "sha256": "79881d693a4f8e554042d474b8c6ed5214283755e95998f550c60a20ba2d4248",
+      "written_at_utc": "2026-10-28T14:23:25.185994+00:00"
+    },
+    {
+      "path": "dist/assets/index-CZ1bEzgx.js",
+      "bytes": 471801,
+      "sha256": "4591cefc191651fef23f3ea356b081f9927c309cd34b2b7b41fea67e15bff7c2",
+      "written_at_utc": "2026-10-28T14:23:25.183994+00:00"
+    }
+  ],
+  "test_result": {
+    "passed": 99,
+    "failed": 0,
+    "files": 18,
+    "started_at_utc": "2026-10-28T14:23:05.415000+00:00",
+    "finished_at_utc": "2026-10-28T14:23:28.622181+00:00"
+  },
+  "build_log_last_written_at_utc": "2026-10-28T14:23:25.246205+00:00",
+  "dist_index_references": [
+    "/assets/index-CZ1bEzgx.js",
+    "/assets/index-BwDooYcZ.css"
+  ],
+  "recorded_source_and_config_hashes_match": true,
+  "source_files_newer_than_bundle": false,
+  "superseded_intermediate_js": "index-H00f61a5.js",
+  "rerun_performed": false,
+  "source_feature_changes": false,
+  "live_api_requests_sent": false,
+  "publication_performed": false,
+  "summary": "summary.json",
+  "recorded_log_hashes": [
+    {
+      "path": "tests.json",
+      "bytes": 38627,
+      "sha256": "5f1af80d865d2452b8bd37097019ea33ae7904b81e34015a84db9366083283f9",
+      "last_written_at_utc": "2026-10-28T14:23:28.630728+00:00"
+    },
+    {
+      "path": "tests.log",
+      "bytes": 142,
+      "sha256": "301d967899854adc893da767d4bc9eddbbf1444b0c00b97fa8d34ac456ea2a4d",
+      "last_written_at_utc": "2026-10-28T14:23:28.638742+00:00"
+    },
+    {
+      "path": "build.log",
+      "bytes": 444,
+      "sha256": "62fb36f1b709e76325b1a2f329acf7fca11332d7a266ea5fee45472f464ddc84",
+      "last_written_at_utc": "2026-10-28T14:23:25.246205+00:00"
+    }
+  ],
+  "next_action": "Parent resumes final exact-bundle authenticated/mobile/frame review and release gates; backend final-policy tests and inference are separate evidence."
+}

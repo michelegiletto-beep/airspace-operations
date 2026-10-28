@@ -1,7 +1,7 @@
 name: Engineering verification
 on:
   push:
-    branches: [main, 'codex/airspace-0.2', 'release/**']
+    branches: [main, 'codex/airspace-*', 'release/**']
     paths: ['backend/**', 'frontend/**', 'tests/**', 'scripts/**', 'deploy/**', 'migrations/**', 'Dockerfile', 'compose.yaml', 'pyproject.toml', 'uv.lock', '.github/workflows/**']
   workflow_dispatch:
 permissions:

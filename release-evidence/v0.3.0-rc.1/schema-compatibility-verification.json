@@ -1,0 +1,159 @@
+{
+  "started_at": "2026-10-28T19:12:56.191840+00:00",
+  "success": true,
+  "scope": "Isolated SQLite software fixture and frozen 0.2 Python application source executed with the current verification dependency runtime. No operational instance, inference, live HTTP service or external provider.",
+  "legacy_archive": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release\\System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+  "expected_archive_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+  "expected_legacy_source_sha256": {
+    "airspace/api.py": "2e3cbe3606d8098c09fefaf335c6533d0b6c34e1b61ad491ccad06eed74a584e",
+    "airspace/storage.py": "d8e8c554059f3ffdb5baedde450b23e4922ddac335967641f9858786cc7c6187",
+    "airspace/__init__.py": "8bcb029ee684ea91be244362ee78fb6a96d110d96d813548e0f8f76269382116"
+  },
+  "invocation": [
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\scripts\\verify_schema_compatibility.py"
+  ],
+  "prior_finding": "Schema 2 admitted the old server, whose generic organisation-level jobs and history endpoints did not enforce actor-private companion semantics. This check preserves that finding and verifies the schema-3 startup boundary.",
+  "limitations": [
+    "A startup schema marker cannot revoke already-running old APIs, workers, embedded library consumers or database sessions. Stop every old process before migration; mixed-version rolling deployment is unsafe.",
+    "Do not remove schema 3 or downgrade the live database in place. Use compatible software or restore a complete pre-upgrade checkpoint into a separately controlled environment.",
+    "This SQLite run does not establish PostgreSQL deployment acceptance or compatibility with every historical binary."
+  ],
+  "external_actions": [],
+  "model_calls": 0,
+  "published": false,
+  "isolated_directory": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\verification\\schema-compatibility-u4s8jm9s",
+  "legacy_archive_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+  "extracted_backend": {
+    "directory": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\verification\\schema-compatibility-u4s8jm9s\\legacy\\backend",
+    "members": 27,
+    "uncompressed_bytes": 432953
+  },
+  "environment_isolation": {
+    "database": "New verification-only SQLite file",
+    "oidc_environment_removed": true,
+    "inherited_database_url_removed": true,
+    "inherited_model_and_identity_secrets_removed": true,
+    "fixture_audit_key": "Fixed public software-verification key only; no operator key used"
+  },
+  "current_probe": {
+    "command": [
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\verification\\schema-compatibility-u4s8jm9s\\current_privacy_probe.py"
+    ],
+    "exit_code": 0,
+    "seconds": 2.233,
+    "stdout": "{\"software_version\": \"0.3.0-rc.1\", \"schema_markers\": [1, 2, 3], \"privacy_checks\": {\"owner\": {\"generic_history_status\": 404, \"generic_record_status\": 404, \"private_conversation_status\": 200, \"private_job_visible\": true}, \"peer\": {\"generic_history_status\": 404, \"generic_record_status\": 404, \"private_conversation_status\": 404, \"private_job_visible\": false}, \"other_tenant\": {\"generic_history_status\": 404, \"generic_record_status\": 404, \"private_conversation_status\": 404, \"private_job_visible\": false}}, \"fixture_has_private_user_message_and_queued_job\": true, \"worker_or_model_started\": false, \"audit_valid\": true, \"audit_counts\": [6, 2]}\n",
+    "stderr": "",
+    "result": {
+      "software_version": "0.3.0-rc.1",
+      "schema_markers": [
+        1,
+        2,
+        3
+      ],
+      "privacy_checks": {
+        "owner": {
+          "generic_history_status": 404,
+          "generic_record_status": 404,
+          "private_conversation_status": 200,
+          "private_job_visible": true
+        },
+        "peer": {
+          "generic_history_status": 404,
+          "generic_record_status": 404,
+          "private_conversation_status": 404,
+          "private_job_visible": false
+        },
+        "other_tenant": {
+          "generic_history_status": 404,
+          "generic_record_status": 404,
+          "private_conversation_status": 404,
+          "private_job_visible": false
+        }
+      },
+      "fixture_has_private_user_message_and_queued_job": true,
+      "worker_or_model_started": false,
+      "audit_valid": true,
+      "audit_counts": [
+        6,
+        2
+      ]
+    }
+  },
+  "legacy_probe": {
+    "command": [
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\verification\\schema-compatibility-u4s8jm9s\\legacy_startup_probe.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.292,
+    "stdout": "{\"software_version\": \"0.2.0-rc.1\", \"maximum_schema_version\": 2, \"startup_rejected\": true, \"exception_type\": \"ValueError\", \"message\": \"Database schema is newer than this software; use the matching release\", \"api_constructed\": false, \"domain_queries_executed\": false, \"observed_sql\": [\"BEGIN IMMEDIATE\", \"PRAGMA main.table_info(\\\"schema_versions\\\")\", \"SELECT schema_versions.version \\nFROM schema_versions\"], \"source_sha256\": {\"api.py\": \"2e3cbe3606d8098c09fefaf335c6533d0b6c34e1b61ad491ccad06eed74a584e\", \"storage.py\": \"d8e8c554059f3ffdb5baedde450b23e4922ddac335967641f9858786cc7c6187\", \"__init__.py\": \"8bcb029ee684ea91be244362ee78fb6a96d110d96d813548e0f8f76269382116\"}}\n",
+    "stderr": "",
+    "result": {
+      "software_version": "0.2.0-rc.1",
+      "maximum_schema_version": 2,
+      "startup_rejected": true,
+      "exception_type": "ValueError",
+      "message": "Database schema is newer than this software; use the matching release",
+      "api_constructed": false,
+      "domain_queries_executed": false,
+      "observed_sql": [
+        "BEGIN IMMEDIATE",
+        "PRAGMA main.table_info(\"schema_versions\")",
+        "SELECT schema_versions.version \nFROM schema_versions"
+      ],
+      "source_sha256": {
+        "api.py": "2e3cbe3606d8098c09fefaf335c6533d0b6c34e1b61ad491ccad06eed74a584e",
+        "storage.py": "d8e8c554059f3ffdb5baedde450b23e4922ddac335967641f9858786cc7c6187",
+        "__init__.py": "8bcb029ee684ea91be244362ee78fb6a96d110d96d813548e0f8f76269382116"
+      }
+    }
+  },
+  "database_before_legacy_startup": {
+    "sha256": "cb5aa5e22ed9466ad5a41694cdde9ee3177039b869e8d26b6d28e0f9e5e26be0",
+    "table_counts": {
+      "audit": 8,
+      "fleet_reservations": 0,
+      "idempotency": 0,
+      "jobs": 1,
+      "organisations": 2,
+      "outbox": 8,
+      "record_versions": 3,
+      "records": 2,
+      "resource_locks": 0,
+      "resource_reservations": 0,
+      "schema_versions": 3,
+      "sessions": 3,
+      "sharing_agreements": 0,
+      "users": 3
+    }
+  },
+  "database_after_legacy_startup": {
+    "sha256": "cb5aa5e22ed9466ad5a41694cdde9ee3177039b869e8d26b6d28e0f9e5e26be0",
+    "table_counts": {
+      "audit": 8,
+      "fleet_reservations": 0,
+      "idempotency": 0,
+      "jobs": 1,
+      "organisations": 2,
+      "outbox": 8,
+      "record_versions": 3,
+      "records": 2,
+      "resource_locks": 0,
+      "resource_reservations": 0,
+      "schema_versions": 3,
+      "sessions": 3,
+      "sharing_agreements": 0,
+      "users": 3
+    }
+  },
+  "database_unchanged": true,
+  "finished_at": "2026-10-28T19:12:59.855416+00:00",
+  "verifier_sha256": "462feb68551c2b60d7c2391706ca9292b9b53bdc85b6721211ff638b850aa2ab",
+  "current_source_sha256": {
+    "backend/airspace/storage.py": "e1e9367a3863ab4fac0174265a4e757329ad90ce7a8097f1e810a7a55832f6ea",
+    "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+    "backend/airspace/assistant.py": "e9d308573bf0ba3973590a1301f552c913e6525d12491f9c74a4ecc137d58a99"
+  }
+}

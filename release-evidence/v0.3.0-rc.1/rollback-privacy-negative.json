@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-28T14:51:16.855217+00:00",
+  "kind": "Expected negative compatibility finding",
+  "scope": "Fresh isolated software-fixture SQLite database only. No actual private conversation or credential was read by the older binary.",
+  "current_schema_version": 2,
+  "current_history_status": 404,
+  "current_other_actor_job_visible": false,
+  "legacy": {
+    "legacy_version": "0.2.0-rc.1",
+    "legacy_schema_version": 2,
+    "migration_accepted": true,
+    "cross_actor_history_status": 200,
+    "cross_actor_history_items": 1,
+    "cross_actor_job_visible": true
+  },
+  "legacy_source": "Extracted frozen 0.2.0-rc.1 archive; read only. Archive provenance: release-evidence/v0.2.0-rc.1/standalone-archive-verification.json",
+  "legacy_source_sha256": {
+    "backend/airspace/api.py": "2e3cbe3606d8098c09fefaf335c6533d0b6c34e1b61ad491ccad06eed74a584e",
+    "backend/airspace/storage.py": "d8e8c554059f3ffdb5baedde450b23e4922ddac335967641f9858786cc7c6187"
+  },
+  "release_gate": "Reject older binaries opening a private-conversation database before publishing 0.3; schema compatibility handling belongs to the release owner.",
+  "frozen_assets_modified": false,
+  "credentials_logged": false
+}

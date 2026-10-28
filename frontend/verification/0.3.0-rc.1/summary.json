@@ -1,0 +1,461 @@
+{
+  "version": "0.3.0-rc.1",
+  "recorded_at": "2026-10-28T14:26:19.893794+00:00",
+  "commands": [
+    {
+      "command": "node node_modules/vitest/vitest.mjs run --reporter=json --outputFile=verification/0.3.0-rc.1/tests.json",
+      "exit_code": 0,
+      "stdout_stderr": "tests.log"
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "stdout_stderr": "build.log"
+    }
+  ],
+  "tests": {
+    "total": 99,
+    "passed": 99,
+    "failed": 0,
+    "files": 18,
+    "isolated_software_tests": true,
+    "real_model_inference_or_operational_acceptance": false,
+    "started_at_utc": "2026-10-28T14:23:05.415000+00:00",
+    "finished_at_utc": "2026-10-28T14:23:28.622181+00:00",
+    "report_written_at_utc": "2026-10-28T14:23:28.630728+00:00"
+  },
+  "build": {
+    "typecheck_passed": true,
+    "vite_production_build_passed": true,
+    "assets": [
+      {
+        "path": "dist/assets/index-BwDooYcZ.css",
+        "bytes": 103754,
+        "sha256": "79881d693a4f8e554042d474b8c6ed5214283755e95998f550c60a20ba2d4248",
+        "written_at_utc": "2026-10-28T14:23:25.185994+00:00"
+      },
+      {
+        "path": "dist/assets/index-CZ1bEzgx.js",
+        "bytes": 471801,
+        "sha256": "4591cefc191651fef23f3ea356b081f9927c309cd34b2b7b41fea67e15bff7c2",
+        "written_at_utc": "2026-10-28T14:23:25.183994+00:00"
+      }
+    ],
+    "log_last_written_at_utc": "2026-10-28T14:23:25.246205+00:00",
+    "index_sha256": "371d024be4a0ef4b6a3a7410e3b923e7871832fae2b1044c8062e03ecc5ef603",
+    "source_files_newer_than_bundle": false,
+    "newest_source_input": {
+      "path": "src\\CopyReview.test.ts",
+      "modified_at_utc": "2026-10-28T14:22:41.894359+00:00"
+    }
+  },
+  "changed_source_and_test_files": [
+    {
+      "path": "src/AgentCompanion.tsx",
+      "change": "Changed",
+      "previous_sha256": "85a8f20b05a84ca3763ceffb3b80a383137c6039d3b07ff6d679385a91a1d76e",
+      "sha256": "fbe4d2c6ebb3b146bde61d63d0087ad3ef561dde437db41e46e6b2f03882ddc9"
+    },
+    {
+      "path": "src/AgentWorkspace.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "4aaab2f360f6d8b35d4526fed2c884c009afbe5a4ec5ab2aa6ce78fce4fefaa2",
+      "sha256": "3199df1203c2c89cab82da04b258ad4b4997700f3e2a78c5f773ecc5f93d25f7"
+    },
+    {
+      "path": "src/AgentWorkspace.tsx",
+      "change": "Changed",
+      "previous_sha256": "6ed2255b382b5c8259182303b4ac693161c75d663c61f6e3486dbd074084a579",
+      "sha256": "bde44d2542c410d8b675830bcf5d847c1f307512708f5d8d3988af2bb7938aa7"
+    },
+    {
+      "path": "src/AirspaceDesk.tsx",
+      "change": "Changed",
+      "previous_sha256": "9a5a8a46fa7e7cfeced43c9fcf81a79a1948a6c3c50668c10426b67d341afa43",
+      "sha256": "64eb666d1908c6bf3c69d476b7cc1407b3e8a0b91ec75b41e0edb68d41fc8239"
+    },
+    {
+      "path": "src/AirspaceMap.tsx",
+      "change": "Changed",
+      "previous_sha256": "1d6d782e94e13570ffa7109a5ebc9733be6f9716fd2fd0021c5b3e04662d34e0",
+      "sha256": "03dd8b8985a210f5e3637ecb86cdcb67f6dfbba2fd84480053221fc644b856c2"
+    },
+    {
+      "path": "src/AmbientBackground.tsx",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "555e565b50e6e6b0b1fee467fbb7e50bbd46aa7698d48750c2e536f0946df5fb"
+    },
+    {
+      "path": "src/AnalysisTools.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "0bd47ecec1a8e61999fce2ccc52d3d0cba91eaf7122fe542ed5da8aacc358a08",
+      "sha256": "782c840f706fddfed2f6921340cacc34fc940336af4943351981229a42146eb6"
+    },
+    {
+      "path": "src/AnalysisTools.tsx",
+      "change": "Changed",
+      "previous_sha256": "3c934594a44ae52e727b70952acff966ad36393c72bcff34706327cdbc9a726e",
+      "sha256": "49e5ecc8e58379b76c7df9a179575db03a3b9e5f397c53b9488686726e3fabe1"
+    },
+    {
+      "path": "src/api.test.ts",
+      "change": "Changed",
+      "previous_sha256": "f355cf498cf56776f5254d298d62d8d766126bb342a92d6745aac9907d8a45a6",
+      "sha256": "53661aa5637aeb012ed81aaf2bb994b021f85b0382a950f346c768fa84c25aaf"
+    },
+    {
+      "path": "src/api.ts",
+      "change": "Changed",
+      "previous_sha256": "a986b61adb02d7524ca616028fa8a15932fde73e5428933ebe248677a26d9eef",
+      "sha256": "5662d8a97592b4b651cafe229d01b5a6d34b6b03f581bf4f50718e3037eafc4f"
+    },
+    {
+      "path": "src/App.test.tsx",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "7354007c54961ec68250129a32f2b6cbf3b5b361947b0f93d1695e4506a10706"
+    },
+    {
+      "path": "src/App.tsx",
+      "change": "Changed",
+      "previous_sha256": "f77d2d72bdd3ba1e98aeec5673641f9f1d30a63b7a0ff094d1d8ac6abbfdbf20",
+      "sha256": "f10b96501b08273a79d3379a027908e8a166952ca075399ecb75f045334b5ec5"
+    },
+    {
+      "path": "src/companion.css",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "74a6f84fb6dc7edcef554f9aaf11d8fe824a0254b8e59a50d778e87cf4aae007"
+    },
+    {
+      "path": "src/companionApi.ts",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "06a2c841d424b619a0d5225536c5745869bb0abc6c3b090097d20997d59e4c73"
+    },
+    {
+      "path": "src/CompanionArtwork.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "5fc8f457ae5b2cd6801c729ac9e1eea3a2babd6f5ffdcec8e17d6909bbc08b01",
+      "sha256": "dc348af5644e8b53caef0d804f90407b493d4e3961f90dce71d25ba52db4634d"
+    },
+    {
+      "path": "src/CompanionArtwork.tsx",
+      "change": "Changed",
+      "previous_sha256": "5c64a633808368cd9a7bcf1fb7c3024380ad4a42fd573594883b3b58bd8adda8",
+      "sha256": "5001caf87290f0b22431fcc0305d37dcd73e5504e4b974eb9603e49ef2c79da3"
+    },
+    {
+      "path": "src/CompanionDock.test.tsx",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "69be4796a9a78356d4ffb9435bb69c1036197cc6fe8e04c52c2ce3d512db9c1b"
+    },
+    {
+      "path": "src/CompanionDock.tsx",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "6fb05a9f23558e92291ba9213f86ca003a0333593d1316e658fa3702dfa173bf"
+    },
+    {
+      "path": "src/CompanionMotion.test.tsx",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "a4639188f2db340a53f732c033fc1f979e83a541d2e80cb0b73a2f36cf938dbb"
+    },
+    {
+      "path": "src/companionRuntime.ts",
+      "change": "Changed",
+      "previous_sha256": "44797981135e54b0bda0cbc3ccb0f1f5b1d2526e07d461d762fa4682348c566c",
+      "sha256": "d2682316205fb31582fda13c22610669627bac08a47e6c64d3ad95b8f35cf7f3"
+    },
+    {
+      "path": "src/components.tsx",
+      "change": "Changed",
+      "previous_sha256": "1db72b60806d3e1f4bc3b738e76d29071c5648118e1af93cecf23563a5283597",
+      "sha256": "e5fb9faf65a9f2189778133b5a8474ed1855e1ca882d5242ce9cfdc811817b7b"
+    },
+    {
+      "path": "src/CoordinationDesk.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "3a2f21250a7f30d2a74dd27f46a612b9fc01abb73fa3871a44112c0050d1b3dd",
+      "sha256": "610f4ddb5c35bd98ac6e11230071f05e4bbf3bd4b513aae4ca5d1f19dcbb9b43"
+    },
+    {
+      "path": "src/CoordinationDesk.tsx",
+      "change": "Changed",
+      "previous_sha256": "51b08b42012cf5aea97183098f3b9a9f41041f68cf4d10c3a44db812666f9a79",
+      "sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8"
+    },
+    {
+      "path": "src/CopyReview.test.ts",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "46ea32b24b3299b017b7bf00a7204a309c8d7375e7a963a9bd894f4aa6a0caba"
+    },
+    {
+      "path": "src/FleetDesk.tsx",
+      "change": "Changed",
+      "previous_sha256": "b633938e509247306673ed45b589e7a3f2a09571b43631e71744eb4a99420570",
+      "sha256": "9bde67756467b9a48ac7f597db4ca3a451a63237ec8006079d83d97ec2f87693"
+    },
+    {
+      "path": "src/Library.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "fe677c8a3e5e336242a928316a46d23902e7d37a676d1c11f417094106f2f345",
+      "sha256": "1f59daf088dd2109864b8d9c20d6fd3cb275bde9d47f3dcfc7a0910e108dc9ff"
+    },
+    {
+      "path": "src/Library.tsx",
+      "change": "Changed",
+      "previous_sha256": "fea1146cad2e5f24b2577a76386927481a933c2ab6ba578a63fd12d84e6bd397",
+      "sha256": "3dfae0d986035a283bab4c4487d304b1bc98c6352304ff9beeb308fa5c56b66d"
+    },
+    {
+      "path": "src/MaintenanceEditors.tsx",
+      "change": "Changed",
+      "previous_sha256": "3de7b860f16ec9c5080102dba7a26d172188e1a1cd4e20175a82e79b3fa91fa7",
+      "sha256": "f396e0a401a6ca236096e652634d7befcdc395ae6d32374d796788e257e48cc6"
+    },
+    {
+      "path": "src/MissionDesk.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "ee613862fb6c2d848e0a085b5759ca85b70bf341301323015d8aa5359719886e",
+      "sha256": "0cbd9b7d81d7ad12813a8181a66c69ea881fc6a51f01e94df78631023a216916"
+    },
+    {
+      "path": "src/MissionDesk.tsx",
+      "change": "Changed",
+      "previous_sha256": "7d96ccab7f5103d9a458dcce240dfebf47c020ad539747106b73a22a6ba6bd2b",
+      "sha256": "c26007d8f5522ae3d001035ba46ffcfec61eb62b9bc63c9104bc10358ed139f5"
+    },
+    {
+      "path": "src/OperationalControls.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "c67af12c7ccfd7120cbe28506e5c87c5ee53d95e7bd8c1b05746a351c8ec775c",
+      "sha256": "35e82f7318992b716d2dfec00923370e8f11f22b908c080be693bbb5e2faf733"
+    },
+    {
+      "path": "src/Records.test.tsx",
+      "change": "Changed",
+      "previous_sha256": "a6cdb1b938a3a536c4cc6d2732f83977e9e332e540f00d90dfb7044b80f5ee7c",
+      "sha256": "0ab8c5f49f77c7f206946af977cb1477dfea9615e5d16f142733b3e994885ed2"
+    },
+    {
+      "path": "src/Records.tsx",
+      "change": "Changed",
+      "previous_sha256": "4cc3c8f05d612f7ff6394dd750a57fe7f3104f7f5af0927627924d6a29f34cad",
+      "sha256": "41b8e5f73c8b0702a89074b41f95015b40a0be4148010d7b37c618c537074254"
+    },
+    {
+      "path": "src/release.ts",
+      "change": "Changed",
+      "previous_sha256": "ea43fdeb5ff12699b09615c1d6d882a9da2c0464e882476b67781490139499cd",
+      "sha256": "00ffc3518fa41b2e1779f22a885369ab05dbf1c533f88bdcfa6ad462dccddf6c"
+    },
+    {
+      "path": "src/SchedulingDesk.tsx",
+      "change": "Changed",
+      "previous_sha256": "7ca6bfcd7551420ead1d9c794ad91b49dc76bc99c896809bca26e072c1a4c496",
+      "sha256": "6ac19e2ed7562c7b6ed27f72c83b7f258f3b4a56f07caa7e636ce5e96833a741"
+    },
+    {
+      "path": "src/schema.ts",
+      "change": "Changed",
+      "previous_sha256": "f8d5552a65469d170134bb2474eaa56506bc00d5992ffc6e52aedf1e91e82419",
+      "sha256": "ad86299f4285dcf20af7c5e27027c0fab506b80e5d5f3799134ab75dd8ea87cc"
+    },
+    {
+      "path": "src/SpecialWorkspaces.tsx",
+      "change": "Changed",
+      "previous_sha256": "865ca0e176b7c2970c0d315818a2add0a18bbf1c7bd3d4833e1299d39e13870d",
+      "sha256": "f4722759a1fa320b2088d3a683bb79196e6fdfe9b2215ec42cf9fdab1c43d608"
+    },
+    {
+      "path": "src/styles.css",
+      "change": "Changed",
+      "previous_sha256": "5f28b80e843bba383b296f73d4925d1681e7a93099a1337cb8abaeeaa07282db",
+      "sha256": "69b1b57c18cc567ba2b89e264d237514095da162650bef604e748cb42f4d2efb"
+    },
+    {
+      "path": "src/useCompanionMotion.ts",
+      "change": "Added",
+      "previous_sha256": null,
+      "sha256": "2201c3d4429e6a46a68541d6b4c78047b14ae1c15b35f86afbca576596b71b76"
+    }
+  ],
+  "owned_runtime": {
+    "files": [
+      {
+        "path": "public/vendor/systemlab-companion/mascot-renderer.mjs",
+        "bytes": 16003,
+        "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b",
+        "matches_reserved_subset": true
+      },
+      {
+        "path": "public/vendor/systemlab-companion/motion-core.mjs",
+        "bytes": 2487,
+        "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb",
+        "matches_reserved_subset": true
+      },
+      {
+        "path": "public/vendor/systemlab-companion/catalog.mjs",
+        "bytes": 53579,
+        "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c",
+        "matches_reserved_subset": true
+      },
+      {
+        "path": "public/vendor/systemlab-companion/assets/originals/mascotte_01_indaco.png",
+        "bytes": 1274382,
+        "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a",
+        "matches_reserved_subset": true
+      },
+      {
+        "path": "public/vendor/systemlab-companion/assets/originals/mascotte_06_coral_compact.png",
+        "bytes": 1138958,
+        "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284",
+        "matches_reserved_subset": true
+      }
+    ],
+    "existing_reserved_licence_unchanged": true,
+    "preferred_engine": "webgl-mesh-2.5d",
+    "accepted_animated_fallback_engine": "canvas2d-deformation",
+    "module_or_asset_failure": "Fresh procedural SVG/CSS organism; no fixed IMG fallback.",
+    "motion": "Default continuous animation, bounded pointer follow, focus and explicit action gestures. Global pause and operating-system reduced motion take precedence.",
+    "actual_browser_frame_measurement": "Pending separate root browser verification; unit tests use isolated renderer fixtures."
+  },
+  "reactive_background": {
+    "implementation": "Fresh pointer- and keyboard-focus-responsive CSS gradients with bounded requestAnimationFrame updates and pause/reduced motion.",
+    "inspiration_inspected": [
+      "Already distributed public/agentic-theme.css",
+      "Already distributed public/cockpit-companion.css"
+    ],
+    "proprietary_style_or_trading_code_copied": false
+  },
+  "companion_contracts": {
+    "routes": [
+      "GET /companion/catalog",
+      "GET/POST /companion/conversations",
+      "GET /companion/conversations/{id}",
+      "POST /companion/conversations/{id}/messages",
+      "POST /companion/conversations/{id}/cancel",
+      "POST /companion/conversations/{id}/actions/{action}/confirm",
+      "POST /companion/conversations/{id}/actions/{action}/reject",
+      "GET /companion/tasks",
+      "PUT /companion/tasks/{id}",
+      "GET /agent-workflows/{id}",
+      "POST /agent-workflows/{id}/control"
+    ],
+    "notes": [
+      "Queued means waiting for the worker; Running uses recorded progress.",
+      "Both conversation and action versions are sent for confirmation/rejection.",
+      "Expired or missing-validity proposals cannot be confirmed.",
+      "Workflow confirmation starts internal worker work and creates a tracking task.",
+      "Task completion/cancellation changes the personal tracking task only.",
+      "Retries preserve the original explicit jurisdiction and date with a current conversation version.",
+      "Failed detail polling pauses until explicit reload.",
+      "A late lower-version response cannot replace the current conversation.",
+      "Model fallback is identified; other application workspaces remain usable.",
+      "Draft cases navigate to authorisation cases; saved tasks and actual workflow results remain inspectable.",
+      "Acute-flight and incident guidance is labelled Approved procedure required, links to Incidents and offers no AI retry. The backend records zero model calls for this procedure_guidance path.",
+      "Conversation selection is saved privately per actor and organisation; explicitly switching clears country/date inputs.",
+      "Only detail matching the selected conversation can be shown or sent; delayed created-record receipts are keyed to the response conversation.",
+      "Conversation-switching controls disable during writes; a regression exercises delayed confirmation and an older detail response.",
+      "Existing conversation model status is labelled as the last response status. Case and workflow previews disclose organisation visibility.",
+      "ConfirmResponse.job includes the actual agent_orchestration workflow payload union.",
+      "Fallback prose is labelled Basic guidance without a model response; this does not misstate rejected output as a fresh model-readiness probe.",
+      "Idle presentation is labelled Waiting for input, without asserting that no organisation workflow is running."
+    ]
+  },
+  "copy_review": "copy-review.json",
+  "repaired_verification_issues": [
+    "Old copy assertions were updated to the new direct labels while retaining permission/version/persistence assertions.",
+    "Old fixed-image assertions were replaced with active animation/fallback and race/unmount checks.",
+    "Testing Library-specific option/type errors in new tests were repaired before final build.",
+    "The broad 12-workspace test exceeded its 5-second budget under unrestricted parallel CPU contention; it passed alone in 2.127 seconds. Limiting the growing suite to four workers preserved the original timeout and produced the complete passing suite.",
+    "Actual signed-out browser review exposed a missing animation pause control; the full control is now present and covered by a form-data-preservation test.",
+    "A read-only adversarial review exposed delayed old-conversation success cards; receipts are now keyed to conversation and stale details cannot be sent.",
+    "The final CSS-only repair increases the visible motion-control target and font; production build was rerun after that repair."
+  ],
+  "frozen_previous_release": {
+    "archive": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release\\0.2.0-rc.1\\System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+    "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+    "unchanged": true
+  },
+  "remaining_verification": [
+    "Actual browser interaction with a running API and worker.",
+    "Actual local-model response and stored action confirmation evidence.",
+    "Actual frame progression, fallback fault injection and mobile layout review.",
+    "Parent release, security and publication gates."
+  ],
+  "changed_configuration_files": [
+    {
+      "path": "package.json",
+      "previous_sha256": "0d307511365dcee72f1126d4557943f4a032dc044665f6c34b9662720b428e8d",
+      "sha256": "e5bd9449d463b951a9afc19b844d550e6f8de1b2d738338e6309d9f051dd3336"
+    },
+    {
+      "path": "package-lock.json",
+      "previous_sha256": "a62776bf2987df56998915fafb89cade6ddb4a838cfb14bd165361740ab2156a",
+      "sha256": "e16c96bf6049fbc9d6319d12f1dd14b5dd8974e7a07bade4c44e2dd46078a8fc"
+    },
+    {
+      "path": "vite.config.ts",
+      "previous_sha256": "81d63b3d20e8aa6dea23855d0a2cccb2be1ab180a89c337d0a435400c112010d",
+      "sha256": "05c2845075e35546603e47c2d84de1c9e4b01b9895eaa79c3db8f8e483bb83a3"
+    }
+  ],
+  "source_review": {
+    "method": "Read-only software-agent contract review against assistant.py and companion_api.py; not professional aviation certification.",
+    "frontend_findings": "No unresolved critical frontend-control issue identified after the conversation race and contract/type fixes.",
+    "separate_backend_finding": "The backend owner reports trusted static guidance registry hardening and a final-policy restart; measured final backend inference and gate results remain separate evidence."
+  },
+  "signed_out_browser_check": {
+    "tool": "cua_repl Chrome own ephemeral tab",
+    "url": "http://127.0.0.1:8787/",
+    "observed_script": "/assets/index-BfPHafAx.js",
+    "canvas_engine": "webgl-mesh-2.5d",
+    "runtime": "active",
+    "initial_motion": "full",
+    "pause_result": {
+      "canvas_motion": "off",
+      "background_moving": false,
+      "motion_enabled": false
+    },
+    "resume_result": {
+      "canvas_motion": "full",
+      "background_moving": true,
+      "motion_enabled": true
+    },
+    "viewport_width": 1920,
+    "scroll_width": 1920,
+    "credentials_entered": false,
+    "model_or_conversation_requests_sent": false,
+    "note": "These live observations precede the final CSS-only motion-button target/readability repair. Final CSS is built; final exact-bundle browser verification remains a separate step. Pixel-level frame progression was not measured.",
+    "console_warnings_or_errors": [],
+    "review_tab_closed": true
+  },
+  "evidence_consistency_checked_at_utc": "2026-10-28T14:49:38.356956+00:00",
+  "recorded_logs": [
+    {
+      "path": "tests.json",
+      "bytes": 38627,
+      "sha256": "5f1af80d865d2452b8bd37097019ea33ae7904b81e34015a84db9366083283f9",
+      "last_written_at_utc": "2026-10-28T14:23:28.630728+00:00"
+    },
+    {
+      "path": "tests.log",
+      "bytes": 142,
+      "sha256": "301d967899854adc893da767d4bc9eddbbf1444b0c00b97fa8d34ac456ea2a4d",
+      "last_written_at_utc": "2026-10-28T14:23:28.638742+00:00"
+    },
+    {
+      "path": "build.log",
+      "bytes": 444,
+      "sha256": "62fb36f1b709e76325b1a2f329acf7fca11332d7a266ea5fee45472f464ddc84",
+      "last_written_at_utc": "2026-10-28T14:23:25.246205+00:00"
+    }
+  ],
+  "final_bundle_identity_note": "index-CZ1bEzgx.js and index-BwDooYcZ.css are the final recorded assets. Earlier messages naming index-H00f61a5.js described an intermediate build, superseded by the final direct-copy refinements. No rerun was needed for this evidence-only check: dist, index references, build log, passing test report and recorded source/config hashes agree."
+}

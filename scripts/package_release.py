@@ -12,14 +12,16 @@ import sys
 import tomllib
 import zipfile
 from datetime import datetime, timezone
+from release_support import assert_release_writable, current_version, public_improvement_files
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT/'backend/airspace/__init__.py').read_text()).group(1)
+VERSION=current_version(ROOT)
 EXCLUDED={'.git','.venv','node_modules','__pycache__','.pytest_cache','.hypothesis','runtime','release','work','local-research','snapshots','.cache'}
 SECRET_PATTERNS=[re.compile(rb'\b(?:ghp|gho|ghu|ghs)_[A-Za-z0-9]{30,}\b'),re.compile(rb'\bhf_[A-Za-z0-9]{30,}\b'),re.compile(rb'\bsk-(?:proj-)?[A-Za-z0-9_-]{35,}\b'),re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')]
 
 
 def source_files():
+    improvement_files = public_improvement_files(ROOT)
     top_extensions={'.md','.toml','.lock','.txt','.yaml','.csv','.json','.cff'}
     candidates=[]
     for directory,subdirectories,filenames in os.walk(ROOT):
@@ -29,11 +31,12 @@ def source_files():
         rel=file.relative_to(ROOT)
         if any(part in EXCLUDED for part in rel.parts): continue
         if file.name=='.env' or file.suffix in {'.db','.pyc','.sqlite','.log'}: continue
+        if rel.parts[0]=='improvement' and rel.as_posix() not in improvement_files: continue
         if rel.parts[:2]==('models','pretrained'):
             if file.name not in {'provenance.json','LICENSE','LICENSE.txt','README.md'}: continue
         if rel.parts[0]=='sources' and not (file.suffix in {'.json','.md'}): continue
         if len(rel.parts)==1 and not (file.suffix in top_extensions or file.name in {'LICENSE','NOTICE','Dockerfile','.env.example','.gitignore','.dockerignore','.gitattributes'}): continue
-        if rel.parts[0] in {'.github','LICENSES','work','deploy','backend','frontend','tests','scripts','docs','sources','models','release-evidence','migrations','publication'} or len(rel.parts)==1:
+        if rel.parts[0] in {'.github','LICENSES','work','deploy','backend','frontend','tests','scripts','docs','sources','models','release-evidence','migrations','publication','improvement'} or len(rel.parts)==1:
             if file.name.endswith('.tsbuildinfo'): continue
             yield file,rel
 
@@ -93,6 +96,8 @@ def build_metadata():
 
 
 def main():
+    # Refuse before build_metadata or any other release output can change.
+    assert_release_writable(ROOT, VERSION)
     gate=json.loads((ROOT/'release-evidence'/('v'+VERSION)/'release-gates.json').read_text())
     if not gate.get('engineering_checks_passed'): raise SystemExit('Engineering gates have not passed; packaging blocked')
     if gate.get('version') != VERSION: raise SystemExit('Release gates belong to another software version')
@@ -100,11 +105,6 @@ def main():
     build_metadata()
     output=ROOT/'release';output.mkdir(exist_ok=True)
     package=output/f'System-Lab-Airspace-Operations-{VERSION}.zip'
-    status_path=ROOT/'publication/status.json'
-    if package.exists() and status_path.exists():
-        publication=json.loads(status_path.read_text())
-        if publication.get('release')==VERSION and 'Published' in publication.get('states_reached',[]):
-            raise SystemExit('Published release bytes are frozen; choose a new software version')
     files=list(source_files());failures=[];manifest={}
     for source,rel in files:
         data=source.read_bytes()

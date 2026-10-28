@@ -1,0 +1,51 @@
+{
+  "purpose": "Actual existing public-source copy review for a prepared revision",
+  "publication_performed": false,
+  "prior_web_tool_attempt": "The web opener returned Internal Error for all four URLs; bounded unauthenticated HTTPS reads were attempted next",
+  "sources": [
+    {
+      "name": "system-lab",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "checked_at": "2026-10-28T13:11:56.635822+00:00",
+      "status": 200,
+      "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "bytes": 31950,
+      "sha256": "14a818f679397080c426c80a47a6b2a0918fb7f98c903db5f8a33c2329a9cf3c",
+      "private_local_capture": "runtime\\publication\\v0.3\\public-copy\\system-lab.txt",
+      "result": "Read"
+    },
+    {
+      "name": "hf-model",
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/main/README.md",
+      "checked_at": "2026-10-28T13:11:56.637267+00:00",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Magic51/system-lab-airspace-shall-router/7addd5efe4a17729463fe392cf25489cafc7ccc6/README.md?%2FMagic51%2Fsystem-lab-airspace-shall-router%2Fresolve%2Fmain%2FREADME.md=&etag=%2282ed6be8785019dba480df34c8254528a7ce9734%22",
+      "bytes": 7478,
+      "sha256": "fdcc2eb140f7c72bf30feb6b37e1063705d3aa9fb07f6e6aacd5d0734ff38588",
+      "private_local_capture": "runtime\\publication\\v0.3\\public-copy\\hf-model.txt",
+      "result": "Read"
+    },
+    {
+      "name": "hf-dataset",
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/main/README.md",
+      "checked_at": "2026-10-28T13:11:56.637953+00:00",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/e9fb162a31fa139c8b511fbc84a18277b6aa560c/README.md?%2Fdatasets%2FMagic51%2Fsystem-lab-airspace-source-annotations%2Fresolve%2Fmain%2FREADME.md=&etag=%2246dfb615f7d49c6371bb8a1778258578f425c881%22",
+      "bytes": 6276,
+      "sha256": "7ef5704ff31e932b212ec3a9d030831c834683cbf3ab5acbfddda7b1e5dc23bb",
+      "private_local_capture": "runtime\\publication\\v0.3\\public-copy\\hf-dataset.txt",
+      "result": "Read"
+    },
+    {
+      "name": "hf-space",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/",
+      "checked_at": "2026-10-28T13:11:56.638697+00:00",
+      "status": 200,
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/index.html",
+      "bytes": 12807,
+      "sha256": "47419ec552b9c694484f0cd50cd9261b90c81ad5922eab1e32ef528d5fe79221",
+      "private_local_capture": "runtime\\publication\\v0.3\\public-copy\\hf-space.txt",
+      "result": "Read"
+    }
+  ]
+}

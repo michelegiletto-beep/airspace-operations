@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-28T13:08:11.117970+00:00",
+  "automation_id": "airspace-product-improvement",
+  "name": "Airspace product improvement",
+  "state": "ACTIVE",
+  "frequency": "Every six hours",
+  "destination": "Current development chat",
+  "prompt_path": "improvement/RECURRING_PROMPT.md",
+  "prompt_sha256": "04ea7173911dfb14637a7132a870eb4c5ee11d9e0773fa5c3ea63b2f0bbf7cb3",
+  "normal_active_work_budget_minutes": 45,
+  "local_model_evaluation_call_budget": 2,
+  "emails_or_human_contact_allowed": false,
+  "existing_release_overwrites_allowed": false,
+  "automatically_claimed_completed_cycles": 0
+}

@@ -1,0 +1,273 @@
+{
+  "started_at": "2026-10-28T14:36:08.967054+00:00",
+  "scope": "Actual local model through authenticated API and separate running worker in an isolated development store. Real software-help requests only; no fabricated flights, customers or authority decisions.",
+  "rule_version": "companion/1.2",
+  "turns": [
+    {
+      "request": "How do I prepare a source review using the actual regulatory library?",
+      "job_id": "2e5e7070-56a8-4c5a-ae73-fd9b8610198b",
+      "user_message_id": "e1650496-8968-4a6d-8241-c6bcdbba9c79",
+      "reply": {
+        "id": "7b4a900d-3674-4a81-b9fe-17b32115ccd1",
+        "organisation_id": "1b49f564-a1c0-4137-84c2-3a353990c97c",
+        "kind": "companion_message",
+        "title": "Local companion reply",
+        "status": "Completed",
+        "data": {
+          "conversation_id": "9fb908a0-7c62-4b90-80f0-1e5b06550c23",
+          "role": "assistant",
+          "text": "Review the selected context and choose a recorded next step.\n\nChoose the operating country and intended operation date.\n\nStart a source research workflow to preserve provisions and citations.\n\nKeep source quotations separate from a reviewed interpretation.",
+          "reply_kind": "local_llm",
+          "turn_sequence": 1,
+          "reply_to_message_id": "e1650496-8968-4a6d-8241-c6bcdbba9c79",
+          "facts": [],
+          "next_steps": [
+            {
+              "id": "step_0",
+              "text": "Choose the operating country and intended operation date."
+            },
+            {
+              "id": "step_1",
+              "text": "Start a source research workflow to preserve provisions and citations."
+            },
+            {
+              "id": "step_2",
+              "text": "Keep source quotations separate from a reviewed interpretation."
+            }
+          ],
+          "missing_inputs": [
+            "Select the actual case, site, aircraft or other record relevant to this request."
+          ],
+          "source_refs": [],
+          "action_ids": [],
+          "model": {
+            "attempts": [
+              {
+                "mode": "local_causal",
+                "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+                "generative_model_used": true,
+                "hosted_provider": false,
+                "input_tokens": 571,
+                "output_tokens": 46,
+                "seconds": 29.617037000018172,
+                "model_load_seconds": 76.33334370004013,
+                "prompt_checksum": "a04264dc515e574fbc27f480f5da08438be43122011a0ec18e6ced8a6286ff9e",
+                "response_checksum": "d5ae9e80503751bf082360929d55fc50255686399d7ded52ed6295404fed0cc1",
+                "remote_code": false,
+                "thinking_output_requested": false
+              }
+            ],
+            "model_calls": 1,
+            "failure_type": null,
+            "status": {
+              "state": "Ready",
+              "mode": "local_causal",
+              "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+              "message": "A local reply passed the advisory output and reference checks.",
+              "hosted_provider": false,
+              "generative_model_used": true
+            }
+          },
+          "assistance_selection": {
+            "guidance_id": "review_context",
+            "guidance": "Review the selected context and choose a recorded next step.",
+            "fact_ids": [],
+            "next_step_ids": [
+              "step_0",
+              "step_1",
+              "step_2"
+            ],
+            "action_ids": []
+          },
+          "context_snapshot": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "rule_version": "companion/1.2",
+          "legal_conclusion_generated": false,
+          "external_actions": [],
+          "owner_actor_id": "4a0c228c-346c-44b1-933e-d9d3cb9e1961"
+        },
+        "version": 1,
+        "created_by": "4a0c228c-346c-44b1-933e-d9d3cb9e1961",
+        "created_at": "2026-10-28T14:37:55.620822+00:00",
+        "updated_at": "2026-10-28T14:37:55.620822+00:00"
+      },
+      "observed_progress": [
+        {
+          "at": "2026-10-28T14:36:09.266992+00:00",
+          "phase": "Queued",
+          "job_state": "Queued"
+        },
+        {
+          "at": "2026-10-28T14:36:11.275490+00:00",
+          "phase": "Preparing local inference",
+          "job_state": "Running"
+        },
+        {
+          "at": "2026-10-28T14:37:55.926201+00:00",
+          "phase": "Ready",
+          "job_state": null
+        }
+      ],
+      "observed_completion_seconds": 106.677,
+      "actual_local_generation": true,
+      "admitted_local_reply": true
+    },
+    {
+      "request": "Remember to review the actual source register before preparing an authorisation case",
+      "job_id": "fbce9962-3bb9-4b7b-b27d-3816864df3fe",
+      "user_message_id": "f92d7278-3c59-4adc-89b5-d4755f151904",
+      "reply": {
+        "id": "0ddb7264-a162-499a-8244-0c7d4dc1bd3b",
+        "organisation_id": "1b49f564-a1c0-4137-84c2-3a353990c97c",
+        "kind": "companion_message",
+        "title": "Local companion reply",
+        "status": "Completed",
+        "data": {
+          "conversation_id": "9fb908a0-7c62-4b90-80f0-1e5b06550c23",
+          "role": "assistant",
+          "text": "Review the selected context and choose a recorded next step.\n\nNo operational record is selected for this conversation.\n\nReview the personal task text and confirm it only if it matches your request.\n\nUse the task list to track the personal task. Its state does not change an operation.",
+          "reply_kind": "local_llm",
+          "turn_sequence": 2,
+          "reply_to_message_id": "f92d7278-3c59-4adc-89b5-d4755f151904",
+          "facts": [
+            {
+              "id": "context_empty",
+              "text": "No operational record is selected for this conversation.",
+              "source_ref": "conversation:selected-context",
+              "kind": "context",
+              "status": "Missing",
+              "version": null
+            }
+          ],
+          "next_steps": [
+            {
+              "id": "step_0",
+              "text": "Review the personal task text and confirm it only if it matches your request."
+            },
+            {
+              "id": "step_1",
+              "text": "Use the task list to track the personal task. Its state does not change an operation."
+            }
+          ],
+          "missing_inputs": [],
+          "source_refs": [
+            {
+              "source_ref": "conversation:selected-context",
+              "record_id": null,
+              "version": null
+            }
+          ],
+          "action_ids": [
+            "aa6625b3-cb88-46b9-b652-5b3eebe639d5"
+          ],
+          "model": {
+            "attempts": [
+              {
+                "mode": "local_causal",
+                "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+                "generative_model_used": true,
+                "hosted_provider": false,
+                "input_tokens": 659,
+                "output_tokens": 47,
+                "seconds": 31.177211300004274,
+                "model_load_seconds": 5.509995389729738e-05,
+                "prompt_checksum": "96a012129a8ce5d9a1ae3f087e0ca97ff1e42b45945f1a7d722a781a7bb8615e",
+                "response_checksum": "2ea4ef2c77a7a4d440a2b2c08ac5b23185eaaef275a34c683e2c7918ee14ddcc",
+                "remote_code": false,
+                "thinking_output_requested": false
+              }
+            ],
+            "model_calls": 1,
+            "failure_type": null,
+            "status": {
+              "state": "Ready",
+              "mode": "local_causal",
+              "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+              "message": "A local reply passed the advisory output and reference checks.",
+              "hosted_provider": false,
+              "generative_model_used": true
+            }
+          },
+          "assistance_selection": {
+            "guidance_id": "review_context",
+            "guidance": "Review the selected context and choose a recorded next step.",
+            "fact_ids": [
+              "context_empty"
+            ],
+            "next_step_ids": [
+              "step_0",
+              "step_1"
+            ],
+            "action_ids": [
+              "save_task"
+            ]
+          },
+          "context_snapshot": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "rule_version": "companion/1.2",
+          "legal_conclusion_generated": false,
+          "external_actions": [],
+          "owner_actor_id": "4a0c228c-346c-44b1-933e-d9d3cb9e1961"
+        },
+        "version": 1,
+        "created_by": "4a0c228c-346c-44b1-933e-d9d3cb9e1961",
+        "created_at": "2026-10-28T14:38:28.840358+00:00",
+        "updated_at": "2026-10-28T14:38:28.840358+00:00"
+      },
+      "observed_progress": [
+        {
+          "at": "2026-10-28T14:37:55.963010+00:00",
+          "phase": "Queued",
+          "job_state": "Queued"
+        },
+        {
+          "at": "2026-10-28T14:37:57.973964+00:00",
+          "phase": "Preparing local inference",
+          "job_state": "Running"
+        },
+        {
+          "at": "2026-10-28T14:38:30.193578+00:00",
+          "phase": "Ready",
+          "job_state": null
+        }
+      ],
+      "observed_completion_seconds": 34.24,
+      "actual_local_generation": true,
+      "admitted_local_reply": true
+    }
+  ],
+  "success": true,
+  "new_training": false,
+  "hosted_provider": false,
+  "conversation_id": "9fb908a0-7c62-4b90-80f0-1e5b06550c23",
+  "health": {
+    "status": "ok",
+    "version": "0.3.0-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "owned_source_sha256": {
+    "backend/airspace/assistant.py": "e9d308573bf0ba3973590a1301f552c913e6525d12491f9c74a4ecc137d58a99",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f"
+  },
+  "confirmed_task": {
+    "id": "671d9408-85f1-463b-923d-99104313a338",
+    "organisation_id": "1b49f564-a1c0-4137-84c2-3a353990c97c",
+    "kind": "companion_task",
+    "title": "Remember to review the actual source register before preparing an authorisation case",
+    "status": "Open",
+    "data": {
+      "conversation_id": "9fb908a0-7c62-4b90-80f0-1e5b06550c23",
+      "source_message_id": "f92d7278-3c59-4adc-89b5-d4755f151904",
+      "description": "Remember to review the actual source register before preparing an authorisation case",
+      "due_at": null,
+      "completed_at": null,
+      "created_from_action_id": "aa6625b3-cb88-46b9-b652-5b3eebe639d5",
+      "owner_actor_id": "4a0c228c-346c-44b1-933e-d9d3cb9e1961"
+    },
+    "version": 1,
+    "created_by": "4a0c228c-346c-44b1-933e-d9d3cb9e1961",
+    "created_at": "2026-10-28T14:38:30.199918+00:00",
+    "updated_at": "2026-10-28T14:38:30.199918+00:00"
+  },
+  "explicit_confirmation": "The release owner's verification instructions authorised this personal task; the authenticated API received both current expected versions. The model did not confirm its own proposal.",
+  "finished_at": "2026-10-28T14:38:30.216181+00:00"
+}

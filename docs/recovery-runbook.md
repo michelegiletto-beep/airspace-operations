@@ -2,6 +2,8 @@
 
 Back up the database, complete `runtime/objects/`, permitted source originals, model/experiment lineage and private audit key. The database alone does not contain attachment bytes. Restrict backup access and encrypt off-host storage. Keep an external audit-head checkpoint and document recovery point and recovery time objectives for the deployment.
 
+Version 0.3 adds a startup compatibility marker for actor-private companion data. Follow [Upgrading to version 0.3](upgrading-to-0.3.md): stop all older services before migration, verify the restored copy and start only matching new binaries. An already-running old process is not fenced by the marker. Never remove marker 3 or perform an in-place downgrade to 0.2; restore the complete pre-upgrade checkpoint into a separate controlled environment instead.
+
 SQLite: stop writers for a coordinated object-store snapshot, then run `python -m airspace.cli backup --output private-backups/airspace.db`. The SQLite online-backup API preserves a consistent database snapshot. Copy immutable object blobs and the audit key separately. Run `python -m airspace.cli restore --input private-backups/airspace.db --target runtime-restored/airspace.db`; existing targets are refused. Supply the original audit key and verify every organisation with `airspace verify --organisation-id ID`. Check `PRAGMA integrity_check`, attachment hashes and record counts before directing users to the restored service. Never overwrite an active operational instance during a restore drill.
 
 ## PostgreSQL credentials and restore procedure

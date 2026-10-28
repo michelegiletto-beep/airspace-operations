@@ -1,0 +1,9 @@
+{
+  "scope": "Reviewed public engineering governance and nonoperational cycle metadata only",
+  "public_files": [
+    "RECURRING_PROMPT.md",
+    "automation-receipt.json",
+    "cycles/2026-10-28-companion-revision.json"
+  ],
+  "future_cycles": "Unlisted cycle files are excluded from release payloads until reviewed and deliberately added. Do not list private records, credentials, correspondence or operational customer data."
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-28",
+  "release": "0.3.0-rc.1",
+  "state": "Prepared",
+  "specification": "SPECIFICATION_V3_ADDENDUM.md",
+  "scope": "Actual copy/source audit, separate prepared publication sources and narrow release-tool isolation fixes. No application/frontend implementation or external publication performed by this work",
+  "publication_sources": "publication/v0.3",
+  "copy_inventory": {"path": "publication/v0.3/ablation-inventory.json", "concrete_observations": 27, "limit": "Initial 0.2 observations and current literal matches are distinguished; literal absence is not full rendered review. Historical published artifacts are preserved"},
+  "actual_public_reads": [
+    "Current System Lab project page: HTTP 200",
+    "Current Hugging Face model card: HTTP 200 at its recorded revision",
+    "Current Hugging Face dataset card: HTTP 200 at its recorded revision",
+    "Current static evidence Space: HTTP 200",
+    "GitHub frozen 0.2 README and current main README through the connected read-only GitHub tool"
+  ],
+  "source_read_receipts": ["publication/v0.3/public-source-audit.json", "publication/v0.3/github-source-audit.json"],
+  "release_tool_repairs": [
+    {"issue": "Published freeze was checked after metadata writes and only in the active ledger", "repair": "Check active, history and versioned publication receipts before metadata/archive writes; published versions remain protected after a new ledger becomes active"},
+    {"issue": "Archive verification inherited external database and identity settings", "repair": "Force a new SQLite database and test audit key within the extracted project; remove PostgreSQL-test, OIDC, parent model and initial-password configuration"},
+    {"issue": "Source payload batches reused one unversioned directory", "repair": "Default to versioned runtime output with exact output_directory, inventory_path, batch_paths and large_path in inventory. Preserve old count aliases and explicit --legacy-output compatibility"},
+    {"issue": "CI branch trigger named only the 0.2 branch", "repair": "Accept codex/airspace-* candidate branches"},
+    {"issue": "Recurring governance directory was omitted; blindly including future cycles could expose private material", "repair": "Include only reviewed improvement/publication-manifest.json entries; reject unsafe, key/private and missing paths; leave future unlisted cycles excluded"}
+  ],
+  "files_changed": ["scripts/release_support.py", "scripts/package_release.py", "scripts/verify_archive.py", "scripts/verify_release.py", "publication/prepare-github-payload.py", ".github/workflows/engineering.yml", "tests/test_release_tools.py", "improvement/publication-manifest.json"],
+  "commands_executed": [
+    {"command": ".venv/Scripts/python.exe -m pytest tests/test_release_tools.py -q", "result": "Initial 10 passed in 0.84s"},
+    {"command": ".venv/Scripts/python.exe -m pytest tests/test_release_tools.py -q", "result": "15 passed in 0.59s after explicit improvement selection"},
+    {"command": ".venv/Scripts/python.exe -m pytest tests/test_release_tools.py -q", "result": "Final 16 passed in 0.49s including missing reviewed file refusal"},
+    {"command": ".venv/Scripts/python.exe publication/v0.3/audit_public_sources.py", "result": "Four existing public source reads succeeded; earlier web opener attempts returned Internal Error and were recorded"},
+    {"command": ".venv/Scripts/python.exe publication/v0.3/build_ablation_inventory.py", "result": "27 concrete observations written; current source matches are evidence snapshots, not a completed stylistic acceptance claim"},
+    {"command": ".venv/Scripts/python.exe publication/v0.3/verify_preparation.py", "result": "Two HTML documents parsed, local references checked, five authored documents scanned, no new download enabled and original student hash matched"}
+  ],
+  "preserved_releases_checked": [
+    {"version": "0.1.0-rc.1", "bytes": 2090705, "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87", "matches_history": true, "history_freeze_enforced": true},
+    {"version": "0.2.0-rc.1", "bytes": 10122929, "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f", "matches_history": true, "history_freeze_enforced": true}
+  ],
+  "new_package_built": false,
+  "upload_or_deployment_performed": false,
+  "model_weights_or_dataset_records_changed": false,
+  "email_or_people_contact_performed": false,
+  "remaining": ["Integrated application and private companion adversarial review", "Actual local model and browser journeys for 0.3", "Current source full software/container/database gates", "Actual screenshots and final publication copy replacing preparation text only when verified", "Frozen exact-archive install and public upload/publication/retrieval receipts"]
+}

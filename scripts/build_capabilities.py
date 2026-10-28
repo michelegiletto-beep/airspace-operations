@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 VERSION=re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT/'backend/airspace/__init__.py').read_text()).group(1)
+CURRENT_EVIDENCE='release-evidence/v'+VERSION
 items=[]
 def add(name,status,implementation,evidence,limitation=''):
     items.append(dict(capability=name,status=status,implementation=implementation,evidence=evidence,limitation=limitation))
@@ -55,6 +56,10 @@ add('Aircraft-specific maintenance, completion evidence and independent release'
 add('Constrained maintenance scheduler and separate verifier','Verified','backend/airspace/fleet.py','tests/test_fleet.py','Requires real technician/facility/task inputs; proposed plan is not a serviceability release')
 add('European country segments, handovers and Article 13 instrument distinctions','Verified','backend/airspace/europe.py;tests/references/article13-2026.json','tests/test_europe.py;docs/fleet-and-cross-border.md','50 geographical registrations are not 50 validated legal packs; STS/LUC documented host provision differs from operational-authorisation confirmation')
 add('Bilateral aircraft sharing and physical global reservation ledger','Verified','backend/airspace/sharing.py;planning.py;storage.py','tests/test_sharing.py;tests/test_postgres_coordination.py','Consent is not transfer of operational permission; PostgreSQL concurrency result is recorded separately')
+add('Private local-model companion conversations','Implemented','backend/airspace/assistant.py;companion_api.py;worker.py','tests/test_assistant.py;tests/test_companion_boundaries.py;'+CURRENT_EVIDENCE,'Actor-private conversations; actual model execution and current release verification are recorded separately')
+add('Personal tasks and confirmed internal draft actions','Implemented','backend/airspace/assistant.py;frontend/src/CompanionDock.tsx','tests/test_assistant.py;tests/test_companion_boundaries.py','Personal tasks and explicit typed drafts do not approve an operation or communicate externally')
+add('Animated companion fallback and reactive workspace','Implemented','frontend/src/CompanionArtwork.tsx;frontend/src','frontend/verification;'+CURRENT_EVIDENCE,'Continuous normal-motion animation; user pause and reduced-motion preferences remain authoritative')
+add('Recurring engineering verification and improvement','Implemented','improvement/RECURRING_PROMPT.md;docs/recurring-improvement.md','improvement/automation-receipt.json','Six-hour development heartbeat on the configured host; distinct from operational scheduling and not proof of completed future cycles')
 # Preserve the distinction between a prepared deployment and an actual CI run.
 ci_path=ROOT/'release-evidence'/('v'+VERSION)/'ci-verification.json'
 if ci_path.exists():
@@ -64,9 +69,9 @@ if ci_path.exists():
     if ci_verified:
         for feature in items:
             if feature['capability']=='PostgreSQL/PostGIS/pgvector deployment':
-                feature.update(status='Verified',evidence='release-evidence/v0.2.0-rc.1/ci-verification.json;ci-success.log.txt',limitation='Actual isolated GitHub runner; ordinary application role, extensions,16 PG tests, running worker and pg_dump/restore passed. Not production-scale acceptance.')
+                feature.update(status='Verified',evidence=CURRENT_EVIDENCE+'/ci-verification.json;ci-success.log.txt',limitation='Actual isolated GitHub runner; ordinary application role, extensions, PG tests, running worker and pg_dump/restore passed. Not production-scale acceptance.')
             elif feature['capability']=='Container build, restoration and resilience at production scale':
-                feature.update(capability='Container build, running-worker health and PostgreSQL restoration',status='Verified',evidence='release-evidence/v0.2.0-rc.1/ci-verification.json',limitation='Actual isolated deployment/restoration verified; deployment-scale SLO, network partitions and external pentest remain unverified.')
+                feature.update(capability='Container build, running-worker health and PostgreSQL restoration',status='Verified',evidence=CURRENT_EVIDENCE+'/ci-verification.json',limitation='Actual isolated deployment/restoration verified; deployment-scale SLO, network partitions and external pentest remain unverified.')
             elif feature['capability']=='Transactional schedule reservation and cancellation':
                 feature['limitation']='SQLite and isolated PostgreSQL concurrency exercised; real operator/provider acceptance remains separate'
 publication_path=ROOT/'publication/status.json'
@@ -77,7 +82,7 @@ if publication_path.exists():
     if publication_verified:
         for feature in items:
             if feature['capability']=='Public downloadable release':
-                feature.update(status='Verified',evidence='publication/status.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;system-lab-public-verification.json;standalone-archive-verification.json',limitation='Frozen engineering candidate; exact public bytes independently retrieved and installed. Full original baseline, stable and operational acceptance remain incomplete.')
+                feature.update(status='Verified',evidence='publication/status.json;'+CURRENT_EVIDENCE+'/github-public-verification.json;system-lab-public-verification.json;standalone-archive-verification.json',limitation='Frozen engineering candidate; exact public bytes independently retrieved and installed. Full original baseline, stable and operational acceptance remain incomplete.')
 (ROOT/'capabilities.json').write_text(json.dumps({'schema_version':'1.0','release':VERSION,'stable_release':False,'features':items},indent=2),encoding='utf-8')
 
 mapping={1:('README.md;capabilities.json','release-evidence/release-gates.json'),2:('SAFETY_BOUNDARY.md;api.py','tests/test_api.py'),3:('AGENTS.md;PLAN.md;STATUS.md','release-evidence/commands.jsonl'),4:('workflows.py;planning.py','tests/test_security_workflows.py'),5:('api.py;storage.py;compose.yaml','tests/test_api.py'),6:('regulatory.py;sources/catalogue.json','tests/test_regulatory.py'),7:('regulatory.py;neural.py','tests/test_regulatory.py'),8:('neural.py;scripts/train_neural.py','models/runs;release-evidence/neural-cpu-verification.json'),9:('worker.py','tests/test_security_review.py'),10:('api.py;workflows.py;evidence.py','tests/test_api.py'),11:('operations.py','tests/test_operations.py'),12:('operations.py;frontend','tests/test_operations.py'),13:('connector registry;permission records','docs/data-provider-setup.md'),14:('scheduler.py;planning.py','tests/test_scheduler.py;tests/test_planning.py'),15:('monitoring.py;operations.py','tests/test_operations.py'),16:('monitoring.py;operations.py','tests/test_operations.py'),17:('versioned aircraft/personnel/qualification records','frontend/verification'),18:('operations.py;commercial records','tests/test_operations.py'),19:('connector registry;source ingestion','SOURCE_REGISTER.md'),20:('identity.py;storage.py;THREAT_MODEL.md','tests/test_security_review.py'),21:('frontend/src','frontend/verification'),22:('tests;scripts/verify_release.py','release-evidence'),23:('PLAN.md;STATUS.md','release-evidence/commands.jsonl'),24:('README.md;docs;scripts/package_release.py','release-evidence/release-gates.json'),25:('publication workflow','publication/status.json'),26:('STATUS.md;RELEASE_NOTES.md','release-evidence'),27:('SOURCE_REGISTER.md','sources/checks')}
@@ -115,10 +120,33 @@ for line in (ROOT/'SPECIFICATION_V2_ADDENDUM.md').read_text(encoding='utf-8').sp
     cells=[x.strip() for x in line.strip('|').split('|')]
     number=int(cells[0].split('-')[1]);impl,evidence=revision_map[number]
     rows.append(dict(requirement_id=cells[0],section='Revision 2',baseline_text=cells[1],implementation=impl,tests_evidence=evidence,release_status='Implemented - verification and publication states recorded separately',limitations='See versioned evidence and publication/status.json; no full original-baseline or operational acceptance inferred.'))
-if publication_verified:
+previous_revision_path=ROOT/'publication/history/0.2.0-rc.1.json'
+previous_revision_publication=json.loads(previous_revision_path.read_text(encoding='utf-8')) if previous_revision_path.exists() else {}
+if publication_verified or 'Independently Retrieved' in previous_revision_publication.get('states_reached',[]):
     for row in rows:
         if row['requirement_id'] in {'ASO2-012','ASO2-013','ASO2-015'}:
-            row['release_status']='Verified - engineering publication only'
-            row['tests_evidence']='publication/status.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;release-evidence/v0.2.0-rc.1/system-lab-public-verification.json;release-evidence/v0.2.0-rc.1/hf-space-final-public-verification.json'
+            row['release_status']='Verified - historical 0.2 engineering publication only'
+            row['tests_evidence']='publication/history/0.2.0-rc.1.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;release-evidence/v0.2.0-rc.1/system-lab-public-verification.json;release-evidence/v0.2.0-rc.1/hf-space-final-public-verification.json'
+revision3={
+1:('frontend/src;publication/v0.3','publication/v0.3/ablation-inventory.json;frontend/verification'),
+2:('SPECIFICATION_V3_ADDENDUM.md;source registers','tests;'+CURRENT_EVIDENCE+'/prior-release-preservation.json'),
+3:('backend/airspace/assistant.py;companion_api.py;worker.py',CURRENT_EVIDENCE+'/companion-local-verification.json'),
+4:('backend/airspace/assistant.py;api.py;orchestration.py','tests/test_assistant.py;tests/test_companion_boundaries.py'),
+5:('backend/airspace/assistant.py;coordination_api.py','tests/test_assistant.py;tests/test_companion_boundaries.py'),
+6:('frontend/src;backend/airspace/companion_api.py','frontend/verification;'+CURRENT_EVIDENCE),
+7:('frontend/src/CompanionArtwork.tsx;frontend/public/vendor/systemlab-companion','frontend/verification;'+CURRENT_EVIDENCE),
+8:('frontend/src','frontend/verification;'+CURRENT_EVIDENCE),
+9:('publication/v0.3;publication/status.json',CURRENT_EVIDENCE),
+10:('scripts/package_release.py;verify_archive.py;.github/workflows','tests/test_release_safety.py;'+CURRENT_EVIDENCE),
+11:('improvement/RECURRING_PROMPT.md;docs/recurring-improvement.md','improvement/automation-receipt.json'),
+12:('AGENTS.md;companion typed tool boundary','tests/test_assistant.py;docs/recurring-improvement.md')}
+rows=[row for row in rows if not row['requirement_id'].startswith('ASO3-')]
+revision3_path=ROOT/'SPECIFICATION_V3_ADDENDUM.md'
+if revision3_path.exists():
+    for line in revision3_path.read_text(encoding='utf-8').splitlines():
+        if not line.startswith('| ASO3-'):continue
+        cells=[x.strip() for x in line.strip('|').split('|')]
+        number=int(cells[0].split('-')[1]);impl,evidence=revision3[number]
+        rows.append(dict(requirement_id=cells[0],section='Revision 3',baseline_text=cells[1],implementation=impl,tests_evidence=evidence,release_status='In development - current evidence required',limitations='Original baseline and operational acceptance remain incomplete; no future automation result or unexecuted test is claimed.'))
 with path.open('w',newline='',encoding='utf-8') as file: writer=csv.DictWriter(file,fields);writer.writeheader();writer.writerows(rows)
 print(json.dumps({'capabilities':len(items),'baseline_requirements':sum(x['requirement_id'].startswith('ASO-') for x in rows),'revision_requirements':sum(x['requirement_id'].startswith('ASO2-') for x in rows),'full_acceptance_claimed':False}))

@@ -6,5 +6,5 @@ export default defineConfig({
   css: { postcss: { plugins: [] } },
   server: { port: 5173, proxy: { '/api': 'http://127.0.0.1:8787' } },
   build: { target: 'es2022', sourcemap: false },
-  test: { environment: 'jsdom', include: ['src/**/*.test.ts', 'src/**/*.test.tsx'], restoreMocks: true },
+  test: { environment: 'jsdom', include: ['src/**/*.test.ts', 'src/**/*.test.tsx'], restoreMocks: true, maxWorkers: 4 },
 });

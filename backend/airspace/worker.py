@@ -6,9 +6,15 @@ from .workflows import missing_evidence
 
 TOOL_ROLES = {"regulatory_monitor": {"regulatory"}, "evidence_collection": {"regulatory"}, "case_preparation": {"regulatory"}, "site_screening": {"planner", "regulatory"}, "scheduling_proposal": {"planner"}, "incident_summary": {"incident_coordinator"}, "commercial_analysis": {"analyst"}}
 TOOL_ROLES["agent_orchestration"] = {"regulatory", "reviewer", "planner", "analyst", "fleet_manager"}
+from .identity import ROLES
+TOOL_ROLES["companion_reply"] = ROLES
 
 
 def _mark_agent_job_failure(store, job, reason):
+    if job["kind"] == "companion_reply":
+        from .assistant import mark_companion_job_failure
+        mark_companion_job_failure(store, job, reason)
+        return
     if job["kind"] != "agent_orchestration":
         return
     from copy import deepcopy
@@ -51,7 +57,7 @@ def run_once(store):
             store.append_audit(conn, candidate["organisation_id"], candidate["actor_id"], "job.expired", {"job_id": candidate["id"]})
             expired = True
         version = candidate["version"]
-        lease = (datetime.now(timezone.utc) + timedelta(seconds=900 if candidate["kind"] == "agent_orchestration" else 120)).isoformat()
+        lease = (datetime.now(timezone.utc) + timedelta(seconds=900 if candidate["kind"] in {"agent_orchestration", "companion_reply"} else 120)).isoformat()
         if not expired:
             result = conn.execute(update(jobs).where(jobs.c.id == candidate["id"], jobs.c.version == version, jobs.c.state == candidate["state"]).values(state="Running", lease_until=lease, attempts=candidate["attempts"] + 1, version=version + 1))
             if result.rowcount != 1:
@@ -67,9 +73,12 @@ def run_once(store):
             if actor["role"] not in TOOL_ROLES.get(candidate["kind"], set()):
                 raise ValueError("Accountable actor lacks this tool permission")
             # Context remains tenant-filtered even when a model is unavailable.
-            rows = [dict(x) for x in conn.execute(select(records).where(records.c.organisation_id == candidate["organisation_id"])).mappings().all()]
+            rows = [dict(x) for x in conn.execute(select(records).where(records.c.organisation_id == candidate["organisation_id"], ~records.c.kind.startswith("companion_", autoescape=True))).mappings().all()]
         kind = candidate["kind"]
-        if kind == "agent_orchestration":
+        if kind == "companion_reply":
+            from .assistant import run_companion_reply
+            result = run_companion_reply(store, candidate, dict(actor))
+        elif kind == "agent_orchestration":
             from .orchestration import advance_workflow, default_services
             if not hasattr(store, "_agent_services"):
                 store._agent_services = default_services()
@@ -95,7 +104,9 @@ def run_once(store):
             result = tool({**candidate["payload"], "actor_id": candidate["actor_id"]})
         else:
             raise ValueError("Workflow tool is not allowlisted")
-        if kind=="regulatory_monitor" and not result.get("success"):
+        if kind == "companion_reply" and not result.get("success"):
+            state, error = "Failed", "Local companion response could not be generated; inspect the recorded conversation status"
+        elif kind=="regulatory_monitor" and not result.get("success"):
             state,error="Failed","Regulatory source check failed; last successful check is preserved in the source record"
         else:
             state, error = "Completed", None

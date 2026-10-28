@@ -3,7 +3,7 @@ import sqlite3
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from sqlalchemy import select, update
-from airspace.storage import Store, schema_versions, metadata, users
+from airspace.storage import Store, schema_versions, metadata, users, CURRENT_SCHEMA_VERSION
 from airspace.identity import provision
 from airspace.worker import run_once
 from airspace.orchestration import DefaultServices, NativeController
@@ -87,7 +87,7 @@ def test_schema_one_upgrade_preserves_existing_identity_and_chain(tmp_path):
     store.migrate()
     assert store.verify_audit(user["organisation_id"]) == before
     with store.engine.connect() as conn:
-        assert set(conn.execute(select(schema_versions.c.version)).scalars()) == {1, 2}
+        assert set(conn.execute(select(schema_versions.c.version)).scalars()) == set(range(1, CURRENT_SCHEMA_VERSION + 1))
     assert {"sharing_agreements", "fleet_reservations", "resource_locks"} <= set(metadata.tables)
     store.engine.dispose()
 
@@ -180,6 +180,6 @@ def test_simultaneous_fresh_service_migrations_are_serialised(tmp_path):
         list(pool.map(migrate, range(8)))
     service = Store(url, b"isolated-startup-migration-key-32bytes")
     with service.engine.connect() as conn:
-        assert set(conn.execute(select(schema_versions.c.version)).scalars()) == {1, 2}
+        assert set(conn.execute(select(schema_versions.c.version)).scalars()) == set(range(1, CURRENT_SCHEMA_VERSION + 1))
         assert {"sharing_agreements", "fleet_reservations", "resource_locks"} <= set(__import__('sqlalchemy').inspect(conn).get_table_names())
     service.engine.dispose()

@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-28T14:34:37.815339+00:00",
+  "scope": "Actual local model through authenticated API and separate running worker in an isolated development store. Real software-help requests only; no fabricated flights, customers or authority decisions.",
+  "rule_version": "companion/1.2",
+  "turns": [],
+  "success": false,
+  "new_training": false,
+  "hosted_provider": false,
+  "error": "URLError: <urlopen error [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione>",
+  "finished_at": "2026-10-28T14:34:39.917930+00:00"
+}

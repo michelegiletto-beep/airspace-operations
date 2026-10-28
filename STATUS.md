@@ -1,4 +1,4 @@
-Current revision: **0.2.0-rc.1**. The engineering candidate, System Lab project page and Hugging Face evidence presentations are published and independently retrieved. The original full baseline, stable release and operational acceptance remain incomplete. Read HANDOVER.md, publication/status.json and the final publication checkpoint below. Earlier entries are preserved history.
+Current development revision: **0.3.0-rc.1**. The latest published release remains 0.2.0-rc.1. The new companion implementation and schema-3 privacy compatibility gate are under release verification; no 0.3 publication is claimed. Read the latest checkpoint and publication/status.json.
 
 # Delivery status
 
@@ -57,3 +57,8 @@ Hugging Face model presentation 7addd5efe4a17729463fe392cf25489cafc7ccc6, datase
 The old v0.1.0-rc.1 tag 921996c4db20c449b21dcd03bd21f438911eed62 and ZIP SHA-256 a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87 remain unchanged. Frozen 0.2 assets/tag are not rebuilt to update publication prose. Main now carries final receipts and documentation. No emails, human outreach, authority submissions, aircraft commands, paid subscriptions or infrastructure purchases were performed.
 
 Full original specification acceptance, stable release and operational acceptance remain false. Software gaps and operational prerequisites are separate in HANDOVER.md, capabilities.json and docs/known-limitations.md. Exact next action for a future engineering increment: select an unresolved original requirement ID, define its acceptance evidence and preserve both immutable release histories. Do not recreate repositories, move tags or overwrite published assets. No publication access blocker remains.
+
+
+## Revision 0.3 in progress
+
+The user requested full copy ablation, local LLM companion interactions/actions/tasks, a reactive experience and an animated companion without a static ordinary fallback. Existing0.1/0.2tags and archives remain frozen. Current work is0.3.0-rc.1; no new release is claimed yet. Parallel frontend, companion-backend and publication/security responsibilities are assigned. Root integrates private routes/jobs/context boundaries, versioning and release. Actual active heartbeat airspace-product-improvement runs every six hours, with durable prompt and receipt under improvement/. Next action: finish companion integration and run local inference/UI/privacy checks before packaging.

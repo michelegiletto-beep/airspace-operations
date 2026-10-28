@@ -1,0 +1,11 @@
+{
+  "cycle_id": "2026-10-28-companion-revision",
+  "started_at": "2026-10-28T13:08:11.119159+00:00",
+  "version": "0.3.0-rc.1",
+  "state": "In progress",
+  "scope": "User-triggered companion, copy-ablation, experience and publication revision",
+  "baseline": "SPECIFICATION.md",
+  "addendum": "SPECIFICATION_V3_ADDENDUM.md",
+  "actual_completion_or_release_claimed": false,
+  "next_action": "Integrate private companion routes and durable worker hooks, then execute actual local inference and browser journeys before packaging."
+}

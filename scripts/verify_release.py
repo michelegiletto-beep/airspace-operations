@@ -11,9 +11,10 @@ import tempfile
 import time
 import re
 from datetime import datetime, timezone
+from release_support import current_version
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT/'backend/airspace/__init__.py').read_text()).group(1)
+VERSION=current_version(ROOT)
 EVIDENCE=ROOT/'release-evidence'/('v'+VERSION)
 
 

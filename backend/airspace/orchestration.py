@@ -8,6 +8,7 @@ state reconciliation and independent review remain deterministic server duties.
 from __future__ import annotations
 
 from copy import deepcopy
+from contextlib import nullcontext
 from datetime import date, datetime, timedelta, timezone
 import hashlib
 import json
@@ -540,11 +541,11 @@ class WorkflowRepository:
                 raise OrchestrationError("Artifact integrity mismatch; reconciliation is required")
         return output
 
-    def create(self, request: WorkflowRequest | dict, actor: dict):
+    def create(self, request: WorkflowRequest | dict, actor: dict, conn=None):
         request=WorkflowRequest.model_validate(request)
         if len(required_tools(request)) > request.budget.max_steps:
             raise OrchestrationError("Step budget cannot cover the declared task's required specialist and review tools")
-        with self.store.engine.begin() as conn:
+        with (self.store.engine.begin() if conn is None else nullcontext(conn)) as conn:
             user=self._actor(conn,actor)
             if user["role"] not in TASK_ROLES[request.task_kind]:
                 raise OrchestrationError("Role is not admitted for this specialist task")
@@ -552,7 +553,7 @@ class WorkflowRepository:
             ids=list(dict.fromkeys(request.context_record_ids))
             for ident in ids:
                 item=conn.execute(select(records).where(records.c.id==ident,records.c.organisation_id==user["organisation_id"])).mappings().first()
-                if item is None or item["kind"]=="agent_workflow":
+                if item is None or item["kind"]=="agent_workflow" or item["kind"].startswith("companion_"):
                     raise OrchestrationError("Context record is unavailable or cannot recursively contain a workflow")
                 context.append(dict(item))
             # Existing schedule proposals bind aircraft/personnel/permission
@@ -566,7 +567,7 @@ class WorkflowRepository:
                     if next(r["version"] for r in context if r["id"]==ident)!=expected:raise OrchestrationError("Schedule dependency version changed")
                     continue
                 item=conn.execute(select(records).where(records.c.id==ident,records.c.organisation_id==user["organisation_id"])).mappings().first()
-                if item is None or item["version"]!=expected:raise OrchestrationError("Schedule dependency is unavailable or changed")
+                if item is None or item["version"]!=expected or item["kind"].startswith("companion_"):raise OrchestrationError("Schedule dependency is unavailable or changed")
                 context.append(dict(item));ids.append(ident)
             created=now()
             workflow_id=str(uuid4())

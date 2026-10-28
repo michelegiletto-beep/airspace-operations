@@ -45,7 +45,7 @@ fleet_reservations = Table("fleet_reservations", metadata,
     Column("owner_record_version", Integer), Column("flight_seconds", Integer),
     Column("start", String, nullable=False), Column("end", String, nullable=False), Column("state", String, nullable=False),
     UniqueConstraint("schedule_id", "mission_id", "aircraft_id"))
-CURRENT_SCHEMA_VERSION = 2
+CURRENT_SCHEMA_VERSION = 3
 
 
 def now() -> str:
@@ -103,6 +103,11 @@ class Store:
                 conn.execute(schema_versions.insert().values(version=1, applied_at=now()))
             if 2 not in applied:
                 conn.execute(schema_versions.insert().values(version=2, applied_at=now()))
+            if 3 not in applied:
+                # Companion records have actor-private semantics that older
+                # application binaries do not enforce. Their startup preflight
+                # must refuse this database before exposing generic history.
+                conn.execute(schema_versions.insert().values(version=3, applied_at=now()))
 
     def append_audit(self, conn, tenant, actor, action, payload):
         # This atomic tenant-row update serialises chain writers on PostgreSQL and SQLite.

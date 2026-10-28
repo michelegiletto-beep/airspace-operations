@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "release": "0.2.0-rc.1",
+  "release": "0.3.0-rc.1",
   "stable_release": false,
   "features": [
     {
@@ -40,10 +40,10 @@
     },
     {
       "capability": "PostgreSQL/PostGIS/pgvector deployment",
-      "status": "Verified",
+      "status": "Implemented",
       "implementation": "compose.yaml;deploy/database.Dockerfile;migrations",
-      "evidence": "release-evidence/v0.2.0-rc.1/ci-verification.json;ci-success.log.txt",
-      "limitation": "Actual isolated GitHub runner; ordinary application role, extensions,16 PG tests, running worker and pg_dump/restore passed. Not production-scale acceptance."
+      "evidence": "SQL dialect generation only",
+      "limitation": "Docker/PostgreSQL unavailable here; extensions and production queries not executed"
     },
     {
       "capability": "Primary-source downloads and structured ingestion",
@@ -155,7 +155,7 @@
       "status": "Verified",
       "implementation": "planning.py",
       "evidence": "tests/test_planning.py",
-      "limitation": "SQLite and isolated PostgreSQL concurrency exercised; real operator/provider acceptance remains separate"
+      "limitation": "SQLite concurrency tested; PostgreSQL must be separately verified"
     },
     {
       "capability": "Accountable internal dispatch release and pilot acknowledgement",
@@ -242,18 +242,18 @@
       "limitation": "Browser verification scope recorded separately; no blanket accessibility certification"
     },
     {
-      "capability": "Container build, running-worker health and PostgreSQL restoration",
-      "status": "Verified",
+      "capability": "Container build, restoration and resilience at production scale",
+      "status": "Requires External Access",
       "implementation": "Dockerfile;compose.yaml;recovery runbook",
-      "evidence": "release-evidence/v0.2.0-rc.1/ci-verification.json",
-      "limitation": "Actual isolated deployment/restoration verified; deployment-scale SLO, network partitions and external pentest remain unverified."
+      "evidence": "release-evidence/release-gates.json",
+      "limitation": "No Docker/PostgreSQL runtime here; no measured production SLO or external pentest"
     },
     {
       "capability": "Public downloadable release",
-      "status": "Verified",
+      "status": "Implemented",
       "implementation": "scripts/package_release.py;publication workflow",
-      "evidence": "publication/status.json;release-evidence/v0.2.0-rc.1/github-public-verification.json;system-lab-public-verification.json;standalone-archive-verification.json",
-      "limitation": "Frozen engineering candidate; exact public bytes independently retrieved and installed. Full original baseline, stable and operational acceptance remain incomplete."
+      "evidence": "release/package-result.json",
+      "limitation": "Publication state recorded separately; no invented URLs"
     },
     {
       "capability": "Complete original master specification acceptance",
@@ -317,6 +317,34 @@
       "implementation": "backend/airspace/sharing.py;planning.py;storage.py",
       "evidence": "tests/test_sharing.py;tests/test_postgres_coordination.py",
       "limitation": "Consent is not transfer of operational permission; PostgreSQL concurrency result is recorded separately"
+    },
+    {
+      "capability": "Private local-model companion conversations",
+      "status": "Implemented",
+      "implementation": "backend/airspace/assistant.py;companion_api.py;worker.py",
+      "evidence": "tests/test_assistant.py;tests/test_companion_boundaries.py;release-evidence/v0.3.0-rc.1",
+      "limitation": "Actor-private conversations; actual model execution and current release verification are recorded separately"
+    },
+    {
+      "capability": "Personal tasks and confirmed internal draft actions",
+      "status": "Implemented",
+      "implementation": "backend/airspace/assistant.py;frontend/src/CompanionDock.tsx",
+      "evidence": "tests/test_assistant.py;tests/test_companion_boundaries.py",
+      "limitation": "Personal tasks and explicit typed drafts do not approve an operation or communicate externally"
+    },
+    {
+      "capability": "Animated companion fallback and reactive workspace",
+      "status": "Implemented",
+      "implementation": "frontend/src/CompanionArtwork.tsx;frontend/src",
+      "evidence": "frontend/verification;release-evidence/v0.3.0-rc.1",
+      "limitation": "Continuous normal-motion animation; user pause and reduced-motion preferences remain authoritative"
+    },
+    {
+      "capability": "Recurring engineering verification and improvement",
+      "status": "Implemented",
+      "implementation": "improvement/RECURRING_PROMPT.md;docs/recurring-improvement.md",
+      "evidence": "improvement/automation-receipt.json",
+      "limitation": "Six-hour development heartbeat on the configured host; distinct from operational scheduling and not proof of completed future cycles"
     }
   ]
 }

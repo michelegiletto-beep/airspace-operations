@@ -11,7 +11,8 @@ describe('real record workflow interface', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response(JSON.stringify({ items: [], total: 0 }))));
     render(<Records kindId="mission" token="isolated-test-token" user={user} revision={0} changed={() => undefined} />);
     await screen.findByText('No missions recorded');
-    expect(screen.getByText(/No flights have been recorded/)).toBeTruthy();
+    expect(screen.getByText(/Create a proposed operation/)).toBeTruthy();
+    expect(screen.queryByRole('table')).toBeNull();
   });
   it('blocks self approval before sending a transition request', async () => {
     const fetch = vi.fn().mockImplementation(() => Promise.resolve(new Response(JSON.stringify({ items: [testRecord] })))); vi.stubGlobal('fetch', fetch);

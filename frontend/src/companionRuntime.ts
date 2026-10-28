@@ -4,6 +4,7 @@ export interface CompanionHandle {
  ready:Promise<unknown|null>;
  setState(state:CompanionHealth):void;
  setPreferences(preferences:CompanionPreferences):void;
+ trigger?(gesture:'soft'|'ack'|'question'|'send'|'uncertain'|'settle',durationMs?:number,priority?:number):void;
  diagnostics():{engine?:string;[key:string]:unknown};
  destroy():void;
 }

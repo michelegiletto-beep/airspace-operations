@@ -1,0 +1,74 @@
+{
+  "recorded_at": "2026-10-28T14:26:19.893794+00:00",
+  "baseline_archive_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+  "scope": "Authored interface copy only; source documents, user text, technical IDs, URLs, units and legal editions are preserved.",
+  "known_phrase_ablation": [
+    {
+      "phrase": "One operational context. Bounded specialist work.",
+      "baseline_files": [
+        "AgentWorkspace.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "Choose the work. Keep the evidence.",
+      "baseline_files": [
+        "AgentWorkspace.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "One intended mission, distinct national conditions",
+      "baseline_files": [
+        "CoordinationDesk.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "01 \u00b7 Operation",
+      "baseline_files": [
+        "MissionDesk.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "02 \u00b7 Intended resources",
+      "baseline_files": [
+        "MissionDesk.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "AIRSPACE OPERATIONS /",
+      "baseline_files": [
+        "App.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "Prepare scoped workflow",
+      "baseline_files": [
+        "AgentWorkspace.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "Start bounded workflow",
+      "baseline_files": [
+        "AgentWorkspace.tsx"
+      ],
+      "current_authored_matches": []
+    },
+    {
+      "phrase": "Your operating geography starts here",
+      "baseline_files": [
+        "AirspaceMap.tsx"
+      ],
+      "current_authored_matches": []
+    }
+  ],
+  "authored_static_mascot_img_count": 0,
+  "workspace_descriptions": "All 12 descriptions now state concrete tasks.",
+  "rendered_copy_test": "All 12 empty authenticated workspaces, the contextual assistant and signed-out motion controls are rendered in App.test.tsx.",
+  "limitation": "Bounded phrase checks do not establish the absence of every stylistic defect. Actual browser review remains separate."
+}

@@ -1,0 +1,20 @@
+{
+  "release": "0.3.0-rc.1",
+  "states_reached": ["Prepared"],
+  "publication_performed": false,
+  "engineering_verification": "Pending for the new source identity",
+  "exact_archive_verification": "Pending",
+  "public_download": null,
+  "archive_sha256": null,
+  "destinations": [
+    {"destination": "Existing GitHub repository and new candidate release", "state": "Prepared", "source": "publication/v0.3/github-readme.md"},
+    {"destination": "Existing System Lab project page", "state": "Prepared", "source": "publication/v0.3/site-project.html"},
+    {"destination": "Existing Hugging Face student model card", "state": "Prepared", "source": "publication/v0.3/hf-model-card.md", "weights_changed": false},
+    {"destination": "Existing Hugging Face annotation dataset card", "state": "Prepared", "source": "publication/v0.3/hf-dataset-card.md", "records_changed": false},
+    {"destination": "Existing Hugging Face static evidence Space", "state": "Prepared", "source": "publication/v0.3/hf-space", "live_inference": false}
+  ],
+  "previous_verified_release": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1",
+  "stable_release_allowed": false,
+  "full_original_specification_accepted": false,
+  "operational_acceptance": false
+}

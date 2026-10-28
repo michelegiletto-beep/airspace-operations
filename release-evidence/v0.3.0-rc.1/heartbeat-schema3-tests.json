@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-28T19:23:18.274352+00:00",
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--junitxml=release-evidence/v0.3.0-rc.1/heartbeat-schema3-full-tests.xml"
+  ],
+  "exit_code": 0,
+  "passed": 333,
+  "skipped": 16,
+  "failed": 0,
+  "elapsed_test_seconds": 117.24,
+  "junit_tests": 349,
+  "scope": "Full current local backend suite after schema3 compatibility change; no new PostgreSQL or Docker run claimed"
+}

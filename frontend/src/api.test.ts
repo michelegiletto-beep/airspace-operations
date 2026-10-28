@@ -18,6 +18,10 @@ describe('authenticated API boundary', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response('unavailable', { status: 503, statusText: 'Service Unavailable' })));
     await expect(request('/sources', 'isolated-test-token')).rejects.toBeInstanceOf(ApiError);
   });
+  it('shows field validation messages without echoing sensitive submitted values', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(new Response(JSON.stringify({ detail: [{ loc: ['body', 'operation_date'], msg: 'Field required', input: 'isolated-private-input' }] }), { status: 422 })));
+    await expect(request('/companion/conversations/test/messages', 'isolated-test-token', { method: 'POST' })).rejects.toMatchObject({ status: 422, message: 'Operation date: Field required' });
+  });
 });
 describe('data rendering boundaries', () => {
   it('rejects empty and oversized evidence before reading its content', async () => {

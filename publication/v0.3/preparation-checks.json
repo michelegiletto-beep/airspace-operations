@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-28T13:25:52.184819+00:00",
+  "release": "0.3.0-rc.1",
+  "state": "Prepared",
+  "pages": [
+    {
+      "path": "site-project.html",
+      "ids": 6,
+      "links": 14,
+      "result": "Parsed; local references checked"
+    },
+    {
+      "path": "hf-space/index.html",
+      "ids": 1,
+      "links": 10,
+      "result": "Parsed; local references checked"
+    }
+  ],
+  "authored_documents_checked": 5,
+  "student_original_digest_matches": true,
+  "credential_patterns_found": [],
+  "new_download_links_enabled": false,
+  "browser_verified": false,
+  "application_or_model_verification_claimed": false,
+  "publication_performed": false,
+  "limit": "Local copy/structure checks supplement actual application/browser, legal, rights and publication review; they do not prove universal stylistic compliance"
+}

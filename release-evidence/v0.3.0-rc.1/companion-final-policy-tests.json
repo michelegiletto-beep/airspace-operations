@@ -1,0 +1,37 @@
+{
+  "started_at": "2026-10-28T14:45:40.835845+00:00",
+  "finished_at": "2026-10-28T14:46:02.029327+00:00",
+  "command": [
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_companion.py",
+    "tests/test_revision_integration.py",
+    "-q"
+  ],
+  "environment": {
+    "PYTHONPATH": "backend"
+  },
+  "exit_code": 0,
+  "seconds": 21.193,
+  "stdout": "...............................................                          [100%]\n47 passed in 18.01s\n",
+  "stderr": "",
+  "source_sha256_before": {
+    "backend/airspace/assistant.py": "e9d308573bf0ba3973590a1301f552c913e6525d12491f9c74a4ecc137d58a99",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+    "tests/test_companion.py": "3faf4aa3ccf3d1ee9d94f18a00a1e168422a524ce9933ddeb64708d07991a56f",
+    "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+    "backend/airspace/worker.py": "20e61b43294bb3555c48aa6353321cc56e52ae179cdf8a5346822a235dbbe499",
+    "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89"
+  },
+  "source_sha256_after": {
+    "backend/airspace/assistant.py": "e9d308573bf0ba3973590a1301f552c913e6525d12491f9c74a4ecc137d58a99",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+    "tests/test_companion.py": "3faf4aa3ccf3d1ee9d94f18a00a1e168422a524ce9933ddeb64708d07991a56f",
+    "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+    "backend/airspace/worker.py": "20e61b43294bb3555c48aa6353321cc56e52ae179cdf8a5346822a235dbbe499",
+    "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89"
+  },
+  "scope": "Isolated software fixtures; injected TestOnlyReplyService is not evidence of actual model inference. Actual model evidence is companion-policy-1.2-local-inference.json.",
+  "sources_unchanged": true
+}

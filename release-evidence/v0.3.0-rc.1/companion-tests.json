@@ -1,0 +1,106 @@
+{
+  "release": "0.3.0-rc.1",
+  "recorded_at": "2026-10-28T13:46:02.868413+00:00",
+  "success": true,
+  "runs": [
+    {
+      "recorded_at": "2026-10-28T13:29:52.191193+00:00",
+      "release": "0.3.0-rc.1",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/test_companion.py",
+        "tests/test_revision_integration.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "python": "3.13.1",
+      "tests_passed": 40,
+      "reported_pytest_seconds": 21.09,
+      "stdout_chunks": [
+        "...................",
+        "..............",
+        ".......                                 [100%]\n40 passed in 21.09s\n"
+      ],
+      "scope": "30 isolated companion tests and 10 existing revision integration tests. TestOnlyReplyService is an explicit software fixture, not neural inference or operational evidence. Actual local inference is recorded separately by the release owner.",
+      "owned_source_sha256": {
+        "backend/airspace/assistant.py": "f41048909b8beedcaf2a784f06d5ffbd4fc671361d31008fbbdcb9d9eb130e21",
+        "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+        "tests/test_companion.py": "4443a1fe1b795f1e49157e024f84f602b6bd68acbc9494e53d194814abfddb71"
+      },
+      "cases": [
+        "actor and tenant isolation",
+        "private job result access",
+        "IDs-only audit payloads",
+        "durable worker dispatch",
+        "explicit intent and admitted actions",
+        "human confirmation versions",
+        "changed context and role",
+        "concurrent duplicate confirmation",
+        "case Draft state and missing evidence",
+        "atomic workflow queue and task",
+        "cancellation and late result rejection",
+        "expired jobs and idempotent recovery",
+        "bounded model and request budgets",
+        "model outage fallback",
+        "untrusted source body isolation",
+        "markup, invented status and manoeuvre instruction rejection"
+      ]
+    },
+    {
+      "recorded_at": "2026-10-28T13:35:21.474540+00:00",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/test_companion.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "tests_passed": 30,
+      "reported_pytest_seconds": 14.82,
+      "stdout_chunks": [
+        "...................",
+        "...........                                           [100%]\n30 passed in 14.82s\n"
+      ],
+      "owned_source_sha256": {
+        "backend/airspace/assistant.py": "27c3b37418067e039ccfcddc613d606bc5d88e224a46dc0c7c57f8f7203fee54",
+        "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+        "tests/test_companion.py": "0fd80f9535bc6d70ab3df7a97e2e0b2b583c18dbcfab9b4902ec5f128e580970"
+      },
+      "scope": "Final intent hardening rejects commands quoted inside help/source text and memory statements without a task request. Test provider remains an isolated software fixture; this run is not neural inference evidence."
+    },
+    {
+      "recorded_at": "2026-10-28T13:46:02.868413+00:00",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/test_companion.py",
+        "tests/test_revision_integration.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "tests_passed": 40,
+      "reported_pytest_seconds": 21.67,
+      "stdout_chunks": [
+        "...................",
+        ".....................                                 [100%]\n40 passed in 21.67s\n"
+      ],
+      "owned_source_sha256": {
+        "backend/airspace/assistant.py": "bf072e25e08850d7642835882a139d2bf7abd63d3f85c93717b67cbac4e8aca5",
+        "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+        "tests/test_companion.py": "7e8e5b583514b64388fd7cc5386aba168a2d4c1701d60ac3449bd3fc29a753dd"
+      },
+      "scope": "Current companion and revision integration checks; includes reminder and pasted-source intent, case-workflow distinction, named-specialist routing, privacy, confirmation and recovery. Isolated model fixture only; no actual neural inference claimed."
+    }
+  ],
+  "latest_owned_source_sha256": {
+    "backend/airspace/assistant.py": "bf072e25e08850d7642835882a139d2bf7abd63d3f85c93717b67cbac4e8aca5",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+    "tests/test_companion.py": "7e8e5b583514b64388fd7cc5386aba168a2d4c1701d60ac3449bd3fc29a753dd"
+  },
+  "unique_total_not_aggregated": true,
+  "actual_neural_inference_claimed": false
+}

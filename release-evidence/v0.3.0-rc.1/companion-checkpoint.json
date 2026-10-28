@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-10-28T14:52:30.427498+00:00",
+  "version": "0.3.0-rc.1",
+  "companion_policy": "companion/1.2",
+  "owner": "regulatory_neural subagent",
+  "completed_owned_files": [
+    "backend/airspace/assistant.py",
+    "backend/airspace/companion_api.py",
+    "tests/test_companion.py"
+  ],
+  "current_contract": "GET /api/v1/companion/catalog exposes exact schemas; conversation/messages/actions-confirm-reject/cancel/tasks routes installed by companion_api. Inference is an asynchronous companion_reply durable worker job.",
+  "display_boundary": "The real local model selects guidance/fact/step/action IDs. Displayed language is a trusted static registry plus exact recorded state and registered next steps. Free generated legal or flight instructions are rejected. Acute incident requests use labelled deterministic procedure guidance without a model.",
+  "action_boundary": "Only explicitly requested personal tasks, incomplete draft cases and bounded internal preparation workflows; current actor, tenant, role, context snapshot, rule version, preview checksum, expiry and both expected versions are checked. The model cannot confirm an action. No external correspondence, authority submission, permission, aircraft command, provider activation, reservation or dispatch action.",
+  "privacy": "Current API and worker enforce actor and tenant privacy for conversations, messages, actions, tasks and reply jobs; audit payloads contain IDs/status/checksums rather than conversation text.",
+  "tests": {
+    "focused_receipt": "companion-final-policy-tests.json",
+    "focused_result": "47 passed in 18.01s",
+    "full_receipt": "backend-final-suite.json",
+    "full_result": "329 passed,16 skipped in130.83s",
+    "sources_unchanged": true,
+    "skipped_scope": "16 PostgreSQL tests explicitly skipped because AIRSPACE_TEST_POSTGRES_URL was not configured; this run does not claim PostgreSQL/container/recovery verification."
+  },
+  "actual_local_inference": {
+    "receipt": "companion-policy-1.2-local-inference.json",
+    "actual_model": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "two_admitted_turns": true,
+    "observed_completion_seconds": [
+      106.677,
+      34.24
+    ],
+    "scope": "Two actual software-help requests through authenticated API and separate worker in isolated development store; no real flights or legal conclusions. First how-to query produced no action. Explicit reminder request produced a personal task preview, confirmed separately.",
+    "trained_new_weights": false,
+    "hosted_provider": false
+  },
+  "actual_restart": {
+    "receipt": "companion-restart-persistence.json",
+    "result": "API process33300 replaced by37052; exact same confirmed personal task/version1 and two policy1.2 replies retrieved after restart. Worker37420 was not restarted."
+  },
+  "preserved_negative_evidence": [
+    "companion-policy-1.1-local-inference-attempt-1.json: actual local generation copied a fixed example and omitted the requested preview; policy1.2 removes the fixed example and rejects omission of prevalidated requested previews.",
+    "companion-policy-1.2-local-inference-startup-0.json: verification request raced the local development API startup; private harness then added bounded health retry.",
+    "rollback-privacy-negative.json: isolated fresh software-fixture DB reproduces old0.2 binary accepting schema2 and exposing same-tenant actor-private message history and reply job. Current0.3 rejects/hides these."
+  ],
+  "release_blockers": [
+    "Parent-owned schema compatibility migration must prevent old0.2 binaries opening a0.3 private-conversation DB. Recommend schema3 compatibility marker, preserving migration and actual-old-binary rejection regression. No storage changes made by this subagent.",
+    "Release owner still needs authenticated final browser/mobile/animation journeys, current PostgreSQL/container/restoration/dependency/rights/secret gates, packaging and distinct0.3 publication with independent retrieval. Original full baseline remains incomplete."
+  ],
+  "frontend_checkpoint": "frontend/verification/0.3.0-rc.1/final-checkpoint.json; frontend agent confirms99 tests pass, final JS index-CZ1bEzgx.js and CSS index-BwDooYcZ.css.",
+  "private_runtime": {
+    "path": "runtime/review-v3",
+    "api": "http://127.0.0.1:8787",
+    "api_actual_pid": 37052,
+    "worker_actual_pid": 37420,
+    "process_record": "runtime/review-v3/policy-1.2-restart-processes.json",
+    "credentials": "Existing private preview-login.json; never print, commit or publish. Model cache remains resident in idle local worker. Runtime and logs are excluded from releases."
+  },
+  "frozen_prior_releases_modified": false,
+  "publication_performed": false
+}

@@ -15,7 +15,7 @@ from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import JSONResponse, Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
-from sqlalchemy import delete, select, update
+from sqlalchemy import delete, or_, select, update
 
 from . import __version__
 from .identity import authenticate, login, require_role
@@ -82,6 +82,7 @@ class JobRequest(Strict):
 
 
 def row_get(conn, tenant, kind, item_id):
+    kind_check(kind)
     row = conn.execute(select(records).where(records.c.id == item_id, records.c.organisation_id == tenant, records.c.kind == kind)).mappings().first()
     if not row:
         raise HTTPException(404, "Record not found")
@@ -472,7 +473,7 @@ def create_app(store: Store | None = None, serve_frontend=True):
     @app.get("/api/v1/jobs")
     def job_list(user=Depends(current)):
         with store.engine.connect() as conn:
-            rows = conn.execute(select(jobs).where(jobs.c.organisation_id == user["organisation_id"]).order_by(jobs.c.created_at.desc()).limit(200)).mappings().all()
+            rows = conn.execute(select(jobs).where(jobs.c.organisation_id == user["organisation_id"], or_(jobs.c.kind != "companion_reply", jobs.c.actor_id == user["id"])).order_by(jobs.c.created_at.desc()).limit(200)).mappings().all()
         return {"items": [dict(x) for x in rows]}
 
     @app.post("/api/v1/jobs/{job_id}/{action}")
@@ -487,6 +488,10 @@ def create_app(store: Store | None = None, serve_frontend=True):
             job = conn.execute(select(jobs).where(jobs.c.id == job_id, jobs.c.organisation_id == user["organisation_id"])).mappings().first()
             if not job:
                 raise HTTPException(409, "Job unavailable or state changed")
+            if job["kind"] == "companion_reply":
+                if job["actor_id"] != user["id"]:
+                    raise HTTPException(404, "Job not found")
+                raise HTTPException(422, "Use the companion controls to keep the conversation and its work consistent")
             if job["kind"] == "agent_orchestration":
                 raise HTTPException(422, "Use the agent-workflow control so model execution and durable state pause together")
             from .worker import TOOL_ROLES
@@ -591,6 +596,8 @@ def create_app(store: Store | None = None, serve_frontend=True):
     install_monitoring_routes(app, store, current)
     from .coordination_api import install_coordination_routes
     install_coordination_routes(app, store, current)
+    from .companion_api import install_companion_routes
+    install_companion_routes(app, store, current)
     if serve_frontend and (ROOT / "frontend" / "dist").exists():
         app.mount("/", StaticFiles(directory=ROOT / "frontend" / "dist", html=True), name="interface")
     return app

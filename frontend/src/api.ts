@@ -9,6 +9,16 @@ export class ApiError extends Error {
   constructor(public readonly status: number, message: string) { super(message); this.name = 'ApiError'; }
 }
 export function errorMessage(error: unknown): string { return error instanceof Error ? error.message : 'The request could not be completed.'; }
+function responseDetail(value: unknown): string {
+  if (typeof value === 'string') return value;
+  if (Array.isArray(value) && value.length && value.every(item => item && typeof item === 'object' && typeof item.msg === 'string')) {
+    return value.map(item => {
+      const field = Array.isArray(item.loc) ? item.loc.filter((part: unknown) => part !== 'body').join(' ').replaceAll('_', ' ') : '';
+      return `${field ? field.charAt(0).toUpperCase() + field.slice(1) + ': ' : ''}${item.msg}`;
+    }).join('\n');
+  }
+  return JSON.stringify(value);
+}
 export function parseObject(value: string): Record<string, unknown> {
   const parsed: unknown = JSON.parse(value);
   if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('Record data must be a JSON object.');
@@ -23,7 +33,7 @@ export async function request<T>(path: string, token: string | null, init: Reque
   });
   if (!response.ok) {
     let detail = response.statusText || 'Request failed';
-    try { const result = await response.json() as { detail?: unknown }; detail = typeof result.detail === 'string' ? result.detail : JSON.stringify(result.detail ?? result); } catch { /* HTTP status remains available. */ }
+    try { const result = await response.json() as { detail?: unknown }; detail = responseDetail(result.detail ?? result); } catch { /* HTTP status remains available. */ }
     throw new ApiError(response.status, detail);
   }
   return response.json() as Promise<T>;

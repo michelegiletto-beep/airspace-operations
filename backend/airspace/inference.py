@@ -7,6 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from .identity import authenticate
 from .neural import LocalEncoder, ExperimentalStudent
 from .storage import local_store
+from . import __version__
 
 
 class Classification(BaseModel):
@@ -17,7 +18,7 @@ class Classification(BaseModel):
 def create_inference_app(store=None):
     store = store or local_store()
     store.migrate()
-    app = FastAPI(title="Airspace Operations experimental local inference", version="0.1.0-rc.1")
+    app = FastAPI(title="Airspace Operations experimental local inference", version=__version__)
     loaded = []
 
     @app.get("/health")

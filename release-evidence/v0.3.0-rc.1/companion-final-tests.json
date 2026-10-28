@@ -1,0 +1,37 @@
+{
+  "release": "0.3.0-rc.1",
+  "started_at": "2026-10-28T13:54:22.781267+00:00",
+  "recorded_at": "2026-10-28T13:54:57.976890+00:00",
+  "command": [
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_companion.py",
+    "tests/test_revision_integration.py",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "...........................................                              [100%]\n43 passed in 27.67s\n",
+  "stderr": "",
+  "elapsed_seconds": 35.188,
+  "tests_passed": 43,
+  "source_sha256_before": {
+    "backend/airspace/assistant.py": "cc04eeb016eee86c1e95898d0a33b26f84055656c7c180a66204bdd7a54e666e",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+    "tests/test_companion.py": "9bd9dacddc449e5f7f7bcb984f67151fad342291e2622f17d39ccc5393676979",
+    "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+    "backend/airspace/worker.py": "20e61b43294bb3555c48aa6353321cc56e52ae179cdf8a5346822a235dbbe499",
+    "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89"
+  },
+  "source_sha256_after": {
+    "backend/airspace/assistant.py": "cc04eeb016eee86c1e95898d0a33b26f84055656c7c180a66204bdd7a54e666e",
+    "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+    "tests/test_companion.py": "9bd9dacddc449e5f7f7bcb984f67151fad342291e2622f17d39ccc5393676979",
+    "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+    "backend/airspace/worker.py": "20e61b43294bb3555c48aa6353321cc56e52ae179cdf8a5346822a235dbbe499",
+    "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89"
+  },
+  "source_files_unchanged_during_run": true,
+  "scope": "Isolated companion and existing revision integration software tests. TestOnlyReplyService is a labelled software fixture; no actual neural inference, flights or operational acceptance is claimed.",
+  "actual_neural_inference_claimed": false
+}

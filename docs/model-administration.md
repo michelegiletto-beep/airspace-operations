@@ -75,3 +75,8 @@ The optional standalone authenticated classification service is separate from th
 Keep production, training and replay stores separate. Training accepts only public, rights-cleared legal source passages in this pipeline. Do not copy customer evidence, authority correspondence, personal details or service credentials into the model package or public dataset. Source changes create impact-review tasks; they do not retrain or update weights automatically. Legal source truth remains in the versioned library.
 
 The optional runtime pins are in `requirements-neural.txt`. The original training used older local packages, as its manifest honestly records. The updated release inference environment is tested separately in `release-evidence/neural-current-environment-verification.json`; historical metrics are not rewritten as if training ran with upgraded packages.
+
+
+## Companion request budget
+
+The private companion uses the pinned local controller and shared inference slot. Its request model-call limit applies per worker attempt. A crash and lease recovery can repeat up to three attempts, so a request configured for two calls can consume up to six local generations within its bounded lifetime. This is not a lifetime two-call guarantee. Local output validation and explicit action confirmation remain enforced on every attempt. No hosted provider is enabled.

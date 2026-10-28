@@ -1,0 +1,11 @@
+{
+  "purpose": "Exact frozen application storage module used only in isolated downgrade-admission regression tests",
+  "release": "0.2.0-rc.1",
+  "source_commit": "3d5376758493f8e791dce85968947878990c6b6f",
+  "archive_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+  "member": "airspace-operations/backend/airspace/storage.py",
+  "file": "legacy_storage_v0_2_0.py",
+  "sha256": "d8e8c554059f3ffdb5baedde450b23e4922ddac335967641f9858786cc7c6187",
+  "licence": "Apache-2.0, original project code",
+  "operational_use": false
+}
