@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-28T12:58:43.422367+00:00",
+  "run_id": 40691808457,
+  "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40691808457",
+  "source_commit": "3666e4d922d591f56a50ceb73e8017040dcfd9af",
+  "status": "completed",
+  "conclusion": "success",
+  "scope": "Final publication documentation and read-only public verification tools; original frozen release-source CI40683325217 remains separate",
+  "application_release_rebuilt": false
+}

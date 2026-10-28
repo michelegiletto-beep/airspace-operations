@@ -53,7 +53,7 @@ The core works without System Lab hosting or a hosted inference subscription. Py
 
 ```powershell
 uv sync --frozen --extra dev
-python scripts/prepare_corpus.py
+.venv/Scripts/python.exe scripts/prepare_corpus.py
 cd frontend
 npm ci
 npm run build
@@ -110,4 +110,4 @@ New code is Apache-2.0. Regulatory material, third-party models, dependencies an
 
 ## Publication tooling
 
-Publication-only image/schema checks use a separate hash-locked profile: `uv pip install --python .venv/Scripts/python.exe --require-hashes -r requirements-publication.lock.txt`. These packages are not required by the operational API. Run `python scripts/verify_sbom.py` for CycloneDX format validation against the pinned official specification, and the publication verification scripts for actual media/report checks. The final SBOM includes core, optional neural and optional publication dependencies, pinned excluded pretrained models, the distributed experimental student and the five separately reserved presentation files.
+Publication-only image/schema checks use a separate hash-locked profile: `uv pip install --python .venv/Scripts/python.exe --require-hashes -r requirements-publication.lock.txt`. These packages are not required by the operational API. Run `.venv/Scripts/python.exe scripts/verify_sbom.py` for CycloneDX format validation against the pinned official specification, and the publication verification scripts for actual media/report checks. The final SBOM includes core, optional neural and optional publication dependencies, pinned excluded pretrained models, the distributed experimental student and the five separately reserved presentation files.

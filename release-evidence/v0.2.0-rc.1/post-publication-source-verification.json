@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-28T12:55:34.791171+00:00",
+  "main_documentation_commit": "3666e4d922d591f56a50ceb73e8017040dcfd9af",
+  "frozen_release_source": "3d5376758493f8e791dce85968947878990c6b6f",
+  "state": "Independently Retrieved",
+  "checks": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/3666e4d922d591f56a50ceb73e8017040dcfd9af/README.md",
+      "bytes": 13690,
+      "sha256": "74532d991b3a24f5f9245b00b3eac116712332e0c1a83c5970a76bf74df3ef16",
+      "matches_local": true
+    },
+    {
+      "path": "HANDOVER.md",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/3666e4d922d591f56a50ceb73e8017040dcfd9af/HANDOVER.md",
+      "bytes": 9499,
+      "sha256": "2802fdcb45f74e572b08cf3d6cd9bcbb8e5c866c03defb47ea2b05d67ae8a37d",
+      "matches_local": true
+    },
+    {
+      "path": "publication/status.json",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/3666e4d922d591f56a50ceb73e8017040dcfd9af/publication/status.json",
+      "bytes": 4087,
+      "sha256": "bfdff6eb497cab82a1ffc89326dbe3f7e2448c1fa057bba5aec37ade2f166aee",
+      "matches_local": true
+    },
+    {
+      "path": "release-evidence/v0.2.0-rc.1/publication-final-recheck.json",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/3666e4d922d591f56a50ceb73e8017040dcfd9af/release-evidence/v0.2.0-rc.1/publication-final-recheck.json",
+      "bytes": 59430,
+      "sha256": "6b1941e7158f1761fe16e058fd31682c4af74e6ef95f30c19a596dd7cbd8d72a",
+      "matches_local": true
+    },
+    {
+      "path": "scripts/verify_publication_v2.py",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/3666e4d922d591f56a50ceb73e8017040dcfd9af/scripts/verify_publication_v2.py",
+      "bytes": 21565,
+      "sha256": "f4674f6efb1efb19acbc4212b776dc97c52cf0b31b63128b489428eaf8d34c3a",
+      "matches_local": true
+    },
+    {
+      "path": "publication/qa/system-lab-public-hero.jpg",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/3666e4d922d591f56a50ceb73e8017040dcfd9af/publication/qa/system-lab-public-hero.jpg",
+      "bytes": 62067,
+      "sha256": "74588d59c260ef125826610a46bf5948bf969bbfe46b4be14c9ab2ae1245de45",
+      "matches_local": true
+    }
+  ],
+  "note": "Post-publication documentation commit; no release asset or tag was replaced."
+}
