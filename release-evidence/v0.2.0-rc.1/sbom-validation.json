@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-28T11:51:01.218391+00:00",
+  "valid": true,
+  "sbom_sha256": "7bf78ceccaa538bd5dc798e39eedc1cacc8e4fba7a8153cebadf1c1710462157",
+  "components": 240,
+  "validator": "jsonschema 4.26.0",
+  "official_schema_sha256": {
+    "https://raw.githubusercontent.com/CycloneDX/specification/e833d732337dd33aceb45ff1991f896796f1e5e7/schema/bom-1.6.schema.json": "18f57f7482593bad9f21b4feed09084640cbeff419d62ad5090c5ceccca5b37d",
+    "https://raw.githubusercontent.com/CycloneDX/specification/e833d732337dd33aceb45ff1991f896796f1e5e7/schema/spdx.schema.json": "c41917196639055e9f9670811bac23ef777732144f3ff5a2f39686f61580dbe6"
+  },
+  "scope": "CycloneDX JSON format validation; not a licence clearance or vulnerability assessment"
+}

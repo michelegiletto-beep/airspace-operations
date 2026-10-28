@@ -50,6 +50,28 @@ def build_metadata():
         except importlib.metadata.PackageNotFoundError: licence='NOASSERTION (locked dependency, not installed in build environment)'
         components.append({'type':'library','name':name,'version':version,'purl':f'pkg:pypi/{name}@{version}','properties':[{'name':'upstream-licence-metadata','value':licence}]})
         notices.append(f'| Python | {name} | {version} | {licence.replace(chr(10)," ").replace("|","/")} |')
+    core_purls={item['purl'] for item in components}
+    optional_pins=[]
+    for profile in ('requirements-neural.lock.txt','requirements-publication.lock.txt'):
+        optional_pins.extend((name,version,profile) for name,version in re.findall(r'^([A-Za-z0-9_.-]+)==([A-Za-z0-9_.+\-]+)', (ROOT/profile).read_text(), re.MULTILINE))
+    for name,version,profile in optional_pins:
+        purl=f'pkg:pypi/{name}@{version}'
+        if purl in core_purls: continue
+        try:
+            meta=importlib.metadata.metadata(name)
+            licence=meta.get('License-Expression') or meta.get('License') or 'NOASSERTION'
+            if len(licence)>100: licence='See upstream package licence text'
+        except importlib.metadata.PackageNotFoundError: licence='NOASSERTION (optional locked dependency, not installed)'
+        components.append({'type':'library','name':name,'version':version,'purl':purl,'scope':'optional','properties':[{'name':'installation-profile','value':profile+'; explicitly installed, not bundled wheels'},{'name':'upstream-licence-metadata','value':licence}]})
+        core_purls.add(purl)
+        notices.append(f'| Optional Python ({profile}) | {name} | {version} | {licence.replace(chr(10)," ").replace("|","/")} |')
+    for provenance in sorted((ROOT/'models/pretrained').glob('*/provenance.json')):
+        model=json.loads(provenance.read_text(encoding='utf-8'))
+        repository=model.get('repository') or model['model_id']
+        components.append({'type':'machine-learning-model','name':repository,'version':model['revision'],'scope':'optional','licenses':[{'license':{'id':'Apache-2.0'}}],'externalReferences':[{'type':'model-card','url':f'https://huggingface.co/{repository}/tree/{model["revision"]}'}],'properties':[{'name':'distribution','value':'Pretrained weights excluded; explicit pinned download only'},{'name':'provenance','value':provenance.relative_to(ROOT).as_posix()}]})
+        notices.append(f'| Optional pretrained model | {repository} | {model["revision"]} | Apache-2.0; upstream terms and provenance apply; weights excluded |')
+    student=ROOT/'models/runs/explicit-shall-20261027-4/student.safetensors'
+    components.append({'type':'machine-learning-model','name':'System Lab experimental literal-language routing student','version':'explicit-shall-20261027-4','scope':'optional','hashes':[{'alg':'SHA-256','content':hashlib.sha256(student.read_bytes()).hexdigest()}],'licenses':[{'license':{'id':'Apache-2.0'}}],'modelCard':{'considerations':{'technicalLimitations':['Machine-generated unreviewed labels; inferior to deterministic literal-word baseline; experimental and not promoted','No legal, flight approval or operational prediction authority']}},'properties':[{'name':'lineage','value':'models/runs/explicit-shall-20261027-4/run.json; docs/model-card.md'}]})
     lock=json.loads((ROOT/'frontend/package-lock.json').read_text())
     for path,item in lock['packages'].items():
         if not path: continue

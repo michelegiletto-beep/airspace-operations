@@ -1,0 +1,526 @@
+{
+  "review_type": "Read-only adversarial public presentation review",
+  "reviewed_at": "2026-10-28T11:40:17.522822+00:00",
+  "reviewer_scope": "Software evidence and presentation consistency; no operational approval or independent professional certification",
+  "changes_performed": {
+    "publications": false,
+    "source_code": false,
+    "public_files": false,
+    "other_files": false,
+    "only_this_review_json": true
+  },
+  "targets": {
+    "space": {
+      "repository": "Magic51/system-lab-airspace-evaluation",
+      "revision": "2e7c96760d968f304d9b157f9b63f7b34accf982",
+      "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space/"
+    },
+    "model": {
+      "repository": "Magic51/system-lab-airspace-shall-router",
+      "revision": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+      "readme_sha256": "fdcc2eb140f7c72bf30feb6b37e1063705d3aa9fb07f6e6aacd5d0734ff38588"
+    },
+    "dataset": {
+      "repository": "Magic51/system-lab-airspace-source-annotations",
+      "revision": "e9fb162a31fa139c8b511fbc84a18277b6aa560c",
+      "readme_sha256": "7ef5704ff31e932b212ec3a9d030831c834683cbf3ab5acbfddda7b1e5dc23bb"
+    }
+  },
+  "outcome": "No blocking presentation findings identified in the reviewed scope",
+  "findings": [],
+  "checks": {
+    "current_public_http": {
+      "responses_200": 21,
+      "exact_runtime_asset_matches": 19,
+      "assets": [
+        {
+          "path": "app.js",
+          "status": 200,
+          "bytes": 9956,
+          "sha256": "98a23b3f43a7b9d24750bd72d3b83f4837ae7455ee1e7ea5fb1e1aa1d5d1547d",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "data/actual-ui-workflow.json",
+          "status": 200,
+          "bytes": 133118,
+          "sha256": "f6e8d7927bb9ffdd6a2355e8b0f2b8a33c327155c2cb33eba03e6b6ab6ed549f",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "data/causal-comparison.json",
+          "status": 200,
+          "bytes": 546869,
+          "sha256": "2c1fda31cb48b2308ee68de062957b4d9c458903de4a77000e6945079ae2eb75",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "data/evidence.json",
+          "status": 200,
+          "bytes": 39490,
+          "sha256": "b2bc32950ddd50ac1df1e4d0cacdbc6b2ee8e1ba155c1eb2f11b285c7ad9ae69",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "data/first-causal-run.json",
+          "status": 200,
+          "bytes": 129419,
+          "sha256": "52e2a1bbf7d022bbe6540c28036e8136ce0a93c707c9222848485639d4936747",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "data/provenance.json",
+          "status": 200,
+          "bytes": 2417,
+          "sha256": "1d0e1906c5bae9a5c24bd599c23e1afb9b57e8294513a3a9b6fb23e182f479b1",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "data/student-run.json",
+          "status": 200,
+          "bytes": 18937,
+          "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "index.html",
+          "status": 200,
+          "bytes": 12444,
+          "sha256": "3e397eff4d096dd5d647762442f1a27895f1e6812083adcd35dbdbfc92ee0f79",
+          "matches_published_manifest": false
+        },
+        {
+          "path": "LICENSE",
+          "status": 200,
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "media/agent-orchestration-detail.jpg",
+          "status": 200,
+          "bytes": 71132,
+          "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            712
+          ]
+        },
+        {
+          "path": "media/agent-orchestration.jpg",
+          "status": 200,
+          "bytes": 211029,
+          "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            2602
+          ]
+        },
+        {
+          "path": "media/airspace-planning.jpg",
+          "status": 200,
+          "bytes": 112044,
+          "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            1066
+          ]
+        },
+        {
+          "path": "media/european-coordination.jpg",
+          "status": 200,
+          "bytes": 127424,
+          "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            1277
+          ]
+        },
+        {
+          "path": "media/fleet-maintenance.jpg",
+          "status": 200,
+          "bytes": 75096,
+          "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            891
+          ]
+        },
+        {
+          "path": "media/mission-control.jpg",
+          "status": 200,
+          "bytes": 129906,
+          "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            1138
+          ]
+        },
+        {
+          "path": "media/orchestration-pipeline.svg",
+          "status": 200,
+          "bytes": 4561,
+          "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "media/scheduling.jpg",
+          "status": 200,
+          "bytes": 98935,
+          "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+          "matches_published_manifest": true,
+          "pixels": [
+            1265,
+            1162
+          ]
+        },
+        {
+          "path": "NOTICE.md",
+          "status": 200,
+          "bytes": 1481,
+          "sha256": "acd91ff4ee68ff563fb1157af97a7571ecad6291c9b76853646bc55669bf04d0",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "prepare.py",
+          "status": 200,
+          "bytes": 6735,
+          "sha256": "65cf5e3cd9171c95b5880cb8395b97ee96580a1fa8e89f5ebd538db3adf47d98",
+          "matches_published_manifest": true
+        },
+        {
+          "path": "README.md",
+          "status": 200,
+          "bytes": 7177,
+          "sha256": "eb9801f932e90d76fb487a388905e7a942e552876da559ecb7982f1a83eb1f23",
+          "matches_published_manifest": false
+        },
+        {
+          "path": "styles.css",
+          "status": 200,
+          "bytes": 11552,
+          "sha256": "a222b494ef297fe772717a38747b372a803bc8250fe57090c052fd368293470d",
+          "matches_published_manifest": true
+        }
+      ],
+      "expected_host_transformations": [
+        {
+          "path": "index.html",
+          "repository_sha256": "3f3459fd61456695e6981768a9af5adbd6ac61990ac58cd3ad1f7d6c31802bb7",
+          "repository_bytes": 11840,
+          "runtime_sha256": "3e397eff4d096dd5d647762442f1a27895f1e6812083adcd35dbdbfc92ee0f79",
+          "runtime_bytes": 12444,
+          "verified_difference": "Hugging Face inserts its creator variable and Open Graph/Twitter metadata. Authored page content, script and evidence references are preserved."
+        },
+        {
+          "path": "README.md",
+          "repository_sha256": "38b46d68e13c41d93b733ce12b326817835490c80e4a1b0e2ac0f245aff1e30b",
+          "repository_bytes": 3637,
+          "runtime_sha256": "eb9801f932e90d76fb487a388905e7a942e552876da559ecb7982f1a83eb1f23",
+          "runtime_bytes": 7177,
+          "verified_difference": "The static host renders Markdown as HTML; the pinned Hub resolve endpoint preserves original Markdown bytes."
+        }
+      ]
+    },
+    "claim_counts": {
+      "trials": 4,
+      "query_count": 2,
+      "ui_steps": 5,
+      "ui_citations": 12,
+      "failure_cases": 14,
+      "new_weights": false,
+      "new_training": false,
+      "live_inference": false,
+      "live_flights": false,
+      "operation_acceptance": false,
+      "first_elapsed_seconds": 204.91,
+      "ui_trace_span_seconds": 305.793936,
+      "all_trials_review_gated": true,
+      "all_trials_no_legal_conclusion": true
+    },
+    "raw_report_provenance_matches": true,
+    "data_index_provenance_matches": true,
+    "media_provenance_matches": true,
+    "model_images": [
+      {
+        "reference": "media/agent-orchestration.jpg",
+        "status": 200,
+        "bytes": 211029,
+        "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+        "matches_space_asset": true,
+        "pixels": [
+          1265,
+          2602
+        ]
+      },
+      {
+        "reference": "media/orchestration-pipeline.svg",
+        "status": 200,
+        "bytes": 4561,
+        "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+        "matches_space_asset": true,
+        "pixels": null
+      }
+    ],
+    "dataset_images": [
+      {
+        "reference": "media/agent-orchestration.jpg",
+        "status": 200,
+        "bytes": 211029,
+        "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+        "matches_space_asset": true,
+        "pixels": [
+          1265,
+          2602
+        ]
+      },
+      {
+        "reference": "media/orchestration-pipeline.svg",
+        "status": 200,
+        "bytes": 4561,
+        "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+        "matches_space_asset": true,
+        "pixels": null
+      }
+    ],
+    "student_artifact": {
+      "status": 200,
+      "bytes": 49824,
+      "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+      "unchanged_original_sha256": true
+    },
+    "dataset_artifacts": {
+      "dataset.jsonl.gz": {
+        "bytes": 72466,
+        "uncompressed_sha256": "4dfc9580f3997ddf0d8c8cd72ca188409b786fd5127a11ba0ddcd4c4d6a04260",
+        "matches_original": true,
+        "rows": 288,
+        "keys": [
+          "id",
+          "source_id",
+          "source_family",
+          "document_version",
+          "source_checksum",
+          "xml_checksum",
+          "anchor",
+          "anchor_kind",
+          "source_url",
+          "title",
+          "text",
+          "structure",
+          "jurisdiction",
+          "language",
+          "legal_status",
+          "organisation_id",
+          "valid_from",
+          "valid_to",
+          "temporal_status",
+          "retrieved_at",
+          "methodology",
+          "upstream_metadata",
+          "attribution",
+          "extraction_warning",
+          "licence",
+          "split",
+          "annotation"
+        ]
+      },
+      "annotations.json.gz": {
+        "bytes": 27789,
+        "uncompressed_sha256": "65c621af95fde10a9965f4cf7dfeb81a883af7d9a000f15fbe856c600c2db591",
+        "matches_original": true,
+        "type": "list",
+        "keys": []
+      }
+    },
+    "source_trace_checks": [
+      {
+        "anchor": "ERULES-1963177438-21049:b0008",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21359:b0003",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21053:b0002",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21053:b0016",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21049:b0009",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21053:b0009",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21053:b0003",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21046:b0006",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21375:b0001",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21395:b0001",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21053:b0001",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21069:b0022",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21043:b0005",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21046:b0014",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21043:b0025",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21046:b0007",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21069:b0010",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21058:b0011",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21066:b0001",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21043:b0023",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21058:b0009",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21050:b0008",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21066:b0013",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21059:b0006",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21046:b0002",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      },
+      {
+        "anchor": "ERULES-1963177438-21050:b0004",
+        "matches_source_text": true,
+        "matches_source_checksum": true
+      }
+    ],
+    "browser_dom": {
+      "browser": "Chrome, public HTTPS pages",
+      "space_loaded": true,
+      "comparison_query_one": "Native run1 and causal run2 rendered from actual bundled records",
+      "comparison_query_two": "Native run3 and causal run4 rendered after changing selector",
+      "timing_confound_visible": true,
+      "actual_ui_workflow_steps": 5,
+      "review_gate": "Needs Review / approval granted: false",
+      "controller_version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "first_experiment_seconds": 204.91,
+      "separately_labelled_ui_span_seconds": 305.793936,
+      "new_release_download": "Disabled; Prepared",
+      "model_card_rendered": true,
+      "model_card_unchanged_artifact_statement_visible": true,
+      "model_card_original_metrics_visible": true,
+      "model_card_screenshot_loaded": {
+        "naturalWidth": 1265,
+        "naturalHeight": 2602
+      },
+      "model_card_architecture_loaded": {
+        "naturalWidth": 1200,
+        "naturalHeight": 560
+      },
+      "operational_or_inference_action_performed": false,
+      "browser_tab_closed": true,
+      "locator_note": "The automation label locator did not resolve the nested select label. Selecting the observed #query-select element succeeded and updated the displayed second-query rows."
+    },
+    "rights_and_wording": [
+      "Apache-2.0 code is distinguished from EASA/EU source-text conditions, upstream models and reserved owner artwork.",
+      "The static Space contains no reserved renderer modules, original companion PNGs or model weights.",
+      "Actual application screenshots are described as software context; recorded identities are software-verification identities.",
+      "The unchanged literal-language student is optional and unpromoted, distinct from the actual Qwen controller and deterministic operational tools.",
+      "Machine-generated labels are expressly unreviewed; the stronger deterministic baseline, failed earlier attempts and conditioned evaluation are disclosed.",
+      "Four tiny proxy trials do not claim legal-answer reliability, superiority or a speed benefit.",
+      "First-run timing is separated from the later UI workflow, and no legal conclusion or approval is attributed to a completed tool receipt.",
+      "Current Prepared labels refer to the still-unverified new ZIP/download; they do not deny that the Space is published.",
+      "The publication_performed=false field is inside the timestamped preparation provenance and records preparation activity; later public verification is separate."
+    ]
+  },
+  "limitations": [
+    "This review did not rerun training, causal inference, aviation validation or the complete software test suite.",
+    "No responsive breakpoint or assistive-technology certification is claimed.",
+    "Public availability is a point-in-time observation.",
+    "The web text-fetch tool could not access these four public pages; direct anonymous HTTP and the actual Chrome DOM were used successfully."
+  ],
+  "evidence_references": [
+    "release-evidence/v0.2.0-rc.1/hf-space-public-verification.json",
+    "release-evidence/v0.2.0-rc.1/hf-presentation-public-verification.json",
+    "publication/hf-space/data/provenance.json",
+    "models/runs/explicit-shall-20261027-4/run.json",
+    "sources/corpus.json"
+  ]
+}

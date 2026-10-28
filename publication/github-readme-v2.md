@@ -105,3 +105,8 @@ The exercised local portability profile uses SQLite. [Actual isolated CI](https:
 This is decision-support software. It is not an autopilot, certified Detect and Avoid system, separation service, air traffic control system, competent authority or U-space provider. Software tests do not approve flights.
 
 New code is Apache-2.0. Regulatory material, third-party models, dependencies and the owner's Indigo/Coral artwork retain their own rights. No private operator records, credentials or cached third-party foundation-model weights belong in public releases.
+
+
+## Publication tooling
+
+Publication-only image/schema checks use a separate hash-locked profile: `uv pip install --python .venv/Scripts/python.exe --require-hashes -r requirements-publication.lock.txt`. These packages are not required by the operational API. Run `python scripts/verify_sbom.py` for CycloneDX format validation against the pinned official specification, and the publication verification scripts for actual media/report checks. The final SBOM includes core, optional neural and optional publication dependencies, pinned excluded pretrained models, the distributed experimental student and the five separately reserved presentation files.

@@ -9,3 +9,8 @@
 - D007: engineering release candidate only until source coverage, domain review, security and deployment gates are satisfied. Model promotion requires a named reviewer and cannot follow automatically from training metrics.
 
 Documentation consulted: https://fastapi.tiangolo.com/deployment/docker/ ; https://docs.sqlalchemy.org/en/20/intro.html ; https://www.postgresql.org/docs/current/release-18.html ; https://github.com/pgvector/pgvector ; official Codex execution-plan guidance referenced in the baseline. Access date 2026-10-27.
+
+
+## 28 October 2026 — publication verification profile
+
+Core runtime remains frozen. Added a separate hash-locked publication-only profile and complete optional neural/model SBOM entries. The first publication-dependency scan found64 Pillow12.2.0 advisories; the historical failed report remains preserved. Upgraded the explicit publication environment to Pillow13.0.0, rescanned all6 pinned packages (zero known vulnerabilities) and revalidated actual image bytes. The canonical CycloneDX schema endpoint returned HTTP403; validation uses the same official specification repository at pinned1.6.2 commit e833d732337dd33aceb45ff1991f896796f1e5e7. All240 SBOM components validated against its official schema and SPDX list. This is format validation, not a legal clearance. A shell-wrapped long document write was rejected by automatic approval review with no detailed reason; the handover was completed through an explicit file patch. No permission expansion or external correspondence was used.
