@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-10-28T11:35:08.805946+00:00",
+  "model_training_rerun": false,
+  "checks": [
+    {
+      "repository": "Magic51/system-lab-airspace-shall-router",
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+      "revision": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+      "state": "Independently Retrieved",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 7478,
+          "sha256": "fdcc2eb140f7c72bf30feb6b37e1063705d3aa9fb07f6e6aacd5d0734ff38588",
+          "matches_local": true
+        },
+        {
+          "path": "media/agent-orchestration.jpg",
+          "bytes": 211029,
+          "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+          "matches_local": true
+        },
+        {
+          "path": "media/orchestration-pipeline.svg",
+          "bytes": 4561,
+          "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+          "matches_local": true
+        }
+      ],
+      "original_artifact": {
+        "path": "student.safetensors",
+        "bytes": 49824,
+        "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+        "unchanged_from_first_release": true
+      },
+      "prior_presentation_revision": "7e0738adb74975e2183411af47380c9ebb2f5002"
+    },
+    {
+      "repository": "Magic51/system-lab-airspace-source-annotations",
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+      "revision": "e9fb162a31fa139c8b511fbc84a18277b6aa560c",
+      "state": "Independently Retrieved",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 6276,
+          "sha256": "7ef5704ff31e932b212ec3a9d030831c834683cbf3ab5acbfddda7b1e5dc23bb",
+          "matches_local": true
+        },
+        {
+          "path": "media/agent-orchestration.jpg",
+          "bytes": 211029,
+          "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+          "matches_local": true
+        },
+        {
+          "path": "media/orchestration-pipeline.svg",
+          "bytes": 4561,
+          "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+          "matches_local": true
+        }
+      ],
+      "original_artifact": {
+        "path": "dataset.jsonl.gz",
+        "bytes": 72466,
+        "uncompressed_sha256": "4dfc9580f3997ddf0d8c8cd72ca188409b786fd5127a11ba0ddcd4c4d6a04260",
+        "unchanged_from_first_release": true
+      },
+      "prior_presentation_revision": "ff19df2c7c1f2b50dfbd95274b8a8b388f28f255"
+    }
+  ]
+}

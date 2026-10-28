@@ -80,14 +80,37 @@
   "execution_environment": "PowerShell with PYTHONPATH=backend; isolated temporary SQLite records. No PostgreSQL URL was present",
   "reported_integration_issue": {
     "id": "WORKFLOW-20261028-01",
-    "status_at_report": "Reported to root integration owner; repair and verification pending in this evidence record",
+    "status_at_report": "Reported to root integration owner",
+    "current_status": "Resolved by inspected code and deterministic interleaving regression",
     "finding": "Workflow control commits its state before a second job-cleanup transaction. Stale pause cleanup can cancel a newer concurrent resume's queued job",
     "recommended_repair": "Recheck exact controlled workflow version/status before any job cleanup, or atomically commit workflow control and job mutation",
+    "implemented_repair": "The cleanup transaction acquires the tenant lock, rereads the workflow and compares exact version/status before cancelling any jobs. A stale cleanup returns the newer workflow without mutating its jobs",
+    "regression": "tests/test_revision_integration.py::test_late_pause_cleanup_does_not_cancel_a_newer_resume injects a completed resume and new-version job between the first control commit and cleanup; it asserts the new job survives and continues to Needs Review",
+    "validation_attribution": "Root integration owner reported tests/test_revision_integration.py: 9 passed in 4.90s. This reviewer inspected the repair and regression read-only; it did not repeat that run",
     "boundary": "Durable-workflow liveness race; not an aircraft command, cross-tenant disclosure or approval grant"
+  },
+  "ci_pre_execution_review": {
+    "files_inspected": [".github/workflows/engineering.yml", "compose.yaml", "deploy/compose.ci.yaml", "deploy/database.Dockerfile", "deploy/010_application_role.sh", "migrations/002_extensions.sql", "Dockerfile", ".dockerignore", "tests/test_postgres_integration.py", "tests/test_postgres_coordination.py", "scripts/verify_postgres_recovery.py"],
+    "confirmed_design": [
+      "The full local software suite runs before AIRSPACE_TEST_POSTGRES_URL is introduced",
+      "The bootstrap administrator prepares extensions; the ordinary role is explicitly NOSUPERUSER, NOCREATEDB, NOCREATEROLE and NOREPLICATION",
+      "API/worker URLs receive the separate ordinary-role password; private bootstrap password is restricted to the database container",
+      "Actual PostgreSQL tests use a dedicated verification database; coordination tests additionally use generated schemas with public excluded",
+      "The CI job performs pg_dump/pg_restore and validates a restored tenant's audit marker using the corresponding key"
+    ],
+    "findings_reported": [
+      "First-start API/worker migrations could race because metadata.create_all lacked an encompassing migration lock. Root implemented one encompassing transaction with PostgreSQL pg_advisory_xact_lock or SQLite BEGIN IMMEDIATE; this reviewer inspected the repair. A real PostgreSQL concurrent-initialisation regression was added, but PostgreSQL execution is pending",
+      "The extension test asserts three privileged-role flags, while NOREPLICATION is established by bootstrap configuration; a runtime replication-flag assertion would complete that specific check",
+      "Container API health alone does not verify a running worker. Proposed an actual API-enqueued case_preparation job in an isolated tenant, completed by the existing worker service and checked through the API"
+    ],
+    "new_test": "tests/test_postgres_coordination.py::test_postgres_concurrent_first_start_migrations_are_serialized uses two separate Store engines and a fresh schema, then checks complete tables and schema-version history",
+    "local_command": ".venv/Scripts/python.exe -m pytest tests/test_postgres_coordination.py -q",
+    "local_result": "13 skipped in 0.38s; isolated PostgreSQL URL absent",
+    "boundary": "Configuration/code inspection is preparation evidence. No Docker, PostgreSQL migration, ordinary-role or restoration execution success is asserted by this review"
   },
   "remaining_acceptance": [
     "Actual PostgreSQL sharing/dispatch lock and worker-control races remain unexecuted locally; retain genuine CI output before claiming database verification",
-    "Root API-hook integration and the separately reported workflow-control race require their own final evidence",
+    "Root API-hook integration, migration serialisation and actual container-worker execution require their own final execution evidence",
     "Approved operator inputs, lawful actual records, qualified national legal review, provider access and real operational acceptance remain necessary",
     "No stable-release, certification or universal national coverage assertion follows from these tests"
   ],

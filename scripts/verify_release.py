@@ -43,10 +43,22 @@ def main():
     checks['python_dependency_audit']=execute('python-dependency-audit',[sys.executable,'-m','pip_audit','--no-deps','--disable-pip','-r','requirements.lock.txt','--format=json'],timeout=300)
     checks['optional_neural_dependency_audit']=execute('optional-neural-dependency-audit',[sys.executable,'-m','pip_audit','--no-deps','--disable-pip','-r','requirements-neural.lock.txt','--format=json'],timeout=300)
     checks['baseline_integrity']=hashlib.sha256((ROOT/'SPECIFICATION.md').read_bytes()).hexdigest()=='43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30'
-    result={'version':VERSION,'at':datetime.now(timezone.utc).isoformat(),'checks':checks,'engineering_checks_passed':all(checks.values()),'stable_release_allowed':False,'operational_acceptance':False,'unverified_gates':['PostgreSQL/PostGIS/pgvector deployment and concurrency','Docker build and health checks','Qualified Luxembourg/Italy pack validation','Full methodology and operational data acceptance','Live provider and enterprise identity integration','Complete baseline feature/assurance acceptance']}
+    result=release_result(checks)
     (EVIDENCE/'release-gates.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     print(json.dumps(result,indent=2))
     return 0 if all(checks.values()) else 1
+
+
+def release_result(checks):
+    ci_path=EVIDENCE/'ci-verification.json'
+    ci=json.loads(ci_path.read_text(encoding='utf-8')) if ci_path.exists() else None
+    ci_matches=bool(ci and ci.get('conclusion')=='success' and ci.get('local_software_input_hashes'))
+    if ci_matches:
+        ci_matches=all((ROOT/path).is_file() and hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest for path,digest in ci['local_software_input_hashes'].items())
+    unverified=['Qualified Luxembourg/Italy pack validation','Full methodology and operational data acceptance','Live provider and enterprise identity integration','Complete baseline feature/assurance acceptance','Production-scale resilience and deployment-specific security acceptance']
+    if not ci_matches:
+        unverified[:0]=['PostgreSQL/PostGIS/pgvector deployment and concurrency','Docker build and health checks']
+    return {'version':VERSION,'at':datetime.now(timezone.utc).isoformat(),'checks':checks,'engineering_checks_passed':all(checks.values()),'stable_release_allowed':False,'operational_acceptance':False,'external_ci':{'verified':ci_matches,'evidence':'ci-verification.json' if ci else None,'run_id':ci.get('run_id') if ci else None,'commit':ci.get('commit') if ci else None,'scope':'Actual isolated container/PostgreSQL/worker/restoration run; local input hashes must remain identical'},'unverified_gates':unverified}
 
 
 if __name__=='__main__': raise SystemExit(main())

@@ -79,7 +79,7 @@ Unknown references, unsupported conversions, stale zones and absent terrain/popu
 
 In **Fleet & Personnel → Aircraft**, register a real identity/configuration, evidence, restrictions and recorded serviceability. **Maintenance & readiness** inspects saved programme, utilisation and work. **Inspect and edit aircraft baseline** opens controlled editing/review. Material changes need renewed readiness review.
 
-Use **Record measured aircraft utilisation** for actual timestamp, total flight seconds, total cycles and measurement evidence. Blank counters are missing, not zero. Enter zero only when measured as zero. Saving creates a draft aircraft revision, not a flown mission or serviceability approval.
+Use **Record measured aircraft utilisation** for actual timestamp, total flight seconds, total cycles, measurement evidence and its exact reviewed revision. Blank counters are missing, not zero. Enter zero only when measured as zero. Measurement evidence revision identifies the source evidence, separately from the aircraft revision. An unknown evidence revision stays missing and blocks reservation/dispatch; suspended or revised source evidence also invalidates stale readiness. Saving creates a draft aircraft revision, not a flown mission or serviceability approval.
 
 In **Personnel**, preserve real roles, availability, qualification evidence/expiry and applicable organisation duty policy. Bind the personnel record to its correct user account for technician or pilot actions. Typed technician/facility and scheduling baselines may need an authorised import or documented structured fields. A name, administrator role or generic qualification label does not replace current task-specific evidence. No universal UAS duty limit is supplied.
 
@@ -89,7 +89,7 @@ Create a work order from saved tasks, real window, source-defined duration and w
 
 `Draft → Scheduled → In Progress → Work Complete → Under Review → Released`
 
-Scheduling requires actual reviewed technicians/facilities, availability/capacity and current aircraft/programme versions. Only the assigned technician's actual account starts/completes work. Completion needs actual time, matching measured counters and genuine evidence. An assigned, qualified reviewer independent of preparer/performer releases it, including a second reviewer where configured. Only unstarted work may be cancelled. Dedicated transitions replace ordinary work-order editing after Draft; escalate blocked assignments rather than bypassing the lifecycle.
+Scheduling requires actual reviewed technicians/facilities, availability/capacity and current aircraft/programme versions. Only the assigned technician's actual account starts/completes work. Completion needs actual time, matching measured counters and genuine evidence. Controlled work completion binds the actual evidence revision on the server; imported historical completions must also preserve their exact evidence revision. An assigned, qualified reviewer independent of preparer/performer releases it, including a second reviewer where configured. Only unstarted work may be cancelled. Dedicated transitions replace ordinary work-order editing after Draft; escalate blocked assignments rather than bypassing the lifecycle.
 
 Work release does not charge a battery, clear unrelated defects, authorise a flight or automatically restore aircraft readiness. **Assess maintenance readiness** uses saved evidence; leave optional forecast use blank when unknown. See [fleet contracts](fleet-and-cross-border.md).
 

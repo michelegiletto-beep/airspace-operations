@@ -21,3 +21,8 @@ These are instructions for the prepared PostgreSQL deployment, **not evidence th
 Worker crash: leases expire and retry within the bounded budget. Inspect job attempts and state, reconcile any stale Running job, then resume only after input review. Paused/cancelled jobs cannot commit a late result. Database interruption must not produce a successful API mutation; transactional records, audit and outbox commit together. No data-recovery action issues aircraft commands.
 
 Evidence integrity failure: restrict the affected object, retain corrupted bytes as investigation evidence, restore from a hash-verified copy and record the incident. Do not regenerate a missing authority receipt or replace an original silently. Record measured restoration duration and the verification command outputs in the deployment's private evidence archive.
+
+
+## Recorded container verification
+
+The actual isolated GitHub run40678178924 at commit`e2c5e4ec55ec5bbb25901fee27b143d2b06ec35c` passed application/database container build and health, the already-running worker/API job check,16 PostgreSQL extension/concurrency/migration tests and pg_dump/pg_restore audit verification using the ordinary application role. See[CI evidence](../release-evidence/v0.2.0-rc.1/ci-verification.json). Earlier statements about unavailable local Docker describe the Windows host; the later remote check does not establish production-scale resilience or accepted live integrations.

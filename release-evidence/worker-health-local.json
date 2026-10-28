@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-28",
+  "engineering_version": "0.2.0-rc.1",
+  "trigger": "Root reported that the first actual GitHub container build and database/API health checks succeeded, but Compose --wait failed because the worker health check was disabled. This record does not independently attest that remote run",
+  "implementation": ["backend/airspace/worker_health.py", "backend/airspace/cli.py", "compose.yaml"],
+  "behavior": {
+    "writer": "Real daemon thread around the worker CLI loop, independent of bounded long-running model steps",
+    "path": "AIRSPACE_RUNTIME/worker-heartbeats/worker-<safe-own-hostname>.json",
+    "fields": ["hostname", "pid", "updated_at"],
+    "interval_seconds": 5,
+    "atomicity": "Write a uniquely owned temporary file in the same directory, close it and replace only this hostname's record atomically. Clean up only the exact temporary filename",
+    "health_command": "python -m airspace.worker_health",
+    "healthy_when": "Own hostname matches, recorded positive PID exists and timestamp age is between zero and 30 seconds inclusive",
+    "windows_pid_probe": "Read-only OpenProcess/GetExitCodeProcess; os.kill(pid,0) is never used on Windows",
+    "compose": {"interval": "10s", "timeout": "5s", "start_period": "30s", "retries": 3},
+    "boundary": "Process liveness only. A healthy heartbeat does not prove queue progress, model availability, regulatory freshness or operational readiness"
+  },
+  "test_module": "tests/test_worker_health.py",
+  "coverage": ["Missing record", "30-second freshness boundary", "Stale and future timestamps", "Nonexistent and invalid PID", "Foreign hostname", "Path containment", "Malformed and oversized content", "Naive timestamp", "Actual daemon refresh and clean stop", "Exact temporary-file cleanup", "Health command exit status", "Worker CLI uses the real context"],
+  "commands_executed": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_worker_health.py -q",
+      "environment": "PowerShell; PYTHONPATH=backend; Windows process-query path; isolated temporary directories and SQLite fixture",
+      "result": "14 passed in 0.63s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_worker_health.py tests/test_api.py tests/test_revision_integration.py tests/test_security_workflows.py -q",
+      "environment": "PowerShell; PYTHONPATH=backend; isolated temporary stores",
+      "result": "35 passed in 10.33s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_worker_health.py -q",
+      "environment": "PowerShell; PYTHONPATH=backend; final test-harness check after moving temporary-file cleanup assertion until the writer has stopped",
+      "result": "14 passed in 0.53s"
+    }
+  ],
+  "pending": ["Actual Compose rerun and existing-worker queue-completion evidence from the isolated GitHub runner"],
+  "operational_data_created": false,
+  "secrets_in_heartbeat": false
+}

@@ -27,7 +27,7 @@ files.append({'path':'models/experiment-artifacts.zip','local_path':str(bundle),
 small=[];large=[]
 for entry in files:
     if entry['binary'] or entry['bytes']>100000:large.append(entry)
-    else:small.append({'path':entry['path'],'mode':'100644','type':'blob','content':Path(entry['local_path']).read_text(encoding='utf-8')})
+    else:small.append({'path':entry['path'],'mode':'100644','type':'blob','content':Path(entry['local_path']).read_text(encoding='utf-8',newline='')})
 batches=[];batch=[];size=0
 for item in small:
     if batch and size+len(item['content'])>150000:batches.append(batch);batch=[];size=0

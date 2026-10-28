@@ -1,3 +1,15 @@
+# 0.2.0-rc.1
+
+A distinct engineering candidate expands the first release with actual local generative LLM orchestration, a reusable domain-neutral System Lab coordination core, typed specialist execution, persisted receipts and independent-review checkpoints. The pretrained Qwen controller was actually executed with neural retrieval, reranking and the unchanged experimental student. No new student training or operational prediction performance is claimed.
+
+Adds aircraft-specific maintenance programmes, measured utilisation/source revision checks, controlled work orders, technician/facility checks, constrained maintenance scheduling and an independent verifier. Bilateral owner/operator sharing has explicit consent, restricted projections, immutable physical identity and a global aircraft ledger. Country segments distinguish operational-authorisation confirmation from STS/LUC documented host provision. Pilot acknowledgement and accountable internal dispatch release recheck current inputs and remain separate from provider activation and actual execution.
+
+The rebuilt React interface uses real maps, timelines, workflow forms, missing states and the owner's existing animated 2.5D WebGL presentation runtime with reduced motion/pause/fallback. The public dossier, GitHub/Hugging Face cards and static recorded-evaluation viewer include actual screenshots, architecture, lineage, executed traces and explicit acceptance gaps. Existing trading runtime, recipes and weights are not republished or relicensed.
+
+Hardening closes stale maintenance signatures, revised source reuse, revoked sharing, cross-tenant resource collisions, partial reservation loss, stale workflow-control cleanup and concurrent startup migration races. Source and human approval boundaries are enforced server-side. Exact final check/CI/publication states are recorded in `release-evidence/v0.2.0-rc.1/`, `publication/status.json` and `HANDOVER.md`; a prepared workflow is not a passing run.
+
+The original 170-paragraph baseline and16 revision requirements remain tracked. Full SORA, deeply validated country packs, accepted live operational feeds, complete recurrence/charging, interactive offline operation and deployment-scale assurance remain incomplete. This candidate does not approve flights or establish production readiness. The first release's tag and downloadable bytes remain unchanged.
+
 # 0.1.0-rc.1
 
 Engineering candidate with a real Python API, persistent local database, separately runnable worker/inference service and typed React interface. Implements tenant isolation, role controls, independent review, revision history, evidence integrity, controlled JSON/HTML exports, HMAC audit verification and restoration mechanisms. Operational workspaces install empty.

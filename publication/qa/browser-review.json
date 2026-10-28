@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-28T11:03:45.193007+00:00",
+  "tool": "Cua Chrome extension, local loopback preview only",
+  "native_publication_performed": false,
+  "verified": [
+    "Dossier hero and actual Mission Control screenshot rendered",
+    "Architecture anchor navigated and executable pipeline SVG rendered",
+    "Static Space loaded bundled evidence over HTTP",
+    "Comparison displayed 2 current-query trial records and explicit timing confound",
+    "Actual UI workflow displayed 5 tool receipts and independent review gate",
+    "Model evaluation displayed original 77-example metrics and source-linked failures",
+    "New download remained disabled and Prepared"
+  ],
+  "responsive_breakpoints_verified": false,
+  "full_page_capture_claimed": false,
+  "capture_note": "An explicit full-page CDP attempt timed out; subsequent supported getScreenshot snapshots succeeded.",
+  "screenshots": {
+    "hf-space-workflow-desktop.png": {
+      "bytes": 48838,
+      "pixels": [
+        696,
+        911
+      ],
+      "sha256": "bb210046fbf7ed18f119f0ff999ab096a4bb53528f0c09e40237db99bc26952c"
+    },
+    "site-architecture-desktop.png": {
+      "bytes": 93102,
+      "pixels": [
+        1905,
+        904
+      ],
+      "sha256": "462b365a1b5973e62410d081b694147053d01d5ec91a032c634a22cae8985a60"
+    },
+    "site-dossier-desktop.png": {
+      "bytes": 87751,
+      "pixels": [
+        1905,
+        904
+      ],
+      "sha256": "0ff0d71e010102140f1d01fc8e1baa77d8e48a42e6053fdb586d30ed9d03c04b"
+    }
+  },
+  "reviewed_file_sha256": {
+    "site-project.html": "0ca68e3528e3471b1588d7397f3677eff16e0588126c4241ce6cc405ba775787",
+    "site-project.css": "74af0833c91843cbb61fdcbef1c4ec2f43a8c41eb5bf6c807e6d6dd63c64b27d",
+    "hf-space/index.html": "3f3459fd61456695e6981768a9af5adbd6ac61990ac58cd3ad1f7d6c31802bb7",
+    "hf-space/styles.css": "a222b494ef297fe772717a38747b372a803bc8250fe57090c052fd368293470d",
+    "hf-space/app.js": "98a23b3f43a7b9d24750bd72d3b83f4837ae7455ee1e7ea5fb1e1aa1d5d1547d",
+    "media/agent-orchestration-detail.jpg": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+    "media/agent-orchestration.jpg": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+    "media/airspace-planning.jpg": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+    "media/european-coordination.jpg": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+    "media/fleet-maintenance.jpg": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+    "media/mission-control.jpg": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+    "media/mobile-mission-control.jpg": "ccd4e905c904023e722a51990bd67eddb8c3f61878b36f2b6c6cbd46afe71bab",
+    "media/scheduling.jpg": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0"
+  }
+}

@@ -9,3 +9,7 @@
 # Preserve the exact bytes and ownership of the existing presentation runtime.
 frontend/public/vendor/systemlab-companion/** -text
 frontend/dist/vendor/systemlab-companion/** -text
+models/runs/** -text
+sources/** -text
+release-evidence/** -text
+SPECIFICATION.md -text

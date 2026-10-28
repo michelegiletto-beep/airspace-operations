@@ -22,7 +22,8 @@
     "Changed country instruments block dispatch and material changes invalidate releases",
     "A revoked agreement does not prevent cancellation of its old internal schedule and release of exclusions",
     "Worker pause can prevent an inflight completion from overwriting controlled job state",
-    "Four concurrent worker-finish/pause races check organisation-before-job lock ordering"
+    "Four concurrent worker-finish/pause races check organisation-before-job lock ordering",
+    "Two independent engines initialise the same fresh PostgreSQL schema concurrently and verify complete metadata/schema versions"
   ],
   "commands_executed": [
     {
@@ -34,6 +35,11 @@
       "command": ".venv/Scripts/python.exe -m pytest tests/test_europe.py tests/test_dispatch.py tests/test_revision_integration.py tests/test_postgres_coordination.py -q",
       "environment": "PowerShell; PYTHONPATH=backend; no isolated PostgreSQL URL",
       "result": "35 passed, 12 skipped in 6.46s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_postgres_coordination.py -q",
+      "environment": "PowerShell; PYTHONPATH=backend; no isolated PostgreSQL URL; concurrent-first-migration test added",
+      "result": "13 skipped in 0.38s"
     }
   ],
   "additional_sqlite_harness": {

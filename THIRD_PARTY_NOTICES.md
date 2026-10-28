@@ -206,3 +206,4 @@ Dependency metadata is recorded below; original licences remain controlling. Pyt
 | npm | ws | 8.22.0 | MIT |
 | npm | xml-name-validator | 5.0.0 | Apache-2.0 |
 | npm | xmlchars | 2.2.0 | MIT |
+| System Lab | Existing companion renderer and character assets | SHA-256 in SBOM; frontend/public/vendor/systemlab-companion/provenance.json; frontend/verification/0.2.0-rc.1/owned-runtime-assets.json | All rights reserved; LICENSES/LicenseRef-SystemLab-Assets.txt |

@@ -40,10 +40,10 @@
     },
     {
       "capability": "PostgreSQL/PostGIS/pgvector deployment",
-      "status": "Implemented",
+      "status": "Verified",
       "implementation": "compose.yaml;deploy/database.Dockerfile;migrations",
-      "evidence": "SQL dialect generation only",
-      "limitation": "Docker/PostgreSQL unavailable here; extensions and production queries not executed"
+      "evidence": "release-evidence/v0.2.0-rc.1/ci-verification.json;ci-success.log.txt",
+      "limitation": "Actual isolated GitHub runner; ordinary application role, extensions,16 PG tests, running worker and pg_dump/restore passed. Not production-scale acceptance."
     },
     {
       "capability": "Primary-source downloads and structured ingestion",
@@ -155,7 +155,7 @@
       "status": "Verified",
       "implementation": "planning.py",
       "evidence": "tests/test_planning.py",
-      "limitation": "SQLite concurrency tested; PostgreSQL must be separately verified"
+      "limitation": "SQLite and isolated PostgreSQL concurrency exercised; real operator/provider acceptance remains separate"
     },
     {
       "capability": "Accountable internal dispatch release and pilot acknowledgement",
@@ -242,11 +242,11 @@
       "limitation": "Browser verification scope recorded separately; no blanket accessibility certification"
     },
     {
-      "capability": "Container build, restoration and resilience at production scale",
-      "status": "Requires External Access",
+      "capability": "Container build, running-worker health and PostgreSQL restoration",
+      "status": "Verified",
       "implementation": "Dockerfile;compose.yaml;recovery runbook",
-      "evidence": "release-evidence/release-gates.json",
-      "limitation": "No Docker/PostgreSQL runtime here; no measured production SLO or external pentest"
+      "evidence": "release-evidence/v0.2.0-rc.1/ci-verification.json",
+      "limitation": "Actual isolated deployment/restoration verified; deployment-scale SLO, network partitions and external pentest remain unverified."
     },
     {
       "capability": "Public downloadable release",

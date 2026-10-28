@@ -1,8 +1,13 @@
 {
-  "checked_at": "2026-10-28T10:59:02.626Z",
+  "checked_at": "2026-10-28T11:37:11.534Z",
   "release_state": "Prepared",
   "native_publication_performed": false,
   "browser_rendering_verified": false,
+  "browser_review": {
+    "report": "qa/browser-review.json",
+    "reviewed_files_still_match": false,
+    "responsive_breakpoints_verified": false
+  },
   "checks": {
     "site": {
       "unique_ids": 40,

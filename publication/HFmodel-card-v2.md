@@ -54,8 +54,13 @@ Three earlier semantic-obligation annotation attempts failed their gates and rem
 
 ## Use and boundaries
 
-Load the student through `airspace.neural.ExperimentalStudent` with the pinned local encoder. There is no configured hosted inference service. A separate static evaluation Space is prepared from the actual recorded comparison, UI workflow, source passages and original model evaluation; it performs no live inference and is not the production operations platform. Its public link is added only after publication verification. The downloadable application, setup, dataset documentation and actual verification are in the [source repository](https://github.com/michelegiletto-beep/airspace-operations).
+Load the student through `airspace.neural.ExperimentalStudent` with the pinned local encoder. There is no configured hosted inference service. The published static evaluation Space presents the actual recorded comparison, UI workflow, source passages and original model evaluation. It performs no live inference and is not the production operations platform; its verified link is below. The downloadable application, setup, dataset documentation and actual verification are in the [source repository](https://github.com/michelegiletto-beep/airspace-operations).
 
 Promotion requires qualified human-reviewed task labels, representative temporal/version/jurisdiction evaluation, calibration where useful and demonstrated benefit over deterministic routing. The student must not approve permissions, score operational safety, control dispatch, issue emergency instructions or command aircraft. No operational prediction model was trained.
 
 New student weights and code use their stated Apache-2.0 licence. Source passages, upstream models and screenshots/artwork retain separate rights. This documentation update does not relicense source documents or proprietary System Lab artwork.
+
+
+## Inspect the recorded application evidence
+
+The public [System Lab Airspace Evaluation Space](https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation) contains the actual controller comparison, persisted UI workflow, source citations, unchanged student evaluation and observed failure cases. It is a static recorded-evidence viewer with no model inference or flight-management service. The repository files were independently retrieved at revision `2e7c96760d968f304d9b157f9b63f7b34accf982`; this presentation does not announce new weights or expert ground truth.

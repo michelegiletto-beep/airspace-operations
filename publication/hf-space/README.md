@@ -5,7 +5,7 @@ app_file: index.html
 colorFrom: indigo
 colorTo: gray
 license: apache-2.0
-short_description: Recorded agent and neural software evidence; no live inference or flights.
+short_description: Recorded agent and neural evidence; no live flights.
 ---
 
 # System Lab Airspace Evaluation

@@ -1,0 +1,248 @@
+{
+  "schema_version": "1",
+  "recorded_at": "2026-10-28T11:35:23.377619+00:00",
+  "state": "Prepared source integration",
+  "checkout": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-publishing",
+  "base_commit": "bb9ffcd968917e28ab085bcf098abeb417fa8147",
+  "publication_performed": false,
+  "full_site_build_performed": false,
+  "scope": "Airspace catalogue entry, actual screenshots, project page and source generation; factual programme integration with existing applications preserved.",
+  "commands": [
+    {
+      "command": "node scripts/build-home.mjs",
+      "exit_code": 0,
+      "stdout": "Homepage built with 31 project records.",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/build-projects.mjs --project=airspace-operations --project=multiagentic-systems",
+      "exit_code": 0,
+      "stdout": "Built selected project records and affected catalogue pages: airspace-operations, multiagentic-systems",
+      "stderr": ""
+    },
+    {
+      "command": "node --check scripts/build-projects.mjs",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check scripts/project-classes.mjs",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check scripts/prepare-editorial-images.mjs",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check scripts/prepare-project-previews.mjs",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --test tests/airspace-operations.test.mjs tests/project-dossiers.test.mjs tests/orbital-flagship.test.mjs",
+      "exit_code": 0,
+      "stdout": "TAP version 13\n# Subtest: Airspace belongs to the real catalogue and uses an authentic capture card\nok 1 - Airspace belongs to the real catalogue and uses an authentic capture card\n  ---\n  duration_ms: 19.2379\n  ...\n# Subtest: Prepared new downloads remain disabled and the old release bytes stay frozen\nok 2 - Prepared new downloads remain disabled and the old release bytes stay frozen\n  ---\n  duration_ms: 18.4561\n  ...\n# Subtest: programme keeps its existing application boundaries and Interval relationship\nok 3 - programme keeps its existing application boundaries and Interval relationship\n  ---\n  duration_ms: 1.1726\n  ...\n# Subtest: The homepage presents all thirty-one projects once in six primary classes\nok 4 - The homepage presents all thirty-one projects once in six primary classes\n  ---\n  duration_ms: 16.4973\n  ...\n# Subtest: The project page describes the evaluation and server boundary\nok 5 - The project page describes the evaluation and server boundary\n  ---\n  duration_ms: 0.9819\n  ...\n# Subtest: Every project card preserves its catalogue identity and materials, including Orbital\nok 6 - Every project card preserves its catalogue identity and materials, including Orbital\n  ---\n  duration_ms: 30.3029\n  ...\n# Subtest: every catalogue project retains its materials and its declared image type\nok 7 - every catalogue project retains its materials and its declared image type\n  ---\n  duration_ms: 303.4128\n  ...\n# Subtest: editorial images cover the full catalogue\nok 8 - editorial images cover the full catalogue\n  ---\n  duration_ms: 470.8421\n  ...\n# Subtest: new pages preserve documented limits and real software imagery\nok 9 - new pages preserve documented limits and real software imagery\n  ---\n  duration_ms: 57.1222\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1967.9855",
+      "stderr": ""
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'public/assets/airspace-project.css', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/index.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-frontier.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-intelligent-systems.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-maritime.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/program-resilience.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/programs.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'public/research-records.json', LF will be replaced by CRLF the next time Git touches it"
+    }
+  ],
+  "focused_test_result": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "scoped_generation": {
+    "outputs_checked": 10,
+    "idempotent": true,
+    "output_sha256": {
+      "public/index.html": "4c97649fffc31b67f2e6addc468050efe2b040e9dc69ba992af6940e49f20bdd",
+      "public/research-records.json": "3a937a60c64d782ed278edd333a26a9f73ed8fb14b9aa0a837bb6f6a88c5290d",
+      "public/projects/airspace-operations.html": "0fa36f1d9ee0a7d1c9d2810b86210e221c07c5c067e3e23a58cb401d7bf843a8",
+      "public/projects/multiagentic-systems.html": "6eb550d1fe8869bc09511c78642db4285e9c05e52167ea818be7d490d5ffa213",
+      "public/program-ai-methods.html": "9f070ddc5d0ff727fc2aa3bc458432248bd70095bebb96bbbf99a12cbaaa2325",
+      "public/programs.html": "ffe633c9fc8a8177a15df28d9e4cf71139f74312772d0ffa363931a9fd8d9109",
+      "public/program-frontier.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf",
+      "public/program-intelligent-systems.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf",
+      "public/program-maritime.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf",
+      "public/program-resilience.html": "61cf8467f45e1bbaf993fea999f96da78f21165633faf2a6b8882217197a99bf"
+    }
+  },
+  "source_status": [
+    "M internal/site-redesign/additional-projects.json",
+    " M internal/site-redesign/project-classes.json",
+    " M internal/site-redesign/project-imagery.json",
+    " M public/assets/airspace-project.css",
+    " M public/index.html",
+    " M public/program-ai-methods.html",
+    " M public/program-frontier.html",
+    " M public/program-intelligent-systems.html",
+    " M public/program-maritime.html",
+    " M public/program-resilience.html",
+    " M public/programs.html",
+    " M public/projects/airspace-operations.html",
+    " M public/projects/multiagentic-systems.html",
+    " M public/research-records.json",
+    " M public/sitemap.xml",
+    " M scripts/build-home.mjs",
+    " M scripts/build-projects.mjs",
+    " M scripts/prepare-editorial-images.mjs",
+    " M scripts/prepare-project-previews.mjs",
+    " M scripts/project-classes.mjs",
+    " M templates/home.html",
+    " M templates/multiagentic-systems.html",
+    " M tests/orbital-flagship.test.mjs",
+    " M tests/project-dossiers.test.mjs",
+    "?? internal/site-redesign/actual-project-imagery.json",
+    "?? public/airspace-operations/media/",
+    "?? templates/airspace-operations.html",
+    "?? tests/airspace-operations.test.mjs"
+  ],
+  "old_release": {
+    "name": "System-Lab-Airspace-Operations-0.1.0-rc.1.zip",
+    "bytes": 2090705,
+    "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+    "unchanged": true
+  },
+  "media": {
+    "copied": [
+      {
+        "name": "agent-orchestration-detail.jpg",
+        "bytes": 71132,
+        "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb"
+      },
+      {
+        "name": "agent-orchestration.jpg",
+        "bytes": 211029,
+        "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987"
+      },
+      {
+        "name": "airspace-planning.jpg",
+        "bytes": 112044,
+        "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4"
+      },
+      {
+        "name": "browser-verification.json",
+        "bytes": 811,
+        "sha256": "b564879ed0e1c3221bbb9db53563f5816af051510d2f9c6077463a55014b05c5"
+      },
+      {
+        "name": "coral.webp",
+        "bytes": 30036,
+        "sha256": "37b2a36c2d8829af8942da772f79ae8c1ad4d0a528fb974487577298c969e432"
+      },
+      {
+        "name": "european-coordination.jpg",
+        "bytes": 127424,
+        "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f"
+      },
+      {
+        "name": "fleet-maintenance.jpg",
+        "bytes": 75096,
+        "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b"
+      },
+      {
+        "name": "indigo.webp",
+        "bytes": 35496,
+        "sha256": "f9b5f823f7de8e046608166a22ed93b8a8148a61f329da9282f4fe932003e3e1"
+      },
+      {
+        "name": "mission-control.jpg",
+        "bytes": 129906,
+        "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787"
+      },
+      {
+        "name": "mobile-mission-control.jpg",
+        "bytes": 79822,
+        "sha256": "ccd4e905c904023e722a51990bd67eddb8c3f61878b36f2b6c6cbd46afe71bab"
+      },
+      {
+        "name": "orchestration-pipeline.svg",
+        "bytes": 4561,
+        "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35"
+      },
+      {
+        "name": "scheduling.jpg",
+        "bytes": 98935,
+        "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0"
+      }
+    ],
+    "all_byte_identical_to_product_publication_media": true
+  },
+  "local_links": {
+    "pages_checked": 5,
+    "internal_targets_checked": 357,
+    "unresolved": 0,
+    "route_handling": "Recognised existing Next app/page.tsx routes and existing #/work/ SPA fragments; initial file-only checker was corrected rather than changing those routes."
+  },
+  "local_http": [
+    {
+      "path": "/",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/projects/airspace-operations.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/projects/multiagentic-systems.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/program-ai-methods.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/airspace-operations/media/mission-control.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    }
+  ],
+  "browser_review": {
+    "tool": "cua_repl Chrome owned ephemeral tab",
+    "observed_pages": [
+      "homepage AI class",
+      "Airspace project landing",
+      "Airspace screenshot tabs",
+      "multiagentic systems UAS integration section"
+    ],
+    "observations": [
+      "Actual Mission Control application JPEG appears as the catalogue card with Application view label.",
+      "Workspace tabs update image source and content; European Coordination and Agent Orchestration were observed fully loaded at natural width 1265.",
+      "New standalone release button is disabled and labelled Prepared.",
+      "Desktop page has no observed horizontal overflow at innerWidth 1920 / scrollWidth 1905.",
+      "Programme UAS section renders with retained Interval heading."
+    ],
+    "console_warnings_or_errors_observed": [],
+    "mobile_browser_review_performed": false
+  },
+  "preservation": {
+    "interval_programme_section_exact_text_preserved": true,
+    "unrelated_research_dossiers_readers_about_and_trading_outputs_not_regenerated": true,
+    "legacy_release_assets_untouched": true
+  },
+  "automatic_approval_review": {
+    "earlier_combined_mutation": "Rejected",
+    "stated_reason": "blocked by policy",
+    "safe_alternate": "Explicit non-destructive Copy-Item operations and scoped apply_patch edits succeeded; the blocked command was not retried unchanged."
+  },
+  "next_actions": [
+    "Parent performs full Site build and final hosting-route verification.",
+    "After actual new GitHub package publication, parent enables the new release link and updates Prepared catalogue/programme copy coherently.",
+    "Parent saves and publishes the exact checkout through the official Sites helper, then independently retrieves live links."
+  ]
+}

@@ -1,0 +1,463 @@
+2026-10-28T11:09:45.4431691Z Current runner version: '2.338.0'
+2026-10-28T11:09:45.4453119Z ##[group]Runner Image Provisioner
+2026-10-28T11:09:45.4453828Z Hosted Compute Agent
+2026-10-28T11:09:45.4454396Z Version: 20261021.618
+2026-10-28T11:09:45.4455239Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-28T11:09:45.4455900Z Build Date: 2026-10-21T00:45:21Z
+2026-10-28T11:09:45.4456500Z Worker ID: {16737310-b5cf-4dc1-af71-b3e3a9da1738}
+2026-10-28T11:09:45.4457083Z Region: westus3
+2026-10-28T11:09:45.4457583Z Cloud: Azure
+2026-10-28T11:09:45.4458049Z ##[endgroup]
+2026-10-28T11:09:45.4459532Z ##[group]Operating System
+2026-10-28T11:09:45.4460164Z Ubuntu
+2026-10-28T11:09:45.4460613Z 24.04.5
+2026-10-28T11:09:45.4461097Z LTS
+2026-10-28T11:09:45.4461539Z ##[endgroup]
+2026-10-28T11:09:45.4461994Z ##[group]Runner Image
+2026-10-28T11:09:45.4462592Z Image: ubuntu-24.04
+2026-10-28T11:09:45.4463060Z Version: 20261012.334.1
+2026-10-28T11:09:45.4464147Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-28T11:09:45.4465624Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-28T11:09:45.4466512Z ##[endgroup]
+2026-10-28T11:09:45.4467397Z ##[group]GITHUB_TOKEN Permissions
+2026-10-28T11:09:45.4469006Z Contents: read
+2026-10-28T11:09:45.4469496Z Metadata: read
+2026-10-28T11:09:45.4470045Z ##[endgroup]
+2026-10-28T11:09:45.4472143Z Secret source: Actions
+2026-10-28T11:09:45.4472991Z Cache mode: write
+2026-10-28T11:09:45.4473715Z Prepare workflow directory
+2026-10-28T11:09:45.4919029Z Prepare all required actions
+2026-10-28T11:09:45.4959860Z Getting action download info
+2026-10-28T11:09:45.8027768Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-10-28T11:09:45.9764298Z Download action repository 'actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-10-28T11:09:46.4680206Z Download action repository 'astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9' (SHA:94527f2e458b27549849d47d273a16bec83a01e9)
+2026-10-28T11:09:47.6344021Z Complete job name: containers-postgresql
+2026-10-28T11:09:47.7164736Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-10-28T11:09:47.7166232Z with:
+2026-10-28T11:09:47.7166949Z   persist-credentials: false
+2026-10-28T11:09:47.7167934Z   repository: michelegiletto-beep/airspace-operations
+2026-10-28T11:09:47.7175812Z   token: ***
+2026-10-28T11:09:47.7176523Z   ssh-strict: true
+2026-10-28T11:09:47.7177245Z   ssh-user: git
+2026-10-28T11:09:47.7177937Z   clean: true
+2026-10-28T11:09:47.7178684Z   sparse-checkout-cone-mode: true
+2026-10-28T11:09:47.7179552Z   fetch-depth: 1
+2026-10-28T11:09:47.7180276Z   fetch-tags: false
+2026-10-28T11:09:47.7181016Z   show-progress: true
+2026-10-28T11:09:47.7181771Z   lfs: false
+2026-10-28T11:09:47.7182485Z   submodules: false
+2026-10-28T11:09:47.7183240Z   set-safe-directory: true
+2026-10-28T11:09:47.7184118Z   allow-unsafe-pr-checkout: false
+2026-10-28T11:09:47.7185415Z env:
+2026-10-28T11:09:47.7186169Z   COMPOSE_PROJECT_NAME: airspace-ci-40677779377
+2026-10-28T11:09:47.7187190Z ##[endgroup]
+2026-10-28T11:09:48.1825318Z Syncing repository: michelegiletto-beep/airspace-operations
+2026-10-28T11:09:48.1827144Z ##[group]Getting Git version info
+2026-10-28T11:09:48.1827790Z Working directory is '/home/runner/work/airspace-operations/airspace-operations'
+2026-10-28T11:09:48.1828661Z [command]/usr/bin/git version
+2026-10-28T11:09:48.1872878Z git version 2.55.0
+2026-10-28T11:09:48.1891235Z ##[endgroup]
+2026-10-28T11:09:48.1903942Z Temporarily overriding HOME='/home/runner/work/_temp/1af8984e-b67b-4d5d-b5e4-4d148516b7b0' before making global git config changes
+2026-10-28T11:09:48.1905271Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-28T11:09:48.1908755Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/airspace-operations/airspace-operations
+2026-10-28T11:09:48.1956171Z Deleting the contents of '/home/runner/work/airspace-operations/airspace-operations'
+2026-10-28T11:09:48.1959132Z ##[group]Determining repository object format
+2026-10-28T11:09:48.1966721Z ##[endgroup]
+2026-10-28T11:09:48.1980100Z ##[group]Initializing the repository
+2026-10-28T11:09:48.1981004Z [command]/usr/bin/git init /home/runner/work/airspace-operations/airspace-operations
+2026-10-28T11:09:48.2061006Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-28T11:09:48.2062174Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-28T11:09:48.2063311Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-28T11:09:48.2063864Z hint: call:
+2026-10-28T11:09:48.2064153Z hint:
+2026-10-28T11:09:48.2064732Z hint: 	git config --global init.defaultBranch <name>
+2026-10-28T11:09:48.2065192Z hint:
+2026-10-28T11:09:48.2065606Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-28T11:09:48.2066297Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-28T11:09:48.2066814Z hint:
+2026-10-28T11:09:48.2067130Z hint: 	git branch -m <name>
+2026-10-28T11:09:48.2067465Z hint:
+2026-10-28T11:09:48.2067931Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-28T11:09:48.2068780Z Initialized empty Git repository in /home/runner/work/airspace-operations/airspace-operations/.git/
+2026-10-28T11:09:48.2074107Z [command]/usr/bin/git remote add origin https://github.com/michelegiletto-beep/airspace-operations
+2026-10-28T11:09:48.2119032Z ##[endgroup]
+2026-10-28T11:09:48.2119628Z ##[group]Disabling automatic garbage collection
+2026-10-28T11:09:48.2123205Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-28T11:09:48.2153261Z ##[endgroup]
+2026-10-28T11:09:48.2153996Z ##[group]Setting up auth
+2026-10-28T11:09:48.2154455Z Removing SSH command configuration
+2026-10-28T11:09:48.2160926Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-28T11:09:48.2195240Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-28T11:09:48.4017286Z Removing HTTP extra header
+2026-10-28T11:09:48.4023199Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-28T11:09:48.4059687Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-28T11:09:48.4263065Z Removing includeIf entries pointing to credentials config files
+2026-10-28T11:09:48.4268941Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-28T11:09:48.4301913Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-28T11:09:48.4502453Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-28T11:09:48.4538892Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:48.4571960Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:48.4607070Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:48.4646593Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:48.4673743Z ##[endgroup]
+2026-10-28T11:09:48.4674327Z ##[group]Fetching the repository
+2026-10-28T11:09:48.4681774Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1d4a9dfc3054c28746a2a160ac9b7c12013d43d9:refs/remotes/origin/codex/airspace-0.2
+2026-10-28T11:09:49.9267032Z From https://github.com/michelegiletto-beep/airspace-operations
+2026-10-28T11:09:49.9267612Z  * [new ref]         1d4a9dfc3054c28746a2a160ac9b7c12013d43d9 -> origin/codex/airspace-0.2
+2026-10-28T11:09:49.9277497Z [command]/usr/bin/git branch --list --remote origin/codex/airspace-0.2
+2026-10-28T11:09:49.9323227Z   origin/codex/airspace-0.2
+2026-10-28T11:09:49.9331650Z [command]/usr/bin/git rev-parse refs/remotes/origin/codex/airspace-0.2
+2026-10-28T11:09:49.9355526Z 1d4a9dfc3054c28746a2a160ac9b7c12013d43d9
+2026-10-28T11:09:49.9359009Z ##[endgroup]
+2026-10-28T11:09:49.9359813Z ##[group]Determining the checkout info
+2026-10-28T11:09:49.9360604Z ##[endgroup]
+2026-10-28T11:09:49.9365508Z [command]/usr/bin/git sparse-checkout disable
+2026-10-28T11:09:49.9414042Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-28T11:09:49.9442965Z ##[group]Checking out the ref
+2026-10-28T11:09:49.9446696Z [command]/usr/bin/git checkout --progress --force -B codex/airspace-0.2 refs/remotes/origin/codex/airspace-0.2
+2026-10-28T11:09:49.9957278Z Switched to a new branch 'codex/airspace-0.2'
+2026-10-28T11:09:49.9964494Z branch 'codex/airspace-0.2' set up to track 'origin/codex/airspace-0.2'.
+2026-10-28T11:09:49.9967854Z ##[endgroup]
+2026-10-28T11:09:50.0009386Z [command]/usr/bin/git log -1 --format=%H
+2026-10-28T11:09:50.0034193Z 1d4a9dfc3054c28746a2a160ac9b7c12013d43d9
+2026-10-28T11:09:50.0042690Z ##[group]Removing auth
+2026-10-28T11:09:50.0108829Z Removing SSH command configuration
+2026-10-28T11:09:50.0109880Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-28T11:09:50.0112174Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-28T11:09:50.0282564Z Removing HTTP extra header
+2026-10-28T11:09:50.0286472Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-28T11:09:50.0317356Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-28T11:09:50.0510286Z Removing includeIf entries pointing to credentials config files
+2026-10-28T11:09:50.0515525Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-28T11:09:50.0545657Z includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path
+2026-10-28T11:09:50.0546646Z includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path
+2026-10-28T11:09:50.0547402Z includeif.gitdir:/github/workspace/.git.path
+2026-10-28T11:09:50.0547965Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-28T11:09:50.0556110Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path
+2026-10-28T11:09:50.0580922Z /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0591271Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0629028Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path
+2026-10-28T11:09:50.0656930Z /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0666416Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0747084Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-28T11:09:50.0782683Z /github/runner_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0789890Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0823631Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-28T11:09:50.0846832Z /github/runner_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0854074Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config
+2026-10-28T11:09:50.0887042Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-28T11:09:50.1080327Z Removing credentials config '/home/runner/work/_temp/git-credentials-124bbbf7-0abf-4ad0-9287-287e005e0ccb.config'
+2026-10-28T11:09:50.1088715Z ##[endgroup]
+2026-10-28T11:09:50.1313782Z ##[group]Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+2026-10-28T11:09:50.1314132Z with:
+2026-10-28T11:09:50.1314313Z   python-version: 3.13
+2026-10-28T11:09:50.1314516Z   check-latest: false
+2026-10-28T11:09:50.1316781Z   token: ***
+2026-10-28T11:09:50.1316977Z   update-environment: true
+2026-10-28T11:09:50.1317184Z   allow-prereleases: false
+2026-10-28T11:09:50.1317379Z   freethreaded: false
+2026-10-28T11:09:50.1317559Z env:
+2026-10-28T11:09:50.1317754Z   COMPOSE_PROJECT_NAME: airspace-ci-40677779377
+2026-10-28T11:09:50.1318021Z ##[endgroup]
+2026-10-28T11:09:50.2542047Z ##[group]Installed versions
+2026-10-28T11:09:50.2660272Z Successfully set up CPython (3.13.16)
+2026-10-28T11:09:50.2666511Z ##[endgroup]
+2026-10-28T11:09:50.2831195Z ##[group]Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+2026-10-28T11:09:50.2831545Z with:
+2026-10-28T11:09:50.2831717Z   version: 0.11.23
+2026-10-28T11:09:50.2831898Z   enable-cache: false
+2026-10-28T11:09:50.2832090Z   activate-environment: false
+2026-10-28T11:09:50.2832411Z   working-directory: /home/runner/work/airspace-operations/airspace-operations
+2026-10-28T11:09:50.2835079Z   github-token: ***
+2026-10-28T11:09:50.2835813Z   cache-dependency-glob: **/*requirements*.txt
+**/*requirements*.in
+**/*constraints*.txt
+**/*constraints*.in
+**/pyproject.toml
+**/uv.lock
+**/*.py.lock
+
+2026-10-28T11:09:50.2836599Z   restore-cache: true
+2026-10-28T11:09:50.2836868Z   save-cache: true
+2026-10-28T11:09:50.2837127Z   prune-cache: true
+2026-10-28T11:09:50.2837412Z   cache-python: false
+2026-10-28T11:09:50.2837703Z   ignore-nothing-to-cache: false
+2026-10-28T11:09:50.2838017Z   ignore-empty-workdir: false
+2026-10-28T11:09:50.2838310Z   add-problem-matchers: true
+2026-10-28T11:09:50.2838680Z   resolution-strategy: highest
+2026-10-28T11:09:50.2838969Z env:
+2026-10-28T11:09:50.2839245Z   COMPOSE_PROJECT_NAME: airspace-ci-40677779377
+2026-10-28T11:09:50.2839690Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:50.2840192Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-28T11:09:50.2840895Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:50.2841522Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:50.2841999Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:50.2842474Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-28T11:09:50.2842890Z ##[endgroup]
+2026-10-28T11:09:50.5122790Z Fetching version data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...
+2026-10-28T11:09:50.8421471Z Downloading uv from "https://releases.astral.sh/github/uv/releases/download/0.11.23/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-28T11:09:51.0884212Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/95a9ea06-ed7f-4d1e-9483-f99ab44f96cd -f /home/runner/work/_temp/b036c8a3-da1e-42f2-b35c-de8f3a2a6569
+2026-10-28T11:09:51.7818384Z Added /home/runner/.local/bin to the path
+2026-10-28T11:09:51.7821567Z Added /opt/hostedtoolcache/uv/0.11.23/x86_64 to the path
+2026-10-28T11:09:51.7822472Z Set UV_PYTHON_INSTALL_DIR to /home/runner/work/_temp/uv-python-dir
+2026-10-28T11:09:51.7823018Z Added /home/runner/work/_temp/uv-python-dir to the path
+2026-10-28T11:09:51.7833619Z Successfully installed uv version 0.11.23
+2026-10-28T11:09:52.6381722Z ##[group]Run database_password=$(openssl rand -hex 24)
+2026-10-28T11:09:52.6382135Z [36;1mdatabase_password=$(openssl rand -hex 24)[0m
+2026-10-28T11:09:52.6382452Z [36;1mapplication_password=$(openssl rand -hex 24)[0m
+2026-10-28T11:09:52.6382712Z [36;1maudit_key=$(openssl rand -hex 32)[0m
+2026-10-28T11:09:52.6382977Z [36;1mverification_password=$(openssl rand -hex 24)[0m
+2026-10-28T11:09:52.6383241Z [36;1mecho "::add-mask::$database_password"[0m
+2026-10-28T11:09:52.6383488Z [36;1mecho "::add-mask::$application_password"[0m
+2026-10-28T11:09:52.6383728Z [36;1mecho "::add-mask::$audit_key"[0m
+2026-10-28T11:09:52.6383963Z [36;1mecho "::add-mask::$verification_password"[0m
+2026-10-28T11:09:52.6384274Z [36;1mecho "POSTGRES_PASSWORD=$database_password" >> "$GITHUB_ENV"[0m
+2026-10-28T11:09:52.6384874Z [36;1mecho "AIRSPACE_DB_APP_PASSWORD=$application_password" >> "$GITHUB_ENV"[0m
+2026-10-28T11:09:52.6385275Z [36;1mecho "AIRSPACE_AUDIT_KEY=$audit_key" >> "$GITHUB_ENV"[0m
+2026-10-28T11:09:52.6385627Z [36;1mecho "AIRSPACE_INITIAL_PASSWORD=$verification_password" >> "$GITHUB_ENV"[0m
+2026-10-28T11:09:52.6386377Z [36;1mecho "AIRSPACE_DATABASE_URL=***database:5432/airspace" >> "$GITHUB_ENV"[0m
+2026-10-28T11:09:52.6386721Z [36;1mdocker version[0m
+2026-10-28T11:09:52.6386924Z [36;1mdocker compose version[0m
+2026-10-28T11:09:52.6387134Z [36;1muv sync --frozen --extra dev[0m
+2026-10-28T11:09:52.6387392Z [36;1muv run python scripts/prepare_corpus.py[0m
+2026-10-28T11:09:52.7436461Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-28T11:09:52.7436762Z env:
+2026-10-28T11:09:52.7436986Z   COMPOSE_PROJECT_NAME: airspace-ci-40677779377
+2026-10-28T11:09:52.7437306Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:52.7437658Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-28T11:09:52.7437994Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:52.7438312Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:52.7438619Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:52.7438950Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-28T11:09:52.7439269Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-28T11:09:52.7439550Z ##[endgroup]
+2026-10-28T11:09:52.8300687Z Client: Docker Engine - Community
+2026-10-28T11:09:52.8301119Z  Version:           28.0.4
+2026-10-28T11:09:52.8301448Z  API version:       1.48
+2026-10-28T11:09:52.8301746Z  Go version:        go1.23.7
+2026-10-28T11:09:52.8302043Z  Git commit:        b8034c0
+2026-10-28T11:09:52.8302366Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-28T11:09:52.8302725Z  OS/Arch:           linux/amd64
+2026-10-28T11:09:52.8303025Z  Context:           default
+2026-10-28T11:09:52.8303215Z 
+2026-10-28T11:09:52.8303353Z Server: Docker Engine - Community
+2026-10-28T11:09:52.8303679Z  Engine:
+2026-10-28T11:09:52.8303927Z   Version:          28.0.4
+2026-10-28T11:09:52.8304295Z   API version:      1.48 (minimum version 1.24)
+2026-10-28T11:09:52.8304792Z   Go version:       go1.23.7
+2026-10-28T11:09:52.8305475Z   Git commit:       6430e49
+2026-10-28T11:09:52.8305785Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-28T11:09:52.8306129Z   OS/Arch:          linux/amd64
+2026-10-28T11:09:52.8306442Z   Experimental:     false
+2026-10-28T11:09:52.8306718Z  containerd:
+2026-10-28T11:09:52.8307001Z   Version:          v2.4.1
+2026-10-28T11:09:52.8307365Z   GitCommit:        f2551031d7276a770f65f98c9b52e57e7dad07e8
+2026-10-28T11:09:52.8307719Z  runc:
+2026-10-28T11:09:52.8307892Z   Version:          1.5.2
+2026-10-28T11:09:52.8308108Z   GitCommit:        v1.5.2-0-g29dd3dc2
+2026-10-28T11:09:52.8308330Z  docker-init:
+2026-10-28T11:09:52.8308502Z   Version:          0.19.0
+2026-10-28T11:09:52.8308701Z   GitCommit:        de40ad0
+2026-10-28T11:09:56.8335714Z Docker Compose version v2.38.2
+2026-10-28T11:09:56.8472946Z Using CPython 3.13.16 interpreter at: /opt/hostedtoolcache/Python/3.13.16/x64/bin/python3
+2026-10-28T11:09:56.8473600Z Creating virtual environment at: .venv
+2026-10-28T11:09:56.8621204Z    Building system-lab-airspace-operations @ file:///home/runner/work/airspace-operations/airspace-operations
+2026-10-28T11:09:56.9238289Z Downloading numpy (15.9MiB)
+2026-10-28T11:09:56.9242829Z Downloading pygments (1.2MiB)
+2026-10-28T11:09:56.9245873Z Downloading cryptography (4.5MiB)
+2026-10-28T11:09:56.9246371Z Downloading sqlalchemy (3.3MiB)
+2026-10-28T11:09:56.9254041Z Downloading pandas (11.4MiB)
+2026-10-28T11:09:56.9260931Z Downloading pyproj (9.1MiB)
+2026-10-28T11:09:56.9263681Z Downloading psycopg-binary (4.2MiB)
+2026-10-28T11:09:56.9265688Z Downloading ortools (28.5MiB)
+2026-10-28T11:09:56.9268784Z Downloading pip (1.7MiB)
+2026-10-28T11:09:56.9270576Z Downloading pydantic-core (2.1MiB)
+2026-10-28T11:09:57.2567413Z  Downloaded pydantic-core
+2026-10-28T11:09:57.4236439Z  Downloaded psycopg-binary
+2026-10-28T11:09:57.6429314Z  Downloaded cryptography
+2026-10-28T11:09:57.6728081Z  Downloaded sqlalchemy
+2026-10-28T11:09:57.6861303Z  Downloaded pygments
+2026-10-28T11:09:57.7191637Z  Downloaded pyproj
+2026-10-28T11:09:57.8209754Z  Downloaded pip
+2026-10-28T11:09:58.0425475Z  Downloaded numpy
+2026-10-28T11:09:58.0905197Z  Downloaded ortools
+2026-10-28T11:09:58.1350807Z  Downloaded pandas
+2026-10-28T11:09:59.1909919Z       Built system-lab-airspace-operations @ file:///home/runner/work/airspace-operations/airspace-operations
+2026-10-28T11:09:59.1918070Z Prepared 69 packages in 2.34s
+2026-10-28T11:09:59.2535161Z Installed 69 packages in 61ms
+2026-10-28T11:09:59.2535830Z  + absl-py==2.5.1
+2026-10-28T11:09:59.2536242Z  + annotated-doc==0.0.5
+2026-10-28T11:09:59.2536763Z  + annotated-types==0.8.0
+2026-10-28T11:09:59.2537224Z  + anyio==4.15.1
+2026-10-28T11:09:59.2537671Z  + boolean-py==5.0
+2026-10-28T11:09:59.2538232Z  + cachecontrol==0.14.4
+2026-10-28T11:09:59.2538684Z  + certifi==2026.10.23
+2026-10-28T11:09:59.2539101Z  + cffi==2.1.1
+2026-10-28T11:09:59.2539603Z  + charset-normalizer==3.5.2
+2026-10-28T11:09:59.2539895Z  + click==8.5.0
+2026-10-28T11:09:59.2545008Z  + coverage==7.17.0
+2026-10-28T11:09:59.2545278Z  + cryptography==50.0.2
+2026-10-28T11:09:59.2545603Z  + cyclonedx-python-lib==11.12.0
+2026-10-28T11:09:59.2545912Z  + defusedxml==0.7.1
+2026-10-28T11:09:59.2546171Z  + fastapi==0.162.0
+2026-10-28T11:09:59.2546421Z  + filelock==4.2.4
+2026-10-28T11:09:59.2546663Z  + greenlet==3.5.6
+2026-10-28T11:09:59.2546894Z  + h11==0.16.0
+2026-10-28T11:09:59.2547136Z  + httpcore==1.0.9
+2026-10-28T11:09:59.2547375Z  + httpx==0.28.1
+2026-10-28T11:09:59.2547621Z  + hypothesis==6.151.9
+2026-10-28T11:09:59.2547884Z  + idna==3.20
+2026-10-28T11:09:59.2548130Z  + immutabledict==4.3.1
+2026-10-28T11:09:59.2548390Z  + iniconfig==2.3.1
+2026-10-28T11:09:59.2548660Z  + license-expression==30.4.4
+2026-10-28T11:09:59.2548963Z  + markdown-it-py==4.2.0
+2026-10-28T11:09:59.2549233Z  + mdurl==0.1.2
+2026-10-28T11:09:59.2549477Z  + msgpack==1.2.4
+2026-10-28T11:09:59.2549725Z  + numpy==2.5.4
+2026-10-28T11:09:59.2549983Z  + opentelemetry-api==1.45.1
+2026-10-28T11:09:59.2550279Z  + ortools==9.15.6755
+2026-10-28T11:09:59.2550562Z  + packageurl-python==0.17.6
+2026-10-28T11:09:59.2551092Z  + packaging==26.3
+2026-10-28T11:09:59.2551350Z  + pandas==3.1.0
+2026-10-28T11:09:59.2551586Z  + pip==26.2.2
+2026-10-28T11:09:59.2551834Z  + pip-api==0.0.35
+2026-10-28T11:09:59.2552093Z  + pip-audit==2.10.1
+2026-10-28T11:09:59.2552376Z  + pip-requirements-parser==32.0.1
+2026-10-28T11:09:59.2552673Z  + platformdirs==4.13.6
+2026-10-28T11:09:59.2552882Z  + pluggy==1.7.0
+2026-10-28T11:09:59.2553059Z  + protobuf==6.33.5
+2026-10-28T11:09:59.2553286Z  + psycopg==3.2.13
+2026-10-28T11:09:59.2553555Z  + psycopg-binary==3.2.13
+2026-10-28T11:09:59.2553846Z  + py-serializable==2.1.0
+2026-10-28T11:09:59.2554127Z  + pycparser==3.12
+2026-10-28T11:09:59.2554389Z  + pydantic==2.14.1
+2026-10-28T11:09:59.2554750Z  + pydantic-core==2.50.1
+2026-10-28T11:09:59.2555024Z  + pygments==2.21.0
+2026-10-28T11:09:59.2555275Z  + pyjwt==2.15.1
+2026-10-28T11:09:59.2555696Z  + pyparsing==3.3.3
+2026-10-28T11:09:59.2555943Z  + pypdf==6.21.3
+2026-10-28T11:09:59.2556196Z  + pyproj==3.7.2
+2026-10-28T11:09:59.2556441Z  + pytest==9.1.1
+2026-10-28T11:09:59.2556687Z  + pytest-cov==7.1.0
+2026-10-28T11:09:59.2556952Z  + python-dateutil==3.0.0
+2026-10-28T11:09:59.2575246Z  + requests==2.34.2
+2026-10-28T11:09:59.2575526Z  + rich==15.0.0
+2026-10-28T11:09:59.2575710Z  + six==1.17.0
+2026-10-28T11:09:59.2575898Z  + sortedcontainers==2.4.0
+2026-10-28T11:09:59.2576107Z  + sqlalchemy==2.0.55
+2026-10-28T11:09:59.2576289Z  + starlette==1.10.0
+2026-10-28T11:09:59.2576696Z  + system-lab-airspace-operations==0.2.0rc1 (from file:///home/runner/work/airspace-operations/airspace-operations)
+2026-10-28T11:09:59.2577114Z  + tomli==2.5.0
+2026-10-28T11:09:59.2577283Z  + tomli-w==1.2.0
+2026-10-28T11:09:59.2577599Z  + typing-extensions==4.16.0
+2026-10-28T11:09:59.2577838Z  + typing-inspection==0.4.4
+2026-10-28T11:09:59.2578042Z  + tzdata==2026.5
+2026-10-28T11:09:59.2578209Z  + urllib3==2.8.0
+2026-10-28T11:09:59.2578384Z  + uvicorn==0.54.0
+2026-10-28T11:09:59.4953742Z Expanded actual permitted regulatory passages: 9833
+2026-10-28T11:09:59.4954268Z Preserved experimental lineage is available
+2026-10-28T11:09:59.5792556Z ##[group]Run uv run pytest -q
+2026-10-28T11:09:59.5792837Z [36;1muv run pytest -q[0m
+2026-10-28T11:09:59.5853031Z shell: /usr/bin/bash -e {0}
+2026-10-28T11:09:59.5853281Z env:
+2026-10-28T11:09:59.5853524Z   COMPOSE_PROJECT_NAME: airspace-ci-40677779377
+2026-10-28T11:09:59.5853857Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:59.5854242Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-28T11:09:59.5854697Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:59.5855024Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:59.5855348Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:09:59.5855660Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-28T11:09:59.5855983Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-28T11:09:59.5856765Z   POSTGRES_PASSWORD: ***
+2026-10-28T11:09:59.5857158Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-28T11:09:59.5857503Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-28T11:09:59.5857804Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-28T11:09:59.5858429Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-28T11:09:59.5858694Z ##[endgroup]
+2026-10-28T11:10:16.9946131Z ........................................................................ [ 25%]
+2026-10-28T11:10:44.0732840Z ........................................................................ [ 50%]
+2026-10-28T11:10:51.1083621Z ..........ssssssssssssssss..........................s................... [ 76%]
+2026-10-28T11:11:09.0089558Z ................................................................F..      [100%]
+2026-10-28T11:11:09.0090169Z =================================== FAILURES ===================================
+2026-10-28T11:11:09.0090745Z ___ test_actual_context_refreshes_during_main_thread_work_and_stops_cleanly ____
+2026-10-28T11:11:09.0091145Z 
+2026-10-28T11:11:09.0091503Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0')
+2026-10-28T11:11:09.0092297Z 
+2026-10-28T11:11:09.0092616Z     def test_actual_context_refreshes_during_main_thread_work_and_stops_cleanly(tmp_path):
+2026-10-28T11:11:09.0093289Z         with WorkerHeartbeat(tmp_path, interval_seconds=0.02) as heartbeat:
+2026-10-28T11:11:09.0093860Z             first = json.loads(heartbeat.path.read_text(encoding="utf-8"))
+2026-10-28T11:11:09.0094425Z             assert heartbeat.thread.daemon and heartbeat.thread.is_alive()
+2026-10-28T11:11:09.0095107Z             deadline = time.monotonic() + 2
+2026-10-28T11:11:09.0095455Z             latest = first
+2026-10-28T11:11:09.0095881Z             # The main thread does not call a refresh function. The real daemon must
+2026-10-28T11:11:09.0096445Z             # keep writing while the worker can be occupied with another task.
+2026-10-28T11:11:09.0096854Z             while latest["updated_at"] == first["updated_at"] and time.monotonic() < deadline:
+2026-10-28T11:11:09.0097210Z                 time.sleep(0.02)
+2026-10-28T11:11:09.0097504Z                 latest = json.loads(heartbeat.path.read_text(encoding="utf-8"))
+2026-10-28T11:11:09.0097855Z             assert latest["updated_at"] != first["updated_at"]
+2026-10-28T11:11:09.0098138Z             assert latest["pid"] == os.getpid()
+2026-10-28T11:11:09.0098418Z             assert set(latest) == {"hostname", "pid", "updated_at"}
+2026-10-28T11:11:09.0098734Z             assert check_worker_health(tmp_path)["healthy"]
+2026-10-28T11:11:09.0099048Z >           assert not list(heartbeat.path.parent.glob("*.tmp"))
+2026-10-28T11:11:09.0099755Z E           AssertionError: assert not [PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json.e09cdd7d901d42b3b5f3bd78e59a6996.tmp')]
+2026-10-28T11:11:09.0101057Z E            +  where [PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json.e09cdd7d901d42b3b5f3bd78e59a6996.tmp')] = list(<map object at 0x7f9fdc17ac80>)
+2026-10-28T11:11:09.0101819Z E            +    where <map object at 0x7f9fdc17ac80> = glob('*.tmp')
+2026-10-28T11:11:09.0102342Z E            +      where glob = PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats').glob
+2026-10-28T11:11:09.0103290Z E            +        where PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json').parent
+2026-10-28T11:11:09.0105035Z E            +          where PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json') = <airspace.worker_health.WorkerHeartbeat object at 0x7fa0045aa510>.path
+2026-10-28T11:11:09.0105607Z 
+2026-10-28T11:11:09.0105723Z tests/test_worker_health.py:85: AssertionError
+2026-10-28T11:11:09.0106036Z =============================== warnings summary ===============================
+2026-10-28T11:11:09.0106380Z .venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+2026-10-28T11:11:09.0107216Z   /home/runner/work/airspace-operations/airspace-operations/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-28T11:11:09.0108026Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-10-28T11:11:09.0108247Z 
+2026-10-28T11:11:09.0110198Z tests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct
+2026-10-28T11:11:09.0110861Z tests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct
+2026-10-28T11:11:09.0112462Z   <frozen importlib._bootstrap>:488: DeprecationWarning: Bitwise inversion '~' on bool is deprecated and will be removed in Python 3.16. This returns the bitwise inversion of the underlying int object and is usually not what you expect from negating a bool. Use the 'not' operator for boolean negation or ~int(x) if you really want the bitwise inversion of the underlying int.
+2026-10-28T11:11:09.0113601Z 
+2026-10-28T11:11:09.0113809Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-28T11:11:09.0114207Z =========================== short test summary info ============================
+2026-10-28T11:11:09.0115908Z FAILED tests/test_worker_health.py::test_actual_context_refreshes_during_main_thread_work_and_stops_cleanly - AssertionError: assert not [PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json.e09cdd7d901d42b3b5f3bd78e59a6996.tmp')]
+2026-10-28T11:11:09.0117952Z  +  where [PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json.e09cdd7d901d42b3b5f3bd78e59a6996.tmp')] = list(<map object at 0x7f9fdc17ac80>)
+2026-10-28T11:11:09.0119038Z  +    where <map object at 0x7f9fdc17ac80> = glob('*.tmp')
+2026-10-28T11:11:09.0119734Z  +      where glob = PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats').glob
+2026-10-28T11:11:09.0121146Z  +        where PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats') = PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json').parent
+2026-10-28T11:11:09.0123004Z  +          where PosixPath('/tmp/pytest-of-runner/pytest-0/test_actual_context_refreshes_0/worker-heartbeats/worker-runnervmtai0g.json') = <airspace.worker_health.WorkerHeartbeat object at 0x7fa0045aa510>.path
+2026-10-28T11:11:09.0124176Z 1 failed, 265 passed, 17 skipped, 3 warnings in 65.75s (0:01:05)
+2026-10-28T11:11:10.2053490Z ##[error]Process completed with exit code 1.
+2026-10-28T11:11:10.2109494Z ##[group]Run docker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans
+2026-10-28T11:11:10.2110048Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans[0m
+2026-10-28T11:11:10.2166448Z shell: /usr/bin/bash -e {0}
+2026-10-28T11:11:10.2166662Z env:
+2026-10-28T11:11:10.2166876Z   COMPOSE_PROJECT_NAME: airspace-ci-40677779377
+2026-10-28T11:11:10.2167177Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:11:10.2167530Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-28T11:11:10.2167877Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:11:10.2168185Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:11:10.2168496Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-28T11:11:10.2168803Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-28T11:11:10.2169162Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-28T11:11:10.2169613Z   POSTGRES_PASSWORD: ***
+2026-10-28T11:11:10.2169923Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-28T11:11:10.2170313Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-28T11:11:10.2170622Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-28T11:11:10.2171182Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-28T11:11:10.2171437Z ##[endgroup]
+2026-10-28T11:11:10.4545531Z Post job cleanup.
+2026-10-28T11:11:10.5265314Z [command]/usr/bin/git version
+2026-10-28T11:11:10.5295093Z git version 2.55.0
+2026-10-28T11:11:10.5320390Z Temporarily overriding HOME='/home/runner/work/_temp/1aa824c5-b7b3-4f28-81b7-7b5a040814f0' before making global git config changes
+2026-10-28T11:11:10.5321350Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-28T11:11:10.5325823Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/airspace-operations/airspace-operations
+2026-10-28T11:11:10.5360550Z Removing SSH command configuration
+2026-10-28T11:11:10.5361097Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-28T11:11:10.5390200Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-28T11:11:10.5629140Z Removing HTTP extra header
+2026-10-28T11:11:10.5635349Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-28T11:11:10.5666357Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-28T11:11:10.5881917Z Removing includeIf entries pointing to credentials config files
+2026-10-28T11:11:10.5890582Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-28T11:11:10.5929121Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-28T11:11:10.7038816Z Cleaning up orphan processes
+

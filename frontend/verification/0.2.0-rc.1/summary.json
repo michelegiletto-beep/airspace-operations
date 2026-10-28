@@ -1,6 +1,6 @@
 {
   "release": "0.2.0-rc.1",
-  "recorded_at": "2026-10-28T10:35:08.240507+00:00",
+  "recorded_at": "2026-10-28T11:01:40.549618+00:00",
   "scope": "Frontend software verification only; isolated fixtures are not operational observations.",
   "commands": [
     {
@@ -24,7 +24,7 @@
         "tests-json.log"
       ],
       "result": {
-        "passed": 67,
+        "passed": 69,
         "failed": 0,
         "test_files": 14
       }
@@ -46,19 +46,19 @@
   "package_lock_sha256": "a62776bf2987df56998915fafb89cade6ddb4a838cfb14bd165361740ab2156a",
   "build_assets": [
     {
+      "path": "dist/assets/index-B-1bRLm-.js",
+      "bytes": 446774,
+      "sha256": "9497f8844469c4ced1acd61e3f988ffc7eeae0fc088eea7a278c2582bd026b5a"
+    },
+    {
       "path": "dist/assets/index-Cgj26qmY.css",
       "bytes": 88736,
       "sha256": "016c8e9b688603e219c15dc04a616ec9d2126b33e30fd64378528264af1bbbc7"
     },
     {
-      "path": "dist/assets/index-DPr0T7OP.js",
-      "bytes": 445943,
-      "sha256": "993001c0f2105e8a6088f58dddd458f33a6bde895b09f8f050e6a362fa790717"
-    },
-    {
       "path": "dist/index.html",
       "bytes": 539,
-      "sha256": "044ba43f4bf0f9fd70ac6b31a6c3b5d1017a7cdafed16789aa3913e00e6640a8"
+      "sha256": "8fa2b07fe7d6c58c6793bd4a6bba5bcaf1f13cf095986ff9b0d43976c0fa9db6"
     },
     {
       "path": "dist/map/europe.geojson",
@@ -134,7 +134,7 @@
   ],
   "capture_evidence": "Maintained separately by the release owner under publication/media and release-evidence; no image was fabricated by the frontend tests.",
   "result": {
-    "tests_passed": 67,
+    "tests_passed": 69,
     "tests_failed": 0,
     "test_files": 14,
     "typescript_and_vite": "Passed"

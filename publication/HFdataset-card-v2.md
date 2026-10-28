@@ -42,6 +42,11 @@ The application also integrates five byte-identical owner-authorised presentatio
 
 Actual orchestration evidence, the [UI-and-worker workflow](https://github.com/michelegiletto-beep/airspace-operations/blob/main/release-evidence/v0.2.0-rc.1/actual-ui-workflow.json), and the [small source-research comparison](https://github.com/michelegiletto-beep/airspace-operations/blob/main/release-evidence/v0.2.0-rc.1/causal-comparison.json) are separate software-verification records. Four completed native/causal runs over two developer-authored queries do not establish legal-answer reliability, model superiority or expert validation of these annotations. Their elapsed times are affected by run order and cache reuse and do not establish a speed benefit.
 
-A self-contained static evaluation Space is prepared to inspect those recorded runs and this unchanged dataset's source-linked failure cases. It contains no live inference, operational connection or new training data. Its public link remains pending publication verification.
+The published static evaluation Space makes those recorded runs and this unchanged dataset's source-linked failure cases inspectable. It contains no live inference, operational connection or new training data; its verified link is below.
 
 See the [dataset documentation](https://github.com/michelegiletto-beep/airspace-operations/blob/main/docs/dataset-card.md), [source register](https://github.com/michelegiletto-beep/airspace-operations/blob/main/SOURCE_REGISTER.md), [model card](https://huggingface.co/Magic51/system-lab-airspace-shall-router) and [application repository](https://github.com/michelegiletto-beep/airspace-operations). Do not use this dataset as evidence for flight prediction, approval, dispatch, separation or emergency-instruction systems.
+
+
+## Inspect the recorded application evidence
+
+The public [System Lab Airspace Evaluation Space](https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation) contains the actual controller comparison, persisted UI workflow, source citations, unchanged student evaluation and observed failure cases. It is a static recorded-evidence viewer with no model inference or flight-management service. The repository files were independently retrieved at revision `2e7c96760d968f304d9b157f9b63f7b34accf982`; this presentation does not announce new weights or expert ground truth.

@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0-rc.1",
+  "at": "2026-10-28T11:19:20.256940+00:00",
+  "checks": {
+    "python_tests": true,
+    "frontend_tests": true,
+    "frontend_build": true,
+    "frontend_dependency_audit": true,
+    "python_dependency_audit": true,
+    "optional_neural_dependency_audit": true,
+    "baseline_integrity": true
+  },
+  "engineering_checks_passed": true,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "external_ci": {
+    "verified": true,
+    "evidence": "ci-verification.json",
+    "run_id": 40678178924,
+    "commit": "e2c5e4ec55ec5bbb25901fee27b143d2b06ec35c",
+    "scope": "Actual isolated container/PostgreSQL/worker/restoration run; local input hashes must remain identical"
+  },
+  "unverified_gates": [
+    "Qualified Luxembourg/Italy pack validation",
+    "Full methodology and operational data acceptance",
+    "Live provider and enterprise identity integration",
+    "Complete baseline feature/assurance acceptance",
+    "Production-scale resilience and deployment-specific security acceptance"
+  ]
+}

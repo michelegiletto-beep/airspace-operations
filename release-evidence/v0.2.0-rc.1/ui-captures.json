@@ -1,0 +1,147 @@
+{
+  "release": "0.2.0-rc.1",
+  "generated_at": "2026-10-28T11:01:40.848457+00:00",
+  "scope": "Actual browser captures of isolated software-review workspace/public-source query, not operational acceptance. No image copies or fabricated operational data created by this manifest.",
+  "browser_verification": {
+    "path": "publication/media/browser-verification.json",
+    "sha256": "b564879ed0e1c3221bbb9db53563f5816af051510d2f9c6077463a55014b05c5",
+    "checked_at": "2026-10-28T10:55:18.391Z",
+    "actual_empty_operational_workspace": true,
+    "actual_public_source_research_workflow": true,
+    "desktop": {
+      "buildScripts": [
+        "http://127.0.0.1:8787/assets/index-B-1bRLm-.js"
+      ],
+      "companions": [
+        {
+          "engine": "webgl-mesh-2.5d",
+          "runtime": "active"
+        },
+        {
+          "engine": "webgl-mesh-2.5d",
+          "runtime": "active"
+        }
+      ],
+      "scrollWidth": 1265,
+      "title": "Agent Workflows \u00b7 System Lab Airspace Operations",
+      "viewportWidth": 1265
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "title": "Mission Control \u00b7 System Lab Airspace Operations",
+      "width": 390
+    },
+    "console": []
+  },
+  "final_frontend_build": {
+    "test_result": {
+      "tests_passed": 69,
+      "tests_failed": 0,
+      "test_files": 14,
+      "typescript_and_vite": "Passed"
+    },
+    "assets": [
+      {
+        "path": "frontend/dist/assets/index-B-1bRLm-.js",
+        "url_path": "/assets/index-B-1bRLm-.js",
+        "bytes": 446774,
+        "sha256": "9497f8844469c4ced1acd61e3f988ffc7eeae0fc088eea7a278c2582bd026b5a"
+      },
+      {
+        "path": "frontend/dist/assets/index-Cgj26qmY.css",
+        "url_path": "/assets/index-Cgj26qmY.css",
+        "bytes": 88736,
+        "sha256": "016c8e9b688603e219c15dc04a616ec9d2126b33e30fd64378528264af1bbbc7"
+      }
+    ],
+    "matches_browser_observed_js": true
+  },
+  "captures": [
+    {
+      "path": "publication/media/mission-control.jpg",
+      "workspace": "Mission Control",
+      "view_hash": "#operations",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 1138,
+      "bytes": 129906,
+      "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "context": "Actual isolated software-review workspace with empty operational records; no fictional aircraft, flights or approvals",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    },
+    {
+      "path": "publication/media/airspace-planning.jpg",
+      "workspace": "Airspace & Sites",
+      "view_hash": "#airspace",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 1066,
+      "bytes": 112044,
+      "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "context": "Actual isolated software-review workspace with empty operational records; no fictional aircraft, flights or approvals",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    },
+    {
+      "path": "publication/media/fleet-maintenance.jpg",
+      "workspace": "Fleet & Personnel",
+      "view_hash": "#fleet",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 891,
+      "bytes": 75096,
+      "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "context": "Actual isolated software-review workspace with empty operational records; no fictional aircraft, flights or approvals",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    },
+    {
+      "path": "publication/media/european-coordination.jpg",
+      "workspace": "European Coordination",
+      "view_hash": "#crossborder",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 1277,
+      "bytes": 127424,
+      "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "context": "Actual isolated software-review workspace with empty operational records; no fictional aircraft, flights or approvals",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    },
+    {
+      "path": "publication/media/scheduling.jpg",
+      "workspace": "Scheduling",
+      "view_hash": "#scheduling",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 1162,
+      "bytes": 98935,
+      "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "context": "Actual isolated software-review workspace with empty operational records; no fictional aircraft, flights or approvals",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    },
+    {
+      "path": "publication/media/agent-orchestration.jpg",
+      "workspace": "Agent Workflows",
+      "view_hash": "#agents",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 2602,
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "context": "Actual public-source research workflow with real software receipts; no operational aircraft or flights",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    },
+    {
+      "path": "publication/media/mobile-mission-control.jpg",
+      "workspace": "Mission Control, mobile",
+      "view_hash": "#operations",
+      "format": "JPEG",
+      "width": 375,
+      "height": 1798,
+      "bytes": 79822,
+      "sha256": "ccd4e905c904023e722a51990bd67eddb8c3f61878b36f2b6c6cbd46afe71bab",
+      "context": "Actual isolated software-review workspace with empty operational records; no fictional aircraft, flights or approvals",
+      "capture_time": "See linked browser verification; file mtime is not asserted as capture time"
+    }
+  ],
+  "excluded_historical_detail": "publication/media/agent-orchestration-detail.jpg is an older detail capture and is not part of this final seven-image set.",
+  "rights": "Screenshots and owned companion appearances retain the owner rights documented in frontend/public/mascots/RIGHTS.md and frontend/public/vendor/systemlab-companion/NOTICE.md; underlying code/data licences remain separate."
+}

@@ -114,9 +114,17 @@ def main() -> None:
             if re.search(r"(?:hf_[A-Za-z0-9]{24,}|sk-proj-[A-Za-z0-9]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)", text):
                 secret_findings.append(str(path.relative_to(HERE)))
     assert not secret_findings, secret_findings
+    browser_path = HERE / "qa/browser-review.json"
+    browser_review = json.loads(browser_path.read_text(encoding="utf-8")) if browser_path.exists() else None
+    browser_matches = bool(browser_review) and all(
+        (HERE / name).is_file() and sha(HERE / name) == value
+        for name, value in browser_review.get("reviewed_file_sha256", {}).items()
+    )
     result = {
         "checked_at": datetime.now(timezone.utc).isoformat(), "release_state": "Prepared",
-        "native_publication_performed": False, "browser_rendering_verified": False,
+        "native_publication_performed": False, "browser_rendering_verified": browser_matches,
+        "browser_review": {"report": "qa/browser-review.json", "reviewed_files_still_match": browser_matches,
+                           "responsive_breakpoints_verified": False} if browser_review else None,
         "checks": {"site": verify_page(HERE / "site-project.html", False), "static_space": verify_page(SPACE / "index.html", True),
                    "raw_report_copies": len(provenance["source_reports"]), "media_copies": len(media),
                    "unchanged_student_sha256": sha(student), "official_static_metadata": True,
