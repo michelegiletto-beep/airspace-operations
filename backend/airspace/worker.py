@@ -10,10 +10,10 @@ from .identity import ROLES
 TOOL_ROLES["companion_reply"] = ROLES
 
 
-def _mark_agent_job_failure(store, job, reason):
+def _mark_agent_job_failure(store, job, reason, *, expected_job_version):
     if job["kind"] == "companion_reply":
         from .assistant import mark_companion_job_failure
-        mark_companion_job_failure(store, job, reason)
+        mark_companion_job_failure(store, job, reason, expected_job_version=expected_job_version)
         return
     if job["kind"] != "agent_orchestration":
         return
@@ -44,7 +44,7 @@ def run_once(store):
             if changed.rowcount:
                 store.append_audit(conn, job["organisation_id"], job["actor_id"], "job.exhausted", {"job_id": job["id"], "attempts": job["attempts"]})
         if changed.rowcount:
-            _mark_agent_job_failure(store, job, "Retry budget exhausted after worker interruption")
+            _mark_agent_job_failure(store, job, "Retry budget exhausted after worker interruption", expected_job_version=job["version"] + 1)
     expired = False
     with store.engine.begin() as conn:
         candidate = conn.execute(select(jobs).where(or_(jobs.c.state == "Queued", and_(jobs.c.state == "Running", jobs.c.lease_until < stamp)), jobs.c.attempts < 3).order_by(jobs.c.created_at).limit(1)).mappings().first()
@@ -63,7 +63,7 @@ def run_once(store):
             if result.rowcount != 1:
                 return None
     if expired:
-        _mark_agent_job_failure(store, candidate, "Execution deadline expired")
+        _mark_agent_job_failure(store, candidate, "Execution deadline expired", expected_job_version=candidate["version"] + 1)
         return {"id": candidate["id"], "state": "Expired"}
     try:
         with store.engine.connect() as conn:
@@ -150,6 +150,6 @@ def run_once(store):
                 result["review_task_ids"] = tasks
                 conn.execute(update(jobs).where(jobs.c.id == candidate["id"]).values(result=result))
             store.append_audit(conn, candidate["organisation_id"], candidate["actor_id"], "job.finished", {"job_id": candidate["id"], "state": state, "attempt": candidate["attempts"] + 1})
-    if state == "Failed":
-        _mark_agent_job_failure(store, candidate, error)
+    if state == "Failed" and changed.rowcount:
+        _mark_agent_job_failure(store, candidate, error, expected_job_version=version + 2)
     return {"id": candidate["id"], "state": state}

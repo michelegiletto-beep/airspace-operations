@@ -1,0 +1,177 @@
+{
+  "checked_at_utc": "2026-10-29T01:25:29.428344+00:00",
+  "task": "Remove duplicated companion next-step instructions",
+  "frontend_package_version": "0.3.0-rc.1",
+  "scope": "Working-tree source/test improvement. Parent owns candidate versioning, root metadata, integration verification and publication.",
+  "requirements_supported": [
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-006"
+  ],
+  "full_requirement_acceptance_claimed": false,
+  "problem": "The service appends chosen next steps as paragraphs in reply text, while the interface also rendered every next_steps entry as a list.",
+  "change": [
+    "Keep reply text exactly as returned.",
+    "Render a next-step list entry only when it is not already an exact complete reply paragraph or an identical earlier additional entry.",
+    "Compare CRLF and outer whitespace only; preserve case, punctuation, source IDs, units, qualifications and quoted substrings.",
+    "Keep safety text, missing inputs and source/model details unchanged.",
+    "Recognise Budget Exhausted and Budget Unavailable as unavailable model responses; this changes presentation, not server admission."
+  ],
+  "source_files": [
+    {
+      "path": "src/CompanionDock.tsx",
+      "bytes": 30804,
+      "sha256": "5b6f138a8964f2d536aaa4f054e4537ad246eb32d9b09a76591eedadd408d322"
+    },
+    {
+      "path": "src/CompanionDock.test.tsx",
+      "bytes": 24176,
+      "sha256": "fcb12bfb3d2e7ba0f5b7064d9eed1bb9cc1fd343d17e6ee00a1c8e0bc4ba6762"
+    },
+    {
+      "path": "src/CompanionNextSteps.tsx",
+      "bytes": 1086,
+      "sha256": "407cf50fa13bb002d6304eb71ed11cde00f87d6356a2e93954c23bea56f6c78e"
+    },
+    {
+      "path": "src/CompanionNextSteps.test.tsx",
+      "bytes": 2012,
+      "sha256": "a1e222d3a8a8c07dc92d9662ea3060f18c6a001228dea1dee6f49af1db5cc0b4"
+    }
+  ],
+  "commands": [
+    {
+      "command": "node node_modules/vitest/vitest.mjs run --reporter=json --outputFile=verification/2026-10-29-next-steps/tests.json",
+      "exit_code": 0,
+      "outputs": [
+        "tests.json",
+        "tests.log"
+      ]
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "output": "build.log"
+    }
+  ],
+  "verification": {
+    "tests_total": 107,
+    "tests_passed": 107,
+    "tests_failed": 0,
+    "test_files": 19,
+    "started_at_utc": "2026-10-29T01:22:57.062000+00:00",
+    "finished_at_utc": "2026-10-29T01:23:20.750526+00:00",
+    "typescript_and_vite_build_passed": true,
+    "coverage": [
+      "Identical structured and legacy instructions appear once.",
+      "Unique additional instructions remain in order.",
+      "Quoted substrings, vertical-reference differences and punctuation differences remain distinct.",
+      "Line endings and outer whitespace are comparison-only; displayed text is unchanged.",
+      "Model, fallback and procedure replies preserve safety text, missing inputs and citation records.",
+      "Budget-unavailable states do not present idle readiness."
+    ],
+    "test_inputs": "Artificial inputs occur only in isolated software tests. No operational records or model measurements are fabricated.",
+    "initial_checkpoint": "105 tests passed before two backend budget-state contract tests were added; initial-tests.json, initial-tests.log and initial-build.log preserve that executed checkpoint."
+  },
+  "build_assets": [
+    {
+      "path": "dist/assets/index-BwDooYcZ.css",
+      "bytes": 103754,
+      "sha256": "79881d693a4f8e554042d474b8c6ed5214283755e95998f550c60a20ba2d4248",
+      "written_at_utc": "2026-10-29T01:23:17.512903+00:00"
+    },
+    {
+      "path": "dist/assets/index-Dcz7gSOv.js",
+      "bytes": 472156,
+      "sha256": "e645d3f4ec86e2d87ca913bd9598bf49947075664a898defadce0f9bb90dde6a",
+      "written_at_utc": "2026-10-29T01:23:17.511902+00:00"
+    }
+  ],
+  "dist_index": {
+    "sha256": "57a3b08eb4dfa6b05082c7074616cad9b066af066db1e45ecfe75cecee8a3353",
+    "references": [
+      "/assets/index-Dcz7gSOv.js",
+      "/assets/index-BwDooYcZ.css"
+    ]
+  },
+  "copy_audit": {
+    "scope": "Only the touched companion rendering flow",
+    "new_visible_label": "Next steps",
+    "known_slogan_matches": {
+      "One operational context. Bounded specialist work.": [],
+      "Choose the work. Keep the evidence.": [],
+      "Your operating geography starts here": [],
+      "AIRSPACE OPERATIONS /": []
+    },
+    "legal_or_source_text_rewritten": false
+  },
+  "source_review": {
+    "method": "Separate read-only software-agent review; not professional aviation certification.",
+    "result": "No concrete safety or meaning-loss issue found for the current next_steps object/legacy-string contract. Citations and missing inputs are outside the helper."
+  },
+  "owned_runtime_hashes": [
+    {
+      "path": "mascot-renderer.mjs",
+      "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b"
+    },
+    {
+      "path": "motion-core.mjs",
+      "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb"
+    },
+    {
+      "path": "catalog.mjs",
+      "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c"
+    },
+    {
+      "path": "assets/originals/mascotte_01_indaco.png",
+      "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a"
+    },
+    {
+      "path": "assets/originals/mascotte_06_coral_compact.png",
+      "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284"
+    }
+  ],
+  "unchanged_boundaries": [
+    "No dependency or package-version changes.",
+    "No API contract or server approval/control changes.",
+    "No renderer, animation, stylesheet or owned-asset changes.",
+    "No previous release artifacts or root metadata edited."
+  ],
+  "model_calls_performed": 0,
+  "live_api_requests_sent": 0,
+  "cua_used": false,
+  "published": false,
+  "next_action": "Parent reloads the final bundle for actual mobile/browser verification and completes its full release verification before any publication.",
+  "recorded_logs": [
+    {
+      "path": "tests.json",
+      "bytes": 41930,
+      "sha256": "a83dbb3bcfff70852d74d48e486ef52f57709a80dc638ba2b08cd6e814146be1"
+    },
+    {
+      "path": "tests.log",
+      "bytes": 153,
+      "sha256": "a3b9dce001b4a42a68da7992c35f77e0982f5f97f3af7351f69caba9ffaee234"
+    },
+    {
+      "path": "build.log",
+      "bytes": 444,
+      "sha256": "75f216c85f7f222a1d1b75b6ac4c0e9187f596535a6412fe92f9a6bb756764e1"
+    },
+    {
+      "path": "initial-tests.json",
+      "bytes": 41223,
+      "sha256": "d4a7b680af58d3e9f7b947aec0951457f6c390e9bb710fd5cefa768cb1820eca"
+    },
+    {
+      "path": "initial-tests.log",
+      "bytes": 153,
+      "sha256": "a3b9dce001b4a42a68da7992c35f77e0982f5f97f3af7351f69caba9ffaee234"
+    },
+    {
+      "path": "initial-build.log",
+      "bytes": 444,
+      "sha256": "bdc369bdec3b311d8772bb06f775b4ac47855adb90f409d1e679a83e312cdf8a"
+    }
+  ]
+}

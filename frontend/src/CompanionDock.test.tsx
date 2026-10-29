@@ -13,19 +13,21 @@ const userMessage: CompanionMessage = { ...base, id: 'test-message', kind: 'comp
 const action: ActionPreview = { ...base, id: 'test-action', kind: 'companion_action', title: 'Task preview', status: 'Awaiting Confirmation', version: 3, data: { owner_actor_id: user.id, expires_at:'2099-01-01T00:00:00Z', kind: 'task_draft', label: 'Save this request as a personal task', preview: { title: 'Review the procedure', description: 'Review the operator procedure.', effect: 'Creates a personal task only.' } } };
 const task: CompanionTask = { ...base, id: 'test-task', kind: 'companion_task', title: 'Review the procedure', status: 'Open', version: 7, data: { owner_actor_id: user.id, conversation_id: conversation.id, source_message_id: userMessage.id, description: 'Review the operator procedure.', due_at: null, completed_at: null, created_from_action_id: action.id } };
 
-function install(options: { restored?: boolean; action?: ActionPreview; conflict?: boolean; running?: boolean; text?: string; workflow?: boolean; taskConflict?: boolean; retry?: boolean; case?: boolean; linked?: boolean; procedure?: boolean } = {}) {
+function install(options: { restored?: boolean; action?: ActionPreview; conflict?: boolean; running?: boolean; text?: string; workflow?: boolean; taskConflict?: boolean; retry?: boolean; case?: boolean; linked?: boolean; procedure?: boolean; reply?: Partial<CompanionMessage['data']>; modelState?: string } = {}) {
   let tasks: CompanionTask[] = options.restored ? [{...task,data:{...task.data,...(options.linked?{workflow_id:'test-workflow'}:{})}}] : [];
   let detail: CompanionDetail = { conversation, messages: [], action_previews: options.action ? [options.action] : [], tasks: [], active_job: null, model_status: model };
   if (options.text) detail.messages = [{ ...userMessage, id: 'test-reply', data: { role: 'assistant', text: options.text, reply_kind: 'fallback', missing_inputs: ['Select the relevant aircraft record.'] } }];
+  if(options.reply) detail.messages=[{...userMessage,id:'test-reply',data:{role:'assistant',text:'Isolated reply.',...options.reply}}];
   if (options.retry) detail.messages = [{ ...userMessage, data: { ...userMessage.data, request: { jurisdiction: 'LU', operation_date: '2026-02-03' } } }, { ...userMessage, id: 'test-reply', data: { role: 'assistant', text: 'Saved fallback guidance.', reply_kind: 'fallback', reply_to_message_id: userMessage.id, next_steps: [{ id: 'step-1', text: 'Review the approved procedure.' }] } }];
   if (options.procedure) { detail.messages=[userMessage,{...userMessage,id:'test-procedure-guidance',data:{role:'assistant',text:'Use the approved operator procedure and accountable incident coordinator.',reply_kind:'procedure_guidance',reply_to_message_id:userMessage.id}}];detail.model_status={...model,state:'Procedure Required',message:'Approved operator procedures govern response.',generative_model_used:false}; }
+  if(options.modelState)detail.model_status={...model,state:options.modelState,message:'No more model calls are admitted for this request.'};
   if (options.running) detail.active_job = { id: 'test-job', kind: 'companion_reply', state: 'Running', version: 1, payload: { conversation_id: conversation.id, message_id: userMessage.id } };
   const workflow: DomainRecord = { ...base, id: 'test-workflow', kind: 'agent_workflow', title: 'Isolated source workflow', status: 'Running', version: 9, data: { execution: { step_count: 2 }, trace: [] } };
   const fetcher = vi.fn(async (url: string, init: RequestInit = {}) => {
     const body = (value: unknown, status = 200) => new Response(JSON.stringify(value), { status });
     if (url === '/api/v1/companion/catalog') return body({ workspaces: [], action_kinds: ['task_draft', 'case_draft', 'workflow_draft'], model_status: model });
     if (url === '/api/v1/companion/conversations' && init.method === 'POST') return body(conversation, 201);
-    if (url === '/api/v1/companion/conversations') return body({ items: options.restored || options.action || options.running || options.text || options.retry || options.procedure ? [conversation] : [] });
+    if (url === '/api/v1/companion/conversations') return body({ items: options.restored || options.action || options.running || options.text || options.retry || options.procedure || options.reply ? [conversation] : [] });
     if (url === '/api/v1/companion/tasks') return body({ items: tasks });
     if (url === '/api/v1/companion/tasks/test-task' && init.method === 'PUT') {
       if (options.taskConflict) return body({ detail: 'Task changed. Reload its current version.' }, 409);
@@ -244,5 +246,32 @@ describe('private contextual companion', () => {
     await waitFor(()=>expect(screen.getByText('Confirmed')).toBeTruthy());
     fireEvent.change(screen.getByLabelText('Saved conversation'),{target:{value:''}});
     expect(screen.queryByRole('heading',{name:'Draft case saved'})).toBeNull();
+  });
+
+  it.each(['local_llm','fallback','procedure_guidance'])('shows %s instructions once without dropping safety text, missing inputs or citation records',async replyKind=>{
+    const safety='Only an authorised reviewer can release internal dispatch.';
+    const step='Review the approved procedure EU_LU_01.';
+    const text=['Inspect the saved operation.',safety,step].join('\n\n');
+    install({reply:{text,reply_kind:replyKind,next_steps:[{id:'reviewer-check',text:safety},step],missing_inputs:['Current evidence version'],source_refs:[{source_ref:'record:isolated-procedure@7',record_id:'isolated-procedure',version:7}]}});
+    const view=mount();await selectConversation();
+    await screen.findByText(/Inspect the saved operation/);
+    const message=view.container.querySelector('.message-assistant') as HTMLElement;
+    expect(message.querySelector('p')?.textContent).toBe(text);
+    expect(message.textContent?.split(safety).length).toBe(2);
+    expect(message.textContent?.split(step).length).toBe(2);
+    expect(screen.queryByRole('list',{name:'Next steps'})).toBeNull();
+    expect(screen.getByText('Current evidence version')).toBeTruthy();
+    expect(screen.getByText('Sources used in this response')).toBeTruthy();
+    expect(message.querySelector('.json-view')?.textContent).toContain('record:isolated-procedure@7');
+    if(replyKind==='procedure_guidance')expect(screen.getByRole('button',{name:'Open incidents'})).toBeTruthy();
+  });
+
+  it.each(['Budget Exhausted','Budget Unavailable'])('shows %s as an unavailable model response instead of idle readiness',async modelState=>{
+    install({modelState,reply:{text:'Use the saved guidance or send a separate new request.',reply_kind:'fallback'}});
+    const view=mount();await selectConversation();
+    await screen.findByText('No more model calls are admitted for this request.');
+    expect(view.container.querySelector('.companion-dock .companion-unavailable')).toBeTruthy();
+    expect(screen.getByText('Model response unavailable')).toBeTruthy();
+    expect(screen.queryByText('Local model response')).toBeNull();
   });
 });

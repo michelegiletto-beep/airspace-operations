@@ -32,6 +32,11 @@ from test_dispatch import (
     test_material_input_change_invalidates_existing_internal_dispatch as exercise_dispatch_invalidation,
 )
 from test_planning import insert_record
+from test_companion_budget import (
+    test_concurrent_reservations_cannot_exceed_the_job_limit as exercise_generation_reservations,
+    test_crashes_during_generation_and_store_restart_keep_total_calls_bounded as exercise_generation_restart,
+    test_stale_worker_failure_cannot_clear_newer_claims_pending_turn as exercise_stale_companion_cleanup,
+)
 from test_sharing import (
     accepted, borrowed_request,
     shared_fixture as build_shared_fixture,
@@ -47,6 +52,18 @@ pytestmark = pytest.mark.skipif(
     not os.getenv("AIRSPACE_TEST_POSTGRES_URL"),
     reason="Isolated PostgreSQL service not configured; no coordination success is simulated",
 )
+
+
+def test_postgres_companion_generation_reservations_are_atomic(pg_environment):
+    exercise_generation_reservations(pg_environment)
+
+
+def test_postgres_companion_restart_keeps_generation_budget(pg_environment):
+    exercise_generation_restart(pg_environment)
+
+
+def test_postgres_stale_companion_cleanup_preserves_current_claim(pg_environment):
+    exercise_stale_companion_cleanup(pg_environment)
 
 
 @pytest.fixture

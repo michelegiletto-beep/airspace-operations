@@ -134,6 +134,28 @@ class CompanionUnavailable(ValueError):
     pass
 
 
+class CompanionBudgetExhausted(CompanionUnavailable):
+    pass
+
+
+class CompanionBudgetUnavailable(CompanionUnavailable):
+    pass
+
+
+class GenerationReservation(Strict):
+    id: str = Field(min_length=1)
+    reserved_at: datetime
+    job_version: int = Field(ge=1)
+    worker_attempt: int = Field(ge=1)
+
+
+class GenerationBudget(Strict):
+    version: Literal["companion-generation-budget/1.0"] = "companion-generation-budget/1.0"
+    job_id: str = Field(min_length=1)
+    max_model_calls: int = Field(ge=1, le=2)
+    reservations: list[GenerationReservation] = Field(default_factory=list, max_length=2)
+
+
 def local_model_status() -> dict:
     folder = Path(os.environ.get("AIRSPACE_AGENT_MODEL_DIR", str(ROOT / "models/pretrained/controller")))
     status = {"state": "Not Installed", "mode": "local_causal", "version": None,
@@ -504,8 +526,10 @@ class CompanionRepository:
             scope = AgentScope(scope_id=identifier(), domain="companion", organisation_id=actor["organisation_id"], actor_id=actor["id"], actor_role=actor["role"],
                                record_versions={row["id"]: row["version"] for row in rows}, context_snapshot=snapshot, created_at=stamp,
                                deadline=(datetime.fromisoformat(stamp) + timedelta(seconds=900)).isoformat()).model_dump(mode="json")
+            job_id = identifier()
             data = {"conversation_id": ident, "role": "user", "text": request.message, "turn_sequence": conversation["data"]["next_turn"],
-                    "request": request.model_dump(mode="json"), "scope": scope, "scope_checksum": digest(scope), "rule_version": COMPANION_VERSION}
+                    "request": request.model_dump(mode="json"), "scope": scope, "scope_checksum": digest(scope), "rule_version": COMPANION_VERSION,
+                    "generation_budget": GenerationBudget(job_id=job_id, max_model_calls=request.budget.max_model_calls).model_dump(mode="json")}
             message = _new(self.store, conn, actor, "companion_message", "User request", data, "Queued")
             candidates = _candidates(actor, conversation, message, request, rows)
             message["data"].update(candidates=candidates, candidate_checksum=digest(candidates))
@@ -513,7 +537,7 @@ class CompanionRepository:
             conn.execute(update(records).where(records.c.id == message["id"]).values(data=message["data"]))
             from .storage import versions
             conn.execute(update(versions).where(versions.c.record_id == message["id"], versions.c.version == 1).values(snapshot=message))
-            job = dict(id=identifier(), organisation_id=actor["organisation_id"], actor_id=actor["id"], kind="companion_reply", state="Queued",
+            job = dict(id=job_id, organisation_id=actor["organisation_id"], actor_id=actor["id"], kind="companion_reply", state="Queued",
                        payload={"conversation_id": ident, "message_id": message["id"]}, result=None, attempts=0, lease_until=None, deadline=scope["deadline"], error=None, version=1, created_at=stamp)
             conn.execute(jobs.insert().values(**job))
             conversation_data = deepcopy(conversation["data"])
@@ -609,9 +633,79 @@ def _progress(store, actor, conversation_id, message_id, phase, text):
 
 def _cancelled(store, job):
     with store.engine.connect() as conn:
-        row = conn.execute(select(jobs.c.state, jobs.c.version, jobs.c.deadline).where(jobs.c.id == job["id"], jobs.c.organisation_id == job["organisation_id"], jobs.c.actor_id == job["actor_id"])).first()
+        row = conn.execute(select(jobs.c.state, jobs.c.version, jobs.c.deadline, jobs.c.lease_until).where(jobs.c.id == job["id"], jobs.c.organisation_id == job["organisation_id"], jobs.c.actor_id == job["actor_id"])).first()
     return row is None or row.state != "Running" or row.version != job["version"] + 1 or (
-        row.deadline is not None and datetime.fromisoformat(row.deadline.replace("Z", "+00:00")) <= datetime.now(timezone.utc))
+        row.deadline is not None and datetime.fromisoformat(row.deadline.replace("Z", "+00:00")) <= datetime.now(timezone.utc)) or (
+        row.lease_until is None or datetime.fromisoformat(row.lease_until.replace("Z", "+00:00")) <= datetime.now(timezone.utc))
+
+
+def _reserve_generation(store, job, actor):
+    """Commit a conservative job-wide charge before entering any model service.
+
+    Reservations are never refunded: a worker can stop after this commit but
+    before it can prove whether generation happened. Missing historical ledgers
+    cannot safely receive a fresh allowance on recovery.
+    """
+    with store.engine.begin() as conn:
+        _lock(conn, actor["organisation_id"])
+        actor = _actor(conn, actor)
+        if job["organisation_id"] != actor["organisation_id"] or job["actor_id"] != actor["id"]:
+            raise HTTPException(404, "Private companion job not found")
+        current = conn.execute(select(jobs).where(jobs.c.id == job["id"], jobs.c.organisation_id == actor["organisation_id"], jobs.c.actor_id == actor["id"])).mappings().first()
+        stamp = datetime.now(timezone.utc)
+        if (not current or current["kind"] != "companion_reply" or current["state"] != "Running"
+                or current["version"] != job["version"] + 1 or current["attempts"] != job["attempts"] + 1
+                or current["payload"] != job["payload"] or not current["lease_until"]
+                or datetime.fromisoformat(current["lease_until"].replace("Z", "+00:00")) <= stamp
+                or not current["deadline"] or datetime.fromisoformat(current["deadline"].replace("Z", "+00:00")) <= stamp):
+            raise InterruptedError("The companion generation lease is no longer current")
+        message = _own(conn, actor, "companion_message", job["payload"]["message_id"])
+        conversation = _own(conn, actor, "companion_conversation", job["payload"]["conversation_id"])
+        data = message["data"]
+        if (data.get("role") != "user" or data.get("conversation_id") != conversation["id"]
+                or conversation["data"].get("active_message_id") != message["id"]):
+            raise InterruptedError("The pending companion turn changed")
+        scope = AgentScope.model_validate(data["scope"])
+        _, observed = _context(conn, actor, scope.record_versions)
+        if (data.get("scope_checksum") != digest(data["scope"]) or data.get("candidate_checksum") != digest(data["candidates"])
+                or data.get("rule_version") != COMPANION_VERSION or scope.actor_id != actor["id"]
+                or scope.organisation_id != actor["organisation_id"] or scope.actor_role != actor["role"]
+                or scope.context_snapshot != observed or scope.deadline <= stamp):
+            raise HTTPException(409, "The companion generation scope or current inputs changed")
+        try:
+            budget = GenerationBudget.model_validate(data.get("generation_budget"))
+            request = MessageRequest.model_validate(data["request"])
+            if (budget.job_id != job["id"] or budget.max_model_calls != request.budget.max_model_calls
+                    or len({item.id for item in budget.reservations}) != len(budget.reservations)
+                    or len(budget.reservations) > budget.max_model_calls
+                    or any(item.reserved_at.tzinfo is None for item in budget.reservations)):
+                raise ValueError("Invalid companion generation ledger")
+        except (ValueError, TypeError):
+            raise CompanionBudgetUnavailable("The generation budget has no valid durable accounting; send a new request") from None
+        if len(budget.reservations) >= budget.max_model_calls:
+            raise CompanionBudgetExhausted("The request's generation reservation budget is exhausted")
+        reservation = GenerationReservation(id=identifier(), reserved_at=stamp, job_version=current["version"], worker_attempt=current["attempts"])
+        budget.reservations.append(reservation)
+        updated = deepcopy(data)
+        updated["generation_budget"] = budget.model_dump(mode="json")
+        _save(store, conn, actor, message, updated, message["status"])
+        store.append_audit(conn, actor["organisation_id"], actor["id"], "companion.generation.reserved", {
+            "job_id": job["id"], "message_id": message["id"], "reservation_id": reservation.id,
+            "reserved_calls": len(budget.reservations), "max_model_calls": budget.max_model_calls,
+            "job_version": current["version"], "worker_attempt": current["attempts"]})
+        return reservation.model_dump(mode="json")
+
+
+def _generation_budget_summary(message):
+    value = message["data"].get("generation_budget")
+    try:
+        budget = GenerationBudget.model_validate(value)
+        return {"version": budget.version, "max_model_calls": budget.max_model_calls,
+                "reserved_calls": len(budget.reservations), "reservation_ids": [item.id for item in budget.reservations],
+                "accounting": "Reservations survive retries and may include generation whose outcome was not recorded. They are not a count of proven model executions."}
+    except (ValueError, TypeError):
+        return {"version": "companion-generation-budget/1.0", "state": "Unavailable", "reserved_calls": None,
+                "accounting": "Prior generation cannot be accounted for; no further generation is admitted for this turn."}
 
 
 def run_companion_reply(store, job, actor, services=None):
@@ -650,7 +744,13 @@ def run_companion_reply(store, job, actor, services=None):
     for attempt in range(0 if procedure_only else request.budget.max_model_calls):
         _progress(store, actor, conversation_id, message_id, "Preparing local inference", "The worker is checking local model availability and preparing an advisory reply.")
         try:
+            reservation = _reserve_generation(store, job, actor)
+        except (CompanionBudgetExhausted, CompanionBudgetUnavailable) as exc:
+            failure = type(exc).__name__
+            break
+        try:
             raw, metadata = services.generate(view, request.budget, lambda: _cancelled(store, job))
+            metadata = {**metadata, "generation_reservation_id": reservation["id"]}
             attempts.append(metadata)
             proposed = validate_reply(raw, view)
             break
@@ -680,6 +780,9 @@ def run_companion_reply(store, job, actor, services=None):
         guidance = "The local reply is unavailable. Use the recorded next steps below or save an explicitly requested personal task. This reply has not applied an action."
         model_status = {"state": "Rejected Output" if attempts else "Unavailable", "mode": "local_causal", "version": attempts[-1].get("version") if attempts else local_model_status().get("version"),
                         "message": "The local model output failed validation. No generated action was executed." if attempts else "The local model could not provide an admitted reply. Check its pinned installation and available worker capacity.", "hosted_provider": False, "generative_model_used": bool(attempts)}
+        if failure in {"CompanionBudgetExhausted", "CompanionBudgetUnavailable"}:
+            model_status.update(state="Budget Exhausted" if failure == "CompanionBudgetExhausted" else "Budget Unavailable",
+                                message="This request has no remaining verified generation allowance. Prior reservations may include interrupted work. Send a new request to authorise a separate budget.")
     with store.engine.begin() as conn:
         _lock(conn, actor["organisation_id"])
         actor = _actor(conn, actor); conversation = _own(conn, actor, "companion_conversation", conversation_id)
@@ -698,13 +801,13 @@ def run_companion_reply(store, job, actor, services=None):
         # free generated language is restricted to advisory next-step guidance.
         text = "\n\n".join([guidance] + [item["text"] for item in chosen_facts] + [item["text"] for item in chosen_steps])
         reply_kind = "procedure_guidance" if procedure_only else "local_llm" if success else "fallback"
+        current_message = _own(conn, actor, "companion_message", message_id)
         reply = _new(store, conn, actor, "companion_message", "Incident procedure guidance" if procedure_only else "Local companion reply" if success else "Companion fallback guidance", {"conversation_id": conversation_id, "role": "assistant", "text": text,
             "reply_kind": reply_kind, "turn_sequence": message["data"]["turn_sequence"], "reply_to_message_id": message_id,
             "facts": chosen_facts, "next_steps": chosen_steps, "missing_inputs": missing, "source_refs": [{"source_ref": item["source_ref"], "record_id": item.get("record_id"), "version": item.get("version")} for item in chosen_facts],
-            "action_ids": [item["id"] for item in actions], "model": {"attempts": attempts, "model_calls": len(attempts), "failure_type": failure, "status": model_status},
+            "action_ids": [item["id"] for item in actions], "model": {"attempts": attempts, "model_calls": len(attempts), "generation_budget": _generation_budget_summary(current_message), "failure_type": failure, "status": model_status},
             "assistance_selection": proposed.model_dump() if proposed is not None else None,
             "context_snapshot": snapshot, "rule_version": COMPANION_VERSION, "legal_conclusion_generated": False, "external_actions": []}, "Completed" if success else "Fallback")
-        current_message = _own(conn, actor, "companion_message", message_id)
         _save(store, conn, actor, current_message, current_message["data"], "Completed" if success else "Failed")
         data = deepcopy(conversation["data"]); data.update(active_message_id=None, last_model_status=model_status,
             progress={"phase": "Ready" if success else "Model unavailable", "message": "Use the approved procedure and recorded contact sources." if procedure_only else "Your reply is ready. Review any draft before confirming it." if success else "Basic guidance is available; the local model did not provide an admitted reply.", "since": now()})
@@ -713,15 +816,20 @@ def run_companion_reply(store, job, actor, services=None):
         return {"conversation_id": conversation_id, "message_id": message_id, "reply_id": reply["id"], "conversation_version": conversation["version"], "success": success, "state": "Completed" if success else "Failed", "external_actions": []}
 
 
-def mark_companion_job_failure(store, job, reason):
+def mark_companion_job_failure(store, job, reason, *, expected_job_version):
     """Persist honest recovery state after a durable-job failure or expired lease."""
     if job.get("kind") != "companion_reply":
         return
     with store.engine.begin() as conn:
+        _lock(conn, job["organisation_id"])
+        current = conn.execute(select(jobs).where(jobs.c.id == job["id"], jobs.c.organisation_id == job["organisation_id"], jobs.c.actor_id == job["actor_id"])).mappings().first()
+        if (not current or current["kind"] != "companion_reply" or current["version"] != expected_job_version
+                or current["state"] not in {"Failed", "Expired"} or current["payload"] != job["payload"]):
+            return
         actor = conn.execute(select(users).where(users.c.id == job["actor_id"], users.c.organisation_id == job["organisation_id"])).mappings().first()
         if not actor:
             return
-        actor = dict(actor); _lock(conn, actor["organisation_id"])
+        actor = dict(actor)
         try:
             conversation = _own(conn, actor, "companion_conversation", job["payload"]["conversation_id"])
         except HTTPException:
