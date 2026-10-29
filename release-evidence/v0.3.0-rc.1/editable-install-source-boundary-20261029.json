@@ -1,0 +1,24 @@
+{
+  "scope": "Actual uv editable installation in disposable checkout; bounded follow-up to preserved diagnostic.json",
+  "installation_evidence": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\verification\\editable-install-reproduction-uvc4dsay\\diagnostic.json",
+  "metadata_paths_before_fix": [
+    "?? backend/system_lab_airspace_operations.egg-info/PKG-INFO",
+    "?? backend/system_lab_airspace_operations.egg-info/SOURCES.txt",
+    "?? backend/system_lab_airspace_operations.egg-info/dependency_links.txt",
+    "?? backend/system_lab_airspace_operations.egg-info/entry_points.txt",
+    "?? backend/system_lab_airspace_operations.egg-info/requires.txt",
+    "?? backend/system_lab_airspace_operations.egg-info/top_level.txt"
+  ],
+  "backend_status_after_exact_new_ignore": "",
+  "backend_status_after_real_untracked_source": "?? backend/airspace/new_verification_only.py\n",
+  "test_command": ".venv/Scripts/python.exe -m pytest tests/test_candidate_publication.py tests/test_ci_publication_adversarial.py tests/test_release_tools.py -q",
+  "actual_test_result": "66 passed in 1.94s",
+  "publication_performed": false,
+  "source_sha256": {
+    ".gitignore": "2668a4c7284aaec69381363ece5e61755064fbaf30467d00b3221eba74ac7e32",
+    "scripts/package_release.py": "db76fed464b37dd4ab245ac56bef9dae033c2e472564178baeb36d5c69167ba7",
+    "scripts/publish_candidate.py": "2b3f99ad1727169029e3ccbda1dfc79b36b68e8e38565511f323fc04f08bb835",
+    "tests/test_release_tools.py": "515f582b501e608b3c0be97ea340e3a9b5bfad420ec0fede987db4ca4104f0e0",
+    "tests/test_candidate_publication.py": "07640e3d7a3c815a1457f14e3253a537a5216525f7ff30210d21eb99c12712a9"
+  }
+}

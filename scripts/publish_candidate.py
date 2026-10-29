@@ -212,7 +212,7 @@ def main():
     args = parser.parse_args()
     head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, text=True, capture_output=True).stdout.strip()
     context = validate_context(ROOT, os.environ, head)
-    clean = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all", "--", "backend", "frontend", "scripts", "tests", "deploy", "migrations", ".github", "publication", "Dockerfile", "compose.yaml", "pyproject.toml", "uv.lock"], cwd=ROOT, text=True, capture_output=True, check=True)
+    clean = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all", "--", "backend", "frontend", "scripts", "tests", "deploy", "migrations", ".github", "publication", ".gitignore", "Dockerfile", "compose.yaml", "pyproject.toml", "uv.lock"], cwd=ROOT, text=True, capture_output=True, check=True)
     if clean.stdout.strip():
         raise ValueError("Controlled application source changed after checkout")
     if args.publish or args.record_engineering:

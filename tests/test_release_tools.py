@@ -19,6 +19,16 @@ def write_version(root, version="0.3.0-rc.1"):
     source.write_text('__version__ = "' + version + '"\n', encoding="utf-8")
 
 
+def test_packaging_excludes_editable_install_metadata_but_keeps_application_source(tmp_path, monkeypatch):
+    import package_release
+    metadata = tmp_path / "backend/isolated_fixture.egg-info/PKG-INFO"
+    metadata.parent.mkdir(parents=True); metadata.write_text("Isolated setuptools metadata fixture")
+    source = tmp_path / "backend/airspace/example.py"
+    source.parent.mkdir(parents=True); source.write_text('"""Isolated source fixture."""')
+    monkeypatch.setattr(package_release, "ROOT", tmp_path)
+    assert {relative.as_posix() for _, relative in package_release.source_files()} == {"backend/airspace/example.py"}
+
+
 def receipt(root, path, version, states):
     target = root / "publication" / path
     target.parent.mkdir(parents=True, exist_ok=True)

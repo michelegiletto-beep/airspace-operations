@@ -1,0 +1,415 @@
+﻿2026-10-29T01:47:34.4301418Z Current runner version: '2.338.0'
+2026-10-29T01:47:34.4321483Z ##[group]Runner Image Provisioner
+2026-10-29T01:47:34.4322265Z Hosted Compute Agent
+2026-10-29T01:47:34.4322767Z Version: 20261021.618
+2026-10-29T01:47:34.4323404Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T01:47:34.4324010Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T01:47:34.4324555Z Worker ID: {833bef1a-7114-4247-a013-fca063b1a95b}
+2026-10-29T01:47:34.4325192Z Region: westus3
+2026-10-29T01:47:34.4325659Z Cloud: Azure
+2026-10-29T01:47:34.4326161Z ##[endgroup]
+2026-10-29T01:47:34.4327242Z ##[group]Operating System
+2026-10-29T01:47:34.4327765Z Ubuntu
+2026-10-29T01:47:34.4328271Z 24.04.5
+2026-10-29T01:47:34.4328708Z LTS
+2026-10-29T01:47:34.4329235Z ##[endgroup]
+2026-10-29T01:47:34.4329713Z ##[group]Runner Image
+2026-10-29T01:47:34.4330233Z Image: ubuntu-24.04
+2026-10-29T01:47:34.4330923Z Version: 20261025.353.1
+2026-10-29T01:47:34.4331969Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T01:47:34.4333252Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T01:47:34.4334044Z ##[endgroup]
+2026-10-29T01:47:34.4335031Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T01:47:34.4336806Z Actions: read
+2026-10-29T01:47:34.4337362Z Contents: write
+2026-10-29T01:47:34.4337840Z Metadata: read
+2026-10-29T01:47:34.4338292Z ##[endgroup]
+2026-10-29T01:47:34.4340014Z Secret source: Actions
+2026-10-29T01:47:34.4340960Z Cache mode: write
+2026-10-29T01:47:34.4341604Z Prepare workflow directory
+2026-10-29T01:47:34.4745643Z Prepare all required actions
+2026-10-29T01:47:34.4783712Z Getting action download info
+2026-10-29T01:47:34.7759558Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-10-29T01:47:34.8491480Z Download action repository 'actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+2026-10-29T01:47:34.9590162Z Download action repository 'actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-10-29T01:47:35.0669589Z Download action repository 'astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9' (SHA:94527f2e458b27549849d47d273a16bec83a01e9)
+2026-10-29T01:47:35.9058782Z Complete job name: publish-candidate
+2026-10-29T01:47:35.9722599Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-10-29T01:47:35.9723576Z with:
+2026-10-29T01:47:35.9723983Z   ref: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:35.9724497Z   persist-credentials: false
+2026-10-29T01:47:35.9725004Z   repository: michelegiletto-beep/airspace-operations
+2026-10-29T01:47:35.9728335Z   token: ***
+2026-10-29T01:47:35.9728729Z   ssh-strict: true
+2026-10-29T01:47:35.9729120Z   ssh-user: git
+2026-10-29T01:47:35.9729480Z   clean: true
+2026-10-29T01:47:35.9729862Z   sparse-checkout-cone-mode: true
+2026-10-29T01:47:35.9730487Z   fetch-depth: 1
+2026-10-29T01:47:35.9730867Z   fetch-tags: false
+2026-10-29T01:47:35.9731251Z   show-progress: true
+2026-10-29T01:47:35.9731657Z   lfs: false
+2026-10-29T01:47:35.9732029Z   submodules: false
+2026-10-29T01:47:35.9732425Z   set-safe-directory: true
+2026-10-29T01:47:35.9732862Z   allow-unsafe-pr-checkout: false
+2026-10-29T01:47:35.9733500Z env:
+2026-10-29T01:47:35.9733916Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:35.9734524Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:35.9735179Z ##[endgroup]
+2026-10-29T01:47:36.1527602Z Syncing repository: michelegiletto-beep/airspace-operations
+2026-10-29T01:47:36.1530125Z ##[group]Getting Git version info
+2026-10-29T01:47:36.1531391Z Working directory is '/home/runner/work/airspace-operations/airspace-operations'
+2026-10-29T01:47:36.1532426Z [command]/usr/bin/git version
+2026-10-29T01:47:36.1580780Z git version 2.56.0
+2026-10-29T01:47:36.1600303Z ##[endgroup]
+2026-10-29T01:47:36.1685258Z Temporarily overriding HOME='/home/runner/work/_temp/024abb7f-6ec8-4fd2-a0ee-7ff21ebb583e' before making global git config changes
+2026-10-29T01:47:36.1688109Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T01:47:36.1690234Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:47:36.1693840Z Deleting the contents of '/home/runner/work/airspace-operations/airspace-operations'
+2026-10-29T01:47:36.1695402Z ##[group]Determining repository object format
+2026-10-29T01:47:36.1696419Z ##[endgroup]
+2026-10-29T01:47:36.1697820Z ##[group]Initializing the repository
+2026-10-29T01:47:36.1699049Z [command]/usr/bin/git init /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:47:36.1745119Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T01:47:36.1746567Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T01:47:36.1747912Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T01:47:36.1748962Z hint: call:
+2026-10-29T01:47:36.1749516Z hint:
+2026-10-29T01:47:36.1750218Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T01:47:36.1751588Z hint:
+2026-10-29T01:47:36.1752398Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T01:47:36.1753750Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T01:47:36.1754795Z hint:
+2026-10-29T01:47:36.1755376Z hint: 	git branch -m <name>
+2026-10-29T01:47:36.1756037Z hint:
+2026-10-29T01:47:36.1756904Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T01:47:36.1758570Z Initialized empty Git repository in /home/runner/work/airspace-operations/airspace-operations/.git/
+2026-10-29T01:47:36.1761364Z [command]/usr/bin/git remote add origin https://github.com/michelegiletto-beep/airspace-operations
+2026-10-29T01:47:36.1832456Z ##[endgroup]
+2026-10-29T01:47:36.1833610Z ##[group]Disabling automatic garbage collection
+2026-10-29T01:47:36.1834665Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T01:47:36.1865205Z ##[endgroup]
+2026-10-29T01:47:36.1866338Z ##[group]Setting up auth
+2026-10-29T01:47:36.1867183Z Removing SSH command configuration
+2026-10-29T01:47:36.1873468Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T01:47:36.1906171Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T01:47:36.2196323Z Removing HTTP extra header
+2026-10-29T01:47:36.2203550Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T01:47:36.2242899Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T01:47:36.2448153Z Removing includeIf entries pointing to credentials config files
+2026-10-29T01:47:36.2460950Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T01:47:36.2487009Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T01:47:36.2691034Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T01:47:36.2732653Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:36.2767766Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:36.2804228Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:36.2838003Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:36.2869499Z ##[endgroup]
+2026-10-29T01:47:36.2870153Z ##[group]Fetching the repository
+2026-10-29T01:47:36.2876069Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:37.5355626Z From https://github.com/michelegiletto-beep/airspace-operations
+2026-10-29T01:47:37.5357286Z  * branch            c942ace694dc4b24319ede622bb167753cf6de6c -> FETCH_HEAD
+2026-10-29T01:47:37.5364998Z [command]/usr/bin/git rev-parse --verify --quiet c942ace694dc4b24319ede622bb167753cf6de6c^{object}
+2026-10-29T01:47:37.5394640Z c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:37.5398965Z ##[endgroup]
+2026-10-29T01:47:37.5399614Z ##[group]Determining the checkout info
+2026-10-29T01:47:37.5400326Z ##[endgroup]
+2026-10-29T01:47:37.5404117Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T01:47:37.5453042Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T01:47:37.5486082Z ##[group]Checking out the ref
+2026-10-29T01:47:37.5489215Z [command]/usr/bin/git checkout --progress --force c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:37.6148168Z Note: switching to 'c942ace694dc4b24319ede622bb167753cf6de6c'.
+2026-10-29T01:47:37.6148624Z 
+2026-10-29T01:47:37.6148949Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-29T01:47:37.6149670Z changes and commit them, and you can discard any commits you make in this
+2026-10-29T01:47:37.6150560Z state without impacting any branches by switching back to a branch.
+2026-10-29T01:47:37.6151018Z 
+2026-10-29T01:47:37.6151294Z If you want to create a new branch to retain commits you create, you may
+2026-10-29T01:47:37.6151934Z do so (now or later) by using -c with the switch command. Example:
+2026-10-29T01:47:37.6152300Z 
+2026-10-29T01:47:37.6152464Z   git switch -c <new-branch-name>
+2026-10-29T01:47:37.6152803Z 
+2026-10-29T01:47:37.6153371Z Or undo this operation with:
+2026-10-29T01:47:37.6153624Z 
+2026-10-29T01:47:37.6153775Z   git switch -
+2026-10-29T01:47:37.6153917Z 
+2026-10-29T01:47:37.6154120Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-29T01:47:37.6154378Z 
+2026-10-29T01:47:37.6154670Z HEAD is now at c942ace Prepare 0.3 candidate publication with reviewed gates and current companion evidence
+2026-10-29T01:47:37.6159414Z ##[endgroup]
+2026-10-29T01:47:37.6204884Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T01:47:37.6235092Z c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:37.6243188Z ##[group]Removing auth
+2026-10-29T01:47:37.6243605Z Removing SSH command configuration
+2026-10-29T01:47:37.6246119Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T01:47:37.6280842Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T01:47:37.6481080Z Removing HTTP extra header
+2026-10-29T01:47:37.6484152Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T01:47:37.6518784Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T01:47:37.6719747Z Removing includeIf entries pointing to credentials config files
+2026-10-29T01:47:37.6720522Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T01:47:37.6750638Z includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path
+2026-10-29T01:47:37.6751510Z includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path
+2026-10-29T01:47:37.6752008Z includeif.gitdir:/github/workspace/.git.path
+2026-10-29T01:47:37.6752396Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-29T01:47:37.6759845Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path
+2026-10-29T01:47:37.6789001Z /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.6798562Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.6836547Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path
+2026-10-29T01:47:37.6863375Z /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.6872353Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.6915080Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-29T01:47:37.6948853Z /github/runner_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.6954787Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.6991467Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-29T01:47:37.7019303Z /github/runner_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.7025157Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config
+2026-10-29T01:47:37.7062219Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T01:47:37.7258601Z Removing credentials config '/home/runner/work/_temp/git-credentials-b88f0561-2de3-428a-8f2e-9309da42fa6b.config'
+2026-10-29T01:47:37.7267429Z ##[endgroup]
+2026-10-29T01:47:37.7493070Z ##[group]Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+2026-10-29T01:47:37.7493436Z with:
+2026-10-29T01:47:37.7493647Z   node-version: 22
+2026-10-29T01:47:37.7493866Z   check-latest: true
+2026-10-29T01:47:37.7495885Z   token: ***
+2026-10-29T01:47:37.7496109Z   package-manager-cache: true
+2026-10-29T01:47:37.7496373Z env:
+2026-10-29T01:47:37.7496590Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:37.7496918Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:37.7497233Z ##[endgroup]
+2026-10-29T01:47:37.8773555Z Attempt to resolve the latest version from manifest...
+2026-10-29T01:47:38.9222360Z Resolved as '22.23.4'
+2026-10-29T01:47:38.9238171Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+2026-10-29T01:47:38.9240793Z ##[group]Environment details
+2026-10-29T01:47:39.2113942Z node: v22.23.4
+2026-10-29T01:47:39.2114254Z npm: 10.9.9
+2026-10-29T01:47:39.2114456Z yarn: 1.22.22
+2026-10-29T01:47:39.2115145Z ##[endgroup]
+2026-10-29T01:47:39.2286735Z ##[group]Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+2026-10-29T01:47:39.2287043Z with:
+2026-10-29T01:47:39.2287208Z   python-version: 3.13
+2026-10-29T01:47:39.2287390Z   check-latest: false
+2026-10-29T01:47:39.2289356Z   token: ***
+2026-10-29T01:47:39.2289535Z   update-environment: true
+2026-10-29T01:47:39.2289875Z   allow-prereleases: false
+2026-10-29T01:47:39.2290062Z   freethreaded: false
+2026-10-29T01:47:39.2290235Z env:
+2026-10-29T01:47:39.2290566Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:39.2290854Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:39.2291123Z ##[endgroup]
+2026-10-29T01:47:39.3343174Z ##[group]Installed versions
+2026-10-29T01:47:39.3413545Z Successfully set up CPython (3.13.17)
+2026-10-29T01:47:39.3414073Z ##[endgroup]
+2026-10-29T01:47:39.3607883Z ##[group]Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+2026-10-29T01:47:39.3608193Z with:
+2026-10-29T01:47:39.3608357Z   version: 0.11.23
+2026-10-29T01:47:39.3608532Z   enable-cache: false
+2026-10-29T01:47:39.3608718Z   activate-environment: false
+2026-10-29T01:47:39.3609026Z   working-directory: /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:47:39.3611283Z   github-token: ***
+2026-10-29T01:47:39.3611728Z   cache-dependency-glob: **/*requirements*.txt
+**/*requirements*.in
+**/*constraints*.txt
+**/*constraints*.in
+**/pyproject.toml
+**/uv.lock
+**/*.py.lock
+
+2026-10-29T01:47:39.3612205Z   restore-cache: true
+2026-10-29T01:47:39.3612381Z   save-cache: true
+2026-10-29T01:47:39.3612547Z   prune-cache: true
+2026-10-29T01:47:39.3612715Z   cache-python: false
+2026-10-29T01:47:39.3612900Z   ignore-nothing-to-cache: false
+2026-10-29T01:47:39.3613118Z   ignore-empty-workdir: false
+2026-10-29T01:47:39.3613324Z   add-problem-matchers: true
+2026-10-29T01:47:39.3613545Z   resolution-strategy: highest
+2026-10-29T01:47:39.3613744Z env:
+2026-10-29T01:47:39.3613910Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:39.3614185Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:39.3614508Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:39.3614852Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:47:39.3664925Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:39.3665446Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:39.3665883Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:39.3666287Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:47:39.3666630Z ##[endgroup]
+2026-10-29T01:47:39.5095426Z Fetching version data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...
+2026-10-29T01:47:39.5933044Z Downloading uv from "https://releases.astral.sh/github/uv/releases/download/0.11.23/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-29T01:47:39.7899669Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/dee485d5-7bcf-4a33-8d1b-277fb4d5c7e3 -f /home/runner/work/_temp/b583a62b-7983-4c84-8986-b5199fc48c41
+2026-10-29T01:47:40.4752257Z Added /home/runner/.local/bin to the path
+2026-10-29T01:47:40.4752636Z Added /opt/hostedtoolcache/uv/0.11.23/x86_64 to the path
+2026-10-29T01:47:40.4753098Z Set UV_PYTHON_INSTALL_DIR to /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:47:40.4753527Z Added /home/runner/work/_temp/uv-python-dir to the path
+2026-10-29T01:47:40.4756960Z Successfully installed uv version 0.11.23
+2026-10-29T01:47:41.0521352Z ##[group]Run uv run --no-project python scripts/publish_candidate.py
+2026-10-29T01:47:41.0521803Z [36;1muv run --no-project python scripts/publish_candidate.py[0m
+2026-10-29T01:47:41.0548025Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:47:41.0548246Z env:
+2026-10-29T01:47:41.0548426Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:41.0548721Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:41.0549056Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.0549382Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:47:41.0549700Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.0550009Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.0550772Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.0551073Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:47:41.0551414Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:47:41.0551669Z ##[endgroup]
+2026-10-29T01:47:41.3891921Z {"version": "0.3.0-rc.1", "repository": "michelegiletto-beep/airspace-operations", "sha": "c942ace694dc4b24319ede622bb167753cf6de6c", "tag": "v0.3.0-rc.1", "run_id": "40802205476", "state": "Prepared", "publication_performed": false}
+2026-10-29T01:47:41.3996514Z ##[group]Run node --version
+2026-10-29T01:47:41.3996769Z [36;1mnode --version[0m
+2026-10-29T01:47:41.3996973Z [36;1muv sync --frozen --extra dev[0m
+2026-10-29T01:47:41.3997200Z [36;1mnpm ci --prefix frontend[0m
+2026-10-29T01:47:41.3997445Z [36;1muv run python scripts/prepare_corpus.py[0m
+2026-10-29T01:47:41.4016053Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:47:41.4016255Z env:
+2026-10-29T01:47:41.4016447Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:41.4016736Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:41.4017071Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.4017416Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:47:41.4017753Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.4018058Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.4018375Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:41.4018681Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:47:41.4018989Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:47:41.4019243Z ##[endgroup]
+2026-10-29T01:47:41.4088770Z v22.23.4
+2026-10-29T01:47:41.4268271Z Using CPython 3.13.17 interpreter at: /opt/hostedtoolcache/Python/3.13.17/x64/bin/python3
+2026-10-29T01:47:41.4268844Z Creating virtual environment at: .venv
+2026-10-29T01:47:41.4384243Z    Building system-lab-airspace-operations @ file:///home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:47:41.5073940Z Downloading pydantic-core (2.1MiB)
+2026-10-29T01:47:41.5075336Z Downloading pygments (1.2MiB)
+2026-10-29T01:47:41.5082068Z Downloading pip (1.7MiB)
+2026-10-29T01:47:41.5083792Z Downloading cryptography (4.5MiB)
+2026-10-29T01:47:41.5085130Z Downloading sqlalchemy (3.3MiB)
+2026-10-29T01:47:41.5089199Z Downloading pandas (11.4MiB)
+2026-10-29T01:47:41.5093935Z Downloading psycopg-binary (4.2MiB)
+2026-10-29T01:47:41.5095557Z Downloading pyproj (9.1MiB)
+2026-10-29T01:47:41.5097383Z Downloading ortools (28.5MiB)
+2026-10-29T01:47:41.5099092Z Downloading numpy (15.9MiB)
+2026-10-29T01:47:41.8253489Z  Downloaded pydantic-core
+2026-10-29T01:47:41.9725648Z  Downloaded psycopg-binary
+2026-10-29T01:47:42.0813741Z  Downloaded cryptography
+2026-10-29T01:47:42.1221778Z  Downloaded sqlalchemy
+2026-10-29T01:47:42.1332567Z  Downloaded pygments
+2026-10-29T01:47:42.2319696Z  Downloaded pyproj
+2026-10-29T01:47:42.3288643Z  Downloaded pip
+2026-10-29T01:47:42.4563282Z  Downloaded ortools
+2026-10-29T01:47:42.5375052Z  Downloaded numpy
+2026-10-29T01:47:42.6034495Z  Downloaded pandas
+2026-10-29T01:47:43.5941961Z       Built system-lab-airspace-operations @ file:///home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:47:43.5949581Z Prepared 69 packages in 2.16s
+2026-10-29T01:47:43.6403920Z Installed 69 packages in 45ms
+2026-10-29T01:47:43.6404290Z  + absl-py==2.5.1
+2026-10-29T01:47:43.6404817Z  + annotated-doc==0.0.5
+2026-10-29T01:47:43.6405135Z  + annotated-types==0.8.0
+2026-10-29T01:47:43.6405429Z  + anyio==4.15.1
+2026-10-29T01:47:43.6405691Z  + boolean-py==5.0
+2026-10-29T01:47:43.6406039Z  + cachecontrol==0.14.4
+2026-10-29T01:47:43.6406424Z  + certifi==2026.10.23
+2026-10-29T01:47:43.6406753Z  + cffi==2.1.1
+2026-10-29T01:47:43.6407208Z  + charset-normalizer==3.5.2
+2026-10-29T01:47:43.6407608Z  + click==8.5.0
+2026-10-29T01:47:43.6407995Z  + coverage==7.17.0
+2026-10-29T01:47:43.6408510Z  + cryptography==50.0.2
+2026-10-29T01:47:43.6408838Z  + cyclonedx-python-lib==11.12.0
+2026-10-29T01:47:43.6409190Z  + defusedxml==0.7.1
+2026-10-29T01:47:43.6409615Z  + fastapi==0.162.0
+2026-10-29T01:47:43.6409993Z  + filelock==4.2.4
+2026-10-29T01:47:43.6410679Z  + greenlet==3.5.6
+2026-10-29T01:47:43.6410922Z  + h11==0.16.0
+2026-10-29T01:47:43.6411290Z  + httpcore==1.0.9
+2026-10-29T01:47:43.6411713Z  + httpx==0.28.1
+2026-10-29T01:47:43.6412087Z  + hypothesis==6.151.9
+2026-10-29T01:47:43.6412387Z  + idna==3.20
+2026-10-29T01:47:43.6413043Z  + immutabledict==4.3.1
+2026-10-29T01:47:43.6413319Z  + iniconfig==2.3.1
+2026-10-29T01:47:43.6413657Z  + license-expression==30.4.4
+2026-10-29T01:47:43.6414001Z  + markdown-it-py==4.2.0
+2026-10-29T01:47:43.6414406Z  + mdurl==0.1.2
+2026-10-29T01:47:43.6414779Z  + msgpack==1.2.4
+2026-10-29T01:47:43.6415210Z  + numpy==2.5.4
+2026-10-29T01:47:43.6415595Z  + opentelemetry-api==1.45.1
+2026-10-29T01:47:43.6415992Z  + ortools==9.15.6755
+2026-10-29T01:47:43.6416439Z  + packageurl-python==0.17.6
+2026-10-29T01:47:43.6416737Z  + packaging==26.3
+2026-10-29T01:47:43.6417186Z  + pandas==3.1.0
+2026-10-29T01:47:43.6417505Z  + pip==26.2.2
+2026-10-29T01:47:43.6417940Z  + pip-api==0.0.35
+2026-10-29T01:47:43.6418316Z  + pip-audit==2.10.1
+2026-10-29T01:47:43.6418760Z  + pip-requirements-parser==32.0.1
+2026-10-29T01:47:43.6419097Z  + platformdirs==4.13.6
+2026-10-29T01:47:43.6419509Z  + pluggy==1.7.0
+2026-10-29T01:47:43.6419870Z  + protobuf==6.33.5
+2026-10-29T01:47:43.6420251Z  + psycopg==3.2.13
+2026-10-29T01:47:43.6420741Z  + psycopg-binary==3.2.13
+2026-10-29T01:47:43.6421160Z  + py-serializable==2.1.0
+2026-10-29T01:47:43.6421460Z  + pycparser==3.12
+2026-10-29T01:47:43.6421837Z  + pydantic==2.14.1
+2026-10-29T01:47:43.6422261Z  + pydantic-core==2.50.1
+2026-10-29T01:47:43.6422560Z  + pygments==2.21.0
+2026-10-29T01:47:43.6422992Z  + pyjwt==2.15.1
+2026-10-29T01:47:43.6423385Z  + pyparsing==3.3.3
+2026-10-29T01:47:43.6423743Z  + pypdf==6.21.3
+2026-10-29T01:47:43.6424104Z  + pyproj==3.7.2
+2026-10-29T01:47:43.6424552Z  + pytest==9.1.1
+2026-10-29T01:47:43.6424921Z  + pytest-cov==7.1.0
+2026-10-29T01:47:43.6425354Z  + python-dateutil==3.0.0
+2026-10-29T01:47:43.6425739Z  + requests==2.34.2
+2026-10-29T01:47:43.6426113Z  + rich==15.0.0
+2026-10-29T01:47:43.6426550Z  + six==1.17.0
+2026-10-29T01:47:43.6426985Z  + sortedcontainers==2.4.0
+2026-10-29T01:47:43.6427296Z  + sqlalchemy==2.0.55
+2026-10-29T01:47:43.6427661Z  + starlette==1.10.0
+2026-10-29T01:47:43.6428749Z  + system-lab-airspace-operations==0.3.0rc1 (from file:///home/runner/work/airspace-operations/airspace-operations)
+2026-10-29T01:47:43.6429607Z  + tomli==2.5.0
+2026-10-29T01:47:43.6429892Z  + tomli-w==1.2.0
+2026-10-29T01:47:43.6430152Z  + typing-extensions==4.16.0
+2026-10-29T01:47:43.6430584Z  + typing-inspection==0.4.4
+2026-10-29T01:47:43.6430879Z  + tzdata==2026.5
+2026-10-29T01:47:43.6431133Z  + urllib3==2.8.0
+2026-10-29T01:47:43.6431380Z  + uvicorn==0.54.0
+2026-10-29T01:47:44.4935602Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-29T01:47:45.7372300Z 
+2026-10-29T01:47:45.7372731Z added 110 packages in 2s
+2026-10-29T01:47:46.0387757Z Expanded actual permitted regulatory passages: 9833
+2026-10-29T01:47:46.0388156Z Preserved experimental lineage is available
+2026-10-29T01:47:46.0785443Z ##[group]Run uv run python scripts/publish_candidate.py --record-engineering
+2026-10-29T01:47:46.0785883Z [36;1muv run python scripts/publish_candidate.py --record-engineering[0m
+2026-10-29T01:47:46.0804160Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:47:46.0804358Z env:
+2026-10-29T01:47:46.0804540Z   AIRSPACE_ENGINEERING_RESULT: success
+2026-10-29T01:47:46.0804825Z   AIRSPACE_SOURCE_COMMIT: c942ace694dc4b24319ede622bb167753cf6de6c
+2026-10-29T01:47:46.0805152Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:46.0805476Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:47:46.0805799Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:46.0806255Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:46.0806549Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:47:46.0806853Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:47:46.0807195Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:47:46.0809458Z   GITHUB_TOKEN: ***
+2026-10-29T01:47:46.0809643Z ##[endgroup]
+2026-10-29T01:47:46.1455628Z Traceback (most recent call last):
+2026-10-29T01:47:46.1478557Z   File "/home/runner/work/airspace-operations/airspace-operations/scripts/publish_candidate.py", line 231, in <module>
+2026-10-29T01:47:46.1479274Z     main()
+2026-10-29T01:47:46.1479494Z     ~~~~^^
+2026-10-29T01:47:46.1480201Z   File "/home/runner/work/airspace-operations/airspace-operations/scripts/publish_candidate.py", line 217, in main
+2026-10-29T01:47:46.1481365Z     raise ValueError("Controlled application source changed after checkout")
+2026-10-29T01:47:46.1482109Z ValueError: Controlled application source changed after checkout
+2026-10-29T01:47:46.1563381Z ##[error]Process completed with exit code 1.
+2026-10-29T01:47:46.1669296Z Post job cleanup.
+2026-10-29T01:47:46.2421081Z [command]/usr/bin/git version
+2026-10-29T01:47:46.2452844Z git version 2.56.0
+2026-10-29T01:47:46.2487737Z Temporarily overriding HOME='/home/runner/work/_temp/64ebe6b2-ab46-4781-88e1-cfe74d167519' before making global git config changes
+2026-10-29T01:47:46.2488558Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T01:47:46.2492991Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:47:46.2521433Z Removing SSH command configuration
+2026-10-29T01:47:46.2527132Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T01:47:46.2558601Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T01:47:46.2774284Z Removing HTTP extra header
+2026-10-29T01:47:46.2780054Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T01:47:46.2812606Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T01:47:46.3032470Z Removing includeIf entries pointing to credentials config files
+2026-10-29T01:47:46.3041538Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T01:47:46.3078563Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T01:47:46.3440958Z Cleaning up orphan processes
+

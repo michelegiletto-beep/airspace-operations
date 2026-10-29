@@ -25,11 +25,11 @@ def source_files():
     top_extensions={'.md','.toml','.lock','.txt','.yaml','.csv','.json','.cff'}
     candidates=[]
     for directory,subdirectories,filenames in os.walk(ROOT):
-        subdirectories[:]=[name for name in subdirectories if name not in EXCLUDED]
+        subdirectories[:]=[name for name in subdirectories if name not in EXCLUDED and not name.endswith('.egg-info')]
         candidates.extend(Path(directory)/name for name in filenames)
     for file in candidates:
         rel=file.relative_to(ROOT)
-        if any(part in EXCLUDED for part in rel.parts): continue
+        if any(part in EXCLUDED or part.endswith('.egg-info') for part in rel.parts): continue
         if file.name=='.env' or file.suffix in {'.db','.pyc','.sqlite','.log'}: continue
         if rel.parts[0]=='improvement' and rel.as_posix() not in improvement_files: continue
         if rel.parts[:2]==('models','pretrained'):

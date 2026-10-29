@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import sys
+import subprocess
 from types import SimpleNamespace
 
 import pytest
@@ -26,6 +27,24 @@ def test_default_entrypoint_does_not_call_github_or_publish(tmp_path, monkeypatc
     publisher.main()
     result = json.loads(capsys.readouterr().out)
     assert result["state"] == "Prepared" and result["publication_performed"] is False
+
+
+def test_generated_egg_info_does_not_hide_real_untracked_or_modified_source(tmp_path):
+    (tmp_path / ".gitignore").write_text((ROOT / ".gitignore").read_text())
+    source = tmp_path / "backend/airspace/example.py"
+    source.parent.mkdir(parents=True); source.write_text('"""Original isolated fixture."""')
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=tmp_path, text=True, capture_output=True, check=True).stdout
+    git("init"); git("add", ".")
+    git("-c", "user.name=Isolated software fixture", "-c", "user.email=fixture@test.invalid", "commit", "-m", "Isolated source baseline")
+    metadata = tmp_path / "backend/fixture.egg-info/PKG-INFO"
+    metadata.parent.mkdir(); metadata.write_text("Generated isolated metadata")
+    assert git("status", "--porcelain", "--untracked-files=all", "--", "backend") == ""
+    new_source = source.with_name("new_module.py"); new_source.write_text('"""New isolated source."""')
+    source.write_text('"""Changed isolated source."""')
+    status = git("status", "--porcelain", "--untracked-files=all", "--", "backend")
+    assert " M backend/airspace/example.py" in status
+    assert "?? backend/airspace/new_module.py" in status and ".egg-info" not in status
 
 
 def client_for(assets, calls, *, corrupt=False):
