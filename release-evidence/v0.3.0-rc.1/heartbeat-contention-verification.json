@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-28T19:49:40.917328+00:00",
+  "before_fix": {
+    "checks": 145,
+    "false_failures": 5,
+    "seconds": 0.267,
+    "cause": "PermissionError opening the heartbeat during Windows atomic replacement; current process remained live",
+    "source": "Actual adversarial engineering tool reproduction"
+  },
+  "after_fix": {
+    "checks": 2516,
+    "seconds": 5.009,
+    "failures": [],
+    "permission_errors_observed": 105,
+    "source_sha256": "28c9c598529daff1a349894954a9c7bf5b4a99c9fb925003601650a957a715a2",
+    "interval_seconds": 0.0005,
+    "scope": "Accelerated isolated Windows heartbeat contention; no operational data/model calls"
+  },
+  "review": "Bounded three read attempts with two 10ms waits; only PermissionError retried; invalid, stale, future, unavailable PID and persistent denial still fail closed",
+  "focused_tests": {
+    "passed": 17,
+    "seconds": 1.35,
+    "junit": "heartbeat-health-repaired-tests.xml"
+  },
+  "full_failed_attempt": "heartbeat-final-backend-tests.xml",
+  "full_repair_verification": "heartbeat-health-repaired-full-tests.xml"
+}

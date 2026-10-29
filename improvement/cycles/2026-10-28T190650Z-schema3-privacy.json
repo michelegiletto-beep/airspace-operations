@@ -1,0 +1,62 @@
+{
+  "cycle_id": "2026-10-28T190650Z-schema3-privacy",
+  "started_at": "2026-10-28T19:06:50.145Z",
+  "checkpoint_at": "2026-10-28T19:51:36.421354+00:00",
+  "state": "Completed bounded engineering run; overall0.3 release remains in development",
+  "version": "0.3.0-rc.1",
+  "priority": "Prevent an old server bypassing private companion access rules after rollback",
+  "implemented": [
+    "Schema3 startup compatibility gate preserving existing private records and audit chain",
+    "Executed exact frozen0.2 API startup rejection using a separate software fixture",
+    "Stopped owned old preview processes, made a consistent private backup, migrated and restarted; browser/API/persistent task and audit matched",
+    "Verified normal animated renderer and genuinely animated fallback, plus pause/resume",
+    "Version-safe orchestration evaluation output and published artifact preservation",
+    "Repaired reproduced Windows heartbeat sharing contention with bounded fail-closed retries"
+  ],
+  "evidence": [
+    "schema-compatibility-verification.json",
+    "schema-compatibility-tests.xml",
+    "schema3-browser-verification.json",
+    "companion-fallback-browser-verification.json",
+    "release-version-safety-tests.xml",
+    "heartbeat-contention-verification.json",
+    "heartbeat-health-repaired-tests.xml",
+    "heartbeat-health-repaired-full-tests.xml",
+    "ci-verification.json"
+  ],
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "source_commit": "4832b960ee3a193b33b7435e439cebf0106a16e4",
+  "github_state": "Candidate source Uploaded; no new tag, release or archive",
+  "hugging_face_state": "Existing0.2 presentation retained; no0.3 publication",
+  "system_lab_state": "Existing version95 retained; no0.3 publication",
+  "previous_releases_preserved": true,
+  "operational_workspace": "Empty; public-source research conversations and a personal engineering task only",
+  "limitations": [
+    "Schema marker protects startup, not already-running old services; stop all old processes before migration",
+    "Mobile browser override did not change actual viewport; mobile acceptance is not claimed",
+    "Model-call budget is per worker attempt, not durable across retries; at most three attempts within900seconds can generate up to six calls",
+    "Negative local and CI outputs are retained. Final repaired full local and latest source CI suites passed; release packaging and publication gates remain open."
+  ],
+  "retrospective": "Rollback testing found a privacy boundary absent from current-server-only tests. Actual browser fallback testing prevented accepting a static fallback. Full-suite repetition exposed Windows filesystem contention that a focused passing test missed. Source publication remains distinct from a downloadable release.",
+  "next_bounded_prompt": "Read this cycle, STATUS.md and publication/status.json. First read the completed passing evidence and inspect heartbeat-health-repaired-full-tests.xml and GitHub Actions40757564050 on4832b960ee3a193b33b7435e439cebf0106a16e4; preserve failed attempts. Verify durable job-wide model-call reservations across worker crashes without more than two actual local evaluation calls. Then repair duplicated companion next steps, verify an effective mobile viewport, rerun relevant tests and release gates, package0.3 from a frozen source, clean-install, scan rights/secrets, publish a distinct candidate to the existing verified destinations, and independently retrieve downloads/media. Preserve old releases and do not contact anyone.",
+  "local_final_tests": {
+    "passed": 338,
+    "skipped": 16,
+    "failed": 0,
+    "seconds": 173.17
+  },
+  "latest_ci": {
+    "run": 40757564050,
+    "state": "success",
+    "source_passed": 337,
+    "source_skipped": 17,
+    "postgresql_passed": 16,
+    "restoration_audit_valid": true
+  },
+  "public_retrieval": {
+    "latest_changed_source_files": "Both SHA-256 matched the exact published source commit",
+    "hugging_face": "Existing Space returned HTTP200",
+    "system_lab": "Anonymous HTTP retrieval returned403; browser recheck remains required"
+  }
+}

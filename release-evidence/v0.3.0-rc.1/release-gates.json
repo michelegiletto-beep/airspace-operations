@@ -1,0 +1,32 @@
+{
+  "version": "0.3.0-rc.1",
+  "at": "2026-10-29T01:26:25.053491+00:00",
+  "checks": {
+    "python_tests": true,
+    "frontend_tests": true,
+    "frontend_build": true,
+    "frontend_dependency_audit": true,
+    "python_dependency_audit": true,
+    "optional_neural_dependency_audit": true,
+    "baseline_integrity": true
+  },
+  "engineering_checks_passed": true,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "external_ci": {
+    "verified": false,
+    "evidence": "ci-verification.json",
+    "run_id": null,
+    "commit": null,
+    "scope": "Actual isolated container/PostgreSQL/worker/restoration run; local input hashes must remain identical"
+  },
+  "unverified_gates": [
+    "PostgreSQL/PostGIS/pgvector deployment and concurrency",
+    "Docker build and health checks",
+    "Qualified Luxembourg/Italy pack validation",
+    "Full methodology and operational data acceptance",
+    "Live provider and enterprise identity integration",
+    "Complete baseline feature/assurance acceptance",
+    "Production-scale resilience and deployment-specific security acceptance"
+  ]
+}

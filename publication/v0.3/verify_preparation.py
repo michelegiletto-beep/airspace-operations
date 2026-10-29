@@ -44,7 +44,7 @@ def main():
         assert len(document.ids) == len(set(document.ids)), "Duplicate element ID"
         for link in document.links:
             if link.startswith("#"): assert link[1:] in document.ids
-            elif not link.startswith(("https://", "/")): assert (path.parent / link).is_file()
+            elif not link.startswith(("https://", "/", "data:,")): assert (path.parent / link).is_file()
             assert "/releases/tag/v0.3" not in link and "Operations-0.3" not in link, "Unverified new download must not be enabled"
         visible = " ".join(document.visible)
         assert "Prepared" in visible
@@ -63,7 +63,8 @@ def main():
     report = {"checked_at": datetime.now(timezone.utc).isoformat(), "release": "0.3.0-rc.1", "state": "Prepared",
         "pages": pages, "authored_documents_checked": len(authored), "student_original_digest_matches": True,
         "credential_patterns_found": [], "new_download_links_enabled": False,
-        "browser_verified": False, "application_or_model_verification_claimed": False, "publication_performed": False,
+        "browser_verified": False, "application_verification_reported": {"backend_passed": 360, "postgresql_skipped_locally": 19, "frontend_passed": 107}, "model_execution_reported": "Actual local replies and confirmed personal task; no new student training", "source_ci_status": "In Progress", "publication_performed": False,
+        "capture_references": [{"path": str(Path("publication/media/v0.3") / name), "available_locally": (ROOT / "publication/media/v0.3" / name).is_file()} for name in ("desktop-companion.jpg", "mobile-companion.jpg")],
         "limit": "Local copy/structure checks supplement actual application/browser, legal, rights and publication review; they do not prove universal stylistic compliance"}
     (HERE / "preparation-checks.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps(report, indent=2))

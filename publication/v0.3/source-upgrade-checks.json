@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-29T01:37:48.740628+00:00",
+  "scope": "Prepared publication sources only; no browser, model, archive or publication execution in this check",
+  "files": [
+    {
+      "path": "publication\\v0.3\\site-project.html",
+      "bytes": 12417,
+      "sha256": "930739e8147faa15da392c016728930c2fb69a24e86955b1160a6e099a9ed1ec"
+    },
+    {
+      "path": "publication\\v0.3\\site-project.css",
+      "bytes": 8231,
+      "sha256": "ad2c5f80782041d796488edb0b93fdfd6656e8f4af6e69024e8493ba8e106fad"
+    },
+    {
+      "path": "publication\\v0.3\\github-readme.md",
+      "bytes": 7447,
+      "sha256": "77a26f9e8fcef5bba755280173a1250246740397aee3c25d5792c1d604632a05"
+    },
+    {
+      "path": "publication\\v0.3\\hf-space\\index.html",
+      "bytes": 5642,
+      "sha256": "ff33fb61e8d85e52f47577177a18a3982017c79a5684e1a6ce4f0c9cf5adf276"
+    },
+    {
+      "path": "publication\\v0.3\\hf-space\\styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16"
+    },
+    {
+      "path": "publication\\v0.3\\hf-space\\README.md",
+      "bytes": 916,
+      "sha256": "43cd0868f1a80a63e692785d1e92e73b42c7f98b1fd6de5381c40a98693a4a58"
+    },
+    {
+      "path": "publication\\v0.3\\verify_preparation.py",
+      "bytes": 4455,
+      "sha256": "e2661ae359d60c9a0606f782acad02975cdd5bd9a7173611b03f68d586eae088"
+    }
+  ],
+  "capture_sources": [
+    {
+      "path": "publication\\media\\v0.3\\desktop-companion.jpg",
+      "bytes": 160189,
+      "sha256": "9b898da12f13da8abc90a9a2d5f68cdefbe1e5cad28a0d65a2c4f3dc7fd6b4f8"
+    },
+    {
+      "path": "publication\\media\\v0.3\\mobile-companion.jpg",
+      "bytes": 42049,
+      "sha256": "5d6e2d3b91f3d34cbbb4f111507ced693f158a22cead1341caa36f643680c7bc"
+    }
+  ],
+  "download_enabled": false,
+  "publication_performed": false
+}

@@ -1,0 +1,1800 @@
+﻿2026-10-29T01:26:35.1377928Z Current runner version: '2.338.0'
+2026-10-29T01:26:35.1404829Z ##[group]Runner Image Provisioner
+2026-10-29T01:26:35.1405824Z Hosted Compute Agent
+2026-10-29T01:26:35.1406511Z Version: 20261021.618
+2026-10-29T01:26:35.1407162Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T01:26:35.1407957Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T01:26:35.1408662Z Worker ID: {464df539-7247-4728-b069-404812dfbeee}
+2026-10-29T01:26:35.1409452Z Region: centralus
+2026-10-29T01:26:35.1410075Z Cloud: Azure
+2026-10-29T01:26:35.1410614Z ##[endgroup]
+2026-10-29T01:26:35.1413290Z ##[group]Operating System
+2026-10-29T01:26:35.1414025Z Ubuntu
+2026-10-29T01:26:35.1414589Z 24.04.5
+2026-10-29T01:26:35.1415225Z LTS
+2026-10-29T01:26:35.1415748Z ##[endgroup]
+2026-10-29T01:26:35.1416346Z ##[group]Runner Image
+2026-10-29T01:26:35.1416987Z Image: ubuntu-24.04
+2026-10-29T01:26:35.1417584Z Version: 20261025.353.1
+2026-10-29T01:26:35.1418927Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T01:26:35.1420570Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T01:26:35.1421596Z ##[endgroup]
+2026-10-29T01:26:35.1423089Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T01:26:35.1425385Z Contents: read
+2026-10-29T01:26:35.1426045Z Metadata: read
+2026-10-29T01:26:35.1426730Z ##[endgroup]
+2026-10-29T01:26:35.1428854Z Secret source: Actions
+2026-10-29T01:26:35.1429984Z Cache mode: write
+2026-10-29T01:26:35.1430957Z Prepare workflow directory
+2026-10-29T01:26:35.2001028Z Prepare all required actions
+2026-10-29T01:26:35.2051436Z Getting action download info
+2026-10-29T01:26:35.5778134Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-10-29T01:26:35.7043134Z Download action repository 'actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-10-29T01:26:35.8183184Z Download action repository 'astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9' (SHA:94527f2e458b27549849d47d273a16bec83a01e9)
+2026-10-29T01:26:36.3477856Z Complete job name: containers-postgresql
+2026-10-29T01:26:36.4415642Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-10-29T01:26:36.4417283Z with:
+2026-10-29T01:26:36.4418022Z   persist-credentials: false
+2026-10-29T01:26:36.4419029Z   repository: michelegiletto-beep/airspace-operations
+2026-10-29T01:26:36.4427193Z   token: ***
+2026-10-29T01:26:36.4427740Z   ssh-strict: true
+2026-10-29T01:26:36.4428189Z   ssh-user: git
+2026-10-29T01:26:36.4428620Z   clean: true
+2026-10-29T01:26:36.4429077Z   sparse-checkout-cone-mode: true
+2026-10-29T01:26:36.4429612Z   fetch-depth: 1
+2026-10-29T01:26:36.4430057Z   fetch-tags: false
+2026-10-29T01:26:36.4430515Z   show-progress: true
+2026-10-29T01:26:36.4430967Z   lfs: false
+2026-10-29T01:26:36.4431384Z   submodules: false
+2026-10-29T01:26:36.4431842Z   set-safe-directory: true
+2026-10-29T01:26:36.4432773Z   allow-unsafe-pr-checkout: false
+2026-10-29T01:26:36.4433686Z env:
+2026-10-29T01:26:36.4434161Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:26:36.4434796Z ##[endgroup]
+2026-10-29T01:26:36.7588815Z Syncing repository: michelegiletto-beep/airspace-operations
+2026-10-29T01:26:36.7591783Z ##[group]Getting Git version info
+2026-10-29T01:26:36.7593119Z Working directory is '/home/runner/work/airspace-operations/airspace-operations'
+2026-10-29T01:26:36.7594677Z [command]/usr/bin/git version
+2026-10-29T01:26:36.7706974Z git version 2.56.0
+2026-10-29T01:26:36.7731437Z ##[endgroup]
+2026-10-29T01:26:36.7747609Z Temporarily overriding HOME='/home/runner/work/_temp/1fd4c10e-1d95-46f4-8591-0559ed821c49' before making global git config changes
+2026-10-29T01:26:36.7750356Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T01:26:36.7754266Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:26:36.7820866Z Deleting the contents of '/home/runner/work/airspace-operations/airspace-operations'
+2026-10-29T01:26:36.7827274Z ##[group]Determining repository object format
+2026-10-29T01:26:36.7834950Z ##[endgroup]
+2026-10-29T01:26:36.7836417Z ##[group]Initializing the repository
+2026-10-29T01:26:36.7837413Z [command]/usr/bin/git init /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:26:36.7966015Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T01:26:36.7968241Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T01:26:36.7969972Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T01:26:36.7971139Z hint: call:
+2026-10-29T01:26:36.7972259Z hint:
+2026-10-29T01:26:36.7973107Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T01:26:36.7974153Z hint:
+2026-10-29T01:26:36.7975563Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T01:26:36.7977453Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T01:26:36.7978868Z hint:
+2026-10-29T01:26:36.7979419Z hint: 	git branch -m <name>
+2026-10-29T01:26:36.7979970Z hint:
+2026-10-29T01:26:36.7980906Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T01:26:36.7983834Z Initialized empty Git repository in /home/runner/work/airspace-operations/airspace-operations/.git/
+2026-10-29T01:26:36.8009503Z [command]/usr/bin/git remote add origin https://github.com/michelegiletto-beep/airspace-operations
+2026-10-29T01:26:36.8053136Z ##[endgroup]
+2026-10-29T01:26:36.8054514Z ##[group]Disabling automatic garbage collection
+2026-10-29T01:26:36.8057685Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T01:26:36.8095932Z ##[endgroup]
+2026-10-29T01:26:36.8097685Z ##[group]Setting up auth
+2026-10-29T01:26:36.8098711Z Removing SSH command configuration
+2026-10-29T01:26:36.8105004Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T01:26:36.8149437Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T01:26:36.8556526Z Removing HTTP extra header
+2026-10-29T01:26:36.8564373Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T01:26:36.8615846Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T01:26:36.8860834Z Removing includeIf entries pointing to credentials config files
+2026-10-29T01:26:36.8867488Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T01:26:36.8916496Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T01:26:36.9168221Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T01:26:36.9221024Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:36.9265783Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:36.9309370Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:36.9355490Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:36.9395757Z ##[endgroup]
+2026-10-29T01:26:36.9396705Z ##[group]Fetching the repository
+2026-10-29T01:26:36.9404669Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b02b2c7957a2b512da3461166d106af6debea1ae:refs/remotes/origin/codex/airspace-0.3
+2026-10-29T01:26:37.9857905Z From https://github.com/michelegiletto-beep/airspace-operations
+2026-10-29T01:26:37.9860027Z  * [new ref]         b02b2c7957a2b512da3461166d106af6debea1ae -> origin/codex/airspace-0.3
+2026-10-29T01:26:37.9870597Z [command]/usr/bin/git branch --list --remote origin/codex/airspace-0.3
+2026-10-29T01:26:37.9907809Z   origin/codex/airspace-0.3
+2026-10-29T01:26:37.9917511Z [command]/usr/bin/git rev-parse refs/remotes/origin/codex/airspace-0.3
+2026-10-29T01:26:37.9950507Z b02b2c7957a2b512da3461166d106af6debea1ae
+2026-10-29T01:26:37.9956958Z ##[endgroup]
+2026-10-29T01:26:37.9958436Z ##[group]Determining the checkout info
+2026-10-29T01:26:37.9960041Z ##[endgroup]
+2026-10-29T01:26:37.9964524Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T01:26:38.0028880Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T01:26:38.0146733Z ##[group]Checking out the ref
+2026-10-29T01:26:38.0163850Z [command]/usr/bin/git checkout --progress --force -B codex/airspace-0.3 refs/remotes/origin/codex/airspace-0.3
+2026-10-29T01:26:38.0837054Z Switched to a new branch 'codex/airspace-0.3'
+2026-10-29T01:26:38.0842692Z branch 'codex/airspace-0.3' set up to track 'origin/codex/airspace-0.3'.
+2026-10-29T01:26:38.0853636Z ##[endgroup]
+2026-10-29T01:26:38.0911204Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T01:26:38.0947834Z b02b2c7957a2b512da3461166d106af6debea1ae
+2026-10-29T01:26:38.0963326Z ##[group]Removing auth
+2026-10-29T01:26:38.0964163Z Removing SSH command configuration
+2026-10-29T01:26:38.0965419Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T01:26:38.1013195Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T01:26:38.1261665Z Removing HTTP extra header
+2026-10-29T01:26:38.1267346Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T01:26:38.1314115Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T01:26:38.1556909Z Removing includeIf entries pointing to credentials config files
+2026-10-29T01:26:38.1568439Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T01:26:38.1607293Z includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path
+2026-10-29T01:26:38.1611234Z includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path
+2026-10-29T01:26:38.1614518Z includeif.gitdir:/github/workspace/.git.path
+2026-10-29T01:26:38.1616691Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-29T01:26:38.1621075Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path
+2026-10-29T01:26:38.1657629Z /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1670566Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git.path /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1717231Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path
+2026-10-29T01:26:38.1753352Z /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1770063Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/airspace-operations/airspace-operations/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1820950Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-29T01:26:38.1856473Z /github/runner_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1865928Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1908497Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-29T01:26:38.1943191Z /github/runner_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.1954654Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config
+2026-10-29T01:26:38.2001023Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T01:26:38.2255031Z Removing credentials config '/home/runner/work/_temp/git-credentials-8c5299b7-415a-42e0-ab72-0ca082c49006.config'
+2026-10-29T01:26:38.2355774Z ##[endgroup]
+2026-10-29T01:26:38.2700451Z ##[group]Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+2026-10-29T01:26:38.2701572Z with:
+2026-10-29T01:26:38.2702240Z   python-version: 3.13
+2026-10-29T01:26:38.2702807Z   check-latest: false
+2026-10-29T01:26:38.2711396Z   token: ***
+2026-10-29T01:26:38.2712030Z   update-environment: true
+2026-10-29T01:26:38.2712680Z   allow-prereleases: false
+2026-10-29T01:26:38.2713292Z   freethreaded: false
+2026-10-29T01:26:38.2713806Z env:
+2026-10-29T01:26:38.2714340Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:26:38.2715144Z ##[endgroup]
+2026-10-29T01:26:38.4164128Z ##[group]Installed versions
+2026-10-29T01:26:38.4267758Z Successfully set up CPython (3.13.17)
+2026-10-29T01:26:38.4269468Z ##[endgroup]
+2026-10-29T01:26:38.4565929Z ##[group]Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+2026-10-29T01:26:38.4567673Z with:
+2026-10-29T01:26:38.4568365Z   version: 0.11.23
+2026-10-29T01:26:38.4569176Z   enable-cache: false
+2026-10-29T01:26:38.4569996Z   activate-environment: false
+2026-10-29T01:26:38.4571619Z   working-directory: /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:26:38.4583715Z   github-token: ***
+2026-10-29T01:26:38.4586369Z   cache-dependency-glob: **/*requirements*.txt
+**/*requirements*.in
+**/*constraints*.txt
+**/*constraints*.in
+**/pyproject.toml
+**/uv.lock
+**/*.py.lock
+
+2026-10-29T01:26:38.4589311Z   restore-cache: true
+2026-10-29T01:26:38.4590170Z   save-cache: true
+2026-10-29T01:26:38.4590987Z   prune-cache: true
+2026-10-29T01:26:38.4592107Z   cache-python: false
+2026-10-29T01:26:38.4593063Z   ignore-nothing-to-cache: false
+2026-10-29T01:26:38.4594166Z   ignore-empty-workdir: false
+2026-10-29T01:26:38.4595233Z   add-problem-matchers: true
+2026-10-29T01:26:38.4596359Z   resolution-strategy: highest
+2026-10-29T01:26:38.4597337Z env:
+2026-10-29T01:26:38.4598186Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:26:38.4599732Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:38.4601633Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:26:38.4603795Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:38.4605510Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:38.4607229Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:38.4609087Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:26:38.4610497Z ##[endgroup]
+2026-10-29T01:26:38.6669519Z Fetching version data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...
+2026-10-29T01:26:38.7793602Z Downloading uv from "https://releases.astral.sh/github/uv/releases/download/0.11.23/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-10-29T01:26:39.0532707Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/fecfb930-fd3f-469c-ab09-f6e0a40e42b5 -f /home/runner/work/_temp/a8bdc98b-7971-40df-a516-ae22bfb7e199
+2026-10-29T01:26:39.5387471Z Added /home/runner/.local/bin to the path
+2026-10-29T01:26:39.5392117Z Added /opt/hostedtoolcache/uv/0.11.23/x86_64 to the path
+2026-10-29T01:26:39.5393689Z Set UV_PYTHON_INSTALL_DIR to /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:26:39.5394555Z Added /home/runner/work/_temp/uv-python-dir to the path
+2026-10-29T01:26:39.5404140Z Successfully installed uv version 0.11.23
+2026-10-29T01:26:40.2347970Z ##[group]Run database_password=$(openssl rand -hex 24)
+2026-10-29T01:26:40.2348498Z [36;1mdatabase_password=$(openssl rand -hex 24)[0m
+2026-10-29T01:26:40.2348918Z [36;1mapplication_password=$(openssl rand -hex 24)[0m
+2026-10-29T01:26:40.2349280Z [36;1maudit_key=$(openssl rand -hex 32)[0m
+2026-10-29T01:26:40.2349638Z [36;1mverification_password=$(openssl rand -hex 24)[0m
+2026-10-29T01:26:40.2349993Z [36;1mecho "::add-mask::$database_password"[0m
+2026-10-29T01:26:40.2350325Z [36;1mecho "::add-mask::$application_password"[0m
+2026-10-29T01:26:40.2350635Z [36;1mecho "::add-mask::$audit_key"[0m
+2026-10-29T01:26:40.2350937Z [36;1mecho "::add-mask::$verification_password"[0m
+2026-10-29T01:26:40.2351337Z [36;1mecho "POSTGRES_PASSWORD=$database_password" >> "$GITHUB_ENV"[0m
+2026-10-29T01:26:40.2352157Z [36;1mecho "AIRSPACE_DB_APP_PASSWORD=$application_password" >> "$GITHUB_ENV"[0m
+2026-10-29T01:26:40.2352693Z [36;1mecho "AIRSPACE_AUDIT_KEY=$audit_key" >> "$GITHUB_ENV"[0m
+2026-10-29T01:26:40.2353166Z [36;1mecho "AIRSPACE_INITIAL_PASSWORD=$verification_password" >> "$GITHUB_ENV"[0m
+2026-10-29T01:26:40.2354232Z [36;1mecho "AIRSPACE_DATABASE_URL=***database:5432/airspace" >> "$GITHUB_ENV"[0m
+2026-10-29T01:26:40.2354654Z [36;1mdocker version[0m
+2026-10-29T01:26:40.2354899Z [36;1mdocker compose version[0m
+2026-10-29T01:26:40.2355166Z [36;1muv sync --frozen --extra dev[0m
+2026-10-29T01:26:40.2355477Z [36;1muv run python scripts/prepare_corpus.py[0m
+2026-10-29T01:26:40.2382160Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-29T01:26:40.2382572Z env:
+2026-10-29T01:26:40.2382819Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:26:40.2383205Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:40.2383647Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:26:40.2384080Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:40.2384480Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:40.2384875Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:40.2385304Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:26:40.2385717Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:26:40.2386043Z ##[endgroup]
+2026-10-29T01:26:40.3703082Z Client: Docker Engine - Community
+2026-10-29T01:26:40.3703769Z  Version:           28.0.4
+2026-10-29T01:26:40.3704295Z  API version:       1.48
+2026-10-29T01:26:40.3704748Z  Go version:        go1.23.7
+2026-10-29T01:26:40.3705262Z  Git commit:        b8034c0
+2026-10-29T01:26:40.3705619Z  Built:             Tue Mar 25 15:07:16 2025
+2026-10-29T01:26:40.3705978Z  OS/Arch:           linux/amd64
+2026-10-29T01:26:40.3706358Z  Context:           default
+2026-10-29T01:26:40.3706624Z 
+2026-10-29T01:26:40.3706765Z Server: Docker Engine - Community
+2026-10-29T01:26:40.3707082Z  Engine:
+2026-10-29T01:26:40.3707318Z   Version:          28.0.4
+2026-10-29T01:26:40.3707823Z   API version:      1.48 (minimum version 1.24)
+2026-10-29T01:26:40.3708213Z   Go version:       go1.23.7
+2026-10-29T01:26:40.3709061Z   Git commit:       6430e49
+2026-10-29T01:26:40.3709395Z   Built:            Tue Mar 25 15:07:16 2025
+2026-10-29T01:26:40.3709740Z   OS/Arch:          linux/amd64
+2026-10-29T01:26:40.3710190Z   Experimental:     false
+2026-10-29T01:26:40.3710472Z  containerd:
+2026-10-29T01:26:40.3710713Z   Version:          v2.4.2
+2026-10-29T01:26:40.3711120Z   GitCommit:        b7a25261e029d68978bbf290df0a62fc819b3c51
+2026-10-29T01:26:40.3711673Z  runc:
+2026-10-29T01:26:40.3712074Z   Version:          1.5.2
+2026-10-29T01:26:40.3712515Z   GitCommit:        v1.5.2-0-g29dd3dc2
+2026-10-29T01:26:40.3712919Z  docker-init:
+2026-10-29T01:26:40.3713130Z   Version:          0.19.0
+2026-10-29T01:26:40.3713371Z   GitCommit:        de40ad0
+2026-10-29T01:26:40.6086710Z Docker Compose version v2.38.2
+2026-10-29T01:26:40.6278174Z Using CPython 3.13.17 interpreter at: /opt/hostedtoolcache/Python/3.13.17/x64/bin/python3
+2026-10-29T01:26:40.6279043Z Creating virtual environment at: .venv
+2026-10-29T01:26:40.6523358Z    Building system-lab-airspace-operations @ file:///home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:26:40.7326733Z Downloading sqlalchemy (3.3MiB)
+2026-10-29T01:26:40.7517649Z Downloading numpy (15.9MiB)
+2026-10-29T01:26:40.7521698Z Downloading psycopg-binary (4.2MiB)
+2026-10-29T01:26:40.7528218Z Downloading ortools (28.5MiB)
+2026-10-29T01:26:40.7529725Z Downloading pydantic-core (2.1MiB)
+2026-10-29T01:26:40.7532239Z Downloading pip (1.7MiB)
+2026-10-29T01:26:40.7536796Z Downloading pygments (1.2MiB)
+2026-10-29T01:26:40.7545862Z Downloading cryptography (4.5MiB)
+2026-10-29T01:26:40.7555792Z Downloading pyproj (9.1MiB)
+2026-10-29T01:26:40.7557963Z Downloading pandas (11.4MiB)
+2026-10-29T01:26:41.3279628Z  Downloaded pydantic-core
+2026-10-29T01:26:41.4605664Z  Downloaded psycopg-binary
+2026-10-29T01:26:41.5743764Z  Downloaded cryptography
+2026-10-29T01:26:41.5842506Z  Downloaded pygments
+2026-10-29T01:26:41.6543410Z  Downloaded pip
+2026-10-29T01:26:41.6630433Z  Downloaded sqlalchemy
+2026-10-29T01:26:41.6907158Z  Downloaded pyproj
+2026-10-29T01:26:42.0158524Z  Downloaded ortools
+2026-10-29T01:26:42.1310521Z  Downloaded numpy
+2026-10-29T01:26:42.2298587Z  Downloaded pandas
+2026-10-29T01:26:43.2023943Z       Built system-lab-airspace-operations @ file:///home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:26:43.2035402Z Prepared 69 packages in 2.56s
+2026-10-29T01:26:43.2749802Z Installed 69 packages in 71ms
+2026-10-29T01:26:43.2750616Z  + absl-py==2.5.1
+2026-10-29T01:26:43.2751266Z  + annotated-doc==0.0.5
+2026-10-29T01:26:43.2752180Z  + annotated-types==0.8.0
+2026-10-29T01:26:43.2752882Z  + anyio==4.15.1
+2026-10-29T01:26:43.2753511Z  + boolean-py==5.0
+2026-10-29T01:26:43.2754149Z  + cachecontrol==0.14.4
+2026-10-29T01:26:43.2754819Z  + certifi==2026.10.23
+2026-10-29T01:26:43.2755443Z  + cffi==2.1.1
+2026-10-29T01:26:43.2756106Z  + charset-normalizer==3.5.2
+2026-10-29T01:26:43.2756836Z  + click==8.5.0
+2026-10-29T01:26:43.2757431Z  + coverage==7.17.0
+2026-10-29T01:26:43.2758068Z  + cryptography==50.0.2
+2026-10-29T01:26:43.2758804Z  + cyclonedx-python-lib==11.12.0
+2026-10-29T01:26:43.2759572Z  + defusedxml==0.7.1
+2026-10-29T01:26:43.2760205Z  + fastapi==0.162.0
+2026-10-29T01:26:43.2760819Z  + filelock==4.2.4
+2026-10-29T01:26:43.2761428Z  + greenlet==3.5.6
+2026-10-29T01:26:43.2762210Z  + h11==0.16.0
+2026-10-29T01:26:43.2762803Z  + httpcore==1.0.9
+2026-10-29T01:26:43.2763404Z  + httpx==0.28.1
+2026-10-29T01:26:43.2764031Z  + hypothesis==6.151.9
+2026-10-29T01:26:43.2764671Z  + idna==3.20
+2026-10-29T01:26:43.2765266Z  + immutabledict==4.3.1
+2026-10-29T01:26:43.2765928Z  + iniconfig==2.3.1
+2026-10-29T01:26:43.2766602Z  + license-expression==30.4.4
+2026-10-29T01:26:43.2767295Z  + markdown-it-py==4.2.0
+2026-10-29T01:26:43.2767718Z  + mdurl==0.1.2
+2026-10-29T01:26:43.2768081Z  + msgpack==1.2.4
+2026-10-29T01:26:43.2768463Z  + numpy==2.5.4
+2026-10-29T01:26:43.2768884Z  + opentelemetry-api==1.45.1
+2026-10-29T01:26:43.2769333Z  + ortools==9.15.6755
+2026-10-29T01:26:43.2769756Z  + packageurl-python==0.17.6
+2026-10-29T01:26:43.2770506Z  + packaging==26.3
+2026-10-29T01:26:43.2770885Z  + pandas==3.1.0
+2026-10-29T01:26:43.2771266Z  + pip==26.2.2
+2026-10-29T01:26:43.2771647Z  + pip-api==0.0.35
+2026-10-29T01:26:43.2772485Z  + pip-audit==2.10.1
+2026-10-29T01:26:43.2772958Z  + pip-requirements-parser==32.0.1
+2026-10-29T01:26:43.2773485Z  + platformdirs==4.13.6
+2026-10-29T01:26:43.2773907Z  + pluggy==1.7.0
+2026-10-29T01:26:43.2774300Z  + protobuf==6.33.5
+2026-10-29T01:26:43.2774703Z  + psycopg==3.2.13
+2026-10-29T01:26:43.2775108Z  + psycopg-binary==3.2.13
+2026-10-29T01:26:43.2775575Z  + py-serializable==2.1.0
+2026-10-29T01:26:43.2776018Z  + pycparser==3.12
+2026-10-29T01:26:43.2776423Z  + pydantic==2.14.1
+2026-10-29T01:26:43.2776832Z  + pydantic-core==2.50.1
+2026-10-29T01:26:43.2777259Z  + pygments==2.21.0
+2026-10-29T01:26:43.2805167Z  + pyjwt==2.15.1
+2026-10-29T01:26:43.2805857Z  + pyparsing==3.3.3
+2026-10-29T01:26:43.2806305Z  + pypdf==6.21.3
+2026-10-29T01:26:43.2806891Z  + pyproj==3.7.2
+2026-10-29T01:26:43.2807302Z  + pytest==9.1.1
+2026-10-29T01:26:43.2807852Z  + pytest-cov==7.1.0
+2026-10-29T01:26:43.2808291Z  + python-dateutil==3.0.0
+2026-10-29T01:26:43.2808725Z  + requests==2.34.2
+2026-10-29T01:26:43.2809100Z  + rich==15.0.0
+2026-10-29T01:26:43.2809469Z  + six==1.17.0
+2026-10-29T01:26:43.2809844Z  + sortedcontainers==2.4.0
+2026-10-29T01:26:43.2810286Z  + sqlalchemy==2.0.55
+2026-10-29T01:26:43.2810686Z  + starlette==1.10.0
+2026-10-29T01:26:43.2811561Z  + system-lab-airspace-operations==0.3.0rc1 (from file:///home/runner/work/airspace-operations/airspace-operations)
+2026-10-29T01:26:43.2812765Z  + tomli==2.5.0
+2026-10-29T01:26:43.2813145Z  + tomli-w==1.2.0
+2026-10-29T01:26:43.2813572Z  + typing-extensions==4.16.0
+2026-10-29T01:26:43.2814181Z  + typing-inspection==0.4.4
+2026-10-29T01:26:43.2814599Z  + tzdata==2026.5
+2026-10-29T01:26:43.2814964Z  + urllib3==2.8.0
+2026-10-29T01:26:43.2815347Z  + uvicorn==0.54.0
+2026-10-29T01:26:43.6136602Z Expanded actual permitted regulatory passages: 9833
+2026-10-29T01:26:43.6138281Z Preserved experimental lineage is available
+2026-10-29T01:26:43.6640417Z ##[group]Run uv run pytest -q
+2026-10-29T01:26:43.6640780Z [36;1muv run pytest -q[0m
+2026-10-29T01:26:43.6662460Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:26:43.6662759Z env:
+2026-10-29T01:26:43.6663046Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:26:43.6663507Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:43.6664043Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:26:43.6664572Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:43.6665045Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:43.6665529Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:26:43.6666016Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:26:43.6666505Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:26:43.6667132Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:26:43.6667616Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:26:43.6668114Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:26:43.6668560Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:26:43.6669454Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:26:43.6669828Z ##[endgroup]
+2026-10-29T01:27:06.7548179Z ........................................................................ [ 18%]
+2026-10-29T01:27:21.3396499Z ........................................................................ [ 37%]
+2026-10-29T01:27:42.8437162Z ........................................................................ [ 56%]
+2026-10-29T01:27:45.4336955Z ......sssssssssssssssssss..........................s.................... [ 75%]
+2026-10-29T01:27:59.3639728Z ........................................................................ [ 94%]
+2026-10-29T01:28:00.8300360Z ...................                                                      [100%]
+2026-10-29T01:28:00.8302986Z =============================== warnings summary ===============================
+2026-10-29T01:28:00.8304202Z .venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+2026-10-29T01:28:00.8306287Z   /home/runner/work/airspace-operations/airspace-operations/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-29T01:28:00.8308211Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-10-29T01:28:00.8308728Z 
+2026-10-29T01:28:00.8309228Z tests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct
+2026-10-29T01:28:00.8310152Z tests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct
+2026-10-29T01:28:00.8312874Z   <frozen importlib._bootstrap>:488: DeprecationWarning: Bitwise inversion '~' on bool is deprecated and will be removed in Python 3.16. This returns the bitwise inversion of the underlying int object and is usually not what you expect from negating a bool. Use the 'not' operator for boolean negation or ~int(x) if you really want the bitwise inversion of the underlying int.
+2026-10-29T01:28:00.8314991Z 
+2026-10-29T01:28:00.8315328Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-29T01:28:00.8316019Z 359 passed, 20 skipped, 3 warnings in 73.83s (0:01:13)
+2026-10-29T01:28:01.9329499Z ##[group]Run docker compose -f compose.yaml -f deploy/compose.ci.yaml build
+2026-10-29T01:28:01.9330167Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml build[0m
+2026-10-29T01:28:01.9352635Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:28:01.9352939Z env:
+2026-10-29T01:28:01.9353226Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:28:01.9353684Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:01.9354220Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:28:01.9354762Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:01.9355253Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:01.9355734Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:01.9356216Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:28:01.9356713Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:28:01.9357400Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:28:01.9357842Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:28:01.9358343Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:28:01.9358790Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:28:01.9359604Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:28:01.9359983Z ##[endgroup]
+2026-10-29T01:28:02.6258895Z #1 [internal] load local bake definitions
+2026-10-29T01:28:02.7766366Z #1 reading from stdin 1.14kB done
+2026-10-29T01:28:02.7767020Z #1 DONE 0.0s
+2026-10-29T01:28:02.9464470Z 
+2026-10-29T01:28:02.9465850Z #2 [database internal] load build definition from database.Dockerfile
+2026-10-29T01:28:02.9466644Z #2 transferring dockerfile: 502B done
+2026-10-29T01:28:02.9467197Z #2 DONE 0.0s
+2026-10-29T01:28:02.9467407Z 
+2026-10-29T01:28:02.9467693Z #3 [worker internal] load build definition from Dockerfile
+2026-10-29T01:28:02.9468317Z #3 transferring dockerfile: 1.41kB done
+2026-10-29T01:28:02.9468766Z #3 DONE 0.0s
+2026-10-29T01:28:02.9468963Z 
+2026-10-29T01:28:02.9469297Z #4 [auth] pgvector/pgvector:pull token for registry-1.docker.io
+2026-10-29T01:28:03.1014541Z #4 DONE 0.0s
+2026-10-29T01:28:03.1014804Z 
+2026-10-29T01:28:03.1015109Z #5 [auth] library/python:pull token for registry-1.docker.io
+2026-10-29T01:28:03.1015686Z #5 DONE 0.0s
+2026-10-29T01:28:03.1015892Z 
+2026-10-29T01:28:03.1016163Z #6 [auth] library/node:pull token for registry-1.docker.io
+2026-10-29T01:28:03.1016713Z #6 DONE 0.0s
+2026-10-29T01:28:03.1016909Z 
+2026-10-29T01:28:03.1017750Z #7 [worker internal] load metadata for docker.io/library/node:22-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
+2026-10-29T01:28:03.5693378Z #7 DONE 0.6s
+2026-10-29T01:28:03.5706319Z 
+2026-10-29T01:28:03.5710492Z #8 [api internal] load metadata for docker.io/library/python:3.13-slim-bookworm@sha256:93498f36dc7e24ef233bfdf6cc17d4b8bd32d94ee737143e906460d5f5a914c5
+2026-10-29T01:28:03.5711746Z #8 DONE 0.6s
+2026-10-29T01:28:03.5712347Z 
+2026-10-29T01:28:03.5713343Z #9 [database internal] load metadata for docker.io/pgvector/pgvector:0.8.1-pg17-bookworm@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+2026-10-29T01:28:03.5714566Z #9 DONE 0.6s
+2026-10-29T01:28:03.5714766Z 
+2026-10-29T01:28:03.5714955Z #10 [api internal] load .dockerignore
+2026-10-29T01:28:03.5715443Z #10 transferring context: 257B done
+2026-10-29T01:28:03.5715888Z #10 DONE 0.0s
+2026-10-29T01:28:03.5716085Z 
+2026-10-29T01:28:03.5716277Z #11 [database internal] load build context
+2026-10-29T01:28:03.5716583Z #11 transferring context: 1.14kB done
+2026-10-29T01:28:03.5716844Z #11 DONE 0.0s
+2026-10-29T01:28:03.5716955Z 
+2026-10-29T01:28:03.5717404Z #12 [api interface 1/6] FROM docker.io/library/node:22-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
+2026-10-29T01:28:03.5718334Z #12 resolve docker.io/library/node:22-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d done
+2026-10-29T01:28:03.6679835Z #12 sha256:ea11b74b986d520137cdef9a5346e447a00f275ecc4abc0055b7151226231e09 1.93kB / 1.93kB done
+2026-10-29T01:28:03.6683768Z #12 sha256:58a96d9752cfedf3c4fcfcbe2dabbad725c147f7003caa9f7899a3f414ada3fc 6.77kB / 6.77kB done
+2026-10-29T01:28:03.6685427Z #12 sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d 5.22kB / 5.22kB done
+2026-10-29T01:28:03.7868363Z #12 ...
+2026-10-29T01:28:03.7868949Z 
+2026-10-29T01:28:03.7869447Z #13 [api internal] load build context
+2026-10-29T01:28:03.7870177Z #13 transferring context: 34.52MB 0.2s done
+2026-10-29T01:28:03.7870907Z #13 DONE 0.2s
+2026-10-29T01:28:03.8889013Z 
+2026-10-29T01:28:03.8890864Z #14 [database 1/4] FROM docker.io/pgvector/pgvector:0.8.1-pg17-bookworm@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+2026-10-29T01:28:03.8893175Z #14 resolve docker.io/pgvector/pgvector:0.8.1-pg17-bookworm@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21 0.0s done
+2026-10-29T01:28:03.8894948Z #14 sha256:9f4a0348ad2ec5ea06571cfc7134ae1aed6319cdb76ecc131872b8ed2a105520 1.17kB / 1.17kB 0.2s done
+2026-10-29T01:28:03.8896396Z #14 sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21 1.61kB / 1.61kB done
+2026-10-29T01:28:03.8897743Z #14 sha256:99a149d3c84cfb0f32d8da7d72737e4643468787220af2223418730f8e9e9cdc 3.34kB / 3.34kB done
+2026-10-29T01:28:03.8899189Z #14 sha256:4831516dd0cb86845f5f902cb9b9d25b5c853152c337eb57e4737a9b7e2a2eb9 28.23MB / 28.23MB 0.3s done
+2026-10-29T01:28:03.8900622Z #14 sha256:6b6aac9d7476b54400e8b96cdeb340741bdab230052598f7b9ab26b8f49cd54c 4.53MB / 4.53MB 0.1s done
+2026-10-29T01:28:03.8902102Z #14 sha256:5090c7fd921d75d8984233faaf8fb0d8ad18ddc38f912fd1261f9999b5d214a7 11.37kB / 11.37kB done
+2026-10-29T01:28:03.8903597Z #14 sha256:99bb4ce30ad3dbe30ef29fc34e80964bc998ee35767e5c048cc98e7e2063c6d3 8.07MB / 8.07MB 0.3s done
+2026-10-29T01:28:03.8904862Z #14 sha256:d8a310896f84854a3b3c0d590084f78fda655f5be960f44b52b44e4bee12a1bd 1.25MB / 1.25MB 0.3s done
+2026-10-29T01:28:03.8906106Z #14 sha256:a6809e067bc1457bbebbb5f2e12e88976cde0b8f97cd7c714d2bc41acdf43a50 3.14kB / 3.14kB 0.3s done
+2026-10-29T01:28:03.8907141Z #14 sha256:9da35c01411f0c1ec986b2dbee214f6e3c055adeb1ac2a3846aebaecb40a6c0e 116B / 116B 0.3s done
+2026-10-29T01:28:03.8907811Z #14 sha256:31b6f2223c4b872741747b67ec53291fefc3616472bdb57456f3690547747c06 1.20MB / 1.20MB 0.3s done
+2026-10-29T01:28:03.8908479Z #14 extracting sha256:4831516dd0cb86845f5f902cb9b9d25b5c853152c337eb57e4737a9b7e2a2eb9 0.1s
+2026-10-29T01:28:03.8909144Z #14 sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 3.15MB / 112.76MB 0.4s
+2026-10-29T01:28:03.8909830Z #14 sha256:a7ef49b2a615db694a3f2bf6b14f1424c6ea299dad307a0a343010ca4a91e47d 10.30kB / 10.30kB 0.4s done
+2026-10-29T01:28:03.8910779Z #14 sha256:4d2363af18250194a7e05ea493c0051ca3eb4f6e2bbd6af27e4abae6da2e9970 0B / 168B 0.4s
+2026-10-29T01:28:03.8911399Z #14 sha256:29d37472e7c3c6f84d2772810b67a1d8db6ac6784d9338118bc9a9454e96f319 0B / 128B 0.4s
+2026-10-29T01:28:04.0052480Z #14 sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 34.60MB / 112.76MB 0.5s
+2026-10-29T01:28:04.0053859Z #14 sha256:4d2363af18250194a7e05ea493c0051ca3eb4f6e2bbd6af27e4abae6da2e9970 168B / 168B 0.5s done
+2026-10-29T01:28:04.0055169Z #14 sha256:29d37472e7c3c6f84d2772810b67a1d8db6ac6784d9338118bc9a9454e96f319 128B / 128B 0.4s done
+2026-10-29T01:28:04.0056414Z #14 sha256:8cced4a98c7e92fb825f48e89b55c90232a0aaa90d2e2f2fb56be9c9b5a0b7f5 0B / 186B 0.5s
+2026-10-29T01:28:04.0057458Z #14 sha256:4a14fbbe260a357c15864b585857d904570ae664a5f15e28c936ff2975fd5341 5.84kB / 5.84kB 0.5s done
+2026-10-29T01:28:04.0058507Z #14 sha256:4909bfb5f5ed3d62c480a11910d2ec25b7eb38034dd4f881a1fb63c7a2c2a704 0B / 123.11kB 0.5s
+2026-10-29T01:28:04.1054184Z #14 sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 56.62MB / 112.76MB 0.6s
+2026-10-29T01:28:04.1057716Z #14 sha256:8cced4a98c7e92fb825f48e89b55c90232a0aaa90d2e2f2fb56be9c9b5a0b7f5 186B / 186B 0.5s done
+2026-10-29T01:28:04.1059663Z #14 sha256:4909bfb5f5ed3d62c480a11910d2ec25b7eb38034dd4f881a1fb63c7a2c2a704 123.11kB / 123.11kB 0.5s done
+2026-10-29T01:28:04.1060994Z #14 sha256:3e1ddef0ec36c3ef0f1242ad22ede16c6ae7a582f1805962a54562954fcf840d 0B / 1.45MB 0.6s
+2026-10-29T01:28:04.2128806Z #14 sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 80.74MB / 112.76MB 0.7s
+2026-10-29T01:28:04.2130787Z #14 sha256:3e1ddef0ec36c3ef0f1242ad22ede16c6ae7a582f1805962a54562954fcf840d 1.45MB / 1.45MB 0.6s done
+2026-10-29T01:28:04.3175085Z #14 sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 102.76MB / 112.76MB 0.8s
+2026-10-29T01:28:04.4666042Z #14 sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 112.76MB / 112.76MB 0.9s done
+2026-10-29T01:28:05.4258709Z #14 extracting sha256:4831516dd0cb86845f5f902cb9b9d25b5c853152c337eb57e4737a9b7e2a2eb9 1.5s done
+2026-10-29T01:28:05.4260022Z #14 extracting sha256:9f4a0348ad2ec5ea06571cfc7134ae1aed6319cdb76ecc131872b8ed2a105520 done
+2026-10-29T01:28:05.5172753Z #14 extracting sha256:6b6aac9d7476b54400e8b96cdeb340741bdab230052598f7b9ab26b8f49cd54c
+2026-10-29T01:28:05.6768089Z #14 extracting sha256:6b6aac9d7476b54400e8b96cdeb340741bdab230052598f7b9ab26b8f49cd54c 0.1s done
+2026-10-29T01:28:05.8077549Z #14 extracting sha256:d8a310896f84854a3b3c0d590084f78fda655f5be960f44b52b44e4bee12a1bd 0.0s done
+2026-10-29T01:28:05.8078417Z #14 extracting sha256:99bb4ce30ad3dbe30ef29fc34e80964bc998ee35767e5c048cc98e7e2063c6d3
+2026-10-29T01:28:06.2554453Z #14 extracting sha256:99bb4ce30ad3dbe30ef29fc34e80964bc998ee35767e5c048cc98e7e2063c6d3 0.4s done
+2026-10-29T01:28:06.3614756Z #14 extracting sha256:31b6f2223c4b872741747b67ec53291fefc3616472bdb57456f3690547747c06 0.1s done
+2026-10-29T01:28:06.4814676Z #14 extracting sha256:9da35c01411f0c1ec986b2dbee214f6e3c055adeb1ac2a3846aebaecb40a6c0e done
+2026-10-29T01:28:06.4815670Z #14 extracting sha256:a6809e067bc1457bbebbb5f2e12e88976cde0b8f97cd7c714d2bc41acdf43a50 done
+2026-10-29T01:28:06.6158173Z #14 extracting sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 0.1s
+2026-10-29T01:28:07.6035112Z #14 ...
+2026-10-29T01:28:07.6035942Z 
+2026-10-29T01:28:07.6037266Z #15 [api service  1/11] FROM docker.io/library/python:3.13-slim-bookworm@sha256:93498f36dc7e24ef233bfdf6cc17d4b8bd32d94ee737143e906460d5f5a914c5
+2026-10-29T01:28:07.6039307Z #15 resolve docker.io/library/python:3.13-slim-bookworm@sha256:93498f36dc7e24ef233bfdf6cc17d4b8bd32d94ee737143e906460d5f5a914c5 0.0s done
+2026-10-29T01:28:07.6044360Z #15 sha256:93498f36dc7e24ef233bfdf6cc17d4b8bd32d94ee737143e906460d5f5a914c5 6.55kB / 6.55kB done
+2026-10-29T01:28:07.6053019Z #15 sha256:89c04d97d1f3f0a04ea357a27d000ba4efb18536d2d68a54611f76d5c1b5fe99 1.75kB / 1.75kB done
+2026-10-29T01:28:07.6054989Z #15 sha256:776ea2fc1a694be6b8bccaf2398b70711ac543dd97410fe777971020a4228030 5.68kB / 5.68kB done
+2026-10-29T01:28:07.6056486Z #15 sha256:11422d7ca1a44390a32bd8d8d9dc5946b4d053b3bbd9507d682e35584ba84a26 28.25MB / 28.25MB 0.7s done
+2026-10-29T01:28:07.6058668Z #15 sha256:cda0903526919b7715f3c98b43c9f3da61d2fffa8c2d8297417e84553a275674 3.98MB / 3.98MB 1.0s done
+2026-10-29T01:28:07.6060902Z #15 sha256:f1b716e4ab9183b4a656b9b9b6addda022306b4e4d3280c2226e7ec3817bfb4b 12.61MB / 12.61MB 1.1s done
+2026-10-29T01:28:07.6062925Z #15 sha256:9c8f8aab04eb677f5e06ce789ec6f1a7ae0ea42ea81ca4add23f293452631c16 250B / 250B 1.1s done
+2026-10-29T01:28:07.6064427Z #15 extracting sha256:11422d7ca1a44390a32bd8d8d9dc5946b4d053b3bbd9507d682e35584ba84a26 0.8s
+2026-10-29T01:28:07.6065596Z #15 extracting sha256:cda0903526919b7715f3c98b43c9f3da61d2fffa8c2d8297417e84553a275674 0.8s done
+2026-10-29T01:28:07.6066864Z #15 extracting sha256:f1b716e4ab9183b4a656b9b9b6addda022306b4e4d3280c2226e7ec3817bfb4b 0.8s done
+2026-10-29T01:28:07.6068006Z #15 extracting sha256:9c8f8aab04eb677f5e06ce789ec6f1a7ae0ea42ea81ca4add23f293452631c16 done
+2026-10-29T01:28:07.6068485Z #15 ...
+2026-10-29T01:28:07.6068598Z 
+2026-10-29T01:28:07.6069066Z #14 [database 1/4] FROM docker.io/pgvector/pgvector:0.8.1-pg17-bookworm@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+2026-10-29T01:28:07.7059325Z #14 ...
+2026-10-29T01:28:07.7060656Z 
+2026-10-29T01:28:07.7061428Z #16 [worker service  2/11] WORKDIR /app
+2026-10-29T01:28:07.7062576Z #16 DONE 0.0s
+2026-10-29T01:28:07.7062977Z 
+2026-10-29T01:28:07.7063274Z #17 [api service  3/11] COPY pyproject.toml uv.lock ./
+2026-10-29T01:28:07.7063840Z #17 DONE 0.0s
+2026-10-29T01:28:07.7064043Z 
+2026-10-29T01:28:07.7064628Z #14 [database 1/4] FROM docker.io/pgvector/pgvector:0.8.1-pg17-bookworm@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+2026-10-29T01:28:07.9287660Z #14 ...
+2026-10-29T01:28:07.9288163Z 
+2026-10-29T01:28:07.9289168Z #12 [worker interface 1/6] FROM docker.io/library/node:22-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
+2026-10-29T01:28:07.9290951Z #12 sha256:11422d7ca1a44390a32bd8d8d9dc5946b4d053b3bbd9507d682e35584ba84a26 28.25MB / 28.25MB 0.7s done
+2026-10-29T01:28:07.9292664Z #12 sha256:b43ad0aedb87ae13912d52799d0d5552c146dced05197a7fa83b117cb3308906 3.31kB / 3.31kB 0.7s done
+2026-10-29T01:28:07.9294120Z #12 sha256:ba8be34911c2eabcd63c9da67f2e8887ddf912df62c1223ca377ef9e9655cfba 49.89MB / 49.89MB 1.0s done
+2026-10-29T01:28:07.9295550Z #12 sha256:696628b66b50a8ea2d374542f47107bc19fb3fd29825211da5c68b74a1b01555 1.71MB / 1.71MB 0.9s done
+2026-10-29T01:28:07.9296965Z #12 extracting sha256:11422d7ca1a44390a32bd8d8d9dc5946b4d053b3bbd9507d682e35584ba84a26 1.4s done
+2026-10-29T01:28:07.9298270Z #12 sha256:9d58805976c12f11013d188c510c3520e3f061c1b311d4905afe5865aa496e63 449B / 449B 1.0s done
+2026-10-29T01:28:07.9299531Z #12 extracting sha256:b43ad0aedb87ae13912d52799d0d5552c146dced05197a7fa83b117cb3308906 done
+2026-10-29T01:28:07.9300855Z #12 extracting sha256:ba8be34911c2eabcd63c9da67f2e8887ddf912df62c1223ca377ef9e9655cfba 1.9s done
+2026-10-29T01:28:07.9302438Z #12 extracting sha256:696628b66b50a8ea2d374542f47107bc19fb3fd29825211da5c68b74a1b01555 0.1s done
+2026-10-29T01:28:07.9303729Z #12 extracting sha256:9d58805976c12f11013d188c510c3520e3f061c1b311d4905afe5865aa496e63 done
+2026-10-29T01:28:07.9304669Z #12 DONE 4.4s
+2026-10-29T01:28:07.9305020Z 
+2026-10-29T01:28:07.9305394Z #18 [worker interface 2/6] WORKDIR /build/frontend
+2026-10-29T01:28:07.9306058Z #18 DONE 0.0s
+2026-10-29T01:28:07.9306401Z 
+2026-10-29T01:28:07.9307066Z #19 [worker interface 3/6] COPY frontend/package.json frontend/package-lock.json frontend/.npmrc ./
+2026-10-29T01:28:07.9313043Z #19 DONE 0.0s
+2026-10-29T01:28:07.9313499Z 
+2026-10-29T01:28:07.9314438Z #14 [database 1/4] FROM docker.io/pgvector/pgvector:0.8.1-pg17-bookworm@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+2026-10-29T01:28:10.4500952Z #14 extracting sha256:10643155f46305ff6e0d6ca0552fab98e1e0f2f9925d4b489cf687817f93dab3 3.8s done
+2026-10-29T01:28:10.6733144Z #14 extracting sha256:a7ef49b2a615db694a3f2bf6b14f1424c6ea299dad307a0a343010ca4a91e47d
+2026-10-29T01:28:10.7767207Z #14 extracting sha256:a7ef49b2a615db694a3f2bf6b14f1424c6ea299dad307a0a343010ca4a91e47d done
+2026-10-29T01:28:10.7769032Z #14 extracting sha256:29d37472e7c3c6f84d2772810b67a1d8db6ac6784d9338118bc9a9454e96f319 done
+2026-10-29T01:28:10.7770700Z #14 extracting sha256:4d2363af18250194a7e05ea493c0051ca3eb4f6e2bbd6af27e4abae6da2e9970 done
+2026-10-29T01:28:10.7772284Z #14 extracting sha256:4a14fbbe260a357c15864b585857d904570ae664a5f15e28c936ff2975fd5341
+2026-10-29T01:28:10.8908692Z #14 extracting sha256:4a14fbbe260a357c15864b585857d904570ae664a5f15e28c936ff2975fd5341 done
+2026-10-29T01:28:10.8911367Z #14 extracting sha256:8cced4a98c7e92fb825f48e89b55c90232a0aaa90d2e2f2fb56be9c9b5a0b7f5 done
+2026-10-29T01:28:10.8913539Z #14 extracting sha256:4909bfb5f5ed3d62c480a11910d2ec25b7eb38034dd4f881a1fb63c7a2c2a704 done
+2026-10-29T01:28:10.8915546Z #14 extracting sha256:3e1ddef0ec36c3ef0f1242ad22ede16c6ae7a582f1805962a54562954fcf840d
+2026-10-29T01:28:11.0662869Z #14 extracting sha256:3e1ddef0ec36c3ef0f1242ad22ede16c6ae7a582f1805962a54562954fcf840d 0.1s done
+2026-10-29T01:28:11.0664943Z #14 DONE 7.6s
+2026-10-29T01:28:11.0665200Z 
+2026-10-29T01:28:11.0667084Z #20 [worker service  4/11] RUN pip install --no-cache-dir uv==0.11.23 && uv export --locked --no-dev --no-emit-project --format requirements-txt --output-file /tmp/requirements.txt && pip install --no-cache-dir --require-hashes -r /tmp/requirements.txt
+2026-10-29T01:28:11.0668560Z #20 2.930 Collecting uv==0.11.23
+2026-10-29T01:28:11.0669345Z #20 3.070   Downloading uv-0.11.23-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-10-29T01:28:11.0670105Z #20 3.120 Downloading uv-0.11.23-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25.4 MB)
+2026-10-29T01:28:11.3397041Z #20 3.595    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.4/25.4 MB 58.1 MB/s  0:00:00
+2026-10-29T01:28:11.5425143Z #20 3.731 Installing collected packages: uv
+2026-10-29T01:28:11.8843204Z #20 4.079 Successfully installed uv-0.11.23
+2026-10-29T01:28:11.8846112Z #20 4.080 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-29T01:28:12.1020265Z #20 4.465 Using CPython 3.13.18 interpreter at: /usr/local/bin/python3
+2026-10-29T01:28:12.3443117Z #20 ...
+2026-10-29T01:28:12.3443762Z 
+2026-10-29T01:28:12.3444270Z #21 [api interface 4/6] RUN npm ci
+2026-10-29T01:28:12.3445562Z #21 1.896 npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-29T01:28:12.3446839Z #21 4.051 
+2026-10-29T01:28:12.3447385Z #21 4.051 added 110 packages in 4s
+2026-10-29T01:28:12.3448068Z #21 4.052 npm notice
+2026-10-29T01:28:12.3448889Z #21 4.052 npm notice New major version of npm available! 10.9.9 -> 12.2.1
+2026-10-29T01:28:12.3450019Z #21 4.052 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+2026-10-29T01:28:12.3451105Z #21 4.052 npm notice To update run: npm install -g npm@12.2.1
+2026-10-29T01:28:12.3452116Z #21 4.052 npm notice
+2026-10-29T01:28:12.3452675Z #21 DONE 4.3s
+2026-10-29T01:28:12.3452902Z 
+2026-10-29T01:28:12.3453114Z #22 [worker interface 5/6] COPY frontend/ ./
+2026-10-29T01:28:12.3453612Z #22 DONE 0.0s
+2026-10-29T01:28:12.3453824Z 
+2026-10-29T01:28:12.3455111Z #20 [worker service  4/11] RUN pip install --no-cache-dir uv==0.11.23 && uv export --locked --no-dev --no-emit-project --format requirements-txt --output-file /tmp/requirements.txt && pip install --no-cache-dir --require-hashes -r /tmp/requirements.txt
+2026-10-29T01:28:12.3456923Z #20 4.474 # This file was autogenerated by uv via the following command:
+2026-10-29T01:28:12.3458441Z #20 4.474 #    uv export --locked --no-dev --no-emit-project --format requirements-txt --output-file /tmp/requirements.txt
+2026-10-29T01:28:12.3459327Z #20 4.474 absl-py==2.5.1 \
+2026-10-29T01:28:12.3460060Z #20 4.474     --hash=sha256:286e71c82c1a38e75bbcf185f9b37d0305ad7786535107cb49bf4df9ff2e1f95 \
+2026-10-29T01:28:12.3461145Z #20 4.474     --hash=sha256:721200f2f0e9960f2ca9dc3a2a706b201f5f75d812c158f059cbbe29eeafbdb8
+2026-10-29T01:28:12.3462160Z #20 4.474     # via ortools
+2026-10-29T01:28:12.3462596Z #20 4.474 annotated-doc==0.0.5 \
+2026-10-29T01:28:12.3463355Z #20 4.474     --hash=sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101 \
+2026-10-29T01:28:12.3464076Z #20 4.474     --hash=sha256:c7e58ce09192557605d8bbd92836d7e1d520ac9580096042c0bfd197efacf1bb
+2026-10-29T01:28:12.3464536Z #20 4.474     # via fastapi
+2026-10-29T01:28:12.3464863Z #20 4.474 annotated-types==0.8.0 \
+2026-10-29T01:28:12.3465313Z #20 4.474     --hash=sha256:13b2beaad985e05e2d6407ee4c4f35590b11f8d693a258a561055cac8f64cab7 \
+2026-10-29T01:28:12.3465955Z #20 4.474     --hash=sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0
+2026-10-29T01:28:12.3466388Z #20 4.474     # via pydantic
+2026-10-29T01:28:12.3466639Z #20 4.474 anyio==4.15.1 \
+2026-10-29T01:28:12.3467464Z #20 4.474     --hash=sha256:6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101 \
+2026-10-29T01:28:12.3468675Z #20 4.474     --hash=sha256:9f28306018cbd6d329e64a36d58256edff76dd996fe423bc957326e578b82a94
+2026-10-29T01:28:12.3469400Z #20 4.474     # via
+2026-10-29T01:28:12.3469632Z #20 4.474     #   httpx
+2026-10-29T01:28:12.3469872Z #20 4.474     #   starlette
+2026-10-29T01:28:12.3470109Z #20 4.474 certifi==2026.10.23 \
+2026-10-29T01:28:12.3470524Z #20 4.474     --hash=sha256:a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd \
+2026-10-29T01:28:12.3471140Z #20 4.474     --hash=sha256:e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1
+2026-10-29T01:28:12.3471563Z #20 4.474     # via
+2026-10-29T01:28:12.3471788Z #20 4.474     #   httpcore
+2026-10-29T01:28:12.3472407Z #20 4.474     #   httpx
+2026-10-29T01:28:12.3472787Z #20 4.474     #   pyproj
+2026-10-29T01:28:12.3473353Z #20 4.474 cffi==2.1.1 ; platform_python_implementation != 'PyPy' \
+2026-10-29T01:28:12.3474341Z #20 4.474     --hash=sha256:19ee6127ee34de7d83ce3d371ebc5ed91addbdcc39f9ab15ce4eb35a4e534971 \
+2026-10-29T01:28:12.3475478Z #20 4.474     --hash=sha256:1aa5645c30469b09530c4ebca77ebf8f17618293c58f8549cb1a543a50236e7d \
+2026-10-29T01:28:12.3476586Z #20 4.474     --hash=sha256:31348097ff5bbe827ccc41795d4dd099d9f0625e7def00ee653c137a490c2a6c \
+2026-10-29T01:28:12.3477686Z #20 4.474     --hash=sha256:334644fbac4eff73d985a17a91226df55d0f394160c4cfb880e084c8f7161cac \
+2026-10-29T01:28:12.3478801Z #20 4.474     --hash=sha256:63bbfd5ded17c4840ac07cd8f1c21ba9d9708141f840b324f422f41b207e3973 \
+2026-10-29T01:28:12.3479916Z #20 4.474     --hash=sha256:6a8dddef476fab96d066d578fc88526767b836ab5ab21754e1d5bf3879c31c7c \
+2026-10-29T01:28:12.3481036Z #20 4.474     --hash=sha256:9d2055050ea716bd38b7f7f1579c275386646b4894c155a3e2f3cd62ed41b7c6 \
+2026-10-29T01:28:12.3482467Z #20 4.474     --hash=sha256:a2d7755bef5a12ed488f4ef1f1b69ee9191d7396083b755a5d2295f6edb4768b \
+2026-10-29T01:28:12.3483632Z #20 4.474     --hash=sha256:a931079504ecc49efed7744c476a5c343a92fabf66dec2db95edb1b2fdc770e2 \
+2026-10-29T01:28:12.3484767Z #20 4.474     --hash=sha256:aa9511c62d14da7aacc9b4bf51f3f697a621e83b2d6919008243c3aad168eea3 \
+2026-10-29T01:28:12.3485924Z #20 4.474     --hash=sha256:b5bdfd1c873d4e093aabc0ca84c4ca6dbc4f752afb5c86f146d9742580c9da2e \
+2026-10-29T01:28:12.3487060Z #20 4.474     --hash=sha256:dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be \
+2026-10-29T01:28:12.3488198Z #20 4.474     --hash=sha256:e0bcb7e0f677f543555d2adff3bf19c05f66cdb4796e5ff602442ab2fe3c4ef7 \
+2026-10-29T01:28:12.3489316Z #20 4.474     --hash=sha256:f16c709686a78c727bbbf059f92b0bf41c6fc60deec706d2dc19f529175a6125 \
+2026-10-29T01:28:12.3490425Z #20 4.474     --hash=sha256:fcd22650c908d7b7da162bbfaab594a1227a15d1643a98c68b122ac642fa2264
+2026-10-29T01:28:12.3492286Z #20 4.474     # via cryptography
+2026-10-29T01:28:12.3492766Z #20 4.474 click==8.5.0 \
+2026-10-29T01:28:12.3493510Z #20 4.474     --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360 \
+2026-10-29T01:28:12.3494652Z #20 4.474     --hash=sha256:ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34
+2026-10-29T01:28:12.3495462Z #20 4.474     # via uvicorn
+2026-10-29T01:28:12.3495901Z #20 4.474 cryptography==50.0.2 \
+2026-10-29T01:28:12.3496683Z #20 4.474     --hash=sha256:0ddc924c04591c2811ca024d62ecad4f7f6f08af8939c211438f48a16bd23602 \
+2026-10-29T01:28:12.3497805Z #20 4.474     --hash=sha256:0ec5f09541743261e66e291b4a0cbf0fb2997aeaab6d9e9c740b9dba1b58d1c2 \
+2026-10-29T01:28:12.3498927Z #20 4.474     --hash=sha256:1981f1db4630889b9ef7803fadef12b056f428cb6b85c27ba57b774793b6093c \
+2026-10-29T01:28:12.3500046Z #20 4.474     --hash=sha256:25784ce8b9621c90c643efb9e1e2162ab3b0224cae446ad5e70e7fcb1ce18b51 \
+2026-10-29T01:28:12.3501154Z #20 4.474     --hash=sha256:4061c0079120205fb760c58acab6443e217307dcf05e3702cf970e0689972856 \
+2026-10-29T01:28:12.3502745Z #20 4.474     --hash=sha256:4e81d95e5bafc2d6e34e4bed780e53e4d5b9a2f928573428aa4d35fbec1eb0de \
+2026-10-29T01:28:12.3504113Z #20 4.474     --hash=sha256:58a0c478eeca76fe5e07993c5a0703def34a6dc6a0cda4f5564639b33112ffe7 \
+2026-10-29T01:28:12.3505311Z #20 4.474     --hash=sha256:58ddb5a8e3179d12f19e4ea34d2d32e9d63a4baa142c875c1eb59f41b7243acd \
+2026-10-29T01:28:12.3506298Z #20 4.474     --hash=sha256:630ebfea3bf689d075f82316324ff7433dc447fe6bc1bfc76524b74b4a9567d2 \
+2026-10-29T01:28:12.3507361Z #20 4.474     --hash=sha256:6f8700550aa1474a91e5dc07049c46f98b423b5b1ddd0483e0b51362eeeaf5be \
+2026-10-29T01:28:12.3508428Z #20 4.474     --hash=sha256:79def8d059362e7831389ed3be0ecdf58a89386e1271e35dd9f5af84e81bffd0 \
+2026-10-29T01:28:12.3509478Z #20 4.474     --hash=sha256:7a8701d6b584d76e909e3d305b7d126b41439876a5aaf76cddc67fc230eafa2e \
+2026-10-29T01:28:12.3510571Z #20 4.474     --hash=sha256:7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c \
+2026-10-29T01:28:12.3511646Z #20 4.474     --hash=sha256:7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5 \
+2026-10-29T01:28:12.3512934Z #20 4.474     --hash=sha256:85d0d9a31b9098e98534226d5686b47264b95e62ce459dc2e62fdfc809f9fe93 \
+2026-10-29T01:28:12.3513992Z #20 4.474     --hash=sha256:87e9ce85beb6b328ba370cc6e6aea483c92617b4c95b1d33a49297eb662bfb04 \
+2026-10-29T01:28:12.3515093Z #20 4.474     --hash=sha256:9c8402a82ea0dc4ceeab793db05f0fafa8ca139ca34fcde5df0f596103c74107 \
+2026-10-29T01:28:12.3516238Z #20 4.474     --hash=sha256:9dab55f57c74c3cad24c323bacbbd04be4705ba6eb0d92e920b1fc4837ed5079 \
+2026-10-29T01:28:12.3517454Z #20 4.474     --hash=sha256:a582ab2ae1d34f67112cadc86702774c9ea4374df6bca6afe672817203c99134 \
+2026-10-29T01:28:12.3518580Z #20 4.474     --hash=sha256:a6557e5f38e065ca9fbdaf7cfc7435ecb1d113aa81a022d1b51921ee7432e227 \
+2026-10-29T01:28:12.3519700Z #20 4.474     --hash=sha256:ac9ed99d81760c62fe89d5f0815cdfa1ba9a35141cf30f1c2d044f04b4803d2e \
+2026-10-29T01:28:12.3520788Z #20 4.474     --hash=sha256:b13478603dcd0a2479ff8e87e2c19a7d525734686fe3c49542472293a204212d \
+2026-10-29T01:28:12.3523238Z #20 4.474     --hash=sha256:c423ab384a46c4dff7217b2ea5ba2e11cffdeab6441acd04cf65a369caf0366c \
+2026-10-29T01:28:12.3524756Z #20 4.474     --hash=sha256:c5e67125c7dca78d199ec4e116aa93dbb83494808ecbb8211a2cb09b1bf41dbd \
+2026-10-29T01:28:12.3525924Z #20 4.474     --hash=sha256:c71be1cbfa5cd9a41ee452acf1eccd82b2c05950358b106ec8ceb83411d1a020 \
+2026-10-29T01:28:12.3527065Z #20 4.474     --hash=sha256:cbc8738fd8526d80f35cb3a40d41f41a2e7030bb3b18b09a6778ef63d291c2fd \
+2026-10-29T01:28:12.3528164Z #20 4.474     --hash=sha256:ce47f66801c20ec6c6632453bb5960fe38939e9306970b48b3a5a26de7745d94 \
+2026-10-29T01:28:12.3529265Z #20 4.474     --hash=sha256:d370b8d1dfcdf7130178137f6fbee6140774a1acc6cacefc4b42643ec11d0a3a \
+2026-10-29T01:28:12.3530374Z #20 4.474     --hash=sha256:d38cdff612d06fa6a32840d5e1b1f7a27cee4a349aa9085d94a67789d6bfd408 \
+2026-10-29T01:28:12.3531748Z #20 4.474     --hash=sha256:dfe9763530994147d9af1def057a5b9658b00e8f8fe8743d144d1e0911c2e454 \
+2026-10-29T01:28:12.3533153Z #20 4.474     --hash=sha256:e105ab60406787da31fccc883fc0f733af1efd78f0136a4599692c4083a73d0c \
+2026-10-29T01:28:12.3534347Z #20 4.474     --hash=sha256:e275096ea1e60cc595cda2836fd4a6c725d1125108b868be17f53684d164e2cc \
+2026-10-29T01:28:12.3535435Z #20 4.474     --hash=sha256:edc3342adf8f697fc5f59c887a304356f147b397809440ed64e2fa6af2f50f37 \
+2026-10-29T01:28:12.3536535Z #20 4.474     --hash=sha256:ee247f5c245c9a2fe7c8e2214e295918838e44e00a45a6718451e4004219e767 \
+2026-10-29T01:28:12.3537610Z #20 4.474     --hash=sha256:f21e8a22c8605750c7af886bab299a363721264061b4ac0a30efb73cfd58efc5 \
+2026-10-29T01:28:12.3538703Z #20 4.474     --hash=sha256:f265528741e048bce55c3463ed721fb0aa45a5888d8add8cfeccb3035451bbdc \
+2026-10-29T01:28:12.3539786Z #20 4.474     --hash=sha256:f2f9bd7f90c64fe89253f0a2c05e3c4856072660429ce8831b4235bf29403a67 \
+2026-10-29T01:28:12.3540892Z #20 4.474     --hash=sha256:f9f6143a8c75945eb960d9eb98905a441394abfa24afaae239d514ffb2586480 \
+2026-10-29T01:28:12.3542212Z #20 4.474     --hash=sha256:fa8f5efb344d6908a1ce62f4a24e2e5780f825d6f53f5f50ec5ffacac72936cb \
+2026-10-29T01:28:12.3543580Z #20 4.474     --hash=sha256:fdd28f912fccfec1846a94e2e1e8f9b0012f557f0c46fe4f3eb0d7a87afcf90b
+2026-10-29T01:28:12.3544408Z #20 4.474     # via pyjwt
+2026-10-29T01:28:12.3544839Z #20 4.474 defusedxml==0.7.1 \
+2026-10-29T01:28:12.3545586Z #20 4.474     --hash=sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69 \
+2026-10-29T01:28:12.3546671Z #20 4.474     --hash=sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61
+2026-10-29T01:28:12.3547527Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3548087Z #20 4.474 fastapi==0.162.0 \
+2026-10-29T01:28:12.3548821Z #20 4.474     --hash=sha256:3785963de305dd09912426cb81f2d230fce98ab3521cdfe97265c8d14983128c \
+2026-10-29T01:28:12.3549891Z #20 4.474     --hash=sha256:6a22c1e2e6e32e0633ee7e170f00009a29b8228b16feb219ee42f32fd8d88a8f
+2026-10-29T01:28:12.3550733Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3552707Z #20 4.474 greenlet==3.5.6 ; platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64' \
+2026-10-29T01:28:12.3554698Z #20 4.474     --hash=sha256:06c0e933290fba8ffe53ead4ae1b8044b0e9754b75cebf381aa2bc3e50d82fac \
+2026-10-29T01:28:12.3555805Z #20 4.474     --hash=sha256:5b602b4201b965a8354d74e232364a66ff243dd142e350d035f46169bb36e13d \
+2026-10-29T01:28:12.3556935Z #20 4.474     --hash=sha256:876077e7ebb8c84ed068e2b23d4c62ebb010d60df84b9591af1be2f39010ffb2 \
+2026-10-29T01:28:12.3557947Z #20 4.474     --hash=sha256:8e67c43bdfc88d5fee6db0d3e40175b362fc95fb85f0412d233b9b203c53a575 \
+2026-10-29T01:28:12.3558974Z #20 4.474     --hash=sha256:c75116c9de79949de23006e2d9b35ee82874c594fcf5c0311b439acaa14b8441 \
+2026-10-29T01:28:12.3560001Z #20 4.474     --hash=sha256:cad5782f93f7f738b62c6527b6f32a60694d924029f299a8b524758cfa53d815 \
+2026-10-29T01:28:12.3561042Z #20 4.474     --hash=sha256:df19e2d0b1620039af5102563fbd96e8938c7f5c3f5828528d641d9fc585525e \
+2026-10-29T01:28:12.3562373Z #20 4.474     --hash=sha256:f96f0e30b5a95c7631b12bfe214cbc90ec8fe8cfa36920596c10514a65743519 \
+2026-10-29T01:28:12.3563415Z #20 4.474     --hash=sha256:f98e8215e172f567ce80eeaed9107fb4d32b6c44f26983d9b8334658136a205a
+2026-10-29T01:28:12.3564192Z #20 4.474     # via sqlalchemy
+2026-10-29T01:28:12.3564610Z #20 4.474 h11==0.16.0 \
+2026-10-29T01:28:12.3565356Z #20 4.474     --hash=sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1 \
+2026-10-29T01:28:12.3566490Z #20 4.474     --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86
+2026-10-29T01:28:12.3567289Z #20 4.474     # via
+2026-10-29T01:28:12.3567694Z #20 4.474     #   httpcore
+2026-10-29T01:28:12.3568604Z #20 4.474     #   uvicorn
+2026-10-29T01:28:12.3569171Z #20 4.474 Resolved 70 packages in 0.92ms
+2026-10-29T01:28:12.3569693Z #20 4.474 httpcore==1.0.9 \
+2026-10-29T01:28:12.3570430Z #20 4.474     --hash=sha256:2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55 \
+2026-10-29T01:28:12.3571551Z #20 4.474     --hash=sha256:6e34463af53fd2ab5d807f399a9b45ea31c3dfa2276f15a2c3f00afff6e176e8
+2026-10-29T01:28:12.3572684Z #20 4.474     # via httpx
+2026-10-29T01:28:12.3573107Z #20 4.474 httpx==0.28.1 \
+2026-10-29T01:28:12.3573814Z #20 4.474     --hash=sha256:75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc \
+2026-10-29T01:28:12.3574885Z #20 4.474     --hash=sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad
+2026-10-29T01:28:12.3575778Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3576339Z #20 4.474 idna==3.20 \
+2026-10-29T01:28:12.3577079Z #20 4.474     --hash=sha256:a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44 \
+2026-10-29T01:28:12.3578205Z #20 4.474     --hash=sha256:ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c
+2026-10-29T01:28:12.3578979Z #20 4.474     # via
+2026-10-29T01:28:12.3579362Z #20 4.474     #   anyio
+2026-10-29T01:28:12.3579750Z #20 4.474     #   httpx
+2026-10-29T01:28:12.3580389Z #20 4.474 immutabledict==4.3.1 \
+2026-10-29T01:28:12.3581225Z #20 4.474     --hash=sha256:c9facdc0ff30fdb8e35bd16532026cac472a549e182c94fa201b51b25e4bf7bf \
+2026-10-29T01:28:12.3582620Z #20 4.474     --hash=sha256:f844a669106cfdc73f47b1a9da003782fb17dc955a54c80972e0d93d1c63c514
+2026-10-29T01:28:12.3583411Z #20 4.474     # via ortools
+2026-10-29T01:28:12.3583861Z #20 4.474 numpy==2.5.4 \
+2026-10-29T01:28:12.3584588Z #20 4.474     --hash=sha256:1c2e71b04c6cad90026e544501bbe0ab9290fa8a4d845e7e8c0d124fb429c988 \
+2026-10-29T01:28:12.3585752Z #20 4.474     --hash=sha256:2377da2dd3ba2c1200956acbab2a358c83b8e1f8531191672d1cd6ad83250d53 \
+2026-10-29T01:28:12.3586930Z #20 4.474     --hash=sha256:2fa3328f784fc8277fc48026f6cad516f5c561c5d8e2e39b3c9e0c8f23223b34 \
+2026-10-29T01:28:12.3588126Z #20 4.474     --hash=sha256:5258bc06526964be5face2fc6f756857a3f24f21ec3e72ca131337a75b165d6c \
+2026-10-29T01:28:12.3589308Z #20 4.474     --hash=sha256:6d6a71b9d9a97c03633aa12565ef2825ffa036cc1d99cfd50dacf0f128af4fe2 \
+2026-10-29T01:28:12.3590518Z #20 4.474     --hash=sha256:6ffa07666f8da0eef81d149934a626d0d95fbd6838432a33e66245423a9062c0 \
+2026-10-29T01:28:12.3591667Z #20 4.474     --hash=sha256:7415db95818b39ec475a5eea54d9e3b6bc83e3912158e46da3438cdce399804d \
+2026-10-29T01:28:12.3593090Z #20 4.474     --hash=sha256:8b4d2fd2d34e5f8c9235ee787de5631a37a28402b15cb80814df973d2be54129 \
+2026-10-29T01:28:12.3594243Z #20 4.474     --hash=sha256:9a94cf751c9ad8ebaa835bcd3d40dacf8534ad086b88c38029b65123c7999d2a \
+2026-10-29T01:28:12.3595403Z #20 4.474     --hash=sha256:b86966fbe4ad7de710422175572bcdc75fdedadfb54bc6fab7deabccddd7780b \
+2026-10-29T01:28:12.3596546Z #20 4.474     --hash=sha256:bc39ac66a7a9a3fbd6134fda43136b60ffde99c8f4501e64e0d2b24da137babf \
+2026-10-29T01:28:12.3597665Z #20 4.474     --hash=sha256:d8200f16437b289a5bb927c6e184eccc3e8389bc0070fea4cd5b9e13c1757959
+2026-10-29T01:28:12.3598466Z #20 4.474     # via
+2026-10-29T01:28:12.3598840Z #20 4.474     #   ortools
+2026-10-29T01:28:12.3599247Z #20 4.474     #   pandas
+2026-10-29T01:28:12.3599705Z #20 4.474 opentelemetry-api==1.45.1 \
+2026-10-29T01:28:12.3600518Z #20 4.474     --hash=sha256:aa38ed19bcc084ba42782a73255b3582283eced7ad6dddbd6695189e69adfb75 \
+2026-10-29T01:28:12.3601631Z #20 4.474     --hash=sha256:b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb
+2026-10-29T01:28:12.3602727Z #20 4.474     # via fastapi
+2026-10-29T01:28:12.3603161Z #20 4.474 ortools==9.15.6755 \
+2026-10-29T01:28:12.3603906Z #20 4.474     --hash=sha256:076565b803c85c4f87863e0616f537dd37f99c03e6f092e4068404f7b425d2b0 \
+2026-10-29T01:28:12.3605021Z #20 4.474     --hash=sha256:27a10474e62c9dceed37cfa0e4845c5ffaf792138ebf5b61483771b96f1290b6 \
+2026-10-29T01:28:12.3606163Z #20 4.474     --hash=sha256:2d1f2fb2088e8953ccb902e68ffd06032cce0c7dcf7268b6135f3b6c553ca52b \
+2026-10-29T01:28:12.3607677Z #20 4.474     --hash=sha256:82b4a8e6e4f9380b453ab5fa4382ea7ee91e628f9b8be89d9ad760b33fca3323 \
+2026-10-29T01:28:12.3608786Z #20 4.474     --hash=sha256:b85bd20259b146abce5e0721ce1bfd8fd273efc904216aa3be178c31b6d34057 \
+2026-10-29T01:28:12.3609931Z #20 4.474     --hash=sha256:caac1d48b967adb877da2abcaf82c28f0f908a7cc208a6a1bbe01bc69590816c \
+2026-10-29T01:28:12.3611070Z #20 4.474     --hash=sha256:ebd5aea00374e3aad7a78de59058aca5e871a26a3c385cd0860ef1d685d03c9a
+2026-10-29T01:28:12.3612184Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3612920Z #20 4.474 pandas==3.1.0 \
+2026-10-29T01:28:12.3613805Z #20 4.474     --hash=sha256:07807035ad66de0d833d68f9bee05801dbf08b88d56a233b0e9fd189372c3261 \
+2026-10-29T01:28:12.3615248Z #20 4.474     --hash=sha256:39c67ed9e56ad3ac0727dc2ae6a1eef766988c762d5ce2e2a162613d81c8990b \
+2026-10-29T01:28:12.3616647Z #20 4.474     --hash=sha256:54fed4a50b8321ff8d413b46b7e31a023cecefd06c7210c02aa980a9836428b2 \
+2026-10-29T01:28:12.3618009Z #20 4.474     --hash=sha256:5611344f9f0ed51619ac7acdbf72b86f5043801a66e3f8730c8971257082e8ad \
+2026-10-29T01:28:12.3619357Z #20 4.474     --hash=sha256:849d5019dead65944875ce21fbf71a2ca18e982164cd7367623cbda8567c3122 \
+2026-10-29T01:28:12.3620987Z #20 4.474     --hash=sha256:c1009f5b6819b81319cf177b4f01a2823ed54c81db8bd11cdf2375f42d064c02 \
+2026-10-29T01:28:12.3638830Z #20 4.474     --hash=sha256:c1e084760f3b275eed5863407d025b933d25f3247515fcc84bf664405e8bb3d2 \
+2026-10-29T01:28:12.3639980Z #20 4.474     --hash=sha256:de6d0fc96e8551b83f400bf212611a0b3a2b389594d20a2540dacc61b21e7bce \
+2026-10-29T01:28:12.3641158Z #20 4.474     --hash=sha256:ecb9b2d8a817b1e1ba1fdb90c0abe9eab31b4fdf2562b7a56b86ac66ace17e49
+2026-10-29T01:28:12.3642252Z #20 4.474     # via ortools
+2026-10-29T01:28:12.3642701Z #20 4.474 protobuf==6.33.5 \
+2026-10-29T01:28:12.3643469Z #20 4.474     --hash=sha256:3093804752167bcab3998bec9f1048baae6e29505adaf1afd14a37bddede533c \
+2026-10-29T01:28:12.3644623Z #20 4.474     --hash=sha256:69915a973dd0f60f31a08b8318b73eab2bd6a392c79184b3612226b0a3f8ec02 \
+2026-10-29T01:28:12.3645742Z #20 4.474     --hash=sha256:6ddcac2a081f8b7b9642c09406bc6a4290128fce5f471cddd165960bb9119e5c \
+2026-10-29T01:28:12.3646931Z #20 4.474     --hash=sha256:8afa18e1d6d20af15b417e728e9f60f3aa108ee76f23c3b2c07a2c3b546d3afd \
+2026-10-29T01:28:12.3648130Z #20 4.474     --hash=sha256:9b71e0281f36f179d00cbcb119cb19dec4d14a81393e5ea220f64b286173e190 \
+2026-10-29T01:28:12.3649282Z #20 4.474     --hash=sha256:a5cb85982d95d906df1e2210e58f8e4f1e3cdc088e52c921a041f9c9a0386de5 \
+2026-10-29T01:28:12.3650427Z #20 4.474     --hash=sha256:cbf16ba3350fb7b889fca858fb215967792dc125b35c7976ca4818bee3521cf0 \
+2026-10-29T01:28:12.3651536Z #20 4.474     --hash=sha256:d71b040839446bac0f4d162e758bea99c8251161dae9d0983a3b88dee345153b
+2026-10-29T01:28:12.3653485Z #20 4.474     # via
+2026-10-29T01:28:12.3653904Z #20 4.474     #   ortools
+2026-10-29T01:28:12.3654395Z #20 4.474     #   system-lab-airspace-operations
+2026-10-29T01:28:12.3654959Z #20 4.474 psycopg==3.2.13 \
+2026-10-29T01:28:12.3655727Z #20 4.474     --hash=sha256:309adaeda61d44556046ec9a83a93f42bbe5310120b1995f3af49ab6d9f13c1d \
+2026-10-29T01:28:12.3656904Z #20 4.474     --hash=sha256:a481374514f2da627157f767a9336705ebefe93ea7a0522a6cbacba165da179a
+2026-10-29T01:28:12.3657747Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3658464Z #20 4.474 psycopg-binary==3.2.13 ; implementation_name != 'pypy' \
+2026-10-29T01:28:12.3659408Z #20 4.474     --hash=sha256:13e2f8894d410678529ff9f1211f96c5a93ff142f992b302682b42d924428b61 \
+2026-10-29T01:28:12.3660548Z #20 4.474     --hash=sha256:2f63868cc96bc18486cebec24445affbdd7f7debf28fac466ea935a8b5a4753b \
+2026-10-29T01:28:12.3661694Z #20 4.474     --hash=sha256:594dfbca3326e997ae738d3d339004e8416b1f7390f52ce8dc2d692393e8fa96 \
+2026-10-29T01:28:12.3663076Z #20 4.474     --hash=sha256:8b843c00478739e95c46d6d3472b13123b634685f107831a9bfc41503a06ecbd \
+2026-10-29T01:28:12.3664498Z #20 4.474     --hash=sha256:ac92d6bc1d4a41c7459953a9aa727b9966e937e94c9e072527317fd2a67d488b \
+2026-10-29T01:28:12.3665657Z #20 4.474     --hash=sha256:dbae6ab1966e2b61d97e47220556c330c4608bb4cfb3a124aa0595c39995c068 \
+2026-10-29T01:28:12.3666828Z #20 4.474     --hash=sha256:ea2fdbcc9142933a47c66970e0df8b363e3bd1ea4c5ce376f2f3d94a9aeec847 \
+2026-10-29T01:28:12.3667953Z #20 4.474     --hash=sha256:f26f7009375cf1e92180e5c517c52da1054f7e690dde90e0ed00fa8b5736bcd4 \
+2026-10-29T01:28:12.3669063Z #20 4.474     --hash=sha256:fae933e4564386199fc54845d85413eedb49760e0bcd2b621fde2dd1825b99b3
+2026-10-29T01:28:12.3669863Z #20 4.474     # via psycopg
+2026-10-29T01:28:12.3670673Z #20 4.474 pycparser==3.12 ; implementation_name != 'PyPy' and platform_python_implementation != 'PyPy' \
+2026-10-29T01:28:12.3672100Z #20 4.474     --hash=sha256:a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e \
+2026-10-29T01:28:12.3673256Z #20 4.474     --hash=sha256:f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6
+2026-10-29T01:28:12.3674077Z #20 4.474     # via cffi
+2026-10-29T01:28:12.3674500Z #20 4.474 pydantic==2.14.1 \
+2026-10-29T01:28:12.3675218Z #20 4.474     --hash=sha256:9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454 \
+2026-10-29T01:28:12.3676520Z #20 4.474     --hash=sha256:94f478203dd03404682a1ada216965651dd74b1d2d5ffd62e00e0837caab5c26
+2026-10-29T01:28:12.3677345Z #20 4.474     # via
+2026-10-29T01:28:12.3677730Z #20 4.474     #   fastapi
+2026-10-29T01:28:12.3678220Z #20 4.474     #   system-lab-airspace-operations
+2026-10-29T01:28:12.3678793Z #20 4.474 pydantic-core==2.50.1 \
+2026-10-29T01:28:12.3679584Z #20 4.474     --hash=sha256:06ead20d39ffd6f2f6f2a8f8a6de67ff8bb1b4f14a8a30e058502514ee2ac685 \
+2026-10-29T01:28:12.3680745Z #20 4.474     --hash=sha256:0c003c3b7f49debb893d2d85ae099ac5959c9839e2f330fadb1fcdf7a6594482 \
+2026-10-29T01:28:12.3681848Z #20 4.474     --hash=sha256:131059670f1d2444269b8585cb888963994871932447c08b39ac6a51fcfef658 \
+2026-10-29T01:28:12.3683263Z #20 4.474     --hash=sha256:17e722e156d0444ecaefbe640bdb60928752bf2013e2b7a11cdb099aaae19bec \
+2026-10-29T01:28:12.3684402Z #20 4.474     --hash=sha256:1c96fd793b73d1b92e65570132505498fe7b21eaef73cdf74e67e5dfba7ac9e4 \
+2026-10-29T01:28:12.3685533Z #20 4.474     --hash=sha256:1deeacb112d14d3f4fcb16b165f7dbaf76c70ba6e82f37ba042bdab51970a0b8 \
+2026-10-29T01:28:12.3686669Z #20 4.474     --hash=sha256:325c23f3e35cfbf0fe3486fa5f7260d1e45885173002d30a28ca019994124255 \
+2026-10-29T01:28:12.3687737Z #20 4.474     --hash=sha256:409e0ea40ec30d9158f33574fd758e689f6045a0f2596701828c27816ca9687d \
+2026-10-29T01:28:12.3688851Z #20 4.474     --hash=sha256:41bc8237121bd8dc8d888dfd6279fc166ffc88c1f1bf3a8bf00869680533ca4c \
+2026-10-29T01:28:12.3689953Z #20 4.474     --hash=sha256:45c6266d071c241f2a168d45bf8c54344f0effce35e7e6b73afdec11f3687568 \
+2026-10-29T01:28:12.3691068Z #20 4.474     --hash=sha256:6dbcbee53bf17196a7f745aa9bf5a9603953a1e365b1f020be3207c676a3e7c4 \
+2026-10-29T01:28:12.3692431Z #20 4.474     --hash=sha256:7816e98acc08119dc0f340ab167048ecc54126316330c1f0caf7c6756c88e28f \
+2026-10-29T01:28:12.3693528Z #20 4.474     --hash=sha256:aa8224f10880d9bf1b5993988ba153d42a8b4f3f4f511f93b1f09c93ff613c72 \
+2026-10-29T01:28:12.3694636Z #20 4.474     --hash=sha256:c17799a62c142d61b8a3c51752a7cbc87fe2ad4ccfab10e628a77b405075c662 \
+2026-10-29T01:28:12.3695770Z #20 4.474     --hash=sha256:d5e062c01286d861fd6a1c4ff6e063547b3e713067f2df033c0ff97ac2ca006b \
+2026-10-29T01:28:12.3696879Z #20 4.474     --hash=sha256:e50d7b94baac6c7d09927fa5ca5800a0c7ee5015c7fcff65beb3a1931b5a6e09
+2026-10-29T01:28:12.3697712Z #20 4.474     # via pydantic
+2026-10-29T01:28:12.3698152Z #20 4.474 pyjwt==2.15.1 \
+2026-10-29T01:28:12.3698872Z #20 4.474     --hash=sha256:42d59d631f7768a1028a64c7ff581a9bf7519804daf91fc5b6c56e30eec5e193 \
+2026-10-29T01:28:12.3699970Z #20 4.474     --hash=sha256:4f259e80cdfb6b3fc18a7de51fd1ef9ec79652f25019bae68975ca2468a34df8
+2026-10-29T01:28:12.3700853Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3701642Z #20 4.474 pypdf==6.21.3 \
+2026-10-29T01:28:12.3702660Z #20 4.474     --hash=sha256:11e1ca6d6cc8ca322558a3a974078d5ebc0f3a2104b8e673eee25621ee97abd8 \
+2026-10-29T01:28:12.3703765Z #20 4.474     --hash=sha256:c8ca4d9a360dbd5d4b9bb7a8389e2a9ae6a106bee722b496f918040ba2daa17e
+2026-10-29T01:28:12.3704712Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3705260Z #20 4.474 pyproj==3.7.2 \
+2026-10-29T01:28:12.3705967Z #20 4.474     --hash=sha256:19466e529b1b15eeefdf8ff26b06fa745856c044f2f77bf0edbae94078c1dfa1 \
+2026-10-29T01:28:12.3706934Z #20 4.474     --hash=sha256:237499c7862c578d0369e2b8ac56eec550e391a025ff70e2af8417139dabb41c \
+2026-10-29T01:28:12.3707921Z #20 4.474     --hash=sha256:2b617d573be4118c11cd96b8891a0b7f65778fa7733ed8ecdb297a447d439100 \
+2026-10-29T01:28:12.3708965Z #20 4.474     --hash=sha256:2da731876d27639ff9d2d81c151f6ab90a1546455fabd93368e753047be344a2 \
+2026-10-29T01:28:12.3710067Z #20 4.474     --hash=sha256:39a0cf1ecc7e282d1d30f36594ebd55c9fae1fda8a2622cee5d100430628f88c \
+2026-10-29T01:28:12.3711203Z #20 4.474     --hash=sha256:5141a538ffdbe4bfd157421828bb2e07123a90a7a2d6f30fa1462abcfb5ce681 \
+2026-10-29T01:28:12.3712606Z #20 4.474     --hash=sha256:55a3610d75023c7b1c6e583e48ef8f62918e85a2ae81300569d9f104d6684bb6 \
+2026-10-29T01:28:12.3713999Z #20 4.474     --hash=sha256:8115faf2597f281a42ab608ceac346b4eb1383d3b45ab474fd37341c4bf82a67 \
+2026-10-29T01:28:12.3715206Z #20 4.474     --hash=sha256:8c225f5978abd506fd9a78eaaf794435e823c9156091cabaab5374efb29d7f69 \
+2026-10-29T01:28:12.3716330Z #20 4.474     --hash=sha256:8d7349182fa622696787cc9e195508d2a41a64765da9b8a6bee846702b9e6220 \
+2026-10-29T01:28:12.3717516Z #20 4.474     --hash=sha256:bb41c29d5f60854b1075853fe80c58950b398d4ebb404eb532536ac8d2834ed7 \
+2026-10-29T01:28:12.3718640Z #20 4.474     --hash=sha256:c79b9b84c4a626c5dc324c0d666be0bfcebd99f7538d66e8898c2444221b3da7 \
+2026-10-29T01:28:12.3719773Z #20 4.474     --hash=sha256:ceecf374cacca317bc09e165db38ac548ee3cad07c3609442bd70311c59c21aa \
+2026-10-29T01:28:12.3720908Z #20 4.474     --hash=sha256:d230b186eb876ed4f29a7c5ee310144c3a0e44e89e55f65fb3607e13f6db337c \
+2026-10-29T01:28:12.3722269Z #20 4.474     --hash=sha256:d27b48f0e81beeaa2b4d60c516c3a1cfbb0c7ff6ef71256d8e9c07792f735279 \
+2026-10-29T01:28:12.3723409Z #20 4.474     --hash=sha256:f000841e98ea99acbb7b8ca168d67773b0191de95187228a16110245c5d954d5 \
+2026-10-29T01:28:12.3724540Z #20 4.474     --hash=sha256:f18c0579dd6be00b970cb1a6719197fceecc407515bab37da0066f0184aafdf3 \
+2026-10-29T01:28:12.3725659Z #20 4.474     --hash=sha256:f54d91ae18dd23b6c0ab48126d446820e725419da10617d86a1b69ada6d881d3 \
+2026-10-29T01:28:12.3726744Z #20 4.474     --hash=sha256:fc52ba896cfc3214dc9f9ca3c0677a623e8fdd096b257c14a31e719d21ff3fdd
+2026-10-29T01:28:12.3727616Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3728194Z #20 4.474 python-dateutil==3.0.0 \
+2026-10-29T01:28:12.3728938Z #20 4.474     --hash=sha256:3c79630202e4152c6add678446984236efe4f57e84d8e892aab0637bab82e9fd \
+2026-10-29T01:28:12.3730082Z #20 4.474     --hash=sha256:7ebcb3c29a92f3ceafe79a7a48a5c45677e9e004bbeec5742ac0bbb00560b7a2
+2026-10-29T01:28:12.3730920Z #20 4.474     # via pandas
+2026-10-29T01:28:12.3731336Z #20 4.474 six==1.17.0 \
+2026-10-29T01:28:12.3732359Z #20 4.474     --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274 \
+2026-10-29T01:28:12.3733523Z #20 4.474     --hash=sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81
+2026-10-29T01:28:12.3734382Z #20 4.474     # via python-dateutil
+2026-10-29T01:28:12.3734882Z #20 4.474 sqlalchemy==2.0.55 \
+2026-10-29T01:28:12.3735628Z #20 4.474     --hash=sha256:051a9a6226b65292140ef1f02f451081e64d53db993ac126b4652b250e46e2e7 \
+2026-10-29T01:28:12.3736740Z #20 4.474     --hash=sha256:2ad873064b0267f7a30779eaf8c025bf25aa2214f9755d993bb185892ae751b7 \
+2026-10-29T01:28:12.3737837Z #20 4.474     --hash=sha256:5477d92886122549aa08a61eb639cc0f8e01ee603259d942009081c294c30c4c \
+2026-10-29T01:28:12.3738906Z #20 4.474     --hash=sha256:5bb983541837b67c7e335bffec8a5b26213f714079878ac85876b629726dbe73 \
+2026-10-29T01:28:12.3740358Z #20 4.474     --hash=sha256:998f729f57381f8fdee8e402d2081da76c17a2501fa92c9046c24fdff581c729 \
+2026-10-29T01:28:12.3741479Z #20 4.474     --hash=sha256:ae40c563bc10a8d56f1fd1f39f069aeb5eb85ca26913b2314dd8d190139258fa \
+2026-10-29T01:28:12.3742882Z #20 4.474     --hash=sha256:c67f99ca639d28ee6145dd8857ca32b7e51bc2a2acf7a8bca388807442ffd1cc \
+2026-10-29T01:28:12.3744045Z #20 4.474     --hash=sha256:d2954796165c08e2f70082e4577a4c3ce6f141c77e2e4b378b3b528653b54311 \
+2026-10-29T01:28:12.3745111Z #20 4.474     --hash=sha256:f9636a6d2b6d0d1256c2687a775a406755e4f3eb5ee69756230f986e17cbffca
+2026-10-29T01:28:12.3746017Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.3746611Z #20 4.474 starlette==1.10.0 \
+2026-10-29T01:28:12.3747382Z #20 4.474     --hash=sha256:478c0ab3b4ced6e82719849c118fa406f0278a3499c1a898cd15cd31bdc38ce4 \
+2026-10-29T01:28:12.3748507Z #20 4.474     --hash=sha256:b8399098d4c1e3522734f7235dc79b1fc967f96cf139c81e0fa30479e0685f9b
+2026-10-29T01:28:12.3749325Z #20 4.474     # via fastapi
+2026-10-29T01:28:12.3749786Z #20 4.474 typing-extensions==4.16.0 \
+2026-10-29T01:28:12.3750628Z #20 4.474     --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8 \
+2026-10-29T01:28:12.3752312Z #20 4.474     --hash=sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5
+2026-10-29T01:28:12.3753186Z #20 4.474     # via
+2026-10-29T01:28:12.3753574Z #20 4.474     #   anyio
+2026-10-29T01:28:12.3753972Z #20 4.474     #   fastapi
+2026-10-29T01:28:12.3754413Z #20 4.474     #   opentelemetry-api
+2026-10-29T01:28:12.3754878Z #20 4.474     #   ortools
+2026-10-29T01:28:12.3755283Z #20 4.474     #   pydantic
+2026-10-29T01:28:12.3755712Z #20 4.474     #   pydantic-core
+2026-10-29T01:28:12.3756144Z #20 4.474     #   sqlalchemy
+2026-10-29T01:28:12.3756578Z #20 4.474     #   typing-inspection
+2026-10-29T01:28:12.3757076Z #20 4.474 typing-inspection==0.4.4 \
+2026-10-29T01:28:12.3757876Z #20 4.474     --hash=sha256:547274fa6b0a561ccf549cc9524b999a578e737d015d8709d021f9d0d13bea47 \
+2026-10-29T01:28:12.3759001Z #20 4.474     --hash=sha256:65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147
+2026-10-29T01:28:12.3759797Z #20 4.474     # via
+2026-10-29T01:28:12.3760181Z #20 4.474     #   fastapi
+2026-10-29T01:28:12.3760592Z #20 4.474     #   pydantic
+2026-10-29T01:28:12.3761008Z #20 4.474 tzdata==2026.5 \
+2026-10-29T01:28:12.3761752Z #20 4.474     --hash=sha256:8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7 \
+2026-10-29T01:28:12.3763151Z #20 4.474     --hash=sha256:b683bd1b6659ddcd810ff02ad09ba821d4bf1065072805063eb35c49617905ac
+2026-10-29T01:28:12.3763938Z #20 4.474     # via
+2026-10-29T01:28:12.3764313Z #20 4.474     #   pandas
+2026-10-29T01:28:12.3764717Z #20 4.474     #   psycopg
+2026-10-29T01:28:12.3765150Z #20 4.474     #   python-dateutil
+2026-10-29T01:28:12.3765605Z #20 4.474 uvicorn==0.54.0 \
+2026-10-29T01:28:12.3766334Z #20 4.474     --hash=sha256:505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf \
+2026-10-29T01:28:12.3767450Z #20 4.474     --hash=sha256:a2e33cbfaa0306f8e6b0c13e0cb89d7d7a2da3e62b90c66e18c33d9807b28620
+2026-10-29T01:28:12.3768332Z #20 4.474     # via system-lab-airspace-operations
+2026-10-29T01:28:12.6460923Z #20 ...
+2026-10-29T01:28:12.6461491Z 
+2026-10-29T01:28:12.6462488Z #23 [worker interface 6/6] RUN npm run build
+2026-10-29T01:28:12.6463396Z #23 0.303 
+2026-10-29T01:28:12.6464151Z #23 0.303 > @system-lab/airspace-operations-ui@0.3.0-rc.1 build
+2026-10-29T01:28:12.6465057Z #23 0.303 > tsc -b && vite build
+2026-10-29T01:28:12.6465732Z #23 0.303 
+2026-10-29T01:28:17.3443523Z #23 ...
+2026-10-29T01:28:17.3444192Z 
+2026-10-29T01:28:17.3445538Z #24 [database 2/4] RUN apt-get update && apt-get install -y --no-install-recommends postgresql-17-postgis-3 postgresql-17-postgis-3-scripts && rm -rf /var/lib/apt/lists/*
+2026-10-29T01:28:17.3447313Z #24 0.229 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+2026-10-29T01:28:17.3448513Z #24 0.242 Get:2 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg InRelease [189 kB]
+2026-10-29T01:28:17.3452598Z #24 0.271 Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+2026-10-29T01:28:17.3453653Z #24 0.289 Get:4 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+2026-10-29T01:28:17.3454593Z #24 0.365 Get:5 http://deb.debian.org/debian bookworm/main amd64 Packages [8,790 kB]
+2026-10-29T01:28:17.3455540Z #24 0.472 Get:6 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 Packages [915 kB]
+2026-10-29T01:28:17.3456632Z #24 0.502 Get:7 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/17 amd64 Packages [6,799 B]
+2026-10-29T01:28:17.3457955Z #24 0.588 Get:8 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6,924 B]
+2026-10-29T01:28:17.3459139Z #24 0.665 Get:9 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [358 kB]
+2026-10-29T01:28:17.3460037Z #24 1.740 Fetched 10.5 MB in 2s (6,873 kB/s)
+2026-10-29T01:28:17.3460567Z #24 1.740 Reading package lists...
+2026-10-29T01:28:17.3461045Z #24 2.513 Reading package lists...
+2026-10-29T01:28:17.3461519Z #24 3.279 Building dependency tree...
+2026-10-29T01:28:17.3462218Z #24 3.466 Reading state information...
+2026-10-29T01:28:17.3462839Z #24 3.609 The following additional packages will be installed:
+2026-10-29T01:28:17.3464004Z #24 3.610   fontconfig-config fonts-dejavu-core gdal-data gdal-plugins libaec0 libaom3
+2026-10-29T01:28:17.3465096Z #24 3.610   libarmadillo11 libarpack2 libblas3 libblosc1 libboost-serialization1.74.0
+2026-10-29T01:28:17.3466117Z #24 3.610   libbrotli1 libcfitsio10 libcurl3-gnutls libcurl4 libdav1d6 libde265-0
+2026-10-29T01:28:17.3467094Z #24 3.610   libdeflate0 libexpat1 libfontconfig1 libfreetype6 libfreexl1 libfyba0
+2026-10-29T01:28:17.3468052Z #24 3.610   libgdal32 libgeos-c1v5 libgeos3.11.1 libgeotiff5 libgfortran5 libgif7
+2026-10-29T01:28:17.3469022Z #24 3.610   libgmpxx4ldbl libhdf4-0-alt libhdf5-103-1 libhdf5-hl-100 libheif1 libjbig0
+2026-10-29T01:28:17.3470059Z #24 3.610   libjpeg62-turbo libjson-c5 libkmlbase1 libkmldom1 libkmlengine1 liblapack3
+2026-10-29T01:28:17.3471056Z #24 3.610   liblcms2-2 liblerc4 libltdl7 libmariadb3 libminizip1 libmpfr6 libnetcdf19
+2026-10-29T01:28:17.3472881Z #24 3.610   libnghttp2-14 libnspr4 libnss3 libnuma1 libodbc2 libodbcinst2 libogdi4.1
+2026-10-29T01:28:17.3473869Z #24 3.610   libopenjp2-7 libpng16-16 libpoppler126 libproj25 libprotobuf-c1 libpsl5
+2026-10-29T01:28:17.3474842Z #24 3.610   libqhull-r8.0 libquadmath0 librtmp1 librttopo1 libsfcgal1 libsnappy1v5
+2026-10-29T01:28:17.3475821Z #24 3.610   libspatialite7 libssh2-1 libsuperlu5 libsz2 libtiff6 libtirpc-common
+2026-10-29T01:28:17.3476792Z #24 3.610   libtirpc3 liburiparser1 libwebp7 libx265-199 libxerces-c3.2 mariadb-common
+2026-10-29T01:28:17.3477641Z #24 3.611   mysql-common proj-data unixodbc-common
+2026-10-29T01:28:17.3478197Z #24 3.612 Suggested packages:
+2026-10-29T01:28:17.3478976Z #24 3.612   geotiff-bin gdal-bin libgeotiff-epsg libhdf4-doc libhdf4-alt-dev hdf4-tools
+2026-10-29T01:28:17.3479958Z #24 3.612   liblcms2-utils odbc-postgresql tdsodbc ogdi-bin proj-bin postgis
+2026-10-29T01:28:17.3480468Z #24 3.612 Recommended packages:
+2026-10-29T01:28:17.3480799Z #24 3.612   ca-certificates proj-bin poppler-data publicsuffix
+2026-10-29T01:28:17.3481213Z #24 4.080 The following NEW packages will be installed:
+2026-10-29T01:28:17.3481694Z #24 4.080   fontconfig-config fonts-dejavu-core gdal-data gdal-plugins libaec0 libaom3
+2026-10-29T01:28:17.3482954Z #24 4.080   libarmadillo11 libarpack2 libblas3 libblosc1 libboost-serialization1.74.0
+2026-10-29T01:28:17.3483616Z #24 4.080   libbrotli1 libcfitsio10 libcurl3-gnutls libcurl4 libdav1d6 libde265-0
+2026-10-29T01:28:17.3484184Z #24 4.080   libdeflate0 libexpat1 libfontconfig1 libfreetype6 libfreexl1 libfyba0
+2026-10-29T01:28:17.3484702Z #24 4.080   libgdal32 libgeos-c1v5 libgeos3.11.1 libgeotiff5 libgfortran5 libgif7
+2026-10-29T01:28:17.3485228Z #24 4.080   libgmpxx4ldbl libhdf4-0-alt libhdf5-103-1 libhdf5-hl-100 libheif1 libjbig0
+2026-10-29T01:28:17.3485986Z #24 4.080   libjpeg62-turbo libjson-c5 libkmlbase1 libkmldom1 libkmlengine1 liblapack3
+2026-10-29T01:28:17.3486542Z #24 4.080   liblcms2-2 liblerc4 libltdl7 libmariadb3 libminizip1 libmpfr6 libnetcdf19
+2026-10-29T01:28:17.3487078Z #24 4.080   libnghttp2-14 libnspr4 libnss3 libnuma1 libodbc2 libodbcinst2 libogdi4.1
+2026-10-29T01:28:17.3487609Z #24 4.080   libopenjp2-7 libpng16-16 libpoppler126 libproj25 libprotobuf-c1 libpsl5
+2026-10-29T01:28:17.3488143Z #24 4.080   libqhull-r8.0 libquadmath0 librtmp1 librttopo1 libsfcgal1 libsnappy1v5
+2026-10-29T01:28:17.3488663Z #24 4.080   libspatialite7 libssh2-1 libsuperlu5 libsz2 libtiff6 libtirpc-common
+2026-10-29T01:28:17.3489192Z #24 4.080   libtirpc3 liburiparser1 libwebp7 libx265-199 libxerces-c3.2 mariadb-common
+2026-10-29T01:28:17.3489729Z #24 4.080   mysql-common postgresql-17-postgis-3 postgresql-17-postgis-3-scripts
+2026-10-29T01:28:17.3490141Z #24 4.081   proj-data unixodbc-common
+2026-10-29T01:28:17.3490512Z #24 4.166 0 upgraded, 84 newly installed, 0 to remove and 34 not upgraded.
+2026-10-29T01:28:17.3490901Z #24 4.166 Need to get 49.3 MB of archives.
+2026-10-29T01:28:17.3491293Z #24 4.166 After this operation, 218 MB of additional disk space will be used.
+2026-10-29T01:28:17.3492329Z #24 4.166 Get:1 http://deb.debian.org/debian bookworm/main amd64 fonts-dejavu-core all 2.37-6 [1,068 kB]
+2026-10-29T01:28:17.3493639Z #24 4.169 Get:2 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 gdal-data all 3.13.2+dfsg-1.pgdg12+1 [466 kB]
+2026-10-29T01:28:17.3495176Z #24 4.237 Get:3 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 gdal-plugins amd64 3.13.2+dfsg-1.pgdg12+1 [236 kB]
+2026-10-29T01:28:17.3496309Z #24 4.241 Get:4 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 proj-data all 9.8.1-1.pgdg12+1 [6,339 kB]
+2026-10-29T01:28:17.3497043Z #24 4.257 Get:5 http://deb.debian.org/debian bookworm/main amd64 fontconfig-config amd64 2.14.1-4 [315 kB]
+2026-10-29T01:28:17.3497690Z #24 4.262 Get:6 http://deb.debian.org/debian bookworm/main amd64 libaec0 amd64 1.0.6-1+b1 [21.1 kB]
+2026-10-29T01:28:17.3498401Z #24 4.272 Get:7 http://deb.debian.org/debian-security bookworm-security/main amd64 libaom3 amd64 3.6.0-1+deb12u3 [1,851 kB]
+2026-10-29T01:28:17.3499104Z #24 4.295 Get:8 http://deb.debian.org/debian bookworm/main amd64 libblas3 amd64 3.11.0-2 [149 kB]
+2026-10-29T01:28:17.3499754Z #24 4.297 Get:9 http://deb.debian.org/debian bookworm/main amd64 libquadmath0 amd64 12.2.0-14+deb12u1 [145 kB]
+2026-10-29T01:28:17.3500444Z #24 4.300 Get:10 http://deb.debian.org/debian bookworm/main amd64 libgfortran5 amd64 12.2.0-14+deb12u1 [793 kB]
+2026-10-29T01:28:17.3501109Z #24 4.308 Get:11 http://deb.debian.org/debian bookworm/main amd64 liblapack3 amd64 3.11.0-2 [2,323 kB]
+2026-10-29T01:28:17.3501829Z #24 4.312 Get:12 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 libproj25 amd64 9.8.1-1.pgdg12+1 [1,450 kB]
+2026-10-29T01:28:17.3503530Z #24 4.320 Get:13 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-17-postgis-3-scripts all 3.6.4+dfsg-2.pgdg12+1 [1,299 kB]
+2026-10-29T01:28:17.3504362Z #24 4.321 Get:14 http://deb.debian.org/debian bookworm/main amd64 libarpack2 amd64 3.8.0-3 [102 kB]
+2026-10-29T01:28:17.3505028Z #24 4.322 Get:15 http://deb.debian.org/debian bookworm/main amd64 libsuperlu5 amd64 5.3.0+dfsg1-2+b1 [170 kB]
+2026-10-29T01:28:17.3505718Z #24 4.323 Get:16 http://deb.debian.org/debian bookworm/main amd64 libarmadillo11 amd64 1:11.4.2+dfsg-1 [98.9 kB]
+2026-10-29T01:28:17.3506386Z #24 4.324 Get:17 http://deb.debian.org/debian bookworm/main amd64 libsnappy1v5 amd64 1.1.9-3 [26.0 kB]
+2026-10-29T01:28:17.3507029Z #24 4.327 Get:18 http://deb.debian.org/debian bookworm/main amd64 libblosc1 amd64 1.21.3+ds-1 [49.3 kB]
+2026-10-29T01:28:17.3507734Z #24 4.327 Get:19 http://deb.debian.org/debian bookworm/main amd64 libboost-serialization1.74.0 amd64 1.74.0+ds1-21 [317 kB]
+2026-10-29T01:28:17.3508529Z #24 4.329 Get:20 http://deb.debian.org/debian-security bookworm-security/main amd64 libbrotli1 amd64 1.0.9-2+deb12u1 [275 kB]
+2026-10-29T01:28:17.3509487Z #24 4.331 Get:21 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u3 [72.4 kB]
+2026-10-29T01:28:17.3510129Z #24 4.332 Get:22 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+2026-10-29T01:28:17.3510913Z #24 4.336 Get:23 http://apt.postgresql.org/pub/repos/apt bookworm-pgdg/main amd64 postgresql-17-postgis-3 amd64 3.6.4+dfsg-2.pgdg12+1 [3,588 kB]
+2026-10-29T01:28:17.3512039Z #24 4.342 Get:24 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+2026-10-29T01:28:17.3513486Z #24 4.352 Get:25 http://deb.debian.org/debian-security bookworm-security/main amd64 libssh2-1 amd64 1.10.0-3+deb12u1 [176 kB]
+2026-10-29T01:28:17.3514879Z #24 4.353 Get:26 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u15 [386 kB]
+2026-10-29T01:28:17.3516110Z #24 4.356 Get:27 http://deb.debian.org/debian bookworm/main amd64 libcfitsio10 amd64 4.2.0-3 [563 kB]
+2026-10-29T01:28:17.3517279Z #24 4.360 Get:28 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u15 [392 kB]
+2026-10-29T01:28:17.3518522Z #24 4.362 Get:29 http://deb.debian.org/debian bookworm/main amd64 libdav1d6 amd64 1.0.0-2+deb12u1 [513 kB]
+2026-10-29T01:28:17.3520107Z #24 4.364 Get:30 http://deb.debian.org/debian-security bookworm-security/main amd64 libde265-0 amd64 1.0.11-1+deb12u3 [186 kB]
+2026-10-29T01:28:17.3521488Z #24 4.365 Get:31 http://deb.debian.org/debian bookworm/main amd64 libdeflate0 amd64 1.14-1 [61.4 kB]
+2026-10-29T01:28:17.3523181Z #24 4.368 Get:32 http://deb.debian.org/debian-security bookworm-security/main amd64 libexpat1 amd64 2.5.0-1+deb12u5 [108 kB]
+2026-10-29T01:28:17.3524695Z #24 4.369 Get:33 http://deb.debian.org/debian-security bookworm-security/main amd64 libpng16-16 amd64 1.6.39-2+deb12u6 [277 kB]
+2026-10-29T01:28:17.3526135Z #24 4.370 Get:34 http://deb.debian.org/debian bookworm/main amd64 libfreetype6 amd64 2.12.1+dfsg-5+deb12u4 [398 kB]
+2026-10-29T01:28:17.3527390Z #24 4.379 Get:35 http://deb.debian.org/debian bookworm/main amd64 libfontconfig1 amd64 2.14.1-4 [386 kB]
+2026-10-29T01:28:17.3528522Z #24 4.383 Get:36 http://deb.debian.org/debian bookworm/main amd64 libfreexl1 amd64 1.0.6-2 [29.4 kB]
+2026-10-29T01:28:17.3529608Z #24 4.384 Get:37 http://deb.debian.org/debian bookworm/main amd64 libfyba0 amd64 4.1.1-8 [112 kB]
+2026-10-29T01:28:17.3530721Z #24 4.390 Get:38 http://deb.debian.org/debian bookworm/main amd64 libgeos3.11.1 amd64 3.11.1-1 [752 kB]
+2026-10-29T01:28:17.3531851Z #24 4.399 Get:39 http://deb.debian.org/debian bookworm/main amd64 libgeos-c1v5 amd64 3.11.1-1 [83.2 kB]
+2026-10-29T01:28:17.3533372Z #24 4.400 Get:40 http://deb.debian.org/debian bookworm/main amd64 libjbig0 amd64 2.1-6.1 [31.7 kB]
+2026-10-29T01:28:17.3534547Z #24 4.402 Get:41 http://deb.debian.org/debian bookworm/main amd64 libjpeg62-turbo amd64 1:2.1.5-2 [166 kB]
+2026-10-29T01:28:17.3535710Z #24 4.422 Get:42 http://deb.debian.org/debian bookworm/main amd64 liblerc4 amd64 4.0.0+ds-2 [170 kB]
+2026-10-29T01:28:17.3536898Z #24 4.423 Get:43 http://deb.debian.org/debian bookworm/main amd64 libwebp7 amd64 1.2.4-0.2+deb12u1 [286 kB]
+2026-10-29T01:28:17.3538109Z #24 4.423 Get:44 http://deb.debian.org/debian bookworm/main amd64 libtiff6 amd64 4.5.0-6+deb12u4 [316 kB]
+2026-10-29T01:28:17.3539319Z #24 4.433 Get:45 http://deb.debian.org/debian bookworm/main amd64 libgeotiff5 amd64 1.7.1-2+b1 [68.5 kB]
+2026-10-29T01:28:17.3540537Z #24 4.434 Get:46 http://deb.debian.org/debian bookworm/main amd64 libgif7 amd64 5.2.1-2.5+deb12u1 [43.0 kB]
+2026-10-29T01:28:17.3541771Z #24 4.436 Get:47 http://deb.debian.org/debian bookworm/main amd64 libtirpc-common all 1.3.3+ds-1 [14.0 kB]
+2026-10-29T01:28:17.3543288Z #24 4.438 Get:48 http://deb.debian.org/debian bookworm/main amd64 libtirpc3 amd64 1.3.3+ds-1 [85.2 kB]
+2026-10-29T01:28:17.3544479Z #24 4.438 Get:49 http://deb.debian.org/debian bookworm/main amd64 libhdf4-0-alt amd64 4.2.15-5 [270 kB]
+2026-10-29T01:28:17.3545820Z #24 4.441 Get:50 http://deb.debian.org/debian bookworm/main amd64 libsz2 amd64 1.0.6-1+b1 [7,804 B]
+2026-10-29T01:28:17.3547030Z #24 4.441 Get:51 http://deb.debian.org/debian bookworm/main amd64 libhdf5-103-1 amd64 1.10.8+repack1-1 [1,237 kB]
+2026-10-29T01:28:17.3548244Z #24 4.451 Get:52 http://deb.debian.org/debian bookworm/main amd64 libnuma1 amd64 2.0.16-1 [21.0 kB]
+2026-10-29T01:28:17.3549422Z #24 4.471 Get:53 http://deb.debian.org/debian bookworm/main amd64 libx265-199 amd64 3.5-2+b1 [1,150 kB]
+2026-10-29T01:28:17.3550647Z #24 4.482 Get:54 http://deb.debian.org/debian bookworm/main amd64 libheif1 amd64 1.15.1-1+deb12u1 [215 kB]
+2026-10-29T01:28:17.3551806Z #24 4.486 Get:55 http://deb.debian.org/debian bookworm/main amd64 libjson-c5 amd64 0.16-2 [44.1 kB]
+2026-10-29T01:28:17.3553489Z #24 4.489 Get:56 http://deb.debian.org/debian bookworm/main amd64 libminizip1 amd64 1.1-8+deb12u1 [20.1 kB]
+2026-10-29T01:28:17.3554480Z #24 4.494 Get:57 http://deb.debian.org/debian bookworm/main amd64 liburiparser1 amd64 0.9.7+dfsg-2 [43.8 kB]
+2026-10-29T01:28:17.3555172Z #24 4.496 Get:58 http://deb.debian.org/debian bookworm/main amd64 libkmlbase1 amd64 1.3.0-10 [46.5 kB]
+2026-10-29T01:28:17.3555794Z #24 4.497 Get:59 http://deb.debian.org/debian bookworm/main amd64 libkmldom1 amd64 1.3.0-10 [153 kB]
+2026-10-29T01:28:17.3557842Z #24 4.504 Get:60 http://deb.debian.org/debian bookworm/main amd64 libkmlengine1 amd64 1.3.0-10 [74.4 kB]
+2026-10-29T01:28:17.3558646Z #24 4.506 Get:61 http://deb.debian.org/debian bookworm/main amd64 mysql-common all 5.8+1.1.0 [6,636 B]
+2026-10-29T01:28:17.3559412Z #24 4.507 Get:62 http://deb.debian.org/debian-security bookworm-security/main amd64 mariadb-common all 1:10.11.19-0+deb12u1 [27.6 kB]
+2026-10-29T01:28:17.3560281Z #24 4.512 Get:63 http://deb.debian.org/debian-security bookworm-security/main amd64 libmariadb3 amd64 1:10.11.19-0+deb12u1 [180 kB]
+2026-10-29T01:28:17.3561071Z #24 4.518 Get:64 http://deb.debian.org/debian bookworm/main amd64 libhdf5-hl-100 amd64 1.10.8+repack1-1 [67.8 kB]
+2026-10-29T01:28:17.3561781Z #24 4.528 Get:65 http://deb.debian.org/debian bookworm/main amd64 libnetcdf19 amd64 1:4.9.0-3+b1 [476 kB]
+2026-10-29T01:28:17.3563137Z #24 4.535 Get:66 http://deb.debian.org/debian bookworm/main amd64 libltdl7 amd64 2.4.7-7~deb12u1 [393 kB]
+2026-10-29T01:28:17.3563822Z #24 4.556 Get:67 http://deb.debian.org/debian bookworm/main amd64 libodbc2 amd64 2.3.11-2+deb12u1 [150 kB]
+2026-10-29T01:28:17.3564631Z #24 4.558 Get:68 http://deb.debian.org/debian bookworm/main amd64 unixodbc-common all 2.3.11-2+deb12u1 [8,172 B]
+2026-10-29T01:28:17.3565671Z #24 4.560 Get:69 http://deb.debian.org/debian bookworm/main amd64 libodbcinst2 amd64 2.3.11-2+deb12u1 [34.2 kB]
+2026-10-29T01:28:17.3566354Z #24 4.560 Get:70 http://deb.debian.org/debian bookworm/main amd64 libogdi4.1 amd64 4.1.0+ds-6 [223 kB]
+2026-10-29T01:28:17.3567240Z #24 4.562 Get:71 http://deb.debian.org/debian bookworm/main amd64 libopenjp2-7 amd64 2.5.0-2+deb12u3 [189 kB]
+2026-10-29T01:28:17.3568234Z #24 4.562 Get:72 http://deb.debian.org/debian bookworm/main amd64 liblcms2-2 amd64 2.14-2+deb12u1 [154 kB]
+2026-10-29T01:28:17.3569413Z #24 4.563 Get:73 http://deb.debian.org/debian bookworm/main amd64 libnspr4 amd64 2:4.35-1 [113 kB]
+2026-10-29T01:28:17.3570651Z #24 4.564 Get:74 http://deb.debian.org/debian-security bookworm-security/main amd64 libnss3 amd64 2:3.87.1-1+deb12u4 [1,331 kB]
+2026-10-29T01:28:17.3571761Z #24 4.593 Get:75 http://deb.debian.org/debian-security bookworm-security/main amd64 libpoppler126 amd64 22.12.0-2+deb12u3 [1,856 kB]
+2026-10-29T01:28:17.3573366Z #24 4.617 Get:76 http://deb.debian.org/debian bookworm/main amd64 libqhull-r8.0 amd64 2020.2-5 [248 kB]
+2026-10-29T01:28:17.3574184Z #24 4.620 Get:77 http://deb.debian.org/debian bookworm/main amd64 librttopo1 amd64 1.1.0-3 [178 kB]
+2026-10-29T01:28:17.3575098Z #24 4.623 Get:78 http://deb.debian.org/debian bookworm/main amd64 libspatialite7 amd64 5.0.1-3 [1,782 kB]
+2026-10-29T01:28:17.3576246Z #24 4.641 Get:79 http://deb.debian.org/debian bookworm/main amd64 libxerces-c3.2 amd64 3.2.4+debian-1 [874 kB]
+2026-10-29T01:28:17.3577627Z #24 4.650 Get:80 http://deb.debian.org/debian bookworm/main amd64 libgdal32 amd64 3.6.2+dfsg-1+b2 [7,670 kB]
+2026-10-29T01:28:17.3578492Z #24 4.686 Get:81 http://deb.debian.org/debian bookworm/main amd64 libgmpxx4ldbl amd64 2:6.2.1+dfsg1-1.1 [338 kB]
+2026-10-29T01:28:17.3579411Z #24 4.688 Get:82 http://deb.debian.org/debian bookworm/main amd64 libmpfr6 amd64 4.2.0-1 [701 kB]
+2026-10-29T01:28:17.3580139Z #24 4.692 Get:83 http://deb.debian.org/debian bookworm/main amd64 libprotobuf-c1 amd64 1.4.1-1+b1 [27.5 kB]
+2026-10-29T01:28:17.3581328Z #24 4.695 Get:84 http://deb.debian.org/debian bookworm/main amd64 libsfcgal1 amd64 1.4.1-5 [2,138 kB]
+2026-10-29T01:28:17.3588079Z #24 4.895 debconf: delaying package configuration, since apt-utils is not installed
+2026-10-29T01:28:17.3593888Z #24 4.934 Fetched 49.3 MB in 1s (80.9 MB/s)
+2026-10-29T01:28:17.3595008Z #24 4.953 Selecting previously unselected package fonts-dejavu-core.
+2026-10-29T01:28:17.3595891Z #24 4.953 (Reading database ... 
+2026-10-29T01:28:17.3596337Z (Reading database ... 5%
+2026-10-29T01:28:17.3596722Z (Reading database ... 10%
+2026-10-29T01:28:17.3597098Z (Reading database ... 15%
+2026-10-29T01:28:17.3597466Z (Reading database ... 20%
+2026-10-29T01:28:17.3597837Z (Reading database ... 25%
+2026-10-29T01:28:17.3598482Z (Reading database ... 30%
+2026-10-29T01:28:17.3598909Z (Reading database ... 35%
+2026-10-29T01:28:17.3599290Z (Reading database ... 40%
+2026-10-29T01:28:17.3599646Z (Reading database ... 45%
+2026-10-29T01:28:17.3600007Z (Reading database ... 50%
+2026-10-29T01:28:17.3600379Z (Reading database ... 55%
+2026-10-29T01:28:17.3600761Z (Reading database ... 60%
+2026-10-29T01:28:17.3601143Z (Reading database ... 65%
+2026-10-29T01:28:17.3601514Z (Reading database ... 70%
+2026-10-29T01:28:17.3602106Z (Reading database ... 75%
+2026-10-29T01:28:17.3602515Z (Reading database ... 80%
+2026-10-29T01:28:17.3602902Z (Reading database ... 85%
+2026-10-29T01:28:17.3603264Z (Reading database ... 90%
+2026-10-29T01:28:17.3603623Z (Reading database ... 95%
+2026-10-29T01:28:17.3603984Z (Reading database ... 100%
+2026-10-29T01:28:17.3604520Z (Reading database ... 12078 files and directories currently installed.)
+2026-10-29T01:28:17.3605258Z #24 4.971 Preparing to unpack .../00-fonts-dejavu-core_2.37-6_all.deb ...
+2026-10-29T01:28:17.3605934Z #24 4.976 Unpacking fonts-dejavu-core (2.37-6) ...
+2026-10-29T01:28:17.3606520Z #24 5.111 Selecting previously unselected package fontconfig-config.
+2026-10-29T01:28:17.3607229Z #24 5.114 Preparing to unpack .../01-fontconfig-config_2.14.1-4_amd64.deb ...
+2026-10-29T01:28:17.3607891Z #24 5.272 Unpacking fontconfig-config (2.14.1-4) ...
+2026-10-29T01:28:17.3608490Z #24 5.310 Selecting previously unselected package gdal-data.
+2026-10-29T01:28:17.3609210Z #24 5.312 Preparing to unpack .../02-gdal-data_3.13.2+dfsg-1.pgdg12+1_all.deb ...
+2026-10-29T01:28:17.3609870Z #24 5.313 Unpacking gdal-data (3.13.2+dfsg-1.pgdg12+1) ...
+2026-10-29T01:28:17.3610484Z #24 5.388 Selecting previously unselected package gdal-plugins:amd64.
+2026-10-29T01:28:17.3611238Z #24 5.391 Preparing to unpack .../03-gdal-plugins_3.13.2+dfsg-1.pgdg12+1_amd64.deb ...
+2026-10-29T01:28:17.3612154Z #24 5.392 Unpacking gdal-plugins:amd64 (3.13.2+dfsg-1.pgdg12+1) ...
+2026-10-29T01:28:17.3612800Z #24 5.427 Selecting previously unselected package libaec0:amd64.
+2026-10-29T01:28:17.3613429Z #24 5.429 Preparing to unpack .../04-libaec0_1.0.6-1+b1_amd64.deb ...
+2026-10-29T01:28:17.3613986Z #24 5.437 Unpacking libaec0:amd64 (1.0.6-1+b1) ...
+2026-10-29T01:28:17.3614542Z #24 5.470 Selecting previously unselected package libaom3:amd64.
+2026-10-29T01:28:17.3615189Z #24 5.473 Preparing to unpack .../05-libaom3_3.6.0-1+deb12u3_amd64.deb ...
+2026-10-29T01:28:17.3615789Z #24 5.475 Unpacking libaom3:amd64 (3.6.0-1+deb12u3) ...
+2026-10-29T01:28:17.3616361Z #24 5.679 Selecting previously unselected package libblas3:amd64.
+2026-10-29T01:28:17.3616988Z #24 5.682 Preparing to unpack .../06-libblas3_3.11.0-2_amd64.deb ...
+2026-10-29T01:28:17.3617957Z #24 5.684 Unpacking libblas3:amd64 (3.11.0-2) ...
+2026-10-29T01:28:17.3618636Z #24 5.731 Selecting previously unselected package libquadmath0:amd64.
+2026-10-29T01:28:17.3619491Z #24 5.734 Preparing to unpack .../07-libquadmath0_12.2.0-14+deb12u1_amd64.deb ...
+2026-10-29T01:28:17.3620216Z #24 5.735 Unpacking libquadmath0:amd64 (12.2.0-14+deb12u1) ...
+2026-10-29T01:28:17.3620641Z #24 5.778 Selecting previously unselected package libgfortran5:amd64.
+2026-10-29T01:28:17.3621105Z #24 5.779 Preparing to unpack .../08-libgfortran5_12.2.0-14+deb12u1_amd64.deb ...
+2026-10-29T01:28:17.3621756Z #24 5.780 Unpacking libgfortran5:amd64 (12.2.0-14+deb12u1) ...
+2026-10-29T01:28:17.3622790Z #24 5.857 Selecting previously unselected package liblapack3:amd64.
+2026-10-29T01:28:17.3623620Z #24 5.859 Preparing to unpack .../09-liblapack3_3.11.0-2_amd64.deb ...
+2026-10-29T01:28:17.3624368Z #24 5.861 Unpacking liblapack3:amd64 (3.11.0-2) ...
+2026-10-29T01:28:17.3625097Z #24 6.049 Selecting previously unselected package libarpack2:amd64.
+2026-10-29T01:28:17.3625937Z #24 6.051 Preparing to unpack .../10-libarpack2_3.8.0-3_amd64.deb ...
+2026-10-29T01:28:17.3626661Z #24 6.052 Unpacking libarpack2:amd64 (3.8.0-3) ...
+2026-10-29T01:28:17.3627373Z #24 6.081 Selecting previously unselected package libsuperlu5:amd64.
+2026-10-29T01:28:17.3628924Z #24 6.084 Preparing to unpack .../11-libsuperlu5_5.3.0+dfsg1-2+b1_amd64.deb ...
+2026-10-29T01:28:17.3630109Z #24 6.088 Unpacking libsuperlu5:amd64 (5.3.0+dfsg1-2+b1) ...
+2026-10-29T01:28:17.3630563Z #24 6.124 Selecting previously unselected package libarmadillo11.
+2026-10-29T01:28:17.3631289Z #24 6.126 Preparing to unpack .../12-libarmadillo11_1%3a11.4.2+dfsg-1_amd64.deb ...
+2026-10-29T01:28:17.3632273Z #24 6.127 Unpacking libarmadillo11 (1:11.4.2+dfsg-1) ...
+2026-10-29T01:28:17.3633032Z #24 6.155 Selecting previously unselected package libsnappy1v5:amd64.
+2026-10-29T01:28:17.3633844Z #24 6.160 Preparing to unpack .../13-libsnappy1v5_1.1.9-3_amd64.deb ...
+2026-10-29T01:28:17.3634508Z #24 6.161 Unpacking libsnappy1v5:amd64 (1.1.9-3) ...
+2026-10-29T01:28:17.3635172Z #24 6.194 Selecting previously unselected package libblosc1:amd64.
+2026-10-29T01:28:17.3635994Z #24 6.196 Preparing to unpack .../14-libblosc1_1.21.3+ds-1_amd64.deb ...
+2026-10-29T01:28:17.3636852Z #24 6.199 Unpacking libblosc1:amd64 (1.21.3+ds-1) ...
+2026-10-29T01:28:17.3637663Z #24 6.228 Selecting previously unselected package libboost-serialization1.74.0:amd64.
+2026-10-29T01:28:17.3638713Z #24 6.231 Preparing to unpack .../15-libboost-serialization1.74.0_1.74.0+ds1-21_amd64.deb ...
+2026-10-29T01:28:17.3639677Z #24 6.234 Unpacking libboost-serialization1.74.0:amd64 (1.74.0+ds1-21) ...
+2026-10-29T01:28:17.4570637Z #24 6.291 Selecting previously unselected package libbrotli1:amd64.
+2026-10-29T01:28:17.4571635Z #24 6.295 Preparing to unpack .../16-libbrotli1_1.0.9-2+deb12u1_amd64.deb ...
+2026-10-29T01:28:17.4572977Z #24 6.297 Unpacking libbrotli1:amd64 (1.0.9-2+deb12u1) ...
+2026-10-29T01:28:17.4573792Z #24 6.356 Selecting previously unselected package libnghttp2-14:amd64.
+2026-10-29T01:28:17.4574778Z #24 6.361 Preparing to unpack .../17-libnghttp2-14_1.52.0-1+deb12u3_amd64.deb ...
+2026-10-29T01:28:17.4575652Z #24 6.361 Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u3) ...
+2026-10-29T01:28:17.4576456Z #24 6.389 Selecting previously unselected package libpsl5:amd64.
+2026-10-29T01:28:17.5882094Z #24 6.392 Preparing to unpack .../18-libpsl5_0.21.2-1_amd64.deb ...
+2026-10-29T01:28:17.5882883Z #24 6.394 Unpacking libpsl5:amd64 (0.21.2-1) ...
+2026-10-29T01:28:17.5883514Z #24 6.415 Selecting previously unselected package librtmp1:amd64.
+2026-10-29T01:28:17.5884339Z #24 6.418 Preparing to unpack .../19-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+2026-10-29T01:28:17.5885125Z #24 6.422 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+2026-10-29T01:28:17.5885806Z #24 6.446 Selecting previously unselected package libssh2-1:amd64.
+2026-10-29T01:28:17.5886481Z #24 6.449 Preparing to unpack .../20-libssh2-1_1.10.0-3+deb12u1_amd64.deb ...
+2026-10-29T01:28:17.5887471Z #24 6.450 Unpacking libssh2-1:amd64 (1.10.0-3+deb12u1) ...
+2026-10-29T01:28:17.5888106Z #24 6.480 Selecting previously unselected package libcurl3-gnutls:amd64.
+2026-10-29T01:28:17.5888866Z #24 6.481 Preparing to unpack .../21-libcurl3-gnutls_7.88.1-10+deb12u15_amd64.deb ...
+2026-10-29T01:28:17.5889592Z #24 6.482 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u15) ...
+2026-10-29T01:28:17.5890256Z #24 6.520 Selecting previously unselected package libcfitsio10:amd64.
+2026-10-29T01:28:17.7363683Z #24 6.522 Preparing to unpack .../22-libcfitsio10_4.2.0-3_amd64.deb ...
+2026-10-29T01:28:17.7364419Z #24 6.523 Unpacking libcfitsio10:amd64 (4.2.0-3) ...
+2026-10-29T01:28:17.7364913Z #24 6.576 Selecting previously unselected package libcurl4:amd64.
+2026-10-29T01:28:17.7365629Z #24 6.578 Preparing to unpack .../23-libcurl4_7.88.1-10+deb12u15_amd64.deb ...
+2026-10-29T01:28:17.7366173Z #24 6.578 Unpacking libcurl4:amd64 (7.88.1-10+deb12u15) ...
+2026-10-29T01:28:17.7366806Z #24 6.615 Selecting previously unselected package libdav1d6:amd64.
+2026-10-29T01:28:17.7367400Z #24 6.617 Preparing to unpack .../24-libdav1d6_1.0.0-2+deb12u1_amd64.deb ...
+2026-10-29T01:28:17.7368082Z #24 6.618 Unpacking libdav1d6:amd64 (1.0.0-2+deb12u1) ...
+2026-10-29T01:28:17.7368933Z #24 6.668 Selecting previously unselected package libde265-0:amd64.
+2026-10-29T01:28:17.8507413Z #24 6.671 Preparing to unpack .../25-libde265-0_1.0.11-1+deb12u3_amd64.deb ...
+2026-10-29T01:28:17.8508651Z #24 6.672 Unpacking libde265-0:amd64 (1.0.11-1+deb12u3) ...
+2026-10-29T01:28:17.8509675Z #24 6.708 Selecting previously unselected package libdeflate0:amd64.
+2026-10-29T01:28:17.8510720Z #24 6.708 Preparing to unpack .../26-libdeflate0_1.14-1_amd64.deb ...
+2026-10-29T01:28:17.8511701Z #24 6.718 Unpacking libdeflate0:amd64 (1.14-1) ...
+2026-10-29T01:28:17.8513055Z #24 6.743 Selecting previously unselected package libexpat1:amd64.
+2026-10-29T01:28:17.8514130Z #24 6.746 Preparing to unpack .../27-libexpat1_2.5.0-1+deb12u5_amd64.deb ...
+2026-10-29T01:28:17.8515073Z #24 6.747 Unpacking libexpat1:amd64 (2.5.0-1+deb12u5) ...
+2026-10-29T01:28:17.8515992Z #24 6.782 Selecting previously unselected package libpng16-16:amd64.
+2026-10-29T01:28:17.9773329Z #24 6.785 Preparing to unpack .../28-libpng16-16_1.6.39-2+deb12u6_amd64.deb ...
+2026-10-29T01:28:17.9775643Z #24 6.787 Unpacking libpng16-16:amd64 (1.6.39-2+deb12u6) ...
+2026-10-29T01:28:17.9776724Z #24 6.821 Selecting previously unselected package libfreetype6:amd64.
+2026-10-29T01:28:17.9777856Z #24 6.823 Preparing to unpack .../29-libfreetype6_2.12.1+dfsg-5+deb12u4_amd64.deb ...
+2026-10-29T01:28:17.9778962Z #24 6.823 Unpacking libfreetype6:amd64 (2.12.1+dfsg-5+deb12u4) ...
+2026-10-29T01:28:17.9779978Z #24 6.874 Selecting previously unselected package libfontconfig1:amd64.
+2026-10-29T01:28:17.9781048Z #24 6.877 Preparing to unpack .../30-libfontconfig1_2.14.1-4_amd64.deb ...
+2026-10-29T01:28:17.9782306Z #24 6.877 Unpacking libfontconfig1:amd64 (2.14.1-4) ...
+2026-10-29T01:28:17.9783338Z #24 6.909 Selecting previously unselected package libfreexl1:amd64.
+2026-10-29T01:28:18.0983356Z #24 6.911 Preparing to unpack .../31-libfreexl1_1.0.6-2_amd64.deb ...
+2026-10-29T01:28:18.0985804Z #24 6.913 Unpacking libfreexl1:amd64 (1.0.6-2) ...
+2026-10-29T01:28:18.0987055Z #24 6.943 Selecting previously unselected package libfyba0:amd64.
+2026-10-29T01:28:18.0988234Z #24 6.946 Preparing to unpack .../32-libfyba0_4.1.1-8_amd64.deb ...
+2026-10-29T01:28:18.0989147Z #24 6.947 Unpacking libfyba0:amd64 (4.1.1-8) ...
+2026-10-29T01:28:18.0990049Z #24 6.995 Selecting previously unselected package libgeos3.11.1:amd64.
+2026-10-29T01:28:18.0991125Z #24 6.998 Preparing to unpack .../33-libgeos3.11.1_3.11.1-1_amd64.deb ...
+2026-10-29T01:28:18.0992336Z #24 7.000 Unpacking libgeos3.11.1:amd64 (3.11.1-1) ...
+2026-10-29T01:28:18.2094099Z #24 7.096 Selecting previously unselected package libgeos-c1v5:amd64.
+2026-10-29T01:28:18.2095781Z #24 7.100 Preparing to unpack .../34-libgeos-c1v5_3.11.1-1_amd64.deb ...
+2026-10-29T01:28:18.2098970Z #24 7.105 Unpacking libgeos-c1v5:amd64 (3.11.1-1) ...
+2026-10-29T01:28:18.2103331Z #24 7.141 Selecting previously unselected package proj-data.
+2026-10-29T01:28:18.2104521Z #24 7.141 Preparing to unpack .../35-proj-data_9.8.1-1.pgdg12+1_all.deb ...
+2026-10-29T01:28:18.3837725Z #24 7.142 Unpacking proj-data (9.8.1-1.pgdg12+1) ...
+2026-10-29T01:28:18.8733259Z #24 7.803 Selecting previously unselected package libjbig0:amd64.
+2026-10-29T01:28:18.9843378Z #24 7.806 Preparing to unpack .../36-libjbig0_2.1-6.1_amd64.deb ...
+2026-10-29T01:28:18.9867697Z #24 7.808 Unpacking libjbig0:amd64 (2.1-6.1) ...
+2026-10-29T01:28:18.9903274Z #24 7.834 Selecting previously unselected package libjpeg62-turbo:amd64.
+2026-10-29T01:28:18.9932799Z #24 7.841 Preparing to unpack .../37-libjpeg62-turbo_1%3a2.1.5-2_amd64.deb ...
+2026-10-29T01:28:18.9962982Z #24 7.841 Unpacking libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+2026-10-29T01:28:18.9992515Z #24 7.875 Selecting previously unselected package liblerc4:amd64.
+2026-10-29T01:28:18.9993599Z #24 7.878 Preparing to unpack .../38-liblerc4_4.0.0+ds-2_amd64.deb ...
+2026-10-29T01:28:19.0022533Z #24 7.880 Unpacking liblerc4:amd64 (4.0.0+ds-2) ...
+2026-10-29T01:28:19.0032769Z #24 7.915 Selecting previously unselected package libwebp7:amd64.
+2026-10-29T01:28:19.0875968Z #24 7.918 Preparing to unpack .../39-libwebp7_1.2.4-0.2+deb12u1_amd64.deb ...
+2026-10-29T01:28:19.0877219Z #24 7.920 Unpacking libwebp7:amd64 (1.2.4-0.2+deb12u1) ...
+2026-10-29T01:28:19.0878259Z #24 7.968 Selecting previously unselected package libtiff6:amd64.
+2026-10-29T01:28:19.0879326Z #24 7.971 Preparing to unpack .../40-libtiff6_4.5.0-6+deb12u4_amd64.deb ...
+2026-10-29T01:28:19.0880312Z #24 7.975 Unpacking libtiff6:amd64 (4.5.0-6+deb12u4) ...
+2026-10-29T01:28:19.0881303Z #24 8.019 Selecting previously unselected package libproj25:amd64.
+2026-10-29T01:28:19.2403711Z #24 8.020 Preparing to unpack .../41-libproj25_9.8.1-1.pgdg12+1_amd64.deb ...
+2026-10-29T01:28:19.2404899Z #24 8.022 Unpacking libproj25:amd64 (9.8.1-1.pgdg12+1) ...
+2026-10-29T01:28:19.2601138Z #24 8.192 Selecting previously unselected package libgeotiff5:amd64.
+2026-10-29T01:28:19.3828821Z #24 8.195 Preparing to unpack .../42-libgeotiff5_1.7.1-2+b1_amd64.deb ...
+2026-10-29T01:28:19.3829977Z #24 8.197 Unpacking libgeotiff5:amd64 (1.7.1-2+b1) ...
+2026-10-29T01:28:19.3830993Z #24 8.234 Selecting previously unselected package libgif7:amd64.
+2026-10-29T01:28:19.3832183Z #24 8.239 Preparing to unpack .../43-libgif7_5.2.1-2.5+deb12u1_amd64.deb ...
+2026-10-29T01:28:19.3833209Z #24 8.240 Unpacking libgif7:amd64 (5.2.1-2.5+deb12u1) ...
+2026-10-29T01:28:19.3834084Z #24 8.274 Selecting previously unselected package libtirpc-common.
+2026-10-29T01:28:19.3835067Z #24 8.277 Preparing to unpack .../44-libtirpc-common_1.3.3+ds-1_all.deb ...
+2026-10-29T01:28:19.3835973Z #24 8.280 Unpacking libtirpc-common (1.3.3+ds-1) ...
+2026-10-29T01:28:19.3836840Z #24 8.314 Selecting previously unselected package libtirpc3:amd64.
+2026-10-29T01:28:19.5053671Z #24 8.317 Preparing to unpack .../45-libtirpc3_1.3.3+ds-1_amd64.deb ...
+2026-10-29T01:28:19.5055238Z #24 8.321 Unpacking libtirpc3:amd64 (1.3.3+ds-1) ...
+2026-10-29T01:28:19.5056356Z #24 8.357 Selecting previously unselected package libhdf4-0-alt.
+2026-10-29T01:28:19.5057482Z #24 8.359 Preparing to unpack .../46-libhdf4-0-alt_4.2.15-5_amd64.deb ...
+2026-10-29T01:28:19.5058435Z #24 8.360 Unpacking libhdf4-0-alt (4.2.15-5) ...
+2026-10-29T01:28:19.5059337Z #24 8.407 Selecting previously unselected package libsz2:amd64.
+2026-10-29T01:28:19.5060263Z #24 8.407 Preparing to unpack .../47-libsz2_1.0.6-1+b1_amd64.deb ...
+2026-10-29T01:28:19.5061072Z #24 8.408 Unpacking libsz2:amd64 (1.0.6-1+b1) ...
+2026-10-29T01:28:19.5062423Z #24 8.435 Selecting previously unselected package libhdf5-103-1:amd64.
+2026-10-29T01:28:19.6069029Z #24 8.437 Preparing to unpack .../48-libhdf5-103-1_1.10.8+repack1-1_amd64.deb ...
+2026-10-29T01:28:19.6072332Z #24 8.440 Unpacking libhdf5-103-1:amd64 (1.10.8+repack1-1) ...
+2026-10-29T01:28:19.7156661Z #24 8.578 Selecting previously unselected package libnuma1:amd64.
+2026-10-29T01:28:19.7157902Z #24 8.580 Preparing to unpack .../49-libnuma1_2.0.16-1_amd64.deb ...
+2026-10-29T01:28:19.7158594Z #24 8.581 Unpacking libnuma1:amd64 (2.0.16-1) ...
+2026-10-29T01:28:19.7159305Z #24 8.613 Selecting previously unselected package libx265-199:amd64.
+2026-10-29T01:28:19.7160048Z #24 8.615 Preparing to unpack .../50-libx265-199_3.5-2+b1_amd64.deb ...
+2026-10-29T01:28:19.7160661Z #24 8.616 Unpacking libx265-199:amd64 (3.5-2+b1) ...
+2026-10-29T01:28:19.9604457Z #24 8.798 Selecting previously unselected package libheif1:amd64.
+2026-10-29T01:28:19.9623373Z #24 8.801 Preparing to unpack .../51-libheif1_1.15.1-1+deb12u1_amd64.deb ...
+2026-10-29T01:28:19.9624382Z #24 8.807 Unpacking libheif1:amd64 (1.15.1-1+deb12u1) ...
+2026-10-29T01:28:19.9625337Z #24 8.853 Selecting previously unselected package libjson-c5:amd64.
+2026-10-29T01:28:19.9626295Z #24 8.857 Preparing to unpack .../52-libjson-c5_0.16-2_amd64.deb ...
+2026-10-29T01:28:19.9627157Z #24 8.862 Unpacking libjson-c5:amd64 (0.16-2) ...
+2026-10-29T01:28:19.9628057Z #24 8.883 Selecting previously unselected package libminizip1:amd64.
+2026-10-29T01:28:19.9629062Z #24 8.884 Preparing to unpack .../53-libminizip1_1.1-8+deb12u1_amd64.deb ...
+2026-10-29T01:28:19.9629970Z #24 8.885 Unpacking libminizip1:amd64 (1.1-8+deb12u1) ...
+2026-10-29T01:28:20.0794066Z #24 8.912 Selecting previously unselected package liburiparser1:amd64.
+2026-10-29T01:28:20.0803126Z #24 8.914 Preparing to unpack .../54-liburiparser1_0.9.7+dfsg-2_amd64.deb ...
+2026-10-29T01:28:20.0832818Z #24 8.915 Unpacking liburiparser1:amd64 (0.9.7+dfsg-2) ...
+2026-10-29T01:28:20.0833821Z #24 8.935 Selecting previously unselected package libkmlbase1:amd64.
+2026-10-29T01:28:20.0834990Z #24 8.937 Preparing to unpack .../55-libkmlbase1_1.3.0-10_amd64.deb ...
+2026-10-29T01:28:20.0835922Z #24 8.938 Unpacking libkmlbase1:amd64 (1.3.0-10) ...
+2026-10-29T01:28:20.0836793Z #24 8.959 Selecting previously unselected package libkmldom1:amd64.
+2026-10-29T01:28:20.0837750Z #24 8.961 Preparing to unpack .../56-libkmldom1_1.3.0-10_amd64.deb ...
+2026-10-29T01:28:20.0838626Z #24 8.962 Unpacking libkmldom1:amd64 (1.3.0-10) ...
+2026-10-29T01:28:20.0839530Z #24 9.010 Selecting previously unselected package libkmlengine1:amd64.
+2026-10-29T01:28:20.1790616Z #24 9.011 Preparing to unpack .../57-libkmlengine1_1.3.0-10_amd64.deb ...
+2026-10-29T01:28:20.1822943Z #24 9.014 Unpacking libkmlengine1:amd64 (1.3.0-10) ...
+2026-10-29T01:28:20.1832932Z #24 9.051 Selecting previously unselected package mysql-common.
+2026-10-29T01:28:20.1842919Z #24 9.054 Preparing to unpack .../58-mysql-common_5.8+1.1.0_all.deb ...
+2026-10-29T01:28:20.1843835Z #24 9.074 Unpacking mysql-common (5.8+1.1.0) ...
+2026-10-29T01:28:20.1844772Z #24 9.108 Selecting previously unselected package mariadb-common.
+2026-10-29T01:28:20.1845876Z #24 9.111 Preparing to unpack .../59-mariadb-common_1%3a10.11.19-0+deb12u1_all.deb ...
+2026-10-29T01:28:20.2998369Z #24 9.120 Unpacking mariadb-common (1:10.11.19-0+deb12u1) ...
+2026-10-29T01:28:20.3023281Z #24 9.158 Selecting previously unselected package libmariadb3:amd64.
+2026-10-29T01:28:20.3053850Z #24 9.166 Preparing to unpack .../60-libmariadb3_1%3a10.11.19-0+deb12u1_amd64.deb ...
+2026-10-29T01:28:20.3083188Z #24 9.166 Unpacking libmariadb3:amd64 (1:10.11.19-0+deb12u1) ...
+2026-10-29T01:28:20.3110875Z #24 9.229 Selecting previously unselected package libhdf5-hl-100:amd64.
+2026-10-29T01:28:20.4139785Z #24 9.232 Preparing to unpack .../61-libhdf5-hl-100_1.10.8+repack1-1_amd64.deb ...
+2026-10-29T01:28:20.4142769Z #24 9.232 Unpacking libhdf5-hl-100:amd64 (1.10.8+repack1-1) ...
+2026-10-29T01:28:20.4143565Z #24 9.268 Selecting previously unselected package libnetcdf19:amd64.
+2026-10-29T01:28:20.4144423Z #24 9.271 Preparing to unpack .../62-libnetcdf19_1%3a4.9.0-3+b1_amd64.deb ...
+2026-10-29T01:28:20.4145238Z #24 9.273 Unpacking libnetcdf19:amd64 (1:4.9.0-3+b1) ...
+2026-10-29T01:28:20.4146120Z #24 9.344 Selecting previously unselected package libltdl7:amd64.
+2026-10-29T01:28:20.5419448Z #24 9.347 Preparing to unpack .../63-libltdl7_2.4.7-7~deb12u1_amd64.deb ...
+2026-10-29T01:28:20.5422262Z #24 9.352 Unpacking libltdl7:amd64 (2.4.7-7~deb12u1) ...
+2026-10-29T01:28:20.5423695Z #24 9.397 Selecting previously unselected package libodbc2:amd64.
+2026-10-29T01:28:20.5424845Z #24 9.397 Preparing to unpack .../64-libodbc2_2.3.11-2+deb12u1_amd64.deb ...
+2026-10-29T01:28:20.5425832Z #24 9.404 Unpacking libodbc2:amd64 (2.3.11-2+deb12u1) ...
+2026-10-29T01:28:20.6429244Z #24 9.483 Selecting previously unselected package unixodbc-common.
+2026-10-29T01:28:20.6430220Z #24 9.490 Preparing to unpack .../65-unixodbc-common_2.3.11-2+deb12u1_all.deb ...
+2026-10-29T01:28:20.6431055Z #24 9.491 Unpacking unixodbc-common (2.3.11-2+deb12u1) ...
+2026-10-29T01:28:20.6431802Z #24 9.534 Selecting previously unselected package libodbcinst2:amd64.
+2026-10-29T01:28:20.6432974Z #24 9.537 Preparing to unpack .../66-libodbcinst2_2.3.11-2+deb12u1_amd64.deb ...
+2026-10-29T01:28:20.6433786Z #24 9.539 Unpacking libodbcinst2:amd64 (2.3.11-2+deb12u1) ...
+2026-10-29T01:28:20.6434510Z #24 9.571 Selecting previously unselected package libogdi4.1.
+2026-10-29T01:28:20.6435276Z #24 9.575 Preparing to unpack .../67-libogdi4.1_4.1.0+ds-6_amd64.deb ...
+2026-10-29T01:28:20.7443835Z #24 9.575 Unpacking libogdi4.1 (4.1.0+ds-6) ...
+2026-10-29T01:28:20.7445272Z #24 9.623 Selecting previously unselected package libopenjp2-7:amd64.
+2026-10-29T01:28:20.7446358Z #24 9.626 Preparing to unpack .../68-libopenjp2-7_2.5.0-2+deb12u3_amd64.deb ...
+2026-10-29T01:28:20.7447263Z #24 9.628 Unpacking libopenjp2-7:amd64 (2.5.0-2+deb12u3) ...
+2026-10-29T01:28:20.7448149Z #24 9.673 Selecting previously unselected package liblcms2-2:amd64.
+2026-10-29T01:28:20.7449117Z #24 9.676 Preparing to unpack .../69-liblcms2-2_2.14-2+deb12u1_amd64.deb ...
+2026-10-29T01:28:20.9780692Z #24 9.679 Unpacking liblcms2-2:amd64 (2.14-2+deb12u1) ...
+2026-10-29T01:28:20.9792841Z #24 9.720 Selecting previously unselected package libnspr4:amd64.
+2026-10-29T01:28:20.9813131Z #24 9.722 Preparing to unpack .../70-libnspr4_2%3a4.35-1_amd64.deb ...
+2026-10-29T01:28:20.9823192Z #24 9.723 Unpacking libnspr4:amd64 (2:4.35-1) ...
+2026-10-29T01:28:20.9830146Z #24 9.759 Selecting previously unselected package libnss3:amd64.
+2026-10-29T01:28:20.9832637Z #24 9.762 Preparing to unpack .../71-libnss3_2%3a3.87.1-1+deb12u4_amd64.deb ...
+2026-10-29T01:28:20.9833459Z #24 9.763 Unpacking libnss3:amd64 (2:3.87.1-1+deb12u4) ...
+2026-10-29T01:28:20.9834230Z #24 9.909 Selecting previously unselected package libpoppler126:amd64.
+2026-10-29T01:28:21.1313997Z #24 9.910 Preparing to unpack .../72-libpoppler126_22.12.0-2+deb12u3_amd64.deb ...
+2026-10-29T01:28:21.1315199Z #24 9.912 Unpacking libpoppler126:amd64 (22.12.0-2+deb12u3) ...
+2026-10-29T01:28:21.1316426Z #24 10.06 Selecting previously unselected package libqhull-r8.0:amd64.
+2026-10-29T01:28:21.2394939Z #24 10.07 Preparing to unpack .../73-libqhull-r8.0_2020.2-5_amd64.deb ...
+2026-10-29T01:28:21.2396078Z #24 10.07 Unpacking libqhull-r8.0:amd64 (2020.2-5) ...
+2026-10-29T01:28:21.2397059Z #24 10.15 Selecting previously unselected package librttopo1:amd64.
+2026-10-29T01:28:21.2398058Z #24 10.16 Preparing to unpack .../74-librttopo1_1.1.0-3_amd64.deb ...
+2026-10-29T01:28:21.2398910Z #24 10.17 Unpacking librttopo1:amd64 (1.1.0-3) ...
+2026-10-29T01:28:21.4453173Z #24 10.22 Selecting previously unselected package libspatialite7:amd64.
+2026-10-29T01:28:21.4454466Z #24 10.22 Preparing to unpack .../75-libspatialite7_5.0.1-3_amd64.deb ...
+2026-10-29T01:28:21.4482548Z #24 10.22 Unpacking libspatialite7:amd64 (5.0.1-3) ...
+2026-10-29T01:28:21.5133392Z #24 10.44 Selecting previously unselected package libxerces-c3.2:amd64.
+2026-10-29T01:28:21.5134155Z #24 10.44 Preparing to unpack .../76-libxerces-c3.2_3.2.4+debian-1_amd64.deb ...
+2026-10-29T01:28:21.6393591Z #24 10.44 Unpacking libxerces-c3.2:amd64 (3.2.4+debian-1) ...
+2026-10-29T01:28:21.6412566Z #24 10.57 Selecting previously unselected package libgdal32.
+2026-10-29T01:28:21.7964102Z #24 10.57 Preparing to unpack .../77-libgdal32_3.6.2+dfsg-1+b2_amd64.deb ...
+2026-10-29T01:28:21.7992796Z #24 10.58 Unpacking libgdal32 (3.6.2+dfsg-1+b2) ...
+2026-10-29T01:28:22.3493257Z #24 11.28 Selecting previously unselected package libgmpxx4ldbl:amd64.
+2026-10-29T01:28:22.4643231Z #24 11.28 Preparing to unpack .../78-libgmpxx4ldbl_2%3a6.2.1+dfsg1-1.1_amd64.deb ...
+2026-10-29T01:28:22.4691051Z #24 11.29 Unpacking libgmpxx4ldbl:amd64 (2:6.2.1+dfsg1-1.1) ...
+2026-10-29T01:28:22.4743117Z #24 11.35 Selecting previously unselected package libmpfr6:amd64.
+2026-10-29T01:28:22.4744376Z #24 11.35 Preparing to unpack .../79-libmpfr6_4.2.0-1_amd64.deb ...
+2026-10-29T01:28:22.4772577Z #24 11.35 Unpacking libmpfr6:amd64 (4.2.0-1) ...
+2026-10-29T01:28:22.4782775Z #24 ...
+2026-10-29T01:28:22.4783208Z 
+2026-10-29T01:28:22.4783605Z #23 [worker interface 6/6] RUN npm run build
+2026-10-29T01:28:22.4784487Z #23 10.27 vite v8.3.5 building client environment for production...
+2026-10-29T01:28:22.6086889Z #23 10.29 transforming...
+2026-10-29T01:28:22.8804581Z #23 10.69 ✓ 46 modules transformed.
+2026-10-29T01:28:23.0253002Z #23 10.75 rendering chunks...
+2026-10-29T01:28:23.2397252Z #23 10.83 computing gzip size...
+2026-10-29T01:28:23.2403322Z #23 10.84 dist/index.html                   0.53 kB │ gzip:   0.34 kB
+2026-10-29T01:28:23.2404885Z #23 10.84 dist/assets/index-BwDooYcZ.css  103.75 kB │ gzip:  21.80 kB
+2026-10-29T01:28:23.2406486Z #23 10.84 dist/assets/index-Dcz7gSOv.js   472.15 kB │ gzip: 129.16 kB
+2026-10-29T01:28:23.2409821Z #23 10.84 
+2026-10-29T01:28:23.2410535Z #23 10.85 ✓ built in 572ms
+2026-10-29T01:28:23.2414201Z #23 DONE 10.9s
+2026-10-29T01:28:23.2425210Z 
+2026-10-29T01:28:23.2426509Z #24 [database 2/4] RUN apt-get update && apt-get install -y --no-install-recommends postgresql-17-postgis-3 postgresql-17-postgis-3-scripts && rm -rf /var/lib/apt/lists/*
+2026-10-29T01:28:23.2431101Z #24 11.43 Selecting previously unselected package libprotobuf-c1:amd64.
+2026-10-29T01:28:23.2432925Z #24 11.43 Preparing to unpack .../80-libprotobuf-c1_1.4.1-1+b1_amd64.deb ...
+2026-10-29T01:28:23.2437268Z #24 11.43 Unpacking libprotobuf-c1:amd64 (1.4.1-1+b1) ...
+2026-10-29T01:28:23.2440025Z #24 11.54 Selecting previously unselected package libsfcgal1.
+2026-10-29T01:28:23.2441252Z #24 11.54 Preparing to unpack .../81-libsfcgal1_1.4.1-5_amd64.deb ...
+2026-10-29T01:28:23.2444525Z #24 11.55 Unpacking libsfcgal1 (1.4.1-5) ...
+2026-10-29T01:28:23.2448049Z #24 11.84 Selecting previously unselected package postgresql-17-postgis-3-scripts.
+2026-10-29T01:28:23.2461440Z #24 11.84 Preparing to unpack .../82-postgresql-17-postgis-3-scripts_3.6.4+dfsg-2.pgdg12+1_all.deb ...
+2026-10-29T01:28:23.2463148Z #24 11.84 Unpacking postgresql-17-postgis-3-scripts (3.6.4+dfsg-2.pgdg12+1) ...
+2026-10-29T01:28:23.9412255Z #24 12.87 Selecting previously unselected package postgresql-17-postgis-3.
+2026-10-29T01:28:24.0968358Z #24 12.88 Preparing to unpack .../83-postgresql-17-postgis-3_3.6.4+dfsg-2.pgdg12+1_amd64.deb ...
+2026-10-29T01:28:24.0969492Z #24 12.88 Unpacking postgresql-17-postgis-3 (3.6.4+dfsg-2.pgdg12+1) ...
+2026-10-29T01:28:24.1993292Z #24 13.13 Setting up libexpat1:amd64 (2.5.0-1+deb12u5) ...
+2026-10-29T01:28:24.1994170Z #24 ...
+2026-10-29T01:28:24.1994428Z 
+2026-10-29T01:28:24.1997831Z #20 [worker service  4/11] RUN pip install --no-cache-dir uv==0.11.23 && uv export --locked --no-dev --no-emit-project --format requirements-txt --output-file /tmp/requirements.txt && pip install --no-cache-dir --require-hashes -r /tmp/requirements.txt
+2026-10-29T01:28:24.2000252Z #20 6.502 Collecting absl-py==2.5.1 (from -r /tmp/requirements.txt (line 3))
+2026-10-29T01:28:24.2001270Z #20 6.657   Downloading absl_py-2.5.1-py3-none-any.whl (137 kB)
+2026-10-29T01:28:24.2002836Z #20 6.724 Collecting annotated-doc==0.0.5 (from -r /tmp/requirements.txt (line 7))
+2026-10-29T01:28:24.2003791Z #20 6.738   Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-29T01:28:24.2004711Z #20 6.765 Collecting annotated-types==0.8.0 (from -r /tmp/requirements.txt (line 11))
+2026-10-29T01:28:24.2005632Z #20 6.780   Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-29T01:28:24.2006845Z #20 6.817 Collecting anyio==4.15.1 (from -r /tmp/requirements.txt (line 15))
+2026-10-29T01:28:24.2007626Z #20 6.833   Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-29T01:28:24.2008420Z #20 6.890 Collecting certifi==2026.10.23 (from -r /tmp/requirements.txt (line 21))
+2026-10-29T01:28:24.2009042Z #20 6.904   Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-10-29T01:28:24.2009538Z #20 7.128 Collecting cffi==2.1.1 (from -r /tmp/requirements.txt (line 28))
+2026-10-29T01:28:24.2010130Z #20 7.143   Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-10-29T01:28:24.2011137Z #20 7.198 Collecting click==8.5.0 (from -r /tmp/requirements.txt (line 45))
+2026-10-29T01:28:24.2012086Z #20 7.212   Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-29T01:28:24.2012810Z #20 7.524 Collecting cryptography==50.0.2 (from -r /tmp/requirements.txt (line 49))
+2026-10-29T01:28:24.2013387Z #20 7.539   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+2026-10-29T01:28:24.2014289Z #20 7.806      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 18.9 MB/s  0:00:00
+2026-10-29T01:28:24.2014912Z #20 7.838 Collecting defusedxml==0.7.1 (from -r /tmp/requirements.txt (line 91))
+2026-10-29T01:28:24.2015663Z #20 7.853   Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-10-29T01:28:24.2016468Z #20 7.935 Collecting fastapi==0.162.0 (from -r /tmp/requirements.txt (line 95))
+2026-10-29T01:28:24.2017320Z #20 7.948   Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+2026-10-29T01:28:24.2018162Z #20 8.193 Collecting greenlet==3.5.6 (from -r /tmp/requirements.txt (line 99))
+2026-10-29T01:28:24.2019307Z #20 8.209   Downloading greenlet-3.5.6-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (623 kB)
+2026-10-29T01:28:24.2020532Z #20 8.228      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 623.8/623.8 kB 30.0 MB/s  0:00:00
+2026-10-29T01:28:24.2021398Z #20 8.254 Collecting h11==0.16.0 (from -r /tmp/requirements.txt (line 110))
+2026-10-29T01:28:24.2022529Z #20 8.270   Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-29T01:28:24.2023031Z #20 8.302 Collecting httpcore==1.0.9 (from -r /tmp/requirements.txt (line 116))
+2026-10-29T01:28:24.2023636Z #20 8.317   Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-29T01:28:24.2024209Z #20 8.351 Collecting httpx==0.28.1 (from -r /tmp/requirements.txt (line 120))
+2026-10-29T01:28:24.2024671Z #20 8.366   Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-29T01:28:24.2025343Z #20 8.401 Collecting idna==3.20 (from -r /tmp/requirements.txt (line 124))
+2026-10-29T01:28:24.2025788Z #20 8.416   Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-29T01:28:24.2026259Z #20 8.442 Collecting immutabledict==4.3.1 (from -r /tmp/requirements.txt (line 130))
+2026-10-29T01:28:24.2027071Z #20 8.457   Downloading immutabledict-4.3.1-py3-none-any.whl (5.0 kB)
+2026-10-29T01:28:24.2027741Z #20 8.786 Collecting numpy==2.5.4 (from -r /tmp/requirements.txt (line 134))
+2026-10-29T01:28:24.2028578Z #20 8.800   Downloading numpy-2.5.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-10-29T01:28:24.2029484Z #20 9.084      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 60.0 MB/s  0:00:00
+2026-10-29T01:28:24.2030022Z #20 9.136 Collecting opentelemetry-api==1.45.1 (from -r /tmp/requirements.txt (line 150))
+2026-10-29T01:28:24.2030731Z #20 9.152   Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+2026-10-29T01:28:24.2031242Z #20 9.201 Collecting ortools==9.15.6755 (from -r /tmp/requirements.txt (line 154))
+2026-10-29T01:28:24.2032115Z #20 9.221   Downloading ortools-9.15.6755-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (29.8 MB)
+2026-10-29T01:28:24.2033137Z #20 9.493      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.8/29.8 MB 111.2 MB/s  0:00:00
+2026-10-29T01:28:24.2033622Z #20 9.707 Collecting pandas==3.1.0 (from -r /tmp/requirements.txt (line 163))
+2026-10-29T01:28:24.2034328Z #20 9.722   Downloading pandas-3.1.0-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.0 MB)
+2026-10-29T01:28:24.2035382Z #20 9.782      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 224.9 MB/s  0:00:00
+2026-10-29T01:28:24.2036006Z #20 10.10 Collecting protobuf==6.33.5 (from -r /tmp/requirements.txt (line 174))
+2026-10-29T01:28:24.2036958Z #20 10.12   Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+2026-10-29T01:28:24.2037547Z #20 10.15 Collecting psycopg==3.2.13 (from -r /tmp/requirements.txt (line 186))
+2026-10-29T01:28:24.2038014Z #20 10.16   Downloading psycopg-3.2.13-py3-none-any.whl (206 kB)
+2026-10-29T01:28:24.2038851Z #20 10.41 Collecting psycopg-binary==3.2.13 (from -r /tmp/requirements.txt (line 190))
+2026-10-29T01:28:24.2040079Z #20 10.46   Downloading psycopg_binary-3.2.13-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.4 MB)
+2026-10-29T01:28:24.2041400Z #20 10.48      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 256.8 MB/s  0:00:00
+2026-10-29T01:28:24.2043934Z #20 10.51 Collecting pycparser==3.12 (from -r /tmp/requirements.txt (line 201))
+2026-10-29T01:28:24.2044485Z #20 10.53   Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+2026-10-29T01:28:24.2045176Z #20 10.74 Collecting pydantic==2.14.1 (from -r /tmp/requirements.txt (line 205))
+2026-10-29T01:28:24.2047386Z #20 10.76   Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+2026-10-29T01:28:24.2048366Z #20 11.97 Collecting pydantic-core==2.50.1 (from -r /tmp/requirements.txt (line 211))
+2026-10-29T01:28:24.2049371Z #20 11.98   Downloading pydantic_core-2.50.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+2026-10-29T01:28:24.2050184Z #20 11.99      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 361.2 MB/s  0:00:00
+2026-10-29T01:28:24.2050900Z #20 12.03 Collecting pyjwt==2.15.1 (from -r /tmp/requirements.txt (line 229))
+2026-10-29T01:28:24.2051378Z #20 12.04   Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+2026-10-29T01:28:24.2051833Z #20 12.08 Collecting pypdf==6.21.3 (from -r /tmp/requirements.txt (line 233))
+2026-10-29T01:28:24.2052946Z #20 12.10   Downloading pypdf-6.21.3-py3-none-any.whl (409 kB)
+2026-10-29T01:28:24.2053804Z #20 12.22 Collecting pyproj==3.7.2 (from -r /tmp/requirements.txt (line 237))
+2026-10-29T01:28:24.2054801Z #20 12.25   Downloading pyproj-3.7.2-cp313-cp313-manylinux_2_28_x86_64.whl (9.5 MB)
+2026-10-29T01:28:24.2055876Z #20 12.29      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 262.4 MB/s  0:00:00
+2026-10-29T01:28:24.2056808Z #20 12.32 Collecting python-dateutil==3.0.0 (from -r /tmp/requirements.txt (line 258))
+2026-10-29T01:28:24.2057800Z #20 12.34   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+2026-10-29T01:28:24.2058710Z #20 12.37 Collecting six==1.17.0 (from -r /tmp/requirements.txt (line 262))
+2026-10-29T01:28:24.2059517Z #20 12.38   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-29T01:28:24.2060356Z #20 12.90 Collecting sqlalchemy==2.0.55 (from -r /tmp/requirements.txt (line 266))
+2026-10-29T01:28:24.2061682Z #20 12.92   Downloading sqlalchemy-2.0.55-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.4 MB)
+2026-10-29T01:28:24.2063362Z #20 12.94      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 286.3 MB/s  0:00:00
+2026-10-29T01:28:24.2064240Z #20 12.99 Collecting starlette==1.10.0 (from -r /tmp/requirements.txt (line 277))
+2026-10-29T01:28:24.2065114Z #20 13.01   Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+2026-10-29T01:28:24.2066003Z #20 13.04 Collecting typing-extensions==4.16.0 (from -r /tmp/requirements.txt (line 281))
+2026-10-29T01:28:24.2067001Z #20 13.06   Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-29T01:28:24.2067967Z #20 13.08 Collecting typing-inspection==0.4.4 (from -r /tmp/requirements.txt (line 293))
+2026-10-29T01:28:24.2068935Z #20 13.10   Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-29T01:28:24.2069836Z #20 13.12 Collecting tzdata==2026.5 (from -r /tmp/requirements.txt (line 299))
+2026-10-29T01:28:24.2071037Z #20 13.14   Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-29T01:28:24.2072111Z #20 13.18 Collecting uvicorn==0.54.0 (from -r /tmp/requirements.txt (line 306))
+2026-10-29T01:28:24.2072959Z #20 13.20   Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-29T01:28:24.2076130Z #20 13.51 Installing collected packages: tzdata, typing-extensions, six, pypdf, pyjwt, pycparser, psycopg-binary, psycopg, protobuf, numpy, immutabledict, idna, h11, greenlet, defusedxml, click, certifi, annotated-types, annotated-doc, absl-py, uvicorn, typing-inspection, sqlalchemy, python-dateutil, pyproj, pydantic-core, opentelemetry-api, httpcore, cffi, anyio, starlette, pydantic, pandas, httpx, cryptography, ortools, fastapi
+2026-10-29T01:28:24.3011434Z #20 ...
+2026-10-29T01:28:24.3012428Z 
+2026-10-29T01:28:24.3014120Z #24 [database 2/4] RUN apt-get update && apt-get install -y --no-install-recommends postgresql-17-postgis-3 postgresql-17-postgis-3-scripts && rm -rf /var/lib/apt/lists/*
+2026-10-29T01:28:24.3016234Z #24 13.13 Setting up liblcms2-2:amd64 (2.14-2+deb12u1) ...
+2026-10-29T01:28:24.3017281Z #24 13.14 Setting up libaom3:amd64 (3.6.0-1+deb12u3) ...
+2026-10-29T01:28:24.3018238Z #24 13.14 Setting up mysql-common (5.8+1.1.0) ...
+2026-10-29T01:28:24.3019770Z #24 13.15 update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+2026-10-29T01:28:24.3021052Z #24 13.16 Setting up libpsl5:amd64 (0.21.2-1) ...
+2026-10-29T01:28:24.3022163Z #24 13.16 Setting up liblerc4:amd64 (4.0.0+ds-2) ...
+2026-10-29T01:28:24.3023146Z #24 13.16 Setting up proj-data (9.8.1-1.pgdg12+1) ...
+2026-10-29T01:28:24.3024169Z #24 13.16 Setting up libgeos3.11.1:amd64 (3.11.1-1) ...
+2026-10-29T01:28:24.3025136Z #24 13.17 Setting up libminizip1:amd64 (1.1-8+deb12u1) ...
+2026-10-29T01:28:24.3026005Z #24 13.17 Setting up libtirpc-common (1.3.3+ds-1) ...
+2026-10-29T01:28:24.3027193Z #24 13.17 Setting up libbrotli1:amd64 (1.0.9-2+deb12u1) ...
+2026-10-29T01:28:24.3028101Z #24 13.17 Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u3) ...
+2026-10-29T01:28:24.3028992Z #24 13.18 Setting up libdeflate0:amd64 (1.14-1) ...
+2026-10-29T01:28:24.3029818Z #24 13.18 Setting up libqhull-r8.0:amd64 (2020.2-5) ...
+2026-10-29T01:28:24.3030643Z #24 13.18 Setting up libprotobuf-c1:amd64 (1.4.1-1+b1) ...
+2026-10-29T01:28:24.3031505Z #24 13.18 Setting up libjbig0:amd64 (2.1-6.1) ...
+2026-10-29T01:28:24.3032760Z #24 13.18 Setting up libaec0:amd64 (1.0.6-1+b1) ...
+2026-10-29T01:28:24.3033596Z #24 13.19 Setting up gdal-data (3.13.2+dfsg-1.pgdg12+1) ...
+2026-10-29T01:28:24.3034444Z #24 13.19 Setting up libsnappy1v5:amd64 (1.1.9-3) ...
+2026-10-29T01:28:24.3035281Z #24 13.19 Setting up mariadb-common (1:10.11.19-0+deb12u1) ...
+2026-10-29T01:28:24.3036470Z #24 13.20 update-alternatives: using /etc/mysql/mariadb.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+2026-10-29T01:28:24.3037626Z #24 13.20 Setting up libblas3:amd64 (3.11.0-2) ...
+2026-10-29T01:28:24.3039746Z #24 13.21 update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+2026-10-29T01:28:24.3043476Z #24 13.21 Setting up libgmpxx4ldbl:amd64 (2:6.2.1+dfsg1-1.1) ...
+2026-10-29T01:28:24.3044381Z #24 13.21 Setting up libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+2026-10-29T01:28:24.3045220Z #24 13.21 Setting up libmpfr6:amd64 (4.2.0-1) ...
+2026-10-29T01:28:24.3046041Z #24 13.22 Setting up libnspr4:amd64 (2:4.35-1) ...
+2026-10-29T01:28:24.3046919Z #24 13.22 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+2026-10-29T01:28:24.3047889Z #24 13.22 Setting up libquadmath0:amd64 (12.2.0-14+deb12u1) ...
+2026-10-29T01:28:24.3048858Z #24 13.22 Setting up libpng16-16:amd64 (1.6.39-2+deb12u6) ...
+2026-10-29T01:28:24.3049845Z #24 13.23 Setting up postgresql-17-postgis-3-scripts (3.6.4+dfsg-2.pgdg12+1) ...
+2026-10-29T01:28:24.3051732Z #24 13.23 update-alternatives: using /usr/share/postgresql/17/extension/postgis-3.control to provide /usr/share/postgresql/17/extension/postgis.control (postgresql-17-postgis.control) in auto mode
+2026-10-29T01:28:24.4017658Z #24 13.24 Setting up libgeos-c1v5:amd64 (3.11.1-1) ...
+2026-10-29T01:28:24.4018468Z #24 13.24 Setting up libmariadb3:amd64 (1:10.11.19-0+deb12u1) ...
+2026-10-29T01:28:24.4018987Z #24 13.24 Setting up fonts-dejavu-core (2.37-6) ...
+2026-10-29T01:28:24.4019511Z #24 13.26 Setting up unixodbc-common (2.3.11-2+deb12u1) ...
+2026-10-29T01:28:24.4020001Z #24 13.26 Setting up libdav1d6:amd64 (1.0.0-2+deb12u1) ...
+2026-10-29T01:28:24.4020468Z #24 13.27 Setting up libltdl7:amd64 (2.4.7-7~deb12u1) ...
+2026-10-29T01:28:24.4020956Z #24 13.27 Setting up libgfortran5:amd64 (12.2.0-14+deb12u1) ...
+2026-10-29T01:28:24.4021448Z #24 13.27 Setting up libwebp7:amd64 (1.2.4-0.2+deb12u1) ...
+2026-10-29T01:28:24.4022560Z #24 13.27 Setting up libboost-serialization1.74.0:amd64 (1.74.0+ds1-21) ...
+2026-10-29T01:28:24.4023520Z #24 13.28 Setting up libgif7:amd64 (5.2.1-2.5+deb12u1) ...
+2026-10-29T01:28:24.4024019Z #24 13.28 Setting up libodbc2:amd64 (2.3.11-2+deb12u1) ...
+2026-10-29T01:28:24.4024523Z #24 13.28 Setting up liburiparser1:amd64 (0.9.7+dfsg-2) ...
+2026-10-29T01:28:24.4025188Z #24 13.29 Setting up libnuma1:amd64 (2.0.16-1) ...
+2026-10-29T01:28:24.4025906Z #24 13.29 Setting up librttopo1:amd64 (1.1.0-3) ...
+2026-10-29T01:28:24.4026905Z #24 13.29 Setting up libfreexl1:amd64 (1.0.6-2) ...
+2026-10-29T01:28:24.4027457Z #24 13.29 Setting up libtiff6:amd64 (4.5.0-6+deb12u4) ...
+2026-10-29T01:28:24.4027906Z #24 13.29 Setting up libfyba0:amd64 (4.1.1-8) ...
+2026-10-29T01:28:24.4028349Z #24 13.30 Setting up libkmlbase1:amd64 (1.3.0-10) ...
+2026-10-29T01:28:24.4028958Z #24 13.30 Setting up libblosc1:amd64 (1.21.3+ds-1) ...
+2026-10-29T01:28:24.4029678Z #24 13.30 Setting up libopenjp2-7:amd64 (2.5.0-2+deb12u3) ...
+2026-10-29T01:28:24.4030166Z #24 13.30 Setting up libssh2-1:amd64 (1.10.0-3+deb12u1) ...
+2026-10-29T01:28:24.4030724Z #24 13.31 Setting up libsfcgal1 (1.4.1-5) ...
+2026-10-29T01:28:24.4031088Z #24 13.31 Setting up libde265-0:amd64 (1.0.11-1+deb12u3) ...
+2026-10-29T01:28:24.4031465Z #24 13.31 Setting up libjson-c5:amd64 (0.16-2) ...
+2026-10-29T01:28:24.4031807Z #24 13.31 Setting up libsz2:amd64 (1.0.6-1+b1) ...
+2026-10-29T01:28:24.4032706Z #24 13.32 Setting up gdal-plugins:amd64 (3.13.2+dfsg-1.pgdg12+1) ...
+2026-10-29T01:28:24.4033131Z #24 13.32 Setting up libkmldom1:amd64 (1.3.0-10) ...
+2026-10-29T01:28:24.4033623Z #24 13.32 Setting up libtirpc3:amd64 (1.3.3+ds-1) ...
+2026-10-29T01:28:24.4034023Z #24 13.32 Setting up libodbcinst2:amd64 (2.3.11-2+deb12u1) ...
+2026-10-29T01:28:24.4034406Z #24 13.32 Setting up liblapack3:amd64 (3.11.0-2) ...
+2026-10-29T01:28:24.4035301Z #24 13.33 update-alternatives: using /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3 to provide /usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+2026-10-29T01:28:24.4036429Z #24 13.33 Setting up libkmlengine1:amd64 (1.3.0-10) ...
+2026-10-29T01:28:24.4036784Z #24 13.33 Setting up libogdi4.1 (4.1.0+ds-6) ...
+2026-10-29T01:28:24.6161752Z #24 13.34 Setting up fontconfig-config (2.14.1-4) ...
+2026-10-29T01:28:24.6162828Z #24 13.40 debconf: unable to initialize frontend: Dialog
+2026-10-29T01:28:24.6163605Z #24 13.40 debconf: (TERM is not set, so the dialog frontend is not usable.)
+2026-10-29T01:28:24.6164364Z #24 13.40 debconf: falling back to frontend: Readline
+2026-10-29T01:28:24.6165052Z #24 13.41 debconf: unable to initialize frontend: Readline
+2026-10-29T01:28:24.6165753Z #24 13.41 debconf: (This frontend requires a controlling tty.)
+2026-10-29T01:28:24.6166418Z #24 13.41 debconf: falling back to frontend: Teletype
+2026-10-29T01:28:24.6167030Z #24 13.55 Setting up libarpack2:amd64 (3.8.0-3) ...
+2026-10-29T01:28:24.7573015Z #24 13.55 Setting up libsuperlu5:amd64 (5.3.0+dfsg1-2+b1) ...
+2026-10-29T01:28:24.7574236Z #24 13.55 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u15) ...
+2026-10-29T01:28:24.7575812Z #24 13.56 Setting up libnss3:amd64 (2:3.87.1-1+deb12u4) ...
+2026-10-29T01:28:24.7577019Z #24 13.56 Setting up libcfitsio10:amd64 (4.2.0-3) ...
+2026-10-29T01:28:24.7578629Z #24 13.56 Setting up libfreetype6:amd64 (2.12.1+dfsg-5+deb12u4) ...
+2026-10-29T01:28:24.7579727Z #24 13.56 Setting up libhdf4-0-alt (4.2.15-5) ...
+2026-10-29T01:28:24.7580391Z #24 13.57 Setting up libx265-199:amd64 (3.5-2+b1) ...
+2026-10-29T01:28:24.7581421Z #24 13.57 Setting up libcurl4:amd64 (7.88.1-10+deb12u15) ...
+2026-10-29T01:28:24.7582457Z #24 13.57 Setting up libfontconfig1:amd64 (2.14.1-4) ...
+2026-10-29T01:28:24.7583639Z #24 13.57 Setting up libxerces-c3.2:amd64 (3.2.4+debian-1) ...
+2026-10-29T01:28:24.7584649Z #24 13.58 Setting up libarmadillo11 (1:11.4.2+dfsg-1) ...
+2026-10-29T01:28:24.7585362Z #24 13.58 Setting up libproj25:amd64 (9.8.1-1.pgdg12+1) ...
+2026-10-29T01:28:24.7586375Z #24 13.58 Setting up libheif1:amd64 (1.15.1-1+deb12u1) ...
+2026-10-29T01:28:24.7587426Z #24 13.58 Setting up libgeotiff5:amd64 (1.7.1-2+b1) ...
+2026-10-29T01:28:24.7588492Z #24 13.61 Setting up libpoppler126:amd64 (22.12.0-2+deb12u3) ...
+2026-10-29T01:28:24.7589589Z #24 13.61 Setting up libhdf5-103-1:amd64 (1.10.8+repack1-1) ...
+2026-10-29T01:28:24.7590403Z #24 13.61 Setting up libhdf5-hl-100:amd64 (1.10.8+repack1-1) ...
+2026-10-29T01:28:24.7591503Z #24 13.62 Setting up libspatialite7:amd64 (5.0.1-3) ...
+2026-10-29T01:28:24.7592887Z #24 13.62 Setting up libnetcdf19:amd64 (1:4.9.0-3+b1) ...
+2026-10-29T01:28:24.7593908Z #24 13.62 Setting up libgdal32 (3.6.2+dfsg-1+b2) ...
+2026-10-29T01:28:24.7594721Z #24 13.62 Setting up postgresql-17-postgis-3 (3.6.4+dfsg-2.pgdg12+1) ...
+2026-10-29T01:28:24.7595607Z #24 13.63 Processing triggers for postgresql-common (289.pgdg12+1) ...
+2026-10-29T01:28:24.7596409Z #24 13.69 debconf: unable to initialize frontend: Dialog
+2026-10-29T01:28:24.7597193Z #24 13.69 debconf: (TERM is not set, so the dialog frontend is not usable.)
+2026-10-29T01:28:24.7597967Z #24 13.69 debconf: falling back to frontend: Readline
+2026-10-29T01:28:24.9043040Z #24 13.70 debconf: unable to initialize frontend: Readline
+2026-10-29T01:28:24.9044200Z #24 13.70 debconf: (This frontend requires a controlling tty.)
+2026-10-29T01:28:24.9045214Z #24 13.70 debconf: falling back to frontend: Teletype
+2026-10-29T01:28:24.9046279Z #24 13.73 Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+2026-10-29T01:28:24.9046938Z #24 13.73 Removing obsolete dictionary files:
+2026-10-29T01:28:24.9047575Z #24 13.75 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+2026-10-29T01:28:24.9048269Z #24 DONE 13.8s
+2026-10-29T01:28:24.9048447Z 
+2026-10-29T01:28:24.9049464Z #20 [worker service  4/11] RUN pip install --no-cache-dir uv==0.11.23 && uv export --locked --no-dev --no-emit-project --format requirements-txt --output-file /tmp/requirements.txt && pip install --no-cache-dir --require-hashes -r /tmp/requirements.txt
+2026-10-29T01:28:25.0925599Z #20 ...
+2026-10-29T01:28:25.0925915Z 
+2026-10-29T01:28:25.0926504Z #25 [database 3/4] COPY migrations/002_extensions.sql /docker-entrypoint-initdb.d/002_extensions.sql
+2026-10-29T01:28:25.0927423Z #25 DONE 0.0s
+2026-10-29T01:28:25.0927640Z 
+2026-10-29T01:28:25.0928368Z #26 [database 4/4] COPY --chmod=0755 deploy/010_application_role.sh /docker-entrypoint-initdb.d/010_application_role.sh
+2026-10-29T01:28:25.0929363Z #26 DONE 0.0s
+2026-10-29T01:28:25.0929582Z 
+2026-10-29T01:28:25.0929774Z #27 [database] exporting to image
+2026-10-29T01:28:25.0930250Z #27 exporting layers
+2026-10-29T01:28:26.1415385Z #27 exporting layers 1.2s done
+2026-10-29T01:28:26.3168314Z #27 writing image sha256:8eb8dccc98fdf3920fd4bd8b868995bb8c563dd3f2fdc0ffc3e998ecfbda0db2 done
+2026-10-29T01:28:26.3170201Z #27 naming to docker.io/library/airspace-ci-40800445986-database done
+2026-10-29T01:28:26.3171321Z #27 DONE 1.2s
+2026-10-29T01:28:26.3171681Z 
+2026-10-29T01:28:26.3172311Z #28 [database] resolving provenance for metadata file
+2026-10-29T01:28:26.3173043Z #28 DONE 0.0s
+2026-10-29T01:28:26.3173267Z 
+2026-10-29T01:28:26.3174814Z #20 [worker service  4/11] RUN pip install --no-cache-dir uv==0.11.23 && uv export --locked --no-dev --no-emit-project --format requirements-txt --output-file /tmp/requirements.txt && pip install --no-cache-dir --require-hashes -r /tmp/requirements.txt
+2026-10-29T01:28:33.5232492Z #20 25.73 
+2026-10-29T01:28:33.5238190Z #20 25.74 Successfully installed absl-py-2.5.1 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.10.23 cffi-2.1.1 click-8.5.0 cryptography-50.0.2 defusedxml-0.7.1 fastapi-0.162.0 greenlet-3.5.6 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 immutabledict-4.3.1 numpy-2.5.4 opentelemetry-api-1.45.1 ortools-9.15.6755 pandas-3.1.0 protobuf-6.33.5 psycopg-3.2.13 psycopg-binary-3.2.13 pycparser-3.12 pydantic-2.14.1 pydantic-core-2.50.1 pyjwt-2.15.1 pypdf-6.21.3 pyproj-3.7.2 python-dateutil-3.0.0 six-1.17.0 sqlalchemy-2.0.55 starlette-1.10.0 typing-extensions-4.16.0 typing-inspection-0.4.4 tzdata-2026.5 uvicorn-0.54.0
+2026-10-29T01:28:33.5244471Z #20 25.74 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-29T01:28:34.2110410Z #20 DONE 26.3s
+2026-10-29T01:28:34.2111170Z 
+2026-10-29T01:28:34.2112024Z #29 [worker service  5/11] COPY backend/ backend/
+2026-10-29T01:28:34.2113574Z #29 DONE 0.0s
+2026-10-29T01:28:34.2113823Z 
+2026-10-29T01:28:34.2114062Z #30 [worker service  6/11] COPY sources/ sources/
+2026-10-29T01:28:34.2114628Z #30 DONE 0.1s
+2026-10-29T01:28:34.2114838Z 
+2026-10-29T01:28:34.2115285Z #31 [worker service  7/11] COPY scripts/prepare_corpus.py scripts/prepare_corpus.py
+2026-10-29T01:28:34.2116055Z #31 DONE 0.0s
+2026-10-29T01:28:34.2116274Z 
+2026-10-29T01:28:34.2116585Z #32 [worker service  8/11] RUN python scripts/prepare_corpus.py
+2026-10-29T01:28:34.3275861Z #32 0.267 Source corpus already available
+2026-10-29T01:28:34.5290808Z #32 DONE 0.3s
+2026-10-29T01:28:34.5291788Z 
+2026-10-29T01:28:34.5292749Z #33 [api service  9/11] COPY capabilities.json ./
+2026-10-29T01:28:34.5293814Z #33 DONE 0.0s
+2026-10-29T01:28:34.5294145Z 
+2026-10-29T01:28:34.5294771Z #34 [worker service 10/11] COPY --from=interface /build/frontend/dist frontend/dist/
+2026-10-29T01:28:34.5295742Z #34 DONE 0.0s
+2026-10-29T01:28:34.5296035Z 
+2026-10-29T01:28:34.5296947Z #35 [worker service 11/11] RUN useradd --uid 10001 --create-home airspace && mkdir /data && chown airspace:airspace /data
+2026-10-29T01:28:34.6854005Z #35 DONE 0.1s
+2026-10-29T01:28:34.6854775Z 
+2026-10-29T01:28:34.6855216Z #36 [worker] exporting to image
+2026-10-29T01:28:34.6855776Z #36 exporting layers
+2026-10-29T01:28:37.6385885Z #36 exporting layers 3.1s done
+2026-10-29T01:28:37.6885181Z #36 writing image sha256:308609ed0c66a97a07c351388cf2bad4df4000812e64b8ea0b7fe41be96f2721 done
+2026-10-29T01:28:37.6886539Z #36 naming to docker.io/library/airspace-ci-40800445986-worker done
+2026-10-29T01:28:37.6887338Z  worker  Built
+2026-10-29T01:28:37.6887785Z  database  Built
+2026-10-29T01:28:37.6888248Z  api  Built
+2026-10-29T01:28:37.6888624Z #36 DONE 3.1s
+2026-10-29T01:28:37.6888868Z 
+2026-10-29T01:28:37.6889069Z #37 [api] exporting to image
+2026-10-29T01:28:37.6889566Z #37 exporting layers 3.1s done
+2026-10-29T01:28:37.6890341Z #37 writing image sha256:308609ed0c66a97a07c351388cf2bad4df4000812e64b8ea0b7fe41be96f2721 done
+2026-10-29T01:28:37.6891206Z #37 naming to docker.io/library/airspace-ci-40800445986-api done
+2026-10-29T01:28:37.6891614Z #37 DONE 3.1s
+2026-10-29T01:28:37.6891747Z 
+2026-10-29T01:28:37.6892219Z #38 [api] resolving provenance for metadata file
+2026-10-29T01:28:37.6892730Z #38 DONE 0.0s
+2026-10-29T01:28:37.6892863Z 
+2026-10-29T01:28:37.6893016Z #39 [worker] resolving provenance for metadata file
+2026-10-29T01:28:37.6893361Z #39 DONE 0.0s
+2026-10-29T01:28:37.6991177Z ##[group]Run docker compose -f compose.yaml -f deploy/compose.ci.yaml up -d --wait --wait-timeout 180
+2026-10-29T01:28:37.6993364Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml up -d --wait --wait-timeout 180[0m
+2026-10-29T01:28:37.6994753Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml ps[0m
+2026-10-29T01:28:37.6997158Z [36;1muv run python -c "import json,runpy,urllib.request; expected=runpy.run_path('backend/airspace/__init__.py')['__version__']; d=json.load(urllib.request.urlopen('http://127.0.0.1:8787/api/v1/health',timeout=15)); assert d['version']==expected and d['status']=='ok', 'Running container differs from verified source'; print(d)"[0m
+2026-10-29T01:28:37.7000247Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace -c 'CREATE DATABASE airspace_verification OWNER airspace'[0m
+2026-10-29T01:28:37.7002848Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database psql -U airspace_admin -d airspace_verification -c 'CREATE EXTENSION postgis; CREATE EXTENSION vector;'[0m
+2026-10-29T01:28:37.7005638Z [36;1mecho "AIRSPACE_TEST_POSTGRES_URL=***127.0.0.1:5432/airspace_verification" >> "$GITHUB_ENV"[0m
+2026-10-29T01:28:37.7037592Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:28:37.7038034Z env:
+2026-10-29T01:28:37.7038457Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:28:37.7039129Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:37.7039923Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:28:37.7040747Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:37.7041465Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:37.7042513Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:37.7043224Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:28:37.7043978Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:28:37.7044886Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:28:37.7045559Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:28:37.7046319Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:28:37.7046999Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:28:37.7048248Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:28:37.7048828Z ##[endgroup]
+2026-10-29T01:28:37.8077521Z  Network airspace-ci-40800445986_default  Creating
+2026-10-29T01:28:37.8492884Z  Network airspace-ci-40800445986_default  Created
+2026-10-29T01:28:37.8638101Z  Volume "airspace-ci-40800445986_evidence"  Creating
+2026-10-29T01:28:37.8654600Z  Volume "airspace-ci-40800445986_evidence"  Created
+2026-10-29T01:28:37.8658208Z  Volume "airspace-ci-40800445986_database"  Creating
+2026-10-29T01:28:37.8666041Z  Volume "airspace-ci-40800445986_database"  Created
+2026-10-29T01:28:37.8672922Z  Container airspace-ci-40800445986-database-1  Creating
+2026-10-29T01:28:37.8903766Z  Container airspace-ci-40800445986-database-1  Created
+2026-10-29T01:28:37.8905160Z  Container airspace-ci-40800445986-worker-1  Creating
+2026-10-29T01:28:37.8906603Z  Container airspace-ci-40800445986-api-1  Creating
+2026-10-29T01:28:37.9067718Z  Container airspace-ci-40800445986-api-1  Created
+2026-10-29T01:28:37.9068472Z  Container airspace-ci-40800445986-worker-1  Created
+2026-10-29T01:28:37.9081637Z  Container airspace-ci-40800445986-database-1  Starting
+2026-10-29T01:28:38.1093968Z  Container airspace-ci-40800445986-database-1  Started
+2026-10-29T01:28:38.1094694Z  Container airspace-ci-40800445986-database-1  Waiting
+2026-10-29T01:28:38.1095688Z  Container airspace-ci-40800445986-database-1  Waiting
+2026-10-29T01:28:48.6102127Z  Container airspace-ci-40800445986-database-1  Healthy
+2026-10-29T01:28:48.6103339Z  Container airspace-ci-40800445986-api-1  Starting
+2026-10-29T01:28:48.6104745Z  Container airspace-ci-40800445986-database-1  Healthy
+2026-10-29T01:28:48.6106183Z  Container airspace-ci-40800445986-worker-1  Starting
+2026-10-29T01:28:48.7551264Z  Container airspace-ci-40800445986-worker-1  Started
+2026-10-29T01:28:48.7868983Z  Container airspace-ci-40800445986-api-1  Started
+2026-10-29T01:28:48.7870630Z  Container airspace-ci-40800445986-worker-1  Waiting
+2026-10-29T01:28:48.7871736Z  Container airspace-ci-40800445986-database-1  Waiting
+2026-10-29T01:28:48.7872773Z  Container airspace-ci-40800445986-api-1  Waiting
+2026-10-29T01:28:49.2897468Z  Container airspace-ci-40800445986-database-1  Healthy
+2026-10-29T01:28:54.2892581Z  Container airspace-ci-40800445986-worker-1  Healthy
+2026-10-29T01:28:54.2893536Z  Container airspace-ci-40800445986-api-1  Healthy
+2026-10-29T01:28:54.3935096Z NAME                                 IMAGE                              COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+2026-10-29T01:28:54.3937563Z airspace-ci-40800445986-api-1        airspace-ci-40800445986-api        "python -m airspace.…"   api        17 seconds ago   Up 5 seconds (healthy)    127.0.0.1:8787->8787/tcp
+2026-10-29T01:28:54.3939921Z airspace-ci-40800445986-database-1   airspace-ci-40800445986-database   "docker-entrypoint.s…"   database   17 seconds ago   Up 16 seconds (healthy)   127.0.0.1:5432->5432/tcp
+2026-10-29T01:28:54.3942468Z airspace-ci-40800445986-worker-1     airspace-ci-40800445986-worker     "python -m airspace.…"   worker     17 seconds ago   Up 5 seconds (healthy)    8787/tcp
+2026-10-29T01:28:54.5029522Z {'status': 'ok', 'version': '0.3.0-rc.1', 'deployment_profile': 'postgresql', 'operational_acceptance': False}
+2026-10-29T01:28:54.6942768Z CREATE DATABASE
+2026-10-29T01:28:55.2568336Z CREATE EXTENSION
+2026-10-29T01:28:55.2568783Z CREATE EXTENSION
+2026-10-29T01:28:55.2685525Z ##[group]Run docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T -e AIRSPACE_INITIAL_PASSWORD api python -m airspace.cli user-add --organisation 'Isolated container verification' --email container-worker@test.invalid --role regulatory
+2026-10-29T01:28:55.2687398Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T -e AIRSPACE_INITIAL_PASSWORD api python -m airspace.cli user-add --organisation 'Isolated container verification' --email container-worker@test.invalid --role regulatory[0m
+2026-10-29T01:28:55.2688561Z [36;1muv run python scripts/verify_container_worker.py[0m
+2026-10-29T01:28:55.2709776Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:28:55.2710048Z env:
+2026-10-29T01:28:55.2710301Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:28:55.2710718Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:55.2711199Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:28:55.2711712Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:55.2712824Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:55.2713267Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:55.2713704Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:28:55.2714140Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:28:55.2714768Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:28:55.2715166Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:28:55.2715613Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:28:55.2716034Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:28:55.2716760Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:28:55.2717594Z   AIRSPACE_TEST_POSTGRES_URL: ***127.0.0.1:5432/airspace_verification
+2026-10-29T01:28:55.2717996Z ##[endgroup]
+2026-10-29T01:28:56.4097008Z {
+2026-10-29T01:28:56.4097453Z   "id": "8756709c-47f0-4369-8d0d-08b076c13761",
+2026-10-29T01:28:56.4098095Z   "organisation_id": "918e8426-cab1-425b-84da-89b47589488a",
+2026-10-29T01:28:56.4098690Z   "email": "container-worker@test.invalid",
+2026-10-29T01:28:56.4099150Z   "role": "regulatory"
+2026-10-29T01:28:56.4099486Z }
+2026-10-29T01:28:58.2008584Z {"actual_running_container_worker_completed_job": true, "result": {"cases": [], "external_actions": []}, "audit_valid": true, "operational_acceptance": false}
+2026-10-29T01:28:58.2186760Z ##[group]Run uv run pytest -q tests/test_postgres_integration.py tests/test_postgres_coordination.py
+2026-10-29T01:28:58.2188091Z [36;1muv run pytest -q tests/test_postgres_integration.py tests/test_postgres_coordination.py[0m
+2026-10-29T01:28:58.2219878Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:28:58.2220335Z env:
+2026-10-29T01:28:58.2220758Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:28:58.2221443Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:58.2222504Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:28:58.2223306Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:58.2224024Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:58.2224788Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:28:58.2225546Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:28:58.2226381Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:28:58.2227396Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:28:58.2228100Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:28:58.2228983Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:28:58.2229666Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:28:58.2230976Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:28:58.2232654Z   AIRSPACE_TEST_POSTGRES_URL: ***127.0.0.1:5432/airspace_verification
+2026-10-29T01:28:58.2233330Z ##[endgroup]
+2026-10-29T01:29:07.3734502Z ...................                                                      [100%]
+2026-10-29T01:29:07.3735307Z =============================== warnings summary ===============================
+2026-10-29T01:29:07.3736058Z .venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+2026-10-29T01:29:07.3737984Z   /home/runner/work/airspace-operations/airspace-operations/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-29T01:29:07.3739963Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-10-29T01:29:07.3740472Z 
+2026-10-29T01:29:07.3740837Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-29T01:29:07.3741542Z 19 passed, 1 warning in 8.27s
+2026-10-29T01:29:07.8101515Z ##[group]Run uv run python scripts/verify_postgres_recovery.py seed
+2026-10-29T01:29:07.8102473Z [36;1muv run python scripts/verify_postgres_recovery.py seed[0m
+2026-10-29T01:29:07.8103636Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_dump -U airspace_admin --format=custom --file=/tmp/airspace.dump airspace_verification[0m
+2026-10-29T01:29:07.8104899Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database createdb -U airspace_admin -O airspace airspace_restoration[0m
+2026-10-29T01:29:07.8106244Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_restore -U airspace_admin --dbname=airspace_restoration --exit-on-error --single-transaction /tmp/airspace.dump[0m
+2026-10-29T01:29:07.8107271Z [36;1muv run python scripts/verify_postgres_recovery.py verify[0m
+2026-10-29T01:29:07.8127983Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:29:07.8128268Z env:
+2026-10-29T01:29:07.8128556Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:29:07.8128978Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:07.8129479Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:29:07.8129977Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:07.8130413Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:07.8130865Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:07.8131318Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:29:07.8131780Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:29:07.8132710Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:29:07.8133230Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:29:07.8133711Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:29:07.8134141Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:29:07.8135111Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:29:07.8136057Z   AIRSPACE_TEST_POSTGRES_URL: ***127.0.0.1:5432/airspace_verification
+2026-10-29T01:29:07.8136474Z ##[endgroup]
+2026-10-29T01:29:08.4684624Z Created isolated recovery marker
+2026-10-29T01:29:10.2340267Z {"postgresql_restoration_verified": true, "audit_count": 2, "audit_valid": true, "operational_acceptance": false}
+2026-10-29T01:29:10.3245926Z ##[group]Run docker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans
+2026-10-29T01:29:10.3246821Z [36;1mdocker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans[0m
+2026-10-29T01:29:10.3268188Z shell: /usr/bin/bash -e {0}
+2026-10-29T01:29:10.3268487Z env:
+2026-10-29T01:29:10.3268778Z   COMPOSE_PROJECT_NAME: airspace-ci-40800445986
+2026-10-29T01:29:10.3269237Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:10.3269780Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+2026-10-29T01:29:10.3270341Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:10.3270818Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:10.3271302Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+2026-10-29T01:29:10.3271788Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+2026-10-29T01:29:10.3272614Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:29:10.3273196Z   POSTGRES_PASSWORD: ***
+2026-10-29T01:29:10.3273644Z   AIRSPACE_DB_APP_PASSWORD: ***
+2026-10-29T01:29:10.3274149Z   AIRSPACE_AUDIT_KEY: ***
+2026-10-29T01:29:10.3274612Z   AIRSPACE_INITIAL_PASSWORD: ***
+2026-10-29T01:29:10.3275455Z   AIRSPACE_DATABASE_URL: ***database:5432/airspace
+2026-10-29T01:29:10.3276399Z   AIRSPACE_TEST_POSTGRES_URL: ***127.0.0.1:5432/airspace_verification
+2026-10-29T01:29:10.3276849Z ##[endgroup]
+2026-10-29T01:29:10.4213442Z  Container airspace-ci-40800445986-worker-1  Stopping
+2026-10-29T01:29:10.8493576Z  Container airspace-ci-40800445986-api-1  Stopping
+2026-10-29T01:29:10.8494555Z  Container airspace-ci-40800445986-api-1  Stopped
+2026-10-29T01:29:10.8507189Z  Container airspace-ci-40800445986-api-1  Removing
+2026-10-29T01:29:10.8550869Z  Container airspace-ci-40800445986-api-1  Removed
+2026-10-29T01:29:20.5119796Z  Container airspace-ci-40800445986-worker-1  Stopped
+2026-10-29T01:29:20.5120957Z  Container airspace-ci-40800445986-worker-1  Removing
+2026-10-29T01:29:20.5179720Z  Container airspace-ci-40800445986-worker-1  Removed
+2026-10-29T01:29:20.5180644Z  Container airspace-ci-40800445986-database-1  Stopping
+2026-10-29T01:29:20.7249468Z  Container airspace-ci-40800445986-database-1  Stopped
+2026-10-29T01:29:20.7250774Z  Container airspace-ci-40800445986-database-1  Removing
+2026-10-29T01:29:20.7305297Z  Container airspace-ci-40800445986-database-1  Removed
+2026-10-29T01:29:20.7312127Z  Volume airspace-ci-40800445986_evidence  Removing
+2026-10-29T01:29:20.7312885Z  Volume airspace-ci-40800445986_database  Removing
+2026-10-29T01:29:20.7316797Z  Network airspace-ci-40800445986_default  Removing
+2026-10-29T01:29:20.7335543Z  Volume airspace-ci-40800445986_evidence  Removed
+2026-10-29T01:29:20.8108606Z  Network airspace-ci-40800445986_default  Removed
+2026-10-29T01:29:20.9435121Z  Volume airspace-ci-40800445986_database  Removed
+2026-10-29T01:29:20.9633947Z Post job cleanup.
+2026-10-29T01:29:21.0812584Z UV_PYTHON_INSTALL_DIR is already set to /home/runner/work/_temp/uv-python-dir
+2026-10-29T01:29:21.1007477Z Post job cleanup.
+2026-10-29T01:29:21.2602693Z Post job cleanup.
+2026-10-29T01:29:21.3535525Z [command]/usr/bin/git version
+2026-10-29T01:29:21.3585769Z git version 2.56.0
+2026-10-29T01:29:21.3628761Z Temporarily overriding HOME='/home/runner/work/_temp/949cc8b3-60ea-4370-b00f-64bae2eeacc9' before making global git config changes
+2026-10-29T01:29:21.3630164Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T01:29:21.3635118Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/airspace-operations/airspace-operations
+2026-10-29T01:29:21.3671294Z Removing SSH command configuration
+2026-10-29T01:29:21.3678889Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T01:29:21.3723336Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T01:29:21.4018053Z Removing HTTP extra header
+2026-10-29T01:29:21.4018725Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T01:29:21.4061566Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T01:29:21.4346139Z Removing includeIf entries pointing to credentials config files
+2026-10-29T01:29:21.4355184Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T01:29:21.4411647Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T01:29:21.4842579Z Cleaning up orphan processes
+

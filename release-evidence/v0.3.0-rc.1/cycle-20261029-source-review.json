@@ -1,0 +1,192 @@
+{
+  "reviewed_at": "2026-10-29T01:26:12.430662+00:00",
+  "selector": "scripts/package_release.py:source_files",
+  "selector_sha256": "013bf32ced89d984825179f2d8d16e2a59b2075a546167806a7707efb92aa803",
+  "scope": "Read-only inspection of the current selected source payload; no package, model execution, full test suite, frontend or publication action was performed.",
+  "selected_file_count_at_scan": 531,
+  "selected_bytes_scanned": 54222396,
+  "by_top_level": {
+    ".dockerignore": 1,
+    ".env.example": 1,
+    ".gitattributes": 1,
+    ".gitignore": 1,
+    "AGENTS.md": 1,
+    "capabilities.json": 1,
+    "compose.yaml": 1,
+    "CONTRIBUTING.md": 1,
+    "DATA_REGISTER.md": 1,
+    "DECISIONS.md": 1,
+    "Dockerfile": 1,
+    "HANDOVER.md": 1,
+    "LICENSE": 1,
+    "NOTICE": 1,
+    "PLAN.md": 1,
+    "pyproject.toml": 1,
+    "README.md": 1,
+    "RELEASE_ERRATA.md": 1,
+    "RELEASE_NOTES.md": 1,
+    "requirements-dev.lock.txt": 1,
+    "requirements-neural.lock.txt": 1,
+    "requirements-neural.txt": 1,
+    "requirements-publication.lock.txt": 1,
+    "requirements-publication.txt": 1,
+    "requirements.lock.txt": 1,
+    "REQUIREMENTS_TRACEABILITY.csv": 1,
+    "SAFETY_BOUNDARY.md": 1,
+    "SBOM.cdx.json": 1,
+    "SECURITY.md": 1,
+    "SOURCE_REGISTER.md": 1,
+    "SPECIFICATION.md": 1,
+    "SPECIFICATION_V2_ADDENDUM.md": 1,
+    "SPECIFICATION_V3_ADDENDUM.md": 1,
+    "STATUS.md": 1,
+    "THIRD_PARTY_NOTICES.md": 1,
+    "THREAT_MODEL.md": 1,
+    "uv.lock": 1,
+    ".github": 1,
+    "backend": 29,
+    "deploy": 3,
+    "docs": 27,
+    "frontend": 112,
+    "improvement": 5,
+    "LICENSES": 1,
+    "migrations": 7,
+    "models": 28,
+    "publication": 78,
+    "release-evidence": 143,
+    "scripts": 24,
+    "sources": 6,
+    "tests": 30
+  },
+  "bounded_secret_scan": {
+    "release_patterns": [
+      "GitHub token prefixes ghp/gho/ghu/ghs with 30 or more characters",
+      "Hugging Face hf token prefix with 30 or more characters",
+      "OpenAI sk token prefix with 35 or more characters",
+      "PEM RSA/EC/OpenSSH or generic private-key headers"
+    ],
+    "additional_patterns": [
+      "credential_assignment",
+      "jwt",
+      "bearer_literal"
+    ],
+    "known_local_development_secret_values_compared_in_memory": true,
+    "private_values_or_key_paths_recorded": false,
+    "release_pattern_match_paths": [],
+    "additional_candidate_paths": [
+      {
+        "path": "deploy/010_application_role.sh",
+        "pattern": "credential_assignment"
+      },
+      {
+        "path": "scripts/performance_probe.py",
+        "pattern": "credential_assignment"
+      },
+      {
+        "path": "scripts/verify_schema_compatibility.py",
+        "pattern": "credential_assignment"
+      },
+      {
+        "path": "tests/conftest.py",
+        "pattern": "credential_assignment"
+      },
+      {
+        "path": "tests/test_postgres_coordination.py",
+        "pattern": "credential_assignment"
+      },
+      {
+        "path": "tests/test_release_tools.py",
+        "pattern": "credential_assignment"
+      }
+    ],
+    "known_private_secret_match_paths": [],
+    "disallowed_file_name_matches": [],
+    "limitations": "Bounded heuristics and known-value comparison are not proof of absence of every secret. Binary screenshots were not OCR-reviewed in this task.",
+    "candidate_triage": [
+      {
+        "path": "deploy/010_application_role.sh",
+        "pattern": "credential_assignment",
+        "classification": "Shell reference to required private environment configuration; no stored password value.",
+        "private_secret": false
+      },
+      {
+        "path": "scripts/performance_probe.py",
+        "pattern": "credential_assignment",
+        "classification": "Fixed public credential for an explicitly isolated temporary software probe.",
+        "private_secret": false
+      },
+      {
+        "path": "scripts/verify_schema_compatibility.py",
+        "pattern": "credential_assignment",
+        "classification": "Fixed public credential for an explicitly isolated compatibility regression fixture.",
+        "private_secret": false
+      },
+      {
+        "path": "tests/conftest.py",
+        "pattern": "credential_assignment",
+        "classification": "Fixed public credentials in temporary isolated test stores.",
+        "private_secret": false
+      },
+      {
+        "path": "tests/test_postgres_coordination.py",
+        "pattern": "credential_assignment",
+        "classification": "Fixed public credentials in isolated verification schemas, not an operational account.",
+        "private_secret": false
+      },
+      {
+        "path": "tests/test_release_tools.py",
+        "pattern": "credential_assignment",
+        "classification": "Artificial inherited-secret value testing environment scrubbing; not an actual credential.",
+        "private_secret": false
+      }
+    ]
+  },
+  "exclusions": {
+    "private_runtime_selected": false,
+    "uncleared_snapshots_selected": false,
+    "pretrained_weights_selected": false,
+    "credential_or_database_file_names_selected": false,
+    "source_paths": [
+      "sources/catalogue.json",
+      "sources/corpus-change-log.json",
+      "sources/corpus.json",
+      "sources/coverage.json",
+      "sources/README.md",
+      "sources/rights-review.json"
+    ],
+    "pretrained_metadata_paths": [
+      "models/pretrained/controller/LICENSE",
+      "models/pretrained/controller/provenance.json",
+      "models/pretrained/controller/README.md",
+      "models/pretrained/encoder/provenance.json",
+      "models/pretrained/encoder/README.md",
+      "models/pretrained/reranker/provenance.json",
+      "models/pretrained/reranker/README.md",
+      "models/pretrained/teacher/provenance.json",
+      "models/pretrained/teacher/README.md",
+      "models/pretrained/teacher-base/provenance.json",
+      "models/pretrained/teacher-base/README.md"
+    ]
+  },
+  "redistribution": {
+    "source_material": "Only the reviewed EASA/EU text corpus and manifests are selected. Source-specific restrictions and attribution remain controlling; national research snapshots and original uncleared documents are excluded.",
+    "source_rights_sha256": "889ca041233047f027ca98c3a7281034a75e7aaf29f03d37a9602d8c6ce9680d",
+    "student_sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+    "student_scope": "Historical experimental student and machine annotation evidence; no newly trained model, operational observations or expert labels are claimed.",
+    "reserved_assets": "Existing owned companion imagery and five distributed presentation resources remain reserved rights. LICENSES/LicenseRef-SystemLab-Assets.txt, NOTICE and provenance explicitly exclude them from the Apache-2.0 code licence.",
+    "reserved_asset_notice_selected": true,
+    "reserved_asset_notice_sha256": "477f6cc13ff19fcfc62b9598c138a50816058eaa7e84b31ee62dbe997ce9e752",
+    "reserved_provenance_sha256": "555b4bbfb2ccec8bd42d6ea622f73131794ae5670e97472cf04c15376c4730d1",
+    "historical_metadata_note": "Previously published provenance and test receipts can retain author/installation paths and isolated fixture identifiers. They are not release credentials or operational customer records; this scan does not claim to anonymise historical evidence.",
+    "owned_five_presentation_files_match_recorded_hashes": true,
+    "owned_five_presentation_file_count": 5
+  },
+  "cycle_evidence_scope": "The new lineage/adversarial receipt records isolated software tests, source hashes and actual historical model identity only. Its stale-cleanup negative uses an in-memory software fixture, not a customer or flight record. Prior-publication recheck concerns public downloads.",
+  "selected_inventory_sha256": "084760a633809d540342e0a7597c604f1e642e9ee566dc644d64c2f59d4243e9",
+  "changed_during_file_read": [],
+  "source_freeze": false,
+  "final_package_recheck_required": "Root is concurrently writing verification and frontend outputs. This is the observed source selection, not a final archive identity. Re-run package scanning after source freeze; this new receipt itself was not in its input selection.",
+  "conclusion": "No private credential/runtime/database/audit-key content, uncleared snapshots or cached foundation weights were found in the observed selected payload. Six broad credential-assignment candidates were reviewed as configuration references or isolated public software-test fixtures. Reserved owned assets retain their explicit rights exception. No source-selection publication blocker was identified; final frozen archive scanning and independent retrieval remain release-owner gates.",
+  "completed_at": "2026-10-29T01:27:04.463552+00:00",
+  "result": "Passed bounded source-selection review"
+}

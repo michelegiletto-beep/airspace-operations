@@ -1,0 +1,57 @@
+{
+  "reviewed_at": "2026-10-29T01:38:28.094539+00:00",
+  "scope": "Adversarial software-only review of the proposed repository-scoped CI candidate publisher. No token, external request, model call, tag, release or publication was used in this review.",
+  "source_sha256": {
+    "scripts/publish_candidate.py": "e75b7a4545b3b3b9f5bc605dfa372d70264aad6e0166d82d5f0456315a32a9da",
+    ".github/workflows/engineering.yml": "36810c55c95d6f5dbe233d45e661acdf2b019c706568ccfb12633430ef1584ba",
+    "tests/test_ci_publication_adversarial.py": "7be55ae43515f7621398831484663859a78e594432eaa2a54e9f62796d7e27eb",
+    "tests/test_candidate_publication.py": "3ee38bc05036f7ebaef77527555b6e6138b3cf6ec3ff2f3470f56735d0912cbb",
+    "tests/test_release_tools.py": "58feca010b20a5ac2ef4f2c39ac48b68dfcedf6d54629a60005236a1bb9f77bb"
+  },
+  "tests": {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pytest",
+      "tests/test_ci_publication_adversarial.py",
+      "tests/test_candidate_publication.py",
+      "tests/test_release_tools.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "stdout": "...............................................................          [100%]\n63 passed in 1.22s\n",
+    "scope": "41 independent negative cases, four publisher contract cases and eighteen existing release-tool cases. All use isolated fixtures and injected client functions; none is a real publication test."
+  },
+  "reviewed_boundaries": [
+    "Exact owned repository, HTTPS GitHub server/API host, CI push event, current release/version branch, hexadecimal source SHA matching checkout, numeric run ID and successful engineering dependency. Stable versions, forks, wrong refs and untrusted PR events are rejected.",
+    "Workflow needs the engineering job; contents write is limited to publisher job. Checkout is the exact event SHA with credentials not persisted. Token is provided only to the CI receipt API step and final publisher, not installation, tests or build steps.",
+    "No arbitrary publication repository or artifact list. Current-run successful container/PostgreSQL/worker/restoration proof and controlled source hashes must match the current files and archive manifest. Fresh local gates, SBOM, baseline, rights, secret patterns and exact clean install are checked.",
+    "Private environment variants, runtime, keys, secrets, databases, uncleared snapshots, path escape and symlinks are rejected by asset path validation.",
+    "Existing tags/releases block mutation. Exclusive create-ref stops a concurrent tag race. Draft prerelease is downloaded and every asset digest checked before the draft is published. Partial failures retain the draft/tag; no delete, overwrite or retry is attempted.",
+    "The one post-package clean-install receipt can differ from an older archived receipt because it is generated after packaging. Its current version, success and exact archive digest remain mandatory. Other attached manifest inputs remain immutable.",
+    "Authenticated draft retrieval is explicitly distinguished from required later anonymous public retrieval."
+  ],
+  "findings_resolved": [
+    {
+      "finding": "Private .env variants and raw key/database files were initially accepted by generic safe_path.",
+      "resolution": "Explicit environment-prefix, sensitive suffix and private directory rejection added; negative tests pass."
+    },
+    {
+      "finding": "Initial archive validation lacked current-run CI proof and controlled local-source/manifest comparison.",
+      "resolution": "Current run/source/conclusion and local controlled digests are now required and tested against stale proof and source drift."
+    },
+    {
+      "finding": "Historical same-version clean-install receipts would change after packaging and incorrectly block repeated candidate verification.",
+      "resolution": "Narrow post-package receipt exception retains success, version and current archive hash requirements; other asset equality checks remain."
+    }
+  ],
+  "remaining_integration_checks": [
+    "Actual CI execution with repository permissions, fresh gates, package and clean installation is required; these tests do not establish successful publication.",
+    "Publisher host Node version is not pinned in the reviewed workflow although frontend requires Node >=22.12. Engineering Docker uses pinned Node22, which does not set the publication host runtime. The implementation owner was notified; a supported explicit host runtime or actual fail-closed CI result must be recorded.",
+    "After actual publication, independently retrieve the public release and compare exact asset hashes. No public upload or download result is claimed by this receipt."
+  ],
+  "conclusion": "No remaining high-severity security or approval-gate bypass was identified in the reviewed code after fixes. Publication is not verified until the real workflow and public retrieval pass.",
+  "publication_performed": false,
+  "actual_model_calls": 0,
+  "external_requests": 0
+}

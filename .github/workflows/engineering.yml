@@ -74,3 +74,52 @@ jobs:
       - name: Stop this isolated verification deployment
         if: always()
         run: docker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans
+  publish-candidate:
+    needs: containers-postgresql
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/release/') && github.repository == 'michelegiletto-beep/airspace-operations'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    permissions:
+      contents: write
+      actions: read
+    env:
+      AIRSPACE_ENGINEERING_RESULT: ${{ needs.containers-postgresql.result }}
+      AIRSPACE_SOURCE_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '22'
+          check-latest: true
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.11.23'
+          enable-cache: false
+      - name: Validate candidate identity without publishing
+        run: uv run --no-project python scripts/publish_candidate.py
+      - name: Install hash-locked verification dependencies
+        run: |
+          node --version
+          uv sync --frozen --extra dev
+          npm ci --prefix frontend
+          uv run python scripts/prepare_corpus.py
+      - name: Record actual successful engineering dependency
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: uv run python scripts/publish_candidate.py --record-engineering
+      - name: Verify current software and dependency gates
+        run: uv run python scripts/verify_release.py
+      - name: Package and verify clean installation
+        run: |
+          uv run python scripts/package_release.py
+          uv run python scripts/verify_archive.py
+      - name: Publish new candidate after exact asset verification
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: uv run python scripts/publish_candidate.py --publish

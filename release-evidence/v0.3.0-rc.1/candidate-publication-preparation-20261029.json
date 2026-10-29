@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-29T01:42:35.058144+00:00",
+  "state": "Prepared",
+  "publication_performed": false,
+  "remote_workflow_executed_by_this_agent": false,
+  "new_credentials_created": false,
+  "model_calls": 0,
+  "source_sha256": {
+    "scripts/publish_candidate.py": "0d675bd3ff708f648c5e1d7074e610e7877bc5c29341e4a6b675936f7df758f2",
+    ".github/workflows/engineering.yml": "8a766200d1f00808fb08b2bcf314471843106128b8fae842748ba2ea61b7de56",
+    "tests/test_candidate_publication.py": "fdd015881517e9c3a252cfe6c28e1c1650a7b2502c186c7f28d72967b3fcd4ba",
+    "tests/test_ci_publication_adversarial.py": "fac51e5b20d913232e4bf1c38787e8c59099459d67a13321a6b90f68a059e7ae"
+  },
+  "verification": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_candidate_publication.py tests/test_ci_publication_adversarial.py tests/test_release_tools.py -q",
+    "environment": {
+      "PYTHONPATH": "backend"
+    },
+    "exit_code": 0,
+    "stdout": "64 passed in 1.21s",
+    "scope": "Isolated software fixtures and intercepted CLI calls; no release or remote write is simulated as published"
+  },
+  "controls": [
+    "Exact repository, push event, release/current-version branch, SHA, head and current run ID",
+    "Successful upstream engineering dependency; actual API proof of six current-commit engineering steps",
+    "Pinned Node22 setup, full software and dependency verification, original baseline integrity",
+    "Owned-asset provenance, bounded secret scan, manifest and SBOM validation",
+    "Exact current archive clean-install result before publication",
+    "Exclusive new Git ref; never overwrite/reuse old tag or release",
+    "Draft asset upload and authenticated byte verification before publishing prerelease",
+    "Reviewed release notes, actual screenshot source URL and computed artifact/gate details",
+    "Repository-scoped ephemeral Actions token only in proof and publication steps; no local credential"
+  ],
+  "read_only_primary_verification": [
+    {
+      "url": "https://cli.github.com/manual/gh_release_create",
+      "checked": "verify-tag, target, prerelease and draft flags"
+    },
+    {
+      "url": "https://cli.github.com/manual/gh_release_edit",
+      "checked": "draft=false publication syntax"
+    },
+    {
+      "url": "https://cli.github.com/manual/gh_api",
+      "checked": "paginate/slurp and string field syntax"
+    },
+    {
+      "url": "https://api.github.com/repos/actions/setup-node/git/ref/tags/v6",
+      "observed_commit": "249970729cb0ef3589644e2896645e5dc5ba9c38"
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/40800445986/jobs",
+      "observed": "Existing engineering job success, head_sha b02b2c7957a2b512da3461166d106af6debea1ae and all six required step names; this is not execution of the new publisher"
+    }
+  ],
+  "limitations": [
+    "The new remote publication path has not run. Prepared is not Published.",
+    "A tag/draft left by a partial remote failure is retained and blocks automatic retries; investigate and choose a new version rather than overwrite.",
+    "Authenticated draft retrieval is not independent anonymous public verification. Root must retrieve published release assets separately.",
+    "The original acceptance baseline and operational acceptance remain incomplete."
+  ]
+}

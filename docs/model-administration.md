@@ -79,4 +79,4 @@ The optional runtime pins are in `requirements-neural.txt`. The original trainin
 
 ## Companion request budget
 
-The private companion uses the pinned local controller and shared inference slot. Its request model-call limit applies per worker attempt. A crash and lease recovery can repeat up to three attempts, so a request configured for two calls can consume up to six local generations within its bounded lifetime. This is not a lifetime two-call guarantee. Local output validation and explicit action confirmation remain enforced on every attempt. No hosted provider is enabled.
+The private companion commits a job-wide generation reservation before each local model service call. The declared maximum is one or two reservations across worker retries and lease recovery. Reservations are never refunded when a crash makes the outcome uncertain. A reservation is not proof that a generation completed. Older pending turns without valid accounting receive a labelled Budget Unavailable fallback; a new request requires a separate budget. Current actor, scope, lease and input checks precede each reservation. No hosted provider is enabled.

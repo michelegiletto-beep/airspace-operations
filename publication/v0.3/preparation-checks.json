@@ -1,18 +1,18 @@
 {
-  "checked_at": "2026-10-28T13:25:52.184819+00:00",
+  "checked_at": "2026-10-29T01:37:49.061240+00:00",
   "release": "0.3.0-rc.1",
   "state": "Prepared",
   "pages": [
     {
       "path": "site-project.html",
-      "ids": 6,
-      "links": 14,
+      "ids": 12,
+      "links": 36,
       "result": "Parsed; local references checked"
     },
     {
       "path": "hf-space/index.html",
-      "ids": 1,
-      "links": 10,
+      "ids": 3,
+      "links": 14,
       "result": "Parsed; local references checked"
     }
   ],
@@ -21,7 +21,23 @@
   "credential_patterns_found": [],
   "new_download_links_enabled": false,
   "browser_verified": false,
-  "application_or_model_verification_claimed": false,
+  "application_verification_reported": {
+    "backend_passed": 360,
+    "postgresql_skipped_locally": 19,
+    "frontend_passed": 107
+  },
+  "model_execution_reported": "Actual local replies and confirmed personal task; no new student training",
+  "source_ci_status": "In Progress",
   "publication_performed": false,
+  "capture_references": [
+    {
+      "path": "publication\\media\\v0.3\\desktop-companion.jpg",
+      "available_locally": true
+    },
+    {
+      "path": "publication\\media\\v0.3\\mobile-companion.jpg",
+      "available_locally": true
+    }
+  ],
   "limit": "Local copy/structure checks supplement actual application/browser, legal, rights and publication review; they do not prove universal stylistic compliance"
 }

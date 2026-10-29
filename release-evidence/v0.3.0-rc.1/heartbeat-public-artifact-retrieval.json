@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-28T19:50:21.490418+00:00",
+  "source_commit": "4832b960ee3a193b33b7435e439cebf0106a16e4",
+  "results": [
+    {
+      "name": "worker_health",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/4832b960ee3a193b33b7435e439cebf0106a16e4/backend/airspace/worker_health.py",
+      "http_status": 200,
+      "bytes": 6126,
+      "sha256": "28c9c598529daff1a349894954a9c7bf5b4a99c9fb925003601650a957a715a2",
+      "local_bytes_match": true,
+      "local_text_match": true
+    },
+    {
+      "name": "health_tests",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/4832b960ee3a193b33b7435e439cebf0106a16e4/tests/test_worker_health.py",
+      "http_status": 200,
+      "bytes": 5924,
+      "sha256": "758ab2a6565e4505752d0e3062f3b861d7efed3d0a54d2733c062a916c287a6b",
+      "local_bytes_match": true,
+      "local_text_match": true
+    },
+    {
+      "name": "system_lab",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "hugging_face",
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
+      "http_status": 200,
+      "bytes": 36080,
+      "sha256": "6297ce69d7974f4d30741665fc4b42f6e50e6283fa235aad1ce647d0380eb05d",
+      "scope": "Existing published presentation retrieved only; no new publication"
+    }
+  ],
+  "release_uploaded": false
+}

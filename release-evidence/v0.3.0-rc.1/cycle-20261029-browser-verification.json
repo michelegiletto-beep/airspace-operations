@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-29T01:34:02.078862+00:00",
+  "bundle": "index-Dcz7gSOv.js",
+  "model_source": "cycle-20261029-actual-companion.json",
+  "scope": "Actual software-help request, task preview and confirmed personal release task; no fictional aircraft/flights/customer/authority decisions",
+  "mobile_viewport": {
+    "width": 390,
+    "height": 844,
+    "document_width": 375,
+    "body_width": 375
+  },
+  "desktop_viewport": {
+    "width": 1280,
+    "height": 960,
+    "document_width": 1265,
+    "body_width": 1265
+  },
+  "browser": "Chrome CUA; IAB viewport override was ineffective and its dimensions are not mobile evidence",
+  "navigation_and_reload_preserved_unsent_request": true,
+  "extra_duplicate_next_step_lists": 0,
+  "console_warnings_or_errors": 0,
+  "files": [
+    {
+      "file": "publication/media/v0.3/desktop-companion.jpg",
+      "sha256": "9b898da12f13da8abc90a9a2d5f68cdefbe1e5cad28a0d65a2c4f3dc7fd6b4f8",
+      "pixels": [
+        1265,
+        889
+      ],
+      "original_pixels": [
+        1265,
+        949
+      ],
+      "source_sha256": "f63e69c2b322c48dd5f213c555ce5f497081c60e3f59866418f9f11986648710",
+      "crop": [
+        0,
+        60,
+        1265,
+        949
+      ],
+      "crop_reason": "Exclude development identity header; no pixels synthesised or altered beyond crop/JPEG encoding"
+    },
+    {
+      "file": "publication/media/v0.3/mobile-companion.jpg",
+      "sha256": "5d6e2d3b91f3d34cbbb4f111507ced693f158a22cead1341caa36f643680c7bc",
+      "pixels": [
+        375,
+        812
+      ],
+      "original_pixels": [
+        375,
+        812
+      ],
+      "source_sha256": "0f8b027a7b28e589df84977d3155a05f4eb19e41519bde9ce490e9e03d759f3a",
+      "crop": null,
+      "crop_reason": "Full actual mobile viewport screenshot"
+    }
+  ],
+  "live_operational_acceptance": false
+}

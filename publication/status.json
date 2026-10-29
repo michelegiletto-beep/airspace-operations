@@ -5,7 +5,8 @@
   "stable_release_allowed": false,
   "operational_acceptance": false,
   "states_reached": [
-    "In development"
+    "In development",
+    "Candidate source uploaded"
   ],
   "history": [
     "publication/history/0.1.0-rc.1.json",
@@ -13,10 +14,11 @@
   ],
   "destinations": [
     {
-      "destination": "GitHub frozen release source",
-      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/v0.2.0-rc.1",
-      "state": "Not yet prepared",
-      "prior_release": "0.2.0-rc.1"
+      "destination": "GitHub candidate source branch",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/codex/airspace-0.3",
+      "state": "Uploaded",
+      "commit": "4832b960ee3a193b33b7435e439cebf0106a16e4",
+      "tagged_release": false
     },
     {
       "destination": "GitHub tagged candidate release",
@@ -49,6 +51,25 @@
       "prior_release": "0.2.0-rc.1"
     }
   ],
-  "states_reached_scope": "New0.3 revision only; prior published release is preserved separately",
-  "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged."
+  "states_reached_scope": "New 0.3 revision only; published 0.1 and 0.2 history remains unchanged",
+  "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
+  "last_checked_at": "2026-10-29T01:40:51.045942+00:00",
+  "release_blockers": [
+    "Run the reviewed CI publication path against its exact final source, verify candidate archive and retrieve public assets",
+    "Finish scoped System Lab and Hugging Face publication after actual release; verify account access and independent media/download retrieval"
+  ],
+  "candidate_ci": {
+    "commit": "b02b2c7957a2b512da3461166d106af6debea1ae",
+    "run": 40800445986,
+    "state": "success",
+    "source_passed": 359,
+    "source_skipped": 20,
+    "postgresql_passed": 19
+  },
+  "verified_cycle_improvements": [
+    "Persistent job-wide generation reservation budget across crashes and retries",
+    "Stale-worker cleanup cannot clear a newer active turn",
+    "Actual current local-model mobile task preview, explicit confirmation, database/audit check",
+    "Actual390x844mobile and1280x960desktop checks; no duplicate next-step lists or horizontal page overflow"
+  ]
 }

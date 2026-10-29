@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-28T19:38:49.016803+00:00",
+  "version": "0.3.0-rc.1",
+  "scope": "Owned local public-source review preview; no operational customer records",
+  "browser_asset": "index-CZ1bEzgx.js",
+  "browser_source": "CUA in-app browser, actual interface and persisted existing task",
+  "schema_markers": [
+    1,
+    2,
+    3
+  ],
+  "conversation_message_count_api_and_database": 4,
+  "confirmed_task_unchanged_after_migration_and_restart": true,
+  "browser_observed_task_state": "Open",
+  "audit_valid": true,
+  "normal_renderer": "webgl-mesh-2.5d",
+  "normal_motion_unique_roi_pixel_hashes": 6,
+  "fallback_animated_unique_roi_pixel_hashes": 5,
+  "fallback_paused_unique_roi_pixel_hashes": 1,
+  "static_companion_images_in_fallback": 0,
+  "browser_system_reduced_motion": false,
+  "accessibility_preference_not_overridden": true,
+  "motion_enabled_after_check": true,
+  "new_model_calls_in_this_cycle": 0,
+  "actual_model_evidence": "companion-policy-1.2-local-inference.json",
+  "original_frame_storage": "Private runtime/review-v3/schema3-browser; screenshots are not automatic public publication",
+  "direct_clip_capture_limitation": "Direct clip screenshots were unreliable and discarded; full screenshots with observed-bound crops supplied motion evidence",
+  "external_communication": false
+}

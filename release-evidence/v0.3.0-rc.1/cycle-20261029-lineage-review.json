@@ -1,0 +1,281 @@
+{
+  "reviewed_at": "2026-10-29T01:17:52.481467+00:00",
+  "scope": "Read-only local source, lineage, rights and adversarial software-boundary review for the 2026-10-29 cycle. This review called no model and made no publication or external operational action.",
+  "source_identity": {
+    "owned_source_sha256": {
+      "backend/airspace/assistant.py": "61d7318488b0d816bd4be42b2242f357c62947842874a0c9a7480ec1a7fed435",
+      "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+      "backend/airspace/worker.py": "20e61b43294bb3555c48aa6353321cc56e52ae179cdf8a5346822a235dbbe499",
+      "backend/airspace/storage.py": "e1e9367a3863ab4fac0174265a4e757329ad90ce7a8097f1e810a7a55832f6ea"
+    },
+    "freeze_status": "Patch source remained unchanged across the recorded scoped test commands. Root owns final source freeze and release gates.",
+    "reviewed_final_source_sha256": {
+      "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+      "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+      "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+      "tests/test_companion.py": "3faf4aa3ccf3d1ee9d94f18a00a1e168422a524ce9933ddeb64708d07991a56f",
+      "tests/test_companion_budget.py": "1813a5ea3bfe5dc4673e0fb68e8dbb34eda13c737ec721ee74d25b71ecba32ec",
+      "tests/test_revision_integration.py": "443eb9fc6b8fb50509afa54148ab3261f487db110c8e9d4ca259f1dd8c7a834d"
+    }
+  },
+  "lineage": {
+    "models/runs/explicit-shall-20261027-4/student.safetensors": {
+      "bytes": 49824,
+      "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+      "same_as_frozen_0_2": true
+    },
+    "models/runs/explicit-shall-20261027-4/run.json": {
+      "bytes": 18937,
+      "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "same_as_frozen_0_2": true
+    },
+    "models/runs/explicit-shall-20261027-4/dataset.jsonl": {
+      "bytes": 969817,
+      "sha256": "4dfc9580f3997ddf0d8c8cd72ca188409b786fd5127a11ba0ddcd4c4d6a04260",
+      "same_as_frozen_0_2": true
+    },
+    "models/runs/explicit-shall-20261027-4/selected-passages.json": {
+      "bytes": 825060,
+      "sha256": "686d1fce32cb585d35ae257b922b82bdf6177e7a3da6c84eb56ffe48663353e2",
+      "same_as_frozen_0_2": true
+    },
+    "models/runs/explicit-shall-20261027-4/annotations.json": {
+      "bytes": 269587,
+      "sha256": "65c621af95fde10a9965f4cf7dfeb81a883af7d9a000f15fbe856c600c2db591",
+      "same_as_frozen_0_2": true
+    },
+    "sources/catalogue.json": {
+      "bytes": 21913,
+      "sha256": "32c7fd48b98ba0a1af8fa32194de6a0c37155572a31626829b178e4ce885bb20",
+      "same_as_frozen_0_2": true
+    },
+    "sources/corpus.json": {
+      "bytes": 28503875,
+      "sha256": "a287194e7c8148d33ffc7586d37a5fadfec1e34ca9ade41f241b15153654dc9b",
+      "same_as_frozen_0_2": true
+    }
+  },
+  "qwen_integrity": {
+    "model": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "files": 11,
+    "bytes": 4079448540,
+    "streamed_check_seconds": 14.822,
+    "each_recorded_length_and_sha256_matched": true,
+    "licence": "Apache-2.0; upstream LICENSE applies",
+    "license_file_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "scope": "All eleven installed local files were streamed and matched their recorded manifest during this review. No inference was performed.",
+    "manifest_sha256": "8af92487fd1707f8d92d9e3aa5f1f504473c4308f2de2203c082abece933e52c",
+    "verified_files": {
+      "config.json": {
+        "bytes": 726,
+        "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+      },
+      "generation_config.json": {
+        "bytes": 239,
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+      },
+      "LICENSE": {
+        "bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+      },
+      "merges.txt": {
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 3441185608,
+        "sha256": "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 622329984,
+        "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 25605,
+        "sha256": "0d660e94b165eb912669a5249dff44b83188c4777a07ddb9611fb78d91b0578d"
+      },
+      "README.md": {
+        "bytes": 13963,
+        "sha256": "257e52c419dac2258852643f18af6c974f21f8c6c1b6f371b6cca6201cf29091"
+      },
+      "tokenizer.json": {
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      "tokenizer_config.json": {
+        "bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "student": {
+    "run_id": "explicit-shall-20261027-4",
+    "promotion_status": "Experimental \u2014 Not promoted",
+    "artifact_matches_manifest": true,
+    "dataset_rows": 288,
+    "accepted_rows": 246,
+    "quarantined_rows": 42,
+    "human_reviewed_rows": 0,
+    "ground_truth": false,
+    "held_out_samples": 77,
+    "student_machine_label_agreement": 0.8181818181818182,
+    "deterministic_machine_label_agreement": 1.0,
+    "original_training_resources": {
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 2080",
+      "torch": "2.6.0+cu126",
+      "python": "3.13.1",
+      "teacher_seconds": 18.576603499997873,
+      "encoding_seconds": 0.6217308000195771,
+      "training_seconds": 1.144131799985189,
+      "total_seconds": 21.141158599988557
+    },
+    "new_training_performed": false,
+    "task": "Literal English shall routing only; no legal interpretation or operational prediction.",
+    "observed_annotation_statuses": {
+      "Machine-generated \u2014 Unreviewed": 246,
+      "Quarantined": 42
+    },
+    "all_rows_explicitly_machine_not_human_groundtruth": true,
+    "all_annotation_text_checksums_match": true,
+    "passages_matching_current_library_by_id_and_text": 288
+  },
+  "regulatory": {
+    "passages": 9833,
+    "rights_review_sha256": "889ca041233047f027ca98c3a7281034a75e7aaf29f03d37a9602d8c6ce9680d",
+    "rights": "Acknowledged EASA/EU legal text; document-specific restrictions prevail. National snapshots are not cleared for public redistribution or training. Models and code do not relicense source documents.",
+    "currentness": "Unchanged retrieval snapshot; no new legal-currentness, complete-European-coverage or national validation claim."
+  },
+  "publication_review": {
+    "paths": [
+      "publication/v0.3/github-readme.md",
+      "publication/v0.3/hf-model-card.md",
+      "publication/v0.3/hf-dataset-card.md",
+      "publication/v0.3/site-project.html",
+      "publication/v0.3/hf-space/index.html"
+    ],
+    "observed": "Prepared status, unchanged student/data, unreviewed machine labels, lower student result than deterministic baseline, national review gaps and no live inference in the static Space are stated explicitly. No invented new training, improved model benchmark or validated-Europe claim found.",
+    "reviewed_file_sha256": {
+      "publication/v0.3/github-readme.md": "970af66a09e98124b2bdbe7a9143daaf712a864646588f61fea8af62001f9039",
+      "publication/v0.3/hf-model-card.md": "3fe4d96f32e832d1462b89339af1d990f0844868de9202ec2f134ebfdfb09798",
+      "publication/v0.3/hf-dataset-card.md": "b06caed831808b6f24e8239e85e748c4a98895cafdc0697ca2e1a6603e7732c6",
+      "publication/v0.3/site-project.html": "9620bf2c12e1a93fa3dae9f6d8b2c0337a7034c32de6a35318b5d5850d9a2593",
+      "publication/v0.3/hf-space/index.html": "8fa7573ba0f1075a6a86f24eb88b4437580d8416c81ffeb2a02e3684cbe77440"
+    }
+  },
+  "adversarial_findings": [
+    {
+      "id": "STALE-COMPANION-CLEANUP",
+      "severity": "Recovery correctness defect",
+      "status": "Resolved in reviewed patch; isolated regression checks passed",
+      "observed": "In an isolated in-memory software fixture with a stale candidate version1 and current running job version4, calling the existing failure cleanup cleared the current conversation pending message and marked it Failed while the newer job stayed Running. No actual private record, credential or model was used.",
+      "root_cause": "Worker failure cleanup could run after its terminal job compare-and-swap lost; helper did not require current terminal job ownership.",
+      "required_fix": "Fence failure cleanup by the current job state/version and verify stale/reclaimed-worker regressions.",
+      "verified_resolution": "Terminal failure cleanup runs only after the terminal compare-and-swap succeeds. The helper requires the exact terminal job version/state, actor, tenant and payload under the organisation lock before changing the same pending turn. Tests exercise a reclaimed running job and wrong terminal version."
+    },
+    {
+      "id": "DURABLE-CALL-BUDGET",
+      "status": "Resolved in reviewed patch; isolated regression checks passed",
+      "observed": "Earlier per-invocation bound could reset on durable recovery. New design reserves a call under the organisation transaction lock before generation and never refunds uncertain work.",
+      "review_requirements": [
+        "Initialise ledger with each new user turn; fail closed for historical missing accounting.",
+        "Check current actor/role/context/scope/deadline/lease/version before reservation.",
+        "Preserve latest ledger through completion and label reservations separately from proven model executions.",
+        "Exercise crash, concurrent reservation, cancellation, malformed ledger and stale lease without actual model calls."
+      ],
+      "verified_resolution": "Each new user turn starts with a strict job-bound ledger. Reservations commit before model service, enforce current lease/attempt/role/context/deadlines, never refund uncertain work, survive Store restart and are correlated with returned attempt metadata. Missing historical accounting fails closed. Crash, concurrent, audit-failure, cancellation, stale lease and malformed ledger tests passed."
+    }
+  ],
+  "remaining_scope": "No additional critical tenant/actor privacy, unsafe output rendering or approval bypass was found in the reviewed companion boundaries. That statement does not waive the pending findings or full original product acceptance.",
+  "final_patch_and_test_verification": {
+    "status": "Passed",
+    "started_at": "2026-10-29T01:19:23.705506+00:00",
+    "finished_at": "2026-10-29T01:19:58.178630+00:00",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pytest",
+      "tests/test_companion_budget.py",
+      "tests/test_companion.py",
+      "tests/test_revision_integration.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "stdout": ".....................................................................    [100%]\n69 passed in 31.79s\n",
+    "stderr": "",
+    "seconds": 34.473,
+    "source_sha256_before": {
+      "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+      "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+      "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+      "tests/test_companion.py": "3faf4aa3ccf3d1ee9d94f18a00a1e168422a524ce9933ddeb64708d07991a56f",
+      "tests/test_companion_budget.py": "1813a5ea3bfe5dc4673e0fb68e8dbb34eda13c737ec721ee74d25b71ecba32ec",
+      "tests/test_revision_integration.py": "443eb9fc6b8fb50509afa54148ab3261f487db110c8e9d4ca259f1dd8c7a834d"
+    },
+    "source_sha256_after": {
+      "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+      "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+      "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+      "tests/test_companion.py": "3faf4aa3ccf3d1ee9d94f18a00a1e168422a524ce9933ddeb64708d07991a56f",
+      "tests/test_companion_budget.py": "1813a5ea3bfe5dc4673e0fb68e8dbb34eda13c737ec721ee74d25b71ecba32ec",
+      "tests/test_revision_integration.py": "443eb9fc6b8fb50509afa54148ab3261f487db110c8e9d4ca259f1dd8c7a834d"
+    },
+    "sources_unchanged": true,
+    "model_evaluation_calls_this_review": 0,
+    "scope": "Isolated software fixtures with injected test-only service. No actual model, operational record, external action or publication.",
+    "command_recording": "Executable normalised to its exact project-relative path; command arguments are unchanged.",
+    "results": "69 passed in31.79s; separate privacy boundaries9passed in6.81s. These commands have disjoint test modules."
+  },
+  "privacy_boundary_verification": {
+    "started_at": "2026-10-29T01:20:34.541412+00:00",
+    "finished_at": "2026-10-29T01:20:43.592140+00:00",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pytest",
+      "tests/test_companion_boundaries.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "stdout": ".........                                                                [100%]\n9 passed in 6.81s\n",
+    "stderr": "",
+    "seconds": 9.051,
+    "source_sha256_before": {
+      "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+      "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+      "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+      "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+      "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89",
+      "tests/test_companion_boundaries.py": "afa7f19063a1bfaed032a581e0a4704f86a2a6d92a873faea206e553cc137f06"
+    },
+    "source_sha256_after": {
+      "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+      "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+      "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+      "backend/airspace/companion_api.py": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+      "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89",
+      "tests/test_companion_boundaries.py": "afa7f19063a1bfaed032a581e0a4704f86a2a6d92a873faea206e553cc137f06"
+    },
+    "sources_unchanged": true,
+    "scope": "Isolated private-record, actor/tenant, job, workflow context and transaction tests; no actual model or operational record.",
+    "command_recording": "Executable normalised to its exact project-relative path; command arguments are unchanged."
+  },
+  "review_completed_at": "2026-10-29T01:21:22.726150+00:00",
+  "review_conclusion": "No unresolved high-severity defect was identified in this scoped review after both findings were repaired and tested. This is software review, not aviation certification, qualified legal review, operational acceptance or a full-product security assurance.",
+  "prior_actual_inference_evidence": {
+    "path": "release-evidence/v0.3.0-rc.1/companion-policy-1.2-local-inference.json",
+    "sha256": "83be4168f2cf27ba6023e201a66acf0aea89ef342485092cf89897275f221f78",
+    "turns": 2,
+    "policy": "companion/1.2",
+    "scope": "Historical two-turn actual Qwen evidence for the unchanged guidance-selection policy. assistant.py changed for durable accounting and cleanup after that run; this report does not relabel historical inference as execution of the new budget patch. This review made zero actual model calls.",
+    "original_report_source_hashes_current": {
+      "backend/airspace/assistant.py": false,
+      "backend/airspace/companion_api.py": true
+    }
+  }
+}

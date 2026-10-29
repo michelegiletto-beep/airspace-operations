@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-10-28T19:51:05.258945+00:00",
+  "junit_results": [
+    {
+      "evidence": "schema-compatibility-tests.xml",
+      "tests": 23,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 10.621
+    },
+    {
+      "evidence": "release-version-safety-tests.xml",
+      "tests": 18,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.386
+    },
+    {
+      "evidence": "heartbeat-schema3-full-tests.xml",
+      "tests": 349,
+      "failed": 0,
+      "skipped": 16,
+      "seconds": 117.177
+    },
+    {
+      "evidence": "heartbeat-final-backend-tests.xml",
+      "tests": 351,
+      "failed": 1,
+      "skipped": 16,
+      "seconds": 131.843
+    },
+    {
+      "evidence": "heartbeat-final-backend-recheck.xml",
+      "tests": 351,
+      "failed": 0,
+      "skipped": 16,
+      "seconds": 179.355
+    },
+    {
+      "evidence": "heartbeat-health-repaired-tests.xml",
+      "tests": 17,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.647
+    },
+    {
+      "evidence": "heartbeat-health-repaired-full-tests.xml",
+      "tests": 354,
+      "failed": 0,
+      "skipped": 16,
+      "seconds": 173.156
+    }
+  ],
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "release_state": "Candidate source uploaded only; no0.3 downloadable release",
+  "source_commit": "4832b960ee3a193b33b7435e439cebf0106a16e4",
+  "known_http_retrieval_failure": "System Lab page anonymous urllib request returned403; browser/independent presentation recheck remains required"
+}

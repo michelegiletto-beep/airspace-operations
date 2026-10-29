@@ -2,13 +2,19 @@
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.
 
-Version 0.3.0-rc.1 is Prepared. Its application checks, model interaction, screenshots, exact archive and public download are still being verified. The [published 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) remains available and unchanged.
+Version 0.3.0-rc.1 is Prepared. Local checks have recorded 360 backend passes with 19 PostgreSQL tests skipped and 107 interface passes. Actual local-model replies, an explicitly confirmed personal task and API-restart persistence have been recorded. Source CI, the exact release archive and public retrieval remain pending. The [published 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) remains available and unchanged.
 
 ## Start with a task
 
 Record the operation you intend to carry out. Add the real aircraft, people, location and supporting documents as they become available. The application identifies missing information and keeps draft work separate from reviewed evidence and permissions.
 
-This revision is being prepared to offer clearer instructions, a persistent local language-model conversation, saved tasks and a preview of proposed internal actions before you confirm them. Its owned companion is intended to keep moving during ordinary use, with a real animated fallback and a restrained background that responds to interaction. Pause and reduced-motion settings take precedence. These changes require the new revision's execution and browser evidence before release.
+This revision provides a persistent local language-model conversation, saved personal tasks and previews of proposed internal drafts before confirmation. The owned companion animates during ordinary use, with an animated fallback and a restrained background responding to interaction. Pause and reduced-motion settings take precedence. Conversations and personal tasks are private to their author; confirmed cases and agent workflows are visible to the organisation.
+
+![Desktop application with contextual companion](publication/media/v0.3/desktop-companion.jpg)
+
+![Mobile application with contextual companion](publication/media/v0.3/mobile-companion.jpg)
+
+These captures come from an isolated software-review workspace. They do not show a customer operation or a flown mission.
 
 The companion does not issue a permission or approve its own work. Animation does not prove that a model has finished or that a flight is ready. A missing local model must remain visibly unavailable. All real workspaces remain usable when language-model generation is unavailable.
 
@@ -65,7 +71,7 @@ The pinned Qwen3-1.7B files occupy approximately 4.08 GB before runtime overhead
 
 ## Evidence and limitations
 
-The new candidate requires its own actual model, browser, software, container and installation results. [Publication status](publication/status.json) and [release evidence](release-evidence/) identify what has actually run. Earlier 0.2 evidence remains labelled with that release, including its container, PostgreSQL and recovery checks. It is not silently reused to certify changed code.
+The current local checkpoint records 360 backend passes, 19 PostgreSQL skips and 107 interface passes. These counts do not substitute for container, PostgreSQL or exact-archive verification. Source CI for commit `b02b2c7957a2b512da3461166d106af6debea1ae` is in progress at this preparation checkpoint. [Publication status](publication/v0.3/status.json) and [release evidence](release-evidence/) identify what has actually run. Earlier 0.2 evidence remains labelled with that release, including its container, PostgreSQL and recovery checks. It is not silently reused to certify changed code.
 
 The experimental literal-language student and its source annotation dataset are unchanged. Its 81.82% agreement on 77 unreviewed machine labels remains below the deterministic literal-word baseline's 100%. It is not promoted, and it does not establish legal correctness. No new training, operational prediction or benchmark improvement is claimed.
 

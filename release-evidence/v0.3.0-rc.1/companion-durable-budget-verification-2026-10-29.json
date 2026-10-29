@@ -1,0 +1,90 @@
+{
+  "at": "2026-10-29T01:22:21.643489+00:00",
+  "scope": "Durable job-wide companion generation reservation accounting and stale-worker cleanup; isolated software fixtures only",
+  "source_frozen": true,
+  "source_sha256": {
+    "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+    "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+    "tests/test_companion_budget.py": "1813a5ea3bfe5dc4673e0fb68e8dbb34eda13c737ec721ee74d25b71ecba32ec",
+    "tests/test_postgres_coordination.py": "65d04dfc285094af6bdb298f1365637ce19cb10a3761376ba0e5ace1ec2409f2"
+  },
+  "implemented": [
+    "Server-created strict generation ledger bound to the actual queued job and message",
+    "Org-locked current actor, lease, deadline, scope and input checks before every reservation",
+    "Reservation, version snapshot and audit commit before entering model service",
+    "No refund after crashes; missing or malformed historical ledgers cannot receive a new allowance",
+    "Separate conservative reserved_calls and observed returned model_calls; returned attempts reference reservation identities",
+    "Stale worker may clean up only after its own terminal CAS and an exact current terminal job-version check"
+  ],
+  "commands_actually_executed": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_companion.py tests/test_revision_integration.py -q",
+      "environment": {
+        "PYTHONPATH": "backend"
+      },
+      "exit_code": 0,
+      "stdout": "47 passed in 19.48s",
+      "stage": "Initial ledger implementation"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_companion_budget.py -q",
+      "environment": {
+        "PYTHONPATH": "backend"
+      },
+      "exit_code": 0,
+      "stdout": "18 passed in 10.73s",
+      "stage": "Initial budget fault suite"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_companion_budget.py tests/test_companion.py tests/test_revision_integration.py -q",
+      "environment": {
+        "PYTHONPATH": "backend"
+      },
+      "exit_code": 0,
+      "stdout": "69 passed in 31.47s",
+      "stage": "Final ledger and stale-cleanup implementation"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_postgres_coordination.py -q",
+      "environment": {
+        "PYTHONPATH": "backend"
+      },
+      "exit_code": 0,
+      "stdout": "16 skipped in 0.52s",
+      "stage": "PostgreSQL fixture collection only; no service configured, no PostgreSQL success claimed"
+    },
+    {
+      "command": [
+        "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "backend/airspace/assistant.py",
+        "backend/airspace/worker.py",
+        "tests/test_companion_budget.py",
+        "tests/test_postgres_coordination.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "adversarial_review": {
+    "evidence": "cycle-20261029-lineage-review.json",
+    "reported_result": "69 focused tests passed in31.79s and9privacy-boundary tests passed in6.81s; reviewer reported source hashes unchanged",
+    "certification": false
+  },
+  "secret_pattern_scan": {
+    "source": "scripts/package_release.py SECRET_PATTERNS",
+    "files_checked": 4,
+    "matches": []
+  },
+  "model_calls_by_this_agent": 0,
+  "external_actions": [],
+  "publication_performed": false,
+  "limitations": [
+    "Conservative reservations may be consumed even when a crash occurs before actual generation. They are not benchmark execution counts.",
+    "Pending historical turns without accounting fail closed and require an explicit separate user request.",
+    "The local PostgreSQL checks were skipped; the new real-service wrappers require actual configured CI execution.",
+    "Existing model and runtime safety boundaries and operational-acceptance limitations remain in force."
+  ]
+}

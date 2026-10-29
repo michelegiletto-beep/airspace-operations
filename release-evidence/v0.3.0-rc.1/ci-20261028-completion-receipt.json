@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-10-28T19:51:36.421354+00:00",
+  "repository": "michelegiletto-beep/airspace-operations",
+  "candidate_branch": "codex/airspace-0.3",
+  "latest_source_commit": "4832b960ee3a193b33b7435e439cebf0106a16e4",
+  "latest_run": 40757564050,
+  "latest_run_status": "success",
+  "prior_verified_commit": "5d9d8be5770a87d480556363266d5662f375270f",
+  "prior_run": 40756006117,
+  "prior_result": {
+    "status": "success",
+    "source_tests_passed": 334,
+    "source_tests_skipped": 17,
+    "postgresql_tests_passed": 16,
+    "containers_healthy": true,
+    "actual_running_worker_job": true,
+    "backup_restore_audit_valid": true
+  },
+  "first_failed_run": 40754500160,
+  "first_failure": "Container probe expected previous release version; strict probe now derives current source version",
+  "latest_change": "Windows heartbeat read contention retry and deterministic bounded-retry tests",
+  "published_release": false,
+  "latest_result": {
+    "source_tests_passed": 337,
+    "source_tests_skipped": 17,
+    "source_seconds": 62.12,
+    "postgresql_tests_passed": 16,
+    "postgresql_seconds": 5.59,
+    "containers_healthy": true,
+    "actual_running_worker_job": true,
+    "postgresql_restoration_verified": true,
+    "audit_valid": true
+  },
+  "latest_raw_log": "ci-health-repaired-success.log.txt"
+}
