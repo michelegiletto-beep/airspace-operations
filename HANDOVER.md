@@ -1,3 +1,13 @@
+# 0.3.1 release handover
+
+The current GitHub engineering candidate is [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1), frozen source `433e89a66038ee7f7c34cb443c03eeafdee92f36`. Its 12,504,321-byte ZIP has SHA-256 `0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750`. All nine assets, archive manifest, source hashes, original specification, owned resources and formal SBOM were independently verified. The source and exact archive suites each passed 479 tests with 20 skipped; 123 interface tests passed. Container, worker, PostgreSQL and restoration checks succeeded in CI41118769822.
+
+Actual desktop and390x844 mobile task views match authenticated API/database records with a valid audit chain. Task descriptions are hidden only when identical to the full title after whitespace normalisation. Mobile layout bounds and the displayed package version were corrected. No new model generation, training, task or operational record was created.
+
+The frozen mobile screenshot is valid JPEG data with a.png filename. Preserve the artifact; details and a future encoding guard are in [known limitations](docs/known-limitations.md). The new Site uses a byte-identical.jpg alias. Inspect [publication/status.json](publication/status.json) for the actual Site deployment and independent retrieval state; no destination is inferred from another. Hub updates remain blocked on a supported authenticated existing account. Earlier candidates remain unchanged.
+
+The following historical handover retains the preceding0.3 scope and evidence.
+
 # System Lab Airspace Operations
 
 Version [0.3.0-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) is a published engineering candidate, independently retrieved on 30 October 2026. Frozen source: `331b6e220fec5254c4c2f167cab3ad86d8905456`. The ZIP contains 11,675,616 bytes and has SHA-256 `4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e`. All nine release assets returned HTTP 200 and matched their published digests. Earlier releases retain their original tags and bytes. The original specification is not fully accepted; stable release and operational acceptance remain blocked.

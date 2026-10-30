@@ -1,0 +1,151 @@
+{
+  "at": "2026-10-30T20:04:09.693807+00:00",
+  "state": "Activated in opened source checkout; build, push and deployment are owned by root and not claimed here",
+  "current_release": "0.3.1-rc.1",
+  "release_source": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+  "zip_bytes": 12504321,
+  "zip_sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+  "clean_install": {
+    "passed": 479,
+    "skipped": 20,
+    "seconds": 67.66
+  },
+  "source_suite": {
+    "passed": 479,
+    "skipped": 20
+  },
+  "frontend_passed": 123,
+  "postgresql_passed_separately": 19,
+  "ci_run": 41118769822,
+  "previous_release_original_table_and_download_preserved": true,
+  "actual_site_test_command": "node --test tests/airspace-operations.test.mjs",
+  "test_cwd": "work/site-publishing",
+  "scoped_tests_passed": 5,
+  "scoped_tests_duration_ms": 425.9487,
+  "earlier_verification_error": "First node test command ran from product root and failed resolving Site relative data before checks; rerun from opened Site checkout passed all5tests.",
+  "mobile_filename_limitation": "Frozen media source has PNGfilename but JPEGbytes. The Site alias.jpg has identical JPEGbytes; a visible note states the mismatch and preserved frozenartifact.",
+  "assets": [
+    {
+      "version": "0.3.0-rc.1",
+      "name": "ci-verification.json",
+      "bytes": 21246,
+      "sha256": "a2911001a8f32728f625ffaf1f6efe520e3ec49325447c4e36d385c153194190"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "release-gates.json",
+      "bytes": 1046,
+      "sha256": "4d87fcbad8fc6bcca43af07364fa3d5157d268d4bc74ac8389a02748c2fa5305"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "RELEASE_PROVENANCE.json",
+      "bytes": 65482,
+      "sha256": "a34882892043a1504e676bed4062302089011719edca909ab3d036e836fab075"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "0450f296020fed005b8f4903bc022a5bd4668408575c6326e14d6aeacf5a4729"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "standalone-archive-verification.json",
+      "bytes": 6003,
+      "sha256": "ba0168f4d1456fd74a0d5b80008df2f6dbff08ddd359fe1147dd3df1fd533668"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+      "bytes": 11675616,
+      "sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e"
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "name": "THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "ci-verification.json",
+      "bytes": 22095,
+      "sha256": "fd8e6b20e3b44692ce9bca2482d9bfe21365fdad56785eb2f85ba50a89313747"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "release-gates.json",
+      "bytes": 1046,
+      "sha256": "91848a143f98f26e8c293c97cc66ea7f1b93de41bb40fd34cc529b4be33e85c7"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "RELEASE_PROVENANCE.json",
+      "bytes": 77030,
+      "sha256": "91307f2e4e2c9fb792af12c149cb4fa4dae85dd56958899cf80a8c98164e070b"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "13dfa8bd2f218a8c157f5566af9cabc49279590c701dcb6d9efb3edbbd0d67b1"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "8bc1740917f4faeac6f2812a14fc8d56ffdcc9b89909a0045614e0343b601ebc"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "standalone-archive-verification.json",
+      "bytes": 6084,
+      "sha256": "053195c16579068dfad45ec3ac6d8b8278a727c843bbd5f3a9ae7e4d795351dc"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+      "bytes": 12504321,
+      "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750"
+    },
+    {
+      "version": "0.3.1-rc.1",
+      "name": "THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf"
+    }
+  ],
+  "files": [
+    {
+      "path": "work/site-publishing/templates/airspace-operations.html",
+      "sha256": "7a56eb02b3ba8124b9a6d628640f5e2c0048861ae64477f78e0e7e991b99cc93"
+    },
+    {
+      "path": "work/site-publishing/public/projects/airspace-operations.html",
+      "sha256": "7a56eb02b3ba8124b9a6d628640f5e2c0048861ae64477f78e0e7e991b99cc93"
+    },
+    {
+      "path": "work/site-publishing/tests/airspace-operations.test.mjs",
+      "sha256": "a161868ff5b655d253b8acce1834753439c74acb6747a7143c08d7015608513d"
+    }
+  ]
+}

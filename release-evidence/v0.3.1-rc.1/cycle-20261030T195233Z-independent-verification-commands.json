@@ -1,0 +1,25 @@
+{
+  "scope": "Actual postpublication verification commands; no downloaded artifact was rebuilt, retagged or replaced.",
+  "commands": [
+    {
+      "command": ".venv/Scripts/python.exe runtime/publication/verify-published-0.3.1-20261030.py",
+      "exit_code": 1,
+      "result": "Nineassets verified, then an incorrect PNG-only encoding assumption exposed mobileJPEGbytes under.pngfilename; failure retained."
+    },
+    {
+      "command": ".venv/Scripts/python.exe runtime/publication/verify-published-0.3.1-20261030-continuation.py",
+      "exit_code": 0,
+      "result": "637manifestfiles,638ZIPmembers,200CI hashes,5ownedresources,3decodedcaptures and formal240componentSBOM; oneencodingfilename mismatch explicitly recorded."
+    }
+  ],
+  "helper_sha256": {
+    "runtime/publication/verify-published-0.3.1-20261030.py": "fc0dd3ef2c86537308fb10163f82dfbb041f2ebe1f6fc4115f86095f56e10542",
+    "runtime/publication/verify-published-0.3.1-20261030-continuation.py": "08007477debb45d8cd9e36603c9204a872cd2fa15cbca2b9262599dfca05376c",
+    "runtime/publication/verify-site-0.3.1-20261030.py": "5429f40c0c900401fd00a2b788b43e21bf5c66f4234293dc51082013b488fff5"
+  },
+  "image_decoder": "Pillow; signature and full decoder verification, recorded actualPNG/JPEG encoding and dimensions",
+  "new_model_calls": 0,
+  "new_training": false,
+  "new_local_clean_install": false,
+  "rights_or_aviation_certification_inferred": false
+}

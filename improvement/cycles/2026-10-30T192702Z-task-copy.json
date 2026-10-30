@@ -2,8 +2,8 @@
   "cycle_id": "2026-10-30T192702Z-task-copy",
   "triggered_at": "2026-10-30T19:27:02.898Z",
   "started_at": "2026-10-30T19:27:09Z",
-  "checkpoint_at": "2026-10-30T19:44:53.882551+00:00",
-  "state": "Local gates and browser/API/data verification passed; new source and remote publication gates pending",
+  "checkpoint_at": "2026-10-30T20:09:09.097763+00:00",
+  "state": "GitHubcandidate independentlyretrieved; boundedruncheckpoint withSite/H ubaccess limitations",
   "version": "0.3.1-rc.1",
   "requirements": [
     "ASO3-001",
@@ -34,7 +34,10 @@
     "new_training": false,
     "prior_github_assets_exact": 9,
     "prior_site_resources_verified": 37,
-    "prior_hf_space_files_exact": 21
+    "prior_hf_space_files_exact": 21,
+    "remote_ci_success": true,
+    "exact_archive_passed": 479,
+    "exact_archive_skipped": 20
   },
   "original_baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
   "original_acceptance_complete": false,
@@ -43,8 +46,26 @@
   "known_limits": [
     "Semantic guidance overlap remains where safe equivalence metadata is absent",
     "New source has not yet passed its own remote container, clean-archive and publication gates",
-    "Existing Hugging Face update needs a supported authenticated session; native Firefox policy is not bypassed"
+    "Existing Hugging Face update needs a supported authenticated session; native Firefox policy is not bypassed",
+    "Frozen companion-tasks-mobile.png is validJPEGencodeddata under aPNGfilename. Its bytes/dimensions/provenance are verified; preserve artifact. New Site uses a byte-identical.jpg alias. Fix naming andaddencodingguard in a future distinctrelease."
   ],
-  "retrospective": "Whole-value comparison improved task readability without changing records or permissions. Actual browser verification exposed two additional integration defects: a stale hard-coded UI version and a scrollbar-related mobile panel clip. A reviewer encoding false positive and screenshot-origin/scale failures were retained and resolved through byte-level comparison and explicit capture geometry. Core environment synchronisation removed optional packages; the pinned optional profiles were restored. No local language-model generation or operational activity was manufactured.",
-  "next_bounded_prompt": "Inspect the new0.3.1 source/publication workflow before claiming a tag or download. If successful, freeze its bytes, independently retrieve every asset/media and validate SBOM/source/provenance, then update only the existing Airspace project page with verified identities and preserve0.1/0.2/0.3 history. If failed, preserve logs and repair the actual cause without moving tags or waiving gates. Resume Hub presentation only with supported existing authenticated access; no new credentials or native-browser policy bypass. Keep semantic guidance overlap open unless versioned equivalence can be established safely. No email, contacts, purchases, aircraft commands or external operational actions; at most two actual model calls."
+  "retrospective": "Whole-value comparison improved task readability without changing records or permissions. Actual browser verification exposed two additional integration defects: a stale hard-coded UI version and a scrollbar-related mobile panel clip. A reviewer encoding false positive and screenshot-origin/scale failures were retained and resolved through byte-level comparison and explicit capture geometry. Core environment synchronisation removed optional packages; the pinned optional profiles were restored. No local language-model generation or operational activity was manufactured. Post-publication format validation found one mobileJPEG named.png. Actual pixels/bytes remainverified; the published artifact is preserved and the mismatch documented ratherthan silentlyreplaced. The newSitepassed its scopedtests/fullbuild, but its GitHTTPS sourcepush stalled. The boundedattempt wascancelled and no deployment claimed. Localcommita7c4da5 is retained for exactremote reconciliation ratherthan forcepushing or overwritingunrelatedcontent.",
+  "next_bounded_prompt": "First preserve GitHub0.3.1tag433e89 and ZIPSHA0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750; do not rebuild or move it. Reconcile existingSite remoteHEAD against preparedlocalcommita7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d using the officialhelper and fresh ephemeralcredential. The priorpushstalled and wascancelled; no native save/deploy occurred, liveversion remains97. The scopedbuild and5tests already passed for unchangedsource. Once safelypushed, package/save/deploy that exactsource andrun the prepared49resource anonymousverifier. Preserveoldreleases and the byte-identical.jpg mobilealias. In a new distinctsoftwareversion, correct the frozenmobileJPEG/.png naming and add actualencoding/extensionguard; neverreplacepublishedbytes. Hubupdatesrequire supported existingauthenticatedaccess, no Firefoxpolicybypass/newcredentials. Keep semanticguidanceoverlap open without safeequivalencemetadata. Record actual failures/tests, retrospective and nextprompt; no email, contacts, paidservices or operationalexternalactions, atmost2actualmodelcalls.",
+  "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+  "github_release": {
+    "bytes": 12504321,
+    "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+    "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+    "tag": "v0.3.1-rc.1",
+    "release_id": 429437042,
+    "published_at": "2026-10-30T19:58:48Z"
+  },
+  "site": {
+    "live_version": 97,
+    "prepared_source_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d",
+    "scoped_tests_passed": 5,
+    "build_passed": true,
+    "state": "Prepared and built; sourcepush stalled, attempt cancelled before any save/deploy",
+    "new_save_or_deploy": false
+  }
 }

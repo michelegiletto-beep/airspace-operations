@@ -1,6 +1,6 @@
 # System Lab Airspace Operations
 
-This source is **0.3.1-rc.1**, an engineering candidate with clearer companion tasks, a mobile panel-width correction and version-specific release materials. Publication and installation evidence is recorded separately for each candidate in `release-evidence/` and [publication/status.json](publication/status.json). Use the [published release list](https://github.com/michelegiletto-beep/airspace-operations/releases) to select the exact version; previous downloads below retain their own identities.
+Version [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1) is a published engineering candidate. Its exact archive passed 479 tests with 20 skipped; the interface passed 123 tests. Current-source container, worker, PostgreSQL and restoration checks succeeded. All nine public assets were anonymously retrieved and digest-matched. This increment improves task readability, the visible version and mobile panel fit. See [known limitations](docs/known-limitations.md), including the frozen mobile image filename mismatch. Full original acceptance and operational acceptance remain incomplete.
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.
 
@@ -37,7 +37,7 @@ Internal review, authority permission, U-space permission, pilot acknowledgement
 
 ## Install on your computer or server
 
-Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The [downloadable archive](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip) includes the built interface. It contains 11,675,616 bytes and has SHA-256 `4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e`. Read the [schema 3 upgrade instructions](docs/upgrading-to-0.3.md) before updating an existing installation.
+Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The [downloadable archive](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip) includes the built interface. It contains 12,504,321 bytes and has SHA-256 `0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750`. Read the [schema 3 upgrade instructions](docs/upgrading-to-0.3.md) before updating an existing installation.
 
 ```powershell
 uv sync --frozen --extra dev

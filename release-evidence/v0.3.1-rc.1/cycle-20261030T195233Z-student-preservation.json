@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-30T20:03:29.839891+00:00",
+  "new_release": "0.3.1-rc.1",
+  "prior_release": "0.3.0-rc.1",
+  "scope": "Published archive comparison of unchanged actual experimental student run, not new training or evaluation",
+  "run_files_exactly_equal": 5,
+  "student_sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+  "new_training": false,
+  "experimental_promotion_changed": false
+}

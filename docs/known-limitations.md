@@ -22,3 +22,8 @@ The scoped Airspace dossier, catalogue integration, screenshots and downloads pa
 
 
 Companion generation reservations now persist across retries and crashes, with one or two reservations per request. Uncertain interrupted work consumes its reservation; recorded reservation counts are not proven completed generations. Older pending turns without valid accounting must be sent again as new requests. Live provider access, qualified national validation and the remaining original requirements remain open.
+
+
+## 0.3.1 recorded mobile image filename
+
+The frozen source file `publication/media/0.3.1-rc.1/companion-tasks-mobile.png` contains valid JPEG data (375 by 812 pixels). Its SHA-256 is `e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c`. Independent decoding, visual review, archive and public-source hashes match the actual capture. The extension is incorrect. Preserve the published tag, ZIP and source bytes; the System Lab page uses a byte-identical `.jpg` copy. A future distinct candidate must correct the source filename and add an encoding/extension check. This is a presentation defect and does not change flight records, operational rules or permissions. The failed initial PNG-signature assumption remains in the release evidence.

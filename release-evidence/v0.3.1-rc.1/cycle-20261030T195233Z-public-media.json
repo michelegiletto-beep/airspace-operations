@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-30T20:01:37.446663+00:00",
+  "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+  "state": "Independently Retrieved",
+  "media": [
+    {
+      "path": "publication/media/0.3.1-rc.1/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "pixels": [
+        466,
+        569
+      ],
+      "detected_format": "PNG",
+      "filename_extension_matches_format": true,
+      "source_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/433e89a66038ee7f7c34cb443c03eeafdee92f36/publication/media/0.3.1-rc.1/companion-tasks.png",
+      "matches_browser_receipt_and_archive_and_public_source": true,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/433e89a66038ee7f7c34cb443c03eeafdee92f36/publication/media/0.3.1-rc.1/companion-tasks.png",
+      "redirect_hosts": [],
+      "authenticated_read": false
+    },
+    {
+      "path": "publication/media/0.3.1-rc.1/companion-tasks-mobile.png",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "pixels": [
+        375,
+        812
+      ],
+      "detected_format": "JPEG",
+      "filename_extension_matches_format": false,
+      "source_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/433e89a66038ee7f7c34cb443c03eeafdee92f36/publication/media/0.3.1-rc.1/companion-tasks-mobile.png",
+      "matches_browser_receipt_and_archive_and_public_source": true,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/433e89a66038ee7f7c34cb443c03eeafdee92f36/publication/media/0.3.1-rc.1/companion-tasks-mobile.png",
+      "redirect_hosts": [],
+      "authenticated_read": false
+    },
+    {
+      "path": "publication/media/0.3.1-rc.1/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "pixels": [
+        1265,
+        652
+      ],
+      "detected_format": "PNG",
+      "filename_extension_matches_format": true,
+      "source_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/433e89a66038ee7f7c34cb443c03eeafdee92f36/publication/media/0.3.1-rc.1/application-tasks.png",
+      "matches_browser_receipt_and_archive_and_public_source": true,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/433e89a66038ee7f7c34cb443c03eeafdee92f36/publication/media/0.3.1-rc.1/application-tasks.png",
+      "redirect_hosts": [],
+      "authenticated_read": false
+    }
+  ]
+}

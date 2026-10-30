@@ -1,0 +1,124 @@
+{
+  "release": "0.3.1-rc.1",
+  "release_kind": "Engineering candidate",
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "states_reached": [
+    "Prepared",
+    "Uploaded",
+    "Published",
+    "Independently Retrieved"
+  ],
+  "history": [
+    "publication/history/0.1.0-rc.1.json",
+    "publication/history/0.2.0-rc.1.json"
+  ],
+  "destinations": [
+    {
+      "destination": "GitHub candidate release source",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/v0.3.1-rc.1",
+      "state": "Independently Retrieved",
+      "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+      "tagged_release": true,
+      "release": "0.3.1-rc.1",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261030T195233Z-public-downloads.json"
+    },
+    {
+      "destination": "GitHub tagged candidate release",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1",
+      "state": "Independently Retrieved",
+      "prior_release": "0.2.0-rc.1",
+      "release": "0.3.1-rc.1",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261030T195233Z-public-downloads.json",
+      "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36"
+    },
+    {
+      "destination": "System Lab project dossier revision",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "state": "Independently Retrieved",
+      "prior_release": "0.2.0-rc.1",
+      "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+      "version": 97,
+      "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+      "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
+      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+      "audience": "public",
+      "ownership": "owner",
+      "checks": {
+        "expected": 37,
+        "http_200": 37,
+        "verified": 37,
+        "exact": 34,
+        "semantic": 3
+      },
+      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json",
+      "new_revision_state": "Prepared and built; sourcepush stalled, attempt cancelled before any save/deploy",
+      "prepared_source_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d"
+    },
+    {
+      "destination": "Hugging Face model presentation",
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+      "state": "Prepared",
+      "prior_release": "0.2.0-rc.1",
+      "new_upload": false,
+      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+    },
+    {
+      "destination": "Hugging Face dataset presentation",
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+      "state": "Prepared",
+      "prior_release": "0.2.0-rc.1",
+      "new_upload": false,
+      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+    },
+    {
+      "destination": "Hugging Face recorded evaluation Space",
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
+      "state": "Prepared",
+      "prior_release": "0.2.0-rc.1",
+      "new_upload": false,
+      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+    }
+  ],
+  "states_reached_scope": "GitHub0.3.1 release independently retrieved. System Lab remains liveversion97; new0.3.1 page is locally built but sourcepushstalled, no newdeployment claimed.",
+  "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
+  "last_checked_at": "2026-10-30T20:09:09.097763+00:00",
+  "release_blockers": [
+    "System Lab sourcepush stalled on git-remote-https after passing5scopedtests and fullbuild; localcommit and files retained. Reconcile remoteHEAD with fresh ephemeralSitecredential before retrying.",
+    "Hugging Face update still requires a supported authenticated existing write session; no newupload."
+  ],
+  "candidate_ci": {
+    "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+    "run": 41118769822,
+    "state": "success",
+    "engineering_job": 124279765454,
+    "publication_job": 124281068303
+  },
+  "verified_cycle_improvements": [
+    "Persistent job-wide generation reservation budget across crashes and retries",
+    "Stale-worker cleanup cannot clear a newer active turn",
+    "Actual current local-model mobile task preview, explicit confirmation, database/audit check",
+    "Actual390x844mobile and1280x960desktop checks; no duplicate next-step lists or horizontal page overflow"
+  ],
+  "published_archive": {
+    "bytes": 12504321,
+    "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+    "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+    "tag": "v0.3.1-rc.1",
+    "release_id": 429437042,
+    "published_at": "2026-10-30T19:58:48Z"
+  },
+  "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
+  "development_candidate": {
+    "version": "0.3.1-rc.1",
+    "state": "Published and independently retrieved on GitHub",
+    "published": true
+  },
+  "known_presentation_defects": [
+    "Frozen companion-tasks-mobile.png is validJPEGencodeddata under aPNGfilename. Its bytes/dimensions/provenance are verified; preserve artifact. New Site uses a byte-identical.jpg alias. Fix naming andaddencodingguard in a future distinctrelease."
+  ]
+}

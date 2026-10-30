@@ -1,0 +1,47 @@
+{
+  "scope": "Inspection following a failed assumption that PNG-named screenshots containPNGencodedbytes. No imageediting or assetreplacement.",
+  "images": [
+    {
+      "path": "publication/media/0.3.1-rc.1/companion-tasks.png",
+      "signature_hex": "89504e470d0a1a0a0000000d49484452",
+      "detected_format": "PNG",
+      "actual_pixels": [
+        466,
+        569
+      ],
+      "recorded_pixels": [
+        466,
+        569
+      ],
+      "pixels_match": true
+    },
+    {
+      "path": "publication/media/0.3.1-rc.1/companion-tasks-mobile.png",
+      "signature_hex": "ffd8ffe000104a464946000101000001",
+      "detected_format": "JPEG",
+      "actual_pixels": [
+        375,
+        812
+      ],
+      "recorded_pixels": [
+        375,
+        812
+      ],
+      "pixels_match": true
+    },
+    {
+      "path": "publication/media/0.3.1-rc.1/application-tasks.png",
+      "signature_hex": "89504e470d0a1a0a0000000d49484452",
+      "detected_format": "PNG",
+      "actual_pixels": [
+        1265,
+        652
+      ],
+      "recorded_pixels": [
+        1265,
+        652
+      ],
+      "pixels_match": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "command": ".venv/Scripts/python.exe runtime/publication/verify-published-0.3.1-20261030.py",
+  "exit_code": 1,
+  "failed_stage": "PNG signature assertion for companion-tasks-mobile.png",
+  "finding": "Two actualPNGcaptures and oneactualJPEG375x812capture; mobilefilename.png doesnot match JPEGencoding. Actualhashes/capturepixels remain correct. No frozenbytesmodified.",
+  "helper_sha256": "fc0dd3ef2c86537308fb10163f82dfbb041f2ebe1f6fc4115f86095f56e10542"
+}
