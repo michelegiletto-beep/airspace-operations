@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-10-30T07:42:42.481726+00:00",
+  "finding": "The first actual Site 96 verification preserved 34 exact binary passes and all HTML content checks, but failed repeated-content comparison because Cloudflare added a per-request ray parameter to its fixed injected challenge-script literal.",
+  "negative_receipt": "release-evidence/v0.3.0-rc.1/cycle-20261030-site-public-verification.json",
+  "repair": "Normalise only the unique observed challenge-script literal when its 16 hexadecimal ray characters equal the unique existing Cloudflare params.r value. Existing r/t normalisation is unchanged. Other script content, authored visible text, hyperlinks, image links, arbitrary URL queries and inconsistent ray values remain compared.",
+  "regression_tests": {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pytest",
+      "tests/test_site_publication_v3.py",
+      "-q",
+      "--junitxml=release-evidence/v0.3.0-rc.1/cycle-20261030-site-verifier-repair-tests.xml"
+    ],
+    "exit_code": 0,
+    "passed": 18,
+    "seconds": 0.5
+  },
+  "final_actual_command": [
+    ".venv/Scripts/python.exe",
+    "scripts/verify_publication_v3.py",
+    "--version-number",
+    "96",
+    "--source-commit",
+    "bfbb5e81e167c93c886a29869ec38df6de2c3746",
+    "--deployment-id",
+    "appgdep_6ae449bf0b4c81919375bf9b5052253e",
+    "--output",
+    "release-evidence/v0.3.0-rc.1/cycle-20261030-site-public-verification-final.json"
+  ],
+  "final_exit_code": 0,
+  "final_results": {
+    "http_200": 37,
+    "exact_binary_verified": 34,
+    "semantic_html_verified": 3
+  },
+  "final_stdout": "release-evidence/v0.3.0-rc.1/cycle-20261030-site-verifier-repaired-command.log.txt",
+  "sources": {
+    "scripts/verify_publication_v3.py": "34f72745a0ca1c7e3ad7764d02d504955edafbafa0238e56040c431e9ce0fbd5",
+    "tests/test_site_publication_v3.py": "4704862244f6152e1be4d1845ef51d6b1b2c83fec4e779c0d5e2ee37cecf0b21"
+  },
+  "raw_html_hash_match_claimed": false,
+  "operational_or_aviation_acceptance_claimed": false
+}

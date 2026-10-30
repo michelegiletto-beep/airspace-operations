@@ -1,0 +1,139 @@
+{
+  "checked_at": "2026-10-30T07:35:25.643864+00:00",
+  "release_id": 427384485,
+  "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1",
+  "tag": "v0.3.0-rc.1",
+  "source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+  "published_at": "2026-10-29T01:58:58Z",
+  "state": "Independently Retrieved",
+  "anonymous_requests": true,
+  "credentials_cookies_environment_proxies": false,
+  "assets": [
+    {
+      "name": "ci-verification.json",
+      "id": 687032115,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/ci-verification.json",
+      "bytes": 21246,
+      "sha256": "a2911001a8f32728f625ffaf1f6efe520e3ec49325447c4e36d385c153194190",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/ae15348c-c41b-4681-8f82-a179f2a37b59",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "LICENSE",
+      "id": 687032095,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/4c3653b5-0a9c-476e-8921-7d5fa2d77237",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "release-gates.json",
+      "id": 687032100,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/release-gates.json",
+      "bytes": 1046,
+      "sha256": "4d87fcbad8fc6bcca43af07364fa3d5157d268d4bc74ac8389a02748c2fa5305",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/514781b1-1a6e-45fa-b212-22e9d8a18df5",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "id": 687032072,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/RELEASE_PROVENANCE.json",
+      "bytes": 65482,
+      "sha256": "a34882892043a1504e676bed4062302089011719edca909ab3d036e836fab075",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/e3067294-0b6e-4e08-9a7c-b0f6f6902b32",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "id": 687032074,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/ad29756f-a159-44fc-8622-1878d4bc9067",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "id": 687032066,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "0450f296020fed005b8f4903bc022a5bd4668408575c6326e14d6aeacf5a4729",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/eb016567-68ad-4ac4-87f2-1048b98a3e2c",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "id": 687032108,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/standalone-archive-verification.json",
+      "bytes": 6003,
+      "sha256": "ba0168f4d1456fd74a0d5b80008df2f6dbff08ddd359fe1147dd3df1fd533668",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/e13440c4-1e0d-446c-a08a-1307771d3006",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+      "id": 687032071,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+      "bytes": 11675616,
+      "sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/907a46b2-bd74-4493-9fe0-ba874c76274f",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "id": 687032065,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/8e41f55c-4f84-48f5-b443-a32fe55e4e81",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    }
+  ]
+}

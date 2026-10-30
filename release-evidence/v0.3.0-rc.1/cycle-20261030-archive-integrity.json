@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-30T07:35:27.613971+00:00",
+  "archive_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+  "source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+  "archive_member_count": 554,
+  "manifest_hashed_files": 553,
+  "total_uncompressed_bytes": 55451489,
+  "all_manifest_digests_match": true,
+  "exact_manifest_members": true,
+  "ci_source_hash_count": 193,
+  "ci_source_hashes_match_archive": true,
+  "zip_crc_valid": true,
+  "attached_source_license_sbom_notices_and_gate_bytes_match_archive": true,
+  "baseline_integrity": true,
+  "receipt_binds_exact_archive": true,
+  "clean_install_report_actual_summary": [
+    "407 passed, 20 skipped, 3 warnings in 70.02s (0:01:10)"
+  ],
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "media": [
+    {
+      "path": "publication/media/v0.3/desktop-companion.jpg",
+      "bytes": 160189,
+      "sha256": "9b898da12f13da8abc90a9a2d5f68cdefbe1e5cad28a0d65a2c4f3dc7fd6b4f8",
+      "matches_downloaded_archive": true
+    },
+    {
+      "path": "publication/media/v0.3/mobile-companion.jpg",
+      "bytes": 42049,
+      "sha256": "5d6e2d3b91f3d34cbbb4f111507ced693f158a22cead1341caa36f643680c7bc",
+      "matches_downloaded_archive": true
+    }
+  ],
+  "scope": "Independent byte and receipt validation of an already published candidate. Existing clean-install execution is the CI run, not a fresh local execution. No test results or professional review are inferred from digest checks."
+}

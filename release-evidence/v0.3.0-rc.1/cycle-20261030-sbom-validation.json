@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-30T07:35:26.807951+00:00",
+  "valid": true,
+  "artifact": "release/0.3.0-rc.1/SBOM.cdx.json",
+  "sbom_sha256": "663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95",
+  "components": 240,
+  "validator": "jsonschema 4.26.0",
+  "official_schema_revision": "e833d732337dd33aceb45ff1991f896796f1e5e7",
+  "official_schema_sha256": {
+    "https://raw.githubusercontent.com/CycloneDX/specification/e833d732337dd33aceb45ff1991f896796f1e5e7/schema/bom-1.6.schema.json": "18f57f7482593bad9f21b4feed09084640cbeff419d62ad5090c5ceccca5b37d",
+    "https://raw.githubusercontent.com/CycloneDX/specification/e833d732337dd33aceb45ff1991f896796f1e5e7/schema/spdx.schema.json": "c41917196639055e9f9670811bac23ef777732144f3ff5a2f39686f61580dbe6"
+  },
+  "scope": "Formal CycloneDX1.6 JSON schema validation of the exact anonymously downloaded SBOM, not licence clearance or vulnerability assessment"
+}

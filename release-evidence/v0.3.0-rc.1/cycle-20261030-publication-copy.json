@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-10-30T07:36:20.851485+00:00",
+  "scope": "Prepared scoped System Lab source and Hugging Face presentation; not a deployment or Hub upload",
+  "verified_github_release": "v0.3.0-rc.1",
+  "frozen_application_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+  "verified_ci_run": 40803017486,
+  "release_archive_bytes": 11675616,
+  "release_archive_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+  "scoped_site_tests": {
+    "command": [
+      "node",
+      "--test",
+      "tests/airspace-operations.test.mjs"
+    ],
+    "cwd": "work/site-publishing",
+    "exit_code": 0,
+    "stdout": "TAP version 13\n# Subtest: Airspace belongs to the real catalogue and uses an authentic capture card\nok 1 - Airspace belongs to the real catalogue and uses an authentic capture card\n  ---\n  duration_ms: 11.073\n  ...\n# Subtest: 0.3 page uses verified release downloads, frozen source links and real captures\nok 2 - 0.3 page uses verified release downloads, frozen source links and real captures\n  ---\n  duration_ms: 46.7465\n  ...\n# Subtest: Previous release bytes and checksum assets remain unchanged\nok 3 - Previous release bytes and checksum assets remain unchanged\n  ---\n  duration_ms: 68.7938\n  ...\n# Subtest: programme keeps its existing application boundaries and Interval relationship\nok 4 - programme keeps its existing application boundaries and Interval relationship\n  ---\n  duration_ms: 1.9465\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 302.6146\n",
+    "stderr": ""
+  },
+  "root_relative_paths_resolved": [
+    "/",
+    "/#classes",
+    "/about.html",
+    "/airspace-operations/media/v0.3/desktop-companion.jpg",
+    "/airspace-operations/media/v0.3/mobile-companion.jpg",
+    "/airspace-operations/releases/0.3.0-rc.1/RELEASE_PROVENANCE.json",
+    "/airspace-operations/releases/0.3.0-rc.1/SBOM.cdx.json",
+    "/airspace-operations/releases/0.3.0-rc.1/SHA256SUMS.txt",
+    "/airspace-operations/releases/0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+    "/airspace-operations/releases/0.3.0-rc.1/release-gates.json",
+    "/airspace-operations/releases/0.3.0-rc.1/standalone-archive-verification.json",
+    "/assets/airspace-project.css",
+    "/assets/lab.css",
+    "/projects/multiagentic-systems"
+  ],
+  "new_asset_namespace": "/airspace-operations/releases/0.3.0-rc.1/",
+  "original_site_assets_unchanged": true,
+  "current_documentation_links_use_frozen_tag": true,
+  "hf_capture_urls_use_frozen_commit": true,
+  "files": [
+    {
+      "path": "publication/v0.3/site-project.html",
+      "bytes": 13741,
+      "sha256": "48405812d5f844c691badf466cd034d0ad9cff95a3c20946aa1ee01aed66ce6c"
+    },
+    {
+      "path": "publication/v0.3/site-project.css",
+      "bytes": 8231,
+      "sha256": "ad2c5f80782041d796488edb0b93fdfd6656e8f4af6e69024e8493ba8e106fad"
+    },
+    {
+      "path": "publication/v0.3/github-readme.md",
+      "bytes": 8069,
+      "sha256": "a906b774db703d17571626530405d221611b5e16efea864e8d8c13de8016bf73"
+    },
+    {
+      "path": "publication/v0.3/hf-space/index.html",
+      "bytes": 6246,
+      "sha256": "c908bd746c7a0c9355fb2d483e0d245b2f9ba2b1fe5917b705ab1c56885d1562"
+    },
+    {
+      "path": "publication/v0.3/hf-space/styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16"
+    },
+    {
+      "path": "publication/v0.3/hf-space/README.md",
+      "bytes": 1476,
+      "sha256": "43318d6b6fc5026bb5a969925134bbf09890003c34b3ab81acd13f80e316cc9e"
+    },
+    {
+      "path": "publication/v0.3/hf-model-card.md",
+      "bytes": 4168,
+      "sha256": "2917e3a555b590c64d9b1d973d9aa8c84f8c45ac22324849173ac05b408e25a1"
+    },
+    {
+      "path": "publication/v0.3/hf-dataset-card.md",
+      "bytes": 4045,
+      "sha256": "4d9ada79e00bfa312c67e7faecc731b7f960c81d1e3de60a546e679d6fe84d80"
+    },
+    {
+      "path": "publication/v0.3/verify_preparation.py",
+      "bytes": 5033,
+      "sha256": "ccf32c505359b7023869b077eb3a7668529910ecac131bcf51f237fdd1d16bef"
+    },
+    {
+      "path": "work/site-publishing/templates/airspace-operations.html",
+      "bytes": 13741,
+      "sha256": "48405812d5f844c691badf466cd034d0ad9cff95a3c20946aa1ee01aed66ce6c"
+    },
+    {
+      "path": "work/site-publishing/public/projects/airspace-operations.html",
+      "bytes": 13741,
+      "sha256": "48405812d5f844c691badf466cd034d0ad9cff95a3c20946aa1ee01aed66ce6c"
+    },
+    {
+      "path": "work/site-publishing/tests/airspace-operations.test.mjs",
+      "bytes": 6024,
+      "sha256": "46ca4d42b515c1eefd43ed012934f8734417936813ba0c04708526d80aee1d78"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/ci-verification.json",
+      "bytes": 21246,
+      "sha256": "a2911001a8f32728f625ffaf1f6efe520e3ec49325447c4e36d385c153194190"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/release-gates.json",
+      "bytes": 1046,
+      "sha256": "4d87fcbad8fc6bcca43af07364fa3d5157d268d4bc74ac8389a02748c2fa5305"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/RELEASE_PROVENANCE.json",
+      "bytes": 65482,
+      "sha256": "a34882892043a1504e676bed4062302089011719edca909ab3d036e836fab075"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "0450f296020fed005b8f4903bc022a5bd4668408575c6326e14d6aeacf5a4729"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/standalone-archive-verification.json",
+      "bytes": 6003,
+      "sha256": "ba0168f4d1456fd74a0d5b80008df2f6dbff08ddd359fe1147dd3df1fd533668"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+      "bytes": 11675616,
+      "sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e"
+    },
+    {
+      "path": "work/site-publishing/public/airspace-operations/releases/0.3.0-rc.1/THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf"
+    }
+  ],
+  "browser_verified_here": false,
+  "new_model_calls": 0,
+  "new_training": false,
+  "publication_performed_here": false
+}

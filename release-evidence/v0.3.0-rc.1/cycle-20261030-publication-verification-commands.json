@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-10-30T07:35:57.414112+00:00",
+  "actual_executions": [
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "release-evidence/v0.3.0-rc.1/cycle-20261030-verify-public.py"
+      ],
+      "working_directory": ".",
+      "exit_code": 0,
+      "script_sha256": "795ee1214d469415a4c8a59ae071dadee931ccd78d1942217d49a3e8ef9d3c9b",
+      "output": "release-evidence/v0.3.0-rc.1/cycle-20261030-download-command.log.txt",
+      "output_sha256": "f742d9e700733931dcdde24a5a3755e0f85ed649a90aba21b495259542706c27"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "release-evidence/v0.3.0-rc.1/cycle-20261030-verify-sbom.py"
+      ],
+      "working_directory": ".",
+      "exit_code": 0,
+      "script_sha256": "de4248f8b0816ebe9f50e3734f011bb142abfef207a92c6400b8793550785053",
+      "output": "release-evidence/v0.3.0-rc.1/cycle-20261030-sbom-command.log.txt",
+      "output_sha256": "40deea25a318b7f22f1f5bdc4ec9fb532e8c671f7b46b5cd2220feadc0492652"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "release-evidence/v0.3.0-rc.1/cycle-20261030-verify-archive.py"
+      ],
+      "working_directory": ".",
+      "exit_code": 0,
+      "script_sha256": "370ceeb1cd667b3676d96a9e92d7c600c8792ac7c8883fc276d11fdd718c7e65",
+      "output": "release-evidence/v0.3.0-rc.1/cycle-20261030-integrity-command.log.txt",
+      "output_sha256": "cab72262b2a003a9f824cca60a3d7e412886c300c6bd346063c0ae918eeeb663"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "release-evidence/v0.3.0-rc.1/cycle-20261030-verify-media.py"
+      ],
+      "working_directory": ".",
+      "exit_code": 0,
+      "script_sha256": "6a6df7c0aa7b6ef958827888d1d08e22ada418f444e808916287ffd2d78b7951",
+      "output": "release-evidence/v0.3.0-rc.1/cycle-20261030-media-command.log.txt",
+      "output_sha256": "9fa3de44d5ce0ae6a05a73f2e4c24f4b08da332dee6b3d6ef3b66d7ced4bce6f"
+    }
+  ],
+  "notes": "No build, training, model inference or new operational record was created. Downloads were anonymous and frozen release assets were retained unchanged."
+}

@@ -1,34 +1,37 @@
 {
-  "checked_at": "2026-10-29T01:37:49.061240+00:00",
+  "checked_at": "2026-10-30T07:54:13.185364+00:00",
   "release": "0.3.0-rc.1",
-  "state": "Prepared",
+  "state": "Validated source copies and recorded destination evidence",
   "pages": [
     {
       "path": "site-project.html",
       "ids": 12,
-      "links": 36,
+      "links": 45,
       "result": "Parsed; local references checked"
     },
     {
       "path": "hf-space/index.html",
       "ids": 3,
-      "links": 14,
+      "links": 17,
       "result": "Parsed; local references checked"
     }
   ],
   "authored_documents_checked": 5,
   "student_original_digest_matches": true,
   "credential_patterns_found": [],
-  "new_download_links_enabled": false,
+  "new_download_links_enabled": true,
+  "download_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
   "browser_verified": false,
   "application_verification_reported": {
-    "backend_passed": 360,
-    "postgresql_skipped_locally": 19,
+    "clean_archive_backend_passed": 407,
+    "clean_archive_skipped": 20,
+    "postgresql_passed_separately": 19,
     "frontend_passed": 107
   },
   "model_execution_reported": "Actual local replies and confirmed personal task; no new student training",
-  "source_ci_status": "In Progress",
-  "publication_performed": false,
+  "source_ci_status": "Success",
+  "publication_mutations_performed_by_this_check": false,
+  "publication_complete": false,
   "capture_references": [
     {
       "path": "publication\\media\\v0.3\\desktop-companion.jpg",

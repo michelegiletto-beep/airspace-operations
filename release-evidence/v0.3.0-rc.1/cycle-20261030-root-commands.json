@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-30T13:26:59.867328+00:00",
+  "actual_commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_site_publication_v3.py tests/test_release_tools.py -q",
+      "exit_code": 0,
+      "result": "56passed1.98seconds; overlaps the37Site tests, not an additional independent56tests"
+    },
+    {
+      "command": ".venv/Scripts/python.exe publication/v0.3/verify_preparation.py",
+      "exit_code": 0,
+      "result": "Validated source copies and recorded GitHub/Site outcomes; HFpublication_completefalse"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/verify_publication_v2.py --destination hf --output release-evidence/v0.3.0-rc.1/cycle-20261030-hf-prior-artifacts.json",
+      "exit_code": 0,
+      "result": "21/21exact; unchanged priorSpace only"
+    },
+    {
+      "command": "node Sites site-workflow.mjs helper with node --test tests/airspace-operations.test.mjs and official build-site.mjs; credential through hidden stdin",
+      "exit_code": 0,
+      "result": "4scopedtests and fullbuild passed; exact source309b6fac and archive nativeSaved97 then deploysucceeded appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee"
+    }
+  ],
+  "related_commands": "cycle-20261030-publication-verification-commands.json and cycle-20261030-site-verifier-adversarial-addendum.json",
+  "no_tests_invented": true,
+  "no_new_model_calls": true
+}

@@ -1,0 +1,112 @@
+{
+  "release": "0.3.0-rc.1",
+  "release_kind": "Engineering candidate",
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "states_reached": [
+    "Prepared",
+    "Uploaded",
+    "Published",
+    "Independently Retrieved"
+  ],
+  "history": [
+    "publication/history/0.1.0-rc.1.json",
+    "publication/history/0.2.0-rc.1.json"
+  ],
+  "destinations": [
+    {
+      "destination": "GitHub candidate release source",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/v0.3.0-rc.1",
+      "state": "Independently Retrieved",
+      "commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+      "tagged_release": true
+    },
+    {
+      "destination": "GitHub tagged candidate release",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1",
+      "state": "Independently Retrieved",
+      "prior_release": "0.2.0-rc.1",
+      "release": "0.3.0-rc.1",
+      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json"
+    },
+    {
+      "destination": "System Lab project dossier revision",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "state": "Independently Retrieved",
+      "prior_release": "0.2.0-rc.1",
+      "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+      "version": 97,
+      "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+      "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
+      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+      "audience": "public",
+      "ownership": "owner",
+      "checks": {
+        "expected": 37,
+        "http_200": 37,
+        "verified": 37,
+        "exact": 34,
+        "semantic": 3
+      },
+      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json"
+    },
+    {
+      "destination": "Hugging Face model presentation",
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+      "state": "Prepared",
+      "prior_release": "0.2.0-rc.1",
+      "new_upload": false,
+      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+    },
+    {
+      "destination": "Hugging Face dataset presentation",
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+      "state": "Prepared",
+      "prior_release": "0.2.0-rc.1",
+      "new_upload": false,
+      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+    },
+    {
+      "destination": "Hugging Face recorded evaluation Space",
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
+      "state": "Prepared",
+      "prior_release": "0.2.0-rc.1",
+      "new_upload": false,
+      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+    }
+  ],
+  "states_reached_scope": "GitHub0.3 release and System Lab project dossier only. Hugging Face0.3 presentation remains Prepared; original Hub artifacts remain unchanged.",
+  "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
+  "last_checked_at": "2026-10-30T07:52:45.925056+00:00",
+  "release_blockers": [
+    "Hugging Face0.3 presentation needs an authenticated existing write session; prepared files are not uploaded."
+  ],
+  "candidate_ci": {
+    "commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+    "run": 40803017486,
+    "state": "success",
+    "engineering_job": 123215299321,
+    "publication_job": 123216185963
+  },
+  "verified_cycle_improvements": [
+    "Persistent job-wide generation reservation budget across crashes and retries",
+    "Stale-worker cleanup cannot clear a newer active turn",
+    "Actual current local-model mobile task preview, explicit confirmation, database/audit check",
+    "Actual390x844mobile and1280x960desktop checks; no duplicate next-step lists or horizontal page overflow"
+  ],
+  "published_archive": {
+    "bytes": 11675616,
+    "sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+    "source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+    "tag": "v0.3.0-rc.1",
+    "release_id": 427384485,
+    "published_at": "2026-10-29T01:58:58Z"
+  },
+  "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
+  "snapshot_at": "2026-10-30T07:52:45.925056+00:00",
+  "freeze_policy": "Do not replace published tag or assets. Subsequent documentation and presentation changes have separate source/deployment identities."
+}

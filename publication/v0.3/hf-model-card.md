@@ -13,7 +13,7 @@ tags:
 
 This repository contains a small experimental classifier for the literal presence of the English word `shall`. It does not determine whether a legal obligation exists, applies or has been met.
 
-This card is Prepared for the 0.3 application revision. The student weights, original dataset, training run and measured results are unchanged. No new training or improved performance is claimed. Application interaction and animation changes are separate from this model and require their own verification.
+This presentation accompanies the published 0.3 application revision. The student weights, original dataset, training run and measured results are unchanged. No new training or improved performance is claimed. Application interaction and animation changes are separate from this model and require their own verification.
 
 ## Model
 
@@ -43,7 +43,7 @@ Three earlier semantic annotation attempts failed and remain in the lineage. His
 
 The application can display the result as an optional routing signal for review. It must not approve a case, permission, maintenance release, schedule, dispatch or emergency action. No operational prediction model was trained.
 
-Load through `airspace.neural.ExperimentalStudent` with the pinned encoder. There is no hosted model service configured by this card. The [public evidence Space](https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation) displays recorded evidence and performs no live inference. The [application repository](https://github.com/michelegiletto-beep/airspace-operations) provides actual installation and release status. The new 0.3 candidate remains Prepared until its own checks and publication receipts exist.
+Load through `airspace.neural.ExperimentalStudent` with the pinned encoder. There is no hosted model service configured by this card. The [public evidence Space](https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation) displays recorded evidence and performs no live inference. The [application repository](https://github.com/michelegiletto-beep/airspace-operations) provides actual installation and release status. The [0.3 application candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) has its own software verification and public download records. These do not establish model quality or operational acceptance.
 
 Promotion would require qualified human labels, representative evaluation across dates, versions and jurisdictions, appropriate calibration and a demonstrated practical benefit. Another model's agreement is not expert review.
 

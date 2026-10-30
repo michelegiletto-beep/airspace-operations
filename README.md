@@ -2,13 +2,19 @@
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.
 
-Version 0.3.0-rc.1 is in release preparation. Current local verification passed 360 backend tests with 19 PostgreSQL skips and 107 frontend tests. Source CI b02b2c7957a2b512da3461166d106af6debea1ae passed 359 source tests with 20 skips, 19 PostgreSQL tests, actual containers, a running worker and backup restoration. A current mobile-browser local-model reply used one durable reservation and one returned generation; its preview was explicitly confirmed as a personal release task. The final candidate archive and publication still require their separate verification. The [published 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) remains available and unchanged.
+Version [0.3.0-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) is a published engineering candidate. The exact ZIP passed a clean installation and 407 software tests, with 20 skipped. All 19 PostgreSQL checks, actual containers, a running worker, backup/restoration and 107 interface tests passed separately. All nine release assets were anonymously downloaded and matched their published SHA-256 digests. The [previous 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) and [first 0.1 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.1.0-rc.1) remain available with unchanged tags and bytes.
 
 ## Start with a task
 
 Record the operation you intend to carry out. Add the real aircraft, people, location and supporting documents as they become available. The application identifies missing information and keeps draft work separate from reviewed evidence and permissions.
 
-This development revision implements a persistent local-model conversation, saved personal tasks and previews of internal draft actions that require your confirmation. The local model selects guidance and source/step/action identities; displayed guidance comes from a controlled registry and recorded state. Its owned companion animates during normal use, with an animated fallback and a restrained reactive background. Pause and reduced-motion settings take precedence. Actual browser, animated fallback, pause and current mobile task evidence are retained under release-evidence/v0.3.0-rc.1/.
+This revision implements a persistent local-model conversation, saved personal tasks and previews of internal draft actions that require your confirmation. The local model selects guidance and source, step and action identities; displayed guidance comes from a controlled registry and recorded state. Its owned companion animates during normal use, with an animated fallback and a restrained reactive background. Pause and reduced-motion settings take precedence. Actual browser, animated fallback, pause and current mobile task evidence are retained under release-evidence/v0.3.0-rc.1/.
+
+![Desktop application with its contextual companion](publication/media/v0.3/desktop-companion.jpg)
+
+![Mobile application with its contextual companion](publication/media/v0.3/mobile-companion.jpg)
+
+These are actual captures from an isolated software-review workspace. They show no customer operation or flown mission.
 
 The companion does not issue a permission or approve its own work. Animation does not prove that a model has finished or that a flight is ready. A missing local model must remain visibly unavailable. All real workspaces remain usable when language-model generation is unavailable.
 
@@ -29,7 +35,7 @@ Internal review, authority permission, U-space permission, pilot acknowledgement
 
 ## Install on your computer or server
 
-Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The final downloadable archive must include the built interface; no verified 0.3 archive is available at this preparation checkpoint.
+Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The [downloadable archive](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip) includes the built interface. It contains 11,675,616 bytes and has SHA-256 `4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e`. Read the [schema 3 upgrade instructions](docs/upgrading-to-0.3.md) before updating an existing installation.
 
 ```powershell
 uv sync --frozen --extra dev
@@ -65,7 +71,11 @@ The pinned Qwen3-1.7B files occupy approximately 4.08 GB before runtime overhead
 
 ## Evidence and limitations
 
-The new candidate requires its own actual model, browser, software, container and installation results. [Publication status](publication/status.json) and [release evidence](release-evidence/) identify what has actually run. Earlier 0.2 evidence remains labelled with that release, including its container, PostgreSQL and recovery checks. It is not silently reused to certify changed code.
+[Run 40803017486](https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40803017486) verified frozen source `331b6e220fec5254c4c2f167cab3ad86d8905456`. The source suite and exact-archive installation each passed 407 tests, with 20 skipped. The 19 PostgreSQL checks passed in their separate container environment, including concurrent access and workflow isolation; running-worker and backup/restoration checks also passed. The interface suite passed 107 tests and its production build completed. The [release assets](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) include the exact installation receipt, current CI record, provenance, release gates, checksums and SBOM. [Independent download evidence](release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json) records all nine public asset hashes. Earlier 0.2 evidence stays labelled with that release.
+
+Recorded 29 October browser verification used one local Qwen generation and one durable reservation, followed by explicit personal-task confirmation and database/audit checks. Actual mobile and desktop layouts, animation, animated fallback and pause checks are preserved with their source identities. No new student training is claimed.
+
+Hugging Face presentations for 0.3 remain Prepared. The previously published model, dataset and 0.2 evidence Space are unchanged. The current in-app browser is signed out and no usable native-browser session or cached Hub token is available. The System Lab page is published at version97, source `309b6fac69cfbe51278da6d116545cf2916251b7`. All 37 checked resources passed independent retrieval, including unchanged prior releases. The page explicitly identifies the evidence Space as its published 0.2 record. [Publication status](publication/status.json) records each destination separately.
 
 The experimental literal-language student and its source annotation dataset are unchanged. Its 81.82% agreement on 77 unreviewed machine labels remains below the deterministic literal-word baseline's 100%. It is not promoted, and it does not establish legal correctness. No new training, operational prediction or benchmark improvement is claimed.
 

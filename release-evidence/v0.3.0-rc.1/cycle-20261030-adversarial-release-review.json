@@ -1,0 +1,321 @@
+{
+  "reviewed_at": "2026-10-30T07:38:17.827118+00:00",
+  "scope": "Adversarial engineering review of exact published 0.3 candidate assets, public source identity, rights, privacy and internal approval boundaries. This is software review, not domain certification or operational acceptance.",
+  "release": {
+    "id": 427384485,
+    "tag_name": "v0.3.0-rc.1",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-10-29T01:58:58Z",
+    "html_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1",
+    "target_commitish": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+    "tag_sha": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+    "tag_matches_expected": true,
+    "assets": [
+      {
+        "id": 687032115,
+        "name": "ci-verification.json",
+        "size": 21246,
+        "digest": "sha256:a2911001a8f32728f625ffaf1f6efe520e3ec49325447c4e36d385c153194190",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/ci-verification.json"
+      },
+      {
+        "id": 687032095,
+        "name": "LICENSE",
+        "size": 11358,
+        "digest": "sha256:cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/LICENSE"
+      },
+      {
+        "id": 687032100,
+        "name": "release-gates.json",
+        "size": 1046,
+        "digest": "sha256:4d87fcbad8fc6bcca43af07364fa3d5157d268d4bc74ac8389a02748c2fa5305",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/release-gates.json"
+      },
+      {
+        "id": 687032072,
+        "name": "RELEASE_PROVENANCE.json",
+        "size": 65482,
+        "digest": "sha256:a34882892043a1504e676bed4062302089011719edca909ab3d036e836fab075",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/RELEASE_PROVENANCE.json"
+      },
+      {
+        "id": 687032074,
+        "name": "SBOM.cdx.json",
+        "size": 80300,
+        "digest": "sha256:663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/SBOM.cdx.json"
+      },
+      {
+        "id": 687032066,
+        "name": "SHA256SUMS.txt",
+        "size": 112,
+        "digest": "sha256:0450f296020fed005b8f4903bc022a5bd4668408575c6326e14d6aeacf5a4729",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/SHA256SUMS.txt"
+      },
+      {
+        "id": 687032108,
+        "name": "standalone-archive-verification.json",
+        "size": 6003,
+        "digest": "sha256:ba0168f4d1456fd74a0d5b80008df2f6dbff08ddd359fe1147dd3df1fd533668",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/standalone-archive-verification.json"
+      },
+      {
+        "id": 687032071,
+        "name": "System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+        "size": 11675616,
+        "digest": "sha256:4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip"
+      },
+      {
+        "id": 687032065,
+        "name": "THIRD_PARTY_NOTICES.md",
+        "size": 13971,
+        "digest": "sha256:451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+        "browser_download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/THIRD_PARTY_NOTICES.md"
+      }
+    ],
+    "body": "# Release 0.3.0-rc.1\n\nEngineering candidate for self-hosted civilian UAS preparation and decision support. Full original requirements, stable release and operational acceptance remain incomplete.\n\nPrivate local-model conversations now support persistent personal tasks and typed previews for internal draft cases and bounded workflows. An operator must explicitly confirm a proposed action. Current tenant, actor, role, scope and input versions are checked by the server. No aircraft commands, external correspondence, authority decisions or self-approval are added.\n\nThe owned companion animates in normal motion mode, including a genuine animated fallback. Pause and reduced-motion settings take precedence. The interface has a restrained reactive background, clearer guidance and removal of repeated next-step lists. Current browser checks exercised a real local-model reply, a confirmed personal release task and database/audit persistence at actual mobile and desktop widths. These are software-help records, not fictional missions or operator demonstrations.\n\nGeneration reservations are durable across retries and crashes. Uncertain interrupted work consumes its reservation; missing historical accounting fails closed. Stale workers cannot clear a newer worker's active conversation turn. Reservations and proven returned generations are recorded separately. No new student training or model-quality advantage is claimed.\n\nSchema 3 rejects the frozen 0.2 server before it can open new private companion data. Stop every old process before migration and preserve a consistent database, objects and audit-key backup. Mixed-version rolling deployment and removal of compatibility markers are unsafe. Read docs/upgrading-to-0.3.md.\n\nCommands, failures, model lineage, source and rights review, browser evidence, current tests and independently verified archive results accompany this candidate. Optional pinned pretrained weights are installed separately. A new operational workspace remains empty. National validation, lawful live feeds, approved operator procedures and accountable review are still required. The unchanged experimental student remains below its deterministic baseline and is not promoted.\n\n[Previous 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) and [first 0.1 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.1.0-rc.1) retain their original tags and downloadable bytes.\n\n![Companion workspace](https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/331b6e220fec5254c4c2f167cab3ad86d8905456/publication/media/v0.3/desktop-companion.jpg)\n\nSource commit: `331b6e220fec5254c4c2f167cab3ad86d8905456`. Download: `System-Lab-Airspace-Operations-0.3.0-rc.1.zip` (11,675,616 bytes). SHA-256: `4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e`.\n\nEngineering checks: 7 passed. Clean-install software suite: 407 passed, 20 skipped. The original acceptance baseline remains partial; stable release and operational acceptance remain false.\n\nPrevious candidates: [0.2](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1), [0.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.1.0-rc.1).\n"
+  },
+  "archive_review": {
+    "checked_at": "2026-10-30T07:34:30.779175+00:00",
+    "archive_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+    "source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+    "private_path_findings": [],
+    "symlink_findings": [],
+    "strict_secret_pattern_findings": [],
+    "owned_asset_checks": [
+      {
+        "path": "frontend/public/vendor/systemlab-companion/mascot-renderer.mjs",
+        "sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b",
+        "expected_sha256": "344a519b043bd5a65921a0597dbc1ba1addebe56ea5ed2b8e24fe0d945a0e94b",
+        "matches": true
+      },
+      {
+        "path": "frontend/public/vendor/systemlab-companion/motion-core.mjs",
+        "sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb",
+        "expected_sha256": "4f5c29fbe37c7479f157adbe72913e526e60dfa9b9dad9aad35bf9ce26ee5acb",
+        "matches": true
+      },
+      {
+        "path": "frontend/public/vendor/systemlab-companion/catalog.mjs",
+        "sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c",
+        "expected_sha256": "6976c483c936d584c9f053562dd8f1b6fd2b447402bb07780485cb45199a747c",
+        "matches": true
+      },
+      {
+        "path": "frontend/public/vendor/systemlab-companion/assets/originals/mascotte_01_indaco.png",
+        "sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a",
+        "expected_sha256": "11c63444113222a713bfb08bae0852fee10c95062e18697d645d129c199ffb8a",
+        "matches": true
+      },
+      {
+        "path": "frontend/public/vendor/systemlab-companion/assets/originals/mascotte_06_coral_compact.png",
+        "sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284",
+        "expected_sha256": "ab6a070728cb196e0d039508b5d9e2b8228b9fc76f4664308322b351485cb284",
+        "matches": true
+      }
+    ],
+    "exact_public_source_checks": [
+      {
+        "path": "backend/airspace/assistant.py",
+        "archive_sha256": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+        "local_sha256": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+        "public_sha256": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+        "matches": true
+      },
+      {
+        "path": "backend/airspace/companion_api.py",
+        "archive_sha256": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+        "local_sha256": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+        "public_sha256": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f",
+        "matches": true
+      },
+      {
+        "path": "backend/airspace/worker.py",
+        "archive_sha256": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+        "local_sha256": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+        "public_sha256": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+        "matches": true
+      },
+      {
+        "path": "backend/airspace/storage.py",
+        "archive_sha256": "e1e9367a3863ab4fac0174265a4e757329ad90ce7a8097f1e810a7a55832f6ea",
+        "local_sha256": "e1e9367a3863ab4fac0174265a4e757329ad90ce7a8097f1e810a7a55832f6ea",
+        "public_sha256": "e1e9367a3863ab4fac0174265a4e757329ad90ce7a8097f1e810a7a55832f6ea",
+        "matches": true
+      },
+      {
+        "path": "backend/airspace/api.py",
+        "archive_sha256": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+        "local_sha256": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+        "public_sha256": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+        "matches": true
+      },
+      {
+        "path": "scripts/publish_candidate.py",
+        "archive_sha256": "2b3f99ad1727169029e3ccbda1dfc79b36b68e8e38565511f323fc04f08bb835",
+        "local_sha256": "2b3f99ad1727169029e3ccbda1dfc79b36b68e8e38565511f323fc04f08bb835",
+        "public_sha256": "2b3f99ad1727169029e3ccbda1dfc79b36b68e8e38565511f323fc04f08bb835",
+        "matches": true
+      },
+      {
+        "path": ".github/workflows/engineering.yml",
+        "archive_sha256": "8a766200d1f00808fb08b2bcf314471843106128b8fae842748ba2ea61b7de56",
+        "local_sha256": "8a766200d1f00808fb08b2bcf314471843106128b8fae842748ba2ea61b7de56",
+        "public_sha256": "8a766200d1f00808fb08b2bcf314471843106128b8fae842748ba2ea61b7de56",
+        "matches": true
+      },
+      {
+        "path": "SPECIFICATION.md",
+        "archive_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+        "local_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+        "public_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+        "matches": true
+      }
+    ],
+    "owned_rights": {
+      "owner": "Michele Giletto",
+      "rights": "Reserved proprietary rights; excluded from the Apache-2.0 code licence",
+      "authorization": "The owner explicitly authorised reuse of the existing in-house animation technology and owned mascot assets for Airspace Operations in this task. No general sublicence is granted."
+    },
+    "reserved_license_present": true,
+    "reserved_license_sha256": "477f6cc13ff19fcfc62b9598c138a50816058eaa7e84b31ee62dbe997ce9e752",
+    "original_spec_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+    "model_artifact_sha256": [
+      {
+        "path": "models/runs/explicit-shall-20261027-4/student.safetensors",
+        "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c"
+      }
+    ],
+    "archive_file_count": 554,
+    "private_path_scan_scope": "All ZIP members; no values or credentials emitted",
+    "actual_model_calls": 0,
+    "operational_acceptance": false
+  },
+  "public_source_tree_review": {
+    "truncated": false,
+    "entry_count": 606,
+    "blob_count": 541,
+    "private_path_or_symlink_findings": []
+  },
+  "previous_release_checks": {
+    "checked_at": "2026-10-30T07:35:23.216448+00:00",
+    "anonymous_downloads": [
+      {
+        "version": "0.1.0-rc.1",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.1.0-rc.1/System-Lab-Airspace-Operations-0.1.0-rc.1.zip",
+        "bytes": 2090705,
+        "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+        "expected_sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+        "matches": true
+      },
+      {
+        "version": "0.2.0-rc.1",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.2.0-rc.1/System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+        "bytes": 10122929,
+        "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+        "expected_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+        "matches": true
+      }
+    ],
+    "success": true
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_companion_boundaries.py tests/test_companion_budget.py tests/test_schema_compatibility.py -q",
+    "exit_code": 0,
+    "result": "35 passed in 18.95s",
+    "scope": "Isolated software fixtures. No real model service, live operational records, publication writes or authority actions."
+  },
+  "reviewed_controls": [
+    "Companion data access binds organisation, created_by and owner_actor_id; generic record/history and shared workflow context exclude private kinds. Generic jobs filter companion payloads to the current actor, and cannot create/control companion jobs.",
+    "Confirmation reloads the live accountable actor, locks the organisation, requires conversation and action versions, rejects an already decided preview, validates candidate kind/label/checksum/payload, rechecks current context snapshot, role and bounded capability admission, then atomically writes only a personal task, Draft case or bounded internal workflow.",
+    "Generation reservations are committed before service entry, bound to current job/lease/actor/scope/context, and never refunded on uncertain interruption. Exhausted or malformed historical accounting fails closed. Stale cleanup requires exact terminal job version and current active message.",
+    "Schema 3 blocks the actual frozen 0.2 startup before private domain queries. This is a startup gate; documentation correctly prohibits mixed-version rolling upgrades and removal of compatibility markers.",
+    "Publisher requires exact repository/event/ref/source/current CI identity, source drift checks, seven current engineering gates, current successful container proof, exact archive checksums/manifest, baseline integrity, private-path/secret controls, owned rights and a successful installation receipt bound to the archive.",
+    "Repository contents write is confined to the publisher job; the ephemeral token is passed only to proof retrieval and final publication steps. Existing tags/releases are rejected; exclusive tag creation and draft asset digest verification precede visibility. Failed tags/drafts are retained rather than overwritten.",
+    "Published release copy explicitly retains engineering-candidate, partial-original-baseline, external access/national review, unpromoted student and no-operational-acceptance boundaries."
+  ],
+  "resolved_documentation_findings": [
+    {
+      "severity": "Low",
+      "finding": "The living capability matrix retained obsolete SQL-dialect-only and unexecuted-PostgreSQL descriptions after actual CI verification. Frozen release text was preserved.",
+      "resolution": "Updated exactly three living entries to cite Actions40803017486, isolated PostgreSQL/worker/restoration evidence and separate unachieved production-scale assurance. Full original acceptance remains Not Implemented; stable_release remains false.",
+      "changes": [
+        {
+          "capability": "PostgreSQL/PostGIS/pgvector deployment",
+          "before": {
+            "capability": "PostgreSQL/PostGIS/pgvector deployment",
+            "status": "Implemented",
+            "implementation": "compose.yaml;deploy/database.Dockerfile;migrations",
+            "evidence": "SQL dialect generation only",
+            "limitation": "Docker/PostgreSQL unavailable here; extensions and production queries not executed"
+          },
+          "after": {
+            "capability": "PostgreSQL/PostGIS/pgvector deployment",
+            "status": "Verified",
+            "implementation": "compose.yaml;deploy/database.Dockerfile;migrations",
+            "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json; GitHub Actions 40803017486; tests/test_postgres_integration.py;tests/test_postgres_coordination.py",
+            "limitation": "Verified in isolated GitHub Actions containers, including extensions, 19 PostgreSQL tests, a running worker/API job and pg_dump/pg_restore. Operator production deployment and operational acceptance remain incomplete."
+          }
+        },
+        {
+          "capability": "Transactional schedule reservation and cancellation",
+          "before": {
+            "capability": "Transactional schedule reservation and cancellation",
+            "status": "Verified",
+            "implementation": "planning.py",
+            "evidence": "tests/test_planning.py",
+            "limitation": "SQLite concurrency tested; PostgreSQL must be separately verified"
+          },
+          "after": {
+            "capability": "Transactional schedule reservation and cancellation",
+            "status": "Verified",
+            "implementation": "planning.py",
+            "evidence": "tests/test_planning.py;tests/test_postgres_coordination.py; GitHub Actions 40803017486",
+            "limitation": "SQLite and isolated PostgreSQL concurrency checks passed. This evidence does not establish production-scale reliability or operational acceptance."
+          }
+        },
+        {
+          "capability": "Container build, restoration and resilience at production scale",
+          "before": {
+            "capability": "Container build, restoration and resilience at production scale",
+            "status": "Requires External Access",
+            "implementation": "Dockerfile;compose.yaml;recovery runbook",
+            "evidence": "release-evidence/release-gates.json",
+            "limitation": "No Docker/PostgreSQL runtime here; no measured production SLO or external pentest"
+          },
+          "after": {
+            "capability": "Container build, restoration and resilience at production scale",
+            "status": "Requires External Access",
+            "implementation": "Dockerfile;compose.yaml;recovery runbook",
+            "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json; GitHub Actions 40803017486; deploy/compose.ci.yaml",
+            "limitation": "Actual isolated container build, worker/API operation and PostgreSQL backup/restoration passed. Production-scale resilience, deployment-specific SLO measurements and an external penetration test remain incomplete."
+          }
+        }
+      ]
+    }
+  ],
+  "remaining_limitations": [
+    "A secret-pattern/path scan is bounded detection and is not proof that every possible secret is absent. This review does not replace an external penetration test.",
+    "Formal SBOM schema validation, every current asset digest, archive member manifest consistency and clean-install/CI receipt binding are recorded separately by release verification.",
+    "Frozen source and ZIP retain pre-publication assembly status and conservative capability descriptions. The living post-publication documentation is a separate later source change; published bytes must not be replaced to update prose.",
+    "Full original requirements, qualified national legal validation, real provider access, production reliability and operational acceptance remain incomplete."
+  ],
+  "conclusion": "No unresolved critical security, tenant-isolation or internal-confirmation bypass was identified in the reviewed candidate. Exact-byte, rights and focused privacy/budget/schema checks passed within the recorded scope.",
+  "critical_findings": [],
+  "actual_model_calls": 0,
+  "new_training": false,
+  "publication_mutations": false,
+  "frozen_archive_modified": false,
+  "operational_acceptance": false,
+  "commands_actually_executed": [
+    ".venv/Scripts/python.exe -m pytest tests/test_companion_boundaries.py tests/test_companion_budget.py tests/test_schema_compatibility.py -q",
+    "PowerShell Python here-string: anonymous GitHub release/ref metadata for 0.1,0.2,0.3 and local original SPECIFICATION SHA-256",
+    "PowerShell Python here-string: complete 554-member ZIP private-path, symlink and strict secret-pattern scan; five reserved-asset hashes; eight exact public/local/archive source checks",
+    "PowerShell Python here-string: anonymous recursive GitHub source tree inspection,606entries/541blobs,not truncated",
+    "PowerShell Python here-string: stream both old public ZIPs through SHA-256;2,090,705 and10,122,929bytes matched frozen history",
+    "PowerShell Python here-string: update and validate exactly three living capability-matrix entries; preserve full-original-acceptance and stable-release boundaries"
+  ]
+}

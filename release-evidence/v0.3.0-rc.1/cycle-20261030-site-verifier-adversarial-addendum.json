@@ -1,0 +1,126 @@
+{
+  "recorded_at": "2026-10-30T07:50:39.394882+00:00",
+  "addendum_to": "cycle-20261030-adversarial-release-review.json",
+  "scope": "Review and repair of the newly added anonymous Site publication verifier. No application, archived candidate, tag, release asset, Site deployment or operational state was modified by this review.",
+  "historical_receipts_preserved": [
+    {
+      "path": "cycle-20261030-site-public-verification.json",
+      "success": false,
+      "reason": "Actual first verification detected the observed per-request Cloudflare ray query difference; no failed gate was relabelled as a pass."
+    },
+    {
+      "path": "cycle-20261030-site-public-verification-final.json",
+      "success": true,
+      "version_number": 96,
+      "reason": "Original version96 result is retained unchanged as its own earlier narrower check."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "Medium",
+      "finding": "The initial verifier accepted source link and image subsets. Stable additional empty links, tracking images or scripts could leave extracted text unchanged and pass the semantic check. This was a verifier blind spot, not an observed compromise of the public page.",
+      "resolution": "Exact link/image set equality; separate exact script/style elements including attributes, order and text; exact authored HTML bytes after removal of at most one complete observed Cloudflare script. Additional hidden markup and event attributes also fail."
+    },
+    {
+      "severity": "Low",
+      "finding": "HEAD identity alone did not reject tracked or untracked public files changed after the deployed commit. A real local draft difference was observed while the owner prepared Site97.",
+      "resolution": "Require the expected Git HEAD and a clean public/.openai/hosting.json source scope before building verification targets. Dirty files are preserved and verification stops; no reset or deletion is used."
+    },
+    {
+      "severity": "Low",
+      "finding": "The inherited r/t diagnostic normalizer admitted arbitrary bounded parameter contents; the newly observed script exception must not hide inserted active code.",
+      "resolution": "Require exactly one parameter record, a16hexadecimal request ID, strict-base64 decoded decimal timestamp, and the observed fixed ray literal matching the request ID. The only removable script must match the complete recorded script body, with no added attributes, changed code, inconsistent ray, malformed timestamp or duplicates. Arbitrary URL queries remain untouched."
+    }
+  ],
+  "actual_pre_hardening_site_comparison": {
+    "actual_anonymous_comparison": [
+      {
+        "path": "/",
+        "links_equal": true,
+        "images_equal": true,
+        "extra_links": [],
+        "extra_images": []
+      },
+      {
+        "path": "/projects/airspace-operations",
+        "links_equal": true,
+        "images_equal": true,
+        "extra_links": [],
+        "extra_images": []
+      },
+      {
+        "path": "/projects/multiagentic-systems",
+        "links_equal": true,
+        "images_equal": true,
+        "extra_links": [],
+        "extra_images": []
+      }
+    ]
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_site_publication_v3.py -q --junitxml=release-evidence/v0.3.0-rc.1/cycle-20261030-site-verifier-hardened-tests.xml",
+    "exit_code": 0,
+    "passed": 37,
+    "seconds": 1.55,
+    "xml_counts": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "37",
+      "time": "1.321",
+      "timestamp": "2026-10-30T08:48:26.874346+01:00",
+      "hostname": "DESKTOP-HJ26JJM"
+    },
+    "negative_scope": [
+      "Path traversal/query/fragment boundaries",
+      "Bounded exact binary expectations",
+      "Anonymous no-cookie/no-proxy/no-auth opener",
+      "Missing source/download and unsupported text changes",
+      "Extra empty links, images, inline/external scripts and styles",
+      "Unchanged extracted text with hidden markup or event attributes",
+      "Altered Cloudflare code, attributes, ray, duplicate script or timestamp",
+      "Exact existing script/style contents and order",
+      "Real Git tracked changes, untracked public files and wrong deployed commit; files remain preserved"
+    ],
+    "network_calls_in_tests": 0,
+    "model_calls_in_tests": 0
+  },
+  "actual_public_verification": {
+    "command": ".venv/Scripts/python.exe scripts/verify_publication_v3.py --version-number 97 --source-commit 309b6fac69cfbe51278da6d116545cf2916251b7 --deployment-id appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee --output release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json",
+    "exit_code": 0,
+    "receipt": "cycle-20261030-site97-hardened-public-verification.json",
+    "summary": {
+      "expected": 37,
+      "http_200": 37,
+      "verified": 37,
+      "exact": 34,
+      "semantic": 3
+    },
+    "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+    "version_number": 97,
+    "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
+    "anonymous": true,
+    "proxies_used": false,
+    "remote_mutations_performed": false,
+    "raw_html_hash_match_claimed": false,
+    "authored_html_exact_after_fixed_observed_injection_removal": true,
+    "script_style_elements_exact_after_fixed_observed_injection_removal": true
+  },
+  "source_sha256": {
+    "scripts/verify_publication_v3.py": "c6844bc39cef935252797b72e2b0f22424c7ccb3a088270669dfed44fcfd3e4e",
+    "tests/test_site_publication_v3.py": "efe5f22b011554beecb11cdd2a8744b9db2e27532015823768456d4aef53b114",
+    "scripts/verify_publication_v2.py": "f4674f6efb1efb19acbc4212b776dc97c52cf0b31b63128b489428eaf8d34c3a"
+  },
+  "limitations": [
+    "HTTP source identity is checked against the owned deployed checkout. This does not establish browser-engine safety or audit the external Cloudflare script fetched by the hosting platform.",
+    "Raw HTML includes per-request hosting bytes and its raw hashes deliberately differ. Exact authored HTML comparison is explicitly conditional on removal of one precisely observed script; any other markup or active-content change fails.",
+    "Deployment identity is supplied from the actual owner deployment workflow and checked against the local clean source commit; anonymous HTTP independently verifies served resources rather than the hosting control-plane identity.",
+    "No aviation, domain, operational acceptance, comprehensive European coverage or model reliability claim follows from these publication checks."
+  ],
+  "conclusion": "The observed Cloudflare exception remains narrowly constrained. Repaired verifier negative tests and actual Site97 anonymous verification passed. No unresolved material bypass was identified in this reviewed publication path.",
+  "actual_model_calls": 0,
+  "publication_mutations": false,
+  "frozen_archive_modified": false,
+  "operational_acceptance": false
+}

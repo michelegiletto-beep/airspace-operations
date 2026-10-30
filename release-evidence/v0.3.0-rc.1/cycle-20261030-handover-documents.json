@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-30T07:40:02.439233+00:00",
+  "scope": "Post-release documentation only; frozen tag and assets unchanged",
+  "sources": [
+    "release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json",
+    "release/0.3.0-rc.1/standalone-archive-verification.json",
+    "release/0.3.0-rc.1/release-gates.json"
+  ],
+  "current_source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+  "current_release": "v0.3.0-rc.1",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9569,
+      "sha256": "f1392ce367ca1d25face6e6c06c58d32774fa835b0f4de998f89ebe35798a22b"
+    },
+    {
+      "path": "HANDOVER.md",
+      "bytes": 6020,
+      "sha256": "6a074d78303a05efbd2a2d823b0d466f0746fb8d612eedf6692e069454339df4"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2901,
+      "sha256": "25e332a8e7cae3332486182d3ea25988793c6bf1310b8e0144f7494fc5a1d8cd"
+    }
+  ],
+  "content_checks": "Release source, exact ZIP SHA, actual test counts and destination separation checked; technical installation commands retained",
+  "hugging_face_revision_published": false,
+  "system_lab_new_deployment_claimed": false,
+  "new_tests_or_model_calls": 0,
+  "full_original_acceptance": false
+}

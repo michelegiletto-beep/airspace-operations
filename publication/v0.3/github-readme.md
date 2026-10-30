@@ -2,7 +2,7 @@
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.
 
-Version 0.3.0-rc.1 is Prepared. Local checks have recorded 360 backend passes with 19 PostgreSQL tests skipped and 107 interface passes. Actual local-model replies, an explicitly confirmed personal task and API-restart persistence have been recorded. Source CI, the exact release archive and public retrieval remain pending. The [published 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) remains available and unchanged.
+Version [0.3.0-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) is a published engineering candidate. Its exact ZIP passed a clean installation and 407 software tests, with 20 skipped. Nineteen PostgreSQL checks, actual containers, a running worker, restoration and 107 interface tests passed separately. All nine public release assets were independently retrieved and SHA-256 matched. Actual local-model replies, an explicitly confirmed personal task and API-restart persistence are recorded. The [published 0.2 candidate](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1) remains available and unchanged.
 
 ## Start with a task
 
@@ -35,7 +35,7 @@ Internal review, authority permission, U-space permission, pilot acknowledgement
 
 ## Install on your computer or server
 
-Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The final downloadable archive must include the built interface; no verified 0.3 archive is available at this preparation checkpoint.
+Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The [downloadable archive](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip) includes the built interface. Its 11,675,616 bytes have SHA-256 `4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e`. Read the [schema 3 upgrade instructions](docs/upgrading-to-0.3.md) before updating an existing installation.
 
 ```powershell
 uv sync --frozen --extra dev
@@ -71,7 +71,7 @@ The pinned Qwen3-1.7B files occupy approximately 4.08 GB before runtime overhead
 
 ## Evidence and limitations
 
-The current local checkpoint records 360 backend passes, 19 PostgreSQL skips and 107 interface passes. These counts do not substitute for container, PostgreSQL or exact-archive verification. Source CI for commit `b02b2c7957a2b512da3461166d106af6debea1ae` is in progress at this preparation checkpoint. [Publication status](publication/v0.3/status.json) and [release evidence](release-evidence/) identify what has actually run. Earlier 0.2 evidence remains labelled with that release, including its container, PostgreSQL and recovery checks. It is not silently reused to certify changed code.
+[Run 40803017486](https://github.com/michelegiletto-beep/airspace-operations/actions/runs/40803017486) verified frozen source `331b6e220fec5254c4c2f167cab3ad86d8905456`. The source suite and exact-archive installation each passed 407 tests, with 20 skipped; all 19 PostgreSQL checks passed in their separate deployment environment. Actual container, running-worker and backup/restoration checks passed. The interface suite passed 107 tests and its production build completed. [Release assets](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) include the exact installation receipt, CI record, provenance, release gates, checksums and SBOM. Earlier 0.2 evidence remains labelled with that release.
 
 The experimental literal-language student and its source annotation dataset are unchanged. Its 81.82% agreement on 77 unreviewed machine labels remains below the deterministic literal-word baseline's 100%. It is not promoted, and it does not establish legal correctness. No new training, operational prediction or benchmark improvement is claimed.
 

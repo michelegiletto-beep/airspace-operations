@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-30T07:52:45.925056+00:00",
+  "current_iab": "Signed out; Log In and Sign Up visible on the existing model repository",
+  "native_browsers": "No Chrome, Edge or Firefox window/session returned by current inventory",
+  "supported_hub_token_cache_present": false,
+  "explicit_hub_environment_token_present": false,
+  "new_token_created": false,
+  "new_upload": false,
+  "prepared_sources": [
+    "publication/v0.3/hf-model-card.md",
+    "publication/v0.3/hf-dataset-card.md",
+    "publication/v0.3/hf-space"
+  ],
+  "prior_space_artifacts_retrieved": 21,
+  "prior_space_artifacts_exact": 21,
+  "prior_revision_preserved": true,
+  "blocker": "An authenticated existing Hugging Face write session is required to publish the prepared presentation. No credential values were logged in this check.",
+  "required_user_action": "Sign in to the existing Magic51 Hugging Face account through a supported browser or supply an approved existing Hub credential through the normal secret configuration; do not paste credentials into chat."
+}

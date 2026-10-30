@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-10-30T13:26:59.867328+00:00",
+  "source": "Actual CUA browser observations30October2026; no synthetic image or responsive mockup",
+  "system_lab": {
+    "version": 97,
+    "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+    "desktop": {
+      "inner_width": 1280,
+      "inner_height": 720,
+      "page_width": 1265
+    },
+    "mobile": {
+      "inner_width": 390,
+      "inner_height": 844,
+      "page_width": 375
+    },
+    "console_warnings_errors": 0,
+    "published_release_visible": true,
+    "old_hf_record_clearly_labelled": true,
+    "both_real_screenshot_assets_loaded": true,
+    "viewport_override_reset": true
+  },
+  "application": {
+    "version": "0.3.0-rc.1",
+    "actual_personal_task_completed": true,
+    "completed_task_version": 2,
+    "new_operational_records": 0,
+    "new_model_calls": 0,
+    "user_pause_preference_preserved": true,
+    "api_database_audit_receipt": "cycle-20261030-completed-task.json"
+  },
+  "captures": [
+    {
+      "path": "publication/qa/v0.3/system-lab-public-v97-desktop.png",
+      "bytes": 68070,
+      "sha256": "1fa4e56f8dc78ba4bf5768951953e2c6a04227cdf9132316ca139d9919e04c55"
+    },
+    {
+      "path": "publication/qa/v0.3/system-lab-public-v97-mobile.png",
+      "bytes": 6920,
+      "sha256": "a57ddbf0ee463f6c956b1b494e814164e17f1c0838c4e66ce549074abe90f856"
+    }
+  ]
+}

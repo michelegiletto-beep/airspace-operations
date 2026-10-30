@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-30T07:35:19.179332+00:00",
+  "scope": "Read-only API and database verification after starting the existing private schema-3 preview on30October2026. The model output and explicit task confirmation were originally recorded29October; no new model generation or task creation occurred in this check.",
+  "version": "0.3.0-rc.1",
+  "rule_version": "companion/1.2",
+  "request": "Remember to review the release verification evidence before publishing version 0.3.",
+  "reply_kind": "local_llm",
+  "reply_text": "Review the personal task preview and confirm it only if it matches your request.\n\nReview the personal task text and confirm it only if it matches your request.\n\nUse the task list to track the personal task. Its state does not change an operation.",
+  "actual_returned_generations": 1,
+  "durable_reservation_count": 1,
+  "declared_max_model_calls": 2,
+  "model": {
+    "attempts": [
+      {
+        "mode": "local_causal",
+        "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "generative_model_used": true,
+        "hosted_provider": false,
+        "input_tokens": 579,
+        "output_tokens": 45,
+        "seconds": 31.75423059996683,
+        "model_load_seconds": 80.83058429998346,
+        "prompt_checksum": "117d3ae602f43d81f08eba284df438c6946d047bb09d10e2da2c2e8e25e0ebcd",
+        "response_checksum": "9cb9e8eb4d1e5e3505731f1f0e2d6f8daf35bee94cc73c224b4decfd4f87ede6",
+        "remote_code": false,
+        "thinking_output_requested": false,
+        "generation_reservation_id": "5674161e-ac8a-4c7f-be05-122971039f2a"
+      }
+    ],
+    "model_calls": 1,
+    "generation_budget": {
+      "version": "companion-generation-budget/1.0",
+      "max_model_calls": 2,
+      "reserved_calls": 1,
+      "reservation_ids": [
+        "5674161e-ac8a-4c7f-be05-122971039f2a"
+      ],
+      "accounting": "Reservations survive retries and may include generation whose outcome was not recorded. They are not a count of proven model executions."
+    },
+    "failure_type": null,
+    "status": {
+      "state": "Ready",
+      "mode": "local_causal",
+      "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "message": "A local reply passed the advisory output and reference checks.",
+      "hosted_provider": false,
+      "generative_model_used": true
+    }
+  },
+  "private_api_database_message_count": 2,
+  "explicit_browser_confirmation": true,
+  "saved_task_status": "Open",
+  "active_job": false,
+  "audit_valid": true,
+  "operational_records_created": 0,
+  "new_training": false,
+  "hosted_provider": false,
+  "source_sha256": {
+    "backend/airspace/assistant.py": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9",
+    "backend/airspace/worker.py": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5",
+    "frontend/dist/assets/index-Dcz7gSOv.js": "e645d3f4ec86e2d87ca913bd9598bf49947075664a898defadce0f9bb90dde6a"
+  },
+  "new_model_calls": 0
+}

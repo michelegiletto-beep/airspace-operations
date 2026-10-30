@@ -1,0 +1,98 @@
+{
+  "cycle_id": "2026-10-29T011156Z-companion-budget",
+  "started_at": "2026-10-29T01:11:56.389Z",
+  "checkpoint_at": "2026-10-29T01:56:07.361884+00:00",
+  "state": "Completed bounded engineering run; remote candidate publication verification continues",
+  "version": "0.3.0-rc.1",
+  "requirements": [
+    "ASO3-001",
+    "ASO3-003",
+    "ASO3-004",
+    "ASO3-005",
+    "ASO3-006",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "original_baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "original_acceptance_complete": false,
+  "implemented": [
+    "Durable job-wide generation reservations survive retries, crashes and Store restart; uncertain work is not refunded",
+    "Stale workers cannot clear a newer active conversation turn",
+    "Removed exact duplicated next-step lists while retaining reply text, citations and safety meaning; new budget states have explicit UI handling",
+    "Current local-model request through actual mobile browser, explicit task preview/confirmation, persisted Open task and valid database audit",
+    "Actual mobile390x844 and desktop1280x960 checks, unsent request survived navigation and reload",
+    "Improved publication drafts and scoped System Lab source with real current screenshots and verified old release history",
+    "Gated repository-scoped CI publisher with exact source/current checks, private-path/secret/rights controls, clean installation, draft asset digest checks and old-tag protection",
+    "Reproduced actual editable-install metadata failure and fixed narrow ignore/packaging rules without weakening real-source drift checks"
+  ],
+  "verification": {
+    "application_local_backend": {
+      "passed": 360,
+      "skipped": 19,
+      "source_scope": "Application code before added publication-helper tests; frozen backend/frontend unchanged"
+    },
+    "frontend_passed": 107,
+    "publication_and_release_focused_passed": 66,
+    "actual_model_returned_calls": 1,
+    "durable_model_reservations": 1,
+    "new_training": false,
+    "prior_release_public_recheck": {
+      "github": 9,
+      "site_exact": 23,
+      "site_semantic": 3,
+      "hugging_face": 21,
+      "success": true
+    },
+    "source_ci_c942": {
+      "run": 40802205476,
+      "engineering_job": "success",
+      "source_passed": 405,
+      "source_skipped": 20,
+      "postgresql_passed": 19,
+      "restoration_audit_valid": true,
+      "publication_job": "failed before package/tag due generated editable metadata; negative log retained"
+    }
+  },
+  "latest_source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+  "latest_release_branch": "release/0.3.0-rc.1",
+  "latest_ci_run": 40803017486,
+  "latest_ci_status": "Engineering dependency completed successfully; publication job is running current software/dependency gates at01:56:26UTC",
+  "new_release_published_claimed": false,
+  "system_lab": {
+    "live_version": 95,
+    "changed_checkout": "work/site-publishing",
+    "state": "Prepared source;4 scoped tests passed; no build/push/deployment",
+    "old_release_bytes_preserved": true
+  },
+  "hugging_face": {
+    "state": "Prepared presentation; no new upload",
+    "current_published_artifacts_unchanged": true,
+    "access_note": "No usable noninteractive Hub credential found in supported cache/Git helper; existing minimized Firefox session was not authenticated for publication during this cycle. Do not create new credentials without required approval."
+  },
+  "evidence": [
+    "companion-durable-budget-verification-2026-10-29.json",
+    "cycle-20261029-lineage-review.json",
+    "cycle-20261029-source-review.json",
+    "cycle-20261029-actual-companion.json",
+    "cycle-20261029-browser-verification.json",
+    "cycle-20261029-ci-publication-review.json",
+    "ci-20261029-release-engineering-success.log.txt",
+    "ci-publication-attempt-1.log.txt",
+    "editable-install-source-boundary-20261029.json",
+    "site-source-integration.json"
+  ],
+  "remaining": [
+    "Inspect remote publication run before reporting any tag/release; preserve a failure/draft instead of overwriting it",
+    "Perform formal SBOM validation and anonymous release download/media retrieval; validate exact archive source and checksums",
+    "Finish final System Lab source build, scoped checks and publication only after archive/rights/security gates; update current links to verified source/tag rather than stale main",
+    "Verify existing Hugging Face account write access and publish prepared cards/Space without changing original weights or dataset",
+    "Reduce semantic overlap between trusted guidance paragraphs and repeated task title/description in a subsequent focused UI increment"
+  ],
+  "retrospective": "Job-wide crash accounting and stale-lease cleanup required server-side state, not prompt changes. A real mobile browser exposed the ineffective IAB viewport override. The first real publisher failed on generated setuptools metadata despite passing isolated contract tests; actual reproduction and narrow exclusions repaired the integration boundary while preserving source drift enforcement. Publication remains gated rather than inferred from a source upload.",
+  "next_bounded_prompt": "First inspect GitHub Actions40803017486 on331b6e220fec5254c4c2f167cab3ad86d8905456 and release/0.3.0-rc.1. If the candidate was published, do not rebuild, replace or retag it: anonymously retrieve every asset and actual media, compare checksums/provenance and run formal SBOM verification; record Prepared/Uploaded/Published/Independently Retrieved separately. If failed, read exact job logs and repair the reproducible cause with regression evidence before another attempt; preserve existing tags/drafts and use a new candidate version if already frozen. Then complete the scoped System Lab page and Hugging Face presentation using the verified artifact identity and real captures. Preserve old releases and unrelated projects. No email, human outreach, new credentials or charges; at most two actual model evaluation calls. Keep original feature/European national-validation gaps visible. End with a retrospective and next bounded prompt.",
+  "latest_ci_jobs": {
+    "engineering": 123215299321,
+    "publisher": 123216185963
+  }
+}

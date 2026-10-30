@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-30T07:49:58.790509+00:00",
+  "scope": "Actual existing personal release-review engineering task changed through browser controls after public artifact verification; no artificial operational activity. Authenticated API and persistent database match.",
+  "title": "Remember to review the release verification evidence before publishing version 0.3.",
+  "previous_status": "Open",
+  "status": "Completed",
+  "version": 2,
+  "browser_confirmed": true,
+  "api_database_version_and_status_match": true,
+  "audit_valid": true,
+  "remaining_open_personal_tasks": 1,
+  "new_model_calls": 0,
+  "new_training": false,
+  "new_operational_records": 0,
+  "earlier_check_failures": [
+    "Missing PYTHONPATH prevented first helper import before data access",
+    "Second helper read status from data instead of the actual top-level status column; fixed using inspected record schema"
+  ]
+}

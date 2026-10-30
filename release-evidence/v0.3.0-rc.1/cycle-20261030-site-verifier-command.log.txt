@@ -1,0 +1,11 @@
+{
+  "state": "Verification failed",
+  "summary": {
+    "expected": 37,
+    "http_200": 37,
+    "verified": 34,
+    "exact": 34,
+    "semantic": 0
+  },
+  "output": "release-evidence\\v0.3.0-rc.1\\cycle-20261030-site-public-verification.json"
+}

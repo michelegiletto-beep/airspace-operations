@@ -1,20 +1,76 @@
 {
   "release": "0.3.0-rc.1",
-  "states_reached": ["Prepared"],
-  "publication_performed": false,
-  "engineering_verification": "Pending for the new source identity",
-  "exact_archive_verification": "Pending",
-  "public_download": null,
-  "archive_sha256": null,
+  "states_reached": [
+    "Prepared",
+    "Published",
+    "Independently Retrieved"
+  ],
+  "publication_performed": true,
+  "engineering_verification": "Successful frozen-source CI40803017486; all7software/dependency gates passed",
+  "exact_archive_verification": "Published clean-install receipt:407passed20skipped; same archive digest independently retrieved",
+  "public_download": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+  "archive_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
   "destinations": [
-    {"destination": "Existing GitHub repository and new candidate release", "state": "Prepared", "source": "publication/v0.3/github-readme.md"},
-    {"destination": "Existing System Lab project page", "state": "Prepared", "source": "publication/v0.3/site-project.html"},
-    {"destination": "Existing Hugging Face student model card", "state": "Prepared", "source": "publication/v0.3/hf-model-card.md", "weights_changed": false},
-    {"destination": "Existing Hugging Face annotation dataset card", "state": "Prepared", "source": "publication/v0.3/hf-dataset-card.md", "records_changed": false},
-    {"destination": "Existing Hugging Face static evidence Space", "state": "Prepared", "source": "publication/v0.3/hf-space", "live_inference": false}
+    {
+      "destination": "Existing GitHub repository and new candidate release",
+      "state": "Independently Retrieved",
+      "source": "publication/v0.3/github-readme.md"
+    },
+    {
+      "destination": "Existing System Lab project page",
+      "state": "Independently Retrieved",
+      "source": "publication/v0.3/site-project.html"
+    },
+    {
+      "destination": "Existing Hugging Face student model card",
+      "state": "Prepared",
+      "source": "publication/v0.3/hf-model-card.md",
+      "weights_changed": false
+    },
+    {
+      "destination": "Existing Hugging Face annotation dataset card",
+      "state": "Prepared",
+      "source": "publication/v0.3/hf-dataset-card.md",
+      "records_changed": false
+    },
+    {
+      "destination": "Existing Hugging Face static evidence Space",
+      "state": "Prepared",
+      "source": "publication/v0.3/hf-space",
+      "live_inference": false
+    }
   ],
   "previous_verified_release": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.2.0-rc.1",
   "stable_release_allowed": false,
   "full_original_specification_accepted": false,
-  "operational_acceptance": false
+  "operational_acceptance": false,
+  "archive_bytes": 11675616,
+  "github_release_state": "Independently Retrieved",
+  "github_source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+  "last_source_preparation_at": "2026-10-30T07:34:46.329767+00:00",
+  "destination_outcomes": {
+    "github_release": "Independently Retrieved",
+    "system_lab": {
+      "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+      "version": 97,
+      "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+      "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
+      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+      "state": "Independently Retrieved",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "audience": "public",
+      "ownership": "owner",
+      "checks": {
+        "expected": 37,
+        "http_200": 37,
+        "verified": 37,
+        "exact": 34,
+        "semantic": 3
+      },
+      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json"
+    },
+    "hugging_face": "Prepared; access required"
+  },
+  "states_reached_scope": "GitHub release and scoped System Lab page. Hugging Face0.3 presentations remain Prepared.",
+  "publication_complete": false
 }

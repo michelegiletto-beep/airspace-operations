@@ -7,8 +7,10 @@ license: apache-2.0
 
 # System Lab Airspace Evaluation
 
-Prepared presentation for the existing evidence Space. It is a static record viewer, not a running operations tenant or live inference endpoint. New 0.3 screenshots and execution records are not yet available here. Existing model and dataset artifacts remain unchanged.
+A static viewer for recorded software and model evidence. It is separate from an authenticated operational installation and performs no live inference or external action.
 
-The release owner must add only genuine verified new records, run local/browser checks, deploy to the existing verified destination and independently retrieve its files before claiming this update is published. No upload or deployment is performed by these source files.
+The [0.3.0-rc.1 application release](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.0-rc.1) contains the installable interface, API, database migrations and workers. Its exact ZIP passed a clean installation and 407 software tests, with 20 skipped. Nineteen PostgreSQL checks, actual container and worker checks, restoration, and 107 interface tests are recorded separately. All nine public release assets were independently retrieved and SHA-256 matched.
 
-The Prepared 0.3 viewer reports executed local checks separately from pending release gates. Its screenshot URLs map to real review captures under publication/media/v0.3; it never runs the operational application or a model.
+Screenshots are actual captures from an isolated software-review workspace, served from the frozen source commit. They contain no fabricated missions or customer activity. The operational workspace starts empty. Conversations and personal tasks are private to the author; typed internal drafts require explicit confirmation. The owned companion animates with an animated fallback and honours pause and reduced-motion preferences.
+
+The experimental student and dataset remain unchanged. No new training, benchmark gain, full European coverage, certification or operational acceptance is claimed. Student, source-document and owned presentation rights remain distinct.

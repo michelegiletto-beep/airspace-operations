@@ -40,10 +40,10 @@
     },
     {
       "capability": "PostgreSQL/PostGIS/pgvector deployment",
-      "status": "Implemented",
+      "status": "Verified",
       "implementation": "compose.yaml;deploy/database.Dockerfile;migrations",
-      "evidence": "SQL dialect generation only",
-      "limitation": "Docker/PostgreSQL unavailable here; extensions and production queries not executed"
+      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json; GitHub Actions 40803017486; tests/test_postgres_integration.py;tests/test_postgres_coordination.py",
+      "limitation": "Verified in isolated GitHub Actions containers, including extensions, 19 PostgreSQL tests, a running worker/API job and pg_dump/pg_restore. Operator production deployment and operational acceptance remain incomplete."
     },
     {
       "capability": "Primary-source downloads and structured ingestion",
@@ -154,8 +154,8 @@
       "capability": "Transactional schedule reservation and cancellation",
       "status": "Verified",
       "implementation": "planning.py",
-      "evidence": "tests/test_planning.py",
-      "limitation": "SQLite concurrency tested; PostgreSQL must be separately verified"
+      "evidence": "tests/test_planning.py;tests/test_postgres_coordination.py; GitHub Actions 40803017486",
+      "limitation": "SQLite and isolated PostgreSQL concurrency checks passed. This evidence does not establish production-scale reliability or operational acceptance."
     },
     {
       "capability": "Accountable internal dispatch release and pilot acknowledgement",
@@ -245,8 +245,8 @@
       "capability": "Container build, restoration and resilience at production scale",
       "status": "Requires External Access",
       "implementation": "Dockerfile;compose.yaml;recovery runbook",
-      "evidence": "release-evidence/release-gates.json",
-      "limitation": "No Docker/PostgreSQL runtime here; no measured production SLO or external pentest"
+      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-public-downloads.json; GitHub Actions 40803017486; deploy/compose.ci.yaml",
+      "limitation": "Actual isolated container build, worker/API operation and PostgreSQL backup/restoration passed. Production-scale resilience, deployment-specific SLO measurements and an external penetration test remain incomplete."
     },
     {
       "capability": "Public downloadable release",
