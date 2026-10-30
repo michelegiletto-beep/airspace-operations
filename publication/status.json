@@ -106,5 +106,11 @@
     "release_id": 427384485,
     "published_at": "2026-10-29T01:58:58Z"
   },
-  "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope."
+  "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
+  "development_candidate": {
+    "version": "0.3.1-rc.1",
+    "state": "In development",
+    "scope": "Exact task title/description deduplication and version-specific release metadata",
+    "published": false
+  }
 }

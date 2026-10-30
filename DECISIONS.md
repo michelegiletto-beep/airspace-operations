@@ -17,3 +17,8 @@ Core runtime remains frozen. Added a separate hash-locked publication-only profi
 
 
 29 October2026: candidate publication is being moved into a separate repository-scoped GitHub Actions job after real container/PostgreSQL verification. The local connector lacks release/asset methods and the noninteractive Git credential helper has no credential; no new personal token was created. The publisher must fail closed on identity/source/gates/existing tags, preserve failures as drafts, validate exact assets and keep anonymous retrieval separate. Official GitHub CLI create/upload documentation and GITHUB_TOKEN authentication guidance were read on29October2026. The official actions/setup-node v6 ref resolved to249970729cb0ef3589644e2896645e5dc5ba9c38; the release job provisions the supported Node22line and records its actual version. This does not broaden any product agent permission.
+
+
+## 0.3.1 companion presentation and release selection
+
+Compare complete task titles and descriptions with whitespace normalisation only; preserve distinct text and the underlying records. Do not use fuzzy deletion for legal or safety guidance. The current contract has no versioned guidance-equivalence metadata, so semantic overlap remains explicit. Use the package version as the UI version source. Size the fixed companion against the layout viewport rather than scrollbar-inclusive `100vw`; actual mobile bounds are checked in the browser. New candidate publication requires a strict version-specific notes and screenshot manifest, rather than inheriting 0.3 materials. Original artwork, model weights, operational rules and schema marker 3 remain unchanged.

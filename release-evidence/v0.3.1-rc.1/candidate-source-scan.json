@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-30T19:45:32.184982+00:00",
+  "version": "0.3.1-rc.1",
+  "batches": 24,
+  "private_paths_found": 0,
+  "secret_patterns_found": 0,
+  "model_weights_changed": false,
+  "baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30"
+}

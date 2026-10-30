@@ -1,0 +1,320 @@
+{
+  "reviewed_at": "2026-10-30T19:36:32.983473+00:00",
+  "scope": "Engineering adversarial source review and software tests; not aviation certification, qualified legal review or operational acceptance. No publication mutation, model evaluation, training or operational record was performed by this reviewer.",
+  "version": "0.3.1-rc.1",
+  "baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "freeze": [
+    {
+      "version": "0.1.0-rc.1",
+      "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+      "bytes": 2090705,
+      "matches_frozen_receipt": true
+    },
+    {
+      "version": "0.2.0-rc.1",
+      "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+      "bytes": 10122929,
+      "matches_frozen_receipt": true
+    },
+    {
+      "version": "0.3.0-rc.1",
+      "sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+      "bytes": 11675616,
+      "matches_frozen_receipt": true
+    }
+  ],
+  "implementation_review": {
+    "exact_task_deduplication": "Complete string equality after whitespace collapse only; no case folding, punctuation removal, semantic/fuzzy/substring matching or alteration of stored data. Unique original descriptions render unchanged as escaped React content.",
+    "dock_byte_comparison": "Exact frozen0.3 UTF8 source after removing only the new import and description renderer call. Headings, task state options, versioned PUT, actor-scoped context, workflow disclaimer and conversation navigation are unchanged.",
+    "unchanged_backend_implementation_files": 28,
+    "backend_file_hashes": [
+      {
+        "path": "backend/airspace/api.py",
+        "unchanged": true,
+        "sha256": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88"
+      },
+      {
+        "path": "backend/airspace/assistant.py",
+        "unchanged": true,
+        "sha256": "726537ce2de5dc6a4bfb54e6e7719c1a7567937726944c060f6b23fa965bf1b9"
+      },
+      {
+        "path": "backend/airspace/cli.py",
+        "unchanged": true,
+        "sha256": "c39cd8cedba8cb6673519cfe24062bc729f6397785d829c86124a8738b6ac80e"
+      },
+      {
+        "path": "backend/airspace/companion_api.py",
+        "unchanged": true,
+        "sha256": "3fa143ed6db42407fcd663e4c7f45e230b3d444c1a1227e7dcc7c7635f22c02f"
+      },
+      {
+        "path": "backend/airspace/coordination_api.py",
+        "unchanged": true,
+        "sha256": "26be452a5f66d648a1326abf4f1e34156b44652408e6cc714aad194f087d6684"
+      },
+      {
+        "path": "backend/airspace/dispatch.py",
+        "unchanged": true,
+        "sha256": "7e5f7971fee9df154d53b7d5b97c6c0785b6fffa134abd7dac3228b275f666e7"
+      },
+      {
+        "path": "backend/airspace/domain_records.py",
+        "unchanged": true,
+        "sha256": "50e21c1b1692fd53551012e0f0da855320ed7586689dac81505153d157374104"
+      },
+      {
+        "path": "backend/airspace/europe.py",
+        "unchanged": true,
+        "sha256": "1773423f380088df344236ce179ff66e1a300b9e7af9c251cb13abc7d2c2a384"
+      },
+      {
+        "path": "backend/airspace/evidence.py",
+        "unchanged": true,
+        "sha256": "d613f2f91d2487338e97f1ade318e6bb8e422f35dc522f25d1fd2b185b9461b5"
+      },
+      {
+        "path": "backend/airspace/fleet.py",
+        "unchanged": true,
+        "sha256": "8071d887ca7b120950b79318d4b20511c23bc62d687c2869ae2dd336f1085c25"
+      },
+      {
+        "path": "backend/airspace/identity.py",
+        "unchanged": true,
+        "sha256": "39e0a737301ff339c3127b04f2e9a22ba37f28b9ad1da10684383e2a03594cc5"
+      },
+      {
+        "path": "backend/airspace/inference.py",
+        "unchanged": true,
+        "sha256": "cd619d9fe25411f3532a853fbfca1be51685fbeb1ae06c28d13fcf721cf85f2a"
+      },
+      {
+        "path": "backend/airspace/monitoring.py",
+        "unchanged": true,
+        "sha256": "301c142bd9cc05def471bc8ef457a53112302eb05f062478eb7923ff76cf289b"
+      },
+      {
+        "path": "backend/airspace/neural.py",
+        "unchanged": true,
+        "sha256": "20c5c625a74cf51df3e2bd1ca560c5534c5c1a95d67b56d5f6c896f92677b68b"
+      },
+      {
+        "path": "backend/airspace/operations.py",
+        "unchanged": true,
+        "sha256": "a3ef35301585472f84512c9c2cab1aabb4bce300e0b6d36d077195663152a729"
+      },
+      {
+        "path": "backend/airspace/orchestration.py",
+        "unchanged": true,
+        "sha256": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89"
+      },
+      {
+        "path": "backend/airspace/planning.py",
+        "unchanged": true,
+        "sha256": "65abe7d1b51da0bf4cfe63c5972aba1763cb2f87d238db4e84d06b1e84db8c61"
+      },
+      {
+        "path": "backend/airspace/regulatory.py",
+        "unchanged": true,
+        "sha256": "c1362210f49e582881dd9950fa2a84b8cf30baf77659da01e4e25f76b437baae"
+      },
+      {
+        "path": "backend/airspace/scheduler.py",
+        "unchanged": true,
+        "sha256": "c29331e9f3c7ec09bdedaeb717031f16ff0f5b4364b736cb1fa5aa990d612e86"
+      },
+      {
+        "path": "backend/airspace/sharing.py",
+        "unchanged": true,
+        "sha256": "25d4451d777b230f9ce207040df421b1ec6ce6666c189496613c0da70957ad8d"
+      },
+      {
+        "path": "backend/airspace/storage.py",
+        "unchanged": true,
+        "sha256": "e1e9367a3863ab4fac0174265a4e757329ad90ce7a8097f1e810a7a55832f6ea"
+      },
+      {
+        "path": "backend/airspace/worker.py",
+        "unchanged": true,
+        "sha256": "db1082f3ce296b052b25545c168242817283cdb73da348639233b190408e87a5"
+      },
+      {
+        "path": "backend/airspace/worker_health.py",
+        "unchanged": true,
+        "sha256": "28c9c598529daff1a349894954a9c7bf5b4a99c9fb925003601650a957a715a2"
+      },
+      {
+        "path": "backend/airspace/workflows.py",
+        "unchanged": true,
+        "sha256": "c39e49f9b808bda2d93bfd3901debc4e51a13882720195afe1a0201ad9004d6f"
+      },
+      {
+        "path": "backend/systemlab_agentic/__init__.py",
+        "unchanged": true,
+        "sha256": "64146cb9466df9ce0865e8626ea01d4eb74d2184e0e1db55e615bc093c68bbfd"
+      },
+      {
+        "path": "backend/systemlab_agentic/adapters.py",
+        "unchanged": true,
+        "sha256": "754d0c307e91a82e86d48adcfa6a11cb664b6fdfbb3f8457e6ba12a9c321a83c"
+      },
+      {
+        "path": "backend/systemlab_agentic/contracts.py",
+        "unchanged": true,
+        "sha256": "314d04a3a5e63193b8e3a5cd0c0c26485f94f31d774f1510539e98ad0b6a6006"
+      },
+      {
+        "path": "backend/systemlab_agentic/core.py",
+        "unchanged": true,
+        "sha256": "7384670b9fc6c0f864947aa70cd426eed69f16a163a268c35ac41bcf5881b48b"
+      }
+    ],
+    "frontend_unchanged_contract_motion_and_nextsteps": {
+      "frontend/src/companionApi.ts": true,
+      "frontend/src/CompanionNextSteps.tsx": true,
+      "frontend/src/useCompanionMotion.ts": true,
+      "frontend/src/CompanionArtwork.tsx": true
+    },
+    "semantic_guidance": "Intentionally remains open: the present frontend contract has optional step IDs but no versioned guidance identity/equivalence groups. General semantic matching could hide legal/safety qualifiers. Do not broaden deduplication without a reviewed controlled registry contract.",
+    "version_presentation": "release.ts derives package.json, test asserts package identity and semver shape, index metadata keeps product meaning without decorative punctuation.",
+    "package_versions": {
+      "backend": "0.3.1-rc.1",
+      "pyproject": "0.3.1rc1",
+      "uv": "0.3.1rc1",
+      "ui": "0.3.1-rc.1",
+      "npm_lock": "0.3.1-rc.1",
+      "npm_root": "0.3.1-rc.1"
+    }
+  },
+  "negative_acceptance": [
+    "Preserve different permission IDs, URL versions, punctuation, case and AGL/AMSL references",
+    "Preserve qualifiers, quoted substrings and distinct multiline conditions",
+    "Preserve literal escaped text; actual whitespace-only input produces no empty paragraph",
+    "Untrusted distinct text remains escaped content, not executable markup",
+    "Retain task heading, status aria label/options, workflow-only disclaimer, current-version request and conversation linkage"
+  ],
+  "actual_review_commands": [
+    {
+      "command": "$env:PYTHONPATH='backend'; .venv/Scripts/python.exe -m pytest tests/test_companion_boundaries.py tests/test_companion_budget.py tests/test_revision_v3.py -q --junitxml=release-evidence/v0.3.1-rc.1/cycle-20261030-copy-boundary-tests.xml",
+      "exit_code": 1,
+      "result": "Nonexistent tests/test_revision_v3.py;0tests ran in0.85s. Command corrected; not a product failure."
+    },
+    {
+      "command": "$env:PYTHONPATH='backend'; .venv/Scripts/python.exe -m pytest tests/test_companion_boundaries.py tests/test_companion_budget.py -q --junitxml=release-evidence/v0.3.1-rc.1/cycle-20261030-copy-boundary-tests.xml",
+      "exit_code": 0,
+      "passed": 31,
+      "seconds": 20.0
+    },
+    {
+      "command": "$env:PYTHONPATH='backend'; .venv/Scripts/python.exe -m pytest tests/test_schema_compatibility.py -q --junitxml=release-evidence/v0.3.1-rc.1/cycle-20261030-copy-schema-tests.xml",
+      "exit_code": 0,
+      "passed": 4,
+      "seconds": 1.3
+    },
+    {
+      "command": "npm test -- src/CompanionTaskDescription.test.tsx src/CompanionDock.test.tsx src/CompanionNextSteps.test.tsx",
+      "cwd": "frontend",
+      "exit_code": 1,
+      "passed": 41,
+      "failed": 1,
+      "seconds": 11.78,
+      "result": "Whitespace-only JSX attribute fixture contained literal escape text; comparator correctly preserved it. Implementer changed fixture to a JS expression and added literal-escape preservation case."
+    }
+  ],
+  "separate_implementer_evidence": {
+    "frontend": "release-evidence/v0.3.1-rc.1/frontend-task-copy-verification.json records actual123test pass and build; reviewer did not rerun fullsuite during parent fullgate execution.",
+    "publisher": "release-evidence/v0.3.1-rc.1/cycle-20261030T192702Z-publication-audit.json records actual81pass1symlinkskip; reviewer read exact code/test files."
+  },
+  "publisher_review": {
+    "new_version_manifest": "Required exact3-key JSON object, bounded16KiB, duplicate-key rejection and exact version. No automatic oldcopy fallback.",
+    "notes": "Canonical relative .md path directly inside this candidate folder; first nonempty heading names exactcurrent candidate. Stale/prefix/prose-only versions and preparation placeholders rejected.",
+    "screenshot": "Explicit packaged publication/media raster path; canonical ASCII path, traversal/URL/backslash/private/excluded/symlink/missing-file checks retained. Actual capture provenance remains a separate owner gate.",
+    "existing_boundary": "main still checks clean controlled publication source, exact CI/release bytes, existing tag/draft prohibition, scoped ephemeral token and independently verified draftassets before publication. No permission expansion.",
+    "platform_limit": "Symlink creation was unavailable on this Windows host in implementer test; actualCI Linux verification remains required."
+  },
+  "review_helper_correction": {
+    "false_finding": "An initial comparison omitted UTF8 encoding on Path.read_text(), so Windowscp1252 decoding falsely suggested mojibake. Explicit UTF8 byte decode proved the source had only intended2edits and intact original\u00d7/\u2026/\u00b7. Root and implementer were notified immediately; no product repair was needed or made.",
+    "prevention": "Use explicit encoding=utf-8 or read_bytes().decode(utf-8) for source comparisons on this host."
+  },
+  "material_findings_remaining": [],
+  "no_critical_finding_within_reviewed_scope": true,
+  "browser_acceptance": "Parent owns actual new-version browser/API/persistence/motion checks. This source review does not claim browser completion or release/publication gates passed.",
+  "files": [
+    {
+      "path": "frontend/src/CompanionTaskDescription.tsx",
+      "sha256": "f6e4a98f1b38306b45da90aeb76295d1bd7ed397fd817397abedbcc0f1b820ca",
+      "bytes": 418
+    },
+    {
+      "path": "frontend/src/CompanionTaskDescription.test.tsx",
+      "sha256": "eda857e31f6c97c6cd4ea303d0792ab6cc0f9d10914b4e0fbd47e1bb4f2fbf34",
+      "bytes": 2328
+    },
+    {
+      "path": "frontend/src/CompanionDock.tsx",
+      "sha256": "7927cd8729ce405b628fd6b4ec0f4d5c3244ab60e0dc0dc34022028737a13176",
+      "bytes": 30928
+    },
+    {
+      "path": "frontend/src/CompanionDock.test.tsx",
+      "sha256": "0928affa23563fafcc8b7069288c66eb458799edd97e6b280ec22fb6999426ee",
+      "bytes": 26392
+    },
+    {
+      "path": "frontend/src/release.ts",
+      "sha256": "4318fa1eb4f3e9fb1558e79f9d5054b85513646bd7c2b7cad8a612ef65c7bb75",
+      "bytes": 86
+    },
+    {
+      "path": "frontend/src/CopyReview.test.ts",
+      "sha256": "d901ff9ce0c59927d9a900887a339b6e9555800160ac2a849e4e1ac2aa4089a1",
+      "bytes": 1786
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "42157c2cd3801fd249e6cf41816d47ab283b8689473a4e72bf2afd8d5c431cfc",
+      "bytes": 439
+    },
+    {
+      "path": "scripts/publish_candidate.py",
+      "sha256": "df69b5fe1b16250a9e9eebdf1b4f72a50c39a7adb03ebccc7a729c41aaca6cfd",
+      "bytes": 20082
+    },
+    {
+      "path": "tests/test_publication_material.py",
+      "sha256": "a6ad58f80519047ccca7d2390b7ed52233ba98af5778e8e0258f32ad65d02e0a",
+      "bytes": 7210
+    },
+    {
+      "path": "frontend/src/companion.css",
+      "sha256": "b4209af483d8791a7b244b2dc2449d509c189bfcd8c5caf65cb6d1f25a549ca5",
+      "bytes": 15189
+    }
+  ],
+  "additional_mobile_css_review": {
+    "reviewed_at": "2026-10-30T19:42:04.930646+00:00",
+    "initial_browser_observation": "Reported by root from actual390x844IAB: documentclient375, dockx=-3,width366; reviewer did not independently operate that browser.",
+    "exact_byte_change": {
+      "old_bytes": 15191,
+      "new_bytes": 15189,
+      "replacement_count": 2,
+      "only_changes": [
+        [
+          "width:min(470px,calc(100vw - 36px))",
+          "width:min(470px,calc(100% - 36px))"
+        ],
+        [
+          "width:calc(100vw - 24px)",
+          "width:calc(100% - 24px)"
+        ]
+      ],
+      "all_other_bytes_identical": true,
+      "line_endings_preserved": true
+    },
+    "containing_block": "The fixed dock is rendered as a sibling outside app-main. Its root ancestors do not establish a transformed/filter containing block; percentages use the initial containing block excluding the document scrollbar. At client375 and right12, widthcalc(100%-24px)=351 and x12 rather than x=-3. Desktop min470px limit and existing offsets remain intact.",
+    "security_and_accessibility": "No executable logic, actor/tenant/version controls, source content, visibility state or action transition changed. Focus order, Escape control, task labels, scroll containers, contrast, print behavior, animation and reduced-motion rules are byte-identical. Narrower text wraps within existing scrollable panels instead of extending beyond the left edge.",
+    "review_scope": "Source and layout arithmetic review only. Parent is rerunning frontend tests/build and must confirm actual current-bundle viewport geometry and controls.",
+    "sha256": "b4209af483d8791a7b244b2dc2449d509c189bfcd8c5caf65cb6d1f25a549ca5",
+    "unresolved_source_findings": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "cycle_id": "2026-10-30T192702Z-task-copy",
+  "triggered_at": "2026-10-30T19:27:02.898Z",
+  "started_at": "2026-10-30T19:27:09Z",
+  "checkpoint_at": "2026-10-30T19:44:53.882551+00:00",
+  "state": "Local gates and browser/API/data verification passed; new source and remote publication gates pending",
+  "version": "0.3.1-rc.1",
+  "requirements": [
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-004",
+    "ASO3-006",
+    "ASO3-009",
+    "ASO3-010"
+  ],
+  "implemented": [
+    "Exact whole-value whitespace-normalised task-description suppression with distinct text preserved",
+    "Visible UI version derives from package metadata after actual browser exposed stale literal",
+    "Mobile dock fits its layout viewport: actual x changed from-3 to12 at390x844",
+    "New releases require version-specific notes/screenshot manifest and exact candidate heading"
+  ],
+  "verification": {
+    "local_backend_passed": 479,
+    "local_backend_skipped": 20,
+    "frontend_passed": 123,
+    "independent_boundary_budget_schema_passed": 35,
+    "publisher_focused_passed": 81,
+    "publisher_focused_skipped": 1,
+    "browser_api_database_tasks": 2,
+    "audit_valid": true,
+    "actual_mobile_inner_width": 390,
+    "actual_mobile_inner_height": 844,
+    "new_model_calls": 0,
+    "new_training": false,
+    "prior_github_assets_exact": 9,
+    "prior_site_resources_verified": 37,
+    "prior_hf_space_files_exact": 21
+  },
+  "original_baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "original_acceptance_complete": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "known_limits": [
+    "Semantic guidance overlap remains where safe equivalence metadata is absent",
+    "New source has not yet passed its own remote container, clean-archive and publication gates",
+    "Existing Hugging Face update needs a supported authenticated session; native Firefox policy is not bypassed"
+  ],
+  "retrospective": "Whole-value comparison improved task readability without changing records or permissions. Actual browser verification exposed two additional integration defects: a stale hard-coded UI version and a scrollbar-related mobile panel clip. A reviewer encoding false positive and screenshot-origin/scale failures were retained and resolved through byte-level comparison and explicit capture geometry. Core environment synchronisation removed optional packages; the pinned optional profiles were restored. No local language-model generation or operational activity was manufactured.",
+  "next_bounded_prompt": "Inspect the new0.3.1 source/publication workflow before claiming a tag or download. If successful, freeze its bytes, independently retrieve every asset/media and validate SBOM/source/provenance, then update only the existing Airspace project page with verified identities and preserve0.1/0.2/0.3 history. If failed, preserve logs and repair the actual cause without moving tags or waiving gates. Resume Hub presentation only with supported existing authenticated access; no new credentials or native-browser policy bypass. Keep semantic guidance overlap open unless versioned equivalence can be established safely. No email, contacts, purchases, aircraft commands or external operational actions; at most two actual model calls."
+}

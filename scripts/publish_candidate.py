@@ -159,12 +159,58 @@ def record_engineering(root, context, environment):
     (evidence / "ci-verification.json").write_text(json.dumps({"conclusion": "success", "scope": "Successful engineering dependency job in this still-running publication workflow", "run_id": int(run_id), "job_id": matches[0]["id"], "commit": context["sha"], "local_software_input_hashes": hashes, "verified_job_url": matches[0]["html_url"]}, indent=2) + "\n")
 
 
+def reviewed_publication_material(root, version):
+    """Select explicit reviewed public files; new versions never inherit old copy."""
+    if not isinstance(version, str) or not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+-rc\.[0-9]+", version):
+        raise ValueError("An explicit candidate version is required for publication copy")
+    if version == "0.3.0-rc.1":
+        notes_path = "publication/v0.3/release-notes.md"
+        screenshot_path = "publication/media/v0.3/desktop-companion.jpg"
+    else:
+        manifest_path = safe_path(root, f"publication/releases/{version}/manifest.json")
+        if not manifest_path.is_file() or manifest_path.stat().st_size > 16_384:
+            raise ValueError("A bounded version-specific reviewed publication manifest is required")
+
+        def unique_keys(pairs):
+            result = {}
+            for key, value in pairs:
+                if key in result:
+                    raise ValueError("Duplicate publication manifest keys are not permitted")
+                result[key] = value
+            return result
+
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"), object_pairs_hook=unique_keys)
+        if (not isinstance(manifest, dict) or set(manifest) != {"version", "notes_path", "screenshot_path"}
+                or manifest["version"] != version):
+            raise ValueError("Publication manifest schema or version differs from this candidate")
+        notes_path, screenshot_path = manifest["notes_path"], manifest["screenshot_path"]
+        for relative in (notes_path, screenshot_path):
+            if (not isinstance(relative, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]*", relative)
+                    or PurePosixPath(relative).as_posix() != relative):
+                raise ValueError("Publication material paths must be canonical public relative paths")
+        notes = PurePosixPath(notes_path)
+        image = PurePosixPath(screenshot_path)
+        if notes.parent.as_posix() != f"publication/releases/{version}" or notes.suffix != ".md":
+            raise ValueError("Reviewed notes must be a Markdown file in this candidate's publication directory")
+        from package_release import EXCLUDED
+        if (not screenshot_path.startswith("publication/media/") or image.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}
+                or any(part in EXCLUDED or part.endswith(".egg-info") for part in image.parts)):
+            raise ValueError("Reviewed screenshot must be a packaged public raster image")
+    source = safe_path(root, notes_path)
+    image = safe_path(root, screenshot_path)
+    if not source.is_file() or not image.is_file():
+        raise ValueError("Reviewed release notes and the actual companion screenshot are required")
+    return source, image, screenshot_path
+
+
 def candidate_notes(root, context, assets):
-    source = safe_path(root, "publication/v0.3/release-notes.md")
-    image = safe_path(root, "publication/media/v0.3/desktop-companion.jpg")
+    source, image, screenshot_path = reviewed_publication_material(root, context["version"])
     if not source.is_file() or not image.is_file():
         raise ValueError("Reviewed release notes and the actual companion screenshot are required")
     body = source.read_text(encoding="utf-8")
+    first_line = next((line.strip() for line in body.splitlines() if line.strip()), "")
+    if context["version"] != "0.3.0-rc.1" and first_line not in {"# Release " + context["version"], "# System Lab Airspace Operations " + context["version"]}:
+        raise ValueError("Reviewed release notes must identify this exact candidate version in their heading")
     if re.search(r"(?im)^\s*(?:publication|release|status)(?: status)?\s*:\s*(?:prepared|in progress)\b|\b(?:TODO|TBD)\b", body):
         raise ValueError("Release notes still contain preparation placeholders")
     archive = next(asset for asset in assets if asset.name == f"System-Lab-Airspace-Operations-{context['version']}.zip")
@@ -176,10 +222,13 @@ def candidate_notes(root, context, assets):
     skipped = re.search(r"\b([0-9]+) skipped\b", output)
     summary = (passed[1] + " passed" if passed else "See the attached actual test output") + (", " + skipped[1] + " skipped" if skipped else "")
     return (body.replace("{{SOURCE_COMMIT}}", context["sha"]).rstrip() +
-            f"\n\n![Companion workspace](https://raw.githubusercontent.com/{REPOSITORY}/{context['sha']}/publication/media/v0.3/desktop-companion.jpg)\n\n" +
+            f"\n\n![Companion workspace](https://raw.githubusercontent.com/{REPOSITORY}/{context['sha']}/{screenshot_path})\n\n" +
             f"Source commit: `{context['sha']}`. Download: `{archive.name}` ({archive.stat().st_size:,} bytes). SHA-256: `{digest(archive)}`.\n\n" +
             f"Engineering checks: {sum(value is True for value in gate['checks'].values())} passed. Clean-install software suite: {summary}. The original acceptance baseline remains partial; stable release and operational acceptance remain false.\n\n" +
-            f"Previous candidates: [0.2](https://github.com/{REPOSITORY}/releases/tag/v0.2.0-rc.1), [0.1](https://github.com/{REPOSITORY}/releases/tag/v0.1.0-rc.1).\n")
+            "Previous candidates: " + ", ".join(
+                f"[{version}](https://github.com/{REPOSITORY}/releases/tag/v{version})"
+                for version in (("0.2.0-rc.1", "0.1.0-rc.1") if context["version"] == "0.3.0-rc.1"
+                                else ("0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1"))) + ".\n")
 
 
 def publish(root, context, assets, *, release_body=None):

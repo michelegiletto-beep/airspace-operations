@@ -1,0 +1,19 @@
+Command: npm test -- --reporter=verbose
+Working directory: frontend
+Exit code: 1
+
+ ❯ src/CompanionTaskDescription.test.tsx (12 tests | 1 failed) 259ms
+     × does not add a blank paragraph for a missing description 17ms
+
+ FAIL  src/CompanionTaskDescription.test.tsx > saved task descriptions > does not add a blank paragraph for a missing description
+AssertionError: expected <p></p> to be null
+
+Expected: null
+Received: <p> literal backslash-t/backslash-r/backslash-n text from the JSX attribute </p>
+
+Test Files 1 failed | 19 passed (20)
+Tests 1 failed | 121 passed (122)
+Start at 20:29:30
+Duration 43.54s (transform 4.45s, setup 0ms, import 35.20s, tests 20.70s, environment 101.86s)
+
+Diagnosis: JSX quoted attributes preserve literal backslashes. The fixture did not contain whitespace-only data. Production rendering was correct; the fixture was corrected to a JavaScript expression and a separate literal-escaped-text preservation case was added.

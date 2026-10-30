@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-10-30T19:42:34.629158+00:00",
+  "version": "0.3.1-rc.1",
+  "scope": "Actual existing personal engineering tasks only; browser view, authenticated API and persistent database checked. No task or operational record created or changed.",
+  "health": {
+    "status": "ok",
+    "version": "0.3.1-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "tasks": [
+    {
+      "record_sha256": "cabb6ebf384956fb2db22b819573ed6c60d70371f8c7e9c4058f51cce982cbce",
+      "status": "Completed",
+      "version": 2,
+      "description_remains_exactly_recorded": true
+    },
+    {
+      "record_sha256": "a78c154f39a6d6b896c497e18f7952e151b9c5cc6c61b43f2e836af1d2a9e87e",
+      "status": "Open",
+      "version": 1,
+      "description_remains_exactly_recorded": true
+    }
+  ],
+  "audit_valid": true,
+  "browser_task_description_paragraphs": 0,
+  "desktop": {
+    "inner_width": 1280,
+    "inner_height": 720,
+    "page_width": 1265
+  },
+  "mobile": {
+    "inner_width": 390,
+    "inner_height": 844,
+    "client_width": 375,
+    "page_width": 375,
+    "before_fix_dock_x": -3,
+    "after_fix_dock_x": 12,
+    "after_fix_dock_width": 351,
+    "after_fix_dock_right": 363
+  },
+  "bundle": "index-BUP3fbhH.js",
+  "console_warnings_errors": 0,
+  "pause_preference_preserved": true,
+  "viewport_override_reset": true,
+  "new_model_calls": 0,
+  "new_training": false,
+  "captures": [
+    {
+      "path": "publication/media/0.3.1-rc.1/companion-tasks.png",
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "pixels": [
+        466,
+        569
+      ],
+      "source": "Visually confirmed native CUA getScreenshot; desktop cropped only to remove private header or isolate panel; mobile kept full",
+      "generated_pixels": false
+    },
+    {
+      "path": "publication/media/0.3.1-rc.1/companion-tasks-mobile.png",
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "pixels": [
+        375,
+        812
+      ],
+      "source": "Visually confirmed native CUA getScreenshot; desktop cropped only to remove private header or isolate panel; mobile kept full",
+      "generated_pixels": false
+    },
+    {
+      "path": "publication/media/0.3.1-rc.1/application-tasks.png",
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "pixels": [
+        1265,
+        652
+      ],
+      "source": "Visually confirmed native CUA getScreenshot; desktop cropped only to remove private header or isolate panel; mobile kept full",
+      "generated_pixels": false
+    }
+  ],
+  "verification_failures": [
+    "Browser clip screenshot ignored x/y and returned the top-left region; failed image kept private and not published",
+    "Initial crop helper assumed720capturepixels; actualfullcapture1265x712, then corrected using observedCSS-to-capturepixelratios",
+    "Viewport override applied to tab3 rather than desktop tab2; actual390x844 verified on tab3 before accepting mobile evidence",
+    "Independent visual review rejected unpainted tab.screenshot frames despite matching DOM; replaced with separately visually inspected getScreenshot bytes before any source commit/tag/release. Wrong image files quarantined privately."
+  ],
+  "source_sha256": {
+    "frontend/src/CompanionTaskDescription.tsx": "f6e4a98f1b38306b45da90aeb76295d1bd7ed397fd817397abedbcc0f1b820ca",
+    "frontend/src/CompanionDock.tsx": "7927cd8729ce405b628fd6b4ec0f4d5c3244ab60e0dc0dc34022028737a13176",
+    "frontend/src/companion.css": "b4209af483d8791a7b244b2dc2449d509c189bfcd8c5caf65cb6d1f25a549ca5",
+    "frontend/src/release.ts": "4318fa1eb4f3e9fb1558e79f9d5054b85513646bd7c2b7cad8a612ef65c7bb75",
+    "frontend/dist/assets/index-BUP3fbhH.js": "20f40455050cfcad50119db605dd4b7d8db69458ef33c4fc708c41b2a18f21a4"
+  },
+  "capture_reviewed_at": "2026-10-30T19:50:10.741370+00:00",
+  "rejected_staged_captures": [
+    {
+      "name": "companion-tasks.png",
+      "rejected_sha256": "935a923b0bd898f852cb177213c39b3eb5c6d131981a8f266d457d1b939fd3cf",
+      "reason": "tab.screenshot returned an unpainted prior frame without task panel; rejected by independent visual review before source commit/publication"
+    },
+    {
+      "name": "companion-tasks-mobile.png",
+      "rejected_sha256": "e29d5120d100895ee083ca4fdbc6022b6c0a747916cff275e233ad566a7cffeb",
+      "reason": "tab.screenshot returned an unpainted prior frame without task panel; rejected by independent visual review before source commit/publication"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-10-30T19:31:51.644859+00:00",
+  "scope": "Frontend presentation only. Persisted task records, server validation, current actor permissions, task version updates, typed confirmations, companion motion and reply text are unchanged.",
+  "version": "0.3.1-rc.1",
+  "change": "A description is omitted only when blank or equal to the complete title after whitespace collapse. Distinct descriptions render their original text.",
+  "commands": [
+    {
+      "command": "npm test -- --reporter=verbose",
+      "cwd": "frontend",
+      "exit_code": 1,
+      "passed": 121,
+      "failed": 1,
+      "seconds": 43.54,
+      "failure": "Whitespace-only fixture was a JSX string attribute containing literal backslash-t/r/n characters, not actual whitespace; production correctly rendered it. Fixture corrected to a JavaScript expression. Added a literal-escaped-text preservation case."
+    },
+    {
+      "command": "npm run build",
+      "cwd": "frontend",
+      "exit_code": 0,
+      "typescript": "passed",
+      "vite_seconds": 1.9,
+      "modules": 47
+    },
+    {
+      "command": "npm test",
+      "cwd": "frontend",
+      "exit_code": 0,
+      "passed": 123,
+      "test_files": 20,
+      "seconds": 18.04
+    }
+  ],
+  "react_review": [
+    "No new state, effects, subscriptions or network requests",
+    "Pure string comparison derived during render; original text passed directly as escaped React content",
+    "Existing task heading, status label/options, versioned PUT body, workflow warning and conversation linkage retained",
+    "No new dependency, style or animation change"
+  ],
+  "semantic_guidance_followup": "CompanionNextSteps remains unchanged. Current UI contract exposes optional step IDs but no versioned guidance identity or equivalence groups; fuzzy or substring suppression could erase qualified safety/source statements.",
+  "artificial_records": "Only isolated test fixtures; no runtime operational or personal task records created by this agent.",
+  "model_calls": 0,
+  "browser_verification": "Parent is responsible for actual browser/API/persistence check; this receipt does not claim it.",
+  "files": [
+    {
+      "path": "frontend/src/CompanionTaskDescription.tsx",
+      "bytes": 418,
+      "sha256": "f6e4a98f1b38306b45da90aeb76295d1bd7ed397fd817397abedbcc0f1b820ca"
+    },
+    {
+      "path": "frontend/src/CompanionTaskDescription.test.tsx",
+      "bytes": 2328,
+      "sha256": "eda857e31f6c97c6cd4ea303d0792ab6cc0f9d10914b4e0fbd47e1bb4f2fbf34"
+    },
+    {
+      "path": "frontend/src/CompanionDock.tsx",
+      "bytes": 30928,
+      "sha256": "7927cd8729ce405b628fd6b4ec0f4d5c3244ab60e0dc0dc34022028737a13176"
+    },
+    {
+      "path": "frontend/src/CompanionDock.test.tsx",
+      "bytes": 26392,
+      "sha256": "0928affa23563fafcc8b7069288c66eb458799edd97e6b280ec22fb6999426ee"
+    },
+    {
+      "path": "frontend/dist/assets/index-Cdjtyjj6.js",
+      "bytes": 472325,
+      "sha256": "288853b792f0fe8ae40f0f6a004b98f93226de73cf75e14b5601abb27f45b72c"
+    },
+    {
+      "path": "frontend/dist/assets/index-BwDooYcZ.css",
+      "bytes": 103754,
+      "sha256": "79881d693a4f8e554042d474b8c6ed5214283755e95998f550c60a20ba2d4248"
+    }
+  ]
+}

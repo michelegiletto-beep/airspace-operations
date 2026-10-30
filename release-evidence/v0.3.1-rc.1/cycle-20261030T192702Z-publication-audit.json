@@ -1,0 +1,93 @@
+{
+  "checked_at": "2026-10-30T19:32:34.928217+00:00",
+  "scope": "Historical public0.3artifact preservation and future0.3.1publisher material selection; no newrelease publication or credential access",
+  "public_rechecks": {
+    "github_frozen03": {
+      "assets": 9,
+      "source_commit": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+      "zip_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+      "zip_bytes": 11675616,
+      "state": "Independently Retrieved"
+    },
+    "github_main": {
+      "source_commit": "dcd13e15c896f2effb80563080f2a6edaa075aaf",
+      "ci_run": 41063411726,
+      "ci_conclusion": "success",
+      "evidence_source": "Authenticated GitHub connector GET responses; artifact downloads remain anonymous"
+    },
+    "system_lab": {
+      "version": 97,
+      "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+      "summary": {
+        "expected": 37,
+        "http_200": 37,
+        "verified": 37,
+        "exact": 34,
+        "semantic": 3
+      },
+      "state": "Independently Retrieved"
+    },
+    "hf": {
+      "scope": "Existing0.2 Space files only; no new0.3Hubupload",
+      "summary": {
+        "expected": 21,
+        "attempted": 21,
+        "http_200": 21,
+        "verified": 21,
+        "failed": 0,
+        "exact_verified": 21,
+        "semantic_verified": 0,
+        "raw_sha256_mismatches": 0
+      },
+      "state": "Independently Retrieved"
+    }
+  },
+  "implemented": {
+    "publication_manifest": "publication/releases/{version}/manifest.json; all nonlegacy versions require exact version, notes_path and screenshot_path keys",
+    "notes": "Direct Markdown file inside candidate-specific publication directory; exact first heading identifies the candidate",
+    "screenshot": "Explicit public raster path, canonical relative ASCII path, no package-excluded directory; safe_path blocks escapes and symlinks. Explicit reviewed reuse remains possible.",
+    "legacy": "Explicit0.3.0-rc.1 selection retained only for historical regression; frozen tag/assets unchanged",
+    "raw_image_url": "Uses actually selected screenshot path",
+    "previous_release_history": "0.3 included for newer candidates"
+  },
+  "actual_commands": [
+    {
+      "command": ".venv/Scripts/python.exe scripts/verify_publication_v3.py --version-number 97 --source-commit 309b6fac69cfbe51278da6d116545cf2916251b7 --deployment-id appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee --output release-evidence/v0.3.1-rc.1/cycle-20261030T192702Z-site97.json",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/verify_publication_v2.py --destination hf --output release-evidence/v0.3.1-rc.1/cycle-20261030T192702Z-hf-prior.json",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe release-evidence/v0.3.1-rc.1/cycle-20261030T192702Z-verify-frozen03.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m py_compile scripts/publish_candidate.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_publication_material.py tests/test_candidate_publication.py tests/test_ci_publication_adversarial.py -q --junitxml=release-evidence/v0.3.1-rc.1/cycle-20261030T192702Z-publication-material-tests.xml",
+      "exit_code": 0,
+      "passed": 81,
+      "skipped": 1,
+      "seconds": 2.56,
+      "skip_reason": "Windows account cannot create symlinks; source containment and lexical unsafe paths were tested"
+    }
+  ],
+  "source_sha256": {
+    "scripts/publish_candidate.py": "df69b5fe1b16250a9e9eebdf1b4f72a50c39a7adb03ebccc7a729c41aaca6cfd",
+    "tests/test_publication_material.py": "a6ad58f80519047ccca7d2390b7ed52233ba98af5778e8e0258f32ad65d02e0a",
+    "SPECIFICATION.md": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30"
+  },
+  "not_executed": [
+    "No0.3.1cleanarchiveinstallation orcontainer/PostgreSQLverification was run by this agent",
+    "No0.3.1GitHubcandidatepublication,HFuploadorSystemLabdeployment",
+    "No model generation/training or nativebrowser session inspection"
+  ],
+  "publication_remaining": [
+    "Root must prepare reviewed0.3.1manifest/notes/currentcapture, then complete actual versioned gates and exactarchive verification before publishing",
+    "Full baseline, qualified national validation, liveprovider and operational acceptance remain incomplete"
+  ]
+}

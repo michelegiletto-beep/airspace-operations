@@ -101,3 +101,19 @@ System Lab is published at version97, source309b6fac69cfbe51278da6d116545cf29162
 Hugging Face0.3 cards/Space remain Prepared. Current browser is signed out, no native browser session or supported configured token is available;21priorSpace files remain exact. The public Site explicitly identifies the existing0.2 Space record. To publish the prepared update, existingMagic51 authentication/write access must be restored through approved secret/browser handling; do not create a new token or contact people.
 
 Retrospective and exact next bounded prompt: improvement/cycles/2026-10-30T072750Z-publication-verification.json. Preserve frozen tags/bytes and source-language/legal material. Original acceptance, validated national packs, production deployment acceptance and real provider integration remain incomplete. The existing six-hour automation and approval boundaries are unchanged.
+
+
+## Handover continuation,30October2026,13:23UTC
+
+GitHub main now carries0.3 source and post-publication documentation atdcd13e15c896f2effb80563080f2a6edaa075aaf, fast-forwarded with an expected-head lease. All70changedfiles were anonymously downloaded and matched their content-addressed blobs. New main CI41063411726 must be inspected separately; no running workflow is treated as success. The frozen0.3tag/ZIP and previous releases remain unchanged.
+
+Existing Firefox eventually exposed a window, but Computer Use stopped its inspection because URL-policy enforcement does not support this Windows browser. No further UI input, authentication, new credential or Hub publication was attempted. Prepared Hub0.3 sources remain available. See improvement/cycles/2026-10-30T132357Z-public-handover.json and its exact next action.
+
+Final handoverCI41063411726 atdcd13e15c896f2effb80563080f2a6edaa075aaf completed successfully:444source tests passed,20skipped,73.58seconds; actual container/worker/PostgreSQL/backup-restoration steps passed with valid audit. This is separate from the frozen0.3release-source407/20result. Native Computer Use remains stopped; no further app input was issued. Latest concrete continuation is in the13:23cycle.
+
+
+## Companion refinement, 30 October 2026, 19:27 UTC
+
+Development candidate 0.3.1-rc.1 removes repeated task descriptions only when the complete title and description differ solely in whitespace. Distinct text, source data, state controls and permissions remain intact. The browser also exposed a stale UI version literal and a mobile panel extending 3px left of its layout viewport; both are corrected. Actual desktop and390x844 mobile checks, authenticated API/database records and valid audit were verified without creating or changing a task or operational record. No new model call or training occurred.
+
+Local validation passed479 backend tests with20skips and123 interface tests; build, selected dependency scans and baseline integrity passed. Independent boundary/budget/schema checks passed35 tests. New release material selection passed81 focused tests with1 host symlink skip. These overlap other suites and are not independent certification. Remote container, exact new archive installation and publication gates remain pending. Frozen0.1,0.2,0.3 releases and System Lab97 remain unchanged. See improvement/cycles/2026-10-30T192702Z-task-copy.json for failures, retrospective and the exact continuation.

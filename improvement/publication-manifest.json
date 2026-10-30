@@ -6,7 +6,9 @@
     "cycles/2026-10-28-companion-revision.json",
     "cycles/2026-10-28T190650Z-schema3-privacy.json",
     "cycles/2026-10-29T011156Z-companion-budget.json",
-    "cycles/2026-10-30T072750Z-publication-verification.json"
+    "cycles/2026-10-30T072750Z-publication-verification.json",
+    "cycles/2026-10-30T132357Z-public-handover.json",
+    "cycles/2026-10-30T192702Z-task-copy.json"
   ],
   "future_cycles": "Unlisted cycle files are excluded from release payloads until reviewed and deliberately added. Do not list private records, credentials, correspondence or operational customer data."
 }

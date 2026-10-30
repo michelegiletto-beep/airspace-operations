@@ -80,3 +80,6 @@ The optional runtime pins are in `requirements-neural.txt`. The original trainin
 ## Companion request budget
 
 The private companion commits a job-wide generation reservation before each local model service call. The declared maximum is one or two reservations across worker retries and lease recovery. Reservations are never refunded when a crash makes the outcome uncertain. A reservation is not proof that a generation completed. Older pending turns without valid accounting receive a labelled Budget Unavailable fallback; a new request requires a separate budget. Current actor, scope, lease and input checks precede each reservation. No hosted provider is enabled.
+
+
+A core `uv sync --frozen --extra dev` can remove packages installed through the optional neural or publication profiles. Install those pinned profiles after synchronising the core environment. To restore the optional profiles, use `uv pip install --python .venv/Scripts/python.exe -r requirements-neural.lock.txt -r requirements-publication.lock.txt` on Windows, or the corresponding `.venv/bin/python` on Unix. Check the resulting dependency and model status before requesting inference. The model files themselves are separate from these Python dependencies. This behaviour was observed and the pinned profiles restored during the 0.3.1 verification; no model generation was needed.

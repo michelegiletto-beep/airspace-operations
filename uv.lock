@@ -913,7 +913,7 @@ wheels = [
 
 [[package]]
 name = "system-lab-airspace-operations"
-version = "0.3.0rc1"
+version = "0.3.1rc1"
 source = { editable = "." }
 dependencies = [
     { name = "defusedxml" },

@@ -13,8 +13,8 @@ const userMessage: CompanionMessage = { ...base, id: 'test-message', kind: 'comp
 const action: ActionPreview = { ...base, id: 'test-action', kind: 'companion_action', title: 'Task preview', status: 'Awaiting Confirmation', version: 3, data: { owner_actor_id: user.id, expires_at:'2099-01-01T00:00:00Z', kind: 'task_draft', label: 'Save this request as a personal task', preview: { title: 'Review the procedure', description: 'Review the operator procedure.', effect: 'Creates a personal task only.' } } };
 const task: CompanionTask = { ...base, id: 'test-task', kind: 'companion_task', title: 'Review the procedure', status: 'Open', version: 7, data: { owner_actor_id: user.id, conversation_id: conversation.id, source_message_id: userMessage.id, description: 'Review the operator procedure.', due_at: null, completed_at: null, created_from_action_id: action.id } };
 
-function install(options: { restored?: boolean; action?: ActionPreview; conflict?: boolean; running?: boolean; text?: string; workflow?: boolean; taskConflict?: boolean; retry?: boolean; case?: boolean; linked?: boolean; procedure?: boolean; reply?: Partial<CompanionMessage['data']>; modelState?: string } = {}) {
-  let tasks: CompanionTask[] = options.restored ? [{...task,data:{...task.data,...(options.linked?{workflow_id:'test-workflow'}:{})}}] : [];
+function install(options: { taskDescription?: string; restored?: boolean; action?: ActionPreview; conflict?: boolean; running?: boolean; text?: string; workflow?: boolean; taskConflict?: boolean; retry?: boolean; case?: boolean; linked?: boolean; procedure?: boolean; reply?: Partial<CompanionMessage['data']>; modelState?: string } = {}) {
+  let tasks: CompanionTask[] = options.restored ? [{...task,data:{...task.data,...(options.taskDescription !== undefined ? { description: options.taskDescription } : {}),...(options.linked?{workflow_id:'test-workflow'}:{})}}] : [];
   let detail: CompanionDetail = { conversation, messages: [], action_previews: options.action ? [options.action] : [], tasks: [], active_job: null, model_status: model };
   if (options.text) detail.messages = [{ ...userMessage, id: 'test-reply', data: { role: 'assistant', text: options.text, reply_kind: 'fallback', missing_inputs: ['Select the relevant aircraft record.'] } }];
   if(options.reply) detail.messages=[{...userMessage,id:'test-reply',data:{role:'assistant',text:'Isolated reply.',...options.reply}}];
@@ -64,6 +64,34 @@ beforeEach(() => { sessionStorage.clear(); localStorage.clear(); });
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); sessionStorage.clear(); localStorage.clear(); });
 
 describe('private contextual companion', () => {
+  it.each(['Review the procedure', ' \r\nReview\t the   procedure\n'])('shows a saved task once without changing its versioned controls: %j', async description => {
+    const fetcher = install({ restored: true, taskDescription: description });
+    const view = mount();
+    fireEvent.click(await screen.findByRole('tab', { name: /Tasks/ }));
+    await screen.findByRole('heading', { name: task.title });
+    const card = view.container.querySelector('.companion-task-list article') as HTMLElement;
+    expect(card.querySelector('p')).toBeNull();
+    expect((screen.getByLabelText(`Task state for ${task.title}`) as HTMLSelectElement).value).toBe('Open');
+    expect(screen.getByRole('button', { name: 'Open conversation' })).toBeTruthy();
+    expect(fetcher.mock.calls.some(([, init]) => init?.method === 'PUT')).toBe(false);
+    fireEvent.change(screen.getByLabelText(`Task state for ${task.title}`), { target: { value: 'Completed' } });
+    await waitFor(() => expect(fetcher.mock.calls.some(([, init]) => init?.method === 'PUT')).toBe(true));
+    const call = fetcher.mock.calls.find(([, init]) => init?.method === 'PUT')!;
+    expect(JSON.parse(call[1]?.body as string)).toEqual({ expected_version: 7, state: 'Completed' });
+  });
+
+  it('keeps task-specific safety qualifiers visible alongside a similar title', async () => {
+    const description = 'Review the procedure. Only an authorised reviewer can release internal dispatch.';
+    install({ restored: true, taskDescription: description, linked: true });
+    mount();
+    fireEvent.click(await screen.findByRole('tab', { name: /Tasks/ }));
+    await screen.findByRole('heading', { name: task.title });
+    expect(screen.getByText(description).textContent).toBe(description);
+    expect(screen.getByText('This changes your tracking task only. Use the workflow controls to pause or cancel the workflow.')).toBeTruthy();
+    expect(screen.getByLabelText(`Tracking task state for ${task.title}`)).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Open conversation and workflow' })).toBeTruthy();
+  });
+
   it('guides an empty workspace without starting a task or implying an installed model', async () => {
     const fetcher = install(); mount();
     await screen.findByText('The local model is not installed.');

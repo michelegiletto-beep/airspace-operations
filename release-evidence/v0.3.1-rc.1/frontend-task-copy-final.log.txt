@@ -1,0 +1,8 @@
+Command: npm test
+Working directory: frontend
+Exit code: 0
+
+Test Files 20 passed (20)
+Tests 123 passed (123)
+Start at 20:30:43
+Duration 18.04s (transform 2.84s, setup 0ms, import 11.56s, tests 15.68s, environment 34.17s)
