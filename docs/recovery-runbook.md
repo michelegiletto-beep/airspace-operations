@@ -24,6 +24,16 @@ Worker crash: leases expire and retry within the bounded budget. Inspect job att
 
 Evidence integrity failure: restrict the affected object, retain corrupted bytes as investigation evidence, restore from a hash-verified copy and record the incident. Do not regenerate a missing authority receipt or replace an original silently. Record measured restoration duration and the verification command outputs in the deployment's private evidence archive.
 
+## Disk exhaustion
+
+Stop publication, ingestion and other work that allocates substantial storage when the volume is full. A failed SQLite startup is not evidence of an empty workspace. Do not delete the database, its write-ahead log, its shared-memory file, the audit key or operational evidence to make the service start. Preserve the stopped database files and key in restricted storage before inspection; never publish those copies.
+
+Recover space through the deployment's approved housekeeping process. Distinguish reproducible temporary build files from authoritative releases, source originals, model artifacts and private records. Check resolved paths and preserve current source and previous release assets. Compression also needs working space and can fail on a full volume. Do not claim that it freed space merely because a compression attribute was set.
+
+After recovering space, run SQLite `PRAGMA integrity_check` and `PRAGMA foreign_key_check` using a read-only connection. Start the matching application version, verify the authenticated actor and organisation, compare API records with persistent data, and verify every organisation's audit chain. Ordinary sign-in creates identity sessions and audit entries; distinguish those from changes to tasks or operational records. Review queued jobs before restarting a worker. Keep publication blocked until sufficient working space exists for the archive, temporary source pack, installation checks and backups.
+
+The 31 October 2026 development-host recovery preserved all 20 existing companion records and verified two tasks against the API, with a valid audit chain. No operational records or model generations were created. This is one recorded recovery, not a deployment reliability guarantee. See the dated disk-recovery, API/data and browser receipts in `release-evidence/v0.3.1-rc.1/`.
+
 
 ## Recorded container verification
 

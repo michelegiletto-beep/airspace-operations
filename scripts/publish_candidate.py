@@ -12,11 +12,15 @@ import tempfile
 import zipfile
 
 from release_support import current_version, assert_release_writable
+from publication_media import RASTER_SUFFIXES, validate_raster_encoding
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = "michelegiletto-beep/airspace-operations"
 BASELINE = "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30"
 REQUIRED_CHECKS = {"python_tests", "frontend_tests", "frontend_build", "frontend_dependency_audit", "python_dependency_audit", "optional_neural_dependency_audit", "baseline_integrity"}
+MAX_PUBLICATION_MEDIA_RASTERS = 512
+MAX_PUBLICATION_MEDIA_ENTRIES = 4096
+MAX_PUBLICATION_MEDIA_DEPTH = 8
 
 
 def validate_context(root, environment, head):
@@ -200,6 +204,35 @@ def reviewed_publication_material(root, version):
     image = safe_path(root, screenshot_path)
     if not source.is_file() or not image.is_file():
         raise ValueError("Reviewed release notes and the actual companion screenshot are required")
+    # Validate the selected image and every raster in this candidate's namespace.
+    # A release-body screenshot alone must not hide a misnamed mobile capture.
+    media = {image}
+    directory = root / "publication" / "media" / version
+    if directory.exists():
+        safe_path(root, directory.relative_to(root).as_posix())
+        pending, total_entries = [(directory, 0)], 0
+        while pending:
+            folder, depth = pending.pop()
+            # scandir stays lazy; do not materialise a potentially huge folder
+            # before applying the bound to directories and non-image files too.
+            with os.scandir(folder) as entries:
+                for item in entries:
+                    total_entries += 1
+                    if total_entries > MAX_PUBLICATION_MEDIA_ENTRIES:
+                        raise ValueError("Candidate publication media exceeds the bounded entry count")
+                    if depth + 1 > MAX_PUBLICATION_MEDIA_DEPTH:
+                        raise ValueError("Candidate publication media exceeds the bounded nesting depth")
+                    if item.is_symlink():
+                        raise ValueError("Symlinks cannot supply release assets")
+                    entry = Path(item.path)
+                    if item.is_dir():
+                        pending.append((safe_path(root, entry.relative_to(root).as_posix()), depth + 1))
+                    elif item.is_file() and entry.suffix.lower() in RASTER_SUFFIXES:
+                        media.add(safe_path(root, entry.relative_to(root).as_posix()))
+                    if len(media) > MAX_PUBLICATION_MEDIA_RASTERS:
+                        raise ValueError("Candidate publication media exceeds the bounded file count")
+    for item in sorted(media):
+        validate_raster_encoding(item)
     return source, image, screenshot_path
 
 

@@ -1,4 +1,5 @@
 """Isolated release-copy selection checks; no network or publication client."""
+import base64
 import json
 from pathlib import Path
 import sys
@@ -8,7 +9,9 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import publish_candidate as publisher
 
-VERSION = "0.3.1-rc.1"
+VERSION = "0.3.2-rc.1"
+PNG = base64.b64decode("iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAEklEQVR4nGOUMvZlYGBgYgADAAcvAJ6LDLezAAAAAElFTkSuQmCC")
+JPEG = base64.b64decode("/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAAB//EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AMn//2Q==")
 
 
 @pytest.fixture
@@ -18,7 +21,7 @@ def candidate(tmp_path):
     notes.write_text(f"# Release {VERSION}\n\nIsolated software fixture from {{{{SOURCE_COMMIT}}}}.\n")
     image = tmp_path / f"publication/media/{VERSION}/companion.png"
     image.parent.mkdir(parents=True)
-    image.write_bytes(b"Isolated raster fixture, never operational evidence")
+    image.write_bytes(PNG)
     manifest = notes.with_name("manifest.json")
     data = {"version": VERSION, "notes_path": notes.relative_to(tmp_path).as_posix(), "screenshot_path": image.relative_to(tmp_path).as_posix()}
     manifest.write_text(json.dumps(data))
@@ -81,7 +84,7 @@ def test_unsafe_mismatched_or_unpackaged_selection_is_rejected(candidate, change
         publisher.candidate_notes(root, context, [archive])
 
 
-@pytest.mark.parametrize("body", ["# Release 0.3.0-rc.1\nCurrent version0.3.1-rc.1 is mentioned only in prose", "# Release 0.3.1-rc.10", "Isolated prose mentions0.3.1-rc.1", "# Release 0.3.1-rc.1 extra"])
+@pytest.mark.parametrize("body", ["# Release 0.3.0-rc.1\nCurrent version0.3.2-rc.1 is mentioned only in prose", "# Release 0.3.2-rc.10", "Isolated prose mentions0.3.2-rc.1", "# Release 0.3.2-rc.1 extra"])
 def test_matching_manifest_cannot_select_stale_or_ambiguous_release_notes(candidate, body):
     root, notes, image, manifest, data, context, archive = candidate
     notes.write_text(body)
@@ -120,7 +123,7 @@ def test_explicit_review_can_reuse_existing_public_media(candidate):
     root, notes, image, manifest, data, context, archive = candidate
     old = root / "publication/media/v0.3/desktop-companion.jpg"
     old.parent.mkdir(parents=True)
-    old.write_bytes(b"Isolated reviewed media reuse fixture")
+    old.write_bytes(JPEG)
     data["screenshot_path"] = old.relative_to(root).as_posix()
     manifest.write_text(json.dumps(data))
     result = publisher.candidate_notes(root, context, [archive])
@@ -137,4 +140,80 @@ def test_selected_symlink_cannot_escape_reviewed_source(candidate):
     except OSError:
         pytest.skip("This host cannot create symlinks; containment cases remain tested")
     with pytest.raises(ValueError, match="Symlinks"):
+        publisher.candidate_notes(root, context, [archive])
+
+
+def test_unselected_mobile_capture_cannot_hide_wrong_encoding(candidate):
+    root, notes, image, manifest, data, context, archive = candidate
+    mobile = image.with_name("mobile.png")
+    mobile.write_bytes(JPEG)
+    before = mobile.read_bytes()
+    with pytest.raises(ValueError, match="requires PNG.*identify JPEG"):
+        publisher.candidate_notes(root, context, [archive])
+    assert mobile.read_bytes() == before
+
+
+def test_reused_public_image_still_requires_its_actual_encoding(candidate):
+    root, notes, image, manifest, data, context, archive = candidate
+    old = root / "publication/media/v0.3/desktop-companion.jpg"
+    old.parent.mkdir(parents=True)
+    old.write_bytes(PNG)
+    manifest.write_text(json.dumps(data | {"screenshot_path": old.relative_to(root).as_posix()}))
+    with pytest.raises(ValueError, match="requires JPEG.*identify PNG"):
+        publisher.candidate_notes(root, context, [archive])
+
+
+def test_nested_capture_in_candidate_namespace_is_checked(candidate):
+    root, notes, image, manifest, data, context, archive = candidate
+    mobile = image.parent / "mobile" / "capture.webp"
+    mobile.parent.mkdir()
+    mobile.write_bytes(PNG)
+    with pytest.raises(ValueError, match="requires WEBP.*identify PNG"):
+        publisher.candidate_notes(root, context, [archive])
+
+
+def test_previous_candidate_media_is_preserved_without_blanket_rescan(candidate):
+    root, notes, image, manifest, data, context, archive = candidate
+    old = root / "publication/media/0.3.1-rc.1/mobile.png"
+    old.parent.mkdir(parents=True)
+    old.write_bytes(JPEG)
+    publisher.candidate_notes(root, context, [archive])
+    assert old.read_bytes() == JPEG
+
+
+def test_nonraster_flood_is_bounded_before_image_validation(candidate, monkeypatch):
+    root, notes, image, manifest, data, context, archive = candidate
+    monkeypatch.setattr(publisher, "MAX_PUBLICATION_MEDIA_ENTRIES", 4)
+    for number in range(4):
+        image.with_name(f"metadata{number}.txt").write_text("Isolated non-image fixture")
+    with pytest.raises(ValueError, match="bounded entry count"):
+        publisher.candidate_notes(root, context, [archive])
+
+
+def test_deep_nonraster_directory_is_bounded(candidate, monkeypatch):
+    root, notes, image, manifest, data, context, archive = candidate
+    monkeypatch.setattr(publisher, "MAX_PUBLICATION_MEDIA_DEPTH", 2)
+    metadata = image.parent / "first" / "second" / "metadata.txt"
+    metadata.parent.mkdir(parents=True)
+    metadata.write_text("Isolated deeply nested non-image fixture")
+    with pytest.raises(ValueError, match="bounded nesting depth"):
+        publisher.candidate_notes(root, context, [archive])
+
+
+def test_entry_and_depth_boundaries_allow_complete_small_namespace(candidate, monkeypatch):
+    root, notes, image, manifest, data, context, archive = candidate
+    monkeypatch.setattr(publisher, "MAX_PUBLICATION_MEDIA_ENTRIES", 4)
+    monkeypatch.setattr(publisher, "MAX_PUBLICATION_MEDIA_DEPTH", 2)
+    folder = image.parent / "mobile"
+    folder.mkdir()
+    (folder / "metadata.txt").write_text("Isolated non-image fixture")
+    (folder / "capture.png").write_bytes(PNG)
+    publisher.candidate_notes(root, context, [archive])
+
+
+def test_raster_count_bound_is_retained(candidate, monkeypatch):
+    root, notes, image, manifest, data, context, archive = candidate
+    monkeypatch.setattr(publisher, "MAX_PUBLICATION_MEDIA_RASTERS", 1)
+    image.with_name("mobile.png").write_bytes(PNG)
+    with pytest.raises(ValueError, match="bounded file count"):
         publisher.candidate_notes(root, context, [archive])
