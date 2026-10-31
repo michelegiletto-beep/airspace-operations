@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-31T16:54:40.259043+00:00",
+  "success": true,
+  "scope": "Restored existing development API and authenticated read-only task/data/audit comparison after disk-full failure; sign-in creates ordinary identity session/audit entries",
+  "health": {
+    "status": "ok",
+    "version": "0.3.1-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "api_database_tasks_exact": true,
+  "tasks": 2,
+  "records_count": 20,
+  "record_snapshot_exactly_preserved": true,
+  "records_snapshot_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01",
+  "audit_valid": true,
+  "audit_count": 45,
+  "task_states": [
+    {
+      "status": "Completed",
+      "version": 2,
+      "sha256": "94df8703ff398427bb05d155cddfd44fd00fa70565a7f4f904493649c7e816f8"
+    },
+    {
+      "status": "Open",
+      "version": 1,
+      "sha256": "c0918ab201ddf8786bbb4da0fdc1cedebe4e2db98f9002cbb8c6e6ded7057c16"
+    }
+  ],
+  "actor_role": "regulatory",
+  "operational_records": 0,
+  "new_model_calls": 0,
+  "new_training": false,
+  "task_or_operational_writes": false,
+  "credentials_logged": false,
+  "database_integrity_check": [
+    "ok"
+  ]
+}

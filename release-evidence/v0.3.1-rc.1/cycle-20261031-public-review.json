@@ -1,0 +1,493 @@
+{
+  "started_at": "2026-10-31T16:46:15.377598+00:00",
+  "scope": "Fresh anonymous HTTP retrieval and exact byte comparison; no new installation, model run, domain review or operational acceptance.",
+  "anonymous_requests": true,
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "frozen_files_modified": false,
+  "errors": [],
+  "github": {
+    "release_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1",
+    "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+    "tag_unchanged": true,
+    "prerelease": true,
+    "assets": [
+      {
+        "name": "ci-verification.json",
+        "id": 693257555,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/ci-verification.json",
+        "bytes": 22095,
+        "sha256": "fd8e6b20e3b44692ce9bca2482d9bfe21365fdad56785eb2f85ba50a89313747",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/f2496d40-1e89-407f-95ac-25c7a3117ca8",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "LICENSE",
+        "id": 693257552,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/LICENSE",
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/d7ebd33d-0208-47a9-9244-b8f0f91f77e8",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "release-gates.json",
+        "id": 693257550,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/release-gates.json",
+        "bytes": 1046,
+        "sha256": "91848a143f98f26e8c293c97cc66ea7f1b93de41bb40fd34cc529b4be33e85c7",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/8726a11d-3d17-46dd-bac5-5f9931064ec9",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "RELEASE_PROVENANCE.json",
+        "id": 693257516,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/RELEASE_PROVENANCE.json",
+        "bytes": 77030,
+        "sha256": "91307f2e4e2c9fb792af12c149cb4fa4dae85dd56958899cf80a8c98164e070b",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/72f8c8cf-754f-490e-b43e-9d282f405a15",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "SBOM.cdx.json",
+        "id": 693257521,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/SBOM.cdx.json",
+        "bytes": 80300,
+        "sha256": "13dfa8bd2f218a8c157f5566af9cabc49279590c701dcb6d9efb3edbbd0d67b1",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/dc3ed071-b0ba-4334-8412-d09c63115cb9",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "id": 693257523,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/SHA256SUMS.txt",
+        "bytes": 112,
+        "sha256": "8bc1740917f4faeac6f2812a14fc8d56ffdcc9b89909a0045614e0343b601ebc",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/0cd27043-2e0f-41b7-a5e0-bf74f5ccb902",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "standalone-archive-verification.json",
+        "id": 693257554,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/standalone-archive-verification.json",
+        "bytes": 6084,
+        "sha256": "053195c16579068dfad45ec3ac6d8b8278a727c843bbd5f3a9ae7e4d795351dc",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/c89a6c2c-a62f-4f8d-9453-cb508ef3bf35",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+        "id": 693257526,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+        "bytes": 12504321,
+        "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/06b32b7b-79ab-47e3-87fd-76e66ac5426a",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      },
+      {
+        "name": "THIRD_PARTY_NOTICES.md",
+        "id": 693257524,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/THIRD_PARTY_NOTICES.md",
+        "bytes": 13971,
+        "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+        "matches_prior_receipt_and_current_github_digest": true,
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/9699b799-2b5a-422b-86c9-361559993a66",
+        "redirect_hosts": [
+          "release-assets.githubusercontent.com"
+        ]
+      }
+    ],
+    "archive_members": 638,
+    "exact_manifest_hashes": 637,
+    "exact_ci_source_hashes": 200,
+    "known_mobile_filename_encoding_mismatch_preserved": true
+  },
+  "huggingface": {
+    "repositories": [
+      {
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+        "metadata_url": "https://huggingface.co/api/models/Magic51/system-lab-airspace-shall-router",
+        "revision": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+        "matches_prior_published_presentation": true,
+        "files": [
+          {
+            "path": "README.md",
+            "bytes": 7478,
+            "sha256": "fdcc2eb140f7c72bf30feb6b37e1063705d3aa9fb07f6e6aacd5d0734ff38588",
+            "exact": true,
+            "status": 200,
+            "final_url": "https://huggingface.co/api/resolve-cache/models/Magic51/system-lab-airspace-shall-router/7addd5efe4a17729463fe392cf25489cafc7ccc6/README.md",
+            "redirect_hosts": [
+              "huggingface.co"
+            ]
+          },
+          {
+            "path": "media/agent-orchestration.jpg",
+            "bytes": 211029,
+            "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+            "exact": true,
+            "status": 200,
+            "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ebe17f4e3bd020df9908/2ebcbdf1be38f88bd198e70edf7b56537f58bf7eee317bd64d71f04da47dd08f",
+            "redirect_hosts": [
+              "us.aws.cdn.hf.co"
+            ]
+          },
+          {
+            "path": "media/orchestration-pipeline.svg",
+            "bytes": 4561,
+            "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+            "exact": true,
+            "status": 200,
+            "final_url": "https://huggingface.co/api/resolve-cache/models/Magic51/system-lab-airspace-shall-router/7addd5efe4a17729463fe392cf25489cafc7ccc6/media%2Forchestration-pipeline.svg",
+            "redirect_hosts": [
+              "huggingface.co"
+            ]
+          }
+        ],
+        "original_artifact": {
+          "path": "student.safetensors",
+          "bytes": 49824,
+          "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+          "unchanged": true,
+          "status": 200,
+          "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ebe17f4e3bd020df9908/2d94c6d2f1a680c61a36d91cd8e31b2f1bfac2996ed58644837847a74eb25ca7",
+          "redirect_hosts": [
+            "us.aws.cdn.hf.co"
+          ]
+        }
+      },
+      {
+        "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+        "metadata_url": "https://huggingface.co/api/datasets/Magic51/system-lab-airspace-source-annotations",
+        "revision": "e9fb162a31fa139c8b511fbc84a18277b6aa560c",
+        "matches_prior_published_presentation": true,
+        "files": [
+          {
+            "path": "README.md",
+            "bytes": 6276,
+            "sha256": "7ef5704ff31e932b212ec3a9d030831c834683cbf3ab5acbfddda7b1e5dc23bb",
+            "exact": true,
+            "status": 200,
+            "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/e9fb162a31fa139c8b511fbc84a18277b6aa560c/README.md",
+            "redirect_hosts": [
+              "huggingface.co"
+            ]
+          },
+          {
+            "path": "media/agent-orchestration.jpg",
+            "bytes": 211029,
+            "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+            "exact": true,
+            "status": 200,
+            "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ede619d3d328810358aa/2ebcbdf1be38f88bd198e70edf7b56537f58bf7eee317bd64d71f04da47dd08f",
+            "redirect_hosts": [
+              "us.aws.cdn.hf.co"
+            ]
+          },
+          {
+            "path": "media/orchestration-pipeline.svg",
+            "bytes": 4561,
+            "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+            "exact": true,
+            "status": 200,
+            "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/e9fb162a31fa139c8b511fbc84a18277b6aa560c/media%2Forchestration-pipeline.svg",
+            "redirect_hosts": [
+              "huggingface.co"
+            ]
+          }
+        ],
+        "original_artifact": {
+          "path": "dataset.jsonl.gz",
+          "bytes": 72466,
+          "sha256": "0f58b949d1e81e714976693fb01a5cfc75dbc5a2a0f3198c4873ee17c1e11948",
+          "unchanged": true,
+          "uncompressed_sha256": "4dfc9580f3997ddf0d8c8cd72ca188409b786fd5127a11ba0ddcd4c4d6a04260",
+          "rows": 288,
+          "status": 200,
+          "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ede619d3d328810358aa/4891a2b5bba36410a1a2ff900cf22e00520c7991b12b2662e1cbe44a52de792c",
+          "redirect_hosts": [
+            "us.aws.cdn.hf.co"
+          ]
+        }
+      }
+    ],
+    "space": {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
+      "metadata_url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+      "revision": "9108be3ecbc724a84d5d169eff869b58b17de1cc",
+      "sdk": "static",
+      "files": [
+        {
+          "path": "app.js",
+          "bytes": 9956,
+          "sha256": "98a23b3f43a7b9d24750bd72d3b83f4837ae7455ee1e7ea5fb1e1aa1d5d1547d",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/app.js",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "data/actual-ui-workflow.json",
+          "bytes": 133118,
+          "sha256": "f6e8d7927bb9ffdd6a2355e8b0f2b8a33c327155c2cb33eba03e6b6ab6ed549f",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/data%2Factual-ui-workflow.json",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "data/causal-comparison.json",
+          "bytes": 546869,
+          "sha256": "2c1fda31cb48b2308ee68de062957b4d9c458903de4a77000e6945079ae2eb75",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/data%2Fcausal-comparison.json",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "data/evidence.json",
+          "bytes": 39490,
+          "sha256": "b2bc32950ddd50ac1df1e4d0cacdbc6b2ee8e1ba155c1eb2f11b285c7ad9ae69",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/data%2Fevidence.json",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "data/first-causal-run.json",
+          "bytes": 129419,
+          "sha256": "52e2a1bbf7d022bbe6540c28036e8136ce0a93c707c9222848485639d4936747",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/data%2Ffirst-causal-run.json",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "data/provenance.json",
+          "bytes": 2417,
+          "sha256": "1d0e1906c5bae9a5c24bd599c23e1afb9b57e8294513a3a9b6fb23e182f479b1",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/data%2Fprovenance.json",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "data/student-run.json",
+          "bytes": 18937,
+          "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/data%2Fstudent-run.json",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "index.html",
+          "bytes": 12203,
+          "sha256": "79a3cabb0580553979cc2459cff180e66cf45af35a61793c492765ebf42eb4b8",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/index.html",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/LICENSE",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "media/agent-orchestration-detail.jpg",
+          "bytes": 71132,
+          "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/media%2Fagent-orchestration-detail.jpg",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "media/agent-orchestration.jpg",
+          "bytes": 211029,
+          "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/2ebcbdf1be38f88bd198e70edf7b56537f58bf7eee317bd64d71f04da47dd08f",
+          "redirect_hosts": [
+            "us.aws.cdn.hf.co"
+          ]
+        },
+        {
+          "path": "media/airspace-planning.jpg",
+          "bytes": 112044,
+          "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/c628fae7b985cbde631a2803917321e06c404a077cc0133272d33e0224e93a2c",
+          "redirect_hosts": [
+            "us.aws.cdn.hf.co"
+          ]
+        },
+        {
+          "path": "media/european-coordination.jpg",
+          "bytes": 127424,
+          "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/9a2791057f0a9f74e2b78be4c4ce733df40d858a6ddac0d1da3dedf155fe3ad0",
+          "redirect_hosts": [
+            "us.aws.cdn.hf.co"
+          ]
+        },
+        {
+          "path": "media/fleet-maintenance.jpg",
+          "bytes": 75096,
+          "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/media%2Ffleet-maintenance.jpg",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "media/mission-control.jpg",
+          "bytes": 129906,
+          "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/ff1b6915bcb9d1bb1d564f9147e53c4cb85c18936788d612482719b4462c9ed9",
+          "redirect_hosts": [
+            "us.aws.cdn.hf.co"
+          ]
+        },
+        {
+          "path": "media/orchestration-pipeline.svg",
+          "bytes": 4561,
+          "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/media%2Forchestration-pipeline.svg",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "media/scheduling.jpg",
+          "bytes": 98935,
+          "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/media%2Fscheduling.jpg",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "NOTICE.md",
+          "bytes": 1481,
+          "sha256": "acd91ff4ee68ff563fb1157af97a7571ecad6291c9b76853646bc55669bf04d0",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/NOTICE.md",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "prepare.py",
+          "bytes": 6735,
+          "sha256": "65cf5e3cd9171c95b5880cb8395b97ee96580a1fa8e89f5ebd538db3adf47d98",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/prepare.py",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "README.md",
+          "bytes": 4435,
+          "sha256": "31df4ebea1bb5433e2cad9297e8692bd90506097f535b0c1d728da1ab2c38843",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/README.md",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        },
+        {
+          "path": "styles.css",
+          "bytes": 11552,
+          "sha256": "a222b494ef297fe772717a38747b372a803bc8250fe57090c052fd368293470d",
+          "exact": true,
+          "status": 200,
+          "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/9108be3ecbc724a84d5d169eff869b58b17de1cc/styles.css",
+          "redirect_hosts": [
+            "huggingface.co"
+          ]
+        }
+      ],
+      "live_inference": false
+    },
+    "new_uploads": false,
+    "authentication_or_credential_inspection": false,
+    "scope": "Public original 0.2 presentations and artifacts only. No 0.3 or 0.3.1 Hub update inferred."
+  },
+  "completed_at": "2026-10-31T16:46:30.383636+00:00",
+  "success": true
+}

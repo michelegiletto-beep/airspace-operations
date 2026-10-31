@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-31T17:08:38.150564+00:00",
+  "original_attempt": "Approximately16:49UTC",
+  "state": "Initial health receipt write failed with OSError errno28 and left an empty output; this records that failure and its subsequent recovery",
+  "initial_loopback": "Connection refused before the API was restarted",
+  "initial_api_start": "SQLite disk I/O error while setting WAL mode; C: free bytes0",
+  "later_verified_recovery": "cycle-20261031-recovery-api-data.json",
+  "no_initial_success_claimed": true
+}

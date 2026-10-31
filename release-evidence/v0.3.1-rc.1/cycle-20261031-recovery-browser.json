@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-31T16:55:52.839Z",
+  "scope": "Actual restored loopback application, existing personal engineering tasks only; no new task, operational record or generation",
+  "bundle": [
+    "http://127.0.0.1:8787/assets/index-BUP3fbhH.js"
+  ],
+  "client_width": 1265,
+  "dock": {
+    "right": 1245,
+    "width": 470,
+    "x": 775
+  },
+  "headings": [
+    "Remember to review the release verification evidence before publishing version 0.3.",
+    "Remember to review the actual source register before preparing an authorisation case"
+  ],
+  "inner_height": 720,
+  "inner_width": 1280,
+  "page_width": 1265,
+  "task_descriptions": 0,
+  "task_states": [
+    "Completed",
+    "Open"
+  ],
+  "warnings_errors": 0,
+  "screenshot": "runtime/review-v3/recovery-20261031/desktop-native.jpg",
+  "screenshot_private": true
+}

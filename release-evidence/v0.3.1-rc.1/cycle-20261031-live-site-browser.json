@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-31T17:05:49.502Z",
+  "scope": "Actual existing published page only; no new deployment and no fresh binary download verification",
+  "native_site_version": 97,
+  "initial_anonymous_python_request": "HTTP403; no bypass or secret token used",
+  "current_release": "Missions and resources",
+  "horizontal_overflow": false,
+  "images": [
+    {
+      "loaded": true,
+      "src": "/airspace-operations/media/v0.3/desktop-companion.jpg"
+    },
+    {
+      "loaded": false,
+      "src": "/airspace-operations/media/v0.3/mobile-companion.jpg"
+    }
+  ],
+  "links": [
+    "/airspace-operations/releases/0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+    "/airspace-operations/releases/0.3.0-rc.1/SHA256SUMS.txt",
+    "/airspace-operations/releases/0.3.0-rc.1/SBOM.cdx.json",
+    "/airspace-operations/releases/0.3.0-rc.1/RELEASE_PROVENANCE.json",
+    "/airspace-operations/releases/0.3.0-rc.1/standalone-archive-verification.json",
+    "/airspace-operations/releases/0.3.0-rc.1/release-gates.json"
+  ],
+  "new031": false,
+  "published03": true,
+  "title": "System Lab Airspace Operations | System Labs",
+  "images_after_anchor_navigation": [
+    {
+      "loaded": true,
+      "loading": null,
+      "src": "/airspace-operations/media/v0.3/desktop-companion.jpg"
+    },
+    {
+      "loaded": true,
+      "loading": "lazy",
+      "src": "/airspace-operations/media/v0.3/mobile-companion.jpg"
+    }
+  ],
+  "all_images_loaded_after_lazy_navigation": true,
+  "final_checked_at": "2026-10-31T17:09:07.416Z"
+}

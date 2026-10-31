@@ -1,5 +1,7 @@
 # Executable delivery plan
 
+31 October checkpoint: the unreleased screenshot-format guard passed its own source/container/PostgreSQL/worker/restoration CI at c6839aeda8276685ea55bae724d90669ae2e9bcd. Preserve every frozen candidate. Before another package, recover adequate local working space and verify the recovered API, worker and audit. Then finish only the existing System Lab page from clean locala7c4da5 with verified remote309b6fa, native save/deploy and49-resource retrieval. Hugging Face presentation updates require the existing supported authenticated account. A future distinct candidate must use correctly named media and its own complete release/install gates. The latest cycle contains commands, failure evidence and the exact bounded continuation; the original implementation and acceptance scope below remains incomplete.
+
 Baseline: SPECIFICATION.md, SHA-256 43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30. Requirements are ASO-section-paragraph in REQUIREMENTS_TRACEABILITY.csv. The plan implements the whole baseline; unfinished scope remains explicit.
 
 1. Governance and persistent foundation: inspect workspace; isolate product; tenant identity, database schema and migrations, audit chain, versioned records, outbox and durable jobs; source metadata and retrieval. Verify tenant separation, concurrent edits, approval controls, source filters and malicious inputs.

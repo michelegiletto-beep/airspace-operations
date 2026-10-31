@@ -1,0 +1,106 @@
+{
+  "prepared_at": "2026-10-31T17:14:22.353521+00:00",
+  "state": "Prepared",
+  "presentation_only": true,
+  "application_version": "0.3.1-rc.1",
+  "application_source": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+  "files": [
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/model/media/companion-tasks.png",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "media/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/model/NOTICE.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "NOTICE.md",
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/model/README.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "README.md",
+      "bytes": 5630,
+      "sha256": "bce87e818398e569a502a4328c86287fc52928d5fcae4787d90d1d00917340e3"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/dataset/README.md",
+      "repo_type": "dataset",
+      "repo_id": "Magic51/system-lab-airspace-source-annotations",
+      "target": "README.md",
+      "bytes": 4343,
+      "sha256": "19d627252ab79396e3a3e94324a0dee95c64ed14432f970a93ae4163f4c28404"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/index.html",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "index.html",
+      "bytes": 6462,
+      "sha256": "577598f34964f3130d797b2e75ed4fa45c5f477ea5c48d1fa01a1d39c23ce5a4"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/media/application-tasks.png",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/NOTICE.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/README.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "README.md",
+      "bytes": 1915,
+      "sha256": "54c5420ddc3ed7594c798ff681f9d46b559b8c6344fcd53f0e8b56820c929320"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/styles.css",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16"
+    }
+  ],
+  "new_uploads": false,
+  "weights_changed": false,
+  "dataset_records_changed": false,
+  "live_inference": false,
+  "publication_blocker": "Existing supported Hugging Face write access is unavailable; browser signed out and configured token absent",
+  "publish_procedure": [
+    "Recheck existing account Magic51 and exact write permissions using supported authentication",
+    "Re-read all three remote revisions and reconcile newer edits before any commit",
+    "Commit only each listed target file to its existing matching repository; preserve all unlisted historical artifacts",
+    "Do not upload prepare.py, validator, manifest, model weights, dataset rows or private runtime files",
+    "Retrieve each changed file at its returned immutable revision, compare bytes and hashes, then verify actual static Space rendering",
+    "Record Uploaded, Published and Independently Retrieved separately; retain rollback revision identifiers"
+  ],
+  "archive_bytes": 12504321,
+  "archive_sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+  "release_ci": 41118769822,
+  "rights": "Owner-authorised official screenshots retain reserved rights; no source documents or new training artifacts are redistributed"
+}

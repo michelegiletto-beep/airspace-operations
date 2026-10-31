@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-31T17:15:07.550Z",
+  "state": "Prepared local Space browser verification only; no Hub upload",
+  "desktop": {
+    "buttons": 0,
+    "client_width": 1265,
+    "images": [
+      {
+        "loaded": true,
+        "src": "media/application-tasks.png"
+      },
+      {
+        "loaded": true,
+        "src": "media/companion-tasks-mobile.jpg"
+      }
+    ],
+    "inner_height": 720,
+    "inner_width": 1280,
+    "page_width": 1265
+  },
+  "mobile": {
+    "buttons": 0,
+    "client_width": 375,
+    "images": [
+      {
+        "loaded": true,
+        "src": "media/application-tasks.png"
+      },
+      {
+        "loaded": true,
+        "src": "media/companion-tasks-mobile.jpg"
+      }
+    ],
+    "inner_height": 844,
+    "inner_width": 390,
+    "page_width": 375
+  },
+  "warnings_errors": 0,
+  "viewport_reset": true,
+  "screenshot_private": "runtime/review-v3/recovery-20261031/hub-preview-mobile.jpg",
+  "no_operational_controls": true,
+  "no_new_model_calls": true
+}

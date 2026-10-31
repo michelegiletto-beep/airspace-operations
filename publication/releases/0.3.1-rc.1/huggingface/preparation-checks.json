@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-31T17:14:22.623956+00:00",
+  "state": "Prepared; local structural, copy, rights-boundary and hash checks passed",
+  "application_version": "0.3.1-rc.1",
+  "application_source": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+  "target_files": 10,
+  "secret_patterns_found": 0,
+  "images": [
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/model/media/companion-tasks.png",
+      "encoding": "PNG",
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/media/application-tasks.png",
+      "encoding": "PNG",
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7"
+    },
+    {
+      "source": "publication/releases/0.3.1-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "encoding": "JPEG",
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c"
+    }
+  ],
+  "local_space_references_valid": true,
+  "active_or_operational_controls": false,
+  "student_bytes_unchanged": true,
+  "weights_or_dataset_rows_in_upload_list": false,
+  "new_model_calls": 0,
+  "new_training_runs": 0,
+  "new_uploads": false,
+  "authentication_attempts": false,
+  "rights_notice_in_model_and_space": true,
+  "existing_space_source_and_historical_notice_preserved": true,
+  "review_repair": "Read-only engineering copy review identified that an artwork-only Space NOTICE would drop existing EASA/EU attribution; the complete historical notice is now retained before the added asset terms",
+  "raw_legal_documents_redistributed": false,
+  "browser_verified": false,
+  "release_verification": {
+    "source_tests": 479,
+    "exact_archive_tests": 479,
+    "skipped": 20,
+    "frontend_tests": 123,
+    "postgresql_tests": 19,
+    "ci": 41118769822
+  },
+  "limitations": [
+    "Static Space browser rendering and independent retrieval remain pending a real upload to the existing account",
+    "Container checks do not decode pixel data or prove whole-product copy completeness",
+    "The frozen mobile JPEG/PNG filename mismatch remains; this presentation uses an identical.jpg copy"
+  ],
+  "manifest_sha256": "8dc8ed1cd8f80f0ca06822545566255e7d8a009a12a1c3d2560202b99af21482",
+  "command": ".venv/Scripts/python.exe -B publication/releases/0.3.1-rc.1/huggingface/verify_preparation.py"
+}

@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-31T17:08:38.150564+00:00",
+  "scope": "Unreleased development source; no new candidate or retroactive change to frozen release verification",
+  "commit": "c6839aeda8276685ea55bae724d90669ae2e9bcd",
+  "tree": "85e24166d5c47440fe28dc1d1a9a5e831d446438",
+  "branch": "codex/airspace-media-encoding",
+  "run_id": 41222363007,
+  "job_id": 124599411422,
+  "conclusion": "success",
+  "completed_at": "2026-10-31T17:02:58Z",
+  "source_tests": {
+    "passed": 509,
+    "skipped": 20,
+    "warnings": 3,
+    "seconds": 71.39
+  },
+  "postgresql_tests": {
+    "passed": 19,
+    "warnings": 1,
+    "seconds": 8.06
+  },
+  "actual_container_build_and_health": true,
+  "actual_running_worker_api_job": true,
+  "worker_job_audit_valid": true,
+  "actual_postgresql_backup_and_restore": true,
+  "restored_audit_valid": true,
+  "publication_job": "Skipped by branch policy; no candidate release",
+  "raw_log": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.log.txt",
+  "raw_log_line_endings": "Decoded GitHub connector text normalised to LF",
+  "raw_log_sha256": "0b07c22048406d4d8fc4ef7b6cbd63d1a1a16a27fa132d4e4ed7162389a27dbe",
+  "new_frontend_test_run": false,
+  "frontend_files_unchanged_against_frozen_zip": 81,
+  "backend_python_files_unchanged_against_frozen_zip": 29,
+  "operational_acceptance": false
+}

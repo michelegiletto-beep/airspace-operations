@@ -12,7 +12,9 @@
   ],
   "history": [
     "publication/history/0.1.0-rc.1.json",
-    "publication/history/0.2.0-rc.1.json"
+    "publication/history/0.2.0-rc.1.json",
+    "publication/history/0.3.0-rc.1.json",
+    "publication/history/0.3.1-rc.1.json"
   ],
   "destinations": [
     {
@@ -22,15 +24,15 @@
       "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
       "tagged_release": true,
       "release": "0.3.1-rc.1",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261030T195233Z-public-downloads.json"
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-public-review.json"
     },
     {
       "destination": "GitHub tagged candidate release",
       "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1",
       "state": "Independently Retrieved",
-      "prior_release": "0.2.0-rc.1",
+      "prior_release": "0.3.0-rc.1",
       "release": "0.3.1-rc.1",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261030T195233Z-public-downloads.json",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-public-review.json",
       "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36"
     },
     {
@@ -53,8 +55,10 @@
         "semantic": 3
       },
       "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json",
-      "new_revision_state": "Prepared and built; sourcepush stalled, attempt cancelled before any save/deploy",
-      "prepared_source_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d"
+      "new_revision_state": "Prepared and built; remote source reconciled; new packaging blocked by local storage",
+      "prepared_source_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d",
+      "remote_source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+      "new_revision_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-site-checkpoint.json"
     },
     {
       "destination": "Hugging Face model presentation",
@@ -62,8 +66,12 @@
       "state": "Prepared",
       "prior_release": "0.2.0-rc.1",
       "new_upload": false,
-      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
-      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+      "blocker": "Existing supported browser session is signed out and no configured Hub token is available; no new upload occurred",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged",
+      "prepared_application_version": "0.3.1-rc.1",
+      "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
+      "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
+      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json"
     },
     {
       "destination": "Hugging Face dataset presentation",
@@ -71,8 +79,12 @@
       "state": "Prepared",
       "prior_release": "0.2.0-rc.1",
       "new_upload": false,
-      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
-      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+      "blocker": "Existing supported browser session is signed out and no configured Hub token is available; no new upload occurred",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged",
+      "prepared_application_version": "0.3.1-rc.1",
+      "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
+      "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
+      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json"
     },
     {
       "destination": "Hugging Face recorded evaluation Space",
@@ -80,16 +92,21 @@
       "state": "Prepared",
       "prior_release": "0.2.0-rc.1",
       "new_upload": false,
-      "blocker": "Existing account is signed out and no usable configured Hub credential is available",
-      "current_published_revision": "0.2 presentation; original artifacts unchanged"
+      "blocker": "Existing supported browser session is signed out and no configured Hub token is available; no new upload occurred",
+      "current_published_revision": "0.2 presentation; original artifacts unchanged",
+      "prepared_application_version": "0.3.1-rc.1",
+      "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
+      "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
+      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json"
     }
   ],
-  "states_reached_scope": "GitHub0.3.1 release independently retrieved. System Lab remains liveversion97; new0.3.1 page is locally built but sourcepushstalled, no newdeployment claimed.",
+  "states_reached_scope": "GitHub0.3.1 remains independently retrieved. System Lab remains live at version97 with0.3 content. No new Site save/deployment, Hub update or candidate release occurred in this cycle.",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-10-30T20:09:09.097763+00:00",
+  "last_checked_at": "2026-10-31T17:16:00Z",
   "release_blockers": [
-    "System Lab sourcepush stalled on git-remote-https after passing5scopedtests and fullbuild; localcommit and files retained. Reconcile remoteHEAD with fresh ephemeralSitecredential before retrying.",
-    "Hugging Face update still requires a supported authenticated existing write session; no newupload."
+    "Insufficient local working space after actual disk exhaustion; approximately140MiB remains. New archive and clean-install work waits for additional storage.",
+    "Existing System Lab prepared source still needs its successful push/package, native save/deployment and49-resource independent verification.",
+    "Hugging Face presentation updates require supported authenticated existing write access. No new upload occurred."
   ],
   "candidate_ci": {
     "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
@@ -119,6 +136,23 @@
     "published": true
   },
   "known_presentation_defects": [
-    "Frozen companion-tasks-mobile.png is validJPEGencodeddata under aPNGfilename. Its bytes/dimensions/provenance are verified; preserve artifact. New Site uses a byte-identical.jpg alias. Fix naming andaddencodingguard in a future distinctrelease."
-  ]
+    "Frozen companion-tasks-mobile.png contains valid JPEG bytes under a PNG filename. Preserve its bytes and tag. The prepared Site uses a byte-identical.jpg alias; the new development guard rejects this mismatch. A correctly named new media namespace and all candidate gates remain required for a future release."
+  ],
+  "unreleased_development": {
+    "branch": "codex/airspace-media-encoding",
+    "commit": "c6839aeda8276685ea55bae724d90669ae2e9bcd",
+    "ci_run": 41222363007,
+    "ci_state": "success",
+    "state": "Source independently retrieved; no candidate tag or release assets",
+    "feature": "Bounded publication screenshot encoding and filename validation",
+    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.json"
+  },
+  "development_environment": {
+    "api": "Recovered and browser/API/data verified",
+    "worker": "Healthy and idle; all6existing jobs Completed",
+    "data_snapshot_unchanged": true,
+    "remaining_free_bytes": 151158784,
+    "new_model_calls": 0,
+    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-recovery-api-data.json"
+  }
 }

@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-31T16:56:37.954263+00:00",
+  "reviewer": "/root/guard_final_review",
+  "review_kind": "Read-only engineering review; not aviation or professional certification",
+  "scope": "Unreleased raster filename/container guard and publisher integration",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "issue": "Candidate traversal limits the number of supported rasters, but not total nonraster entries or directory depth",
+      "impact": "A very large authored source tree may cause slow traversal before the image-count cap; input is local reviewed source, not an unauthenticated API",
+      "next_action": "Consider a bounded total-entry/depth walk in a subsequent improvement"
+    }
+  ],
+  "checked": [
+    "Selected image and all supported candidate namespace rasters are inspected, including nested and unselected captures",
+    "Canonical relative paths, resolved root containment and symlink rejection occur before raster reads",
+    "32MiB per image and512raster count limits; sequential processing",
+    "PNG/JPEG/WebP container-framing scope explicitly excludes decompressed pixel validity and visual acceptance",
+    "Historical media is preserved; selected reused images remain checked",
+    "Frozen0.3.1 mismatch is rejected without replacing or converting bytes"
+  ],
+  "tests": {
+    "command": ".venv/Scripts/python.exe -B -m pytest -q tests/test_publication_raster_guard.py tests/test_publication_material.py -p no:cacheprovider",
+    "environment": {
+      "PYTHONPATH": "backend"
+    },
+    "exit_code": 0,
+    "passed": 60,
+    "skipped": 1,
+    "seconds": 1.9,
+    "skip_reason": "Host cannot create symlinks; existing conditional containment test"
+  },
+  "source_hashes": {
+    "scripts/publication_media.py": "015435198910b888176406f8e22e6d93fc235585ea15a0ff642ae1facd07bda1",
+    "scripts/publish_candidate.py": "2ed9c74c52c902dadfb9b3c080b98eecfa4bab90c673e7e9a0e885574edcc427",
+    "tests/test_publication_raster_guard.py": "bed601f4e97aae3f97fd3799579789c99a70235ecc2ccc9e1f9640f16d7a3366",
+    "tests/test_publication_material.py": "4962277f2561363c3f2741bedc832e75af6e2a2c47cb148cf6b865b3a61cca6b"
+  },
+  "source_files_edited": false,
+  "external_actions": false,
+  "model_calls": 0,
+  "new_release_claimed": false
+}

@@ -1,0 +1,16 @@
+{
+  "reviewed_at": "2026-10-31T17:15:00Z",
+  "state": "Prepared material reviewed; no publication",
+  "review_kind": "Read-only collaborative engineering copy and rights review, not professional certification",
+  "reviewer": "/root/hub_preparation/review_hub_copy",
+  "finding": "Replacing the existing Space NOTICE with only the artwork notice would drop EASA/EU attribution and historical evidence boundaries while those files remain in the Space",
+  "repair": "The complete original Space NOTICE is retained as a prefix before the additional screenshot and asset terms",
+  "finding_closed": true,
+  "verified_notice_bytes": 3244,
+  "verified_notice_sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+  "other_findings": "No blocking version, test-count, model-limit, animation, static-control or local-reference issue found",
+  "subsequent_local_browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
+  "browser_evidence_scope": "Root separately verified the prepared local Space at1280x720 and390x844, both images loaded, no horizontal overflow or warnings/errors; no remote upload or remote rendering is inferred",
+  "remote_mutations": false,
+  "model_calls": 0
+}

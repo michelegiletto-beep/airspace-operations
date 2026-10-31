@@ -1,0 +1,59 @@
+{
+  "source_commit": "c6839aeda8276685ea55bae724d90669ae2e9bcd",
+  "branch": "codex/airspace-media-encoding",
+  "state": "Development source independently retrieved; not a candidate release",
+  "credentials_used": false,
+  "environment_proxies_used": false,
+  "files": [
+    {
+      "path": "scripts/publication_media.py",
+      "sha256": "015435198910b888176406f8e22e6d93fc235585ea15a0ff642ae1facd07bda1",
+      "expected_sha256": "015435198910b888176406f8e22e6d93fc235585ea15a0ff642ae1facd07bda1"
+    },
+    {
+      "path": "scripts/publish_candidate.py",
+      "sha256": "9d6eed3a27e4d8a959ea2b9f96ac530359003e351ec979661c476e1098b80459",
+      "expected_sha256": "9d6eed3a27e4d8a959ea2b9f96ac530359003e351ec979661c476e1098b80459"
+    },
+    {
+      "path": "tests/test_publication_raster_guard.py",
+      "sha256": "bed601f4e97aae3f97fd3799579789c99a70235ecc2ccc9e1f9640f16d7a3366",
+      "expected_sha256": "bed601f4e97aae3f97fd3799579789c99a70235ecc2ccc9e1f9640f16d7a3366"
+    },
+    {
+      "path": "tests/test_publication_material.py",
+      "sha256": "bf9e4c2946e7dea1ae404e2366514c83edf3dbd3ebfa46553a9b9a209e181bc1",
+      "expected_sha256": "bf9e4c2946e7dea1ae404e2366514c83edf3dbd3ebfa46553a9b9a209e181bc1"
+    },
+    {
+      "path": "tests/test_candidate_publication.py",
+      "sha256": "9521b818dc637cdef381fa4c40af4b34f0c7ab3af08c6ab3cb20d8cfb23923a7",
+      "expected_sha256": "9521b818dc637cdef381fa4c40af4b34f0c7ab3af08c6ab3cb20d8cfb23923a7"
+    },
+    {
+      "path": "docs/release-media-validation.md",
+      "sha256": "7bd5e52f354ecb8bbf4aef34375227c72ad5fbe28ceeb2936a0feaf1678588a3",
+      "expected_sha256": "7bd5e52f354ecb8bbf4aef34375227c72ad5fbe28ceeb2936a0feaf1678588a3"
+    },
+    {
+      "path": "docs/recovery-runbook.md",
+      "sha256": "c0452e62da72469e90cc3ae79d9aa0f01b72734bb840786d731b36c8d74b6df3",
+      "expected_sha256": "c0452e62da72469e90cc3ae79d9aa0f01b72734bb840786d731b36c8d74b6df3"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-media-encoding-guard.json",
+      "sha256": "313727aee811a9247a47782ba460749af3f6856a352bbc4795ec5e523801e055",
+      "expected_sha256": "313727aee811a9247a47782ba460749af3f6856a352bbc4795ec5e523801e055"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-media-guard-independent-review.json",
+      "sha256": "57d8c31aef990f24488d892ceb351aef7c3b8f4f5f7cb96e7497a39e5e094fdf",
+      "expected_sha256": "57d8c31aef990f24488d892ceb351aef7c3b8f4f5f7cb96e7497a39e5e094fdf"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-media-walk-bounds.json",
+      "sha256": "2f071985fa6648203f5abecc312f858f165f788ea2c0c607c7e747712a9d7610",
+      "expected_sha256": "2f071985fa6648203f5abecc312f858f165f788ea2c0c607c7e747712a9d7610"
+    }
+  ]
+}

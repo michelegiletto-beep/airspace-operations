@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-31T17:08:38.150564+00:00",
+  "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+  "live_version": 97,
+  "live_source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+  "prepared_local_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d",
+  "checkout_clean": true,
+  "git_fsck_exit_code": 0,
+  "remote_fetch_head": "309b6fac69cfbe51278da6d116545cf2916251b7",
+  "proper_opening": "Official helper with a fresh ephemeral credential and no prior-source shortcut; success",
+  "push_attempt": "Own session11466 cancelled after disk exhaustion was confirmed; no archive result",
+  "native_save_performed": false,
+  "native_deployment_performed": false,
+  "binary_download_reverification": "Initial anonymous Python page request returned HTTP403; no fresh49-resource verification claimed",
+  "browser_check": "Existing0.3 page visible, desktop and lazy mobile screenshots load, no horizontal overflow",
+  "remaining_free_bytes": 151158784,
+  "state": "Prepared source retained; packaging blocked by insufficient working space",
+  "prior_scoped_tests_passed": 5,
+  "prior_full_build_passed": true,
+  "unchanged_source_checks_reused": true,
+  "source_repository_credentials_written_to_files_or_shell_arguments": false
+}
