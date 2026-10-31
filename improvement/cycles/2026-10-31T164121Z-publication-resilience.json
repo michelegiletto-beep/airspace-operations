@@ -98,5 +98,19 @@
     "weights_and_dataset_unchanged": true,
     "new_upload": false,
     "existing_authentication_unavailable": true
+  },
+  "finished_at": "2026-10-31T17:20:19.923202+00:00",
+  "final_documentation_source": {
+    "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
+    "exact_files_independently_retrieved": 46,
+    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
+    "scope": "Documentation and Prepared Hub material; no new candidate or Hub publication"
+  },
+  "owned_services_left_running": {
+    "api_session": 26497,
+    "api_pid": 24312,
+    "worker_session": 89268,
+    "worker_process_health": true,
+    "temporary_space_preview_stopped": true
   }
 }

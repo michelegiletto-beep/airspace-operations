@@ -1,0 +1,241 @@
+{
+  "checked_at": "2026-10-31T17:19:18.620930+00:00",
+  "state": "Independently retrieved documentation and Prepared presentation files; no candidate or Hub publication inferred",
+  "source_commit": "72c82cd56d045d770e390a988f77cbcca451c303",
+  "parent": "d12bf37af600c1c6026461002d0b75418f6a11c3",
+  "exact_files": 46,
+  "credentials_used": false,
+  "environment_proxies_used": false,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "65e7d13131029df1dad86b2a8e8bf3be28c360e0e92d77f60e2a8ebd4a96e801",
+      "expected_sha256": "65e7d13131029df1dad86b2a8e8bf3be28c360e0e92d77f60e2a8ebd4a96e801"
+    },
+    {
+      "path": "DECISIONS.md",
+      "sha256": "46e3fdbd72baa7cc0eaacd738b03495911592e88b5329e91ba50b190b419b487",
+      "expected_sha256": "46e3fdbd72baa7cc0eaacd738b03495911592e88b5329e91ba50b190b419b487"
+    },
+    {
+      "path": "HANDOVER.md",
+      "sha256": "8c5e625d12cf0924d6fda3ec3007a12678a41c4027b773babe6dd423ed0c2172",
+      "expected_sha256": "8c5e625d12cf0924d6fda3ec3007a12678a41c4027b773babe6dd423ed0c2172"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "5b0d4a839cba51bacfb7a22f0f5263fc6439678bbc89e2148558d0bad209c3b5",
+      "expected_sha256": "5b0d4a839cba51bacfb7a22f0f5263fc6439678bbc89e2148558d0bad209c3b5"
+    },
+    {
+      "path": "REQUIREMENTS_TRACEABILITY.csv",
+      "sha256": "323edaa51e17c12c2920f21b1a75eec83e70ba2e2576334a6ad3091eb0942420",
+      "expected_sha256": "323edaa51e17c12c2920f21b1a75eec83e70ba2e2576334a6ad3091eb0942420"
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "cbd8cf18eb22e00317903e45243a453e39d34cb067c5fbe587b51c1c68cddd20",
+      "expected_sha256": "cbd8cf18eb22e00317903e45243a453e39d34cb067c5fbe587b51c1c68cddd20"
+    },
+    {
+      "path": "docs/known-limitations.md",
+      "sha256": "357314e9794762df66bc9b555bde342630510587cf5e4eb4991d9ae48ae394ee",
+      "expected_sha256": "357314e9794762df66bc9b555bde342630510587cf5e4eb4991d9ae48ae394ee"
+    },
+    {
+      "path": "docs/recovery-runbook.md",
+      "sha256": "c0452e62da72469e90cc3ae79d9aa0f01b72734bb840786d731b36c8d74b6df3",
+      "expected_sha256": "c0452e62da72469e90cc3ae79d9aa0f01b72734bb840786d731b36c8d74b6df3"
+    },
+    {
+      "path": "docs/release-media-validation.md",
+      "sha256": "7bd5e52f354ecb8bbf4aef34375227c72ad5fbe28ceeb2936a0feaf1678588a3",
+      "expected_sha256": "7bd5e52f354ecb8bbf4aef34375227c72ad5fbe28ceeb2936a0feaf1678588a3"
+    },
+    {
+      "path": "improvement/cycles/2026-10-31T164121Z-publication-resilience.json",
+      "sha256": "3aa352c960d51e9f33c51e710d9b782b2d2234434d4eba9869c64e90ab6d3be9",
+      "expected_sha256": "3aa352c960d51e9f33c51e710d9b782b2d2234434d4eba9869c64e90ab6d3be9"
+    },
+    {
+      "path": "improvement/publication-manifest.json",
+      "sha256": "bb8017c1145470477341392d20229d81d130b5ed81285b5d2ad1b82d6f6039fb",
+      "expected_sha256": "bb8017c1145470477341392d20229d81d130b5ed81285b5d2ad1b82d6f6039fb"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/README.md",
+      "sha256": "114a98a44ce991e87cafa06a79b5538d8de88be2b7706137f5da8d3d8c2a2dd9",
+      "expected_sha256": "114a98a44ce991e87cafa06a79b5538d8de88be2b7706137f5da8d3d8c2a2dd9"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/dataset/README.md",
+      "sha256": "19d627252ab79396e3a3e94324a0dee95c64ed14432f970a93ae4163f4c28404",
+      "expected_sha256": "19d627252ab79396e3a3e94324a0dee95c64ed14432f970a93ae4163f4c28404"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
+      "sha256": "8dc8ed1cd8f80f0ca06822545566255e7d8a009a12a1c3d2560202b99af21482",
+      "expected_sha256": "8dc8ed1cd8f80f0ca06822545566255e7d8a009a12a1c3d2560202b99af21482"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/model/NOTICE.md",
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "expected_sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/model/README.md",
+      "sha256": "bce87e818398e569a502a4328c86287fc52928d5fcae4787d90d1d00917340e3",
+      "expected_sha256": "bce87e818398e569a502a4328c86287fc52928d5fcae4787d90d1d00917340e3"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/model/media/companion-tasks.png",
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "expected_sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/preparation-checks.json",
+      "sha256": "473fb071460fe15fac747b77e869e55a3fcfe667f8206f39cf14286e30528354",
+      "expected_sha256": "473fb071460fe15fac747b77e869e55a3fcfe667f8206f39cf14286e30528354"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/prepare.py",
+      "sha256": "5adb275f1d233a0fe2c3763501fd460a86d1bef0aaa72c00a9591f98d80a4b85",
+      "expected_sha256": "5adb275f1d233a0fe2c3763501fd460a86d1bef0aaa72c00a9591f98d80a4b85"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/review.json",
+      "sha256": "97add73f762879eb28e3e87139a8b01eced71da46de7707034309acbfd6e5928",
+      "expected_sha256": "97add73f762879eb28e3e87139a8b01eced71da46de7707034309acbfd6e5928"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/space/NOTICE.md",
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "expected_sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/space/README.md",
+      "sha256": "54c5420ddc3ed7594c798ff681f9d46b559b8c6344fcd53f0e8b56820c929320",
+      "expected_sha256": "54c5420ddc3ed7594c798ff681f9d46b559b8c6344fcd53f0e8b56820c929320"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/space/index.html",
+      "sha256": "577598f34964f3130d797b2e75ed4fa45c5f477ea5c48d1fa01a1d39c23ce5a4",
+      "expected_sha256": "577598f34964f3130d797b2e75ed4fa45c5f477ea5c48d1fa01a1d39c23ce5a4"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/space/media/application-tasks.png",
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "expected_sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "expected_sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/space/styles.css",
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "expected_sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16"
+    },
+    {
+      "path": "publication/releases/0.3.1-rc.1/huggingface/verify_preparation.py",
+      "sha256": "8851206063b800800736aae1adcc9a4c58582440d09b5180175df33ccba902ca",
+      "expected_sha256": "8851206063b800800736aae1adcc9a4c58582440d09b5180175df33ccba902ca"
+    },
+    {
+      "path": "publication/status.json",
+      "sha256": "b00f67455fac8056a5567f6c1f5ffd5436e472ea89fceabae81b814711f4182b",
+      "expected_sha256": "b00f67455fac8056a5567f6c1f5ffd5436e472ea89fceabae81b814711f4182b"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-boundary-verification.json",
+      "sha256": "07f8b4cf356169adcb2d1fb046f466b7e952359e901b2da76e5c224ddacfa1c1",
+      "expected_sha256": "07f8b4cf356169adcb2d1fb046f466b7e952359e901b2da76e5c224ddacfa1c1"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.json",
+      "sha256": "4d9f3c40ffb3c37111618180717da013f310fcd60f62967a53dc649704271373",
+      "expected_sha256": "4d9f3c40ffb3c37111618180717da013f310fcd60f62967a53dc649704271373"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-source-verification.json",
+      "sha256": "0bfd21f3520e55f97575cb2b2255b87449ba2ac57b19ae4e36d1c081cb4b4a60",
+      "expected_sha256": "0bfd21f3520e55f97575cb2b2255b87449ba2ac57b19ae4e36d1c081cb4b4a60"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-disk-recovery-integrity.json",
+      "sha256": "16cbd60a1530fb18ccd8de790bad0b02631431ee1eb0b06e5ee79a6794713a4e",
+      "expected_sha256": "16cbd60a1530fb18ccd8de790bad0b02631431ee1eb0b06e5ee79a6794713a4e"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-access.json",
+      "sha256": "b736da938fbb2d58dcb262875e7d6259dacb5af1b7653264845d9da4f831a83d",
+      "expected_sha256": "b736da938fbb2d58dcb262875e7d6259dacb5af1b7653264845d9da4f831a83d"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
+      "sha256": "0c0e00348bd2d6d515249410439557d729873754b5658f23ecbebcbf94fe132b",
+      "expected_sha256": "0c0e00348bd2d6d515249410439557d729873754b5658f23ecbebcbf94fe132b"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
+      "sha256": "473fb071460fe15fac747b77e869e55a3fcfe667f8206f39cf14286e30528354",
+      "expected_sha256": "473fb071460fe15fac747b77e869e55a3fcfe667f8206f39cf14286e30528354"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-live-site-browser.json",
+      "sha256": "b247b3e59a0997cb19a3a8a15036d0cfc6b54e36b85f8715269216b66167d739",
+      "expected_sha256": "b247b3e59a0997cb19a3a8a15036d0cfc6b54e36b85f8715269216b66167d739"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-loopback-health.json",
+      "sha256": "35bafa2803b4d52ec3e7df208dfc1722ffce1691dca1050f7c3aa7290efda3a9",
+      "expected_sha256": "35bafa2803b4d52ec3e7df208dfc1722ffce1691dca1050f7c3aa7290efda3a9"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-media-encoding-guard.json",
+      "sha256": "313727aee811a9247a47782ba460749af3f6856a352bbc4795ec5e523801e055",
+      "expected_sha256": "313727aee811a9247a47782ba460749af3f6856a352bbc4795ec5e523801e055"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-media-guard-independent-review.json",
+      "sha256": "57d8c31aef990f24488d892ceb351aef7c3b8f4f5f7cb96e7497a39e5e094fdf",
+      "expected_sha256": "57d8c31aef990f24488d892ceb351aef7c3b8f4f5f7cb96e7497a39e5e094fdf"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-media-walk-bounds.json",
+      "sha256": "2f071985fa6648203f5abecc312f858f165f788ea2c0c607c7e747712a9d7610",
+      "expected_sha256": "2f071985fa6648203f5abecc312f858f165f788ea2c0c607c7e747712a9d7610"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-public-review.json",
+      "sha256": "4e9577299e09d9273cdae00206cda5f053b5d1bb82edc98163864e12100c35f3",
+      "expected_sha256": "4e9577299e09d9273cdae00206cda5f053b5d1bb82edc98163864e12100c35f3"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-public-review.py",
+      "sha256": "d50de6802f2d2d0571dabc479797ec59d62776468128c84c63d42ea5994ffddf",
+      "expected_sha256": "d50de6802f2d2d0571dabc479797ec59d62776468128c84c63d42ea5994ffddf"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-recovery-api-data.json",
+      "sha256": "35fa3dff6d3c159c5215aecec3d0fef8e44b817551ea35dfee372e15d5b9d3b5",
+      "expected_sha256": "35fa3dff6d3c159c5215aecec3d0fef8e44b817551ea35dfee372e15d5b9d3b5"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-recovery-browser.json",
+      "sha256": "6a26919361de26c4386d64248c7913da191146b5a88ba2779e837527aee6ff49",
+      "expected_sha256": "6a26919361de26c4386d64248c7913da191146b5a88ba2779e837527aee6ff49"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-site-checkpoint.json",
+      "sha256": "be09a22dff27a2473e8e811b9921349ed4301b759495aedafab220bfa33f6d06",
+      "expected_sha256": "be09a22dff27a2473e8e811b9921349ed4301b759495aedafab220bfa33f6d06"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.log.txt",
+      "sha256": "0b07c22048406d4d8fc4ef7b6cbd63d1a1a16a27fa132d4e4ed7162389a27dbe",
+      "expected_sha256": "0b07c22048406d4d8fc4ef7b6cbd63d1a1a16a27fa132d4e4ed7162389a27dbe"
+    }
+  ]
+}

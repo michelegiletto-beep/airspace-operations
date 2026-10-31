@@ -102,7 +102,7 @@
   ],
   "states_reached_scope": "GitHub0.3.1 remains independently retrieved. System Lab remains live at version97 with0.3 content. No new Site save/deployment, Hub update or candidate release occurred in this cycle.",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-10-31T17:16:00Z",
+  "last_checked_at": "2026-10-31T17:20:19.923202+00:00",
   "release_blockers": [
     "Insufficient local working space after actual disk exhaustion; approximately140MiB remains. New archive and clean-install work waits for additional storage.",
     "Existing System Lab prepared source still needs its successful push/package, native save/deployment and49-resource independent verification.",
@@ -154,5 +154,11 @@
     "remaining_free_bytes": 151158784,
     "new_model_calls": 0,
     "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-recovery-api-data.json"
+  },
+  "documentation_checkpoint": {
+    "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
+    "exact_files": 46,
+    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
+    "scope": "Published source preparation and evidence; no Hub upload"
   }
 }
