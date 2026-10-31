@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-10-31T23:01:48.703Z",
+  "state": "Actual published static Space verified in browser",
+  "source_commit": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
+  "desktop": {
+    "client": 1905,
+    "controls": 0,
+    "currentVersion": true,
+    "download": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+    "height": 855,
+    "images": [
+      {
+        "loaded": true,
+        "src": "media/application-tasks.png"
+      },
+      {
+        "loaded": true,
+        "src": "media/companion-tasks-mobile.jpg"
+      }
+    ],
+    "scroll": 1905,
+    "width": 1920
+  },
+  "mobile": {
+    "client": 375,
+    "controls": 0,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "media/application-tasks.png"
+      },
+      {
+        "loaded": true,
+        "src": "media/companion-tasks-mobile.jpg"
+      }
+    ],
+    "scroll": 375,
+    "width": 390
+  },
+  "warnings_errors": [],
+  "viewport_reset": true,
+  "captures": [
+    "publication/media/publication-20261031T224658Z/hf-space-desktop.jpg",
+    "publication/media/publication-20261031T224658Z/hf-space-evidence.jpg",
+    "publication/media/publication-20261031T224658Z/hf-space-mobile.jpg"
+  ],
+  "new_model_calls": 0,
+  "no_operational_controls": true
+}

@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-31 23:12:40 UTC",
+  "state": "Independently Retrieved",
+  "native_current": {
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "latest_version": 98,
+    "role": "owner",
+    "access_mode": "public",
+    "live_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+    "status": "active",
+    "access_changes": false
+  },
+  "saved_version": {
+    "id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_5e92135175bc8191b9e3db0633b856d6",
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "version_number": 98,
+    "source": {
+      "commit_sha": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000546081f4b5a3eebce01d25b0",
+      "content_hash": "sha256:bf0da9777b3be2553f63937285dbec1f0a4155c97e302d97afa7ef449724595c",
+      "size_bytes": 194764800,
+      "file_count": 656
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ae673cad2b88191badcdc66260ab868",
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "title": "Michele Giletto | Systems Portfolio",
+    "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_5e92135175bc8191b9e3db0633b856d6",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a8fdd39ede88191898e6f386864c331",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-31T23:03:59.630630+00:00"
+  },
+  "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+  "local_archive": {
+    "path": "runtime/publication/site-v031-20261031T224658Z-http11.tar.gz",
+    "bytes": 153052092,
+    "sha256": "87fe9313233fa7102b0f5fe7ffb6c6ce221bc8c11a2511369fefb200bdd8518c"
+  },
+  "archive_note": "Provider storage records an uncompressed tar; the local archive is gzip-compressed. Distinct sizes and hashes describe these distinct encodings.",
+  "public_resource_verification": "cycle-20261031T224658Z-site-public-verification-reviewed2.json",
+  "secret_scan": "cycle-20261031T224658Z-site-package.json",
+  "engineering": {
+    "scoped_tests": 5,
+    "typescript_production_build": "passed",
+    "ordinary_source_push": true,
+    "process_only_http11_override": true,
+    "certificate_validation_weakened": false,
+    "previous_default_transport_attempt": "Cancelled after more than six minutes stalled in send-pack. Cause was not established.",
+    "unrelated_projects_preserved": true
+  },
+  "new_release_created": false,
+  "new_model_calls": 0,
+  "training_runs": 0
+}

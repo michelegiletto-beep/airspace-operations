@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-31 23:14:48 UTC",
+  "commit": "69864960bab8d542818292157685bf38cca474d1",
+  "parent": "55536545959515a379f2f4d33d8d06ca0c4e39d8",
+  "independent_anonymous_retrieval": {
+    "files": 2,
+    "exact": true,
+    "proxies": false,
+    "sha256": {
+      "scripts/verify_site_031.py": "87b53fb80f008cc3e5920221aa24b75054cb45dfe408ff12fa101009aa82b349",
+      "tests/test_site_publication_031.py": "f4e3228fbc8dfdd2c713b71464a61b45d760c6c5fc1981cca0c17e49b75bda08"
+    }
+  },
+  "run": 41251483278,
+  "engineering_job": 124685740316,
+  "state": "success",
+  "source_suite": {
+    "passed": 499,
+    "skipped": 20,
+    "warnings": 3,
+    "seconds": 72.19
+  },
+  "postgresql_suite": {
+    "passed": 19,
+    "warnings": 1,
+    "seconds": 6.92
+  },
+  "actual_container_build_health_worker": true,
+  "worker_audit_valid": true,
+  "postgresql_restoration_verified": true,
+  "restored_audit_valid": true,
+  "publisher_job": 124686318115,
+  "publisher_state": "skipped",
+  "new_candidate_release": false,
+  "new_model_calls": 0,
+  "professional_certification": false
+}

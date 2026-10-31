@@ -1,0 +1,176 @@
+{
+  "at": "2026-10-31T22:49:04.367969+00:00",
+  "reviewer": "/root/guard_final_review",
+  "review_kind": "Read-only engineering source, asset, copy and private-material review; no professional aviation certification",
+  "state": "Prepared source review passed; no deployment or anonymous public Site retrieval claimed",
+  "site_source_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d",
+  "prior_site_source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+  "worktree_clean": true,
+  "changed_paths": [
+    [
+      "A",
+      "public/airspace-operations/media/0.3.1-rc.1/application-tasks.png"
+    ],
+    [
+      "A",
+      "public/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg"
+    ],
+    [
+      "A",
+      "public/airspace-operations/media/0.3.1-rc.1/companion-tasks.png"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/LICENSE"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/RELEASE_PROVENANCE.json"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/SBOM.cdx.json"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/SHA256SUMS.txt"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/THIRD_PARTY_NOTICES.md"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/ci-verification.json"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/release-gates.json"
+    ],
+    [
+      "A",
+      "public/airspace-operations/releases/0.3.1-rc.1/standalone-archive-verification.json"
+    ],
+    [
+      "M",
+      "public/projects/airspace-operations.html"
+    ],
+    [
+      "M",
+      "templates/airspace-operations.html"
+    ],
+    [
+      "M",
+      "tests/airspace-operations.test.mjs"
+    ]
+  ],
+  "unrelated_tracked_source_unchanged": true,
+  "historical_targets_checked": 37,
+  "historical_exact_assets": 34,
+  "new_assets": [
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/ci-verification.json",
+      "bytes": 22095,
+      "sha256": "fd8e6b20e3b44692ce9bca2482d9bfe21365fdad56785eb2f85ba50a89313747"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/release-gates.json",
+      "bytes": 1046,
+      "sha256": "91848a143f98f26e8c293c97cc66ea7f1b93de41bb40fd34cc529b4be33e85c7"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/RELEASE_PROVENANCE.json",
+      "bytes": 77030,
+      "sha256": "91307f2e4e2c9fb792af12c149cb4fa4dae85dd56958899cf80a8c98164e070b"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "13dfa8bd2f218a8c157f5566af9cabc49279590c701dcb6d9efb3edbbd0d67b1"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "8bc1740917f4faeac6f2812a14fc8d56ffdcc9b89909a0045614e0343b601ebc"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/standalone-archive-verification.json",
+      "bytes": 6084,
+      "sha256": "053195c16579068dfad45ec3ac6d8b8278a727c843bbd5f3a9ae7e4d795351dc"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+      "bytes": 12504321,
+      "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750"
+    },
+    {
+      "path": "public/airspace-operations/releases/0.3.1-rc.1/THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf"
+    }
+  ],
+  "new_media": [
+    {
+      "path": "public/airspace-operations/media/0.3.1-rc.1/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "detected_format": "PNG",
+      "pixels": [
+        466,
+        569
+      ]
+    },
+    {
+      "path": "public/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "detected_format": "JPEG",
+      "pixels": [
+        375,
+        812
+      ]
+    },
+    {
+      "path": "public/airspace-operations/media/0.3.1-rc.1/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "detected_format": "PNG",
+      "pixels": [
+        1265,
+        652
+      ]
+    }
+  ],
+  "new_archive_members": 638,
+  "secret_findings": [],
+  "private_archive_paths": [],
+  "copy_review": "Functional headings and task descriptions, no detected slogans or decorative labels in authored project copy. Candidate, historical model results, source-coverage limits and separate operational acceptance remain explicit.",
+  "visual_media_review": [
+    "Actual mobileJPEG decoded and visually inspected; task states/empty mission context retained",
+    "Actual desktopPNG decoded and visually inspected; private header cropped, empty mission/site workspace retained",
+    "All3media match previously independently retrieved frozen source digests"
+  ],
+  "scoped_test": {
+    "command": "node --test tests/airspace-operations.test.mjs",
+    "cwd": "work/site-publishing",
+    "passed": 5,
+    "failed": 0,
+    "duration_ms": 850.4014,
+    "exit_code": 0
+  },
+  "blocking_findings": [],
+  "source_files_edited": false,
+  "git_mutations": false,
+  "remote_requests": false,
+  "model_calls": 0,
+  "next_action": "Root must finish the official source helper push/package and native save/deploy, then anonymously verify49resources against the exact successful deployment identity and inspect the public page. Preserve all frozen releases."
+}

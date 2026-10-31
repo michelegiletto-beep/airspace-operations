@@ -1,0 +1,262 @@
+{
+  "at": "2026-10-31T23:11:56.745635+00:00",
+  "reviewer": "/root/guard_final_review",
+  "kind": "Adversarial engineering privacy/publication source review, not professional certification",
+  "scope": "Selected current-cycle evidence, public verification script/test and5publication captures; no remote requests or execution of proof writers",
+  "blocking_findings": [],
+  "supported_secret_pattern_matches": [],
+  "patterns_checked": [
+    "github_token",
+    "hf_token",
+    "openai_key",
+    "private_key",
+    "JWT",
+    "bearer_literal"
+  ],
+  "text_inventory": [
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json",
+      "bytes": 2715,
+      "sha256": "01c705f927d489fd7424b332af0cecb001736b1d8ae954fb29c3a9444c503bb4"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hf-space-browser.json",
+      "bytes": 1337,
+      "sha256": "f43673e62501d2866a119429762b1df1fe0a0a07762edffa41b16c7f1eca8250"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-dataset-88c470dd-reviewed-lfs.json",
+      "bytes": 6367,
+      "sha256": "322768c3ae4ba7c88a344c6707f6798a5e5fd787e9f5f2b7e5eb2faf85f5747a"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-model-a6a24fc3-reviewed-lfs.json",
+      "bytes": 10228,
+      "sha256": "25f13b6c3a21aa9d2ec312c497ca7d47980a9e9bab630af98432ff239715620b"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-model-a6a24fc3.json",
+      "bytes": 1457,
+      "sha256": "efff0e0590b5a4cb5d4f1cde1d7c58a2fda12541f26fbefe2dd51c607a3be7c4"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-space-7aae1c50-reviewed-lfs.json",
+      "bytes": 18392,
+      "sha256": "249992fba3d4a88a400f70124ae3b68d1341a50ec97835395376459f43098ddb"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data-after-restart.json",
+      "bytes": 2314,
+      "sha256": "6adac59c1decdd05c235995abf66f4581c4d73e80a16616f46f7a7dbe320c16c"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data-after-restart.py",
+      "bytes": 5929,
+      "sha256": "72ac00007051789f7f71476f6b628b5cd4e2fbdf5944f2c5febc6e4f12f83539"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data.json",
+      "bytes": 1797,
+      "sha256": "1aa0d0dda9625fab0715dd063f9cd75f7d04287c08c8546346b982d28751241b"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data.py",
+      "bytes": 5825,
+      "sha256": "1a57c490e83f78fa4c57e38cb038921ae4a63aeda736dfed9fedcf79caa4cf57"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.json",
+      "bytes": 22407,
+      "sha256": "38721bc1bfcab48b70c9fde9f89281e81e054487021b0649262130ca37d3566c"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.py",
+      "bytes": 8675,
+      "sha256": "f0f9fd2a4d9ac819e2e78b77f48f50b7a6274904e42a18a140f6de55b8da7b12"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-package.json",
+      "bytes": 777,
+      "sha256": "ff9bbc519aa2943cedf8c699ac4b6bfefad4da4c46d368e3f12c821b28f6faf2"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification-reviewed.json",
+      "bytes": 48885,
+      "sha256": "011cbc8996d8212adb5ae458b12aa944d54eca85cde114e629b6b70331ac45de"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification-reviewed2.json",
+      "bytes": 49061,
+      "sha256": "dcb6339a0e2903819f29a1bb0fafe76d89ac4e9f340becda7378e46fe7203e50"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification.json",
+      "bytes": 48816,
+      "sha256": "d6be014a0964084aa898e10ea9384b7688c66eee08920ab303d14d5a6972fa7f"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-source-review.json",
+      "bytes": 6218,
+      "sha256": "8165ff02e97ec6385553d4a71edf10054c8e3fd92806fafacfd1c63698da83c3"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-source-review.py",
+      "bytes": 8038,
+      "sha256": "d31ea6fd6f137cfd662661bfe6b7a0eeec7edd75276bf2f483c46ef156a7e91a"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-hub-upload-reviewed-lfs.py",
+      "bytes": 7724,
+      "sha256": "494e0fa5cf2d21dd4a533959ce4b70e8b52904ef80c91a5ddc8a44267b881390"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-hub-upload.py",
+      "bytes": 6466,
+      "sha256": "97f07a16c12f5ec691ccd39f0b712c03402cda4a68fa97de3fa41a7fb476412d"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-authored.json",
+      "bytes": 6068,
+      "sha256": "c309949b98c70ded5b8d4284a20c4690e36e2c60d6c9a4e8437c2eb4d1a60ca7"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-authored.py",
+      "bytes": 7776,
+      "sha256": "8723cac4b7d82786e6d3796d6a36c773d2d6f8b16978ce9d70d2d3ca188b7bd0"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-hosted.json",
+      "bytes": 1091,
+      "sha256": "baf9d8d63d0a766360dce79e933bd1b3d0f8a3b44c5a46c71bad4833e5c6f643"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-hosted.py",
+      "bytes": 7200,
+      "sha256": "116ca30e9b45dcaacf60c67b0a20ac97d95d18aef3fdbf7ba91bd9dbff588176"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live.json",
+      "bytes": 1018,
+      "sha256": "f107e60e5ae02cb8909c8135781ba589529ed1b50ac67ae7277d856f1d8d6469"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live.py",
+      "bytes": 4804,
+      "sha256": "97039b335d24724061017f3a9ba34873fc9f09753f52cd33a18ff700c139c4a8"
+    },
+    {
+      "path": "scripts/verify_site_031.py",
+      "bytes": 9307,
+      "sha256": "87b53fb80f008cc3e5920221aa24b75054cb45dfe408ff12fa101009aa82b349"
+    },
+    {
+      "path": "tests/test_site_publication_031.py",
+      "bytes": 9506,
+      "sha256": "f4e3228fbc8dfdd2c713b71464a61b45d760c6c5fc1981cca0c17e49b75bda08"
+    }
+  ],
+  "media_inventory": [
+    {
+      "path": "publication/media/publication-20261031T224658Z/hf-space-desktop.jpg",
+      "bytes": 82226,
+      "sha256": "0aad2f15d512ae0fea1dce3b0044aed6c4c2f8109fe5f07fe84c99ff66b499df",
+      "format": "JPEG",
+      "pixels": [
+        1905,
+        848
+      ]
+    },
+    {
+      "path": "publication/media/publication-20261031T224658Z/hf-space-evidence.jpg",
+      "bytes": 111119,
+      "sha256": "f1100cfe33e0b11b342b75a19423755c587879fc78b36240a6358b7415a268a3",
+      "format": "JPEG",
+      "pixels": [
+        1905,
+        848
+      ]
+    },
+    {
+      "path": "publication/media/publication-20261031T224658Z/hf-space-mobile.jpg",
+      "bytes": 44817,
+      "sha256": "f4bc1627fc7c2313b38e61b4428ca99e6d3cf66d59f4cf5252cdaf7fbdcda4be",
+      "format": "JPEG",
+      "pixels": [
+        375,
+        812
+      ]
+    },
+    {
+      "path": "publication/media/publication-20261031T224658Z/system-lab-desktop.jpg",
+      "bytes": 92298,
+      "sha256": "e84c01e929ccb76c6d2b49fbe6980acec4cb846cb0fd3f53e75bd5fffb5f18fe",
+      "format": "JPEG",
+      "pixels": [
+        1905,
+        848
+      ]
+    },
+    {
+      "path": "publication/media/publication-20261031T224658Z/system-lab-mobile.jpg",
+      "bytes": 32945,
+      "sha256": "d484adc00c0800320b2d5c260cde084335fd5e4a8ba9792563e057903a98b1c1",
+      "format": "JPEG",
+      "pixels": [
+        375,
+        812
+      ]
+    }
+  ],
+  "visual_privacy_review": "All5JPEGcaptures visually inspected. No account email, credential, private operational record or customer activity visible. Existing engineering task titles are already disclosed in frozen reviewed captures. BothSitecaptures contain an owner hosting edit control; this is presentation noise, not an operational control or credential. HFcaptures contain no owner controls.",
+  "nonblocking_presentation_findings": [
+    {
+      "paths": [
+        "publication/media/publication-20261031T224658Z/system-lab-desktop.jpg",
+        "publication/media/publication-20261031T224658Z/system-lab-mobile.jpg"
+      ],
+      "issue": "Owner hosting Edit Site control appears in Italian in the screenshot",
+      "recommendation": "Prefer a visitor-view capture or exclude these screenshots from public presentation; do not fabricate replacement pixels"
+    }
+  ],
+  "private_runtime_handling": "Private database,key andlogin contents are not in selected files. Public loopback scripts reference ignored localruntime but publish only counts,taskstates andhashes,redacted workerhealth andintegrity; they do not logkey/personaldetails orsessiontokens.",
+  "baseline": {
+    "sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+    "matches_original": true,
+    "traceability_rows": 198,
+    "ids_equal_frozen031": true,
+    "baseline_text_and_release_status_differences": {
+      "baseline_text": [],
+      "release_status": []
+    }
+  },
+  "site_verifier_review": "Only retired old-version display assertion removed. Exact authored HTML,text,link,image,script/style checks retained with2current image assets,3capture links,history preservation and49distincttargets. Existing output rejected before source/network work and exclusivecreation rejects overwrite races.",
+  "hf_hosting_exception_review": "Exactlyonefixedinlinehosting script and4fixedmetanodes at exactheadpositions are removed; allremainingauthoredbytesexact. MetadataREADMEhostedHTML explicitlyseparatefromrepositoryMarkdownexactretrieval.4negativecomparisonsrejectadditional/duplicate scripts,changedCSSandcopy.",
+  "successful_site_receipt": {
+    "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+    "deployment_id": "appgdep_6ae673cad2b88191badcdc66260ab868",
+    "version_number": 98,
+    "summary": {
+      "expected": 49,
+      "http_200": 49,
+      "verified": 49,
+      "exact": 46,
+      "authored_html": 3
+    }
+  },
+  "earlier_failed_proofs_preserved": true,
+  "test_command": ".venv/Scripts/python.exe -B -m pytest -q tests/test_site_publication_031.py -p no:cacheprovider",
+  "test_environment": {
+    "PYTHONPATH": "backend"
+  },
+  "tests": {
+    "passed": 20,
+    "seconds": 0.65,
+    "exit_code": 0,
+    "network": false
+  },
+  "new_model_calls": 0,
+  "source_files_edited": false,
+  "remote_actions": false,
+  "publication_approval_claimed": false,
+  "limits": "Pattern scans are bounded engineering evidence, not proof of absence of every possible secret. Root must update destinationstatus from actual receipts and keep private runtimes excluded in its selected maincheckpoint."
+}

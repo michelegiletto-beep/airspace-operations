@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-31T22:56:32.178906+00:00",
+  "head": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
+  "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space",
+  "scope": "Anonymous exact live-host HTML and assets versus the reviewed manifest; not browser interaction, inference, operator data or operational acceptance.",
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "files": [],
+  "metadata": {
+    "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+    "sha256": "2866f44c3eb0266fef47da45255ae08997d3f449736a574d8251cf69d30cd397",
+    "sha": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
+    "sdk": "static",
+    "runtime_stage": "RUNNING",
+    "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space"
+  },
+  "success": false,
+  "error": {
+    "type": "AssertionError",
+    "message": "index.html differs from exact source"
+  },
+  "completed_at": "2026-10-31T22:56:33.438589+00:00"
+}

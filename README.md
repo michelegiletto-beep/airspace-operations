@@ -1,6 +1,6 @@
 # System Lab Airspace Operations
 
-Version [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1) is a published engineering candidate. Its exact archive passed 479 tests with 20 skipped; the interface passed 123 tests. Current-source container, worker, PostgreSQL and restoration checks succeeded. All nine public assets were anonymously retrieved and digest-matched. This increment improves task readability, the visible version and mobile panel fit. See [known limitations](docs/known-limitations.md), including the frozen mobile image filename mismatch. Full original acceptance and operational acceptance remain incomplete.
+Version [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1) is a published engineering candidate. Its exact archive passed 479 tests with 20 skipped; the interface passed 123 tests. Release-source container, worker, PostgreSQL and restoration checks succeeded. All nine public assets were anonymously retrieved and digest-matched. This increment improves task readability, the visible version and mobile panel fit. See [known limitations](docs/known-limitations.md), including the frozen mobile image filename mismatch. Full original acceptance and operational acceptance remain incomplete.
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.
 
@@ -12,9 +12,9 @@ Record the operation you intend to carry out. Add the real aircraft, people, loc
 
 This revision implements a persistent local-model conversation, saved personal tasks and previews of internal draft actions that require your confirmation. The local model selects guidance and source, step and action identities; displayed guidance comes from a controlled registry and recorded state. Its owned companion animates during normal use, with an animated fallback and a restrained reactive background. Pause and reduced-motion settings take precedence. Actual browser, animated fallback, pause and current mobile task evidence are retained under release-evidence/v0.3.0-rc.1/.
 
-![Desktop application with its contextual companion](publication/media/v0.3/desktop-companion.jpg)
+![Desktop application with its contextual companion](publication/media/0.3.1-rc.1/application-tasks.png)
 
-![Mobile application with its contextual companion](publication/media/v0.3/mobile-companion.jpg)
+![Mobile application with its contextual companion](publication/releases/0.3.1-rc.1/huggingface/space/media/companion-tasks-mobile.jpg)
 
 These are actual captures from an isolated software-review workspace. They show no customer operation or flown mission.
 
@@ -77,7 +77,7 @@ The pinned Qwen3-1.7B files occupy approximately 4.08 GB before runtime overhead
 
 Recorded 29 October browser verification used one local Qwen generation and one durable reservation, followed by explicit personal-task confirmation and database/audit checks. Actual mobile and desktop layouts, animation, animated fallback and pause checks are preserved with their source identities. No new student training is claimed.
 
-Hugging Face presentations for 0.3 remain Prepared. The previously published model, dataset and 0.2 evidence Space are unchanged. The current in-app browser is signed out and no usable native-browser session or cached Hub token is available. The System Lab page is published at version97, source `309b6fac69cfbe51278da6d116545cf2916251b7`. All 37 checked resources passed independent retrieval, including unchanged prior releases. The page explicitly identifies the evidence Space as its published 0.2 record. [Publication status](publication/status.json) records each destination separately.
+The [System Lab project page](https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations) is published at version 98, source `7e96d2431d993a6acef01d8ea37dfa6fce40a80c`. All 49 checked resources passed independent retrieval, including 46 exact assets and 3 authored pages. The [model card](https://huggingface.co/Magic51/system-lab-airspace-shall-router), [dataset card](https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations) and [recorded evaluation Space](https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation) now present 0.3.1 evidence and actual screenshots. All ten reviewed presentation files match their manifests; original weights, dataset rows and historical evidence are unchanged. The static Space runs no model. [Publication status](publication/status.json) and the [Hub publication record](docs/huggingface-publication.md) identify exact revisions and verification boundaries.
 
 The experimental literal-language student and its source annotation dataset are unchanged. Its 81.82% agreement on 77 unreviewed machine labels remains below the deterministic literal-word baseline's 100%. It is not promoted, and it does not establish legal correctness. No new training, operational prediction or benchmark improvement is claimed.
 

@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-31T23:09:05.429Z",
+  "app": {
+    "client": 1265,
+    "emptyOperationalWorkspace": true,
+    "height": 720,
+    "modelNotLoaded": true,
+    "scroll": 1265,
+    "taskStates": [
+      "Completed",
+      "Open"
+    ],
+    "taskTitles": [
+      "Remember to review the release verification evidence before publishing version 0.3.",
+      "Remember to review the actual source register before preparing an authorisation case"
+    ],
+    "version": true,
+    "width": 1280,
+    "console_warnings_errors": [],
+    "steps": [
+      "Reloaded persisted authenticated loopback application after API and worker restart",
+      "Opened companion",
+      "Selected existing Tasks tab"
+    ],
+    "data_corroboration": "cycle-20261031T224658Z-loopback-data-after-restart.json",
+    "new_model_calls": 0,
+    "new_tasks_or_operational_records": 0,
+    "pausePreference": {
+      "control": "Pause companion animation",
+      "aria_pressed": "true",
+      "retained_after_reload": true
+    }
+  },
+  "site": {
+    "desktop": {
+      "client": 1905,
+      "height": 855,
+      "images": [
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.1-rc.1/application-tasks.png"
+        },
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg"
+        },
+        {
+          "loaded": false,
+          "src": "/airspace-operations/media/0.3.1-rc.1/application-tasks.png"
+        },
+        {
+          "loaded": false,
+          "src": "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg"
+        }
+      ],
+      "scroll": 1905,
+      "version": true,
+      "width": 1920
+    },
+    "mobile": {
+      "client": 375,
+      "height": 844,
+      "images": [
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.1-rc.1/application-tasks.png"
+        },
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg"
+        },
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.1-rc.1/application-tasks.png"
+        },
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg"
+        }
+      ],
+      "scroll": 375,
+      "version": true,
+      "width": 390
+    },
+    "console_warnings_errors": [],
+    "rendered_current_images": 2,
+    "third_panel_capture": "Linked as detail; not an image element",
+    "viewport_override_reset": true
+  },
+  "captures": [
+    "publication/media/publication-20261031T224658Z/system-lab-desktop.jpg",
+    "publication/media/publication-20261031T224658Z/system-lab-mobile.jpg"
+  ]
+}

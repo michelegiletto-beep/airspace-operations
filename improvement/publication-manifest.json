@@ -9,7 +9,8 @@
     "cycles/2026-10-30T072750Z-publication-verification.json",
     "cycles/2026-10-30T132357Z-public-handover.json",
     "cycles/2026-10-30T192702Z-task-copy.json",
-    "cycles/2026-10-31T164121Z-publication-resilience.json"
+    "cycles/2026-10-31T164121Z-publication-resilience.json",
+    "cycles/2026-10-31T224658Z-publication-completion.json"
   ],
   "future_cycles": "Unlisted cycle files are excluded from release payloads until reviewed and deliberately added. Do not list private records, credentials, correspondence or operational customer data."
 }

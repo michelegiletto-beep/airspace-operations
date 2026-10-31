@@ -1,0 +1,14 @@
+{
+  "archive": "runtime\\publication\\site-v031-20261031T224658Z-http11.tar.gz",
+  "bytes": 153052092,
+  "sha256": "87fe9313233fa7102b0f5fe7ffb6c6ce221bc8c11a2511369fefb200bdd8518c",
+  "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+  "files": 656,
+  "largest_file_bytes": 13113254,
+  "supported_secret_pattern_matches": [],
+  "private_runtime_files": [],
+  "state": "Packaged and scanned; native save/deployment pending",
+  "transport": "Official helper, process-only HTTP/1.1 and45second low-speed bound; TLS validation retained; earlier stall root cause not established",
+  "scan_seconds": 14.847,
+  "earlier_scan": "An initial repeated random-access decompression implementation was cancelled; this complete scan uses a single sequential pass"
+}

@@ -1,0 +1,160 @@
+{
+  "cycle_id": "2026-10-31T224658Z-publication-completion",
+  "scheduled_cycle_label": "2026-10-31T224658Z",
+  "review_started_at": "2026-10-31T22:47:33Z",
+  "checkpoint_at": "2026-10-31T23:15:27.436573+00:00",
+  "state": "Existing project publications completed and independently retrieved; final documentation publication Prepared",
+  "requirements": [
+    "ASO3-004",
+    "ASO3-006",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011",
+    "ASO3-012"
+  ],
+  "published_software_version": "0.3.1-rc.1",
+  "new_software_release": false,
+  "original_baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "original_acceptance_complete": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "implemented": [
+    "Published the ten reviewed presentation files to the three existing Hugging Face repositories through the supported authenticated Magic51 browser session",
+    "Completed the scoped System Lab project page deployment and independent asset/authored-page verification",
+    "Recovered API and worker availability without changing task or operational records",
+    "Preserved strict comparison failures and added explicit bounded verification of exact provider-generated LFS entries and hosting additions"
+  ],
+  "github": {
+    "version": "0.3.1-rc.1",
+    "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+    "assets_exact": 9,
+    "manifest_hashes_exact": 637,
+    "ci_source_hashes_exact": 200,
+    "archive_bytes": 12504321,
+    "archive_sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.json"
+  },
+  "huggingface": {
+    "state": "Independently Retrieved",
+    "heads": {
+      "model": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+      "dataset": "88c470dd521d63a90a6361e762e73167823317a1",
+      "space": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf"
+    },
+    "parents": {
+      "model": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+      "dataset": "e9fb162a31fa139c8b511fbc84a18277b6aa560c",
+      "space": "9108be3ecbc724a84d5d169eff869b58b17de1cc"
+    },
+    "presentation_targets_exact": 10,
+    "unlisted_prior_files_exact": 33,
+    "provider_generated_metadata_entries": 2,
+    "original_model_weights_and_dataset_records_unchanged": true,
+    "proofs": {
+      "model": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-model-a6a24fc3-reviewed-lfs.json",
+      "dataset": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-dataset-88c470dd-reviewed-lfs.json",
+      "space": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-space-7aae1c50-reviewed-lfs.json"
+    },
+    "live_space_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-authored.json",
+    "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hf-space-browser.json",
+    "scope": "Presentation update only; no training, new weights or live inference. Exact provider-generated LFS path entries and five hosting nodes are recorded separately."
+  },
+  "site": {
+    "state": "Independently Retrieved",
+    "version": 98,
+    "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+    "deployment_id": "appgdep_6ae673cad2b88191badcdc66260ab868",
+    "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_5e92135175bc8191b9e3db0633b856d6",
+    "deployed_at": "2026-10-31T23:03:59.630630Z",
+    "checks": {
+      "expected": 49,
+      "http_200": 49,
+      "verified": 49,
+      "exact": 46,
+      "authored_html": 3
+    },
+    "verification_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification-reviewed2.json",
+    "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json",
+    "package_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-package.json",
+    "native_tar": {
+      "files": 656,
+      "bytes": 194764800,
+      "sha256": "bf0da9777b3be2553f63937285dbec1f0a4155c97e302d97afa7ef449724595c"
+    },
+    "local_gzip": {
+      "bytes": 153052092,
+      "sha256": "87fe9313233fa7102b0f5fe7ffb6c6ce221bc8c11a2511369fefb200bdd8518c"
+    },
+    "current_displayed_images": 2,
+    "current_capture_links": 3,
+    "third_capture": "Panel detail is linked, not displayed as an image element",
+    "secret_pattern_matches": 0,
+    "private_runtime_files": 0,
+    "transport": "Official helper; process-only HTTP/1.1 and bounded low-speed handling succeeded after an earlier HTTPS push stalled. TLS validation retained; root cause not established.",
+    "native_receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-native-publication.json"
+  },
+  "application": {
+    "initial_unavailable_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data.json",
+    "recovered_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data-after-restart.json",
+    "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json",
+    "health_version": "0.3.1-rc.1",
+    "worker_healthy": true,
+    "records_unchanged": 20,
+    "tasks_unchanged": 2,
+    "audit_valid": true,
+    "audit_entries": 46,
+    "existing_completed_jobs": 6,
+    "operational_records": 0,
+    "saved_pause_preference_retained": true,
+    "new_tasks_or_operational_records": 0
+  },
+  "verification": {
+    "actual_local_model_calls": 0,
+    "new_training_runs": 0,
+    "new_runtime_tasks_or_operational_records": 0,
+    "new_aircraft_or_external_operational_actions": 0,
+    "site_requests_http_200": 49,
+    "site_binary_assets_exact": 46,
+    "site_authored_pages_exact": 3,
+    "hf_space_negative_comparisons": 4,
+    "selected_documentation_tests": "JSON parse, referenced-file existence, baseline/release digest and supported secret-pattern checks; no aviation acceptance inferred",
+    "new_verifier_focused_tests_passed": 57,
+    "new_verifier_source_ci": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verifier-source-ci.json"
+  },
+  "retained_failures": [
+    "Initial loopback requests failed and worker heartbeat was stale before the owned services were restarted",
+    "Initial model comparison rejected provider-generated .gitattributes; only the exact appended reviewed-image LFS entry was accepted in a separate receipt",
+    "Live Space raw HTML comparison rejected five hosting additions; exact authored bytes were checked after those precise nodes alone were removed",
+    "Live README is provider-rendered HTML; immutable Markdown was verified separately rather than claimed to match raw host bytes",
+    "Two Site comparisons failed a stale current-image assertion; both failed receipts remain and the corrected 49-resource comparison passed",
+    "Default HTTPS source push stalled; a bounded process-only HTTP/1.1 retry succeeded without establishing a cause",
+    "An empty-context patch appended the latest STATUS and AGENTS checkpoints; the ordered-checkpoint helper moved those entries to the front while retaining historical entries.",
+    "The first root checkpoint scan passed text to byte-oriented secret patterns and failed with TypeError; the corrected scan used original bytes and did not waive findings."
+  ],
+  "unreleased_development": {
+    "branch": "codex/airspace-media-encoding",
+    "commit": "c6839aeda8276685ea55bae724d90669ae2e9bcd",
+    "ci_run": 41222363007,
+    "state": "Verified development source; no new candidate tag or release"
+  },
+  "final_documentation": {
+    "state": "Prepared",
+    "published": false,
+    "prior_main_abbreviation": "69864960",
+    "note": "The root will record the actual reviewed documentation commit and independent retrieval; no future commit or CI success is inferred."
+  },
+  "retrospective": "Publication completed after supported existing account access and storage became available. Rechecking actual services exposed stopped development processes; restart restored health while the persisted records and audit remained intact. Strict comparisons caught real provider transformations and stale verifier assumptions. Separate negative receipts and narrow byte-level checks preserve those distinctions. The software candidate, original training artifacts and operational workspace were not replaced, and publication did not resolve the original product or operational acceptance gaps.",
+  "next_bounded_prompt": "Read AGENTS, unchanged SPECIFICATION, revision addenda, STATUS, this cycle and publication/status. Preserve all frozen 0.1, 0.2, 0.3 and 0.3.1 tags and bytes; 0.3.1 source 433e89a66038ee7f7c34cb443c03eeafdee92f36 and ZIP 0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750 remain unchanged. First reconcile the root final documentation publication and its CI result without treating a queued run as passed. Existing System Lab 98 and the three new Hub revisions are independently retrieved; do not repeat uploads or overwrite their artifacts. Keep storage headroom and verify API, idle worker, records and audit before new work. Prepare a distinct 0.3.2 candidate: integrate the reviewed media guard from c6839aeda8276685ea55bae724d90669ae2e9bcd, place correctly named JPEG media in its own new namespace, and preserve the frozen misnamed file. Define acceptance evidence before making operator-guidance changes. Run the version-specific source, frontend, tenant/actor boundary, deterministic-rule, container/PostgreSQL, restoration, dependency/security, exact-archive installation, rights and publication gates; publish only after they pass. Recheck actual browser-to-API-to-data behavior and current copy/animation/accessibility. Use existing verified destinations; preserve the precise provider LFS and hosting-transform verification boundaries. Keep original feature, national review, live-provider and operational-acceptance gaps explicit. Record actual model runs and failures, with no more than two evaluation calls. No email, contacts, purchases, aircraft commands, authority decisions, external submissions, self-approval or approval-boundary changes. Finish with exact commands, a short retrospective and the next bounded prompt.",
+  "published_verification_source": {
+    "commit": "69864960bab8d542818292157685bf38cca474d1",
+    "state": "Independently Retrieved",
+    "files": 2,
+    "ci_run": 41251483278,
+    "ci_state": "success",
+    "new_candidate_release": false,
+    "ci_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verifier-source-ci.json",
+    "source_tests_passed": 499,
+    "source_tests_skipped": 20,
+    "postgresql_tests_passed": 19
+  }
+}

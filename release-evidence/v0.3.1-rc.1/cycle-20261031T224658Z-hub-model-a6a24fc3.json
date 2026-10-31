@@ -1,0 +1,30 @@
+{
+  "started_at": "2026-10-31T22:53:27.312155+00:00",
+  "repo_type": "model",
+  "repository": "Magic51/system-lab-airspace-shall-router",
+  "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+  "head": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+  "expected_parent": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+  "authenticated_read": false,
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "scope": "Exact changed presentation files, current public head, displayed direct parent, and all unlisted prior repository file identities/bytes. No new training, inference or operational acceptance.",
+  "direct_parent": {
+    "verified": true,
+    "parent": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+    "source_url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/commit/a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+    "parent_links": [
+      "/Magic51/system-lab-airspace-shall-router/commit/7addd5efe4a17729463fe392cf25489cafc7ccc6"
+    ],
+    "commit_page_sha256": "5c4d4175981923ed200b252b5d159dc6911fca0abab26cf6ffac79c36adaabdd",
+    "status": 200,
+    "final_url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/commit/a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+    "redirect_hosts": []
+  },
+  "success": false,
+  "error": {
+    "type": "AssertionError",
+    "message": ""
+  },
+  "completed_at": "2026-10-31T22:53:28.608010+00:00"
+}

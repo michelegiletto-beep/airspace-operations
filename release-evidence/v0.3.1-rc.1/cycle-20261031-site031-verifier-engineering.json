@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-31T23:09:44.265197+00:00",
+  "scope": "Public, import-safe, anonymous additive Site0.3.1 verification tool. This engineering receipt contains isolated tests and offline source inspection, not an independent HTTP verification claim.",
+  "requirements": [
+    "ASO3-009",
+    "ASO3-010"
+  ],
+  "changes": [
+    "Preserve the unchanged hardened source/text/link/image/script/style/hosting comparator",
+    "Retire only the old0.3 two_actual_captures assertion",
+    "Require the actual Site98 presentation roles:2current image elements and all3capture links, including a task-detail capture provided as a link",
+    "Preserve historical0.3capture links when actually present in expected source",
+    "Require the3mapped frozen media receipt paths to equal the current3capture set",
+    "Require a new explicit project-local output path, reject any existing file including runtime, and write with exclusive creation",
+    "Main guard and main(argv) make imports safe without argument parsing, workers, network access or report writes"
+  ],
+  "actual_source_inspection": {
+    "path": "work/site-publishing/public/projects/airspace-operations.html",
+    "sha256": "6fd1d3a62d3ab56d442a326573f22e3e75af601dd5cfea1e7e1f4cea0792278c",
+    "current_displayed_images": [
+      "/airspace-operations/media/0.3.1-rc.1/application-tasks.png",
+      "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg"
+    ],
+    "current_capture_links": [
+      "/airspace-operations/media/0.3.1-rc.1/application-tasks.png",
+      "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg",
+      "/airspace-operations/media/0.3.1-rc.1/companion-tasks.png"
+    ],
+    "historical_capture_links": [
+      "/airspace-operations/media/v0.3/desktop-companion.jpg",
+      "/airspace-operations/media/v0.3/mobile-companion.jpg"
+    ],
+    "offline_exact_source_semantic_checks": {
+      "visible_text_matches_source": true,
+      "source_links_equal": true,
+      "source_images_equal": true,
+      "source_scripts_styles_match": true,
+      "authored_html_matches_source_after_observed_hosting_injection": true,
+      "product_title": true,
+      "published_candidate_visible": true,
+      "verified_archive_digest": true,
+      "candidate_download_link": true,
+      "frozen_current_document_links": true,
+      "original_acceptance_limit": true,
+      "animation_accessibility": true,
+      "historical_release_links": true,
+      "two_current_displayed_images": true,
+      "all_three_current_capture_links": true,
+      "source_historical03_image_links_preserved": true,
+      "historical03_release_link": true
+    }
+  },
+  "corrected_assumption": "An intermediate verifier correctly failed a requirement for3displayed images. Actual source contains2displayed images and a third task-detail capture link. Scope now records this observed presentation explicitly; failed public receipts are preserved.",
+  "test": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests/test_site_publication_031.py tests/test_site_publication_v3.py",
+    "environment": {
+      "PYTHONPATH": "backend"
+    },
+    "exit_code": 0,
+    "stdout": "57 passed in 2.43s",
+    "coverage": [
+      "Both current displayed images mandatory",
+      "Old-only images or links-only do not satisfy displayed image requirement",
+      "Third capture link separately required",
+      "Historical links preserved only when present in source",
+      "Added styles/scripts/markup remain rejected by hardened comparator",
+      "Existing output refused before source/network work",
+      "Exclusive write protects race-created files",
+      "Import does not parse CLI, start pool or request network",
+      "Frozen receipt source identity and modified asset/capture bytes fail",
+      "Duplicate or unrelated capture paths fail"
+    ]
+  },
+  "engineering_review": {
+    "reviewer": "/root/media_guard/guard_review",
+    "result": "No blocking regression; receipt-path hardening and negative-test suggestions implemented",
+    "professional_certification": false
+  },
+  "input_hashes": {
+    "scripts/verify_site_031.py": "87b53fb80f008cc3e5920221aa24b75054cb45dfe408ff12fa101009aa82b349",
+    "tests/test_site_publication_031.py": "f4e3228fbc8dfdd2c713b71464a61b45d760c6c5fc1981cca0c17e49b75bda08",
+    "scripts/verify_publication_v3.py": "c6844bc39cef935252797b72e2b0f22424c7ccb3a088270669dfed44fcfd3e4e",
+    "runtime/publication/verify-site-0.3.1-20261030.py": "7158f355bf4e1c41334a7ead7a9e633b6c806a6c81a4f90d2ba79abb28a3f438",
+    "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification.json": "d6be014a0964084aa898e10ea9384b7688c66eee08920ab303d14d5a6972fa7f"
+  },
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_mutations": false,
+  "operational_records_written": 0,
+  "next_action": "Run the new public verifier against actual successful Site98 deployment using a new output path. Preserve all preceding failed receipts and report exact49resource results separately."
+}

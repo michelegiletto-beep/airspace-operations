@@ -24,7 +24,7 @@
       "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
       "tagged_release": true,
       "release": "0.3.1-rc.1",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-public-review.json"
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.json"
     },
     {
       "destination": "GitHub tagged candidate release",
@@ -32,82 +32,110 @@
       "state": "Independently Retrieved",
       "prior_release": "0.3.0-rc.1",
       "release": "0.3.1-rc.1",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-public-review.json",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.json",
       "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36"
     },
     {
       "destination": "System Lab project dossier revision",
       "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
       "state": "Independently Retrieved",
-      "prior_release": "0.2.0-rc.1",
+      "prior_release": "0.3.0-rc.1",
       "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
-      "version": 97,
-      "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
-      "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
-      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+      "version": 98,
+      "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+      "deployment_id": "appgdep_6ae673cad2b88191badcdc66260ab868",
+      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_5e92135175bc8191b9e3db0633b856d6",
       "audience": "public",
       "ownership": "owner",
       "checks": {
-        "expected": 37,
-        "http_200": 37,
-        "verified": 37,
-        "exact": 34,
-        "semantic": 3
+        "expected": 49,
+        "http_200": 49,
+        "verified": 49,
+        "exact": 46,
+        "authored_html": 3
       },
-      "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json",
-      "new_revision_state": "Prepared and built; remote source reconciled; new packaging blocked by local storage",
-      "prepared_source_commit": "a7c4da5fdfca2ef040b92b4d3cdbddb6aeae995d",
-      "remote_source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
-      "new_revision_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-site-checkpoint.json"
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification-reviewed2.json",
+      "new_revision_state": "Published and independently retrieved",
+      "prepared_source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+      "remote_source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+      "new_revision_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-package.json",
+      "release": "0.3.1-rc.1",
+      "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json",
+      "previous_verified": {
+        "version": 97,
+        "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+        "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
+        "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+        "checks": {
+          "expected": 37,
+          "http_200": 37,
+          "verified": 37,
+          "exact": 34,
+          "semantic": 3
+        },
+        "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json"
+      }
     },
     {
       "destination": "Hugging Face model presentation",
       "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
-      "state": "Prepared",
+      "state": "Independently Retrieved",
       "prior_release": "0.2.0-rc.1",
-      "new_upload": false,
-      "blocker": "Existing supported browser session is signed out and no configured Hub token is available; no new upload occurred",
-      "current_published_revision": "0.2 presentation; original artifacts unchanged",
+      "new_upload": true,
+      "current_published_revision": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
       "prepared_application_version": "0.3.1-rc.1",
       "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
       "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
-      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json"
+      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
+      "release": "0.3.1-rc.1",
+      "revision": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+      "prior_revision": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-model-a6a24fc3-reviewed-lfs.json",
+      "original_artifact_unchanged": true
     },
     {
       "destination": "Hugging Face dataset presentation",
       "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
-      "state": "Prepared",
+      "state": "Independently Retrieved",
       "prior_release": "0.2.0-rc.1",
-      "new_upload": false,
-      "blocker": "Existing supported browser session is signed out and no configured Hub token is available; no new upload occurred",
-      "current_published_revision": "0.2 presentation; original artifacts unchanged",
+      "new_upload": true,
+      "current_published_revision": "88c470dd521d63a90a6361e762e73167823317a1",
       "prepared_application_version": "0.3.1-rc.1",
       "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
       "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
-      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json"
+      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
+      "release": "0.3.1-rc.1",
+      "revision": "88c470dd521d63a90a6361e762e73167823317a1",
+      "prior_revision": "e9fb162a31fa139c8b511fbc84a18277b6aa560c",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-dataset-88c470dd-reviewed-lfs.json",
+      "original_artifact_unchanged": true
     },
     {
       "destination": "Hugging Face recorded evaluation Space",
       "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
-      "state": "Prepared",
+      "state": "Independently Retrieved",
       "prior_release": "0.2.0-rc.1",
-      "new_upload": false,
-      "blocker": "Existing supported browser session is signed out and no configured Hub token is available; no new upload occurred",
-      "current_published_revision": "0.2 presentation; original artifacts unchanged",
+      "new_upload": true,
+      "current_published_revision": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
       "prepared_application_version": "0.3.1-rc.1",
       "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
       "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
-      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json"
+      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
+      "release": "0.3.1-rc.1",
+      "revision": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
+      "prior_revision": "9108be3ecbc724a84d5d169eff869b58b17de1cc",
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-space-7aae1c50-reviewed-lfs.json",
+      "original_artifact_unchanged": true,
+      "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space",
+      "live_inference": false,
+      "live_host_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-authored.json",
+      "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hf-space-browser.json"
     }
   ],
-  "states_reached_scope": "GitHub0.3.1 remains independently retrieved. System Lab remains live at version97 with0.3 content. No new Site save/deployment, Hub update or candidate release occurred in this cycle.",
+  "states_reached_scope": "GitHub 0.3.1 remains independently retrieved. System Lab98 and all ten new Hugging Face presentation targets are published and independently retrieved. No new software candidate, model artifact or dataset training record was created.",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-10-31T17:20:19.923202+00:00",
-  "release_blockers": [
-    "Insufficient local working space after actual disk exhaustion; approximately140MiB remains. New archive and clean-install work waits for additional storage.",
-    "Existing System Lab prepared source still needs its successful push/package, native save/deployment and49-resource independent verification.",
-    "Hugging Face presentation updates require supported authenticated existing write access. No new upload occurred."
-  ],
+  "last_checked_at": "2026-10-31T23:11:30.952448+00:00",
+  "release_blockers": [],
   "candidate_ci": {
     "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
     "run": 41118769822,
@@ -136,7 +164,7 @@
     "published": true
   },
   "known_presentation_defects": [
-    "Frozen companion-tasks-mobile.png contains valid JPEG bytes under a PNG filename. Preserve its bytes and tag. The prepared Site uses a byte-identical.jpg alias; the new development guard rejects this mismatch. A correctly named new media namespace and all candidate gates remain required for a future release."
+    "The frozen companion-tasks-mobile.png contains valid JPEG bytes under a PNG filename. Preserve its bytes and tag. The published Site and Space use byte-identical .jpg copies. The development guard rejects this mismatch; correctly named media and all candidate gates remain required for the next distinct release."
   ],
   "unreleased_development": {
     "branch": "codex/airspace-media-encoding",
@@ -148,17 +176,39 @@
     "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.json"
   },
   "development_environment": {
-    "api": "Recovered and browser/API/data verified",
-    "worker": "Healthy and idle; all6existing jobs Completed",
+    "api": "Healthy after restart; browser, API and read-only persistent-data checks passed",
+    "worker": "Healthy and idle; six existing jobs Completed",
     "data_snapshot_unchanged": true,
-    "remaining_free_bytes": 151158784,
+    "remaining_free_bytes": 2933145600,
     "new_model_calls": 0,
-    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-recovery-api-data.json"
+    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data-after-restart.json",
+    "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json"
   },
   "documentation_checkpoint": {
     "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
     "exact_files": 46,
     "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
     "scope": "Published source preparation and evidence; no Hub upload"
-  }
+  },
+  "publication_access_blockers": [],
+  "latest_cycle": "improvement/cycles/2026-10-31T224658Z-publication-completion.json",
+  "publication_metadata_checkpoint": {
+    "state": "Prepared",
+    "published": false,
+    "prior_main_abbreviation": "69864960",
+    "note": "The root will record the actual reviewed documentation commit and independent retrieval; no future commit or CI success is inferred."
+  },
+  "published_verification_source": {
+    "commit": "69864960bab8d542818292157685bf38cca474d1",
+    "state": "Independently Retrieved",
+    "files": 2,
+    "ci_run": 41251483278,
+    "ci_state": "success",
+    "new_candidate_release": false,
+    "ci_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verifier-source-ci.json",
+    "source_tests_passed": 499,
+    "source_tests_skipped": 20,
+    "postgresql_tests_passed": 19
+  },
+  "operational_acceptance_blockers": "Incomplete original requirements, qualified national review, lawful live-provider access, deployment assurance and operator acceptance remain unresolved; see capabilities.json and docs/known-limitations.md."
 }
