@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-10-31T23:20:00.134600+00:00",
+  "verified_documentation_commit": "e9b92066b97314ea83736761009c2809844bf7e1",
+  "independently_retrieved_files": 46,
+  "source_ci": {
+    "commit": "69864960bab8d542818292157685bf38cca474d1",
+    "run": 41251483278,
+    "source_passed": 499,
+    "skipped": 20,
+    "postgresql_passed": 19,
+    "publisher": "skipped"
+  },
+  "original_specification_unchanged": true,
+  "traceability_baseline_texts_unchanged": 198,
+  "unchanged_requirement_statuses": 197,
+  "only_status_change": {
+    "id": "ASO3-009",
+    "scope": "Current public presentation, screenshots and factual release details only",
+    "reviewer": "/root/guard_final_review",
+    "professional_certification": false
+  },
+  "new_capture": {
+    "path": "publication/media/publication-20261031T224658Z/system-lab-visitor-desktop.jpg",
+    "method": "Actual browser screenshot after using the existing hosting toolbar hide control. No pixel editing or generated imagery.",
+    "contains_operational_records": false
+  },
+  "retained_failures": [
+    "Root checkpoint secret scan initially passed str to bytes patterns and failed; corrected bytes scan passed. No findings were waived.",
+    "Historical failed comparisons remain published alongside the final strict passes."
+  ],
+  "new_software_release": false,
+  "actual_model_calls": 0,
+  "training_runs": 0,
+  "new_tasks_or_operational_records": 0,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 6285,
+      "sha256": "d88f79772ca77c337d3f5a8ca8c65b18de1f6d5955d11101d57e9fded6d13995",
+      "git_blob": "da4a7392da700c952249a91e922981227eae9c06"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 35062,
+      "sha256": "23398ae2795c23924aa8ba8fd7131da06e057ddbf72a541dde670968c7ab866e",
+      "git_blob": "f8e3c09e0dd4eeacef854c645089c23f954d2e50"
+    },
+    {
+      "path": "HANDOVER.md",
+      "bytes": 10282,
+      "sha256": "911b96af7894aac33383af53cbad418e46e0b8d4cd36faf6997608b9ae7b5f8c",
+      "git_blob": "eb7783497ee762d3e4c9c18405c2b9a0a76a9ddb"
+    },
+    {
+      "path": "publication/status.json",
+      "bytes": 11957,
+      "sha256": "301cf777a99b30a664fe984b517b5b861a93af936d0b56f0e0c33885e29cd087",
+      "git_blob": "8d52f184e8de7024b5b6016c81dcc746cc18470a"
+    },
+    {
+      "path": "improvement/cycles/2026-10-31T224658Z-publication-completion.json",
+      "bytes": 10740,
+      "sha256": "b90b2fc3aa9f407e9f8ad729a42609549c13916acc374d3255c2c76c13a12163",
+      "git_blob": "fc1c198c6694422506c60fe90fd9a553fcc9b7d9"
+    },
+    {
+      "path": "REQUIREMENTS_TRACEABILITY.csv",
+      "bytes": 114411,
+      "sha256": "83180f1aa20d7193d2c21c5a66c812fbc967454a1ed0a701d9645b66e1409ad9",
+      "git_blob": "5059d2f12670bab9dd481a2854893eb7b02a808d"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
+      "bytes": 23978,
+      "sha256": "c6e36ce292aec6dd32f4b15c2732a1ba3a2716eecd5f48f7d07cfabe79cbba54",
+      "git_blob": "a4c521b4b479b6ba5b5480f1bf4f95109166a7c4"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-github-checkpoint.py",
+      "bytes": 3244,
+      "sha256": "8f083a90f6c49313c29143530e62680aec08ef391d424b7cef72944937ec3f5d",
+      "git_blob": "acd06e1917a5fe1764865d20df8affedb41e632b"
+    },
+    {
+      "path": "publication/media/publication-20261031T224658Z/system-lab-visitor-desktop.jpg",
+      "bytes": 90977,
+      "sha256": "9ec8cbbacfe0fb79f704cc16cc37a708e07775c7dde95f28313232a7703b7cc3",
+      "git_blob": "6dda26b41380bff49f186302d20373f40e01f972"
+    },
+    {
+      "path": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-requirement-publication-review.json",
+      "bytes": 3902,
+      "sha256": "f72c2db1da456a87ac37ae057cd9fe3e19a917a9eb983e30673ccac323cb4e9a",
+      "git_blob": "55880a6be9bd74ec7f09cf138c72df469431ff60"
+    }
+  ],
+  "status_change_review": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-requirement-publication-review.json"
+}

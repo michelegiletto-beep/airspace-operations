@@ -134,7 +134,7 @@
   ],
   "states_reached_scope": "GitHub 0.3.1 remains independently retrieved. System Lab98 and all ten new Hugging Face presentation targets are published and independently retrieved. No new software candidate, model artifact or dataset training record was created.",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-10-31T23:11:30.952448+00:00",
+  "last_checked_at": "2026-10-31T23:20:00.120256+00:00",
   "release_blockers": [],
   "candidate_ci": {
     "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
@@ -185,18 +185,28 @@
     "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json"
   },
   "documentation_checkpoint": {
-    "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
+    "commit": "e9b92066b97314ea83736761009c2809844bf7e1",
+    "state": "Independently Retrieved",
+    "published": true,
     "exact_files": 46,
-    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
-    "scope": "Published source preparation and evidence; no Hub upload"
+    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
+    "scope": "Current project publication, actual screenshots, reviewable evidence and preserved history; no new software release",
+    "prior_checkpoint": {
+      "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
+      "exact_files": 46,
+      "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
+      "scope": "Published source preparation and evidence; no Hub upload"
+    }
   },
   "publication_access_blockers": [],
   "latest_cycle": "improvement/cycles/2026-10-31T224658Z-publication-completion.json",
   "publication_metadata_checkpoint": {
-    "state": "Prepared",
-    "published": false,
-    "prior_main_abbreviation": "69864960",
-    "note": "The root will record the actual reviewed documentation commit and independent retrieval; no future commit or CI success is inferred."
+    "commit": "e9b92066b97314ea83736761009c2809844bf7e1",
+    "state": "Independently Retrieved",
+    "published": true,
+    "exact_files": 46,
+    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
+    "scope": "Current project publication, actual screenshots, reviewable evidence and preserved history; no new software release"
   },
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",

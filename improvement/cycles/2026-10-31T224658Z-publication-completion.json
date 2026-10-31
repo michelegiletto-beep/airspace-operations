@@ -2,8 +2,8 @@
   "cycle_id": "2026-10-31T224658Z-publication-completion",
   "scheduled_cycle_label": "2026-10-31T224658Z",
   "review_started_at": "2026-10-31T22:47:33Z",
-  "checkpoint_at": "2026-10-31T23:15:27.436573+00:00",
-  "state": "Existing project publications completed and independently retrieved; final documentation publication Prepared",
+  "checkpoint_at": "2026-10-31T23:20:00.121470+00:00",
+  "state": "Publication and documentation completed and independently retrieved; no new software candidate",
   "requirements": [
     "ASO3-004",
     "ASO3-006",
@@ -119,7 +119,9 @@
     "hf_space_negative_comparisons": 4,
     "selected_documentation_tests": "JSON parse, referenced-file existence, baseline/release digest and supported secret-pattern checks; no aviation acceptance inferred",
     "new_verifier_focused_tests_passed": 57,
-    "new_verifier_source_ci": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verifier-source-ci.json"
+    "new_verifier_source_ci": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verifier-source-ci.json",
+    "final_documentation_independently_retrieved": 46,
+    "presentation_requirement_status_change": "ASO3-009 only; exact presentation scope independently reviewed"
   },
   "retained_failures": [
     "Initial loopback requests failed and worker heartbeat was stale before the owned services were restarted",
@@ -138,13 +140,15 @@
     "state": "Verified development source; no new candidate tag or release"
   },
   "final_documentation": {
-    "state": "Prepared",
-    "published": false,
-    "prior_main_abbreviation": "69864960",
-    "note": "The root will record the actual reviewed documentation commit and independent retrieval; no future commit or CI success is inferred."
+    "commit": "e9b92066b97314ea83736761009c2809844bf7e1",
+    "state": "Independently Retrieved",
+    "published": true,
+    "exact_files": 46,
+    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
+    "scope": "Current project publication, actual screenshots, reviewable evidence and preserved history; no new software release"
   },
   "retrospective": "Publication completed after supported existing account access and storage became available. Rechecking actual services exposed stopped development processes; restart restored health while the persisted records and audit remained intact. Strict comparisons caught real provider transformations and stale verifier assumptions. Separate negative receipts and narrow byte-level checks preserve those distinctions. The software candidate, original training artifacts and operational workspace were not replaced, and publication did not resolve the original product or operational acceptance gaps.",
-  "next_bounded_prompt": "Read AGENTS, unchanged SPECIFICATION, revision addenda, STATUS, this cycle and publication/status. Preserve all frozen 0.1, 0.2, 0.3 and 0.3.1 tags and bytes; 0.3.1 source 433e89a66038ee7f7c34cb443c03eeafdee92f36 and ZIP 0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750 remain unchanged. First reconcile the root final documentation publication and its CI result without treating a queued run as passed. Existing System Lab 98 and the three new Hub revisions are independently retrieved; do not repeat uploads or overwrite their artifacts. Keep storage headroom and verify API, idle worker, records and audit before new work. Prepare a distinct 0.3.2 candidate: integrate the reviewed media guard from c6839aeda8276685ea55bae724d90669ae2e9bcd, place correctly named JPEG media in its own new namespace, and preserve the frozen misnamed file. Define acceptance evidence before making operator-guidance changes. Run the version-specific source, frontend, tenant/actor boundary, deterministic-rule, container/PostgreSQL, restoration, dependency/security, exact-archive installation, rights and publication gates; publish only after they pass. Recheck actual browser-to-API-to-data behavior and current copy/animation/accessibility. Use existing verified destinations; preserve the precise provider LFS and hosting-transform verification boundaries. Keep original feature, national review, live-provider and operational-acceptance gaps explicit. Record actual model runs and failures, with no more than two evaluation calls. No email, contacts, purchases, aircraft commands, authority decisions, external submissions, self-approval or approval-boundary changes. Finish with exact commands, a short retrospective and the next bounded prompt.",
+  "next_bounded_prompt": "Read AGENTS, unchanged SPECIFICATION, revision addenda, STATUS, this cycle and publication/status. Preserve every frozen release. Verify current API, idle worker, unchanged records/audit and available storage. The 0.3.1 publication is independently retrieved on all three destinations; do not repeat those uploads. In a bounded clean development checkout, integrate reviewed media guard c6839aeda8276685ea55bae724d90669ae2e9bcd into a distinct 0.3.2 candidate and give new JPEG captures correct filenames in their own namespace. Do not modify the frozen misnamed image. Run focused publisher/media tests, tenant/actor/action regressions and an actual browser-to-API-to-data check before selecting the next operator-guidance change. At 45 minutes checkpoint unfinished work with exact next action. A new release still requires current source/frontend/container/PostgreSQL/restoration/security/rights/exact-archive and publication gates; do not infer those from old results. Keep original feature, national-review, real-provider and operational-acceptance gaps explicit. Use no more than two actual local-model evaluations, record failures, remove slogans without changing legal/safety meaning, and preserve animated fallback plus pause/reduced-motion. No email, contacts, purchases, aircraft commands, authority decisions, external submissions, self-approval or approval-boundary changes. End with evidence, a short retrospective and the next bounded prompt.",
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",
     "state": "Independently Retrieved",

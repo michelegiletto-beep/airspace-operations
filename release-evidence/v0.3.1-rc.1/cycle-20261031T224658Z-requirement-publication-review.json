@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-31T23:20:05.190949+00:00",
+  "reviewer": "/root/guard_final_review",
+  "review_kind": "Narrow revision-requirement assessment and adversarial publication privacy review; not aviation certification",
+  "requirement_id": "ASO3-009",
+  "baseline_text": "Improve the actual System Lab page, GitHub presentation and Hugging Face evidence with current screenshots and factual release details.",
+  "acceptance_text": "Scoped source changes, rights/secret checks, deployment receipts and independently retrieved downloads/media.",
+  "assessment": "The current presentation increment meets the exact revision requirement. Root may update only ASO3-009 to Verified with dated source/deployment and destination-specific evidence.",
+  "recommended_release_status": "Verified - current GitHub, System Lab and Hugging Face presentations independently retrieved",
+  "scope_limits": [
+    "This verifies current presentation publication only, not the complete original specification",
+    "Engineering candidate remains required; no stable or operational acceptance",
+    "Original student weights, dataset and measurements unchanged; no model training or performance promotion",
+    "No claim that current legal coverage, aircraft operation or provider integration is accepted"
+  ],
+  "evidence": {
+    "System_Lab": "cycle-20261031T224658Z-site-native-publication.json and cycle-20261031T224658Z-site-public-verification-reviewed2.json: version98, source7e96d2431d993a6acef01d8ea37dfa6fce40a80c,49of49resources",
+    "Hugging_Face": "Current model/dataset/Space10reviewedpresentationfiles and untouchedpriorartifacts independently retrieved in reviewed-lfs receipts; authored liveSpace exact with fixed hosting additions and4negative comparisons; browser captures inspected",
+    "GitHub": "e9b92066b97314ea83736761009c2809844bf7e1:45selectedfiles plus preflightmanifest itself =46independentlyretrievedfiles, allHTTP200/exact",
+    "rights_and_privacy": "Scopedsource/assetreview, originalreservedrights and Apachecode boundaries retained; current privacy and package scans record supportedpatterns without claiming universal absence"
+  },
+  "baseline_check": {
+    "all198baseline_texts_equal_frozen031": true,
+    "other197release_status_changes": [],
+    "original170requirements_untouched": true,
+    "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30"
+  },
+  "native_and_ci_privacy_scan": {
+    "files": [
+      {
+        "path": "release-evidence\\v0.3.1-rc.1\\cycle-20261031T224658Z-site-native-publication.json",
+        "bytes": 2727,
+        "sha256": "f01ee9a334b8f9494e1644e1a0d6eee55d5ff56fa82b2c3179c7cf484d2d1390"
+      },
+      {
+        "path": "release-evidence\\v0.3.1-rc.1\\cycle-20261031T224658Z-verifier-source-ci.log.txt",
+        "bytes": 173734,
+        "sha256": "c54123d161436ed6b97789d060a9ecaf3547613a42b0af5523abe1ac9320e74a"
+      },
+      {
+        "path": "release-evidence\\v0.3.1-rc.1\\cycle-20261031T224658Z-github-checkpoint-preflight.json",
+        "bytes": 12627,
+        "sha256": "58181afb73061d53c03f6739a0107163f412b8b59d3b7c7ef3abe23e76221c2e"
+      },
+      {
+        "path": "release-evidence\\v0.3.1-rc.1\\cycle-20261031T224658Z-github-checkpoint-retrieval.json",
+        "bytes": 23978,
+        "sha256": "c6e36ce292aec6dd32f4b15c2732a1ba3a2716eecd5f48f7d07cfabe79cbba54"
+      }
+    ],
+    "supported_secret_matches": [],
+    "patterns": [
+      "github_token",
+      "hf_token",
+      "openai_key",
+      "private_key",
+      "JWT",
+      "bearer_literal"
+    ],
+    "private_runtime_paths_selected": false,
+    "owner_overlay_Site_captures_selected": false
+  },
+  "blocking_findings": [],
+  "source_or_traceability_edits_by_reviewer": false,
+  "new_remote_requests": 0,
+  "new_model_calls": 0,
+  "new_candidate_release": false
+}
