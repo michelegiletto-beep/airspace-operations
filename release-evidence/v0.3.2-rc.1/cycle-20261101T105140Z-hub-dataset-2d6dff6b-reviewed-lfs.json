@@ -1,0 +1,121 @@
+{
+  "started_at": "2026-11-01T10:54:02.090938+00:00",
+  "repo_type": "dataset",
+  "repository": "Magic51/system-lab-airspace-source-annotations",
+  "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
+  "head": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+  "expected_parent": "88c470dd521d63a90a6361e762e73167823317a1",
+  "authenticated_read": false,
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "scope": "Exact changed presentation files, current public head, displayed direct parent, and all unlisted prior repository file identities/bytes. No new training, inference or operational acceptance.",
+  "direct_parent": {
+    "verified": true,
+    "parent": "88c470dd521d63a90a6361e762e73167823317a1",
+    "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/commit/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+    "parent_links": [
+      "/datasets/Magic51/system-lab-airspace-source-annotations/commit/88c470dd521d63a90a6361e762e73167823317a1"
+    ],
+    "commit_page_sha256": "bdc21c153a73dd3c5c64eaa960d49380e2b23db9bf424bcacdf75b96f577ba9d",
+    "status": 200,
+    "final_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/commit/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+    "redirect_hosts": []
+  },
+  "only_reviewed_targets_and_exact_provider_LFS_entries_changed": true,
+  "actual_changed_paths": [
+    "README.md"
+  ],
+  "manifest_sha256": "49e46a5320fdfa95cc6f42aef210d6ea214fb593c4ea05ef9e684ca81d354aa6",
+  "changed_files": [
+    {
+      "target": "README.md",
+      "source": "publication/releases/0.3.2-rc.1/huggingface/dataset/README.md",
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/README.md",
+      "bytes": 5749,
+      "sha256": "644eb7ae9738ee48dcd5805a7813cbdbe1da84dad249ed7f90ff1c287cabcabb",
+      "matches_reviewed_manifest_and_local_source": true,
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/README.md",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    }
+  ],
+  "unlisted_prior_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 2504,
+      "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/.gitattributes",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/.gitattributes",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "annotations.json.gz",
+      "bytes": 27789,
+      "sha256": "2ba4bd57c8c31b831e0d75532eb37046bfd815ca8baa973d87209fb6bb197662",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/annotations.json.gz",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ede619d3d328810358aa/7cf1befbe554792ac539a5f2622a9968b062aeaf262c55ca786bf14e7cd49a9c",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "dataset.jsonl.gz",
+      "bytes": 72466,
+      "sha256": "0f58b949d1e81e714976693fb01a5cfc75dbc5a2a0f3198c4873ee17c1e11948",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/dataset.jsonl.gz",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ede619d3d328810358aa/4891a2b5bba36410a1a2ff900cf22e00520c7991b12b2662e1cbe44a52de792c",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/agent-orchestration.jpg",
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/media/agent-orchestration.jpg",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae0ede619d3d328810358aa/2ebcbdf1be38f88bd198e70edf7b56537f58bf7eee317bd64d71f04da47dd08f",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/orchestration-pipeline.svg",
+      "bytes": 4561,
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/media/orchestration-pipeline.svg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/media%2Forchestration-pipeline.svg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "source-change-log.json",
+      "bytes": 700,
+      "sha256": "8cdfa3610cde9ab287a353f7c1ec627c005cd3a3ae956d57db6c939b47e75dce",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/source-change-log.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca/source-change-log.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    }
+  ],
+  "state": "Independently Retrieved",
+  "success": true,
+  "completed_at": "2026-11-01T10:54:06.167231+00:00"
+}

@@ -1,0 +1,160 @@
+{
+  "at": "2026-11-01T11:17:25.484205+00:00",
+  "scope": "Independent read-only database, HMAC audit, health/auth-boundary and source review; browser interaction performed by root and corroborated by actual isolated proxy events. No new authentication or model calls by reviewer.",
+  "database": {
+    "primary": {
+      "records": 20,
+      "tasks": 2,
+      "records_snapshot_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01",
+      "operational_records": 0,
+      "audit_count": 47,
+      "audit_valid": true,
+      "integrity": [
+        "ok"
+      ],
+      "foreign_key_errors": 0,
+      "jobs": {
+        "Completed": 6
+      },
+      "task_states_versions": [
+        {
+          "status": "Completed",
+          "version": 2
+        },
+        {
+          "status": "Open",
+          "version": 1
+        }
+      ],
+      "sessions": 20
+    },
+    "candidate": {
+      "records": 20,
+      "tasks": 2,
+      "records_snapshot_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01",
+      "operational_records": 0,
+      "audit_count": 48,
+      "audit_valid": true,
+      "integrity": [
+        "ok"
+      ],
+      "foreign_key_errors": 0,
+      "jobs": {
+        "Completed": 6
+      },
+      "task_states_versions": [
+        {
+          "status": "Completed",
+          "version": 2
+        },
+        {
+          "status": "Open",
+          "version": 1
+        }
+      ],
+      "sessions": 21
+    },
+    "records_tasks_jobs_and_versions_match": true,
+    "first_47_audit_rows_exact": true,
+    "sole_additional_audit_action": "identity.login",
+    "other_persistent_entities_unchanged": true
+  },
+  "api_checks": [
+    {
+      "port": 8787,
+      "route": "/health",
+      "status": 200,
+      "health": {
+        "status": "ok",
+        "version": "0.3.2-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "port": 8787,
+      "route": "/me",
+      "status": 401
+    },
+    {
+      "port": 8787,
+      "route": "/companion/tasks",
+      "status": 401
+    },
+    {
+      "port": 8788,
+      "route": "/health",
+      "status": 200,
+      "health": {
+        "status": "ok",
+        "version": "0.3.3-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "port": 8788,
+      "route": "/me",
+      "status": 401
+    },
+    {
+      "port": 8788,
+      "route": "/companion/tasks",
+      "status": 401
+    }
+  ],
+  "proxy_checks": {
+    "task_reads": [
+      {
+        "route": "/api/v1/companion/tasks",
+        "method": "GET",
+        "upstreamStatus": 200,
+        "status": 503,
+        "injected": true
+      },
+      {
+        "route": "/api/v1/companion/tasks",
+        "method": "GET",
+        "upstreamStatus": 200,
+        "status": 200,
+        "injected": false
+      }
+    ],
+    "only_write": {
+      "route": "/api/v1/session",
+      "method": "POST",
+      "status": 200
+    },
+    "task_or_model_or_operational_mutations": 0,
+    "events_sha256": "95246846ebd02f17844f1553522ec3c5f3d6c7250dcc2ef366a57c76a6dec406"
+  },
+  "browser_evidence": {
+    "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-browser-recovery.json",
+    "sha256": "c7c40df798a58f73f7f56a69a5f7afc23147b8b42f34fef5408b17d15631f809",
+    "failed_read_does_not_claim_empty_or_fresh": true,
+    "single_manual_retry_restores_actual_task_records": true,
+    "unsent_draft_preserved": true
+  },
+  "source_review": {
+    "blocking_findings": [],
+    "retry_calls_only_task_hook_reload": true,
+    "request_identity_includes_path_token_revision_attempt_context": true,
+    "actor_tenant_context_bound": true,
+    "prior_scope_result_and_error_and_timestamp_masked_synchronously": true,
+    "late_aborted_commits_guarded": true,
+    "empty_list_requires_successful_valid_owned_response": true,
+    "server_permissions_and_task_version_constraints_unchanged": true,
+    "limitation": "Client context and shape checks supplement server authentication and ownership checks; they do not grant permission."
+  },
+  "source_sha256": {
+    "frontend/src/components.tsx": "7d985974b237432c5202eaa71eda49dc5ee5721b9129f3e0be6497a509bb96a1",
+    "frontend/src/CompanionDock.tsx": "255bfe94818096866492ea6e534adaecf7e5ba5282e1fd13e0a222f70e210bbf",
+    "frontend/src/taskRecovery.css": "a05140d3d58070d27539c0cdaa0f0ff1155c486ae81234547fe88f075421ad6e",
+    "tests/harness/task_read_proxy.py": "263eb57a548249df85bd40ceabac85528e538afd52d7d28f410cffd47bdfa9db"
+  },
+  "new_authentication": false,
+  "new_model_calls": 0,
+  "source_modified": false,
+  "credentials_or_private_identifiers_logged": false,
+  "success": true
+}

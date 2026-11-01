@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-11-01T11:14:52.721Z",
+  "environment": "Isolated copy of actual engineering records; no invented operational records",
+  "failure": {
+    "emptyClaim": false,
+    "fetchedShown": false,
+    "retry": true,
+    "unavailable": true
+  },
+  "retryRequests": [
+    {
+      "route": "/api/v1/companion/tasks",
+      "method": "GET",
+      "upstreamStatus": 200,
+      "status": 200,
+      "injected": false
+    }
+  ],
+  "success": {
+    "fetchedShown": true,
+    "states": [
+      "Completed",
+      "Open"
+    ],
+    "taskHeadings": [
+      "Remember to review the release verification evidence before publishing version 0.3.",
+      "Remember to review the actual source register before preparing an authorisation case"
+    ],
+    "unavailable": false
+  },
+  "draftPreserved": true,
+  "visible": {
+    "clientWidth": 375,
+    "modelNotLoaded": true,
+    "motionControls": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  "console": [],
+  "capture": "publication/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+  "captureMagic": [
+    255,
+    216,
+    255
+  ],
+  "modelCalls": 0,
+  "trainingRuns": 0,
+  "taskWrites": 0,
+  "operationalRecordsCreated": 0,
+  "harnessFailure": "Initial HTTPConnection context-manager TypeError repaired using contextlib.closing; failed attempt retained privately."
+}

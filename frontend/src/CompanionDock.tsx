@@ -13,6 +13,16 @@ import { JsonView, Notice, StateTag, useRemote } from './components';
 import { Icon } from './Icons';
 import { useCompanionMotion } from './useCompanionMotion';
 import { useDraftState } from './useDraft';
+import './taskRecovery.css';
+
+function readableTask(value: unknown, owner: string): value is CompanionTask {
+  if (!value || typeof value !== 'object') return false;
+  const task=value as Partial<CompanionTask>;
+  return task.kind==='companion_task' && typeof task.id==='string' && task.id.length>0 && typeof task.title==='string'
+    && task.created_by===owner && Number.isInteger(task.version) && (task.version??0)>0
+    && typeof task.status==='string' && ['Open','In Progress','Completed','Cancelled'].includes(task.status)
+    && Boolean(task.data && task.data.owner_actor_id===owner && typeof task.data.conversation_id==='string');
+}
 
 const activeStates = ['Queued', 'Running'];
 function actionState(action: ActionPreview, clock: number) {
@@ -63,7 +73,7 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   const { motion } = useCompanionMotion();
   const catalogue = useRemote<CompanionCatalog>('/companion/catalog', token, revision);
   const conversations = useRemote<Collection<CompanionConversation>>('/companion/conversations', token, localRevision);
-  const taskList = useRemote<Collection<CompanionTask>>('/companion/tasks', token, revision + localRevision);
+  const taskList = useRemote<Collection<CompanionTask>>('/companion/tasks', token, revision + localRevision, JSON.stringify([user.organisation_id,user.id]));
   const refresh = () => { setDetailUnavailable(false); setLocalRevision(value => value + 1); changed(); };
   const animate = (name: CompanionGesture['name']) => setGesture(previous => ({ name, sequence: previous.sequence + 1 }));
 
@@ -117,7 +127,10 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   const model = detail?.model_status ?? catalogue.data?.model_status;
   const waitingReview = detail?.action_previews.some(action => actionState(action,clock) === 'Awaiting Confirmation');
   const state = detailUnavailable ? 'attention' : detail?.active_job?.state === 'Running' || busy ? 'running' : model?.state==='Procedure Required'?'attention': waitingReview ? 'attention' : model && ['Not Installed', 'Unavailable', 'Rejected Output', 'Budget Exhausted', 'Budget Unavailable'].includes(model.state) ? 'unavailable' : 'idle';
-  const tasks = taskList.data?.items ?? [];
+  const taskItems=taskList.data?.items;
+  const validTasks=Array.isArray(taskItems) && taskItems.every(item=>readableTask(item,user.id));
+  const taskError=taskList.error || (!taskList.loading && !validTasks ? 'The saved-task response was not valid for this account.' : '');
+  const tasks=validTasks && !taskList.loading && !taskError ? taskItems : [];
   const openTasks = tasks.filter(task => !['Completed', 'Cancelled'].includes(task.status));
   const conversationWorkspace = detail?.conversation.data.workspace;
 
@@ -241,7 +254,7 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
           {workflow ? <WorkflowProgress workflow={workflow} busy={busy} control={controlWorkflow} open={() => openWorkflow(workflow.id)}/> : null}
         </div>
         <form onSubmit={send} className="companion-composer"><label htmlFor="companion-message">Your request</label><textarea id="companion-message" value={message} onChange={event => setMessage(event.target.value)} required maxLength={2000} rows={3} placeholder="Tell me what you want to work on." disabled={busy || activeJob}/><details><summary>Operation date, country and saved records</summary><div className="field-grid"><label>Country code or EU<input maxLength={2} value={jurisdiction} onChange={event => setJurisdiction(event.target.value.toUpperCase())} placeholder="Choose if relevant"/></label><label>Operation date<input type="date" value={operationDate} onChange={event => setOperationDate(event.target.value)}/></label></div>{conversationId ? <p>Each request saves the current versions of the records in this conversation.</p> : <fieldset><legend>Records to include</legend>{contextError ? <Notice danger>{contextError}</Notice> : contextRecords.length ? contextRecords.map(record => <label className="checkbox-row" key={record.id}><input type="checkbox" checked={contextIds.includes(record.id)} disabled={contextIds.length >= 10 && !contextIds.includes(record.id)} onChange={event => setContextIds(previous => event.target.checked ? [...previous, record.id] : previous.filter(id => id !== record.id))}/><span>{record.title}<small>{record.kind} · revision {record.version}</small></span></label>) : <p>No records are available to attach. You can ask a general question or create a proposed operation first.</p>}</fieldset>}</details><div><small>Drafts need your confirmation. Approvals and external actions are unavailable here.</small><button className="primary" disabled={busy || activeJob || !message.trim() || Boolean(conversationId&&!detail)}>{busy ? 'Saving…' : 'Send'}<Icon name="arrow" size={13}/></button></div></form>
-      </> : <div className="companion-task-list">{taskList.error ? <Notice danger>{taskList.error}</Notice> : null}{taskList.loading && !tasks.length ? <p role="status">Loading saved tasks…</p> : !tasks.length ? <div className="companion-welcome"><h3>No saved tasks</h3><p>Ask Indigo to help organise work. A proposed task appears in the conversation for your confirmation before it is saved here.</p><button onClick={() => setTab('conversation')}>Return to conversation<Icon name="arrow" size={13}/></button></div> : tasks.map(task => <article key={task.id}><h3>{task.title}</h3><CompanionTaskDescription title={task.title} description={task.data.description}/><label>{task.data.workflow_id?'Tracking task state':'Task state'}<select aria-label={`${task.data.workflow_id?'Tracking task state':'Task state'} for ${task.title}`} value={task.status} disabled={taskBusy === task.id} onChange={event => void updateTask(task, event.target.value)}>{['Open', 'In Progress', 'Completed', 'Cancelled'].map(status => <option key={status}>{status}</option>)}</select></label>{task.data.workflow_id?<p className="small muted">This changes your tracking task only. Use the workflow controls to pause or cancel the workflow.</p>:null}<small>Updated {displayDate(task.updated_at)}</small><button className="text-button" disabled={busy} onClick={() => { if(task.data.conversation_id!==conversationId){setJurisdiction('');setOperationDate('');}setConversationId(task.data.conversation_id); setTab('conversation'); if (task.data.workflow_id) setWorkflowSelection({conversationId:task.data.conversation_id,id:task.data.workflow_id}); }}>Open conversation{task.data.workflow_id ? ' and workflow' : ''}<Icon name="arrow" size={13}/></button></article>)}</div>}
+      </> : <div className="companion-task-list" id="companion-saved-tasks" aria-busy={taskList.loading}><div className="companion-task-load-controls"><button type="button" className="text-button" disabled={taskList.loading || Boolean(taskBusy)} onClick={taskList.reload}>{taskList.loading?'Loading saved tasks…':taskError?'Retry saved tasks':'Reload saved tasks'}</button>{!taskList.loading && !taskError && validTasks?<span className="updated">Fetched {displayDate(taskList.checkedAt)}</span>:null}</div>{taskList.loading ? <p role="status">Loading saved tasks…</p> : taskError ? <div className="companion-task-read-error"><h3>Saved tasks unavailable</h3><Notice danger>{taskError}</Notice><p>Try loading the list again.</p></div> : !tasks.length ? <div className="companion-welcome"><h3>No saved tasks</h3><p>Ask Indigo to help organise work. A proposed task appears in the conversation for your confirmation before it is saved here.</p><button onClick={() => setTab('conversation')}>Return to conversation<Icon name="arrow" size={13}/></button></div> : tasks.map(task => <article key={task.id}><h3>{task.title}</h3><CompanionTaskDescription title={task.title} description={task.data.description}/><label>{task.data.workflow_id?'Tracking task state':'Task state'}<select aria-label={`${task.data.workflow_id?'Tracking task state':'Task state'} for ${task.title}`} value={task.status} disabled={taskBusy === task.id} onChange={event => void updateTask(task, event.target.value)}>{['Open', 'In Progress', 'Completed', 'Cancelled'].map(status => <option key={status}>{status}</option>)}</select></label>{task.data.workflow_id?<p className="small muted">This changes your tracking task only. Use the workflow controls to pause or cancel the workflow.</p>:null}<small>Updated {displayDate(task.updated_at)}</small><button className="text-button" disabled={busy} onClick={() => { if(task.data.conversation_id!==conversationId){setJurisdiction('');setOperationDate('');}setConversationId(task.data.conversation_id); setTab('conversation'); if (task.data.workflow_id) setWorkflowSelection({conversationId:task.data.conversation_id,id:task.data.workflow_id}); }}>Open conversation{task.data.workflow_id ? ' and workflow' : ''}<Icon name="arrow" size={13}/></button></article>)}</div>}
     </aside> : null}
   </>;
 }

@@ -45,3 +45,8 @@ The local 0.3.2 candidate integrates the reviewed publication guard and mission-
 New release captures use their own `publication/media/0.3.2-rc.1/` namespace with extensions that match their actual encoding. The publisher checks selected and unselected rasters within bounded byte, file-count and directory-depth limits. It does not rewrite historical media. The frozen 0.3.1 mobile file and release archives must retain their exact bytes. Encoding checks supplement visual, privacy, provenance and rights review; they do not replace those checks.
 
 Planner and pilot roles can prepare mission proposals under the existing server policy. Other roles receive an explanation and an authorisation-case navigation control while mission-creation buttons remain disabled. This is guidance for an existing permission boundary, not an expansion of privileges or an operating authorisation. The remaining original feature, regulatory, provider and operational-acceptance gaps above remain open.
+
+
+## 0.3.3 saved-task request recovery
+
+The 0.3.3 candidate separates failed task-list requests from confirmed empty lists and adds a request-scoped retry. Its current full software, browser, exact-archive and publication gates remain pending. Cancelling or ignoring an obsolete browser request does not prove delivery, change stored records or replace server tenant/actor permissions. Retry is an internal read-only list refresh; it does not retry a model action or an authority/provider operation. Existing operational acceptance and original feature gaps remain unchanged.

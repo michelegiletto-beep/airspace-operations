@@ -181,19 +181,19 @@
   },
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
-    "version": "0.3.2-rc.1",
-    "state": "Published and independently retrieved",
-    "published": true,
-    "source_checkout": "work/candidate-0.3.2",
-    "publication_manifest": "publication/releases/0.3.2-rc.1/manifest.json",
+    "version": "0.3.3-rc.1",
+    "state": "Prepared",
+    "published": false,
+    "source_checkout": "work/candidate-0.3.3",
+    "publication_manifest": "publication/releases/0.3.3-rc.1/manifest.json",
     "changes": [
-      "Explain the existing mission-creation role boundary with native disabled controls and accessible guidance",
-      "Integrate the reviewed bounded raster encoding and filename guard",
-      "Use a separate correctly named JPEG media namespace while preserving frozen 0.3.1 bytes"
+      "Request-scoped recovery for failed saved-task loading with truthful loading/error/empty states",
+      "Cancellation and current-context binding for read-only request results",
+      "Preserve exact historical release-note history and include published0.3.2 for future candidates"
     ],
-    "current_candidate_release_gates_passed": true,
-    "current_candidate_installation_verified": true,
-    "current_candidate_publication_verified": true,
+    "current_candidate_release_gates_passed": false,
+    "current_candidate_installation_verified": false,
+    "current_candidate_publication_verified": false,
     "new_model_calls": 0
   },
   "known_presentation_defects": [
@@ -250,9 +250,20 @@
   },
   "operational_acceptance_blockers": "Incomplete original requirements, qualified national review, lawful live-provider access, deployment assurance and operator acceptance remain unresolved; see capabilities.json and docs/known-limitations.md.",
   "prior_development_candidate": {
-    "version": "0.3.1-rc.1",
-    "state": "Published and independently retrieved on GitHub",
-    "published": true
+    "version": "0.3.2-rc.1",
+    "state": "Published and independently retrieved",
+    "published": true,
+    "source_checkout": "work/candidate-0.3.2",
+    "publication_manifest": "publication/releases/0.3.2-rc.1/manifest.json",
+    "changes": [
+      "Explain the existing mission-creation role boundary with native disabled controls and accessible guidance",
+      "Integrate the reviewed bounded raster encoding and filename guard",
+      "Use a separate correctly named JPEG media namespace while preserving frozen 0.3.1 bytes"
+    ],
+    "current_candidate_release_gates_passed": true,
+    "current_candidate_installation_verified": true,
+    "current_candidate_publication_verified": true,
+    "new_model_calls": 0
   },
   "prior_candidate_ci": {
     "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",

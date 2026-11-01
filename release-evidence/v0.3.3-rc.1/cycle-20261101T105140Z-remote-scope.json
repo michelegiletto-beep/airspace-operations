@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-01T11:03:44.320468+00:00",
+  "actor": "/root/guard_final_review",
+  "candidate": "0.3.3-rc.1",
+  "scope": "Generic read-only useRemote hook hardening and a new isolated frontend regression suite only",
+  "API": {
+    "existing_fields": [
+      "data",
+      "error",
+      "loading",
+      "checkedAt"
+    ],
+    "added_field": "reload(): void",
+    "optional_fourth_parameter": "contextKey: string = empty string",
+    "request_method": "Existing request helper default GET, no request body",
+    "reload_scope": "Only this hook attempt nonce; no external changed callback, conversation message/action/workflow request, model call or automatic retry loop"
+  },
+  "privacy_and_freshness_invariants": [
+    "Returned data, error, loading and checkedAt are bound to exact path/token/revision/attempt/context before effects run",
+    "Every new request has data null, empty error, empty checkedAt and loading true",
+    "Cleanup marks its request inactive and aborts its own AbortController",
+    "Both promise callbacks and the deferred React updater refuse commits after cleanup or abort; no unguarded finally updater remains",
+    "Late resolution, non-AbortError rejection and late JSON body completion cannot replace newer scope data or freshness",
+    "A reload callback retained from an earlier render still schedules the current scope and current authentication",
+    "Context is an internal presentation boundary, not a grant of permissions or authority; server authentication and actor/tenant checks remain authoritative"
+  ],
+  "tests": {
+    "command": "npm test -- --run src/useRemote.test.tsx",
+    "cwd": "work/candidate-0.3.3/frontend",
+    "exit_code": 0,
+    "files_passed": 1,
+    "cases_passed": 21,
+    "duration_seconds": 3.35,
+    "test_execution_seconds": 1.29,
+    "vitest_version": "4.1.12",
+    "package_version_during_test": "0.3.2-rc.1 before root updated candidate metadata; source project was the clean0.3.3 checkout",
+    "coverage": [
+      "One failed GET retries successfully without mutations or unrelated requests",
+      "First render after changed path/token/revision/context masks old successful data and fetch time",
+      "First render after changed scope masks old errors",
+      "Late old resolve/reject with ignored abort for each of four scope dimensions",
+      "Late old JSON body resolution",
+      "Independent task and conversation hook reload counts",
+      "Stable older reload callback uses latest path and token",
+      "Unmount aborts outstanding request"
+    ]
+  },
+  "typecheck": {
+    "command": "node node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
+    "exit_code": 0,
+    "wall_seconds": 6.8008458
+  },
+  "ownership_check": "Explicit UTF-8 comparison to candidate Git HEAD proves all components.tsx text outside the hook and useCallback import remains unchanged, after normalising line endings",
+  "comparison_helper_failure": "The first ownership comparison used Windows default decoding of Git stdout and raised a false mismatch. Explicit UTF-8 decoding passed; no additional product source edit was made.",
+  "primary_readonly_evidence": "ROOT release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-primary-readonly.json: primary0.3.2 API healthy, anonymous private endpoints401, unchanged20records/2tasks, valid47-entry audit, six Completed jobs and healthy idle worker",
+  "source_hashes": {
+    "frontend/src/components.tsx": "7d985974b237432c5202eaa71eda49dc5ee5721b9129f3e0be6497a509bb96a1",
+    "frontend/src/useRemote.test.tsx": "469deff6c1be5bae0b50fff23185b0624d91e612acbdd1322f8eaa1507419aaf"
+  },
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "server_or_dependency_changes_by_actor": false,
+  "actual_data_accounts_or_permissions_changed": false,
+  "new_authentication": false,
+  "actual_local_model_calls": 0,
+  "remote_mutations": 0,
+  "limits": "Root owns CompanionDock error/empty/freshness and task-only retry integration, browser/API/data fault recovery and complete current release gates. This focused suite does not establish full specification or operational acceptance."
+}

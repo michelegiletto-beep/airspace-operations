@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-01T10:57:19.216971+00:00",
+  "state": "Candidate source and publication assembly metadata verified in the exercised scope; no release claimed",
+  "base_commit": "897d5d9762f274f8def53812ae156359af56f9e0",
+  "version": "0.3.3-rc.1",
+  "requirements": [
+    "ASO3-009",
+    "ASO3-010"
+  ],
+  "source_change": "Preserve exact030/031/032 historical release-body history and prepend the published032candidate for033andlatercandidate history",
+  "test": {
+    "command": "../../.venv/Scripts/python.exe -m pytest -q tests/test_publication_raster_guard.py tests/test_publication_material.py tests/test_candidate_publication.py tests/test_ci_publication_adversarial.py tests/test_release_tools.py",
+    "cwd": "work/candidate-0.3.3",
+    "environment": {
+      "PYTHONPATH": "backend"
+    },
+    "exit_code": 0,
+    "stdout": "135 passed, 1 skipped in 3.79s",
+    "new_cases": [
+      "033historyincludes032andallolderpublishedversions",
+      "Future040candidatepreservesknownpublishedhistory"
+    ],
+    "historical_exact_line_cases": [
+      "0.3.0-rc.1",
+      "0.3.1-rc.1",
+      "0.3.2-rc.1"
+    ],
+    "skip": "Existing host-specific symlink-creation test"
+  },
+  "publication_metadata": {
+    "manifest": "publication/releases/0.3.3-rc.1/manifest.json",
+    "notes_heading": "# Release 0.3.3-rc.1",
+    "expected_real_capture": "publication/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+    "capture_created_by_this_agent": false,
+    "placeholder_capture_created": false,
+    "current_published_version_preserved": "0.3.2-rc.1",
+    "new_candidate_status": "Prepared",
+    "verification_metrics_in_notes": false
+  },
+  "file_sha256": {
+    "scripts/publish_candidate.py": "77770f710ce24037d5cd433191664973b338cc64b0e4d2abf528a1adb4bd186f",
+    "tests/test_publication_material.py": "cae19be8a288140562aa183e4c0063e486560fb1efa33f20f8965b2d7ecb4acf",
+    "publication/releases/0.3.3-rc.1/manifest.json": "6b60f09b622cb470260ca170af1ebfa720d47bed9c4846242dc5bc2be21a3a96",
+    "publication/releases/0.3.3-rc.1/release-notes.md": "99a7505603345e018f415f1fe12a38df006af2a665b92506e22de7ce19945e78",
+    "README.md": "d982fa31d1145b691bba6dd5378f50ecccfade65d276afdc9f978fabc5ef5545",
+    "docs/known-limitations.md": "0a408adc25cbb63e58f3fee0ccf10e8b524c3b26232b4e8f905a53b440f0e421",
+    "publication/status.json": "5eb434c62f1cdf6d6c92f50bde884967e01988d3466b459fa39f137b271277b8"
+  },
+  "baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "source_documents_changed": false,
+  "original_requirement_statuses_changed": false,
+  "backend_or_agent_permissions_changed": false,
+  "dependencies_added": [],
+  "model_calls": 0,
+  "operational_records_written": 0,
+  "remote_writes": false,
+  "pending": [
+    "Root/guardimplementationandindependentUI/privacyverification",
+    "Actualnewmobilecapture",
+    "Currentcompletegatesandinstallation",
+    "Distinctreleaseandindependentpublication"
+  ],
+  "next_action": "Root completes the actual task-recovery interface and current-context hook, supplies the actualJPEGcapture, then runs current integrated gates. Do not publish or label current033complete from these targetedpublisher checks."
+}

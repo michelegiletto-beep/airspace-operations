@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import { AgentCompanion } from './AgentCompanion';
 import { AmbientBackground } from './AmbientBackground';
@@ -15,20 +15,34 @@ export function Empty({ title, children }: { title: string; children: ReactNode 
   return <div className="empty"><span className="empty-mark" aria-hidden="true">—</span><h3>{title}</h3><p>{children}</p></div>;
 }
 export function JsonView({ value }: { value: unknown }) { return <pre className="json-view">{JSON.stringify(value, null, 2)}</pre>; }
-export function useRemote<T>(path: string, token: string, revision = 0) {
-  const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
-  const [checkedAt, setCheckedAt] = useState('');
+export function useRemote<T>(path: string, token: string, revision = 0, contextKey = '') {
+  const [attempt, setAttempt] = useState(0);
+  type Snapshot = { path: string; token: string; revision: number; attempt: number; contextKey: string;
+    data: T | null; error: string; loading: boolean; checkedAt: string };
+  const [snapshot, setSnapshot] = useState<Snapshot>(() => ({ path, token, revision, attempt, contextKey,
+    data: null, error: '', loading: true, checkedAt: '' }));
+  const reload = useCallback(() => setAttempt(value => value + 1), []);
   useEffect(() => {
     const controller = new AbortController();
-    setLoading(true); setError(''); setData(null);
-    request<T>(path, token, { signal: controller.signal }).then(result => { setData(result); setCheckedAt(new Date().toISOString()); }).catch((cause: unknown) => {
-      if (!(cause instanceof DOMException && cause.name === 'AbortError')) setError(errorMessage(cause));
-    }).finally(() => { if (!controller.signal.aborted) setLoading(false); });
-    return () => controller.abort();
-  }, [path, token, revision]);
-  return { data, error, loading, checkedAt };
+    let active = true;
+    const scope = { path, token, revision, attempt, contextKey };
+    const commit = (next: Snapshot) => {
+      if (!active || controller.signal.aborted) return;
+      setSnapshot(previous => active && !controller.signal.aborted ? next : previous);
+    };
+    commit({ ...scope, data: null, error: '', loading: true, checkedAt: '' });
+    request<T>(path, token, { signal: controller.signal }).then(data => {
+      commit({ ...scope, data, error: '', loading: false, checkedAt: new Date().toISOString() });
+    }).catch((cause: unknown) => {
+      if (!active || controller.signal.aborted) return;
+      commit({ ...scope, data: null, error: errorMessage(cause), loading: false, checkedAt: '' });
+    });
+    return () => { active = false; controller.abort(); };
+  }, [path, token, revision, attempt, contextKey]);
+  const current = snapshot.path === path && snapshot.token === token && snapshot.revision === revision
+    && snapshot.attempt === attempt && snapshot.contextKey === contextKey;
+  return { data: current ? snapshot.data : null, error: current ? snapshot.error : '',
+    loading: current ? snapshot.loading : true, checkedAt: current ? snapshot.checkedAt : '', reload };
 }
 export function Updated({ time }: { time: string }) { return <span className="updated">{time ? `Fetched ${displayDate(time)}` : 'Awaiting server response'}</span>; }
 export function Panel({ title, close, children }: { title: string; close: () => void; children: ReactNode }) {

@@ -1,0 +1,42 @@
+{
+  "cycle_id": "2026-11-01T105140Z-task-recovery",
+  "checkpoint_at": "2026-11-01T11:18:58.534120+00:00",
+  "state": "Candidate0.3.3 source verified locally; current remote container, exact archive and publication gates pending",
+  "starting_main": "897d5d9762f274f8def53812ae156359af56f9e0",
+  "candidate_version": "0.3.3-rc.1",
+  "published_version_at_checkpoint": "0.3.2-rc.1",
+  "requirements": [
+    "ASO3-004",
+    "ASO3-006",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "implemented": [
+    "Request-scoped saved-task Retry with distinct error/loading/confirmed-empty states",
+    "Abort and current-context binding for read-only request results",
+    "Preserved030/031/032 release history;033includes032",
+    "Actual isolated read-response fault harness; no product testing flag"
+  ],
+  "local_verification": {
+    "python_passed": 543,
+    "python_skipped": 21,
+    "frontend_passed": 160,
+    "build": "passed",
+    "selected_dependency_audits": "All three passed; no known findings in selected inputs",
+    "commands": "release-evidence/v0.3.3-rc.1/commands.jsonl"
+  },
+  "actual_browser": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-browser-recovery.json",
+  "api_and_data": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-recovery-persistence.json",
+  "snapshot_scope": "Isolated online copy of actual engineering records.20records/two tasks/six Completed jobs unchanged. Primary47/copy48audit entries valid; extra entry is actual review login only.",
+  "public_capture": "publication/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+  "capture_method": "Native unchanged JPEG,375x812; model not loaded and unsent draft preserved.",
+  "retained_failure": "Initial harness HTTPConnection context-manager TypeError repaired using contextlib.closing; failed private attempt retained.",
+  "actual_model_calls": 0,
+  "training_runs": 0,
+  "new_task_or_operational_records": 0,
+  "original_acceptance_complete": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The browser initially exposed a harness implementation error, which was repaired before the journey. The actual authenticated read then failed visibly without an empty-task claim; explicit Retry recovered the existing tasks and unsent draft without writing records. Independent snapshot and audit checks preserve the actor/privacy boundary. No model run or operational record was manufactured.",
+  "next_bounded_prompt": "Reconcile exact033source and actualCI/archive/publication outcomes. Never infer success from queued runs. Preserve every frozen release, verify new assets/media independently and update only existing destinations after gates. Review current application browser/API/persistence and actor privacy before promotion. Keep original national, provider and operational acceptance gaps explicit. Bound work to45minutes and atmosttwoactualmodelcalls; no email, contacts, paidservices, aircraft commands, external submissions, selfapproval or approval-boundary changes."
+}

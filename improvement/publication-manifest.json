@@ -11,7 +11,8 @@
     "cycles/2026-10-30T192702Z-task-copy.json",
     "cycles/2026-10-31T164121Z-publication-resilience.json",
     "cycles/2026-10-31T224658Z-publication-completion.json",
-    "cycles/2026-11-01T044904Z-permission-and-release.json"
+    "cycles/2026-11-01T044904Z-permission-and-release.json",
+    "cycles/2026-11-01T105140Z-task-recovery.json"
   ],
   "future_cycles": "Unlisted cycle files are excluded from release payloads until reviewed and deliberately added. Do not list private records, credentials, correspondence or operational customer data."
 }

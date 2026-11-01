@@ -1,3 +1,7 @@
+## Current0.3.3 continuation
+
+Read the latest task-recovery cycle before changing source. Reconcile actual current CI, exact-archive and publication results; preserve0.3.2 and earlier releases. Do not treat local tests as operational acceptance. Verify actor-private saved tasks, failure/retry, animation preferences and persistent audit before promotion. Bound the next increment to45minutes and two actual local-model calls, with no external operational action or communication.
+
 # Executable delivery plan
 
 31 October 2026, 23:13 UTC checkpoint: all three Hugging Face presentations are published and independently retrieved. The existing System Lab project page is deployed at version 98, source `7e96d2431d993a6acef01d8ea37dfa6fce40a80c`; its49-resource comparison passed, including 46 exact assets and 3 authored pages. The API and idle worker were recovered with unchanged records and a valid audit chain. Publish the reviewed handover documentation separately; no new software candidate was created. Next prepare a distinct 0.3.2 candidate with correctly named media, integrate the verified guard from `c6839aeda8276685ea55bae724d90669ae2e9bcd`, and execute its own source, installation, container, security and publication gates. Preserve every frozen tag and asset. Read the latest cycle for exact evidence and the bounded continuation. The original implementation and acceptance scope below remains incomplete.

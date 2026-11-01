@@ -1,0 +1,3 @@
+.companion-task-load-controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.companion-task-load-controls button{min-height:32px;font-size:12px;text-align:left;white-space:normal}
+.companion-task-read-error h3{margin:0 0 8px;font-size:14px}

@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-01T10:54:46.682535+00:00",
+  "state": "Independently Retrieved",
+  "head": "897d5d9762f274f8def53812ae156359af56f9e0",
+  "tree": "2b31daaa0ff0e609e8145e890e3e4bf3fb139002",
+  "parents": [
+    "3d0ab7f75de1e3ccba1faa44c4c7884c69be5570"
+  ],
+  "current_main_software_version": "0.3.2-rc.1",
+  "anonymous_requests": true,
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "source_coverage_scope": "Software publication and exact public coverage-statement retrieval only. No regulatory source was re-fetched and no legal currentness or complete European coverage is inferred.",
+  "copy_observation": "AGENTS current checkpoint still says publication metadata awaits its documentation commit, while the main ref is published. Earlier current-state paragraphs are historical and should remain clearly labelled.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11702,
+      "sha256": "eeaa8c973434cd965478cdd8fd3b342c4add9a546d27362a5f2be5adf9f1c8ad",
+      "status": 200
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 9198,
+      "sha256": "6406c788e3d22c1556be0a21ce2391e9c49a25c1eb329677e8dd0a4633629070",
+      "status": 200
+    },
+    {
+      "path": "SOURCE_REGISTER.md",
+      "bytes": 9621,
+      "sha256": "2c05c90f3708f12db17b8a7b822bdc777281ec53ccdee437db2ac98a0f004360",
+      "status": 200
+    },
+    {
+      "path": "backend/airspace/__init__.py",
+      "bytes": 95,
+      "sha256": "c7bd051e7c257ae5adef1d373ebb1fa92788244f06554388bf67386d74a39739",
+      "status": 200
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 765,
+      "sha256": "360b7b496d52f6459b389ca5a6bb5c722de56e35dd044dcc8a7ff63543bd760c",
+      "status": 200
+    },
+    {
+      "path": "SPECIFICATION.md",
+      "bytes": 45776,
+      "sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+      "status": 200
+    }
+  ]
+}

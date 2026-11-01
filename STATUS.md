@@ -1,3 +1,5 @@
+Current0.3.3 engineering checkpoint: read `improvement/cycles/2026-11-01T105140Z-task-recovery.json`. Current public software remains0.3.2. Local543/21and160interface checks passed; actual browser fault/retry and unchanged snapshot/audit checks passed. Current remote container, exact archive and publication gates remain pending. Preserve every frozen release and incomplete original requirement.
+
 ## Current release checkpoint, 1 November 2026
 
 GitHub [0.3.2-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.2-rc.1) is published and independently retrieved, frozen source `2ebb8b20e515d9863a69b072bd963890e219e050`. The ZIP contains 13,796,258 bytes and has SHA-256 `1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e`. All nine release assets match their public digests. CI41275818880 passed 542 source tests with 20 skipped,132 interface tests and 19 PostgreSQL tests, plus actual containers, worker/API completion and backup/restoration. The exact archive installation separately passed 542 tests with 20 skipped in 67.80 seconds. Earlier local 541 passed/21 skipped is a distinct result.
