@@ -1,0 +1,134 @@
+{
+  "prepared_at": "2026-11-01T11:27:49.563821+00:00",
+  "state": "Finalized against actual release receipts; not uploaded",
+  "ready_for_upload": true,
+  "presentation_only": true,
+  "application_version": "0.3.3-rc.1",
+  "application_source": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "current_release_id": 430536496,
+  "current_release_ci": 41301492234,
+  "archive_bytes": 14192874,
+  "archive_sha256": "067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5",
+  "prior_revisions": {
+    "model": "d2bba8b30845cced9293cabe0b7287c481f6cee7",
+    "dataset": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+    "space": "e690dc6b5f8ef26f700188300475b668dae2500e"
+  },
+  "files": [
+    {
+      "source": "publication/releases/0.3.3-rc.1/huggingface/model/README.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "README.md",
+      "bytes": 11022,
+      "sha256": "41f33ba73a047901455b05c5a169fb1a9d9a5d04f5d4190ffd38bd877fa71f11"
+    },
+    {
+      "source": "publication/releases/0.3.3-rc.1/huggingface/model/media/task-recovery-mobile.jpg",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b"
+    },
+    {
+      "source": "publication/releases/0.3.3-rc.1/huggingface/dataset/README.md",
+      "repo_type": "dataset",
+      "repo_id": "Magic51/system-lab-airspace-source-annotations",
+      "target": "README.md",
+      "bytes": 7831,
+      "sha256": "d27a72b29b6cebba2bbbe89bcf41d91fa008b685a4b682aa4b9b910df64d7b05"
+    },
+    {
+      "source": "publication/releases/0.3.3-rc.1/huggingface/space/README.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "README.md",
+      "bytes": 6978,
+      "sha256": "d8895d10f8b05637458bb558654ba7c8cbb0453e5c29b6da9601d630c2ff5841"
+    },
+    {
+      "source": "publication/releases/0.3.3-rc.1/huggingface/space/index.html",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "index.html",
+      "bytes": 11843,
+      "sha256": "61cab1684517fcf6957f311ef07794bdc1a4190f1b356264a820b130a40c6d78"
+    },
+    {
+      "source": "publication/releases/0.3.3-rc.1/huggingface/space/media/task-recovery-mobile.jpg",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b"
+    }
+  ],
+  "historical_unlisted_pack_files": [
+    {
+      "path": "model/media/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688"
+    },
+    {
+      "path": "model/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    },
+    {
+      "path": "model/NOTICE.md",
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024"
+    },
+    {
+      "path": "space/media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7"
+    },
+    {
+      "path": "space/media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c"
+    },
+    {
+      "path": "space/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    },
+    {
+      "path": "space/NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb"
+    },
+    {
+      "path": "space/styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16"
+    }
+  ],
+  "unlisted_remote_files_policy": "Preserve every unlisted remote file and complete rights notice; reconcile actual heads against prior_revisions before any separately authorized upload.",
+  "source_tests": {
+    "passed": 544,
+    "skipped": 20
+  },
+  "interface_tests": {
+    "passed": 160,
+    "skipped": 0
+  },
+  "exact_archive_tests": {
+    "passed": 544,
+    "skipped": 20
+  },
+  "weights_changed": false,
+  "dataset_records_changed": false,
+  "live_inference": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_writes": false,
+  "release_evidence": {
+    "public-downloads": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-public-downloads.json",
+    "archive-integrity": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-archive-integrity.json",
+    "public-media": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-public-media.json",
+    "recovery-persistence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-recovery-persistence.json"
+  }
+}

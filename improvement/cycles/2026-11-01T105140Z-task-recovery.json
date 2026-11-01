@@ -1,10 +1,10 @@
 {
   "cycle_id": "2026-11-01T105140Z-task-recovery",
-  "checkpoint_at": "2026-11-01T11:18:58.534120+00:00",
-  "state": "Candidate0.3.3 source verified locally; current remote container, exact archive and publication gates pending",
+  "checkpoint_at": "2026-11-01T11:35:43.951482+00:00",
+  "state": "GitHub candidate independently retrieved; destination states remain separate",
   "starting_main": "897d5d9762f274f8def53812ae156359af56f9e0",
   "candidate_version": "0.3.3-rc.1",
-  "published_version_at_checkpoint": "0.3.2-rc.1",
+  "published_version_at_checkpoint": "0.3.3-rc.1",
   "requirements": [
     "ASO3-004",
     "ASO3-006",
@@ -37,6 +37,48 @@
   "original_acceptance_complete": false,
   "stable_release": false,
   "operational_acceptance": false,
-  "retrospective": "The browser initially exposed a harness implementation error, which was repaired before the journey. The actual authenticated read then failed visibly without an empty-task claim; explicit Retry recovered the existing tasks and unsent draft without writing records. Independent snapshot and audit checks preserve the actor/privacy boundary. No model run or operational record was manufactured.",
-  "next_bounded_prompt": "Reconcile exact033source and actualCI/archive/publication outcomes. Never infer success from queued runs. Preserve every frozen release, verify new assets/media independently and update only existing destinations after gates. Review current application browser/API/persistence and actor privacy before promotion. Keep original national, provider and operational acceptance gaps explicit. Bound work to45minutes and atmosttwoactualmodelcalls; no email, contacts, paidservices, aircraft commands, external submissions, selfapproval or approval-boundary changes."
+  "retrospective": "The saved-task failure was a recoverability and privacy issue. Request identity masking and a task-only manual reload were verified in isolated tests and an actual browser/API/database review. Publication remains destination-specific and all frozen history is preserved.",
+  "next_bounded_prompt": "Read STATUS.md, the latest cycle, release evidence and publication/status.json. Within 45 minutes and at most two actual local-model evaluations, first reconcile any unfinished 0.3.3 publication using actual destination receipts without replacing frozen bytes. Then audit actual companion and saved-task loading, actor changes and animation preferences. Review the authored Empty em dash and generic 'How can I help' phrase against the user's copy requirements while preserving legal text, identifiers, units and essential safety meaning. Inspect the actual CI React duplicate-key warnings and distinguish fixture warnings from reproducible application defects before changing product behaviour. No warning-free claim is supported. Select the highest-value verified issue; do not blindly replace copy. Implement one bounded improvement with current actor/tenant isolation, scoped GET retries, deterministic constraints and explicit internal-draft confirmation. Verify browser to API to persistent data, failure recovery and no unintended model/action calls. Keep every incomplete original requirement explicit. Preserve earlier releases, independent review and all unrelated projects. Use no emails, human contact, aircraft commands, external submissions, new approval grants or substantial charges. Record exact tests, actual model calls, publication state, retrospective and the next bounded prompt.",
+  "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "github": {
+    "published": true,
+    "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+    "ci_run": 41301492234,
+    "downloads": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-public-downloads.json"
+  },
+  "site": {
+    "release": "0.3.3-rc.1",
+    "version": 100,
+    "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site100-public.json"
+  },
+  "huggingface": [
+    {
+      "destination": "Hugging Face model presentation",
+      "release": "0.3.3-rc.1",
+      "revision": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json"
+    },
+    {
+      "destination": "Hugging Face dataset presentation",
+      "release": "0.3.3-rc.1",
+      "revision": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json"
+    },
+    {
+      "destination": "Hugging Face recorded evaluation Space",
+      "release": "0.3.3-rc.1",
+      "revision": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json"
+    }
+  ],
+  "retained_auxiliary_attempts": [
+    "The private source-preparation helper initially raised KeyError when reading the nested database receipt, before public writes. It was repaired and staged the declared source payload; failed private evidence is retained.",
+    "uv.lock line endings were explicitly normalised from CRLF to LF. A whitespace-insensitive Git comparison confirmed only the version change; the actual pushed source and preflight are byte-bound by public-source.json.",
+    "An initial unreferenced source commit was superseded before the release branch was pushed because of a preflight stdout newline correction. The actual pushed frozen source is6f8364df25b942d49eb1b4ccaa40f27f70578dbb.",
+    "A stale browser numeric-node click failed during Hub navigation; a fresh DOM locator recovered. This did not bypass authentication or another browser.",
+    "These retained private preparation and navigation failures are not represented as a failed released candidate."
+  ],
+  "verification_limitations": [
+    "Actual interface CI stderr includes React duplicate-key warnings. They are retained in the original CI evidence and have not yet been reproduced in the real browser. Passing tests do not imply warning-free execution."
+  ]
 }

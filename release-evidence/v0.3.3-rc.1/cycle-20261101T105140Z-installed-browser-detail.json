@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-01T11:32:23.332Z",
+  "motionControls": [
+    {
+      "checked": null,
+      "label": "Pause companion animation",
+      "pressed": "true",
+      "role": null,
+      "text": "Pause motion"
+    }
+  ],
+  "reloadVisible": true,
+  "taskStates": [
+    "Completed",
+    "Open"
+  ],
+  "initialProofLimitation": "Initial scoped CSS selector did not match task controls and returned an empty array; this direct visible-control read is separate evidence."
+}

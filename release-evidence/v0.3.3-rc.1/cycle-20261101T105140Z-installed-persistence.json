@@ -1,0 +1,75 @@
+{
+  "started_at": "2026-11-01T11:31:37.054337+00:00",
+  "checked_at": "2026-11-01T11:31:38.401773+00:00",
+  "scope": "Read-only installed primary application, protected worker heartbeat/process query, SQLite mode=ro snapshot and HMAC chain verification; no reviewer login or model call",
+  "version": "0.3.3-rc.1",
+  "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "health_and_auth_boundary": [
+    {
+      "route": "/api/v1/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.3-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "route": "/api/v1/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "worker": {
+    "pid": 9504,
+    "heartbeat_at": "2026-11-01T11:31:32.279424+00:00",
+    "age_seconds": 4.854,
+    "actual_worker_process_present": true,
+    "primary_venv_command_matches": true
+  },
+  "database": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "records_jobs_and_versions_equal_isolated_review_snapshot": true,
+    "task_states_versions": [
+      {
+        "status": "Completed",
+        "version": 2
+      },
+      {
+        "status": "Open",
+        "version": 1
+      }
+    ],
+    "records_canonical_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "sessions": 21
+  },
+  "audit": {
+    "valid": true,
+    "count": 48,
+    "first47_rows_exact_with_isolated_snapshot": true,
+    "additional_actions_since_47": [
+      "identity.login"
+    ],
+    "additional_entries_are_login_only": true,
+    "timing_note": "Count reflects the read transaction at check time. Root may authenticate in the browser separately; any observed extra entries above47 were identity.login only."
+  },
+  "software_files_matching_reviewed_payload": 16,
+  "frontend_package_version": "0.3.3-rc.1",
+  "model_calls": 0,
+  "training_runs": 0,
+  "reviewer_authentication": false,
+  "operational_data_writes": false,
+  "source_or_process_changes": false,
+  "success": true
+}

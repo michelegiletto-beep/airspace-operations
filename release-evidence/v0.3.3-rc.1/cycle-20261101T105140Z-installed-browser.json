@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-01T11:30:58.067Z",
+  "emptyOperational": true,
+  "modelNotLoaded": true,
+  "motionPaused": null,
+  "reloadVisible": true,
+  "taskStates": [],
+  "version": true,
+  "modelCalls": 0,
+  "taskWrites": 0,
+  "operationalWrites": 0,
+  "actualSignIns": 1,
+  "privateScreenshot": "runtime/publication/installed033-desktop-private.jpg"
+}

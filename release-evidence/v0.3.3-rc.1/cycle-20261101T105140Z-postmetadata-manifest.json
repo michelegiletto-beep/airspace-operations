@@ -1,0 +1,248 @@
+{
+  "at": "2026-11-01T11:35:43.951482+00:00",
+  "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "scope": "Selected current-cycle post-release documentation and public evidence; no runtime, frozen history, model or code mutation",
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "requirements_traceability_sha256": "00b6908f4ed201fc994a75f3d6df34230e87967c1a7e659a8c24a9dd056d0c6a",
+  "requirements_bytes_unchanged": true,
+  "supported_secret_matches": 0,
+  "files": [
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-remote-scope.json",
+      "bytes": 4209,
+      "sha256": "19830f5ddf0d6a0707ec69f53d65c547423a27e5ec8091a5aca5dce056547a25",
+      "git_blob": "40184b20fc1dc916b3d51d7384cb3688f449ec51"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-browser-recovery.json",
+      "bytes": 1314,
+      "sha256": "c7c40df798a58f73f7f56a69a5f7afc23147b8b42f34fef5408b17d15631f809",
+      "git_blob": "f1340df6e16f147572fba03631b226f655b601d0"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-recovery-persistence.json",
+      "bytes": 4858,
+      "sha256": "acc2e7102d5acad2dcbfe9af6eee162cfb19dc5d1f633bc0acd72f26cc5b4e37",
+      "git_blob": "6689c89cce1296fab4eaa62bb99eef6d994250b2"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 42094,
+      "sha256": "aa9796846e8033c8da766b2fcbe9323798cb7212346148b5b9453a8edaa58b21",
+      "git_blob": "20ebe3e0a8f2f99c30d1c4315cdcdb817a4fd6a1"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 13451,
+      "sha256": "c599f9c4d1b6d253a4711329ba08adc23a0fd1deb3e0a857115ffcca9ead5341",
+      "git_blob": "02bcf63f546ed9ab09480899321aa552bd2dfa91"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 11539,
+      "sha256": "36a2748745a2d473134f4e6f213689c4113a05c791e84f0c10c2c8c2e9950e93",
+      "git_blob": "ad4e3ef2e7e15f194dbd6961465c65ee8dd620ef"
+    },
+    {
+      "path": "HANDOVER.md",
+      "bytes": 16700,
+      "sha256": "7c5ef2dfe63dba916a5c1c7959683ea11f45dd6c64277af47ea839e37ee5dbe0",
+      "git_blob": "7098579e63c810503dc2ffa41510a9d4b34b6114"
+    },
+    {
+      "path": "publication/status.json",
+      "bytes": 20126,
+      "sha256": "bf6baf7833ba6c1588da22baa3c2ac255cfd358efb91757f9331618b9dbf0538",
+      "git_blob": "eaff5f9ff7445643c3ea60563365054e784b5526"
+    },
+    {
+      "path": "improvement/cycles/2026-11-01T105140Z-task-recovery.json",
+      "bytes": 6227,
+      "sha256": "5239954ef11b1cc2ec7aa3b0e5e401ac65acf0718088abbe7ef99d29bbd86933",
+      "git_blob": "a58777a6dda6ef82221233a3e0256b5de47b0b34"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-public-source.json",
+      "bytes": 31936,
+      "sha256": "44993d7803646a0212f7e877e08eb87ff70ed1c172b9fd7086e2c3f8641d4446",
+      "git_blob": "e05d8f8d530e4b4288d6b099b6d5d7107d8b3aad"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-public-downloads.json",
+      "bytes": 6169,
+      "sha256": "82de635a3e4d3e6523768e3ba7494d462a6ef5d6c860bb7e0cc4441a9a388a2c",
+      "git_blob": "5be11ccaee2de1041961498f58ccba227907657c"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-archive-integrity.json",
+      "bytes": 1060,
+      "sha256": "98039758e3d41ae91b1cb8f3d14ec57f3d309b68d75fb7cc40eed43c9f20eb0b",
+      "git_blob": "6205c426ac55db4a2c5a5aaaab4d10630c00afe5"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site100-public.json",
+      "bytes": 69132,
+      "sha256": "db90de2d11acc24214e0022d6115e586f1704e314a3d8a96e52eb8e6cb0e7874",
+      "git_blob": "b1e556e5311160cac08ea6a6cda24159bc346865"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "bytes": 11337,
+      "sha256": "cd01a86f95e9611f770a2c1e14f93a74593c33b21bba456476c1f68a1ced9e89",
+      "git_blob": "82c1fc90199b4ceb4e553cc5c4982e62e3167e8b"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "bytes": 6367,
+      "sha256": "fa72ebbcbd6b7f569161a684d524aae980662c95c3b3d415aed378d9e988e0b6",
+      "git_blob": "d52541f0a937f2f198846ed944930e8515995157"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "bytes": 19268,
+      "sha256": "b9fd5711ae8111f15555bff1b8c87b1277a6e0692c8b7364217a0b32c9ff4cff",
+      "git_blob": "57f3d26f59764fe6495d3ab5239c643d519f5fb5"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-installed-persistence.json",
+      "bytes": 2288,
+      "sha256": "74732402fe9702d37d1ae0de23c9128de6f0344ad1a37fa55f33299e8e70659b",
+      "git_blob": "d06d7b0333dcffb5e8bbe9bc7a1bf989727dbb31"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-installed-browser.json",
+      "bytes": 346,
+      "sha256": "565dfba43102aa60cf4f517bd2a5ff688d7729fbdf18a47b72a80ff371c2e37c",
+      "git_blob": "e202822b9009a2a30f0a34a2642117a8ee1d7d07"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-installed-browser-detail.json",
+      "bytes": 466,
+      "sha256": "082702c4dbf8959a93fe94c5e7eab4575aa43c27d55d73061e14fe48bb2d9923",
+      "git_blob": "2fd54c58d39c01f2c46e0dbad1df13aaac7f1023"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site-native.json",
+      "bytes": 1116,
+      "sha256": "1b31a66c6bf9569f491d475dcd8e883fddc46649f3d273a5b6b711873cc9f787",
+      "git_blob": "7c54eae9b156d4900e53ff7761ccab384d9be0b5"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site-package.json",
+      "bytes": 700,
+      "sha256": "aef172fa01badc849f3c7ffc0283ee36fae689a472d2fef6bcaf2ba843d387b7",
+      "git_blob": "8c49b9be3f1e21ca78de52512b1b763c986130d5"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site-browser.json",
+      "bytes": 581,
+      "sha256": "f03c22684ecd67c3e7d966e8bfbde4b8f219f4da77033315a8b475db8ad9d764",
+      "git_blob": "9de47e529d44fd864b45c2baade4ed4988a03f74"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-publication.json",
+      "bytes": 3022,
+      "sha256": "a3a6caba803808d30dd959aaf40e75cc938539eddfd695449ed12df825801942",
+      "git_blob": "86c6e70f139fa4ea48a2eb5157bc27d98acb3240"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-verify-space-live.json",
+      "bytes": 6724,
+      "sha256": "74845352e7050820cb6087e162b581fcb7c4bec7cdd1fd94b6a19efbdbb2b667",
+      "git_blob": "a4a4a9680510f798f569db6b9c62a14bd173df3f"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/manifest.json",
+      "bytes": 5156,
+      "sha256": "23868dc7691089116237d4aefc681ec236d34e2719e81fad03252810a9fdf740",
+      "git_blob": "69f699cfc2258288b96bde06f45e45597b1d6f5f"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/dataset/README.md",
+      "bytes": 7831,
+      "sha256": "d27a72b29b6cebba2bbbe89bcf41d91fa008b685a4b682aa4b9b910df64d7b05",
+      "git_blob": "d2ea86fc8d6c229f63294b33cd61ef916c31f2f0"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/model/NOTICE.md",
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "git_blob": "c60596442e790ca993f3845e54a168b353f223e8"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/model/README.md",
+      "bytes": 11022,
+      "sha256": "41f33ba73a047901455b05c5a169fb1a9d9a5d04f5d4190ffd38bd877fa71f11",
+      "git_blob": "bbd8f55e8e103417a4ac800110266ff0c18ad159"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/index.html",
+      "bytes": 11843,
+      "sha256": "61cab1684517fcf6957f311ef07794bdc1a4190f1b356264a820b130a40c6d78",
+      "git_blob": "d458301402c14c9c90013f16384a8dddc1f94d33"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "git_blob": "c62b4a25f65676b1355091414efcd1af58f76853"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/README.md",
+      "bytes": 6978,
+      "sha256": "d8895d10f8b05637458bb558654ba7c8cbb0453e5c29b6da9601d630c2ff5841",
+      "git_blob": "f0151ce95c0df60cd6f85dd397eb30eaece93607"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "git_blob": "ff545f371402cd66d21d9c12b5a859f51294c49d"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "git_blob": "79a9038f6bb6cd6884ad5e81e0ce28ef9c75dfcc"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "git_blob": "1b3a4c9d0e9388b209420bdc42ad76798ab511a0"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "git_blob": "31ccc2eb57137cac3fb269406993ba513296baf1"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/space/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "git_blob": "09cf2f19fdcfb1d5e1ea3ce93d9f61a93cbc0065"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/model/media/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "git_blob": "bf1e96dac756f24fad206764cda898b016963c79"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/model/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "git_blob": "31ccc2eb57137cac3fb269406993ba513296baf1"
+    },
+    {
+      "path": "publication/releases/0.3.3-rc.1/huggingface/model/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "git_blob": "09cf2f19fdcfb1d5e1ea3ce93d9f61a93cbc0065"
+    }
+  ]
+}

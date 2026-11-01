@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-01T11:35:20.496Z",
+  "client": 1265,
+  "currentImage": [
+    {
+      "complete": true,
+      "height": 812,
+      "src": "/airspace-operations/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+      "width": 375
+    }
+  ],
+  "links": [
+    "/airspace-operations/releases/0.3.3-rc.1/System-Lab-Airspace-Operations-0.3.3-rc.1.zip",
+    "/airspace-operations/releases/0.3.3-rc.1/System-Lab-Airspace-Operations-0.3.3-rc.1.zip"
+  ],
+  "published": true,
+  "scroll": 1265,
+  "width": 1280,
+  "capture": "publication/media/publication-20261101T105140Z/site100-desktop.jpg"
+}

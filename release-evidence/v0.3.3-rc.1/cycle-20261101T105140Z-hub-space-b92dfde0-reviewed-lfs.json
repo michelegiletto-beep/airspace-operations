@@ -1,0 +1,365 @@
+{
+  "started_at": "2026-11-01T11:32:07.320974+00:00",
+  "repo_type": "space",
+  "repository": "Magic51/system-lab-airspace-evaluation",
+  "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
+  "head": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+  "expected_parent": "e690dc6b5f8ef26f700188300475b668dae2500e",
+  "authenticated_read": false,
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "scope": "Exact changed presentation files, current public head, displayed direct parent, and all unlisted prior repository file identities/bytes. No new training, inference or operational acceptance.",
+  "direct_parent": {
+    "verified": true,
+    "parent": "e690dc6b5f8ef26f700188300475b668dae2500e",
+    "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/commit/b92dfde086f057b3836eed4790f3e0f7f7c81655",
+    "parent_links": [
+      "/spaces/Magic51/system-lab-airspace-evaluation/commit/e690dc6b5f8ef26f700188300475b668dae2500e"
+    ],
+    "commit_page_sha256": "36967522d01b3e6b21834d3aa711947ff28b5c3a2931443b383895b547d6d850",
+    "status": 200,
+    "final_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/commit/b92dfde086f057b3836eed4790f3e0f7f7c81655",
+    "redirect_hosts": []
+  },
+  "only_reviewed_targets_and_exact_provider_LFS_entries_changed": true,
+  "actual_changed_paths": [
+    "README.md",
+    "index.html",
+    "media/task-recovery-mobile.jpg"
+  ],
+  "manifest_sha256": "23868dc7691089116237d4aefc681ec236d34e2719e81fad03252810a9fdf740",
+  "changed_files": [
+    {
+      "target": "README.md",
+      "source": "publication/releases/0.3.3-rc.1/huggingface/space/README.md",
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/README.md",
+      "bytes": 6978,
+      "sha256": "d8895d10f8b05637458bb558654ba7c8cbb0453e5c29b6da9601d630c2ff5841",
+      "matches_reviewed_manifest_and_local_source": true,
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/README.md",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "target": "index.html",
+      "source": "publication/releases/0.3.3-rc.1/huggingface/space/index.html",
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/index.html",
+      "bytes": 11843,
+      "sha256": "61cab1684517fcf6957f311ef07794bdc1a4190f1b356264a820b130a40c6d78",
+      "matches_reviewed_manifest_and_local_source": true,
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/index.html",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "target": "media/task-recovery-mobile.jpg",
+      "source": "publication/releases/0.3.3-rc.1/huggingface/space/media/task-recovery-mobile.jpg",
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "matches_reviewed_manifest_and_local_source": true,
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Ftask-recovery-mobile.jpg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    }
+  ],
+  "unlisted_prior_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1843,
+      "sha256": "56792e4e03db3ea9c98cbb0ba19814585984bbe45b0b65f18cc081411f08f6b4",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/.gitattributes",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/.gitattributes",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/LICENSE",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/LICENSE",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/NOTICE.md",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/NOTICE.md",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "app.js",
+      "bytes": 9956,
+      "sha256": "98a23b3f43a7b9d24750bd72d3b83f4837ae7455ee1e7ea5fb1e1aa1d5d1547d",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/app.js",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/app.js",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "data/actual-ui-workflow.json",
+      "bytes": 133118,
+      "sha256": "f6e8d7927bb9ffdd6a2355e8b0f2b8a33c327155c2cb33eba03e6b6ab6ed549f",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/data/actual-ui-workflow.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/data%2Factual-ui-workflow.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "data/causal-comparison.json",
+      "bytes": 546869,
+      "sha256": "2c1fda31cb48b2308ee68de062957b4d9c458903de4a77000e6945079ae2eb75",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/data/causal-comparison.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/data%2Fcausal-comparison.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "data/evidence.json",
+      "bytes": 39490,
+      "sha256": "b2bc32950ddd50ac1df1e4d0cacdbc6b2ee8e1ba155c1eb2f11b285c7ad9ae69",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/data/evidence.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/data%2Fevidence.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "data/first-causal-run.json",
+      "bytes": 129419,
+      "sha256": "52e2a1bbf7d022bbe6540c28036e8136ce0a93c707c9222848485639d4936747",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/data/first-causal-run.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/data%2Ffirst-causal-run.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "data/provenance.json",
+      "bytes": 2417,
+      "sha256": "1d0e1906c5bae9a5c24bd599c23e1afb9b57e8294513a3a9b6fb23e182f479b1",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/data/provenance.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/data%2Fprovenance.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "data/student-run.json",
+      "bytes": 18937,
+      "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/data/student-run.json",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/data%2Fstudent-run.json",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "media/agent-orchestration-detail.jpg",
+      "bytes": 71132,
+      "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/agent-orchestration-detail.jpg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Fagent-orchestration-detail.jpg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "media/agent-orchestration.jpg",
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/agent-orchestration.jpg",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/2ebcbdf1be38f88bd198e70edf7b56537f58bf7eee317bd64d71f04da47dd08f",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/airspace-planning.jpg",
+      "bytes": 112044,
+      "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/airspace-planning.jpg",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/c628fae7b985cbde631a2803917321e06c404a077cc0133272d33e0224e93a2c",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/application-tasks.png",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/companion-tasks-mobile.jpg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Fcompanion-tasks-mobile.jpg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "media/european-coordination.jpg",
+      "bytes": 127424,
+      "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/european-coordination.jpg",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/9a2791057f0a9f74e2b78be4c4ce733df40d858a6ddac0d1da3dedf155fe3ad0",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/fleet-maintenance.jpg",
+      "bytes": 75096,
+      "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/fleet-maintenance.jpg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Ffleet-maintenance.jpg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "media/mission-control.jpg",
+      "bytes": 129906,
+      "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/mission-control.jpg",
+      "status": 200,
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/ff1b6915bcb9d1bb1d564f9147e53c4cb85c18936788d612482719b4462c9ed9",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/operations-permissions-mobile.jpg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Foperations-permissions-mobile.jpg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "media/orchestration-pipeline.svg",
+      "bytes": 4561,
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/orchestration-pipeline.svg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Forchestration-pipeline.svg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "media/scheduling.jpg",
+      "bytes": 98935,
+      "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/scheduling.jpg",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Fscheduling.jpg",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 6735,
+      "sha256": "65cf5e3cd9171c95b5880cb8395b97ee96580a1fa8e89f5ebd538db3adf47d98",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/prepare.py",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/prepare.py",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "style.css",
+      "bytes": 388,
+      "sha256": "789bfd541c9f06658ac410d968e9c39fa8c63a48a08643b36071b984c699a9f4",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/style.css",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/style.css",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "path": "styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "blob_identity_and_actual_bytes_unchanged": true,
+      "source_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/styles.css",
+      "status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/styles.css",
+      "redirect_hosts": [
+        "huggingface.co"
+      ]
+    }
+  ],
+  "state": "Independently Retrieved",
+  "success": true,
+  "completed_at": "2026-11-01T11:32:15.983459+00:00"
+}

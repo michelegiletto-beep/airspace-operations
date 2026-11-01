@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-01T11:34:18.301917+00:00",
+  "state": "Published and Independently Retrieved",
+  "application_version": "0.3.3-rc.1",
+  "application_source": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "destinations": {
+    "model": {
+      "head": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+      "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "changed_targets": 2,
+      "unlisted_prior_files_preserved": 13,
+      "direct_parent_verified": true,
+      "only_reviewed_targets_and_exact_provider_LFS_entries_changed": true
+    },
+    "dataset": {
+      "head": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+      "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "changed_targets": 1,
+      "unlisted_prior_files_preserved": 6,
+      "direct_parent_verified": true,
+      "only_reviewed_targets_and_exact_provider_LFS_entries_changed": true
+    },
+    "space": {
+      "head": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "changed_targets": 3,
+      "unlisted_prior_files_preserved": 24,
+      "direct_parent_verified": true,
+      "only_reviewed_targets_and_exact_provider_LFS_entries_changed": true
+    }
+  },
+  "reviewed_targets": 6,
+  "unlisted_prior_files_preserved": 43,
+  "ui_scope": "Existing authenticated Magic51 Chrome profile; three direct-main presentation commits using exactly6manifest targets. No credential, permissions, paid service, community message or model/data mutation.",
+  "read_only_prior_heads_verified_before_commit": true,
+  "model_card_visibly_shows_actual033_source_archive_and_counts": true,
+  "screenshot": {
+    "path": "publication/media/publication-20261101T105140Z/huggingface-model033-clean.jpg",
+    "bytes": 141613,
+    "sha256": "30771bd350cfff92e24cfb222818c1105c71f80235beead97b42a1f0c32280a1",
+    "encoding": "JPEG",
+    "pixels_altered": false,
+    "privacy_review": "Published model card and ordinary site header only; no private identifier, credential, account dropdown or operational record appears."
+  },
+  "retained_failures": [
+    "Root-owned tab could not be claimed across browser sessions; a fresh tab in the same Chrome profile recovered before upload.",
+    "CDP page-tree timed out after the model commit; anonymous actualhead verification and a fresh same-profile tab confirmed success without repeating the commit.",
+    "Initial actual screenshot contained a provider onboarding tooltip and was retained privately. Clean capture followed UI Dismiss; no image pixels were edited."
+  ],
+  "public_pack": "publication/releases/0.3.3-rc.1/huggingface",
+  "private_runtime_republished": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "weights_changed": false,
+  "dataset_records_changed": false,
+  "frozen_release_bytes_changed": false,
+  "success": true
+}
