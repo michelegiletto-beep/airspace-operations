@@ -1,5 +1,7 @@
 # System Lab Airspace Operations
 
+This checkout contains development candidate **0.3.2-rc.1**. It adds mission-planning role guidance and integrates the reviewed raster-format publication guard. Its own release, installation and publication gates are still being verified; no 0.3.2 download or completed validation is claimed here. The current published software remains 0.3.1-rc.1. The [candidate notes](publication/releases/0.3.2-rc.1/release-notes.md) describe the change, and [publication status](publication/status.json) separates development from published artifacts.
+
 Version [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1) is a published engineering candidate. Its exact archive passed 479 tests with 20 skipped; the interface passed 123 tests. Release-source container, worker, PostgreSQL and restoration checks succeeded. All nine public assets were anonymously retrieved and digest-matched. This increment improves task readability, the visible version and mobile panel fit. See [known limitations](docs/known-limitations.md), including the frozen mobile image filename mismatch. Full original acceptance and operational acceptance remain incomplete.
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.

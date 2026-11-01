@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "release": "0.3.0-rc.1",
+  "release": "0.3.2-rc.1",
   "stable_release": false,
   "features": [
     {
@@ -345,6 +345,20 @@
       "implementation": "improvement/RECURRING_PROMPT.md;docs/recurring-improvement.md",
       "evidence": "improvement/automation-receipt.json",
       "limitation": "Six-hour development heartbeat on the configured host; distinct from operational scheduling and not proof of completed future cycles"
+    },
+    {
+      "capability": "Visible mission proposal role guidance",
+      "status": "Verified",
+      "implementation": "frontend/src/MissionDesk.tsx;frontend/src/missionAccess.css",
+      "evidence": "frontend/src/MissionAccess.test.tsx;tests/test_mission_creation_permissions.py;release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-browser.json",
+      "limitation": "Explains existing planner/pilot draft-creation permissions. Does not grant roles, authorise flights or complete the original guidance requirements."
+    },
+    {
+      "capability": "Bounded release media encoding validation",
+      "status": "Verified",
+      "implementation": "scripts/publication_media.py;scripts/publish_candidate.py",
+      "evidence": "tests/test_publication_raster_guard.py;tests/test_publication_material.py",
+      "limitation": "Checks raster container structure and filename extension, not decoded pixels, evidence truth or rights."
     }
   ]
 }

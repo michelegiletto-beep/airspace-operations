@@ -1,0 +1,3 @@
+.mission-planning-access{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px;margin:0 0 16px;padding:12px 16px;border:1px solid #d7e2ef;border-radius:8px;background:#f5f8fc;color:#3e5674}
+.mission-planning-access p{flex:1 1 280px;min-width:0;margin:0;font-size:12px;line-height:1.6}
+.mission-planning-access button{flex:none;max-width:100%;font-size:12px;white-space:normal;text-align:left}

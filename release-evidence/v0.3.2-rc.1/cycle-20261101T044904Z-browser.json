@@ -1,0 +1,110 @@
+{
+  "checked_at": "2026-11-01T05:01:39.976Z",
+  "version": "0.3.2-rc.1",
+  "runtime": "Separate provenance-preserving software-review snapshot on port8788",
+  "desktop": {
+    "client": 1265,
+    "disabled": [
+      {
+        "describedBy": "mission-planning-access",
+        "disabled": true,
+        "text": "Plan a mission"
+      },
+      {
+        "describedBy": "mission-planning-access",
+        "disabled": true,
+        "text": "Create mission proposal"
+      }
+    ],
+    "height": 720,
+    "note": "Your regulatory role can inspect mission records. Creating a mission proposal requires the planner or pilot role.",
+    "scroll": 1265,
+    "version": true,
+    "width": 1280
+  },
+  "mobile": {
+    "client": 375,
+    "controlBounds": [
+      {
+        "bounds": {
+          "bottom": 213.1875,
+          "height": 33,
+          "left": 252.25,
+          "right": 360,
+          "top": 180.1875,
+          "width": 107.75,
+          "x": 252.25,
+          "y": 180.1875
+        },
+        "describedBy": "mission-planning-access",
+        "disabled": true,
+        "text": "Plan a mission"
+      },
+      {
+        "bounds": {
+          "bottom": 308.5625,
+          "height": 18,
+          "left": 32,
+          "right": 198.84375,
+          "top": 290.5625,
+          "width": 166.84375,
+          "x": 32,
+          "y": 290.5625
+        },
+        "describedBy": null,
+        "disabled": false,
+        "text": "Review authorisation cases"
+      },
+      {
+        "bounds": {
+          "bottom": 1193.0625,
+          "height": 31,
+          "left": 98,
+          "right": 250.984375,
+          "top": 1162.0625,
+          "width": 152.984375,
+          "x": 98,
+          "y": 1162.0625
+        },
+        "describedBy": "mission-planning-access",
+        "disabled": true,
+        "text": "Create mission proposal"
+      }
+    ],
+    "height": 844,
+    "note": "Your regulatory role can inspect mission records. Creating a mission proposal requires the planner or pilot role.",
+    "noteBounds": {
+      "bottom": 282.5625,
+      "height": 38.375,
+      "left": 32,
+      "right": 343,
+      "top": 244.1875,
+      "width": 311,
+      "x": 32,
+      "y": 244.1875
+    },
+    "scroll": 375,
+    "width": 390
+  },
+  "console_warnings_errors": [],
+  "journey": [
+    "Signed in using the existing review account",
+    "Read visible regulatory-role explanation and both disabled mission controls",
+    "Clicked Review authorisation cases and reached actual empty case workspace",
+    "Activated the same handoff with Enter and reached Authorisations",
+    "Returned to Operations"
+  ],
+  "new_mission_or_task_records": 0,
+  "new_model_calls": 0,
+  "pause_preference_retained": true,
+  "normal_motion_renderer_changed": false,
+  "viewport_override_reset": true,
+  "public_capture": {
+    "path": "publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+    "unedited_native_browser_bytes": true,
+    "private_identity_header_visible": false
+  },
+  "excluded_desktop_capture": "The clip request retained the private desktop header. Full actual capture is retained privately and excluded from publication; no retouching was used.",
+  "persistence_evidence": "cycle-20261101T044904Z-api-persistence.json",
+  "audit_delta_evidence": "cycle-20261101T044904Z-api-persistence-audit-delta.json"
+}

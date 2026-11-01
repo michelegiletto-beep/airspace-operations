@@ -1,5 +1,11 @@
 # Known limitations and acceptance blockers
 
+## PyPDF dependency advisories found on 1 November 2026
+
+The first 0.3.2 dependency audit failed on three upstream denial-of-service advisories for `pypdf==6.21.3`: [GHSA-5849-834g-hvw5](https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5), [GHSA-mfr5-77xh-9j7h](https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h) and [GHSA-cggf-277g-3q54](https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54). The recorded impacts are infinite loops or excessive memory use while parsing particular PDFs or duplicating PDF objects. The candidate now pins the audit-identified fixed version `6.21.4` in `pyproject.toml`, `uv.lock` and both hashed core/development requirement files. Its installed metadata identifies BSD-3-Clause; upstream copyright, licence conditions and disclaimer remain applicable. The first failed gate and raw audit output are retained in `release-evidence/v0.3.2-rc.1/attempts/pre-security-update/`. Release verification must use the corrected candidate environment and locks, not an older local environment.
+
+Frozen 0.3.1 releases and their recorded dependency scans retain their original bytes and dates. Their `6.21.3` pin is affected by these newly recorded advisories; publishing current documentation does not repair an existing installation. Do not process untrusted PDFs in an affected installation before moving to a reviewed fixed runtime. Generic PDF ingestion remains unavailable in this product, and this review did not establish an exploitable application path, an actual compromise or an operational incident. All other original acceptance, operational-data and domain-review limitations remain open.
+
 The 31 October 2026 media-format guard is verified on the development branch `codex/airspace-media-encoding` at `c6839aeda8276685ea55bae724d90669ae2e9bcd`. It is not part of frozen candidate 0.3.1. That candidate's JPEG under a `.png` filename remains unchanged. A distinct future candidate must supply correctly named media and pass its own installation and release gates. See [publication media validation](release-media-validation.md).
 
 The local Windows volume reached zero free space and caused a development API startup failure. The private SQLite files and key were preserved, integrity/audit checks passed, and existing records were verified after restart. Working space is still insufficient for another package and installation. This host constraint blocks new publication work; it does not change the status of independently retrieved existing releases.
@@ -31,3 +37,11 @@ Companion generation reservations now persist across retries and crashes, with o
 ## 0.3.1 recorded mobile image filename
 
 The frozen source file `publication/media/0.3.1-rc.1/companion-tasks-mobile.png` contains valid JPEG data (375 by 812 pixels). Its SHA-256 is `e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c`. Independent decoding, visual review, archive and public-source hashes match the actual capture. The extension is incorrect. Preserve the published tag, ZIP and source bytes; the System Lab page uses a byte-identical `.jpg` copy. A future distinct candidate must correct the source filename and add an encoding/extension check. This is a presentation defect and does not change flight records, operational rules or permissions. The failed initial PNG-signature assumption remains in the release evidence.
+
+## 0.3.2 development boundary
+
+The local 0.3.2 candidate integrates the reviewed publication guard and mission-planning role guidance. Its own complete release and installation gates remain separate from earlier passing results. No 0.3.2 publication or operational acceptance is inferred from the implementation or focused tests.
+
+New release captures use their own `publication/media/0.3.2-rc.1/` namespace with extensions that match their actual encoding. The publisher checks selected and unselected rasters within bounded byte, file-count and directory-depth limits. It does not rewrite historical media. The frozen 0.3.1 mobile file and release archives must retain their exact bytes. Encoding checks supplement visual, privacy, provenance and rights review; they do not replace those checks.
+
+Planner and pilot roles can prepare mission proposals under the existing server policy. Other roles receive an explanation and an authorisation-case navigation control while mission-creation buttons remain disabled. This is guidance for an existing permission boundary, not an expansion of privileges or an operating authorisation. The remaining original feature, regulatory, provider and operational-acceptance gaps above remain open.

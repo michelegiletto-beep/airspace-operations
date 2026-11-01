@@ -1,0 +1,115 @@
+{
+  "at": "2026-11-01T05:04:44.307036+00:00",
+  "reviewer": "/root/guard_final_review",
+  "scope": "Independent dependency and licence review; narrow security documentation edits in the unreleased candidate only",
+  "candidate": "0.3.2-rc.1",
+  "finding": {
+    "initial_audit_exit_code": 1,
+    "affected_package": "pypdf",
+    "affected_version": "6.21.3",
+    "advisories": [
+      {
+        "id": "CVE-2026-119203",
+        "aliases": [
+          "GHSA-5849-834g-hvw5"
+        ],
+        "fixed_versions": [
+          "6.21.4"
+        ]
+      },
+      {
+        "id": "CVE-2026-119205",
+        "aliases": [
+          "GHSA-mfr5-77xh-9j7h"
+        ],
+        "fixed_versions": [
+          "6.21.4"
+        ]
+      },
+      {
+        "id": "CVE-2026-119204",
+        "aliases": [
+          "GHSA-cggf-277g-3q54"
+        ],
+        "fixed_versions": [
+          "6.21.4"
+        ]
+      }
+    ],
+    "evidence": "release-evidence\\v0.3.2-rc.1\\attempts\\pre-security-update\\python-dependency-audit.json",
+    "impact": "Recorded upstream denial of service through infinite loops or excessive memory use. No application exploitability or real incident was demonstrated."
+  },
+  "dependency_delta": {
+    "semantic_changed_packages": [
+      "pypdf",
+      "system-lab-airspace-operations"
+    ],
+    "no_added_or_removed_packages": true,
+    "other_change": "Normal product version change from 0.3.1rc1 to 0.3.2rc1 and matching dependency metadata",
+    "new_pypdf_package": {
+      "name": "pypdf",
+      "version": "6.21.4",
+      "source": {
+        "registry": "https://pypi.org/simple"
+      },
+      "sdist": {
+        "url": "https://files.pythonhosted.org/packages/1e/e1/ec8f4d155c997c45917153a5521e60d6ee6389d68abdcbc8e44e564caffc/pypdf-6.21.4.tar.gz",
+        "hash": "sha256:c8817e3f888d47a087872ded69812c1ef30cacb871d6e053e0c00bbaf0bc2163",
+        "size": 7109255,
+        "upload-time": "2026-10-28T17:00:54.81Z"
+      },
+      "wheels": [
+        {
+          "url": "https://files.pythonhosted.org/packages/3f/4b/77e8ad4ac42c9d93600f40541a50e9feb3a61d2bbee2d76f659346072051/pypdf-6.21.4-py3-none-any.whl",
+          "hash": "sha256:33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c",
+          "size": 410430,
+          "upload-time": "2026-10-28T17:00:53.146Z"
+        }
+      ]
+    },
+    "project_core_dev_pins_and_hashes_consistent": true,
+    "file_hashes": {
+      "pyproject.toml": "e2ad79667a2e3bd879875d9c85673e3de0b0e82b1a3208a9b7cd81a2e14f46b4",
+      "uv.lock": "4eefdd754853a9dd6bf76e6d75157870a1e7023fb7653db9e8ac9bfda93aa662",
+      "requirements.lock.txt": "c59d750631e51ea32d2d9d1a8f507be6c427b449232ca995b7c0527fe1d3126d",
+      "requirements-dev.lock.txt": "65db15550c3c2bf80a0d6ad1f06fb0c4b6ccd11132bf5472e8f71eab0e7fde79"
+    }
+  },
+  "rights": {
+    "installed_candidate_version": "6.21.4",
+    "licence_expression": "BSD-3-Clause",
+    "licence_bytes": 1605,
+    "licence_sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+    "RECORD_digest_verified": true,
+    "conditions": "Retain upstream copyright, licence conditions and disclaimer. Do not imply author endorsement. System Lab and other third-party rights remain unchanged."
+  },
+  "documentation_edits": {
+    "publication/releases/0.3.2-rc.1/release-notes.md": "b48db8ef80237fef6ddf84dedec27ec4116463dbca76c344e41eb7cd40ad74d6",
+    "docs/known-limitations.md": "5ccb06a8d7c4c598f8e8af26a69d2d77191c412c57deb44491154195b662d43e"
+  },
+  "historical_boundary": "Frozen 0.3.1 requirements actually pin 6.21.3; old artifacts and audit dates remain unchanged. Existing installations are not patched by new documentation. The product root environment remains 6.21.3 while the candidate environment is 6.21.4. Generate release metadata using the candidate environment.",
+  "mobile_review": {
+    "path": "publication\\media\\0.3.2-rc.1\\operations-permissions-mobile.jpg",
+    "bytes": 35517,
+    "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+    "format": "JPEG",
+    "pixels": [
+      375,
+      812
+    ],
+    "visual_review": "Actual capture independently viewed. No email, private account header, customer activity or operational data visible. The regulatory role, permission guidance and empty operational counts are visible."
+  },
+  "verification_limit": "Root is rerunning corrected gates; this review does not claim a final passing audit, installation, release or operational acceptance.",
+  "helper_failure_retained": "An initial receipt helper used candidate Python and failed importing optional Pillow before creating a receipt. Repeated with the existing root Python for image inspection; candidate package metadata and locks were read explicitly by path. No dependency was installed by this reviewer.",
+  "primary_reference_links": [
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54"
+  ],
+  "reference_boundary": "Parent researched official advisories and release. This independent review used the preserved actual audit, locked official PyPI artifacts and installed primary licence metadata. No new remote request.",
+  "new_model_calls": 0,
+  "remote_actions": 0,
+  "code_or_lock_edits_by_reviewer": false,
+  "published_artifacts_changed": false,
+  "follow_up": "Complete corrected candidate gates and regenerate audited SBOM and notices before release."
+}

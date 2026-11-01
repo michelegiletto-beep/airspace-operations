@@ -1,4 +1,5 @@
 """Software-only publisher contract tests; no GitHub or credential access."""
+import base64
 import json
 from pathlib import Path
 import sys
@@ -101,7 +102,8 @@ def test_release_body_uses_reviewed_notes_actual_asset_digest_and_source_screens
     notes = tmp_path / "publication/v0.3/release-notes.md"
     notes.parent.mkdir(parents=True); notes.write_text("Isolated software publication text from {{SOURCE_COMMIT}}.")
     image = tmp_path / "publication/media/v0.3/desktop-companion.jpg"
-    image.parent.mkdir(parents=True); image.write_bytes(b"Isolated software test image bytes")
+    image.parent.mkdir(parents=True)
+    image.write_bytes(base64.b64decode("/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAAB//EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AMn//2Q=="))
     evidence = tmp_path / "release-evidence/v0.3.0-rc.1"; evidence.mkdir(parents=True)
     (evidence / "release-gates.json").write_text(json.dumps({"checks": {"isolated_test": True}}))
     (evidence / "standalone-archive-verification.json").write_text(json.dumps({"test_suite": {"stdout": "9 passed, 3 skipped"}}))

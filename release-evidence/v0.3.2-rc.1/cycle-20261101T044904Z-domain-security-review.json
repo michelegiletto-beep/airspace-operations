@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-01T04:55:22.762563+00:00",
+  "reviewer": "/root/guard_final_review",
+  "scope": "Permission guidance and narrow media guard integration source review; new permission tests implemented only in disposable candidate testfile",
+  "blocking_findings": [],
+  "permission_guidance_review": [
+    "MissioncreationUI permits onlyplanner/pilot, matching unchangedserverKIND_ROLES; no administratoroverride",
+    "Visibleexplanation referencedby bothnative-disabledbuttons viaaria-describedby; nothover-only",
+    "Authorisationcases action usesexistinginternalnavigation; noexternalmessage or authoritysubmission",
+    "Draftcreationstillallowsmissingunassignedresources; qualifications/permissions/executionremaindistinct",
+    "Existingroleupdatedbyserverauthenticationoneachrequest; no clientgrantoractualaccountchange"
+  ],
+  "frontend_test_review": {
+    "issue_found": "Initialdeniedrolematrixusedfourinvalidnavigationlabels",
+    "resolution": "Rootcorrectedmatrix to sevenactualdeniedroles; planner/pilotremainallowedcases",
+    "frontend_execution": "Ownedbyroot; no independentfrontendrunclaimedhere"
+  },
+  "backend_test_evidence": "cycle-20261101T044904Z-permission-server.json:10casespassed5.11safterstrengtheningtomutationchecksoneverypersistedtable",
+  "backend_api_and_identity_diff_empty": true,
+  "media_guard_review": [
+    "No privilege/context/source-hash/cleanarchive/publicationgateweakened",
+    "Selected andcandidate-specificunselectedrasters remainformatchecked; oldfrozenbadfilenamepreserved",
+    "32MiBperraster,512rasters,4096allentries,8pathcomponents; lazyboundedwalk,safe-path/symlinkchecks",
+    "Onlynewhistorylinebehavioradds0.3.1for0.3.2; old0.3.0/0.3.1historystringsretainedandregressiontested",
+    "No runtime/Pillowdependencyadded; encodedframingdoesnotreplacepixeldecodingorvisualreview"
+  ],
+  "remaining_release_gates": [
+    "Exactcurrentcompletefrontend/backendsuite andsourceCIwithactualcontainers/PostgreSQL/worker/restoration",
+    "Version-specific0.3.2notes/manifest/newactualmedia withcorrectextensions",
+    "Backend/frontend/pyproject/uvversionconsistency andfrozen-historyprotection",
+    "Rights/secret/dependencychecksandexactarchivecleaninstallation",
+    "Distinctsource/tag/releaseandindependentdownloads; nopublicationclaimfromoldCI"
+  ],
+  "nonblocking_next_issue": "ExistingMissionDesksearchnomatchusesNo missions planned evenwhenrecords exist. Futureisolatedfixture/clearfilterguidance shouldseparatefilteredemptinessfromemptyworkspace.",
+  "source_hashes": {
+    "frontend/src/MissionDesk.tsx": "fa0c8c0aea641634f6ce3d38d0311b6395e75074101081600a31db5daee61e59",
+    "frontend/src/MissionAccess.test.tsx": "43f4b0aaaeb61990d0ee4649327d2d0086fd4c21da4161caabecec15dd58bea9",
+    "frontend/src/missionAccess.css": "28c02da75a91c0a498dd6a2f703c765196ef1346480f2b2aa2384535ec81c5b1",
+    "scripts/publish_candidate.py": "0b8f975a7044efe24b8a906130b0404bdc53a069346f388fde4fea9c2c4d7de4",
+    "scripts/publication_media.py": "015435198910b888176406f8e22e6d93fc235585ea15a0ff642ae1facd07bda1",
+    "tests/test_mission_creation_permissions.py": "6cc29d6e13117df2aa0328bfa5f44db741fd6615c98fc9c1483ecb8583a30844"
+  },
+  "source_files_edited_by_reviewer": [
+    "tests/test_mission_creation_permissions.py"
+  ],
+  "backend_implementation_changes_by_reviewer": false,
+  "new_operational_records": 0,
+  "actual_identity_changes": 0,
+  "new_model_calls": 0,
+  "remote_actions": 0,
+  "original_requirement_statuses_changed_by_reviewer": false,
+  "full_specification_or_operational_acceptance_claimed": false
+}

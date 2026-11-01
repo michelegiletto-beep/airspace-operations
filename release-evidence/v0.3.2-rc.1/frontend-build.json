@@ -1,0 +1,14 @@
+{
+  "name": "frontend-build",
+  "command": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "frontend",
+  "started_at": "2026-11-01T05:03:34.408353+00:00",
+  "elapsed_seconds": 8.733,
+  "exit_code": 0,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.2-rc.1 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n\u2713 49 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.53 kB \u2502 gzip:   0.33 kB\ndist/assets/index-Cw3uZpKg.css  104.14 kB \u2502 gzip:  21.89 kB\ndist/assets/index-B2nEurow.js   472.80 kB \u2502 gzip: 129.34 kB\n\n\u2713 built in 441ms\n",
+  "stderr": ""
+}

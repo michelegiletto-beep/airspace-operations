@@ -1,0 +1,51 @@
+{
+  "cycle_id": "2026-11-01T044904Z-permission-and-release",
+  "triggered_at": "2026-11-01T04:49:04.156Z",
+  "checkpoint_at": "2026-11-01T05:06:30.905954+00:00",
+  "state": "Candidate0.3.2 source prepared; remote container, exact archive and publication gates pending",
+  "requirements": [
+    "ASO3-006",
+    "ASO3-010",
+    "ASO3-011",
+    "ASO-20-03"
+  ],
+  "starting_main": "a604443d12563e5468943309d3047d98345457fc",
+  "candidate_version": "0.3.2-rc.1",
+  "published_version_at_checkpoint": "0.3.1-rc.1",
+  "implemented": [
+    "Visible current-role explanation for disabled mission proposal controls, accessible descriptions and keyboard-operable case handoff",
+    "Integrated reviewed bounded raster filename/container guard; preserved0.3.0/0.3.1 release-body history and included0.3.1 forfuture candidates",
+    "Patched pypdf6.21.3 to6.21.4 after three actual advisory findings; all version and hash locks updated",
+    "Refreshed actual OpenAPI version and capability metadata without promoting original incomplete requirements"
+  ],
+  "local_verification": {
+    "python_passed": 541,
+    "python_skipped": 21,
+    "frontend_passed": 132,
+    "build": "passed",
+    "core_dependency_audit": "passed after security patch",
+    "frontend_dependency_audit": "passed",
+    "optional_neural_dependency_audit": "passed",
+    "initial_failed_audit_preserved": "release-evidence/v0.3.2-rc.1/attempts/pre-security-update/python-dependency-audit.json",
+    "full_command_receipts": "release-evidence/v0.3.2-rc.1/commands.jsonl"
+  },
+  "actual_browser": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-browser.json",
+  "api_and_data": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-api-persistence.json",
+  "snapshot_scope": "Separate SQLite online backup of actual engineering records. Same20companion records/two tasks/zero operational records; original46audit entries preserved; only actual review-login added in candidate.",
+  "public_capture": "publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+  "capture_method": "Unedited native browser JPEG. Desktop clip request retained private identity header, so desktop image is excluded and retained privately.",
+  "security_sources": [
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54",
+    "https://github.com/py-pdf/pypdf/releases/tag/6.21.4"
+  ],
+  "actual_model_calls": 0,
+  "training_runs": 0,
+  "new_task_or_operational_records": 0,
+  "original_acceptance_complete": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "Fresh inspection found an unexplained permission boundary and newly reported PDF dependency defects. The actual gate failed before release, preserved its evidence and passed after the researched patch. The UI explains existing permissions while isolated server tests show no permission expansion or denial-side mutation. Actual browser navigation and data checks preserve the empty operational workspace.",
+  "next_bounded_prompt": "Reconcile the current candidate source and actual CI/publication outcomes. Do not claim a queued job or draft upload has passed. If every engineering, rights, secret, exact-archive and publication gate passes, independently retrieve every new asset, preserve0.3.1 and update only the existing three publication destinations. Otherwise checkpoint the exact failure. Verify the real app-to-API-to-data path and original records before promoting installed source. Keep the original product/national review/live-feed/operational acceptance gaps explicit. The next bounded operator-guidance issue is failed saved-task fetch recovery: a visible retry should recover its own request without a page reload. Use at most45minutes and two actual model evaluations; never email/contact people, command aircraft, approve work or change approval boundaries."
+}

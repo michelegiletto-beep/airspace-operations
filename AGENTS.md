@@ -1,3 +1,5 @@
+Current0.3.2 engineering checkpoint: read `improvement/cycles/2026-11-01T044904Z-permission-and-release.json`. The current public software is still0.3.1. Local candidate gates pass after the PyPDF6.21.4 security patch; remote containers, exact archive and publication remain pending. Do not replace frozen versions or infer completion from this Prepared source.
+
 Latest checkpoint: read `improvement/cycles/2026-10-31T224658Z-publication-completion.json` first. System Lab98 and the ten Hugging Face presentation targets are published and independently retrieved. Earlier Site97, disk exhaustion and signed-out Hub paragraphs are historical. Keep software0.3.1 frozen; no0.3.2 release exists. The media guard remains on its separate verified development branch. New verifier CI41251483278 passed; documentation checkpoint `e9b92066b97314ea83736761009c2809844bf7e1` is independently retrieved. Reconcile later changes before new work.
 
 # Engineering instructions

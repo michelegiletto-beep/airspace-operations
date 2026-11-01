@@ -1,0 +1,60 @@
+{
+  "at": "2026-11-01T04:53:37.864650+00:00",
+  "actor": "/root/guard_final_review",
+  "target_candidate": "0.3.2-rc.1",
+  "scope": "New isolated backend mission-permission regression tests only; no backend implementation, actual preview identity or operational data changes",
+  "requirements": [
+    "ASO3-006"
+  ],
+  "implementation_file": "tests/test_mission_creation_permissions.py",
+  "expected_policy": "Only planner and pilot application roles can create mission proposals. Administrator does not implicitly grant planning privileges. All roles are existing software roles, not legal authority or qualification evidence.",
+  "tests": [
+    {
+      "command": ".venv/Scripts/python.exe -B -m pytest -q tests/test_mission_creation_permissions.py -p no:cacheprovider",
+      "executable": "Product root .venv/Scripts/python.exe",
+      "cwd": "work/candidate-0.3.2",
+      "environment": {
+        "PYTHONPATH": "backend"
+      },
+      "passed": 10,
+      "exit_code": 0,
+      "seconds": 5.16,
+      "snapshot_scope": "Records, versions, audit, outbox, idempotency, organisation sequences"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -m pytest -q tests/test_mission_creation_permissions.py -p no:cacheprovider",
+      "executable": "Product root .venv/Scripts/python.exe",
+      "cwd": "work/candidate-0.3.2",
+      "environment": {
+        "PYTHONPATH": "backend"
+      },
+      "passed": 10,
+      "exit_code": 0,
+      "seconds": 5.11,
+      "change_before_run": "Strengthened denial snapshots to every persisted metadata table, including identity sessions/users, jobs and reservations; same10cases, not20distincttests"
+    }
+  ],
+  "cases": [
+    "Explicit9role API matrix: planner/pilot createDraft; administrator,regulatory,reviewer,fleet_manager,incident_coordinator,analyst,viewer receive403",
+    "Every denied create leaves every persisted table identical to snapshot after isolated login",
+    "Allowed proposal records retainDraft/version1/accountableactor and do not invent aircraft,route or execution",
+    "Existing authenticated token initially creates a plannerDraft; isolated database role changes toregulatory; same token now receives403fornewmission and edit",
+    "After role change, denied requests leave every persisted table unchanged and original missiontitle/data/version intact",
+    "Actual HMAC audit verification remainsvalid in eachisolatedcase"
+  ],
+  "fixture_boundary": "All artificial inputs are confined to existing pytest tmp_path Store/TestClient environment. Direct role setup SQL occurs only in this disposable test database; no actual user account changed.",
+  "source_hashes": {
+    "tests/test_mission_creation_permissions.py": "6cc29d6e13117df2aa0328bfa5f44db741fd6615c98fc9c1483ecb8583a30844",
+    "backend/airspace/api.py": "819c820462c379b080b69356d4eca30a332689aa3b95820fb16c0a737d7a1e88",
+    "backend/airspace/identity.py": "39e0a737301ff339c3127b04f2e9a22ba37f28b9ad1da10684383e2a03594cc5",
+    "tests/conftest.py": "382a240068e620560da7a43f8a47ab7f7e70797e61b8f7b5c65416e5b11a08b2"
+  },
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "new_operational_records": 0,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_actions": 0,
+  "backend_implementation_files_edited": false,
+  "stable_release_or_operational_acceptance_claimed": false,
+  "limits": "This focused permission regression does not establish full paragraph acceptance, UI accessibility, all mission transitions, live operation permissions or the future candidate release gates."
+}

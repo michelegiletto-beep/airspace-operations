@@ -1,0 +1,145 @@
+{
+  "checked_at": "2026-11-01T04:57:20.247177+00:00",
+  "candidate_version": "0.3.2-rc.1",
+  "scope": "Read-only candidate loopback and two distinct persistent stores. Root's authenticated browser journey is corroborated without a new login or operational API action. No inference or operational acceptance.",
+  "new_authentication": false,
+  "new_model_calls": 0,
+  "task_or_operational_mutations": false,
+  "secrets_or_personal_values_logged": false,
+  "errors": [],
+  "requests": [
+    {
+      "route": "/api/v1/health",
+      "status": 200,
+      "response_sha256": "46b7afc72feb17f983252ddd9c7925d0a12a55c6a6152c0b2ae0840b158088db",
+      "health": {
+        "status": "ok",
+        "version": "0.3.2-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "route": "/api/v1/me",
+      "status": 401,
+      "response_sha256": "9a15b0a3fe33ddcd5af28fef761c068e8d2c5a3d736275728f3fbeef79f0cbc9",
+      "unauthenticated_access_rejected": true
+    },
+    {
+      "route": "/api/v1/companion/tasks",
+      "status": 401,
+      "response_sha256": "9a15b0a3fe33ddcd5af28fef761c068e8d2c5a3d736275728f3fbeef79f0cbc9",
+      "unauthenticated_access_rejected": true
+    }
+  ],
+  "original_store": {
+    "store": "runtime/review-v3",
+    "mode": "ro",
+    "query_only": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records": 20,
+    "records_snapshot_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01",
+    "tasks": [
+      {
+        "status": "Open",
+        "version": 1,
+        "sha256": "c0918ab201ddf8786bbb4da0fdc1cedebe4e2db98f9002cbb8c6e6ded7057c16"
+      },
+      {
+        "status": "Completed",
+        "version": 2,
+        "sha256": "94df8703ff398427bb05d155cddfd44fd00fa70565a7f4f904493649c7e816f8"
+      }
+    ],
+    "operational_records": 0,
+    "audit": [
+      {
+        "valid": true,
+        "count": 46,
+        "actions": {
+          "identity.provision": 1,
+          "identity.login": 19,
+          "companion.created": 4,
+          "companion.message.queued": 6,
+          "companion.reply.completed": 6,
+          "job.finished": 6,
+          "companion.action.confirmed": 2,
+          "companion.generation.reserved": 1,
+          "companion.task.updated": 1
+        },
+        "external_checkpoint_required": true
+      }
+    ],
+    "jobs": {
+      "Completed": 6
+    },
+    "existing_actor_roles": [
+      "regulatory"
+    ]
+  },
+  "candidate_store": {
+    "store": "runtime/candidate032-review",
+    "mode": "ro",
+    "query_only": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records": 20,
+    "records_snapshot_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01",
+    "tasks": [
+      {
+        "status": "Open",
+        "version": 1,
+        "sha256": "c0918ab201ddf8786bbb4da0fdc1cedebe4e2db98f9002cbb8c6e6ded7057c16"
+      },
+      {
+        "status": "Completed",
+        "version": 2,
+        "sha256": "94df8703ff398427bb05d155cddfd44fd00fa70565a7f4f904493649c7e816f8"
+      }
+    ],
+    "operational_records": 0,
+    "audit": [
+      {
+        "valid": true,
+        "count": 47,
+        "actions": {
+          "identity.provision": 1,
+          "identity.login": 20,
+          "companion.created": 4,
+          "companion.message.queued": 6,
+          "companion.reply.completed": 6,
+          "job.finished": 6,
+          "companion.action.confirmed": 2,
+          "companion.generation.reserved": 1,
+          "companion.task.updated": 1
+        },
+        "external_checkpoint_required": true
+      }
+    ],
+    "jobs": {
+      "Completed": 6
+    },
+    "existing_actor_roles": [
+      "regulatory"
+    ]
+  },
+  "snapshot_provenance": {
+    "distinct_database_files": true,
+    "provenance_file_present": true,
+    "provenance_file_sha256": "9f028736e507d916ada4aced63564ff940482d000f42bcb5c1bbdf028c2cf783",
+    "audit_key_matches_without_exposing_material": true,
+    "domain_records_match_original": true,
+    "authentication_audit_delta": 1
+  },
+  "candidate_worker": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 1.856862
+  },
+  "success": true
+}

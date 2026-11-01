@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-01T04:55:36.079190+00:00",
+  "state": "Prepared",
+  "scope": "Local candidate publication copy and manifest validation; no release, screenshot, installation or publication gate inferred",
+  "candidate_version": "0.3.2-rc.1",
+  "current_published_release": "0.3.1-rc.1",
+  "notes_heading_exact": true,
+  "notes_preparation_placeholders": false,
+  "baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "historical_files_preserved": [
+    "publication/releases/0.3.1-rc.1/manifest.json",
+    "publication/releases/0.3.1-rc.1/release-notes.md",
+    "publication/media/0.3.1-rc.1/companion-tasks-mobile.png"
+  ],
+  "actual_selected_capture_exists": false,
+  "screenshot_placeholder_created": false,
+  "new_model_calls": 0,
+  "remote_writes": false,
+  "files": [
+    {
+      "path": "publication/releases/0.3.2-rc.1/manifest.json",
+      "sha256": "fb60ee4887e407a90fd8ef0c2624f59ef29938be7c7c367207f7a66ba3d0b80a"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/release-notes.md",
+      "sha256": "7bc4582b95c5a7d98745403afda6d8a75651c698201330d441d6c55e9b57112c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "97fe5d3c27b4919895e2363ec235fce407ca9b7be91bad994fd6e49d13aec8e4"
+    },
+    {
+      "path": "docs/known-limitations.md",
+      "sha256": "9e9a75d1efa91d07899475305fb2401ea803fd04bfae8c9cc26b52a2353af04f"
+    },
+    {
+      "path": "publication/status.json",
+      "sha256": "ee79d1fec400f1e342197c5d7d233acb533e65489faef770331803d0dd773788"
+    }
+  ]
+}
