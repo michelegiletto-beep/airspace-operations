@@ -1,0 +1,207 @@
+{
+  "at": "2026-11-01T05:23:21.557795+00:00",
+  "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "payload_sha256": "cd582f618ee2437a926455a4cdc7c327c5f6c03a801bfa363a5dad5741396fbc",
+  "files_verified": 64,
+  "old_active_bundles_removed": 2,
+  "backup_directory": "runtime/source-before032",
+  "backed_up_source": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "d88f79772ca77c337d3f5a8ca8c65b18de1f6d5955d11101d57e9fded6d13995",
+      "bytes": 6285
+    },
+    {
+      "path": "README.md",
+      "sha256": "4fae5e1f2bf3f79fa98225343990a80e797bd04e9abcb0797929ab8f886f3961",
+      "bytes": 10819
+    },
+    {
+      "path": "REQUIREMENTS_TRACEABILITY.csv",
+      "sha256": "83180f1aa20d7193d2c21c5a66c812fbc967454a1ed0a701d9645b66e1409ad9",
+      "bytes": 114411
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "23398ae2795c23924aa8ba8fd7131da06e057ddbf72a541dde670968c7ab866e",
+      "bytes": 35062
+    },
+    {
+      "path": "backend/airspace/__init__.py",
+      "sha256": "2192cd7cb1baee05b840a784a2f63228a0cf8bcb3a0a02cce9f34417ba75ee05",
+      "bytes": 95
+    },
+    {
+      "path": "capabilities.json",
+      "sha256": "c3412766c82a12758da9622f33b0351ab1994266886adf2c4cb8fce3b4ae0afd",
+      "bytes": 18402
+    },
+    {
+      "path": "docs/known-limitations.md",
+      "sha256": "357314e9794762df66bc9b555bde342630510587cf5e4eb4991d9ae48ae394ee",
+      "bytes": 7135
+    },
+    {
+      "path": "docs/openapi.json",
+      "sha256": "f79a8e164debf91381c28608dbfcbb761be0391b0355bea5993fa0edaf62020c",
+      "bytes": 155515
+    },
+    {
+      "path": "frontend/dist/index.html",
+      "sha256": "42718290803e911d557f83555d4c6678a9cf546589f13d6ad91ca43e8f7117e8",
+      "bytes": 538
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "a287bb210eeedd5458caa6cfbaba642c92edd05620f1f4d3ecce3ed70b386e1c",
+      "bytes": 70617
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "957e1817a2291a4fad146acb437d36a300b231377c9c26c5016034ab6494fa56",
+      "bytes": 765
+    },
+    {
+      "path": "frontend/src/MissionDesk.tsx",
+      "sha256": "c26007d8f5522ae3d001035ba46ffcfec61eb62b9bc63c9104bc10358ed139f5",
+      "bytes": 14933
+    },
+    {
+      "path": "improvement/publication-manifest.json",
+      "sha256": "0ddc57594bb705a64c7342a62718404686b7c4510d4f9c31e099c870b148e49a",
+      "bytes": 842
+    },
+    {
+      "path": "publication/status.json",
+      "sha256": "301cf777a99b30a664fe984b517b5b861a93af936d0b56f0e0c33885e29cd087",
+      "bytes": 11957
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "6d28656def14d56104ac24362cf33aeaa36082b859f21afef5059c2ecc6a5df0",
+      "bytes": 944
+    },
+    {
+      "path": "requirements-dev.lock.txt",
+      "sha256": "9e740f37feb8e585d70c46d5b73310dadb8a454619ed2713d363f9fdb744ab9f",
+      "bytes": 33531
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "5b9ee75c8f2f48c40ed92380210cc380c54826b5c3da26caf0c201bc162cf05b",
+      "bytes": 19967
+    },
+    {
+      "path": "scripts/publish_candidate.py",
+      "sha256": "9d6eed3a27e4d8a959ea2b9f96ac530359003e351ec979661c476e1098b80459",
+      "bytes": 22089
+    },
+    {
+      "path": "tests/test_publication_material.py",
+      "sha256": "bf9e4c2946e7dea1ae404e2366514c83edf3dbd3ebfa46553a9b9a209e181bc1",
+      "bytes": 11155
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "0324621c65c8a1b984e3d65a61039e4f57b16425042ac93bbb71baed9dc40c8d",
+      "bytes": 122242
+    },
+    {
+      "path": "frontend/dist/assets/index-BUP3fbhH.js",
+      "sha256": "20f40455050cfcad50119db605dd4b7d8db69458ef33c4fc708c41b2a18f21a4",
+      "bytes": 472325
+    },
+    {
+      "path": "frontend/dist/assets/index-BgSJDDQC.css",
+      "sha256": "c17533e5534bf4bff7188ddd4c54bfa3de5e2c2a9a629199e52a93895d537f4d",
+      "bytes": 103752
+    }
+  ],
+  "before": {
+    "records": 20,
+    "tasks": 2,
+    "audit_count": 46,
+    "audit_valid": true,
+    "jobs": {
+      "Completed": 6
+    },
+    "operational_records": 0,
+    "records_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01"
+  },
+  "after": {
+    "records": 20,
+    "tasks": 2,
+    "audit_count": 46,
+    "audit_valid": true,
+    "jobs": {
+      "Completed": 6
+    },
+    "operational_records": 0,
+    "records_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01"
+  },
+  "new_authentication": false,
+  "new_model_calls": 0,
+  "runtime_records_modified": false,
+  "unlisted_files_modified": false,
+  "dependency_install_and_restart": "Completed and verified",
+  "checked_at": "2026-11-01T05:26:01.767473+00:00",
+  "health_after_restart": {
+    "status": "ok",
+    "version": "0.3.2-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "audit_after_restart": {
+    "valid": true,
+    "count": 46
+  },
+  "database_integrity": [
+    "ok"
+  ],
+  "records_unchanged_after_restart": true,
+  "tasks": 2,
+  "installed_core_and_neural_package_versions": {
+    "system-lab-airspace-operations": "0.3.2rc1",
+    "pypdf": "6.21.4",
+    "torch": "2.14.1",
+    "transformers": "5.21.0",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.3"
+  },
+  "worker_pid": 15508,
+  "worker_health": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 0.224769
+  },
+  "processes_before": {
+    "API": 22620,
+    "API_root_venv_launcher": 11896,
+    "worker": 5412,
+    "worker_root_venv_launcher": 9016
+  },
+  "processes_after": {
+    "API": 9360,
+    "worker": 15508
+  },
+  "candidate8788_preserved": true,
+  "new032_verifier_and_dependencies_preserved": true,
+  "source_promotion_commands": [
+    "ROOT.venv Python -B runtime/promote-primary032.py",
+    "uv pip install --python .venv/Scripts/python.exe --require-hashes -r requirements.lock.txt",
+    "uv pip install --python .venv/Scripts/python.exe --no-deps --editable ."
+  ],
+  "dependency_change": "Only pypdf6.21.3 to6.21.4 and editable product0.3.1rc1 to0.3.2rc1 were uninstalled/reinstalled; no uv sync or optional profile removal",
+  "restart_configuration": {
+    "runtime": "runtime/review-v3",
+    "database": "Existing runtime/review-v3/airspace.db explicitly selected",
+    "audit": "Existing private audit.key; inherited override cleared for these child processes",
+    "controller": "models/pretrained/controller",
+    "API": "127.0.0.1:8787",
+    "worker": "airspace.cli worker"
+  },
+  "model_weights_touched": false,
+  "new_operational_records": 0,
+  "private_key_logged": false,
+  "helper_failure": "The first post-check additionally queried sentence-transformers metadata and failed before writing a receipt. That package is not required in requirements-neural.lock.txt; no claim of its prior presence/removal is made. Corrected checks verify the actually configured torch/transformers/safetensors/tokenizers packages."
+}

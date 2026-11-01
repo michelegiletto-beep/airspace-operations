@@ -27,3 +27,8 @@ Implement SPECIFICATION_V3_ADDENDUM.md without changing the original baseline. A
 
 
 Revision0.3 publication checkpoint,30October2026: GitHub candidate and System Lab97 are independently retrieved; exact source/archive/SBOM/previous-release preservation and authored-page checks are recorded. Hub0.3 presentation remains Prepared pending existing authenticated access. Continue from the latest cycle prompt without rebuilding frozen candidates or replacing incomplete original requirements.
+
+
+## Next bounded increment after 0.3.2 publication
+
+The 0.3.2 candidate and Site 99 are independently retrieved; current Hub target receipts preserve all historical artifacts. Read the latest cycle before changing code. Add explicit local recovery for a failed saved-task fetch, with a request-scoped Retry control and meaningful success/failure tests. Preserve actor privacy, tenant isolation, current input versions, typed confirmations, animation pause/reduced-motion preferences and server approval boundaries. Verify browser to API to persistent records without manufacturing operational activity. Limit the cycle to 45 minutes and two actual local-model evaluations; checkpoint any remaining release or browser evidence. Keep the unchanged original specification and incomplete original requirements authoritative. No email, contacts, purchases, aircraft commands or external operational actions.

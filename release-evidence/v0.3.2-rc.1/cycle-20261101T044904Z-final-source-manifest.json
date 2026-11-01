@@ -1,0 +1,290 @@
+{
+  "checked_at": "2026-11-01T05:30:08.925489+00:00",
+  "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 9198,
+      "sha256": "6406c788e3d22c1556be0a21ce2391e9c49a25c1eb329677e8dd0a4633629070",
+      "git_blob": "f0d1910198f6abc6ce0d05bf5702d1801a64e997"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 37975,
+      "sha256": "269037ca15076d162373b2d47b6cf0460b71a94d9b9372bcd41ff401ae0079ad",
+      "git_blob": "de9e8eb6c2b53269d49f1c03f55f57c370d2ea26"
+    },
+    {
+      "path": "HANDOVER.md",
+      "bytes": 12866,
+      "sha256": "37f3129293f73f6fc65703b46dee902c19f996c45b2b3deb3aad5d061c1aa7bd",
+      "git_blob": "ace4ad5b3830c0a03c0e82fc683626c88b0e522a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11702,
+      "sha256": "eeaa8c973434cd965478cdd8fd3b342c4add9a546d27362a5f2be5adf9f1c8ad",
+      "git_blob": "33fcdc814542726eb365e6498b031901d420c012"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 7204,
+      "sha256": "411ccd3dbb3579331ce338f0d8418653e7adbf922fa51fcc9d3d7abe1b7642a5",
+      "git_blob": "88446884eff4712a2645735e3d6322580fd962a0"
+    },
+    {
+      "path": "publication/status.json",
+      "bytes": 13766,
+      "sha256": "db405ddaba61bcbbcc745e9b668b631b89924ca1e970fcf2ca36a881328baf2c",
+      "git_blob": "e2b766d4596732485b3a6100d5053de7277d6997"
+    },
+    {
+      "path": "publication/history/0.3.2-rc.1.json",
+      "bytes": 13766,
+      "sha256": "db405ddaba61bcbbcc745e9b668b631b89924ca1e970fcf2ca36a881328baf2c",
+      "git_blob": "e2b766d4596732485b3a6100d5053de7277d6997"
+    },
+    {
+      "path": "improvement/cycles/2026-11-01T044904Z-permission-and-release.json",
+      "bytes": 10475,
+      "sha256": "6ecedd592c2a089d489dbe95bb8380c348db6832e0c163eab8fe02e431dda23f",
+      "git_blob": "7b205b9c41e24740586d283011e35a19a24fe977"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-archive-integrity.json",
+      "bytes": 1070,
+      "sha256": "8c12a50688bdc6ef1989caad181b4865f738b490b2da610e049b64468bc45ff2",
+      "git_blob": "a5bba25fb2326a27795b2652a82282c52d6d121e"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-dataset-2d6dff6b-reviewed-lfs.json",
+      "bytes": 6367,
+      "sha256": "45a66cfd85066b5eeb4b2665b79e9d3c0f34e2a95ce873e748006e4eab9d16a3",
+      "git_blob": "ff2815b80f4739193738586ab222a5adacb8fb10"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "bytes": 4056,
+      "sha256": "f0c05eed5251d3c39280f1cbc0063864fe22301977dd0e0a35468e71a5f43899",
+      "git_blob": "3bbff9723ab632716184a4bd053e1aeffcdb31ce"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-model-d2bba8b3-reviewed-lfs.json",
+      "bytes": 10687,
+      "sha256": "e36dd7690dc18bbf5e85b206a53f3a5216349a085e165514f00bfa0cf37d8b6e",
+      "git_blob": "0c4a75d7419481b4d376a269ec9aea26b3ab90b4"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-preparation.json",
+      "bytes": 5760,
+      "sha256": "5b29a3382cb3c57eaf8d17c421a55f220c25e18a2009a4809b7d644038be6a40",
+      "git_blob": "c2f84f23f035085abe1a398104c2680ab141eb65"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-space-e690dc6b-reviewed-lfs.json",
+      "bytes": 18615,
+      "sha256": "4e2aa6c1bec4350b7428346ede85fcc78566e2b0f06f72170b188f2b1c60241a",
+      "git_blob": "4d260f7099c8a27c33a1e3529d34b1249abccb06"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-primary-after-ui-login.json",
+      "bytes": 1004,
+      "sha256": "11991430d76f4a54aeeee3e8865f26a31a6c8a33d9a24734dd5df6d65d6ea54a",
+      "git_blob": "8ed8cf5a16e0168182b8f18bb360f030819a217f"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-primary-browser.json",
+      "bytes": 631,
+      "sha256": "c149e2217c9cda2da8720574f56415e403e9db26567d9e54439aa3ec82cc8694",
+      "git_blob": "0d9bd90608f2bcaa14483befc571cfef4c7b763c"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-primary-native-processes.json",
+      "bytes": 1259,
+      "sha256": "dc0a88d101c48d1bbb6f503cdae96ae086c8ad3f281184d3fcd8977ebad5eb92",
+      "git_blob": "ef5028ac4f8514a074a01973b311995cfe13333b"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-primary-promotion.json",
+      "bytes": 7060,
+      "sha256": "a4a412847b35671c99e60a01bbb606cb31f861a017c690dd7cf9aa215aa0bf68",
+      "git_blob": "79c1eb87ce334c4f2be49952b38acd287d1c5174"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-downloads.json",
+      "bytes": 6168,
+      "sha256": "50855f126440fc039ca7fa3bb9afe4eb30edd35b9dddef994833f3642f068524",
+      "git_blob": "768fdc768fd483a5bdb49df9ae77229f903cf743"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-media.json",
+      "bytes": 818,
+      "sha256": "4996da6d8ff46fb12eba7aa6854a8c34d7a47f4cc251ae85ba39d6aa4c732643",
+      "git_blob": "e538a5cb4f196a970002ec33b5c852494f78ae9c"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-source.json",
+      "bytes": 36312,
+      "sha256": "484488e66736cd844e696132c3dcda50dccdc8667b2584641159754e1994549d",
+      "git_blob": "8a7f94911a0ee81f08275d035d9b1069842a1511"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-source.py",
+      "bytes": 7988,
+      "sha256": "5fd4d64f7bc6017afb7daa1becd14f110f8313bcc7051869eab1d56b6bda633d",
+      "git_blob": "3e860ab1c675a86dea40a56ffe9e41b53dcce5ed"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-published-browser.json",
+      "bytes": 1475,
+      "sha256": "e4a4cc72c4550b87f56bf8f1ed4caa21f5ef987ac42f3e3b49f38b55f841d92e",
+      "git_blob": "b31acad956759c2a2f9190c779f8e76fea42bc40"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-sbom-validation.json",
+      "bytes": 898,
+      "sha256": "1ed7f72aaef8388ab61f372f10a7007e07c9782bf84137e19b25a15d42c1cb9d",
+      "git_blob": "168eaeb697252cdd3fe27e4050f8346530564e55"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site-package.json",
+      "bytes": 700,
+      "sha256": "bb354549092c6e4eb21e5f5e14745ff514781295c903b2be9f6cf51666d1a3fc",
+      "git_blob": "b907da8587ad7b2c332b14c2cfa1119743ef91c9"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site032-verifier-preparation.json",
+      "bytes": 6470,
+      "sha256": "8ae8345311781b1b3d0f9ce7acf4145dc89fb426fb303c0b289f43743a275192",
+      "git_blob": "644574b6b6711aac27d2209fecff5084f0fd0dd7"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site99-native.json",
+      "bytes": 1535,
+      "sha256": "e624bc536896b95c06244f6ed1edc2b3cea8fb77af7e65a681758a121ec2027a",
+      "git_blob": "aee687a6510a3e03e992fef70574b3ed63da7c96"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site99-public.json",
+      "bytes": 59269,
+      "sha256": "5755e5145cc786366a3e8caa5997407389cb862f29a4fdecffe6b31a6a285afa",
+      "git_blob": "7e2624d84c6db74e7966cf314b7110a85f2687fd"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-test-site032.py",
+      "bytes": 10776,
+      "sha256": "15c6fc6844ea2cfd9981e82d2ed130379cbb7a59ce18858127a490f9172a0856",
+      "git_blob": "f85f8a2072434c9da5b866e13fd39b882604f391"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-hub-upload.py",
+      "bytes": 7724,
+      "sha256": "a06d5278113dc34ed89b1fbaf65a015b2ba3580a74868840b845e6f8ab7d191a",
+      "git_blob": "878408175c45cc19a574d85d904c12422f9d7860"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-public-release.py",
+      "bytes": 10864,
+      "sha256": "8a6b078eb50c7b25f6837fe3785687681423727a078b114da53ef5f908da815f",
+      "git_blob": "b809195eef6a23417d2880fc5ea76a908c3ea6c1"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-site032.py",
+      "bytes": 10364,
+      "sha256": "afefd032272183f4a72d21c9957ab807a780184a57072b597e1ab8984ae5eee1",
+      "git_blob": "286aff8a5918f9b2c32224f091fe12cf2be1dbad"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-space-live.json",
+      "bytes": 6089,
+      "sha256": "1929e0acab29c525910922eb16365d354056de8ba16135fa456a7597f4b8a536",
+      "git_blob": "a86474498305d6d51fc135e63f603c6e9a40553e"
+    },
+    {
+      "path": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-space-live.py",
+      "bytes": 8103,
+      "sha256": "e43c4887e1afbc8741790764767148129bea42b5a331d7279a2d14c0c45efe8b",
+      "git_blob": "f08374cf1ce072678232d1a5826be8def208c5e4"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "bytes": 4052,
+      "sha256": "49e46a5320fdfa95cc6f42aef210d6ea214fb593c4ea05ef9e684ca81d354aa6",
+      "git_blob": "09a69b0e0252cd4cf661f1ac9aac0fd6b9b02571"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/README.md",
+      "bytes": 1429,
+      "sha256": "f44dc434d62199c81357222e78c5994c37e8bf3b696aeb277037a3eed83e9f2f",
+      "git_blob": "6282b5d75815c05680b95646f4ddf352404d468d"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/verify_preparation.py",
+      "bytes": 7161,
+      "sha256": "422128df65e1e6a53c30d960001a7095b5b4fadd7624480e636af155b5e4ee5c",
+      "git_blob": "13f282cfb0e02d0293b18d228f40baa232ddb5c5"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/dataset/README.md",
+      "bytes": 5749,
+      "sha256": "644eb7ae9738ee48dcd5805a7813cbdbe1da84dad249ed7f90ff1c287cabcabb",
+      "git_blob": "543cc43e70568e11920355e30d2ef8beaad18d2d"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/model/NOTICE.md",
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "git_blob": "c60596442e790ca993f3845e54a168b353f223e8"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/model/README.md",
+      "bytes": 8646,
+      "sha256": "1a83728f64a62aba65f0d059c0d1eb1cd06d24456864d26fa1aaa6394c6c6c59",
+      "git_blob": "2918d7aa62cd8f28074293156cce8ede832f3381"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/space/index.html",
+      "bytes": 9340,
+      "sha256": "7c6e053edc6990fc55f42670638081e73a8b73f5662c1cc0f8e882b4e2ac8935",
+      "git_blob": "a9696dcbbe0e19163ccd3359ecebd771756b1c23"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/space/NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "git_blob": "c62b4a25f65676b1355091414efcd1af58f76853"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/space/README.md",
+      "bytes": 4565,
+      "sha256": "9d85e8a6f3f97c38003ca9b1fc9088d98b4c3830d9dcbb6e34591b8f3b0b06c0",
+      "git_blob": "b45ae368a1c8f1ae8abb8071a429ab8c5672c34c"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "git_blob": "1b3a4c9d0e9388b209420bdc42ad76798ab511a0"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/space/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "git_blob": "31ccc2eb57137cac3fb269406993ba513296baf1"
+    },
+    {
+      "path": "publication/releases/0.3.2-rc.1/huggingface/model/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "git_blob": "31ccc2eb57137cac3fb269406993ba513296baf1"
+    },
+    {
+      "path": "publication/media/publication-20261101T044904Z/site99-desktop.jpg",
+      "bytes": 110481,
+      "sha256": "ea646f58acc0b0257e94a5db727db3a2036bd5af032785afb89ab27f32d96863",
+      "git_blob": "8115062731c2925464cd5d5ab1742fb99f4c18e7"
+    }
+  ],
+  "supported_secret_matches": 0,
+  "scope": "Post-release documentation, actual publication/promotion evidence and reviewed presentation files. No private runtime or new source release."
+}

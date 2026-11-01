@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-01T05:17:03.885097+00:00",
+  "version": "0.3.2-rc.1",
+  "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "archive_bytes": 13796258,
+  "archive_sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+  "zip_crc_valid": true,
+  "archive_member_count": 775,
+  "manifest_hashed_files": 774,
+  "all_manifest_digests_match": true,
+  "ci_source_hash_count": 207,
+  "ci_source_hashes_match_archive": true,
+  "baseline_integrity": true,
+  "private_paths_or_supported_secret_patterns_found": 0,
+  "owned_resources_verified": 5,
+  "unchanged_student_artifact_paths": [
+    "models/runs/explicit-shall-20261027-4/student.safetensors"
+  ],
+  "clean_install_receipt_binds_exact_archive": true,
+  "recorded_exact_archive_suite": [
+    "542 passed, 20 skipped, 3 warnings in 67.80s (0:01:07)"
+  ],
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "scope": "Anonymous exact bytes and actual CI/install receipts. No new local installation or operational acceptance claimed."
+}

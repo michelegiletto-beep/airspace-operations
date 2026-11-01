@@ -1,8 +1,8 @@
 {
   "cycle_id": "2026-11-01T044904Z-permission-and-release",
   "triggered_at": "2026-11-01T04:49:04.156Z",
-  "checkpoint_at": "2026-11-01T05:06:30.905954+00:00",
-  "state": "Candidate0.3.2 source prepared; remote container, exact archive and publication gates pending",
+  "checkpoint_at": "2026-11-01T05:27:24.656060+00:00",
+  "state": "Published engineering candidate; GitHub, Site99 and Hub target bytes independently retrieved",
   "requirements": [
     "ASO3-006",
     "ASO3-010",
@@ -11,7 +11,7 @@
   ],
   "starting_main": "a604443d12563e5468943309d3047d98345457fc",
   "candidate_version": "0.3.2-rc.1",
-  "published_version_at_checkpoint": "0.3.1-rc.1",
+  "published_version_at_checkpoint": "0.3.2-rc.1",
   "implemented": [
     "Visible current-role explanation for disabled mission proposal controls, accessible descriptions and keyboard-operable case handoff",
     "Integrated reviewed bounded raster filename/container guard; preserved0.3.0/0.3.1 release-body history and included0.3.1 forfuture candidates",
@@ -46,6 +46,105 @@
   "original_acceptance_complete": false,
   "stable_release": false,
   "operational_acceptance": false,
-  "retrospective": "Fresh inspection found an unexplained permission boundary and newly reported PDF dependency defects. The actual gate failed before release, preserved its evidence and passed after the researched patch. The UI explains existing permissions while isolated server tests show no permission expansion or denial-side mutation. Actual browser navigation and data checks preserve the empty operational workspace.",
-  "next_bounded_prompt": "Reconcile the current candidate source and actual CI/publication outcomes. Do not claim a queued job or draft upload has passed. If every engineering, rights, secret, exact-archive and publication gate passes, independently retrieve every new asset, preserve0.3.1 and update only the existing three publication destinations. Otherwise checkpoint the exact failure. Verify the real app-to-API-to-data path and original records before promoting installed source. Keep the original product/national review/live-feed/operational acceptance gaps explicit. The next bounded operator-guidance issue is failed saved-task fetch recovery: a visible retry should recover its own request without a page reload. Use at most45minutes and two actual model evaluations; never email/contact people, command aircraft, approve work or change approval boundaries."
+  "retrospective": "The permission explanation and media guard were integrated without expanding authority. A real dependency audit blocked the first gate; the fixed pin then passed current source and dependency checks. Current CI and exact archive results are separate from earlier local results. Independent retrieval verified new and historical release bytes, all59Site resources and all6changed Hub targets while preserving41unlisted files. No model generation, training or operational record was manufactured. Root will record current live browser and post-release documentation retrieval separately.",
+  "next_bounded_prompt": "Read current AGENTS, unchanged SPECIFICATION/addenda, STATUS, this cycle and publication/status. Preserve every frozen release and existing Site/Hub destination. Check current API/worker and unchanged actor-private records/audit. The next unresolved operator-guidance issue is failed saved-task fetch recovery: add a request-scoped visible Retry control that recovers without page reload. Define meaningful network-failure/retry/privacy tests, verify browser to API to persistent records and preserve current actor roles, input versions and explicit typed confirmation. Review pause/reduced-motion and animated fallback while respecting saved preferences. Bound active work to45minutes and at most2actual local-model evaluations, record actual failures and no invented operational data. Release a distinct candidate only after current engineering, rights, secret, installation and publication gates; never email/contact people, buy services, command aircraft, submit externally, self-approve or change approval requirements. Record retrospective and exact next action.",
+  "assembly_snapshot": {
+    "cycle_id": "2026-11-01T044904Z-permission-and-release",
+    "triggered_at": "2026-11-01T04:49:04.156Z",
+    "checkpoint_at": "2026-11-01T05:06:30.905954+00:00",
+    "state": "Candidate0.3.2 source prepared; remote container, exact archive and publication gates pending",
+    "requirements": [
+      "ASO3-006",
+      "ASO3-010",
+      "ASO3-011",
+      "ASO-20-03"
+    ],
+    "starting_main": "a604443d12563e5468943309d3047d98345457fc",
+    "candidate_version": "0.3.2-rc.1",
+    "published_version_at_checkpoint": "0.3.1-rc.1",
+    "implemented": [
+      "Visible current-role explanation for disabled mission proposal controls, accessible descriptions and keyboard-operable case handoff",
+      "Integrated reviewed bounded raster filename/container guard; preserved0.3.0/0.3.1 release-body history and included0.3.1 forfuture candidates",
+      "Patched pypdf6.21.3 to6.21.4 after three actual advisory findings; all version and hash locks updated",
+      "Refreshed actual OpenAPI version and capability metadata without promoting original incomplete requirements"
+    ],
+    "local_verification": {
+      "python_passed": 541,
+      "python_skipped": 21,
+      "frontend_passed": 132,
+      "build": "passed",
+      "core_dependency_audit": "passed after security patch",
+      "frontend_dependency_audit": "passed",
+      "optional_neural_dependency_audit": "passed",
+      "initial_failed_audit_preserved": "release-evidence/v0.3.2-rc.1/attempts/pre-security-update/python-dependency-audit.json",
+      "full_command_receipts": "release-evidence/v0.3.2-rc.1/commands.jsonl"
+    },
+    "actual_browser": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-browser.json",
+    "api_and_data": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-api-persistence.json",
+    "snapshot_scope": "Separate SQLite online backup of actual engineering records. Same20companion records/two tasks/zero operational records; original46audit entries preserved; only actual review-login added in candidate.",
+    "public_capture": "publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+    "capture_method": "Unedited native browser JPEG. Desktop clip request retained private identity header, so desktop image is excluded and retained privately.",
+    "security_sources": [
+      "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5",
+      "https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h",
+      "https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54",
+      "https://github.com/py-pdf/pypdf/releases/tag/6.21.4"
+    ],
+    "actual_model_calls": 0,
+    "training_runs": 0,
+    "new_task_or_operational_records": 0,
+    "original_acceptance_complete": false,
+    "stable_release": false,
+    "operational_acceptance": false,
+    "retrospective": "Fresh inspection found an unexplained permission boundary and newly reported PDF dependency defects. The actual gate failed before release, preserved its evidence and passed after the researched patch. The UI explains existing permissions while isolated server tests show no permission expansion or denial-side mutation. Actual browser navigation and data checks preserve the empty operational workspace.",
+    "next_bounded_prompt": "Reconcile the current candidate source and actual CI/publication outcomes. Do not claim a queued job or draft upload has passed. If every engineering, rights, secret, exact-archive and publication gate passes, independently retrieve every new asset, preserve0.3.1 and update only the existing three publication destinations. Otherwise checkpoint the exact failure. Verify the real app-to-API-to-data path and original records before promoting installed source. Keep the original product/national review/live-feed/operational acceptance gaps explicit. The next bounded operator-guidance issue is failed saved-task fetch recovery: a visible retry should recover its own request without a page reload. Use at most45minutes and two actual model evaluations; never email/contact people, command aircraft, approve work or change approval boundaries."
+  },
+  "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "github": {
+    "release_id": 430378177,
+    "ci_run": 41275818880,
+    "source_tests_passed": 542,
+    "source_tests_skipped": 20,
+    "exact_archive_tests_passed": 542,
+    "exact_archive_tests_skipped": 20,
+    "exact_archive_seconds": 67.8,
+    "frontend_passed": 132,
+    "postgresql_passed": 19,
+    "container_worker_restoration_passed": true,
+    "archive_bytes": 13796258,
+    "archive_sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+    "assets_independently_retrieved": 9,
+    "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-downloads.json"
+  },
+  "site": {
+    "version": 99,
+    "source_commit": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+    "deployment_id": "appgdep_6ae6cce10990819194e16915644caf64",
+    "summary": {
+      "expected": 59,
+      "http_200": 59,
+      "verified": 59,
+      "exact": 56,
+      "authored_html": 3
+    },
+    "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site99-public.json"
+  },
+  "huggingface": {
+    "state": "Independently Retrieved",
+    "targets_exact": 6,
+    "unlisted_prior_files_exact": 41,
+    "revisions": {
+      "model": "d2bba8b30845cced9293cabe0b7287c481f6cee7",
+      "dataset": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+      "space": "e690dc6b5f8ef26f700188300475b668dae2500e"
+    },
+    "live_host_and_browser": "Live static authored-byte and4rawasset verification passed; browser-specific receipt remains separate",
+    "original_model_and_dataset_unchanged": true,
+    "live_host_evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-space-live.json"
+  },
+  "post_release_documentation": {
+    "state": "Prepared",
+    "published": false,
+    "commit": null
+  }
 }

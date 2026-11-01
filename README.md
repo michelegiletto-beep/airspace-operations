@@ -1,8 +1,8 @@
 # System Lab Airspace Operations
 
-This checkout contains development candidate **0.3.2-rc.1**. It adds mission-planning role guidance and integrates the reviewed raster-format publication guard. Its own release, installation and publication gates are still being verified; no 0.3.2 download or completed validation is claimed here. The current published software remains 0.3.1-rc.1. The [candidate notes](publication/releases/0.3.2-rc.1/release-notes.md) describe the change, and [publication status](publication/status.json) separates development from published artifacts.
+Version [0.3.2-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.2-rc.1) is a published engineering candidate. It explains mission-proposal role permissions, integrates bounded publication-media checks and pins PyPDF 6.21.4 after three upstream denial-of-service advisories. Source and exact-archive suites each passed 542 tests with 20 skipped; 132 interface tests and 19 PostgreSQL checks passed with actual containers, a running worker and restoration. All nine release assets were independently retrieved. The earlier local 541 passed/21 skipped result is separate. [Release evidence](release-evidence/v0.3.2-rc.1/) and [publication status](publication/status.json) record exact scopes. The original specification remains incomplete; stable release and operational acceptance remain false.
 
-Version [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1) is a published engineering candidate. Its exact archive passed 479 tests with 20 skipped; the interface passed 123 tests. Release-source container, worker, PostgreSQL and restoration checks succeeded. All nine public assets were anonymously retrieved and digest-matched. This increment improves task readability, the visible version and mobile panel fit. See [known limitations](docs/known-limitations.md), including the frozen mobile image filename mismatch. Full original acceptance and operational acceptance remain incomplete.
+Previous candidate [0.3.1-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1) is a published engineering candidate. Its exact archive passed 479 tests with 20 skipped; the interface passed 123 tests. Release-source container, worker, PostgreSQL and restoration checks succeeded. All nine public assets were anonymously retrieved and digest-matched. This increment improves task readability, the visible version and mobile panel fit. See [known limitations](docs/known-limitations.md), including the frozen mobile image filename mismatch. Full original acceptance and operational acceptance remain incomplete.
 
 Software for planning and reviewing civilian drone operations. It keeps intended missions, aircraft, personnel, permissions, evidence and tasks in one application. The interface uses persistent Python services and a database. A new installation contains no fictional flights or customer records.
 
@@ -14,11 +14,11 @@ Record the operation you intend to carry out. Add the real aircraft, people, loc
 
 This revision implements a persistent local-model conversation, saved personal tasks and previews of internal draft actions that require your confirmation. The local model selects guidance and source, step and action identities; displayed guidance comes from a controlled registry and recorded state. Its owned companion animates during normal use, with an animated fallback and a restrained reactive background. Pause and reduced-motion settings take precedence. Actual browser, animated fallback, pause and current mobile task evidence are retained under release-evidence/v0.3.0-rc.1/.
 
-![Desktop application with its contextual companion](publication/media/0.3.1-rc.1/application-tasks.png)
+![Historical 0.3.1 desktop application with its contextual companion](publication/media/0.3.1-rc.1/application-tasks.png)
 
-![Mobile application with its contextual companion](publication/releases/0.3.1-rc.1/huggingface/space/media/companion-tasks-mobile.jpg)
+![Actual 0.3.2 mobile Operations role guidance](publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg)
 
-These are actual captures from an isolated software-review workspace. They show no customer operation or flown mission.
+The desktop capture records historical 0.3.1; the mobile capture records 0.3.2. Both come from isolated software review and show no customer operation or flown mission.
 
 The companion does not issue a permission or approve its own work. Animation does not prove that a model has finished or that a flight is ready. A missing local model must remain visibly unavailable. All real workspaces remain usable when language-model generation is unavailable.
 
@@ -39,7 +39,7 @@ Internal review, authority permission, U-space permission, pilot acknowledgement
 
 ## Install on your computer or server
 
-Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The [downloadable archive](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip) includes the built interface. It contains 12,504,321 bytes and has SHA-256 `0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750`. Read the [schema 3 upgrade instructions](docs/upgrading-to-0.3.md) before updating an existing installation.
+Use Python 3.13 and uv. Building the interface from source also needs Node 22.12 or newer and npm. The [downloadable archive](https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.2-rc.1/System-Lab-Airspace-Operations-0.3.2-rc.1.zip) includes the built interface. It contains 13,796,258 bytes and has SHA-256 `1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e`. Read the [schema 3 upgrade instructions](docs/upgrading-to-0.3.md) before updating an existing installation.
 
 ```powershell
 uv sync --frozen --extra dev

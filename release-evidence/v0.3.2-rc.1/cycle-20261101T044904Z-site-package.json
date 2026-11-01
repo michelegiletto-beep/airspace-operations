@@ -1,0 +1,14 @@
+{
+  "archive": "runtime\\publication\\site032-20261101T044904Z.tar.gz",
+  "bytes": 166793238,
+  "sha256": "56e988d64b30dc1f9ad1c9b511289bd0aa9d186536d59f97fe452337481b8b90",
+  "source_commit": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+  "files": 666,
+  "largest_file_bytes": 13796258,
+  "supported_secret_pattern_matches": [],
+  "private_runtime_files": [],
+  "state": "Packaged and scanned; native save/deployment pending",
+  "transport": "Official helper, process-only HTTP/1.1 and45second low-speed bound; TLS validation retained; earlier stall root cause not established",
+  "scan_seconds": 13.007,
+  "earlier_scan": "This scan uses a single sequential pass without extraction"
+}

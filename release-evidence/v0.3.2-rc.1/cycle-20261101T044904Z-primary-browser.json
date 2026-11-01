@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-01T05:26:51.787Z",
+  "client": 1265,
+  "emptyMissions": true,
+  "note": "Your regulatory role can inspect mission records. Creating a mission proposal requires the planner or pilot role.",
+  "pause": "true",
+  "scroll": 1265,
+  "taskStates": [
+    "Completed",
+    "Open"
+  ],
+  "version": true,
+  "width": 1280,
+  "route": "http://127.0.0.1:8787/#operations",
+  "newModelCalls": 0,
+  "newTasksOrOperations": 0,
+  "actualLogin": 1,
+  "caseHandoffVerified": true,
+  "scope": "Installed primary source after release gates. Existing tasks remain Completed and Open; actor role and permissions unchanged."
+}

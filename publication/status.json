@@ -1,5 +1,5 @@
 {
-  "release": "0.3.1-rc.1",
+  "release": "0.3.2-rc.1",
   "release_kind": "Engineering candidate",
   "full_original_specification_accepted": false,
   "stable_release_allowed": false,
@@ -19,149 +19,171 @@
   "destinations": [
     {
       "destination": "GitHub candidate release source",
-      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/v0.3.1-rc.1",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/tree/v0.3.2-rc.1",
       "state": "Independently Retrieved",
-      "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+      "commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
       "tagged_release": true,
-      "release": "0.3.1-rc.1",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.json"
+      "release": "0.3.2-rc.1",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-downloads.json",
+      "prior_release": "0.3.1-rc.1"
     },
     {
       "destination": "GitHub tagged candidate release",
-      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.1-rc.1",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.2-rc.1",
       "state": "Independently Retrieved",
-      "prior_release": "0.3.0-rc.1",
-      "release": "0.3.1-rc.1",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-public-review.json",
-      "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36"
+      "prior_release": "0.3.1-rc.1",
+      "release": "0.3.2-rc.1",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-downloads.json",
+      "commit": "2ebb8b20e515d9863a69b072bd963890e219e050"
     },
     {
       "destination": "System Lab project dossier revision",
       "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
       "state": "Independently Retrieved",
-      "prior_release": "0.3.0-rc.1",
+      "prior_release": "0.3.1-rc.1",
       "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
-      "version": 98,
-      "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
-      "deployment_id": "appgdep_6ae673cad2b88191badcdc66260ab868",
-      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_5e92135175bc8191b9e3db0633b856d6",
+      "version": 99,
+      "source_commit": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+      "deployment_id": "appgdep_6ae6cce10990819194e16915644caf64",
+      "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_2b9c5421282c8191be759e7adf9afab0",
       "audience": "public",
       "ownership": "owner",
       "checks": {
-        "expected": 49,
-        "http_200": 49,
-        "verified": 49,
-        "exact": 46,
+        "expected": 59,
+        "http_200": 59,
+        "verified": 59,
+        "exact": 56,
         "authored_html": 3
       },
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification-reviewed2.json",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site99-public.json",
       "new_revision_state": "Published and independently retrieved",
-      "prepared_source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
-      "remote_source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
-      "new_revision_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-package.json",
-      "release": "0.3.1-rc.1",
-      "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json",
+      "prepared_source_commit": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+      "remote_source_commit": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+      "release": "0.3.2-rc.1",
       "previous_verified": {
-        "version": 97,
-        "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
-        "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
-        "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+        "destination": "System Lab project dossier revision",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+        "state": "Independently Retrieved",
+        "prior_release": "0.3.0-rc.1",
+        "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+        "version": 98,
+        "source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+        "deployment_id": "appgdep_6ae673cad2b88191badcdc66260ab868",
+        "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_5e92135175bc8191b9e3db0633b856d6",
+        "audience": "public",
+        "ownership": "owner",
         "checks": {
-          "expected": 37,
-          "http_200": 37,
-          "verified": 37,
-          "exact": 34,
-          "semantic": 3
+          "expected": 49,
+          "http_200": 49,
+          "verified": 49,
+          "exact": 46,
+          "authored_html": 3
         },
-        "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json"
+        "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-public-verification-reviewed2.json",
+        "new_revision_state": "Published and independently retrieved",
+        "prepared_source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+        "remote_source_commit": "7e96d2431d993a6acef01d8ea37dfa6fce40a80c",
+        "new_revision_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-site-package.json",
+        "release": "0.3.1-rc.1",
+        "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json",
+        "previous_verified": {
+          "version": 97,
+          "source_commit": "309b6fac69cfbe51278da6d116545cf2916251b7",
+          "deployment_id": "appgdep_6ae44b9ae2cc8191adbdaf8cb78c44ee",
+          "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_e984b6ef62208191a3fbc973a756ebdb",
+          "checks": {
+            "expected": 37,
+            "http_200": 37,
+            "verified": 37,
+            "exact": 34,
+            "semantic": 3
+          },
+          "evidence": "release-evidence/v0.3.0-rc.1/cycle-20261030-site97-hardened-public-verification.json"
+        }
       }
     },
     {
       "destination": "Hugging Face model presentation",
       "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
       "state": "Independently Retrieved",
-      "prior_release": "0.2.0-rc.1",
+      "prior_release": "0.3.1-rc.1",
       "new_upload": true,
-      "current_published_revision": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
-      "prepared_application_version": "0.3.1-rc.1",
-      "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
-      "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
-      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
-      "release": "0.3.1-rc.1",
-      "revision": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
-      "prior_revision": "7addd5efe4a17729463fe392cf25489cafc7ccc6",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-model-a6a24fc3-reviewed-lfs.json",
+      "current_published_revision": "d2bba8b30845cced9293cabe0b7287c481f6cee7",
+      "prepared_application_version": "0.3.2-rc.1",
+      "prepared_files_manifest": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "preparation_evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "release": "0.3.2-rc.1",
+      "revision": "d2bba8b30845cced9293cabe0b7287c481f6cee7",
+      "prior_revision": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-model-d2bba8b3-reviewed-lfs.json",
       "original_artifact_unchanged": true
     },
     {
       "destination": "Hugging Face dataset presentation",
       "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations",
       "state": "Independently Retrieved",
-      "prior_release": "0.2.0-rc.1",
+      "prior_release": "0.3.1-rc.1",
       "new_upload": true,
-      "current_published_revision": "88c470dd521d63a90a6361e762e73167823317a1",
-      "prepared_application_version": "0.3.1-rc.1",
-      "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
-      "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
-      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
-      "release": "0.3.1-rc.1",
-      "revision": "88c470dd521d63a90a6361e762e73167823317a1",
-      "prior_revision": "e9fb162a31fa139c8b511fbc84a18277b6aa560c",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-dataset-88c470dd-reviewed-lfs.json",
+      "current_published_revision": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+      "prepared_application_version": "0.3.2-rc.1",
+      "prepared_files_manifest": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "preparation_evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "release": "0.3.2-rc.1",
+      "revision": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+      "prior_revision": "88c470dd521d63a90a6361e762e73167823317a1",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-dataset-2d6dff6b-reviewed-lfs.json",
       "original_artifact_unchanged": true
     },
     {
       "destination": "Hugging Face recorded evaluation Space",
       "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation",
       "state": "Independently Retrieved",
-      "prior_release": "0.2.0-rc.1",
+      "prior_release": "0.3.1-rc.1",
       "new_upload": true,
-      "current_published_revision": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
-      "prepared_application_version": "0.3.1-rc.1",
-      "prepared_files_manifest": "publication/releases/0.3.1-rc.1/huggingface/manifest.json",
-      "preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation.json",
-      "browser_preparation_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-hub-preparation-browser.json",
-      "release": "0.3.1-rc.1",
-      "revision": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
-      "prior_revision": "9108be3ecbc724a84d5d169eff869b58b17de1cc",
-      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hub-space-7aae1c50-reviewed-lfs.json",
+      "current_published_revision": "e690dc6b5f8ef26f700188300475b668dae2500e",
+      "prepared_application_version": "0.3.2-rc.1",
+      "prepared_files_manifest": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "preparation_evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "release": "0.3.2-rc.1",
+      "revision": "e690dc6b5f8ef26f700188300475b668dae2500e",
+      "prior_revision": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-space-e690dc6b-reviewed-lfs.json",
       "original_artifact_unchanged": true,
       "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space",
       "live_inference": false,
-      "live_host_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-verify-space-live-authored.json",
-      "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-hf-space-browser.json"
+      "live_host_verification": "Independently Retrieved; authored bytes and hosting additions verified",
+      "live_host_evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-space-live.json"
     }
   ],
-  "states_reached_scope": "GitHub 0.3.1 remains independently retrieved. System Lab98 and all ten new Hugging Face presentation targets are published and independently retrieved. No new software candidate, model artifact or dataset training record was created.",
+  "states_reached_scope": "GitHub0.3.2 release, System Lab99, all six changed Hub targets and the current static Space live host independently verified. Installed-source browser and audit checks have separate receipts.",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-10-31T23:20:00.120256+00:00",
+  "last_checked_at": "2026-11-01T05:27:24.656060+00:00",
   "release_blockers": [],
   "candidate_ci": {
-    "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
-    "run": 41118769822,
+    "commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+    "run": 41275818880,
     "state": "success",
-    "engineering_job": 124279765454,
-    "publication_job": 124281068303
+    "engineering_job": 124757668407,
+    "publication_job": 124758289846
   },
   "verified_cycle_improvements": [
-    "Persistent job-wide generation reservation budget across crashes and retries",
-    "Stale-worker cleanup cannot clear a newer active turn",
-    "Actual current local-model mobile task preview, explicit confirmation, database/audit check",
-    "Actual390x844mobile and1280x960desktop checks; no duplicate next-step lists or horizontal page overflow"
+    "Accessible current-role explanation and authorisation-case handoff for mission proposals",
+    "Bounded raster filename/container validation with historical artifact preservation",
+    "PyPDF6.21.4 patch after three actual advisory findings; initial failed audit retained"
   ],
   "published_archive": {
-    "bytes": 12504321,
-    "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
-    "source_commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
-    "tag": "v0.3.1-rc.1",
-    "release_id": 429437042,
-    "published_at": "2026-10-30T19:58:48Z"
+    "bytes": 13796258,
+    "sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+    "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+    "tag": "v0.3.2-rc.1",
+    "release_id": 430378177,
+    "published_at": "2026-11-01T05:16:08Z"
   },
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
     "version": "0.3.2-rc.1",
-    "state": "Prepared",
-    "published": false,
+    "state": "Published and independently retrieved",
+    "published": true,
     "source_checkout": "work/candidate-0.3.2",
     "publication_manifest": "publication/releases/0.3.2-rc.1/manifest.json",
     "changes": [
@@ -169,26 +191,27 @@
       "Integrate the reviewed bounded raster encoding and filename guard",
       "Use a separate correctly named JPEG media namespace while preserving frozen 0.3.1 bytes"
     ],
-    "current_candidate_release_gates_passed": false,
-    "current_candidate_installation_verified": false,
-    "current_candidate_publication_verified": false,
+    "current_candidate_release_gates_passed": true,
+    "current_candidate_installation_verified": true,
+    "current_candidate_publication_verified": true,
     "new_model_calls": 0
   },
   "known_presentation_defects": [
-    "The frozen companion-tasks-mobile.png contains valid JPEG bytes under a PNG filename. Preserve its bytes and tag. The published Site and Space use byte-identical .jpg copies. The development guard rejects this mismatch; correctly named media and all candidate gates remain required for the next distinct release."
+    "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
   ],
   "unreleased_development": {
     "branch": "codex/airspace-media-encoding",
     "commit": "c6839aeda8276685ea55bae724d90669ae2e9bcd",
     "ci_run": 41222363007,
     "ci_state": "success",
-    "state": "Source independently retrieved; no candidate tag or release assets",
+    "state": "Integrated into frozen0.3.2 release; original reviewed branch preserved",
     "feature": "Bounded publication screenshot encoding and filename validation",
-    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.json"
+    "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031-development-ci.json",
+    "integrated_release": "0.3.2-rc.1"
   },
   "development_environment": {
-    "api": "Healthy after restart; browser, API and read-only persistent-data checks passed",
-    "worker": "Healthy and idle; six existing jobs Completed",
+    "api": "Promoted to0.3.2; current browser and persistence receipt being finalized by root",
+    "worker": "Current state requires the separate latest worker receipt",
     "data_snapshot_unchanged": true,
     "remaining_free_bytes": 2933145600,
     "new_model_calls": 0,
@@ -196,28 +219,18 @@
     "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json"
   },
   "documentation_checkpoint": {
-    "commit": "e9b92066b97314ea83736761009c2809844bf7e1",
-    "state": "Independently Retrieved",
-    "published": true,
-    "exact_files": 46,
-    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
-    "scope": "Current project publication, actual screenshots, reviewable evidence and preserved history; no new software release",
-    "prior_checkpoint": {
-      "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
-      "exact_files": 46,
-      "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
-      "scope": "Published source preparation and evidence; no Hub upload"
-    }
+    "state": "Prepared",
+    "published": false,
+    "commit": null,
+    "scope": "Post-publication0.3.2 current metadata; root will record actual commit and independent retrieval separately"
   },
   "publication_access_blockers": [],
-  "latest_cycle": "improvement/cycles/2026-10-31T224658Z-publication-completion.json",
+  "latest_cycle": "improvement/cycles/2026-11-01T044904Z-permission-and-release.json",
   "publication_metadata_checkpoint": {
-    "commit": "e9b92066b97314ea83736761009c2809844bf7e1",
-    "state": "Independently Retrieved",
-    "published": true,
-    "exact_files": 46,
-    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
-    "scope": "Current project publication, actual screenshots, reviewable evidence and preserved history; no new software release"
+    "state": "Prepared",
+    "published": false,
+    "commit": null,
+    "scope": "Post-publication0.3.2 current metadata; root will record actual commit and independent retrieval separately"
   },
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",
@@ -236,5 +249,26 @@
     "version": "0.3.1-rc.1",
     "state": "Published and independently retrieved on GitHub",
     "published": true
+  },
+  "prior_candidate_ci": {
+    "commit": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+    "run": 41118769822,
+    "state": "success",
+    "engineering_job": 124279765454,
+    "publication_job": 124281068303
+  },
+  "previous_documentation_checkpoint": {
+    "commit": "e9b92066b97314ea83736761009c2809844bf7e1",
+    "state": "Independently Retrieved",
+    "published": true,
+    "exact_files": 46,
+    "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-github-checkpoint-retrieval.json",
+    "scope": "Current project publication, actual screenshots, reviewable evidence and preserved history; no new software release",
+    "prior_checkpoint": {
+      "commit": "72c82cd56d045d770e390a988f77cbcca451c303",
+      "exact_files": 46,
+      "receipt": "release-evidence/v0.3.1-rc.1/cycle-20261031-final-source-verification.json",
+      "scope": "Published source preparation and evidence; no Hub upload"
+    }
   }
 }

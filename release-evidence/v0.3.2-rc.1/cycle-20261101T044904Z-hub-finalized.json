@@ -1,0 +1,89 @@
+{
+  "at": "2026-11-01T05:18:58.305917+00:00",
+  "state": "Finalized and ready for scoped upload; not uploaded",
+  "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "manifest_sha256": "49e46a5320fdfa95cc6f42aef210d6ea214fb593c4ea05ef9e684ca81d354aa6",
+  "current_release_id": 430378177,
+  "current_release_ci": 41275818880,
+  "actual_current_source_suite": "542passed20skipped",
+  "actual_exact_archive_suite": "542passed20skipped67.80s",
+  "historical_local_source_suite": "541passed21skipped; not substituted for current CI/archive result",
+  "interface_tests": 132,
+  "postgresql_tests": 19,
+  "actual_container_worker_restoration": true,
+  "archive_bytes": 13796258,
+  "archive_sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+  "validator_result": {
+    "state": "Ready for scoped upload; no Hub upload performed",
+    "targets": 6,
+    "target_bytes": 99334,
+    "rights_notices_exact": 2,
+    "new_capture_copies_exact": 2,
+    "new_capture_encoding": "JPEG",
+    "local_html_references": 3,
+    "supported_secret_patterns_found": 0,
+    "remote_actions": false,
+    "new_model_calls": 0
+  },
+  "release_evidence": {
+    "public-downloads": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-downloads.json",
+    "archive-integrity": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-archive-integrity.json",
+    "public-media": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-public-media.json"
+  },
+  "upload_targets": [
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/model/README.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "README.md",
+      "bytes": 8646,
+      "sha256": "1a83728f64a62aba65f0d059c0d1eb1cd06d24456864d26fa1aaa6394c6c6c59"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/model/media/operations-permissions-mobile.jpg",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/dataset/README.md",
+      "repo_type": "dataset",
+      "repo_id": "Magic51/system-lab-airspace-source-annotations",
+      "target": "README.md",
+      "bytes": 5749,
+      "sha256": "644eb7ae9738ee48dcd5805a7813cbdbe1da84dad249ed7f90ff1c287cabcabb"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/space/README.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "README.md",
+      "bytes": 4565,
+      "sha256": "9d85e8a6f3f97c38003ca9b1fc9088d98b4c3830d9dcbb6e34591b8f3b0b06c0"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/space/index.html",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "index.html",
+      "bytes": 9340,
+      "sha256": "7c6e053edc6990fc55f42670638081e73a8b73f5662c1cc0f8e882b4e2ac8935"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/space/media/operations-permissions-mobile.jpg",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    }
+  ],
+  "prior_preparation_receipt": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-preparation.json",
+  "frozen_candidate_edits": false,
+  "remote_writes": false,
+  "model_calls": 0,
+  "training_runs": 0,
+  "next_action": "Root rechecks exact existingMagic51heads/permissions and uploads only six listed targets. Retrieve immutable revisions/target bytes and preserve all unlisted files; verify actual cards/Space and record destination states separately."
+}

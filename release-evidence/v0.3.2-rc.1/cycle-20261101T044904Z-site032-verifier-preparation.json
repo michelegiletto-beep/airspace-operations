@@ -1,0 +1,125 @@
+{
+  "at": "2026-11-01T05:19:16.002125+00:00",
+  "state": "Prepared and verified offline; actual new Site deployment and anonymous retrieval are still required",
+  "scope": "New root evidence scripts only. Frozen candidate2ebb and existing comparator helpers are not edited. No remote requests were executed by this review.",
+  "current_release": "0.3.2-rc.1",
+  "current_release_source": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "expected_resources": 59,
+  "resource_composition": {
+    "preserved031_and_older": 49,
+    "new_actual_release_assets": 9,
+    "new_actual_JPEG_capture": 1,
+    "exact_binary": 56,
+    "authored_HTML": 3
+  },
+  "actual_receipts_consumed": [
+    "cycle-20261101T044904Z-public-downloads.json",
+    "cycle-20261101T044904Z-public-media.json"
+  ],
+  "actual_archive_sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+  "prior031_archive_sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+  "staged_source_offline_assertions": [
+    {
+      "path": "/",
+      "checks": {
+        "visible_text_matches_source": true,
+        "source_links_equal": true,
+        "source_images_equal": true,
+        "source_scripts_styles_match": true,
+        "authored_html_matches_source_after_observed_hosting_injection": true,
+        "existing_airspace_link": true
+      }
+    },
+    {
+      "path": "/projects/airspace-operations",
+      "checks": {
+        "visible_text_matches_source": true,
+        "source_links_equal": true,
+        "source_images_equal": true,
+        "source_scripts_styles_match": true,
+        "authored_html_matches_source_after_observed_hosting_injection": true,
+        "product_title": true,
+        "frozen_current_document_links": true,
+        "original_acceptance_limit": true,
+        "animation_accessibility": true,
+        "historical_release_links": true,
+        "source_historical03_image_links_preserved": true,
+        "historical03_release_link": true,
+        "history031_published_candidate_visible": true,
+        "history031_candidate_download_link": true,
+        "history031_verified_archive_digest": true,
+        "history031_two_current_displayed_images": true,
+        "history031_all_three_current_capture_links": true,
+        "published032_section": true,
+        "current032_tag_visible": true,
+        "current032_archive_digest_visible": true,
+        "current032_download_link": true,
+        "current032_phone_displayed": true,
+        "current032_phone_link": true,
+        "history031_release_link": true,
+        "history030_download_link": true,
+        "history030_archive_digest_visible": true
+      }
+    },
+    {
+      "path": "/projects/multiagentic-systems",
+      "checks": {
+        "visible_text_matches_source": true,
+        "source_links_equal": true,
+        "source_images_equal": true,
+        "source_scripts_styles_match": true,
+        "authored_html_matches_source_after_observed_hosting_injection": true,
+        "existing_airspace_link": true,
+        "existing_interval_relationship": true
+      }
+    }
+  ],
+  "test_runs": [
+    {
+      "command": ".venv/Scripts/python.exe -B -m pytest -q release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-test-site032.py -p no:cacheprovider",
+      "passed": 25,
+      "seconds": 0.93,
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -m pytest -q release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-test-site032.py -p no:cacheprovider",
+      "passed": 29,
+      "seconds": 1.49,
+      "exit_code": 0,
+      "change_before_run": "Added malformed resource count and duplicate URL rejection before network workers"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -m pytest -q release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-test-site032.py -p no:cacheprovider",
+      "passed": 32,
+      "seconds": 1.53,
+      "exit_code": 0,
+      "change_before_run": "Peer review required individual phone HTTP status and its recorded container/source/archive validation; added503/false-validation negative cases"
+    }
+  ],
+  "test_boundary": "All fabricated receipt/content identities remain inside pytest temporary fixtures. No operational records, actual download results or live release evidence were fabricated. Test runs overlap and are not86distinct cases.",
+  "peer_review": {
+    "reviewer": "/root/media_guard",
+    "blocking_findings": 0,
+    "finding_repaired": "Require the actual phone media row status200, container validation and source/archive match rather than relying only on the global receipt state"
+  },
+  "security_boundaries": [
+    "Unchanged hardened comparator preserves exact authored HTML, text, link/image sets, styles/scripts and the pinned Cloudflare hosting exception",
+    "Separate current032 and retained031/030 history assertions; missing displayed phone or historical images cannot pass as links alone",
+    "Actual032 receipts must identify frozen source2ebb, nine fixed distinct asset names with HTTP200/digest matches and the single correctly named actual JPEG",
+    "Exact expected byte count bounded before local read; no planned hashes or arbitrary asset paths",
+    "New explicit local JSON output only, existing file and symlink rejection, exclusive creation; no historical proof overwrite",
+    "CLI import is inert; real verification requires an actual successful Site version greater than98, full sourceSHA and deploymentID"
+  ],
+  "source_hashes": {
+    "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-site032.py": "afefd032272183f4a72d21c9957ab807a780184a57072b597e1ab8984ae5eee1",
+    "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-test-site032.py": "15c6fc6844ea2cfd9981e82d2ed130379cbb7a59ce18858127a490f9172a0856",
+    "scripts/verify_site_031.py": "87b53fb80f008cc3e5920221aa24b75054cb45dfe408ff12fa101009aa82b349",
+    "scripts/verify_publication_v3.py": "c6844bc39cef935252797b72e2b0f22424c7ccb3a088270669dfed44fcfd3e4e"
+  },
+  "operational_or_private_data_access": false,
+  "new_model_calls": 0,
+  "network_requests": 0,
+  "external_mutations": 0,
+  "new_Site_publication_claimed": false,
+  "next_action": "Root must finish native save/deploy for the exact scoped Site source, then run the verifier with its real version/source/deployment identity and a new explicit output path. Preserve any failed comparisons as separate receipts."
+}

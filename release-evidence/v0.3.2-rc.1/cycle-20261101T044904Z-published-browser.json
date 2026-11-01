@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-11-01T05:28:26.121Z",
+  "site": {
+    "version": 99,
+    "desktop": {
+      "client": 1905,
+      "current": "0.3.2-rc.1 PublishedEngineering candidate published on 1 November 2026. Previous downloads remain available.",
+      "height": 855,
+      "images": [
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.2-rc.1/operations-permissions-mobile.jpg"
+        }
+      ],
+      "scroll": 1905,
+      "width": 1920
+    },
+    "mobile": {
+      "client": 375,
+      "current": "0.3.2-rc.1 PublishedEngineering candidate published on 1 November 2026. Previous downloads remain available.",
+      "height": 844,
+      "images": [
+        {
+          "loaded": true,
+          "src": "/airspace-operations/media/0.3.2-rc.1/operations-permissions-mobile.jpg"
+        }
+      ],
+      "scroll": 375,
+      "width": 390
+    }
+  },
+  "space": {
+    "client": 1905,
+    "height": 855,
+    "images": [
+      {
+        "loaded": false,
+        "src": "media/application-tasks.png"
+      },
+      {
+        "loaded": true,
+        "src": "media/operations-permissions-mobile.jpg"
+      }
+    ],
+    "scroll": 1905,
+    "width": 1920,
+    "zip": [
+      "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.2-rc.1/System-Lab-Airspace-Operations-0.3.2-rc.1.zip"
+    ]
+  },
+  "sourceComparison": "Separate strict anonymous retrieval receipts",
+  "viewportOverrideReset": true,
+  "actualModelCalls": 0
+}

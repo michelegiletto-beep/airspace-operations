@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-01T05:27:20.100794+00:00",
+  "scope": "New read-only post-login check after root performed the authorised existing-account browser sign-in; prior promotion proof remains unchanged",
+  "source_promotion": "cycle-20261101T044904Z-primary-promotion.json",
+  "records": 20,
+  "tasks": 2,
+  "records_snapshot_sha256": "c6801f17dcf2fa8f84017bad30a9c7af3db4a0d8b87e4495c96d2180d46eee01",
+  "records_exactly_preserved": true,
+  "operational_records": 0,
+  "database_integrity": [
+    "ok"
+  ],
+  "audit_before": 46,
+  "audit_after": 47,
+  "audit_valid": true,
+  "first46_audit_rows_exact_private_backup_match": true,
+  "only_added_audit_action": "identity.login",
+  "added_identity_event_at": "2026-11-01T05:26:23.084084+00:00",
+  "session_count_increase": 1,
+  "private_audit_key_preserved": true,
+  "no_task_mission_action_writes": true,
+  "new_model_calls": 0,
+  "login_performed_by_this_reviewer": false,
+  "tokens_credentials_and_personal_values_logged": false
+}

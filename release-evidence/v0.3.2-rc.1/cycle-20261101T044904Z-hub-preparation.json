@@ -1,0 +1,123 @@
+{
+  "at": "2026-11-01T05:16:17.297249+00:00",
+  "state": "Prepared and locally validated; not ready for upload",
+  "application_version": "0.3.2-rc.1",
+  "application_source": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "requirements": [
+    "ASO3-009",
+    "ASO3-010"
+  ],
+  "pack": "publication/releases/0.3.2-rc.1/huggingface",
+  "manifest_sha256": "b456e904bc8b891d9c309715b1a1ace0f53f2297132ae401b9ede20b749ba847",
+  "eventual_upload_targets": [
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/model/README.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "README.md",
+      "bytes": 8219,
+      "sha256": "97348f3f7775cb32a3ccfe67376bff573a238d8d082124fea410bce1e954dba1"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/model/media/operations-permissions-mobile.jpg",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/dataset/README.md",
+      "repo_type": "dataset",
+      "repo_id": "Magic51/system-lab-airspace-source-annotations",
+      "target": "README.md",
+      "bytes": 5533,
+      "sha256": "91318ffc7f8cdb438cef76bb80c4dee6754a5679efbfb9453809fdfed586101b"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/space/README.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "README.md",
+      "bytes": 4146,
+      "sha256": "585a40429e18b6f0b32ed9ad4943b4987881b52a9233109b19da34c576987ecb"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/space/index.html",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "index.html",
+      "bytes": 8686,
+      "sha256": "6337f33df6448fa1521259e61a1e15c410f839949533cc7704590d8f92f914ce"
+    },
+    {
+      "source": "publication/releases/0.3.2-rc.1/huggingface/space/media/operations-permissions-mobile.jpg",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    }
+  ],
+  "validator": {
+    "command": ".venv/Scripts/python.exe -B publication/releases/0.3.2-rc.1/huggingface/verify_preparation.py",
+    "exit_code": 0,
+    "result": {
+      "state": "Prepared and locally validated; not ready for upload",
+      "targets": 6,
+      "target_bytes": 97618,
+      "rights_notices_exact": 2,
+      "new_capture_copies_exact": 2,
+      "new_capture_encoding": "JPEG",
+      "local_html_references": 3,
+      "supported_secret_patterns_found": 0,
+      "remote_actions": false,
+      "new_model_calls": 0
+    }
+  },
+  "new_capture": {
+    "source": "work/candidate-0.3.2/publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+    "bytes": 35517,
+    "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+    "encoding": "JPEG",
+    "width": 375,
+    "height": 812,
+    "visual_review": "Actual375x812capture viewed; Operations regulatory-role explanation, disabled planning control, authorisation-case link and empty operational workspace are visible. No private email, real flight, customer or approval appears."
+  },
+  "rights": {
+    "model_notice_exact": true,
+    "space_complete_historical_notice_exact": true,
+    "old_model_task_capture_exact": true,
+    "old_space_desktop_and_mobile_captures_exact": true,
+    "old_stylesheet_exact": true,
+    "new_artwork_relicensing": false
+  },
+  "content_review": {
+    "new_source_and_security_changes_described": true,
+    "historical031_desktop_explicitly_labelled": true,
+    "original_student_and_dataset_artifacts_unchanged": true,
+    "historical_model_measures_retained": true,
+    "current_release_archive_or_digest_invented": false,
+    "current_release_ci_claimed": false,
+    "published_release_at_preparation": "0.3.1-rc.1",
+    "local_source_result": "541passed21skipped;132interface tests; selected3dependency scans no known findings after patch. Not current container/exact-archive evidence."
+  },
+  "primary_security_sources_retrieved": [
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54",
+    "https://github.com/py-pdf/pypdf/releases/tag/6.21.4"
+  ],
+  "prior_hub_revisions": {
+    "model": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+    "dataset": "88c470dd521d63a90a6361e762e73167823317a1",
+    "space": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf"
+  },
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_records_written": 0,
+  "remote_writes": false,
+  "frozen_candidate_edits": false,
+  "publication_blocker": "Actual0.3.2 gated CI, exact-archive, release and independent download evidence must be supplied and all presentation statements finalized before upload.",
+  "next_action": "Wait for actual successful0.3.2CI, exact-archive and anonymous-download receipts. Finalize prepared status and release facts from those records, rebuild hashes, verify browser/rights/secrets, then authorize only listed changed targets while preserving unlisted files. Do not treat this preparation receipt as Uploaded, Published or Independently Retrieved."
+}

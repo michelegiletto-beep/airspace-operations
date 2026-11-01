@@ -1,4 +1,16 @@
-# 0.3.1 release handover
+# 0.3.2 release handover
+
+## Current release checkpoint, 1 November 2026
+
+GitHub [0.3.2-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.2-rc.1) is published and independently retrieved, frozen source `2ebb8b20e515d9863a69b072bd963890e219e050`. The ZIP contains 13,796,258 bytes and has SHA-256 `1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e`. All nine release assets match their public digests. CI41275818880 passed 542 source tests with 20 skipped,132 interface tests and 19 PostgreSQL tests, plus actual containers, worker/API completion and backup/restoration. The exact archive installation separately passed 542 tests with 20 skipped in 67.80 seconds. Earlier local 541 passed/21 skipped is a distinct result.
+
+This candidate explains mission-proposal role permissions, integrates the bounded media-encoding guard and pins PyPDF 6.21.4 after three actual dependency advisories. The initial failed audit remains preserved. Earlier release bytes and tags remain unchanged. No new model generation, student training, task or operational record was created. Original acceptance, stable release and operational acceptance remain false.
+
+System Lab version 99 is deployed at source `ed44e6bde44c6213862fe952250a6a804d02d1f0`, deployment `appgdep_6ae6cce10990819194e16915644caf64`. Independent retrieval passed 59 resources: 56 exact assets and 3 authored pages under the hardened comparator. Hugging Face model `d2bba8b30845cced9293cabe0b7287c481f6cee7`, dataset `2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca` and Space `e690dc6b5f8ef26f700188300475b668dae2500e` are published and independently retrieved: all 6 changed targets and 41 unlisted prior files match. Original weights, dataset records, rights notices and historical media are unchanged. The current static Space live host passed exact authored-byte and four raw-asset checks with negative controls. Installed-source and browser-specific checks have separate receipts.
+
+Current publication metadata is a post-release checkpoint awaiting its own documentation commit; the released tag/source remains frozen. Read `improvement/cycles/2026-11-01T044904Z-permission-and-release.json` and `publication/status.json`. Earlier paragraphs below are historical. The next bounded improvement is an explicit retry for a failed saved-task fetch, preserving tenant/actor privacy, versions and approval boundaries. Use at most 45 minutes and two actual local-model evaluations. No email, human contact, purchases, aircraft commands or external operational actions.
+
+# Historical 0.3.1 release handover
 
 The existing [System Lab project page](https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations) is published at version 98, source `7e96d2431d993a6acef01d8ea37dfa6fce40a80c`. Independent retrieval passed49 resources:46 exact assets and 3 authored pages after precisely verified hosting additions. Actual desktop and mobile checks show current captures, download links and no horizontal overflow. Previous releases and unrelated Site content are preserved.
 

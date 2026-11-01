@@ -1,0 +1,37 @@
+{
+  "saved_version": {
+    "id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_2b9c5421282c8191be759e7adf9afab0",
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "version_number": 99,
+    "source": {
+      "commit_sha": "ed44e6bde44c6213862fe952250a6a804d02d1f0"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000006cf481f4865d3b14db79113c",
+      "content_hash": "sha256:4c1c26d8c750f91a88466924290ddb6099d67432bd7a042dbfad41d7e7c23709",
+      "size_bytes": 208844800,
+      "file_count": 666
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ae6cce10990819194e16915644caf64",
+    "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+    "title": "Michele Giletto | Systems Portfolio",
+    "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_2b9c5421282c8191be759e7adf9afab0",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a8fdd39ede88191898e6f386864c331",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-11-01T05:24:06.945214+00:00"
+  },
+  "secret_scan": "cycle-20261101T044904Z-site-package.json",
+  "independent_retrieval": "cycle-20261101T044904Z-site99-public.json",
+  "scope": "Existing public System Lab project page only. No operational tenant deployment or access change."
+}

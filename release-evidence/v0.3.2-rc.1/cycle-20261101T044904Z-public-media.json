@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-01T05:17:03.883794+00:00",
+  "version": "0.3.2-rc.1",
+  "source_commit": "2ebb8b20e515d9863a69b072bd963890e219e050",
+  "state": "Independently Retrieved",
+  "media": [
+    {
+      "path": "publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "encoding": "JPEG",
+      "container_validated": true,
+      "matches_public_source_and_exact_archive": true,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/2ebb8b20e515d9863a69b072bd963890e219e050/publication/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+      "redirect_hosts": [],
+      "authenticated_read": false
+    }
+  ]
+}

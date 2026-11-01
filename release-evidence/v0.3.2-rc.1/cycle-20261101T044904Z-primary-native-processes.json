@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-11-01T05:26:26.7647247Z",
+  "ownership_basis": "Exact root virtual-environment launcher executable, matching child CLI and private runtime worker heartbeat; base Python child interpreters are Windows virtual-environment implementation details",
+  "api": {
+    "parent_pid": 23848,
+    "pid": 9360,
+    "launcher_executable": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "child_executable": "C:\\Python313\\python.exe",
+    "command": "\"C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe\" -B -m airspace.cli serve --host 127.0.0.1 --port 8787"
+  },
+  "worker": {
+    "parent_pid": 15824,
+    "pid": 15508,
+    "launcher_executable": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "child_executable": "C:\\Python313\\python.exe",
+    "command": "\"C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe\" -B -m airspace.cli worker"
+  },
+  "candidate_8788_pid": 33324,
+  "killed_primary_pids": [
+    22620,
+    5412
+  ],
+  "no_other_processes_stopped": true
+}
