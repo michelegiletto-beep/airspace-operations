@@ -219,18 +219,22 @@
     "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json"
   },
   "documentation_checkpoint": {
-    "state": "Prepared",
-    "published": false,
-    "commit": null,
-    "scope": "Post-publication0.3.2 current metadata; root will record actual commit and independent retrieval separately"
+    "state": "Independently Retrieved",
+    "published": true,
+    "commit": "3d0ab7f75de1e3ccba1faa44c4c7884c69be5570",
+    "exact_files": 48,
+    "receipt": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-final-github-retrieval.json",
+    "scope": "Current0.3.2 publication and installed-application evidence; software source remains frozen2ebb8b20e515d9863a69b072bd963890e219e050"
   },
   "publication_access_blockers": [],
   "latest_cycle": "improvement/cycles/2026-11-01T044904Z-permission-and-release.json",
   "publication_metadata_checkpoint": {
-    "state": "Prepared",
-    "published": false,
-    "commit": null,
-    "scope": "Post-publication0.3.2 current metadata; root will record actual commit and independent retrieval separately"
+    "state": "Independently Retrieved",
+    "published": true,
+    "commit": "3d0ab7f75de1e3ccba1faa44c4c7884c69be5570",
+    "exact_files": 48,
+    "receipt": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-final-github-retrieval.json",
+    "scope": "Current0.3.2 publication and installed-application evidence; software source remains frozen2ebb8b20e515d9863a69b072bd963890e219e050"
   },
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",

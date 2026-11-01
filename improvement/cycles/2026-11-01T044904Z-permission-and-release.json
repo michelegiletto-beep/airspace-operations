@@ -143,8 +143,11 @@
     "live_host_evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-space-live.json"
   },
   "post_release_documentation": {
-    "state": "Prepared",
-    "published": false,
-    "commit": null
+    "state": "Independently Retrieved",
+    "published": true,
+    "commit": "3d0ab7f75de1e3ccba1faa44c4c7884c69be5570",
+    "exact_files": 48,
+    "receipt": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-final-github-retrieval.json",
+    "scope": "Current0.3.2 publication and installed-application evidence; software source remains frozen2ebb8b20e515d9863a69b072bd963890e219e050"
   }
 }
