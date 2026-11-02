@@ -1,3 +1,7 @@
+## Windows installation diagnostics, 2 November 2026
+
+Expose configuration and representative path limits without changing registry values, relocating records or weakening failed gates. Environment checks must not create a database or key. Report supported schema separately from an inspected database. Keep the original deep-path failures and same-case reproduction alongside the passing short-path suite. New screenshots use actual browser pixels and exclude the account header; rejected captures stay private.
+
 # Architecture decisions
 
 31 October 2026: use a standard-library container-format guard for future candidate screenshots, alongside separate browser decoding, visual review and rights checks. Validate the selected screenshot and the candidate media namespace; bound bytes, total entries, depth and raster count. An independent review identified the need for the total-entry and depth bounds, which were added and tested. The verified development source is c6839aeda8276685ea55bae724d90669ae2e9bcd; it does not amend frozen release0.3.1.
@@ -28,6 +32,6 @@ Core runtime remains frozen. Added a separate hash-locked publication-only profi
 Compare complete task titles and descriptions with whitespace normalisation only; preserve distinct text and the underlying records. Do not use fuzzy deletion for legal or safety guidance. The current contract has no versioned guidance-equivalence metadata, so semantic overlap remains explicit. Use the package version as the UI version source. Size the fixed companion against the layout viewport rather than scrollbar-inclusive `100vw`; actual mobile bounds are checked in the browser. New candidate publication requires a strict version-specific notes and screenshot manifest, rather than inheriting 0.3 materials. Original artwork, model weights, operational rules and schema marker 3 remain unchanged.
 
 
-## 2 November2026 development checkpoint
+## 2 November 2026 development checkpoint
 
-Use a separate owned F volume checkout after the C volume reached zero free bytes; retain all original releases, runtime data and models. A rejected cache deletion is not retried through another mechanism. Current publication aliases are derived from matching saved/deployed/public receipts. Development0.3.4 stays unreleased until native browser verification and the remaining release gates pass.
+Use a separate owned F volume checkout after the C volume reached zero free bytes; retain all original releases, runtime data and models. A rejected cache deletion is not retried through another mechanism. Current publication aliases are derived from matching saved/deployed/public receipts. Development 0.3.4 stays unreleased until native browser verification and the remaining release gates pass.

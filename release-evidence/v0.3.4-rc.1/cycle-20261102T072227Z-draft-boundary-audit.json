@@ -1,0 +1,70 @@
+{
+  "at": "2026-11-02T07:32:45.230853+00:00",
+  "scope": "Independent read-only current-source review and isolated software tests; no browser, authentication, model, primary data, code or publication mutation",
+  "reviewed_source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+  "source": [
+    {
+      "path": "frontend/src/useDraft.ts",
+      "sha256": "28fc6570ff552ae3083e36a5ef6af14d2b77e72bd2d4b81b7f3efdd9bf250053",
+      "matches_retrieved_ea471560": true
+    },
+    {
+      "path": "frontend/src/useDraft.test.tsx",
+      "sha256": "8366fb8ce686f92e1a43b2ca22713341224a77beff980ec871b973344ccf9497",
+      "matches_retrieved_ea471560": true
+    },
+    {
+      "path": "frontend/src/CompanionDock.tsx",
+      "sha256": "b49a768d388bbec39716f767622288b402f7cace7b0f7784673598e14302071a",
+      "matches_retrieved_ea471560": true
+    },
+    {
+      "path": "frontend/src/CompanionPrivacy.test.tsx",
+      "sha256": "436a324901fc7590f5090f078da46e4085afad6530748dd95cdb4646775cbfc5",
+      "matches_retrieved_ea471560": true
+    }
+  ],
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/useDraft.test.tsx",
+    "src/CompanionPrivacy.test.tsx",
+    "src/TaskRecovery.test.tsx",
+    "src/CompanionDock.test.tsx",
+    "src/useRemote.test.tsx",
+    "--cache=false"
+  ],
+  "cwd": "frontend",
+  "elapsed_seconds": 12.027715,
+  "exit_code": 0,
+  "stdout": "\n RUN  v4.1.12 F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4/frontend\n\n\n Test Files  5 passed (5)\n      Tests  75 passed (75)\n   Start at  08:32:33\n   Duration  10.58s (transform 14.30s, setup 0ms, import 16.90s, tests 7.00s, environment 9.12s)\n\n",
+  "stderr": "",
+  "findings": {
+    "blocking_source_defects": [],
+    "draft_key_change_masks_before_commit": true,
+    "stale_A_to_B_to_A_setters_rejected": true,
+    "abandoned_concurrent_render_keeps_committed_actor_usable": true,
+    "strict_mode_replay_covered": true,
+    "token_role_tenant_actor_keyed_boundary": true,
+    "retired_response_cannot_launch_follow_on_message": true,
+    "task_reload_does_not_replay_mutations": true,
+    "normal_logout_unmount_already_prevents_account_crossing": true,
+    "server_permissions_remain_authoritative": true,
+    "copy": "The idle companion prompt is a concrete instruction. No new misleading approval or model capability controls were introduced. No additional cosmetic change is recommended ahead of unresolved browser and Windows assurance gates."
+  },
+  "missing_browser_contract": [
+    "Actual same-account unsent draft survives workspace navigation and reload",
+    "Actual saved engineering tasks are read from the isolated snapshot",
+    "Normal motion, user pause and reduced-motion remain visible and honoured",
+    "No model reply, task write, approval or operational record is created",
+    "Primary20records/2tasks/6Completedjobs/audit48 unchanged; isolated audit may add only the explicit existing-user sign-in"
+  ],
+  "no_claims": [
+    "No full European coverage, operational acceptance, training, current model evaluation or published0.3.4 release claimed",
+    "Isolated prop-transition regressions are not evidence of a production cross-tenant incident"
+  ],
+  "new_model_calls": 0,
+  "primary_mutations": false,
+  "success": true
+}

@@ -1,0 +1,98 @@
+{
+  "at": "2026-11-02T07:39:02.352275+00:00",
+  "scope": "Read-only SQLite snapshots, exact private-row comparison, HMAC audit and anonymous API boundaries. No browser or authenticated reviewer action.",
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "preview": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "primary_records_jobs_audit_sessions_unchanged": true,
+  "preview_records_jobs_and_versions_unchanged": true,
+  "preview_additional_audit_actions": [
+    "identity.login"
+  ],
+  "expected_existing_user_signins": 1,
+  "api_checks": [
+    {
+      "port": 8787,
+      "route": "/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.3-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "port": 8787,
+      "route": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "port": 8787,
+      "route": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "port": 8790,
+      "route": "/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.4-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "port": 8790,
+      "route": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "port": 8790,
+      "route": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "snapshot_method": "SQLite online backup from a pinned read-only source transaction; key copied privately and verified unchanged",
+  "worker_started_for_preview": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "reviewer_authentication": false,
+  "credentials_or_private_identifiers_logged": false,
+  "operational_data_writes": false,
+  "success": true
+}

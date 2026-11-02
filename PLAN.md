@@ -1,6 +1,10 @@
-## Current development checkpoint, 2 November 2026
+## Current candidate checkpoint, 2 November 2026, 07:22 UTC cycle
 
-Published software remains0.3.3-rc.1. Development0.3.4 hardens private drafts and companion context transitions and reconciles publication aliases. Native browser verification stopped because the tool could not identify the Chrome URL. No current0.3.4 screenshot, release, installation acceptance or production promotion is claimed. Read `improvement/cycles/2026-11-02T011950Z-draft-boundaries.json` for exact evidence, retained failures and the next bounded action. The original baseline remains incomplete. Earlier checkpoint sections are historical.
+Final local0.3.4source verification passed575Windows tests with21skipped and7warnings. Controlled shallow/deep tests reproduced the earlier6failures and7errors; all failed receipts remain preserved. The environment check now reports configuration without creating or migrating a database. Actual desktop/mobile browser review preserved the unsent draft through navigation/reload and verified existing tasks against persistent data; privacy-reviewed JPEGs are available. Current published software remains0.3.3 at this source checkpoint. Current-source remote containers, exact archive installation and distinct publication remain pending. Original acceptance, stable release and operational acceptance remain false. Read `improvement/cycles/2026-11-02T072227Z-windows-and-draft-verification.json` and `publication/status.json`. The preceding cycle below is historical.
+
+## Historical development checkpoint, 2 November 2026, 01:19 UTC cycle
+
+Published and installed software remains 0.3.3-rc.1. Development source 0.3.4 is independently retrieved at `ea47156010c4c7ec0806a546ac0ee93ab507a361` on `codex/airspace-draft-boundaries-034`. Its Linux suite passed 561 tests with 20 skipped, PostgreSQL passed 19 tests, and the interface passed 180 tests with a successful build. Both full Windows attempts remain failed; the latest records 547 passed, 6 failures, 7 errors and 21 skipped. Native browser URL verification stopped, so no new screenshot, archive installation or release is claimed. Read `improvement/cycles/2026-11-02T011950Z-draft-boundaries.json` for exact evidence and the next bounded action. The separate engineering checkout is `F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4`. The original specification and operational acceptance remain incomplete. Earlier checkpoint sections are historical.
 
 ## Current saved-task recovery checkpoint, 1 November 2026
 

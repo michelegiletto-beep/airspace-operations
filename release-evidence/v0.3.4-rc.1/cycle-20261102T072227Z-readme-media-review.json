@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-11-02T07:42:44.920516+00:00",
+  "scope": "Independent local-file README and final-image inspection; no browser actions, source edits, publication or image alteration. DesktopSHAwas checked before and after view_image and remained equal.",
+  "readme_sha256": "e8591d11ba7a47a2b73597464030b51dbba589922b5892372c785f13b1fc0356",
+  "published_download_binding": {
+    "version": "0.3.3-rc.1",
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/System-Lab-Airspace-Operations-0.3.3-rc.1.zip",
+    "bytes": 14192874,
+    "sha256": "067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5",
+    "matches_fresh_public_release_review": true
+  },
+  "development_release_boundary": "034explicitly unreleased; no034download or provider publication claimed",
+  "media": [
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
+      "bytes": 113135,
+      "sha256": "8949e97f7f3c8ed0ac778d29bcaa24c056116bf8c8363e2348dce7093c1f8c14",
+      "format": "JPEG",
+      "dimensions": [
+        1280,
+        902
+      ],
+      "file_reference_matches_readme": true,
+      "visually_inspected": true,
+      "visible_account_identifier": false,
+      "readable_unsent_engineering_request": true,
+      "fabricated_operational_activity_visible": false
+    },
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "format": "JPEG",
+      "dimensions": [
+        390,
+        844
+      ],
+      "file_reference_matches_readme": true,
+      "visually_inspected": true,
+      "visible_account_identifier": false,
+      "readable_unsent_engineering_request": true,
+      "fabricated_operational_activity_visible": false
+    }
+  ],
+  "media_eligible_in_reviewed_privacy_and_readability_scope": true,
+  "findings": [
+    "Evidence and limitations still begins with the clearly identified030run, but lacks an explicit historical label before the current033evidence. A narrow current033paragraph replacement would improve coherence.",
+    "The earlier capture-privacy-review.json associates the30066Bcollapsed-layout attempt with a visible-account finding. Independent viewing of that bad-layout attempt found no visible email; preserve it as a failed/racing review and bind final approval only to the stable113135B/SHA8949capture reviewed here.",
+    "This review does not establish motion, pause pixels, actor switching or browser-to-database correctness. Those require their separately scoped actual evidence."
+  ],
+  "source_edits": false,
+  "image_edits": false,
+  "remote_writes": false,
+  "model_calls": 0,
+  "success": true
+}

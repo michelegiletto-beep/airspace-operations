@@ -58,12 +58,16 @@ def main():
                 conn.backup(destination)
         print(json.dumps({"restored": str(target), "audit_key_required": True, "at": now()}))
         return
+    if args.command == "check":
+        from .environment_checks import storage_path_diagnostics
+        runtime = Path(os.getenv("AIRSPACE_RUNTIME", "runtime")).resolve()
+        url = os.getenv("AIRSPACE_DATABASE_URL") or "sqlite"
+        print(json.dumps({"python": sys.version.split()[0], "database_profile": "SQLite portability" if url.startswith("sqlite") else "PostgreSQL", "schema_version": CURRENT_SCHEMA_VERSION, "schema_status": "Not Inspected", "schema_version_scope": "Supported schema; existing database not inspected or migrated", "docker": bool(shutil.which("docker")), "pg_dump": bool(shutil.which("pg_dump")), "runtime": str(runtime), "operational_acceptance": False, "storage_paths": storage_path_diagnostics(runtime)}, indent=2))
+        return
     store = local_store()
     store.migrate()
     if args.command == "migrate":
         print(json.dumps({"schema_version": CURRENT_SCHEMA_VERSION, "status": "Applied"}))
-    elif args.command == "check":
-        print(json.dumps({"python": sys.version.split()[0], "database_profile": "SQLite portability" if store.url.startswith("sqlite") else "PostgreSQL", "schema_version": CURRENT_SCHEMA_VERSION, "docker": bool(shutil.which("docker")), "pg_dump": bool(shutil.which("pg_dump")), "runtime": str(Path(os.getenv("AIRSPACE_RUNTIME", "runtime")).resolve()), "operational_acceptance": False}, indent=2))
     elif args.command == "user-add":
         from .identity import provision
         password = os.environ.get("AIRSPACE_INITIAL_PASSWORD") or getpass.getpass("New password (at least 12 characters): ")

@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-02T07:45:41.511434+00:00",
+  "scope": "Primary webpage review, not corpus ingestion or qualified legal currentness review",
+  "sources": [
+    {
+      "url": "https://docs.python.org/3.13/using/windows.html#removing-the-max-path-limitation",
+      "finding": "Python documents Windows long-path configuration dependence."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation",
+      "finding": "Microsoft distinguishes machine policy, process opt-in and legacy path limits."
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-unmanned-aircraft-systems",
+      "finding": "Page still identifies30June2026revision/SORA2.5 and directs users to subsequent regulations."
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/document-library/agency-decisions/ed-decision-2025018r",
+      "finding": "Decision page identifiesAMC/GM amendment and separate corrigendum."
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-u-space-regulation-eu-2021664",
+      "finding": "Page identifies29May2024edition and subsequent-rule register."
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/regulations/unmanned-aircraft-systems-uas",
+      "finding": "Register page retrieved; no complete amendment reconciliation performed."
+    },
+    {
+      "url": "https://www.easa.europa.eu/en/regulations/u-space",
+      "result": "HTTP429 Too Many Requests. No repeated fetch or no-change claim."
+    }
+  ],
+  "legal_rules_changed": false,
+  "corpus_overwritten": false,
+  "qualified_national_pack_validation": false
+}

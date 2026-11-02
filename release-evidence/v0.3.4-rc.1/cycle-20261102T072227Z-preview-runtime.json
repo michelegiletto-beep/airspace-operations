@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-02T07:36:21.833599+00:00",
+  "state": "Isolated review API running; browser verification recorded separately",
+  "api": "http://127.0.0.1:8790",
+  "version": "0.3.4-rc.1",
+  "source": "Current F candidate; four reviewed draft/Dock files match retrieved ea47156010c4c7ec0806a546ac0ee93ab507a361",
+  "snapshot_created_at": "2026-11-02T07:29:10.196758+00:00",
+  "snapshot_baseline": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "snapshot_method": "SQLite online backup while a read-only source transaction pins the snapshot; destination and source full rows compared before startup. Private audit key copied separately and checked unchanged.",
+  "preview_launcher_pid": 28512,
+  "preview_server_pid": 12520,
+  "preview_worker_started": false,
+  "api_command": [
+    "python",
+    "-m",
+    "uvicorn",
+    "airspace.api:create_app",
+    "--factory",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8790",
+    "--no-access-log"
+  ],
+  "environment_scope": [
+    "AIRSPACE_RUNTIME and AIRSPACE_DATABASE_URL point only to the isolated F preview",
+    "PYTHONPATH points to current F candidate backend",
+    "Existing controller directory exposed for status only; no generation worker started",
+    "Audit key environment override cleared for this child process; private snapshot key used"
+  ],
+  "existing_identity_password_verified_offline": true,
+  "identity_created": false,
+  "reviewer_authentication": false,
+  "credentials_or_key_values_or_private_identifiers_logged": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "primary_mutations": false,
+  "retained_verifier_timing": "The initial expected-zero-signins check ran after the operator had already signed in, so it failed before creating a receipt. The explicit expected-one-signin check then verified the unchanged48-entry prefix plus one identity.login.",
+  "verification_receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-preview-after-login.json",
+  "candidate_published": false,
+  "success": true
+}
