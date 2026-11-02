@@ -14,6 +14,7 @@ const action: ActionPreview = { ...base, id: 'test-action', kind: 'companion_act
 const task: CompanionTask = { ...base, id: 'test-task', kind: 'companion_task', title: 'Review the procedure', status: 'Open', version: 7, data: { owner_actor_id: user.id, conversation_id: conversation.id, source_message_id: userMessage.id, description: 'Review the operator procedure.', due_at: null, completed_at: null, created_from_action_id: action.id } };
 
 function install(options: { taskDescription?: string; restored?: boolean; action?: ActionPreview; conflict?: boolean; running?: boolean; text?: string; workflow?: boolean; taskConflict?: boolean; retry?: boolean; case?: boolean; linked?: boolean; procedure?: boolean; reply?: Partial<CompanionMessage['data']>; modelState?: string } = {}) {
+  let sentSequence = 0;
   let tasks: CompanionTask[] = options.restored ? [{...task,data:{...task.data,...(options.taskDescription !== undefined ? { description: options.taskDescription } : {}),...(options.linked?{workflow_id:'test-workflow'}:{})}}] : [];
   let detail: CompanionDetail = { conversation, messages: [], action_previews: options.action ? [options.action] : [], tasks: [], active_job: null, model_status: model };
   if (options.text) detail.messages = [{ ...userMessage, id: 'test-reply', data: { role: 'assistant', text: options.text, reply_kind: 'fallback', missing_inputs: ['Select the relevant aircraft record.'] } }];
@@ -34,9 +35,10 @@ function install(options: { taskDescription?: string; restored?: boolean; action
       tasks = [{ ...task, status: JSON.parse(init.body as string).state, version: 8 }]; return body(tasks[0]);
     }
     if (url.endsWith('/messages') && init.method === 'POST') {
-      const job = { id: 'test-job', kind: 'companion_reply', state: 'Queued', version: 1, payload: { conversation_id: conversation.id, message_id: userMessage.id } };
-      detail = { ...detail, conversation: { ...conversation, version: 6 }, messages: [userMessage], active_job: job };
-      return body({ conversation: detail.conversation, user_message: userMessage, job, reply: null, action_previews: [], model_status: model }, 202);
+      const sentMessage = { ...userMessage, id: `test-sent-message-${++sentSequence}` };
+      const job = { id: 'test-job', kind: 'companion_reply', state: 'Queued', version: 1, payload: { conversation_id: conversation.id, message_id: sentMessage.id } };
+      detail = { ...detail, conversation: { ...conversation, version: 6 }, messages: [sentMessage], active_job: job };
+      return body({ conversation: detail.conversation, user_message: sentMessage, job, reply: null, action_previews: [], model_status: model }, 202);
     }
     if (url.endsWith('/cancel')) { detail = { ...detail, conversation: { ...conversation, version: 6 }, active_job: null }; return body({ conversation: detail.conversation }); }
     if (url.endsWith('/confirm')) {

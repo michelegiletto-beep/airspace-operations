@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-02T13:25:34.647529+00:00",
+  "version": "0.3.4-rc.1",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "state": "Independently Retrieved",
+  "authenticated": false,
+  "environment_proxies": false,
+  "redirects_allowed": false,
+  "media": [
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/f5dd93a7c5c7367101ea63147a5da99cb085addb/publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "encoding": "JPEG",
+      "matches_exact_archive_and_local_capture": true
+    }
+  ],
+  "remote_writes": false,
+  "new_model_calls": 0,
+  "success": true
+}

@@ -1,4 +1,18 @@
-## Current development checkpoint, 2 November 2026
+## Current publication checkpoint, 2 November 2026, 13:21 UTC cycle
+
+GitHub [0.3.4-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1) is published and independently retrieved from frozen source `f5dd93a7c5c7367101ea63147a5da99cb085addb`. All nine assets match their public digests. The ZIP contains 15,377,087 bytes and has SHA-256 `c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57`. System Lab 101 is independently verified: 80 resources, comprising 77 exact assets and 3 authored pages. All three Hugging Face presentations now have independent 0.3.4 retrieval receipts.
+
+Actual CI 41408782094 passed 576 source tests with 20 skipped, 180 interface tests and 19 PostgreSQL tests, with real containers, worker completion and restoration. The exact archive installation separately passed 576 tests with 20 skipped in 64.01 seconds. The local Windows result of 575 passed, 21 skipped and 7 warnings is a distinct measurement. Warnings and failed earlier runs remain preserved.
+
+The primary application is separately verified at 0.3.4 using the exact installed archive source and existing optional interpreter. The previous C project application source remains preserved. This metadata update does not replace application files, dependencies, databases or models. The 170 original and 28 revision requirements retain their texts and statuses; original acceptance, stable release and operational acceptance remain false. No model generation, training, operational record or external operational action was added.
+
+Read `improvement/cycles/2026-11-02T132104Z-publication-completion.json` and `publication/status.json`. Earlier sections are historical source-assembly checkpoints. Next bounded task: explain disabled Maintenance and Fleet sharing workflow controls using the current role and prerequisites, with server permissions unchanged.
+
+## Historical source-assembly checkpoint, 2 November 2026, 07:22 UTC cycle
+
+Final local0.3.4source verification passed575Windows tests with21skipped and7warnings. Controlled shallow/deep tests reproduced the earlier6failures and7errors; all failed receipts remain preserved. The environment check now reports configuration without creating or migrating a database. Actual desktop/mobile browser review preserved the unsent draft through navigation/reload and verified existing tasks against persistent data; privacy-reviewed JPEGs are available. Current published software remains0.3.3 at this source checkpoint. Current-source remote containers, exact archive installation and distinct publication remain pending. Original acceptance, stable release and operational acceptance remain false. Read `improvement/cycles/2026-11-02T072227Z-windows-and-draft-verification.json` and `publication/status.json`. The preceding cycle below is historical.
+
+## Historical development checkpoint, 2 November 2026, 01:19 UTC cycle
 
 Published and installed software remains 0.3.3-rc.1. Development source 0.3.4 is independently retrieved at `ea47156010c4c7ec0806a546ac0ee93ab507a361` on `codex/airspace-draft-boundaries-034`. Its Linux suite passed 561 tests with 20 skipped, PostgreSQL passed 19 tests, and the interface passed 180 tests with a successful build. Both full Windows attempts remain failed; the latest records 547 passed, 6 failures, 7 errors and 21 skipped. Native browser URL verification stopped, so no new screenshot, archive installation or release is claimed. Read `improvement/cycles/2026-11-02T011950Z-draft-boundaries.json` for exact evidence and the next bounded action. The separate engineering checkout is `F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4`. The original specification and operational acceptance remain incomplete. Earlier checkpoint sections are historical.
 

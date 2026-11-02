@@ -1,0 +1,86 @@
+{
+  "at": "2026-11-02T07:37:54.954Z",
+  "version": "0.3.4-rc.1",
+  "browser": "Supported Chrome extension through cua_repl",
+  "url": "http://127.0.0.1:8790/#agents",
+  "scope": "Isolated consistent copy of real engineering records; no operational records",
+  "journey": [
+    "Existing account sign-in to isolated localhost candidate",
+    "Open companion",
+    "Type a real unsent software-review request",
+    "Close panel and navigate Operations to Workflows",
+    "Reopen and verify exact draft",
+    "Reload and reopen, verify exact restored draft",
+    "Inspect two persisted engineering tasks, one open",
+    "Return to Conversation and capture settled desktop and mobile states",
+    "Pause then resume through actual UI controls",
+    "Tab from draft to operation-context disclosure",
+    "Reset temporary responsive viewport"
+  ],
+  "draft_text": "Review the software release evidence and identify missing verification.",
+  "draft_matches": true,
+  "send_clicked": false,
+  "task_mutations": 0,
+  "model_calls": 0,
+  "normal_motion_samples": [
+    {
+      "sample": 0,
+      "sha256": "f56a1b2b92e059f5cd5aa5b872408202b799f3b90fc03c9870f3fd2a197993a2",
+      "bytes": 2485
+    },
+    {
+      "sample": 1,
+      "sha256": "c24b81a1e38eb5310e150612a6c0e641839ff4fc73ff0516799e33a355649759",
+      "bytes": 2445
+    },
+    {
+      "sample": 2,
+      "sha256": "6bea28e7e14deb551d280e2ba0b2c4b931fdd2497f02f5a4140bb431a46209f7",
+      "bytes": 2502
+    },
+    {
+      "sample": 3,
+      "sha256": "733674a1d010c91d15f081c289b961663b469e710888f617c0d49fed867cd2b7",
+      "bytes": 2450
+    }
+  ],
+  "normal_motion_distinct": 4,
+  "pause_control_observed": true,
+  "pause_canvas_pixel_verification": false,
+  "pause_pixel_blocker": "Two Page.captureScreenshot timeouts while paused. A read-only DOM proxy does not expose canvas.toDataURL. No paused-frame stability claim is made. Actual UI resumed successfully.",
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "scroll_width": 390,
+    "panel": {
+      "x": 12,
+      "y": 66,
+      "width": 366,
+      "height": 706
+    },
+    "overflow": false
+  },
+  "keyboard_next_target": "Operation date, country and saved records disclosure",
+  "viewport_reset": true,
+  "console_warnings_or_errors": [],
+  "media": [
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
+      "bytes": 116073,
+      "sha256": "1226af5451ff5a6683dd6e9552852b12b3bed65a5a6898dd751503d709857d88",
+      "encoding": "JPEG",
+      "actual_browser_capture": true
+    },
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "encoding": "JPEG",
+      "actual_browser_capture": true
+    }
+  ],
+  "actor_switch_browser_test": false,
+  "actor_switch_boundary_evidence": "Separate75test component/adversarial suite, not an observed production cross-tenant incident",
+  "worker_started": false,
+  "external_actions": 0
+}

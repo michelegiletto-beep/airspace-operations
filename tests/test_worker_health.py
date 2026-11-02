@@ -92,17 +92,28 @@ def test_windows_replace_contention_has_bounded_read_retries(tmp_path, monkeypat
         assert result["reason"] == "Worker heartbeat is missing or invalid"
 
 
+def observe_refreshed_sample(path, first, deadline, *, windows=None):
+    """Independent test observation; transient Windows sharing errors consume the same deadline."""
+    latest = first
+    windows = os.name == "nt" if windows is None else windows
+    while latest["updated_at"] == first["updated_at"] and time.monotonic() < deadline:
+        time.sleep(0.02)
+        try:
+            latest = json.loads(path.read_text(encoding="utf-8"))
+        except PermissionError:
+            if not windows:
+                raise
+    return latest
+
+
 def test_actual_context_refreshes_during_main_thread_work_and_stops_cleanly(tmp_path):
     with WorkerHeartbeat(tmp_path, interval_seconds=0.02) as heartbeat:
         first = json.loads(heartbeat.path.read_text(encoding="utf-8"))
         assert heartbeat.thread.daemon and heartbeat.thread.is_alive()
         deadline = time.monotonic() + 2
-        latest = first
         # The main thread does not call a refresh function. The real daemon must
         # keep writing while the worker can be occupied with another task.
-        while latest["updated_at"] == first["updated_at"] and time.monotonic() < deadline:
-            time.sleep(0.02)
-            latest = json.loads(heartbeat.path.read_text(encoding="utf-8"))
+        latest = observe_refreshed_sample(heartbeat.path, first, deadline)
         assert latest["updated_at"] != first["updated_at"]
         assert latest["pid"] == os.getpid()
         assert set(latest) == {"hostname", "pid", "updated_at"}
@@ -142,3 +153,40 @@ def test_worker_cli_runs_inside_actual_heartbeat_context(tmp_path, monkeypatch):
     finally:
         store.engine.dispose()
     assert len(observations) == 1 and observations[0]["healthy"]
+
+
+@pytest.mark.parametrize("denials", [1, 2, 1000])
+def test_independent_observer_bounds_windows_sharing_contention(tmp_path, monkeypatch, denials):
+    path = tmp_path / "isolated-observer.json"
+    clock = [0.0]
+    reads = []
+
+    def denied_then_updated(self, *args, **kwargs):
+        assert self == path
+        reads.append(clock[0])
+        if len(reads) <= denials:
+            raise PermissionError(13, "Isolated Windows replace contention")
+        return json.dumps({"updated_at": "changed"})
+
+    monkeypatch.setattr(Path, "read_text", denied_then_updated)
+    monkeypatch.setattr(time, "monotonic", lambda: clock[0])
+    monkeypatch.setattr(time, "sleep", lambda delay: clock.__setitem__(0, clock[0] + delay))
+    first = {"updated_at": "initial"}
+    latest = observe_refreshed_sample(path, first, 2.0, windows=True)
+    if denials < 1000:
+        assert latest["updated_at"] == "changed"
+        assert len(reads) == denials + 1
+    else:
+        assert latest == first
+        with pytest.raises(AssertionError):
+            assert latest["updated_at"] != first["updated_at"]
+        assert 2.0 <= clock[0] < 2.021
+        assert len(reads) <= 101
+
+
+def test_independent_observer_does_not_retry_nonwindows_denial(tmp_path, monkeypatch):
+    def denied(*args, **kwargs):
+        raise PermissionError(13, "Isolated non-Windows denial")
+    monkeypatch.setattr(Path, "read_text", denied)
+    with pytest.raises(PermissionError):
+        observe_refreshed_sample(tmp_path / "isolated-observer.json", {"updated_at": "initial"}, time.monotonic() + 2, windows=False)

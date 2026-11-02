@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-02T13:57:39.746032+00:00",
+  "state": "Verified after root browser reloaded the primary sign-in page",
+  "version": "0.3.4-rc.1",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+  "summary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "all_table_rows_schema_and_key_match_pre_promotion_backup": true,
+  "browser_observation_source": "Root reported actual reload, current released bundle names and animated companion; this receipt independently verifies API, exact served HTML, data and actual worker process. No browser action by this verifier.",
+  "browser_login_performed": false,
+  "reviewer_authentication": false,
+  "new_model_calls": 0,
+  "operational_records_created": 0,
+  "api_checks": [
+    {
+      "route": "/api/v1/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.4-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "route": "/api/v1/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/api/v1/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "authenticated": false,
+      "exact_installed_index_sha256": "60e5a52a7c7ec08d757f1c3111be000d416e396bdc8400cb216785fe6503c3e9",
+      "released_bundle": "/assets/index-DhXRzvbU.js",
+      "released_stylesheet": "/assets/index--LT1GvRU.css"
+    }
+  ],
+  "worker_health": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 3.811238
+  },
+  "native_process_ids": {
+    "api_launcher": 23344,
+    "api": 36892,
+    "worker_launcher": 28584,
+    "worker": 34720
+  },
+  "recovery_manifest_saved_privately": true,
+  "private_recovery_manifest_sha256": "fde3e943764aa54d3f5eeb7280a4292175636da7078f2b0bb3f3570c2817014a",
+  "source_development_checkout_preserved": true,
+  "success": true
+}

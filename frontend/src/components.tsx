@@ -12,7 +12,7 @@ export function Notice({ children, danger = false }: { children: ReactNode; dang
   return <div className={`notice ${danger ? 'error' : ''}`} role={danger ? 'alert' : 'status'}>{children}</div>;
 }
 export function Empty({ title, children }: { title: string; children: ReactNode }) {
-  return <div className="empty"><span className="empty-mark" aria-hidden="true">—</span><h3>{title}</h3><p>{children}</p></div>;
+  return <div className="empty"><h3>{title}</h3><p>{children}</p></div>;
 }
 export function JsonView({ value }: { value: unknown }) { return <pre className="json-view">{JSON.stringify(value, null, 2)}</pre>; }
 export function useRemote<T>(path: string, token: string, revision = 0, contextKey = '') {

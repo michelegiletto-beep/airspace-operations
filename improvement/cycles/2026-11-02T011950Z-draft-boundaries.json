@@ -1,8 +1,8 @@
 {
   "cycle_id": "2026-11-02T011950Z-draft-boundaries",
   "triggered_at": "2026-11-02T01:19:50.956Z",
-  "checkpoint_at": "2026-11-02T02:03:07.572654+00:00",
-  "state": "Development source independently retrieved and CI passed; Windows full verification and native browser remain blocked",
+  "checkpoint_at": "2026-11-02T01:50:18.315775+00:00",
+  "state": "Unreleased0.3.4 development source; local repairs checked, full rerun and native browser proof outstanding",
   "starting_main": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
   "published_software": "0.3.3-rc.1",
   "development_candidate": "0.3.4-rc.1",
@@ -66,8 +66,8 @@
   "full_original_specification_accepted": false,
   "stable_release_allowed": false,
   "operational_acceptance": false,
-  "retrospective": "The current0.3.3 service was recovered without new records or audit entries. Publication alias errors were corrected and fifteen files independently retrieved. Draft/context hardening passed180interface tests and full Linux/container/PostgreSQL CI; adversarial review repaired an abandoned-render regression. Both full Windows attempts remain failed and preserved. Native browser policy prevented visual verification. These unresolved gates prevent a0.3.4release.",
-  "next_bounded_prompt": "Read STATUS.md, publication/status.json and this cycle. Preserve published0.3.3, development source ea47156010c4c7ec0806a546ac0ee93ab507a361 and all failed receipts. Investigate the six failures and seven errors in the last Windows full run, measuring the deep temporary-path failures and comparing a short, uniquely owned test directory; do not infer that Linux CI or targeted passes satisfy this gate. Run corpus preparation before a fresh checkout suite. Resume browser work only through a supported tool that can enforce URL policy, without evading the recorded native stop. Verify actual same-account draft continuity, actor boundaries, tasks, typed confirmations and motion preferences through browser, API and persistent records. Only after current engineering, rights, secret, browser, exact-archive and installation gates pass, publish a distinct candidate and retrieve every destination. Otherwise checkpoint the exact blocker. Limit the run to45minutes and two actual local-model evaluations; no email, human contact, aircraft commands, self-approval, external submissions, credential expansion or substantial charges. Preserve all incomplete original requirements and finish with a retrospective and next action.",
+  "retrospective": "Adversarial review found and repaired a second draft-continuity defect before promotion. The running0.3.3 API and worker were restored with unchanged records and audit. Public metadata now binds the actual Site and Hub identities. The missing native browser proof blocks a new release; isolated tests are not a substitute.",
+  "next_bounded_prompt": "Read STATUS.md, this cycle and publication/status.json. Reconcile the actual development branch and its CI before changing source. The published software remains frozen0.3.3. The0.3.4 browser verification and real capture are missing because Computer Use stopped when it could not determine the Chrome URL. Resume UI work only through a supported tool that can enforce its URL policy; do not substitute an automation mechanism to evade that stop. Verify same-account draft editing, navigation, reload, saved-task recovery, motion preferences and current actor permissions through browser, API and actual persistent records. Keep synthetic identity/concurrency inputs inside isolated tests and distinguish context hardening from an observed production incident. After every current engineering, rights, secret, browser, installation and publication gate passes, publish a distinct candidate to existing verified destinations and retrieve downloads/media. If a gate remains blocked, preserve the checkpoint and report it accurately. Bound the run to45minutes and at mosttwo actual local-model evaluation calls. Never contact people, send email, command aircraft, self-approve, submit to authorities, broaden credentials or incur substantial external charges. Preserve every original requirement, previous release and unrelated project; finish with a retrospective and the next concrete prompt.",
   "local_full_attempt": {
     "passed": 554,
     "failed": 2,
@@ -98,27 +98,5 @@
     "optional_neural_exit": 0
   },
   "development_branch": "codex/airspace-draft-boundaries-034",
-  "development_source_state": "Uploaded and independently retrieved; no new tagged release",
-  "development_source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
-  "development_ci": {
-    "run": 41374729360,
-    "state": "success",
-    "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
-    "linux_passed": 561,
-    "linux_skipped": 20,
-    "postgresql_passed": 19,
-    "publisher": "Skipped",
-    "evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-ci.json"
-  },
-  "local_post_repair_full_attempt": {
-    "exit_code": 1,
-    "passed": 547,
-    "failed": 6,
-    "errors": 7,
-    "skipped": 21,
-    "seconds": 209.746,
-    "evidence": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
-    "limitation": "Several failing Windows file paths exceed 259 characters under the selected deep C test directory. This is an observed path-length correlation requiring diagnosis, not a waived gate or a passing full run."
-  },
-  "local_canonical_full_suite_passed": false
+  "development_source_state": "Prepared; remote upload, CI and immutable retrieval not inferred"
 }

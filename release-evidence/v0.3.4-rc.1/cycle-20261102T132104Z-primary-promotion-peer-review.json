@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-02T13:54:51.866561+00:00",
+  "scope": "Independent read-only engineering review of the root-authorised private promotion plan; no execution or source/configuration changes by this reviewer.",
+  "script_sha256": "1f322abc8540818d099f17c70462c1a077786b764deabcc6e3f72f159927fa2c",
+  "planned_version": "0.3.4-rc.1",
+  "frozen_source": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "outcome": "No blocking finding in the reviewed plan after the inherited-policy environment correction. This is software review, not aviation or operational authorisation.",
+  "observed_controls": [
+    "Exact released-source provenance and fresh C core575passed/21skipped installation evidence are required before promotion.",
+    "Existing primary database,48-entry valid audit chain,20records,2personal tasks and6Completedjobs are compared before and after.",
+    "Online SQLite snapshot and original audit key are preserved privately, with exact rows/schema verified and rollback source retained.",
+    "Only six specific owned API/worker/preview launcher/child PIDs with current command and parent checks may be stopped.",
+    "New source/runtime/model paths are explicit; inherited environment remains preserved, and unexpected database/key overrides fail before process changes.",
+    "Current source module and034version plus existing core/optional package pins are checked without loading model weights.",
+    "New API health and anonymous401boundaries are checked. Worker heartbeat verifies actual PID liveness.",
+    "No generation, new permission, role change, external action or operational record is requested."
+  ],
+  "configuration_resolution": "The initial broad AIRSPACE environment scrub was removed. Root confirmed the prior launcher intentionally set only source/runtime/model paths, with no policy/OIDC/two-reviewer override; named current Process/User/Machine settings were unconfigured. This review does not claim to have read the old child-process environment.",
+  "failure_handling": "Retain any failed startup/row-comparison evidence and use the private old-source rollback plan to restore service if the authorised promotion does not verify.",
+  "new_approval_requirements": false,
+  "execution_performed_by_reviewer": false,
+  "source_or_config_changes_by_reviewer": false,
+  "new_model_calls": 0,
+  "success": true
+}

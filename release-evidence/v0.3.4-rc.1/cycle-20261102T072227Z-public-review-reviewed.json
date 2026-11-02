@@ -1,0 +1,846 @@
+{
+  "started_at": "2026-11-02T07:30:15.215754+00:00",
+  "scope": "Bounded anonymous publication review. Existing strict hosting comparators are unchanged. FrozenZIP bytes and all69Site resources are not downloaded again; previous complete receipts remain authoritative for those earlier checks. No legal currentness, browser interaction, installation or operational acceptance is inferred.",
+  "authenticated": false,
+  "remote_mutations": false,
+  "model_calls": 0,
+  "operational_writes": false,
+  "errors": [],
+  "github": {
+    "main": "fef47a96232a4d3e182e3d785031f2ced7e05e8c",
+    "development_branch": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+    "frozen033tag": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+    "main_request": {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/commits/main",
+      "status": 200,
+      "bytes": 466306,
+      "sha256": "b9fc214bae2c06bf9aa933cff76b8a2c39f819b805b99451837ee8a8d5d8c938",
+      "final_url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/commits/main"
+    },
+    "branch_request": {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/heads/codex/airspace-draft-boundaries-034",
+      "status": 200,
+      "bytes": 482,
+      "sha256": "483e2c6a48118fd34ea4e65c09d66c6fcd407483dd90118b734ca60008da8507",
+      "final_url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/heads/codex/airspace-draft-boundaries-034"
+    },
+    "tag_request": {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.3-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "d5efb8e08eff490393ed625b1e40f0a1303195de3d1fe6ca02b84d2479d47cd4",
+      "final_url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.3-rc.1"
+    },
+    "no034_public_release_tag_or_release_branch": [
+      {
+        "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/releases/tags/v0.3.4-rc.1",
+        "status": 404
+      },
+      {
+        "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.4-rc.1",
+        "status": 404
+      },
+      {
+        "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/heads/release/0.3.4-rc.1",
+        "status": 404
+      }
+    ],
+    "current_docs_exact": 31,
+    "current_docs": [
+      {
+        "path": "AGENTS.md",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/AGENTS.md",
+        "status": 200,
+        "bytes": 14435,
+        "sha256": "0c83c1223352a67b78342045a46d111c01038e883d79c4fd853babd24bb70cf0",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/AGENTS.md"
+      },
+      {
+        "path": "STATUS.md",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/STATUS.md",
+        "status": 200,
+        "bytes": 43212,
+        "sha256": "cc089bcf3ba018eb2cf17ff76fbb29e7984e81c46b203be38b45e2f845a47482",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/STATUS.md"
+      },
+      {
+        "path": "PLAN.md",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/PLAN.md",
+        "status": 200,
+        "bytes": 12526,
+        "sha256": "cc53fa238fff9733710d7cc9a567f87a16efb84a2b4775d4cd5abeb182eac8db",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/PLAN.md"
+      },
+      {
+        "path": "README.md",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/README.md",
+        "status": 200,
+        "bytes": 13269,
+        "sha256": "edee72ddab3cbe9d9b84326829883c2cf67a72e1f9713b8e85421f0f22e097ab",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/README.md"
+      },
+      {
+        "path": "DECISIONS.md",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/DECISIONS.md",
+        "status": 200,
+        "bytes": 6212,
+        "sha256": "ca41cc3d2ac3ce299f8911ddc00059a9eb5d643919fb72f20ddc5eecf08148a2",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/DECISIONS.md"
+      },
+      {
+        "path": "publication/status.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/publication/status.json",
+        "status": 200,
+        "bytes": 23726,
+        "sha256": "9b86d41b1d90b3c7e8dbbf543d81cdfc5bf6a029b858513ba2bb67475d3b26de",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/publication/status.json"
+      },
+      {
+        "path": "improvement/cycles/2026-11-02T011950Z-draft-boundaries.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/improvement/cycles/2026-11-02T011950Z-draft-boundaries.json",
+        "status": 200,
+        "bytes": 8113,
+        "sha256": "0ce611a08da563996ff2d3a3e72dcf45b9a15b8c7a586967c52c44c8e93e187e",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/improvement/cycles/2026-11-02T011950Z-draft-boundaries.json"
+      },
+      {
+        "path": "docs/ui-copy-ablation-0.3.4.md",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/docs/ui-copy-ablation-0.3.4.md",
+        "status": 200,
+        "bytes": 696,
+        "sha256": "7b24aaa8d24a0ada978c0c17e314b425ff870947ea3309d21068f56f78bc33e4",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/docs/ui-copy-ablation-0.3.4.md"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/commands.jsonl",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/commands.jsonl",
+        "status": 200,
+        "bytes": 81795,
+        "sha256": "2138d2f7a03754b706f805b7d2b355b835a19b8ecd4bc265ad53522166fab790",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/commands.jsonl"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/corpus-repair.xml",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/corpus-repair.xml",
+        "status": 200,
+        "bytes": 382,
+        "sha256": "073f6899001769284e98463bb029dec64b49d0719f701f0a75e2e026500af585",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/corpus-repair.xml"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-ci.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-ci.json",
+        "status": 200,
+        "bytes": 6642,
+        "sha256": "cfc015ef8985f5fe9b033f6cd172c695ed533e316923be07668d691c9f04932a",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-ci.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-source-retrieval.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-source-retrieval.json",
+        "status": 200,
+        "bytes": 31881,
+        "sha256": "7d3af6c6dbe81a1fd7bc3341371d37e985ddaa1da3b41ddc897deb2cd098f543",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-source-retrieval.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-review.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-review.json",
+        "status": 200,
+        "bytes": 3169,
+        "sha256": "084796e1375a4c82335683146f059b9d4105cd4f6bc7270435baa86784d81b05",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-review.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-reviewed.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-reviewed.json",
+        "status": 200,
+        "bytes": 4989,
+        "sha256": "d47e531febba1eeb0880574b70a6ff691e796b2f209767cef520401f49054c75",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-reviewed.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-concurrency-repair.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-concurrency-repair.json",
+        "status": 200,
+        "bytes": 3616,
+        "sha256": "f57bffbedfe55fc37753730e10d8de515ade7a11383c0a670a3c2cead2a1c2b7",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-concurrency-repair.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-engineering.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-engineering.json",
+        "status": 200,
+        "bytes": 2736,
+        "sha256": "6126047a46b8cac0be03e7c25116c0d8b7f2657f1609f02bd6ec3a204c099504",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-engineering.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-heartbeat-test-read-contention.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-heartbeat-test-read-contention.json",
+        "status": 200,
+        "bytes": 2807,
+        "sha256": "581447b2961f9ca4674ce4d61c046a578fc41503efb79f577d308002b1bdf50e",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-heartbeat-test-read-contention.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests-final.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests-final.json",
+        "status": 200,
+        "bytes": 4577,
+        "sha256": "1a0cbb6fe2f7f81c8d9eb98089cbcab1bd1d042b3cba11feabe7cd1efaf31189",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests-final.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests.json",
+        "status": 200,
+        "bytes": 4359,
+        "sha256": "e0e4f91279d10216b7e0dabdad474a906e07c5094977ba6b444118af0d173293",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-source-preflight.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-source-preflight.json",
+        "status": 200,
+        "bytes": 18564,
+        "sha256": "d107f3585ab69c6f9a31e0a4fa8b7c5c342fcd4a99dddb03e94229b1df5b95c4",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-source-preflight.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/frontend-build.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/frontend-build.json",
+        "status": 200,
+        "bytes": 1152,
+        "sha256": "848c627d50bb690c0e9e4ca646ea9f7b6415f5269ed7b73e1dcb2d89935234c7",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/frontend-build.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/frontend-dependency-audit.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/frontend-dependency-audit.json",
+        "status": 200,
+        "bytes": 686,
+        "sha256": "ae518f6e67553125a49c8ae882afe628cb5b23cf4a478d3a9c415e2801f7fef2",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/frontend-dependency-audit.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/frontend-tests.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/frontend-tests.json",
+        "status": 200,
+        "bytes": 798,
+        "sha256": "c41eb3560b596bde8dd658d0fca64e57600818728bcb14b0f3f372ed42c6e400",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/frontend-tests.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/optional-neural-dependency-audit.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/optional-neural-dependency-audit.json",
+        "status": 200,
+        "bytes": 3092,
+        "sha256": "5fc8991835fdba2389930f26d18741c8b7890cacf9cbeb381f6831c26505e7b6",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/optional-neural-dependency-audit.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/pytest.xml",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/pytest.xml",
+        "status": 200,
+        "bytes": 107360,
+        "sha256": "957b8cdabc0f3ea7f52e60d34339dec8eb8cab15a88b2ad506217caa94569f02",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/pytest.xml"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/python-dependency-audit.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/python-dependency-audit.json",
+        "status": 200,
+        "bytes": 3245,
+        "sha256": "21890a2ff9b1d327ceb8c9936bd50e0b06864dde7d3b07033be12c1d074aaad2",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/python-dependency-audit.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+        "status": 200,
+        "bytes": 60162,
+        "sha256": "d7436d424c70ec3d934b991ecc79430fecd305416aed7df0ca2de4e34db6f402",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/python-tests-post-repair.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/python-tests.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/python-tests.json",
+        "status": 200,
+        "bytes": 13080,
+        "sha256": "e152454aadd42b76cfc2d45f7dd6fd92aebc9ac4c515ac4f8c5aad4c4008f916",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/python-tests.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/release-gates.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/release-gates.json",
+        "status": 200,
+        "bytes": 1117,
+        "sha256": "f7d34fe36ad2549bb95008574dd89c38b90631841dd222f3c4017a8fb06595f5",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/release-gates.json"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/post-repair/pytest.xml",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/post-repair/pytest.xml",
+        "status": 200,
+        "bytes": 154977,
+        "sha256": "ded69bc3bf436aed2a7279efb127233f2f67eb4acc4381314e83aa24384bb612",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/post-repair/pytest.xml"
+      },
+      {
+        "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-manifest.json",
+        "exact": true,
+        "url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-manifest.json",
+        "status": 200,
+        "bytes": 7735,
+        "sha256": "3cee683ad1f7bab7c35f312c80c5a60fffce6002e9c2c622f969d741ab21b97e",
+        "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/fef47a96232a4d3e182e3d785031f2ced7e05e8c/release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-manifest.json"
+      }
+    ],
+    "published_release": "0.3.3-rc.1",
+    "development_candidate_published": false
+  },
+  "frozen033release": {
+    "release_id": 430536496,
+    "metadata_request": {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/releases/tags/v0.3.3-rc.1",
+      "status": 200,
+      "bytes": 20772,
+      "sha256": "d0a29c61923ccbe11f7d9c4511054a035f2c588b49d38125d0a70657e948bc23",
+      "final_url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/releases/tags/v0.3.3-rc.1"
+    },
+    "all9asset_ids_sizes_provider_digests_unchanged": true,
+    "fresh_small_asset_downloads": [
+      {
+        "name": "ci-verification.json",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/ci-verification.json",
+        "status": 200,
+        "bytes": 23290,
+        "sha256": "5a3cae3cec74ca39545e7de676e283633c6ea8623b67d3b16c2534f1edba2c47",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/08144d42-e2c5-45b1-b327-faab58888af5"
+      },
+      {
+        "name": "LICENSE",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/LICENSE",
+        "status": 200,
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/dfe0d4c3-c74b-4575-8757-3cdcbfb44d61"
+      },
+      {
+        "name": "release-gates.json",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/release-gates.json",
+        "status": 200,
+        "bytes": 1046,
+        "sha256": "6054f7fe25e0d7058042df4fae26b0384d9ac3bc951c5b948ff4e57f4946d5e8",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/52b65bcc-ab30-44ef-bb31-b7de9d981fd7"
+      },
+      {
+        "name": "RELEASE_PROVENANCE.json",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/RELEASE_PROVENANCE.json",
+        "status": 200,
+        "bytes": 107547,
+        "sha256": "3409e80dae5a8a85632b38f667fff1b4b46a63af9570b1519967d45dd169f64b",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/558cf391-fe69-47c8-9437-1c68844fcfc2"
+      },
+      {
+        "name": "SBOM.cdx.json",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/SBOM.cdx.json",
+        "status": 200,
+        "bytes": 80300,
+        "sha256": "7b7af05db5b27b1e627be34dfb24d4d128de38ddba83133ec081fa3ed6808887",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/3747cfd4-c3ba-45da-bfcb-cf9361d850da"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/SHA256SUMS.txt",
+        "status": 200,
+        "bytes": 112,
+        "sha256": "c4ba4f5b12113c7c3970afa4ca4f034989bbae015aec30a7c39466acdd319061",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/221eb454-aeda-425a-b579-1ee7b1386ef0"
+      },
+      {
+        "name": "standalone-archive-verification.json",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/standalone-archive-verification.json",
+        "status": 200,
+        "bytes": 6155,
+        "sha256": "3d45d34097904f7bf8f55e8cca7e1bc3fe96f3944c90c2db08054e17995db99a",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/10f668ad-9434-4488-8837-9569e4f867d2"
+      },
+      {
+        "name": "THIRD_PARTY_NOTICES.md",
+        "exact": true,
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.3-rc.1/THIRD_PARTY_NOTICES.md",
+        "status": 200,
+        "bytes": 13971,
+        "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/1dc82884-8c25-40c3-8515-750fd1e2f311"
+      }
+    ],
+    "zip_refetched": false,
+    "previous_full_download_receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-public-downloads.json",
+    "archive_sha256": "067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5"
+  },
+  "huggingface": {
+    "current_heads": [
+      {
+        "type": "model",
+        "head": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+        "repository_files": 15,
+        "runtime": null,
+        "url": "https://huggingface.co/api/models/Magic51/system-lab-airspace-shall-router?blobs=true",
+        "status": 200,
+        "bytes": 2879,
+        "sha256": "9969ac843d43ad2467b76ff280b32c43c41ed2b21a92beb08e1aa36109bf72de",
+        "final_url": "https://huggingface.co/api/models/Magic51/system-lab-airspace-shall-router"
+      },
+      {
+        "type": "dataset",
+        "head": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+        "repository_files": 7,
+        "runtime": null,
+        "url": "https://huggingface.co/api/datasets/Magic51/system-lab-airspace-source-annotations?blobs=true",
+        "status": 200,
+        "bytes": 2410,
+        "sha256": "c918ea40f7fc9b18c9adab6f531fa05f69d54ede3542ab058322d025832237ca",
+        "final_url": "https://huggingface.co/api/datasets/Magic51/system-lab-airspace-source-annotations"
+      },
+      {
+        "type": "space",
+        "head": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+        "repository_files": 27,
+        "runtime": "RUNNING",
+        "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation?blobs=true",
+        "status": 200,
+        "bytes": 4222,
+        "sha256": "2158687cf9bedbd5b506e84b39487d3a15e568dd39f9894f68768f1a7de6970b",
+        "final_url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation"
+      }
+    ],
+    "fresh_exact_presentation_targets": [
+      {
+        "type": "model",
+        "path": "README.md",
+        "exact_manifest_match": true,
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/53ab0273fe6f3a11297b6243bbfa8fc0032209e6/README.md",
+        "status": 200,
+        "bytes": 11022,
+        "sha256": "41f33ba73a047901455b05c5a169fb1a9d9a5d04f5d4190ffd38bd877fa71f11",
+        "final_url": "https://huggingface.co/api/resolve-cache/models/Magic51/system-lab-airspace-shall-router/53ab0273fe6f3a11297b6243bbfa8fc0032209e6/README.md"
+      },
+      {
+        "type": "model",
+        "path": "media/task-recovery-mobile.jpg",
+        "exact_manifest_match": true,
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/53ab0273fe6f3a11297b6243bbfa8fc0032209e6/media/task-recovery-mobile.jpg",
+        "status": 200,
+        "bytes": 35896,
+        "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+        "final_url": "https://huggingface.co/api/resolve-cache/models/Magic51/system-lab-airspace-shall-router/53ab0273fe6f3a11297b6243bbfa8fc0032209e6/media%2Ftask-recovery-mobile.jpg"
+      },
+      {
+        "type": "dataset",
+        "path": "README.md",
+        "exact_manifest_match": true,
+        "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/73c59f1f658b4d295fa53c416c84938e4fee2147/README.md",
+        "status": 200,
+        "bytes": 7831,
+        "sha256": "d27a72b29b6cebba2bbbe89bcf41d91fa008b685a4b682aa4b9b910df64d7b05",
+        "final_url": "https://huggingface.co/api/resolve-cache/datasets/Magic51/system-lab-airspace-source-annotations/73c59f1f658b4d295fa53c416c84938e4fee2147/README.md"
+      },
+      {
+        "type": "space",
+        "path": "README.md",
+        "exact_manifest_match": true,
+        "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/README.md",
+        "status": 200,
+        "bytes": 6978,
+        "sha256": "d8895d10f8b05637458bb558654ba7c8cbb0453e5c29b6da9601d630c2ff5841",
+        "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/README.md"
+      },
+      {
+        "type": "space",
+        "path": "index.html",
+        "exact_manifest_match": true,
+        "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/index.html",
+        "status": 200,
+        "bytes": 11843,
+        "sha256": "61cab1684517fcf6957f311ef07794bdc1a4190f1b356264a820b130a40c6d78",
+        "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/index.html"
+      },
+      {
+        "type": "space",
+        "path": "media/task-recovery-mobile.jpg",
+        "exact_manifest_match": true,
+        "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/b92dfde086f057b3836eed4790f3e0f7f7c81655/media/task-recovery-mobile.jpg",
+        "status": 200,
+        "bytes": 35896,
+        "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+        "final_url": "https://huggingface.co/api/resolve-cache/spaces/Magic51/system-lab-airspace-evaluation/b92dfde086f057b3836eed4790f3e0f7f7c81655/media%2Ftask-recovery-mobile.jpg"
+      }
+    ],
+    "previous_preserved43files_receipts": [
+      "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-model-53ab0273-reviewed-lfs.json",
+      "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-space-b92dfde0-reviewed-lfs.json"
+    ],
+    "unlisted_original_bytes_refetched": false,
+    "scope": "Current immutable heads and six exact authored targets rechecked. Previously verified original weights/data and43unlisted files were not redownloaded."
+  },
+  "space_live": {
+    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-space-live.json",
+    "exact_files": 6,
+    "negative_checks": 4,
+    "head": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+    "hosting_comparator_unchanged": true
+  },
+  "completed_at": "2026-11-02T07:32:16.875455+00:00",
+  "success": true,
+  "unresolved034gates": [
+    "Current full Windows verification",
+    "Native browser workflow and actual new capture",
+    "New exact-archive installation and release-specific publication gates"
+  ],
+  "metadata_findings": [
+    "The current README still describes033as unpublished, links the032archive and labels Site98/HF031as current despite verified033/Site100. Root assigned a cohesive README correction in the separate engineering checkout.",
+    "The development gate file retains failed Windows and unbound external-CI gates. Successful Linux development CI does not imply a current release gate or operational acceptance."
+  ],
+  "site100": {
+    "site_source": "3639b489b2c36df8846c39f80f713c8733149f4c",
+    "native_version_last_recorded": 100,
+    "selected_resources": 9,
+    "fresh_verified": 9,
+    "checks": [
+      {
+        "destination": "site",
+        "path": "/",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/",
+        "expected_bytes": 134085,
+        "expected_sha256": "dbad83aa333c48a8e4f02a68b717f92d0a126b96de4be9c03a40c4ff8e8aad4d",
+        "verification_mode": "semantic",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "bytes": 135199,
+        "sha256": "b9996a17348d81a08349bb2febe50b70f7413106a8fef4c3004922298c97ade9",
+        "length_matches": false,
+        "sha256_matches": false,
+        "semantic_assertions": {
+          "visible_text_matches_source": true,
+          "source_links_equal": true,
+          "source_images_equal": true,
+          "source_scripts_styles_match": true,
+          "authored_html_matches_source_after_observed_hosting_injection": true,
+          "existing_airspace_link": true
+        },
+        "repeat_semantic_assertions": {
+          "visible_text_matches_source": true,
+          "source_links_equal": true,
+          "source_images_equal": true,
+          "source_scripts_styles_match": true,
+          "authored_html_matches_source_after_observed_hosting_injection": true,
+          "existing_airspace_link": true
+        },
+        "repeated_normalised_content_equal": true,
+        "normalisation_scope": "A unique16hexadecimal Cloudflare r, strict-base64 decimal timestamp and its matching fixed challenge-script ray literal only. Source HTML bytes and script/style elements are also compared after removal of at most one exact observed Cloudflare script. Authored text, URLs and other active content remain compared. Raw response hashes remain distinct.",
+        "second_sample_sha256": "61c17ad7544e3a204405d62844919a0dcc1630fcdafa62f1a07b09df5578b447",
+        "redirect_hosts": [],
+        "elapsed_seconds": 2.026
+      },
+      {
+        "destination": "site",
+        "path": "/projects/airspace-operations",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+        "expected_bytes": 26741,
+        "expected_sha256": "e4dc2c6d5a6d6d6b95c754c2a04ef18e3c97b75ad9a22e7f27a1f50076e22053",
+        "verification_mode": "semantic",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "bytes": 27855,
+        "sha256": "ea959bf32f9682cc3d5ed010bd87420cd745e459bfc5582888c278c96e7bc569",
+        "length_matches": false,
+        "sha256_matches": false,
+        "semantic_assertions": {
+          "visible_text_matches_source": true,
+          "source_links_equal": true,
+          "source_images_equal": true,
+          "source_scripts_styles_match": true,
+          "authored_html_matches_source_after_observed_hosting_injection": true,
+          "product_title": true,
+          "frozen_current_document_links": true,
+          "original_acceptance_limit": true,
+          "animation_accessibility": true,
+          "historical_release_links": true,
+          "source_historical03_image_links_preserved": true,
+          "historical03_release_link": true,
+          "history031_published_candidate_visible": true,
+          "history031_candidate_download_link": true,
+          "history031_verified_archive_digest": true,
+          "history031_two_current_displayed_images": true,
+          "history031_all_three_current_capture_links": true,
+          "published032_section": true,
+          "current032_tag_visible": true,
+          "current032_archive_digest_visible": true,
+          "current032_download_link": true,
+          "current032_phone_displayed": true,
+          "current032_phone_link": true,
+          "history031_release_link": true,
+          "history030_download_link": true,
+          "history030_archive_digest_visible": true,
+          "published033_section": true,
+          "current033_tag_visible": true,
+          "current033_archive_digest_visible": true,
+          "current033_download_link": true,
+          "current033_phone_displayed": true,
+          "current033_phone_link": true,
+          "history032_release_link": true
+        },
+        "repeat_semantic_assertions": {
+          "visible_text_matches_source": true,
+          "source_links_equal": true,
+          "source_images_equal": true,
+          "source_scripts_styles_match": true,
+          "authored_html_matches_source_after_observed_hosting_injection": true,
+          "product_title": true,
+          "frozen_current_document_links": true,
+          "original_acceptance_limit": true,
+          "animation_accessibility": true,
+          "historical_release_links": true,
+          "source_historical03_image_links_preserved": true,
+          "historical03_release_link": true,
+          "history031_published_candidate_visible": true,
+          "history031_candidate_download_link": true,
+          "history031_verified_archive_digest": true,
+          "history031_two_current_displayed_images": true,
+          "history031_all_three_current_capture_links": true,
+          "published032_section": true,
+          "current032_tag_visible": true,
+          "current032_archive_digest_visible": true,
+          "current032_download_link": true,
+          "current032_phone_displayed": true,
+          "current032_phone_link": true,
+          "history031_release_link": true,
+          "history030_download_link": true,
+          "history030_archive_digest_visible": true,
+          "published033_section": true,
+          "current033_tag_visible": true,
+          "current033_archive_digest_visible": true,
+          "current033_download_link": true,
+          "current033_phone_displayed": true,
+          "current033_phone_link": true,
+          "history032_release_link": true
+        },
+        "repeated_normalised_content_equal": true,
+        "normalisation_scope": "A unique16hexadecimal Cloudflare r, strict-base64 decimal timestamp and its matching fixed challenge-script ray literal only. Source HTML bytes and script/style elements are also compared after removal of at most one exact observed Cloudflare script. Authored text, URLs and other active content remain compared. Raw response hashes remain distinct.",
+        "second_sample_sha256": "95a94302ca966853cdf2e39f4f7cf6a529a383a0d10938e8814adbff8c9870bd",
+        "redirect_hosts": [],
+        "elapsed_seconds": 1.523
+      },
+      {
+        "destination": "site",
+        "path": "/projects/multiagentic-systems",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/multiagentic-systems",
+        "expected_bytes": 16112,
+        "expected_sha256": "01af99b6202e4ac3c6e5b08b55f65f79f0b09b0b4a6de523fa323d608286392b",
+        "verification_mode": "semantic",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "bytes": 17226,
+        "sha256": "b47d1c852bbaf75adcb5225807ee3a2277ad23a3878c426a641d69d73abf2c5a",
+        "length_matches": false,
+        "sha256_matches": false,
+        "semantic_assertions": {
+          "visible_text_matches_source": true,
+          "source_links_equal": true,
+          "source_images_equal": true,
+          "source_scripts_styles_match": true,
+          "authored_html_matches_source_after_observed_hosting_injection": true,
+          "existing_airspace_link": true,
+          "existing_interval_relationship": true
+        },
+        "repeat_semantic_assertions": {
+          "visible_text_matches_source": true,
+          "source_links_equal": true,
+          "source_images_equal": true,
+          "source_scripts_styles_match": true,
+          "authored_html_matches_source_after_observed_hosting_injection": true,
+          "existing_airspace_link": true,
+          "existing_interval_relationship": true
+        },
+        "repeated_normalised_content_equal": true,
+        "normalisation_scope": "A unique16hexadecimal Cloudflare r, strict-base64 decimal timestamp and its matching fixed challenge-script ray literal only. Source HTML bytes and script/style elements are also compared after removal of at most one exact observed Cloudflare script. Authored text, URLs and other active content remain compared. Raw response hashes remain distinct.",
+        "second_sample_sha256": "8da99dadebe792113f3127a17eb4a6a4f1fbf114743d07b0439b58d0c38568a5",
+        "redirect_hosts": [],
+        "elapsed_seconds": 1.697
+      },
+      {
+        "destination": "site",
+        "path": "/airspace-operations/releases/0.3.3-rc.1/ci-verification.json",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/ci-verification.json",
+        "expected_bytes": 23290,
+        "expected_sha256": "5a3cae3cec74ca39545e7de676e283633c6ea8623b67d3b16c2534f1edba2c47",
+        "verification_mode": "exact",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/ci-verification.json",
+        "content_type": "application/json",
+        "bytes": 23290,
+        "sha256": "5a3cae3cec74ca39545e7de676e283633c6ea8623b67d3b16c2534f1edba2c47",
+        "length_matches": true,
+        "sha256_matches": true,
+        "redirect_hosts": [],
+        "elapsed_seconds": 1.369
+      },
+      {
+        "destination": "site",
+        "path": "/airspace-operations/releases/0.3.3-rc.1/release-gates.json",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/release-gates.json",
+        "expected_bytes": 1046,
+        "expected_sha256": "6054f7fe25e0d7058042df4fae26b0384d9ac3bc951c5b948ff4e57f4946d5e8",
+        "verification_mode": "exact",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/release-gates.json",
+        "content_type": "application/json",
+        "bytes": 1046,
+        "sha256": "6054f7fe25e0d7058042df4fae26b0384d9ac3bc951c5b948ff4e57f4946d5e8",
+        "length_matches": true,
+        "sha256_matches": true,
+        "redirect_hosts": [],
+        "elapsed_seconds": 0.21
+      },
+      {
+        "destination": "site",
+        "path": "/airspace-operations/releases/0.3.3-rc.1/RELEASE_PROVENANCE.json",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/RELEASE_PROVENANCE.json",
+        "expected_bytes": 107547,
+        "expected_sha256": "3409e80dae5a8a85632b38f667fff1b4b46a63af9570b1519967d45dd169f64b",
+        "verification_mode": "exact",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/RELEASE_PROVENANCE.json",
+        "content_type": "application/json",
+        "bytes": 107547,
+        "sha256": "3409e80dae5a8a85632b38f667fff1b4b46a63af9570b1519967d45dd169f64b",
+        "length_matches": true,
+        "sha256_matches": true,
+        "redirect_hosts": [],
+        "elapsed_seconds": 0.25
+      },
+      {
+        "destination": "site",
+        "path": "/airspace-operations/releases/0.3.3-rc.1/SHA256SUMS.txt",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/SHA256SUMS.txt",
+        "expected_bytes": 112,
+        "expected_sha256": "c4ba4f5b12113c7c3970afa4ca4f034989bbae015aec30a7c39466acdd319061",
+        "verification_mode": "exact",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/SHA256SUMS.txt",
+        "content_type": "text/plain",
+        "bytes": 112,
+        "sha256": "c4ba4f5b12113c7c3970afa4ca4f034989bbae015aec30a7c39466acdd319061",
+        "length_matches": true,
+        "sha256_matches": true,
+        "redirect_hosts": [],
+        "elapsed_seconds": 0.288
+      },
+      {
+        "destination": "site",
+        "path": "/airspace-operations/releases/0.3.3-rc.1/standalone-archive-verification.json",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/standalone-archive-verification.json",
+        "expected_bytes": 6155,
+        "expected_sha256": "3d45d34097904f7bf8f55e8cca7e1bc3fe96f3944c90c2db08054e17995db99a",
+        "verification_mode": "exact",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/standalone-archive-verification.json",
+        "content_type": "application/json",
+        "bytes": 6155,
+        "sha256": "3d45d34097904f7bf8f55e8cca7e1bc3fe96f3944c90c2db08054e17995db99a",
+        "length_matches": true,
+        "sha256_matches": true,
+        "redirect_hosts": [],
+        "elapsed_seconds": 0.328
+      },
+      {
+        "destination": "site",
+        "path": "/airspace-operations/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+        "expected_bytes": 35896,
+        "expected_sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+        "verification_mode": "exact",
+        "verified": true,
+        "authenticated_read": false,
+        "status": 200,
+        "final_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+        "content_type": "image/jpeg",
+        "bytes": 35896,
+        "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+        "length_matches": true,
+        "sha256_matches": true,
+        "redirect_hosts": [],
+        "elapsed_seconds": 0.253
+      }
+    ],
+    "full69_refetched": false,
+    "previous_complete_receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-site100-public.json",
+    "comparator_unchanged": true,
+    "scope": "Nine selected current resources compared under the unchanged exact binary and hardened authored HTML comparator. Native provider metadata was not newly queried."
+  },
+  "retained_preparation_failure": {
+    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-review.json",
+    "failure": "An initial local selection assertion named an index route absent from the canonical69-resource manifest. It failed before any Site request. The corrected selection uses the actual three authored routes from the previous strict receipt. All source and comparator assertions remain unchanged.",
+    "original_errors": [
+      {
+        "section": "site",
+        "type": "AssertionError",
+        "message": "['/', '/projects/airspace-operations', '/airspace-operations/releases/0.3.3-rc.1/ci-verification.json', '/airspace-operations/releases/0.3.3-rc.1/release-gates.json', '/airspace-operations/releases/0."
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-02T08:01:50.083047+00:00",
+  "state": "Exact archive packaged and scanned; native Site save/deployment pending",
+  "source_commit": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65",
+  "archive_bytes": 196302363,
+  "archive_sha256": "8df6169af15c6cd2903861af41b15cfc659f1b200c38bdb2a896c2e55abe3f07",
+  "files": 687,
+  "uncompressed_bytes": 238598316,
+  "largest_file_bytes": 15377087,
+  "supported_secret_pattern_matches": 0,
+  "private_runtime_files": 0,
+  "unsafe_paths_or_links": 0,
+  "archive_extracted": false,
+  "native_save_or_deployment_performed": false,
+  "new_model_calls": 0,
+  "success": true
+}

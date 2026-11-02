@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-02T13:40:30.150174+00:00",
+  "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+  "head": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+  "sdk": "static",
+  "stage": "RUNNING",
+  "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space",
+  "response_sha256": "a8080de34d781b9c91f96c63a5af60d9e9bbd04f02246a98440a6f63bff9de8c",
+  "previous_head": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+  "head_changed": true,
+  "scope": "One actual anonymous observation following an unconfirmed UI upload; no commit or completed target verification inferred from the button click.",
+  "remote_mutations": false
+}

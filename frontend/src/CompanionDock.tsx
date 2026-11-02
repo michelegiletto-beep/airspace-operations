@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import { displayDate, errorMessage, request } from './api';
 import type { Collection, DomainRecord, User } from './api';
@@ -40,11 +40,20 @@ const prompts: Record<string, string[]> = {
   scheduling: ['Help me prepare a scheduling proposal.', 'Explain what is blocking a saved scheduling proposal.'],
 };
 
-export function CompanionDock({ token, user, workspace, workspaceLabel, revision, changed, open, onOpenChange, openWorkflow, openWorkspace }: {
+type CompanionDockProps = {
   token: string; user: User; workspace: string; workspaceLabel: string; revision: number;
   changed: () => void; open: boolean; onOpenChange: (open: boolean) => void; openWorkflow: (id: string) => void;
   openWorkspace?: (id: string) => void;
-}) {
+};
+
+export function CompanionDock(props: CompanionDockProps) {
+  const identity=JSON.stringify([props.user.organisation_id,props.user.id,props.token,props.user.role]);
+  return <CompanionSession key={identity} {...props}/>;
+}
+
+function CompanionSession({ token, user, workspace, workspaceLabel, revision, changed, open, onOpenChange, openWorkflow, openWorkspace }: CompanionDockProps) {
+  const boundary=useRef(true);
+  useLayoutEffect(()=>{boundary.current=true;return()=>{boundary.current=false;};},[]);
   const prefix = `sl-airspace-companion-draft:${user.organisation_id}:${user.id}`;
   const [tab, setTab] = useState<'conversation' | 'tasks'>('conversation');
   const [conversationId, setConversationId] = useDraftState(`${prefix}:conversation-id`, '');
@@ -140,7 +149,7 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   }
 
   async function submitMessage(text: string, previousMessage?: import('./companionApi').CompanionMessage) {
-    if (!text || busy || activeJob) return;
+    if (!boundary.current || !text || busy || activeJob) return;
     setBusy(true); setError(''); animate('send');
     try {
       let conversation = detail?.conversation;
@@ -149,6 +158,7 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
         conversation = await request<CompanionConversation>('/companion/conversations', token, {
           method: 'POST', body: JSON.stringify({ workspace: companionWorkspaces[workspace] ?? 'operations', context_record_ids: contextIds }),
         });
+        if(!boundary.current)return;
         setConversationId(conversation.id);
       }
       const result = await request<SendResponse>(`/companion/conversations/${conversation.id}/messages`, token, {
@@ -156,6 +166,7 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
           ...((previousMessage ? previousMessage.data.request?.jurisdiction : jurisdiction) ? { jurisdiction: previousMessage ? previousMessage.data.request?.jurisdiction : jurisdiction } : {}),
           ...((previousMessage ? previousMessage.data.request?.operation_date : operationDate) ? { operation_date: previousMessage ? previousMessage.data.request?.operation_date : operationDate } : {}) }),
       });
+      if(!boundary.current)return;
       setDetail(previous => ({ conversation: result.conversation, messages: [...(previous?.conversation.id === result.conversation.id ? previous.messages : []), result.user_message], action_previews: previous?.conversation.id === result.conversation.id ? previous.action_previews : [], tasks: previous?.conversation.id === result.conversation.id ? previous.tasks : [], active_job: result.job, model_status: result.model_status }));
       if (!previousMessage) setMessage('');
       refresh();
@@ -164,12 +175,13 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   }
 
   async function decide(action: ActionPreview, decision: 'confirm' | 'reject') {
-    if (!detail || busy) return;
+    if (!boundary.current || !detail || busy) return;
     setBusy(true); setError('');
     try {
       const result = await request<ConfirmResponse>(`/companion/conversations/${detail.conversation.id}/actions/${action.id}/${decision}`, token, {
         method: 'POST', body: JSON.stringify({ expected_version: detail.conversation.version, expected_action_version: action.version }),
       });
+      if(!boundary.current)return;
       setDetail(previous => previous?.conversation.id === result.conversation.id ? { ...previous, conversation: result.conversation, action_previews: previous.action_previews.map(item => item.id === result.action.id ? result.action : item) } : previous);
       if (result.workflow) setWorkflowSelection({conversationId:result.conversation.id,id:result.workflow.id});
       if (result.case) setCreatedCase({conversationId:result.conversation.id,record:result.case});
@@ -180,12 +192,13 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   }
 
   async function cancelReply() {
-    if (!detail || !activeJob || busy) return;
+    if (!boundary.current || !detail || !activeJob || busy) return;
     setBusy(true); setError('');
     try {
       const result = await request<{conversation: CompanionConversation}>(`/companion/conversations/${detail.conversation.id}/cancel`, token, {
         method: 'POST', body: JSON.stringify({ expected_version: detail.conversation.version }),
       });
+      if(!boundary.current)return;
       setDetail(previous => previous?.conversation.id === result.conversation.id ? { ...previous, conversation: result.conversation, active_job: null } : previous);
       animate('settle'); refresh();
     } catch (cause) { setError(errorMessage(cause)); }
@@ -193,9 +206,11 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   }
 
   async function updateTask(task: CompanionTask, next: string) {
+    if(!boundary.current)return;
     setTaskBusy(task.id); setError('');
     try {
       await request(`/companion/tasks/${task.id}`, token, { method: 'PUT', body: JSON.stringify({ expected_version: task.version, state: next }) });
+      if(!boundary.current)return;
       animate(next === 'Completed' ? 'ack' : 'soft'); refresh();
     } catch (cause) { setError(errorMessage(cause)); }
     finally { setTaskBusy(''); }
@@ -221,12 +236,13 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
   }, [workflowId, token, localRevision]);
 
   async function controlWorkflow(action: 'advance' | 'pause' | 'resume' | 'cancel') {
-    if (!workflow || busy) return;
+    if (!boundary.current || !workflow || busy) return;
     setBusy(true); setError('');
     try {
       await request(`/agent-workflows/${workflow.id}/${action === 'advance' ? 'advance' : 'control'}`, token, {
         method: 'POST', body: JSON.stringify({ expected_version: workflow.version, ...(action === 'advance' ? {} : { action }) }),
       });
+      if(!boundary.current)return;
       refresh();
     } catch (cause) { setError(errorMessage(cause)); }
     finally { setBusy(false); }
@@ -238,7 +254,7 @@ export function CompanionDock({ token, user, workspace, workspaceLabel, revision
     </button>
     {open ? <aside id="companion-dock" className="companion-dock" aria-label="Indigo assistant" onKeyDown={event => { if (event.key === 'Escape') { event.stopPropagation(); onOpenChange(false); } }}>
       <header className="companion-dock-header"><div><h2 ref={heading} tabIndex={-1}>Ask Indigo</h2><p>Help with {workspaceLabel.toLowerCase()}</p></div><button className="icon-button" aria-label="Close assistant panel" onClick={() => onOpenChange(false)}>×</button></header>
-      <AgentCompanion state={state} label={detailUnavailable ? 'Connection lost. Reload to check the request.' : busy ? 'Saving your request' : activeJob ? detail?.active_job?.state === 'Queued' ? 'Waiting for the worker' : detail?.conversation.data.progress?.message ?? 'Processing your request' : model?.state==='Procedure Required'?'Approved procedure required':waitingReview ? 'Please review the proposed action' : 'How can I help?'} gesture={gesture}/>
+      <AgentCompanion state={state} label={detailUnavailable ? 'Connection lost. Reload to check the request.' : busy ? 'Saving your request' : activeJob ? detail?.active_job?.state === 'Queued' ? 'Waiting for the worker' : detail?.conversation.data.progress?.message ?? 'Processing your request' : model?.state==='Procedure Required'?'Approved procedure required':waitingReview ? 'Please review the proposed action' : 'Choose a task or write a request.'} gesture={gesture}/>
       <div className="companion-model-status"><span>{model?.state==='Procedure Required'?'Approved procedure required':<>{detail?'Last response model status':'Local model files'}{detailUnavailable?' (last reported)':''}: {model?.state ?? 'Checking'}</>}</span>{model?.message ? <p>{model.message}</p> : null}{catalogue.error ? <p role="alert">{catalogue.error}</p> : null}</div>
       <div className="companion-tabs" role="tablist" aria-label="Assistant views"><button role="tab" disabled={busy} aria-selected={tab === 'conversation'} onClick={() => setTab('conversation')}>Conversation</button><button role="tab" disabled={busy} aria-selected={tab === 'tasks'} onClick={() => setTab('tasks')}>Tasks{openTasks.length ? ` (${openTasks.length})` : ''}</button></div>
       {error ? <div className="companion-error"><Notice danger>{error}</Notice><button className="text-button" onClick={() => { setError(''); refresh(); }}>Reload saved state</button></div> : null}

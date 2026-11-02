@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-02T13:30:12.350827+00:00",
+  "scope": "Anonymous current-head check only; no credentials, upload or remote mutation",
+  "repositories": [
+    {
+      "repo_type": "model",
+      "head": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+      "expected_parent": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+      "matches_expected_parent": true,
+      "url": "https://huggingface.co/api/models/Magic51/system-lab-airspace-shall-router",
+      "status": 200
+    },
+    {
+      "repo_type": "dataset",
+      "head": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+      "expected_parent": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+      "matches_expected_parent": true,
+      "url": "https://huggingface.co/api/datasets/Magic51/system-lab-airspace-source-annotations",
+      "status": 200
+    },
+    {
+      "repo_type": "space",
+      "head": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "expected_parent": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "matches_expected_parent": true,
+      "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+      "status": 200
+    }
+  ],
+  "all_expected_parents_current": true,
+  "remote_writes": false
+}

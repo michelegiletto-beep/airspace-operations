@@ -1,0 +1,144 @@
+{
+  "prepared_at": "2026-11-02T13:27:37.627906+00:00",
+  "state": "Prepared and locally verified against actual release; not uploaded",
+  "ready_for_upload": true,
+  "presentation_only": true,
+  "application_version": "0.3.4-rc.1",
+  "application_source": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "archive_bytes": 15377087,
+  "archive_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+  "current_release_id": 431194091,
+  "current_release_ci": 41408782094,
+  "prior_revisions": {
+    "model": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+    "dataset": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+    "space": "b92dfde086f057b3836eed4790f3e0f7f7c81655"
+  },
+  "files": [
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/model/README.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "README.md",
+      "bytes": 14684,
+      "sha256": "66a3e2634f1933514aa17ca773e4b61b72611c9edc43f111423a0fa8618f95c8"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/model/media/draft-continuity-mobile.jpg",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/dataset/README.md",
+      "repo_type": "dataset",
+      "repo_id": "Magic51/system-lab-airspace-source-annotations",
+      "target": "README.md",
+      "bytes": 11210,
+      "sha256": "04a9ec149f0102c12bc21af36d910e473ee55eb4d241497588136a95c5a5bd28"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/space/README.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "README.md",
+      "bytes": 10640,
+      "sha256": "425af233fb07869c8c85ed2ad3852407bf15c74680d86bff4527072c368f16db"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/space/index.html",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "index.html",
+      "bytes": 15581,
+      "sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/space/media/draft-continuity-mobile.jpg",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e"
+    }
+  ],
+  "historical_pack_files_preserved": [
+    {
+      "path": "model/NOTICE.md",
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024"
+    },
+    {
+      "path": "space/NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb"
+    },
+    {
+      "path": "space/styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16"
+    },
+    {
+      "path": "space/media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7"
+    },
+    {
+      "path": "space/media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c"
+    },
+    {
+      "path": "space/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    },
+    {
+      "path": "space/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b"
+    },
+    {
+      "path": "model/media/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688"
+    },
+    {
+      "path": "model/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581"
+    },
+    {
+      "path": "model/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b"
+    }
+  ],
+  "strict_card_and_html_diff_check": true,
+  "source_results": {
+    "passed": 576,
+    "skipped": 20,
+    "warnings": 9
+  },
+  "interface_results": {
+    "passed": 180
+  },
+  "exact_archive_results": {
+    "passed": 576,
+    "skipped": 20,
+    "warnings": 3,
+    "seconds": 64.01
+  },
+  "unlisted_remote_files_policy": "Preserve every unlisted remote file, weight, data row, rights notice, historical image and stylesheet. Recheck exact parent heads immediately before commit.",
+  "provider_generated_metadata_policy": "Only an exact separately verified appended LFS rule for media/draft-continuity-mobile.jpg may be accepted; do not upload or broadly ignore metadata changes.",
+  "weights_changed": false,
+  "dataset_records_changed": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "live_inference": false,
+  "remote_writes": false,
+  "source_privacy_review": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-capture-privacy-reviewed.json",
+  "source_media_review": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-source-media.json"
+}

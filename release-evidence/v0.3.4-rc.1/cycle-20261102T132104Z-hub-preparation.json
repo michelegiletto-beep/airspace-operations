@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-02T13:27:38.154349+00:00",
+  "state": "Prepared and locally verified against actual release; not uploaded",
+  "application_version": "0.3.4-rc.1",
+  "application_source": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "pack": "publication/releases/0.3.4-rc.1/huggingface",
+  "manifest_sha256": "e5342c0e838bb29fcd14218a62ca524b27005f076e71a3fff2b67b43e2a3fdeb",
+  "targets": [
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/model/README.md",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "README.md",
+      "bytes": 14684,
+      "sha256": "66a3e2634f1933514aa17ca773e4b61b72611c9edc43f111423a0fa8618f95c8"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/model/media/draft-continuity-mobile.jpg",
+      "repo_type": "model",
+      "repo_id": "Magic51/system-lab-airspace-shall-router",
+      "target": "media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/dataset/README.md",
+      "repo_type": "dataset",
+      "repo_id": "Magic51/system-lab-airspace-source-annotations",
+      "target": "README.md",
+      "bytes": 11210,
+      "sha256": "04a9ec149f0102c12bc21af36d910e473ee55eb4d241497588136a95c5a5bd28"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/space/README.md",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "README.md",
+      "bytes": 10640,
+      "sha256": "425af233fb07869c8c85ed2ad3852407bf15c74680d86bff4527072c368f16db"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/space/index.html",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "index.html",
+      "bytes": 15581,
+      "sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952"
+    },
+    {
+      "source": "publication/releases/0.3.4-rc.1/huggingface/space/media/draft-continuity-mobile.jpg",
+      "repo_type": "space",
+      "repo_id": "Magic51/system-lab-airspace-evaluation",
+      "target": "media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e"
+    }
+  ],
+  "target_count": 6,
+  "target_bytes": 136411,
+  "old_pack_files_unchanged": 15,
+  "historical_pack_files_exact": 10,
+  "strict_card_and_html_diff_check": true,
+  "rights_notices_exact": 2,
+  "new_mobile_copies_exact": 2,
+  "new_mobile_source_and_archive_exact": true,
+  "local_html_references_checked": 5,
+  "supported_secret_patterns_found": 0,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_actions": false,
+  "success": true
+}

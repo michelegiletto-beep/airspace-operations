@@ -1,0 +1,174 @@
+{
+  "started_at": "2026-11-02T13:40:40.095401+00:00",
+  "head": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+  "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space",
+  "scope": "Anonymous exact live-host assets and all authored HTML bytes after exactly verified hosting additions versus the reviewed manifest; not browser interaction, inference, operator data or operational acceptance.",
+  "cookies_credentials_environment_proxies": false,
+  "remote_mutations": false,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 16090,
+      "sha256": "290bfbf45a454a9feb062f7ef49cc9de56f9f380c1089685572f34cb3766fc86",
+      "exact_raw_manifest_match": false,
+      "authored_bytes": 15581,
+      "authored_sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "text/html",
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/index.html",
+      "redirect_hosts": []
+    },
+    {
+      "path": "media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "exact_raw_manifest_match": true,
+      "authored_bytes": 42148,
+      "authored_sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "image/jpeg",
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/draft-continuity-mobile.jpg",
+      "redirect_hosts": []
+    },
+    {
+      "path": "media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "exact_raw_manifest_match": true,
+      "authored_bytes": 424587,
+      "authored_sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "image/png",
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733",
+      "redirect_hosts": [
+        "us.aws.cdn.hf.co"
+      ]
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "exact_raw_manifest_match": true,
+      "authored_bytes": 3244,
+      "authored_sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/NOTICE.md",
+      "redirect_hosts": []
+    },
+    {
+      "path": "styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "exact_raw_manifest_match": true,
+      "authored_bytes": 1800,
+      "authored_sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/styles.css",
+      "redirect_hosts": []
+    },
+    {
+      "path": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "exact_raw_manifest_match": true,
+      "authored_bytes": 35517,
+      "authored_sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "image/jpeg",
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/operations-permissions-mobile.jpg",
+      "redirect_hosts": []
+    },
+    {
+      "path": "media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "exact_raw_manifest_match": true,
+      "authored_bytes": 35896,
+      "authored_sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "exact_authored_manifest_match": true,
+      "status": 200,
+      "content_type": "image/jpeg",
+      "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/task-recovery-mobile.jpg",
+      "redirect_hosts": []
+    }
+  ],
+  "metadata": {
+    "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+    "sha256": "a8080de34d781b9c91f96c63a5af60d9e9bbd04f02246a98440a6f63bff9de8c",
+    "sha": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+    "sdk": "static",
+    "runtime_stage": "RUNNING",
+    "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space"
+  },
+  "provider_rendered_metadata_route": {
+    "path": "README.md",
+    "bytes": 17360,
+    "sha256": "e8d5e437aca3a95fe19b5648117db26d71a7c79a5c8536055b798b834d3d5f85",
+    "exact_raw_markdown_match_claimed": false,
+    "scope": "The host renders the metadata README as HTML. Its immutable repository Markdown was separately retrieved exactly; it is not a referenced application resource and is excluded from raw live-file comparison.",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/README.md",
+    "redirect_hosts": []
+  },
+  "root_index": {
+    "path": "/",
+    "bytes": 16090,
+    "sha256": "290bfbf45a454a9feb062f7ef49cc9de56f9f380c1089685572f34cb3766fc86",
+    "exact_raw_manifest_match": false,
+    "authored_bytes": 15581,
+    "authored_sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952",
+    "exact_authored_manifest_match": true,
+    "status": 200,
+    "content_type": "text/html",
+    "final_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/index.html",
+    "redirect_hosts": [
+      "magic51-system-lab-airspace-evaluation.static.hf.space"
+    ]
+  },
+  "verified_hosting_additions": {
+    "inline_script_nodes": 1,
+    "inline_script_sha256": "d10a1549ec3de9c1fd42a33b1384fb00d338595d2faf37c235a30eb9e0904557",
+    "exact_meta_nodes": 4,
+    "meta_bytes_sha256": "3580195db1b72b8c36815bd115c77c5808e52c4f204a4e35c1a374b62a4c1c1a",
+    "added_bytes": 509,
+    "positions": [
+      "immediately after head start",
+      "immediately before head end"
+    ],
+    "all_remaining_authored_bytes_exact": true
+  },
+  "negative_comparisons": {
+    "count": 4,
+    "rejects": [
+      "additional script",
+      "changed stylesheet",
+      "changed authored copy",
+      "duplicate hosting script"
+    ]
+  },
+  "authored_resource_references": {
+    "images": [
+      "media/draft-continuity-mobile.jpg",
+      "media/task-recovery-mobile.jpg",
+      "media/application-tasks.png",
+      "media/operations-permissions-mobile.jpg"
+    ],
+    "stylesheets": [
+      "styles.css"
+    ],
+    "scripts": [],
+    "forms": []
+  },
+  "success": true,
+  "state": "Independently Retrieved",
+  "completed_at": "2026-11-02T13:40:42.176949+00:00"
+}

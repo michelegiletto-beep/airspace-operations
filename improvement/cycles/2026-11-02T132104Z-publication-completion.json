@@ -1,0 +1,191 @@
+{
+  "cycle_id": "2026-11-02T132104Z-publication-completion",
+  "triggered_at": "2026-11-02T13:21:04Z",
+  "checkpoint_at": "2026-11-02T13:56:56.241495+00:00",
+  "state": "Current post-release checkpoint; destination presentations verified",
+  "previous_source_assembly_cycle": "improvement/cycles/2026-11-02T072227Z-windows-and-draft-verification.json",
+  "published_software": "0.3.4-rc.1",
+  "frozen_source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "installed_application": {
+    "version": "0.3.4-rc.1",
+    "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+    "state": "Verified separate primary-source promotion",
+    "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+    "interpreter": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "profile": "Exact independently retrieved archive source with existing verified core and optional neural interpreter; not a fresh optional-neural installation",
+    "runtime": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3",
+    "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion.json",
+    "source_workspace_version": "0.3.3-rc.1",
+    "source_workspace_scope": "Previous C project application code remains preserved; the running primary imports the exact separate installed 0.3.4 source.",
+    "data_records_unchanged": true,
+    "new_model_calls": 0
+  },
+  "published_archive": {
+    "bytes": 15377087,
+    "sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+    "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+    "tag": "v0.3.4-rc.1",
+    "release_id": 431194091,
+    "published_at": "2026-11-02T07:56:10Z"
+  },
+  "destinations": [
+    {
+      "destination": "GitHub candidate release source",
+      "release": "0.3.4-rc.1",
+      "state": "Independently Retrieved",
+      "revision": null,
+      "commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+      "source_commit": null,
+      "version": null,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json"
+    },
+    {
+      "destination": "GitHub tagged candidate release",
+      "release": "0.3.4-rc.1",
+      "state": "Independently Retrieved",
+      "revision": null,
+      "commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+      "source_commit": null,
+      "version": null,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json"
+    },
+    {
+      "destination": "System Lab project dossier revision",
+      "release": "0.3.4-rc.1",
+      "state": "Independently Retrieved",
+      "revision": null,
+      "commit": null,
+      "source_commit": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65",
+      "version": 101,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-site101-public.json"
+    },
+    {
+      "destination": "Hugging Face model presentation",
+      "release": "0.3.4-rc.1",
+      "state": "Independently Retrieved",
+      "revision": "a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2",
+      "commit": null,
+      "source_commit": null,
+      "version": null,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-model-a69c0e2c-reviewed-lfs.json"
+    },
+    {
+      "destination": "Hugging Face dataset presentation",
+      "release": "0.3.4-rc.1",
+      "state": "Independently Retrieved",
+      "revision": "2747c70da9c9188fe36254475babb435ef5db003",
+      "commit": null,
+      "source_commit": null,
+      "version": null,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-dataset-2747c70d-reviewed-lfs.json"
+    },
+    {
+      "destination": "Hugging Face recorded evaluation Space",
+      "release": "0.3.4-rc.1",
+      "state": "Independently Retrieved",
+      "revision": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+      "commit": null,
+      "source_commit": null,
+      "version": null,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-space-54b72461-reviewed-lfs.json"
+    }
+  ],
+  "software_verification": {
+    "local_windows": {
+      "passed": 575,
+      "skipped": 21,
+      "warnings": 7,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-schema-full.json"
+    },
+    "actual_ci": {
+      "engineering_linux": {
+        "passed": 576,
+        "skipped": 20,
+        "warnings": 3,
+        "pytest_seconds": 75.6
+      },
+      "postgresql": {
+        "passed": 19,
+        "warnings": 1,
+        "pytest_seconds": 8.37
+      },
+      "publisher_recorded_source_suite": {
+        "passed": 576,
+        "skipped": 20,
+        "warnings": 9,
+        "pytest_seconds": 89.79,
+        "command_elapsed_seconds": 94.65
+      },
+      "publisher_interface": {
+        "passed": 180,
+        "test_files": 25,
+        "command_exit": 0,
+        "build_exit": 0
+      },
+      "exact_archive_installation": {
+        "passed": 576,
+        "skipped": 20,
+        "warnings": 3,
+        "pytest_seconds": 64.01,
+        "success": true
+      },
+      "container_profile": "postgresql",
+      "container_version": "0.3.4-rc.1",
+      "actual_worker_completed_job": true,
+      "worker_audit_valid": true,
+      "postgresql_restoration_verified": true,
+      "restoration_audit_count": 2,
+      "restoration_audit_valid": true
+    },
+    "ci_run": 41408782094
+  },
+  "requirements": [
+    "ASO3-004",
+    "ASO3-006",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "evidence": {
+    "github": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json",
+    "archive": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-archive-integrity.json",
+    "site_native": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-site-native.json",
+    "site_public": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-site101-public.json",
+    "independent_publication_summary": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-independent-publication-summary.json",
+    "release_gates": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-release-gates.json",
+    "standalone_archive": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-standalone-archive-verification.json",
+    "ci_verification": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-ci-verification.json",
+    "scope": "Byte-exact copies of the independently retrieved actual GitHub attachments. Historical canonical assembly files are preserved unchanged."
+  },
+  "changes_in_this_cycle": [
+    "Reconciled independently verified release and destination states without rewriting frozen source or old assembly receipts",
+    "Preserved the exact previous current publication snapshot for historical 0.3.3 regression fixtures",
+    "Corrected publication/status.json latest_cycle to the current durable cycle",
+    "Kept installed software distinct from downloadable software"
+  ],
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_data_writes_by_checkpoint": false,
+  "frozen_source_or_asset_changes": false,
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "retrospective": "The released archive and Site now have distinct completed receipts. Current documentation records actual destination identities rather than inferring them from prepared files. Original operational acceptance and the installed application remain separate.",
+  "next_bounded_prompt": "Read STATUS.md, publication/status.json, this cycle and the exact final destination receipts. Preserve every frozen release and historical source-assembly checkpoint. Reconcile any pending presentation or installed-source promotion using actual independently verified evidence before changing its state. Next inspect the disabled Workflows controls for Maintenance and Fleet sharing as a novice operator with the actual current role: explain the missing role, prerequisites and responsible handoff beside the control, without broadening permissions or enabling unimplemented actions. Verify browser to API to persistent data, including error recovery, unsent draft continuity and zero unintended model or action calls. Keep paused and reduced-motion behavior explicit, and distinguish render-state labels from pixel verification. Use no more than 45 minutes and two actual local-model evaluation calls. Keep local-model availability, provenance and experimental student limitations visible. No email, contact with people, aircraft commands, self-approval, authority submissions, credential expansion, purchases or substantial charges. Preserve original requirement texts/statuses, private records, previous releases and unrelated projects. Record exact commands, failures, regression repairs, destination states, retrospective and the next bounded prompt.",
+  "presentation_verification": {
+    "changed_targets_exact": 6,
+    "unlisted_prior_files_preserved": 45,
+    "original_weights_and_dataset_records_unchanged": true,
+    "live_space_files_verified": 7,
+    "negative_host_controls": 4,
+    "scope": "Recorded presentation only; no new inference, training or operational acceptance."
+  },
+  "local_exact_archive_installation": {
+    "state": "Verified in separate fresh Windows core installation",
+    "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-verified.json",
+    "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+    "optional_neural_packages_installed": false,
+    "primary_promoted_by_that_check": false
+  },
+  "retained_installation_attempt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-previous-F-timeout.json"
+}

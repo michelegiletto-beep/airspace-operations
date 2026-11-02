@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-02T07:40:33.069219+00:00",
+  "scope": "Independent local-file image inspection; no browser interaction or pixel alteration",
+  "media": [
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
+      "bytes": 30066,
+      "sha256": "814ab3557e19c48be39acded448700a3fc3cea37f18ec8c90ddc31e0c4998f56",
+      "encoding": "JPEG",
+      "account_email_visible": true,
+      "account_identifier_value_logged": false,
+      "fabricated_operational_activity_visible": false,
+      "pixel_alteration_performed": false,
+      "eligible_for_publication_in_reviewed_scope": false
+    },
+    {
+      "path": "publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "encoding": "JPEG",
+      "account_email_visible": false,
+      "account_identifier_value_logged": false,
+      "fabricated_operational_activity_visible": false,
+      "pixel_alteration_performed": false,
+      "eligible_for_publication_in_reviewed_scope": true
+    }
+  ],
+  "publication_state": "Prepared media review; not an assertion that any image was published",
+  "success": false,
+  "required_action": "Keep the current desktop capture private or replace its publication entry with a new actual browser capture whose native clip excludes the account header. Preserve its private evidence if retained."
+}

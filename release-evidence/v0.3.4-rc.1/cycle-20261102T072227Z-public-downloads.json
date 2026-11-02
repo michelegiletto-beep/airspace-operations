@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-02T07:56:53.788053+00:00",
+  "version": "0.3.4-rc.1",
+  "release_id": 431194091,
+  "published_at": "2026-11-02T07:56:10Z",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "state": "Independently Retrieved",
+  "anonymous_requests": true,
+  "cookies_credentials_environment_proxies": false,
+  "assets": [
+    {
+      "name": "ci-verification.json",
+      "id": 700965810,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/ci-verification.json",
+      "bytes": 23953,
+      "sha256": "e523839a7e30a9a1df7e6ed361eb9e2d9a017bb9c6697a2e111e62d549ebc543",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/3ef8c09e-e287-464c-9406-6793f3495dbe",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "LICENSE",
+      "id": 700965806,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/27b8bffa-5595-4e15-9b7a-93859f8c87ec",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "release-gates.json",
+      "id": 700965805,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/release-gates.json",
+      "bytes": 1046,
+      "sha256": "d4b13ebde30cd405338dcd291b529fba5c94d3c3ff2842e123ae9c31bce45770",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/49dfe741-3cae-4686-8d2f-3afe04e624cf",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "id": 700965783,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/RELEASE_PROVENANCE.json",
+      "bytes": 123906,
+      "sha256": "b5cd00cea54de3191ad1138ddd8e44de2eac47267f9adce7804cd429adb19f61",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/15ce02ce-34fd-4002-a436-71cfa47a5f7c",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "id": 700965781,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "7e3550373b0fc5020f9916dbde5d6ead8e14c76d6d60f5296f5edb4c13a79cfd",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/14b28fe8-e80c-408e-8573-5ce3e912de02",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "id": 700965780,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "1b3c0cc861f99d25c687bf371ecb7bbe04fbedec5820cdec1aded356ef42d08b",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/7a27d4e4-158e-481a-8fe8-153514aa11d0",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "id": 700965809,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/standalone-archive-verification.json",
+      "bytes": 8911,
+      "sha256": "7f76f86158fc00dbffef8d0a26ff2494277fc62d6e8e9002b80e06fc9285aaab",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/7dff75ed-f731-4314-803d-67fb758a3ff0",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "System-Lab-Airspace-Operations-0.3.4-rc.1.zip",
+      "id": 700965782,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/System-Lab-Airspace-Operations-0.3.4-rc.1.zip",
+      "bytes": 15377087,
+      "sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/6109203c-cfbb-4bd1-bd83-656ff2eb8b02",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "id": 700965775,
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "github_digest_matches": true,
+      "status": 200,
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1436116533/086bd118-622d-4a93-a174-2ea987f5e37c",
+      "redirect_hosts": [
+        "release-assets.githubusercontent.com"
+      ],
+      "authenticated_read": false
+    }
+  ]
+}

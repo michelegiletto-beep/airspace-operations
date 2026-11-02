@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-02T13:41:51.964804+00:00",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "archive_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+  "archive_bytes": 15377087,
+  "manifest_files_verified": 962,
+  "crc_valid": true,
+  "safe_paths_verified": true,
+  "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+  "new_directory": true,
+  "source_archive_or_F_partial_changed": false,
+  "success": true
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-02T13:45:24.035344+00:00",
+  "version": "0.3.4-rc.1",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "archive_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+  "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+  "venv": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations\\.venv",
+  "profile": "Fresh exact-archive core plus development dependencies; optional-neural packages not installed or claimed",
+  "commands": [
+    "core-install",
+    "readonly-cli",
+    "empty-service",
+    "corpus",
+    "core-tests"
+  ],
+  "all_commands_passed": true,
+  "primary_database_accessed": false,
+  "primary_process_or_environment_changed": false,
+  "operational_records_created": 0,
+  "model_calls": 0,
+  "training_runs": 0,
+  "earlier_F_timeout_preserved": true,
+  "success": true
+}

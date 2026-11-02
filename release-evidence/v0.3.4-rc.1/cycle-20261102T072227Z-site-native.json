@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-02T08:07:00.319Z",
+  "state": "Published; independent retrieval recorded separately",
+  "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+  "version_number": 101,
+  "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+  "source_commit": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65",
+  "archive_storage": {
+    "archive_format": "tar",
+    "content_hash": "sha256:c177a517b98f9a018515b359cebebfd3fb6d288c2b2c43a53b5c05723e395012",
+    "size_bytes": 239134720,
+    "file_count": 687
+  },
+  "deployment": {
+    "id": "appgdep_6ae844298a708191bbc919b3a71969de",
+    "status": "succeeded",
+    "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+    "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+    "updated_at": "2026-11-02T08:05:21.874372+00:00"
+  },
+  "prior_site_version": 100,
+  "prior_site_source": "3639b489b2c36df8846c39f80f713c8733149f4c",
+  "owner_and_public_audience_verified": true,
+  "access_or_account_changes": false,
+  "local_gzip_archive_bytes": 196302363,
+  "local_gzip_archive_sha256": "8df6169af15c6cd2903861af41b15cfc659f1b200c38bdb2a896c2e55abe3f07",
+  "local_decompressed_tar_bytes": 239178240,
+  "local_decompressed_tar_sha256": "4b554fcece697120aa3e6c55530f4d9936e1b5240c2da00d72089a96eed75757",
+  "archive_representation_note": "Native storage reports a different tar byte representation from the local gzip and its decompressed stream. These hashes are preserved separately; byte equivalence is not claimed. Source identity and deployed asset identity have their own checks.",
+  "retained_verifier_attempt": "An initial comparison assumed the native stored tar was byte-identical to the local decompressed tar. That assertion failed before writing a receipt; explicit representations are recorded here.",
+  "site_tests_passed": 8,
+  "official_build_exit_code": 0,
+  "supported_secret_pattern_matches": 0,
+  "unsafe_archive_paths_or_links": 0,
+  "previous_downloads_preserved": true,
+  "unrelated_source_changes": false,
+  "new_model_calls": 0,
+  "success": true
+}

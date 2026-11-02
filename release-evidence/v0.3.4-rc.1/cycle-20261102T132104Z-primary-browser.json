@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-02T13:56:58.974Z",
+  "url": "http://127.0.0.1:8787/#operations",
+  "version_binding": "Actual health/data/worker receipt recorded separately; released frontend asset names observed in rendered DOM",
+  "script": "/assets/index-DhXRzvbU.js",
+  "stylesheet": "/assets/index--LT1GvRU.css",
+  "screen": "Sign in to your workspace",
+  "owned_companion_visible": true,
+  "account_signed_in": false,
+  "credentials_entered": false,
+  "model_calls": 0,
+  "operational_mutations": 0,
+  "console_warnings_or_errors": [],
+  "publication_browser": {
+    "system_lab_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+    "space_wrapper_loaded_after_one_reload": true,
+    "direct_space_url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/index.html"
+  }
+}

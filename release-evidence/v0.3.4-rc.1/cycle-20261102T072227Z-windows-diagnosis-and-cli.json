@@ -1,0 +1,121 @@
+{
+  "at": "2026-11-02T07:45:29.169110+00:00",
+  "state": "Windows path limitation diagnosed and a bounded read-only environment diagnostic implemented; final short-path full suite passed.",
+  "prior_verified_development_source": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+  "changed_source_sha256": {
+    "backend/airspace/environment_checks.py": "c2832a919f1404bf65b9f8785875b0ae95c9b48eb4935594308b28779e4f0262",
+    "backend/airspace/cli.py": "b4242e382665c3321c10e32ab123fcb40616fbd09208b5a9bed119ca525ef115",
+    "tests/test_environment_checks.py": "95f000336f3fd5b6c7a35746fbb3ad1b3beda08acc2b8fb43e1cd84438b715c0",
+    "docs/administrator-handbook.md": "2884ac1fbcee18e6c68d5deef88293c047e15d1a95e9cdd3b01abb008b4c5d57"
+  },
+  "diagnosis": {
+    "registry_long_paths_enabled": false,
+    "registry_modified": false,
+    "controlled_product_layout": {
+      "same_content_and_relative_layout": true,
+      "short_target_characters": 171,
+      "short_normal_write_and_read_succeeded": true,
+      "deep_target_characters": 290,
+      "deep_parent_characters": 225,
+      "deep_parent_existed": true,
+      "deep_normal_write": "FileNotFoundError errno2",
+      "same_deep_target_extended_path_write_and_read_succeeded": true
+    },
+    "same_test_case_pair": {
+      "cases": 13,
+      "short_basetemp_result": "13 passed in4.99s",
+      "deep_basetemp_result": "6 failed and7 errors in5.74s",
+      "deep_basetemp_characters": 128,
+      "same_as_retained_failed_basetemp_length": true
+    },
+    "affected_scope": "Actual evidence attachment and regulatory-ingestion storage paths, together with long publication-fixture paths. The failure is not limited to test scaffolding.",
+    "technical_conclusion": "The current Windows configuration does not opt ordinary path access into long-path support. Keeping a short isolated test root removes the reproduced failures without weakening test assertions. The product still needs an appropriately configured private storage location; the new diagnostic does not add general long-path I/O support."
+  },
+  "implementation": {
+    "cli_json_extension": "storage_paths",
+    "read_only_check": "The check command returns before local_store and migration. It does not create a runtime directory, database or audit key.",
+    "schema_status": "Not Inspected",
+    "schema_version_scope": "Supported schema; existing database not inspected or migrated",
+    "windows_registry": "Read-only KEY_READ query; true, false or null for unknown, with no configuration changes.",
+    "length_unit": "UTF-16 code units (Windows characters)",
+    "representative_layouts": "Evidence blob adds110 characters; source temporary layout adds245, with explicit UUID, maximum source-identifier, digest and33-character temporary-filename assumptions.",
+    "boundaries": "No blanket path rejection, automatic adapter, registry modification, write probe, existence/permission guarantee or process-manifest claim.",
+    "administrator_guidance": "Short private AIRSPACE_RUNTIME, short isolated test paths, consistent API/worker configuration and backed-up restoration before relocation, preserving the original audit key."
+  },
+  "verification": {
+    "full_runs": [
+      {
+        "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-short-full.json",
+        "passed": 560,
+        "skipped": 21,
+        "warnings": 7,
+        "pytest_seconds": 204.89,
+        "wall_seconds": 209.424,
+        "source_inputs_unchanged": true,
+        "exit_code": 0
+      },
+      {
+        "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-final-full.json",
+        "passed": 575,
+        "skipped": 21,
+        "warnings": 7,
+        "pytest_seconds": 181.71,
+        "wall_seconds": 185.679,
+        "source_inputs_unchanged": true,
+        "exit_code": 0
+      },
+      {
+        "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-schema-full.json",
+        "passed": 575,
+        "skipped": 21,
+        "warnings": 7,
+        "pytest_seconds": 183.81,
+        "wall_seconds": 187.78,
+        "source_inputs_unchanged": true,
+        "exit_code": 0
+      }
+    ],
+    "final_focused": {
+      "passed": 36,
+      "warnings": 1,
+      "seconds": 2.54,
+      "junit": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-environment-schema-focused-junit.xml"
+    },
+    "actual_cli": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-cli-check-readonly.json",
+    "controlled_io": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-path-control.json",
+    "controlled_pair": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-path-pair.json",
+    "independent_source_review": "A peer performed read-only review and found no blocking issue, including the final schema scope distinction. This is engineering review, not professional certification."
+  },
+  "retained_attempts": [
+    "Original python-tests.json and python-tests-post-repair.json remain unchanged.",
+    "The first new independent constructed-path test caught a one-character temporary-filename counting error: original.bin.tmp- plus16 hexadecimal characters is33 characters. The failed JUnit remains; repaired and final focused receipts are separate.",
+    "The pre-increment560/21 full pass, pre-schema-scope575/21 full pass and final575/21 full pass retain distinct input snapshots and outputs.",
+    "Warnings remain visible: selected runs include the existing Starlette deprecation and SQLite ResourceWarnings. No warning-free claim is made."
+  ],
+  "primary_technical_sources": [
+    {
+      "url": "https://docs.python.org/3.13/using/windows.html#removing-the-max-path-limitation",
+      "checked_at": "2026-11-02",
+      "supports": "Python documents the legacy path limit and Windows configuration prerequisite."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation",
+      "checked_at": "2026-11-02",
+      "supports": "Windows documents the260-character including-terminator limit, extended-path syntax, and separate registry/process opt-in."
+    }
+  ],
+  "limitations": [
+    "The length calculations are explicit examples, not a complete storage budget or evidence of actual read/write rights.",
+    "Windows process manifests, external tools and filesystem behavior are not certified by the registry value.",
+    "The diagnostics do not inspect database schema or operational records.",
+    "This receipt establishes local software verification only; it does not establish native-browser, exact-archive installation, remote-CI, release or operational acceptance."
+  ],
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "primary_data_writes": false,
+  "registry_or_permission_changes": false,
+  "aircraft_or_external_operational_actions": false,
+  "release_published_by_this_agent": false,
+  "full_original_acceptance_claimed": false,
+  "next_action": "Bind the final four-file input hashes and exact final suite evidence into the reviewed development checkpoint; retain remaining browser, archive and release gates separately."
+}

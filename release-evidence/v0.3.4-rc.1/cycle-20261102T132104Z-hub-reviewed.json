@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-02T13:31:56.316250+00:00",
+  "state": "Prepared and reviewed; no upload performed",
+  "application_version": "0.3.4-rc.1",
+  "application_source": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "manifest": "publication/releases/0.3.4-rc.1/huggingface/manifest.json",
+  "manifest_sha256": "e5342c0e838bb29fcd14218a62ca524b27005f076e71a3fff2b67b43e2a3fdeb",
+  "authored_targets": 6,
+  "target_bytes": 136411,
+  "source_receipts": [
+    "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json",
+    "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-archive-integrity.json",
+    "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-source-media.json"
+  ],
+  "reviewed_parent_heads": {
+    "model": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+    "dataset": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+    "space": "b92dfde086f057b3836eed4790f3e0f7f7c81655"
+  },
+  "parent_heads_checked_at": "2026-11-02T13:30:12.350827+00:00",
+  "strict_historical_text_diff": true,
+  "prior_pack_files_unchanged": 15,
+  "historical_local_pack_files_exact": 10,
+  "rights_notices_exact": 2,
+  "source_and_archive_mobile_exact": true,
+  "peer_review": {
+    "reviewer": "Separate engineering review agent; not professional certification",
+    "result": "No blocking issue reported in actual release facts, rights, unchanged model/data claims, URLs and static no-inference boundary",
+    "exact_mobile_visually_reviewed": true,
+    "private_identifier_or_fabricated_result_visible": false
+  },
+  "model_weights_or_dataset_rows_changed": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_writes": false,
+  "supported_secret_patterns_found": 0,
+  "remaining_publication_checks": [
+    "Recheck exact current parent before each authorized root commit",
+    "Upload only six listed targets, preserving all unlisted remote files",
+    "Independently retrieve changed targets and every unlisted historical artifact",
+    "Accept only exact separately verified provider-generated new LFS path entries",
+    "Verify the actual static Space host without weakening active-content or hosting checks"
+  ],
+  "success": true
+}

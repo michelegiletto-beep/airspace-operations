@@ -1,0 +1,16 @@
+{
+  "name": "corpus",
+  "command": [
+    "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "-B",
+    "scripts/prepare_corpus.py"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+  "started_at": "2026-11-02T13:42:17.494635+00:00",
+  "elapsed_seconds": 0.215,
+  "timeout_seconds": 60,
+  "timed_out": false,
+  "exit_code": 0,
+  "stdout": "Source corpus already available\nPreserved experimental lineage is available\n",
+  "stderr": ""
+}

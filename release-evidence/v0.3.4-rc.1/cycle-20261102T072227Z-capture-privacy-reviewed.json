@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-02T07:43:17.350927+00:00",
+  "scope": "Independent local-file image inspection, decoder validation and exact-byte comparison; no browser or image editing",
+  "supersedes_review": "cycle-20261102T072227Z-capture-privacy-review.json",
+  "prior_failed_review_preserved": true,
+  "native_capture_provenance": "cycle-20261102T072227Z-media-reviewed.json",
+  "prior_digest_timing_correction": "The earlier visual concern applied to the first browser capture. Its file changed to an intermediate rejected capture before the prior review metadata was collected, so the prior digest must not be treated as a binding of that first visual observation. This new review independently inspects and validates only the final accepted current files.",
+  "desktop_account_header_excluded": true,
+  "mobile_matches_previously_reviewed_image": true,
+  "media": [
+    {
+      "kind": "desktop",
+      "path": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
+      "bytes": 113135,
+      "sha256": "8949e97f7f3c8ed0ac778d29bcaa24c056116bf8c8363e2348dce7093c1f8c14",
+      "encoding": "JPEG",
+      "width": 1280,
+      "height": 902,
+      "account_header_or_private_identifiers_visible": false,
+      "eligible_for_publication_in_reviewed_scope": true
+    },
+    {
+      "kind": "mobile",
+      "path": "publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "encoding": "JPEG",
+      "width": 390,
+      "height": 844,
+      "account_header_or_private_identifiers_visible": false,
+      "eligible_for_publication_in_reviewed_scope": true
+    }
+  ],
+  "content_findings": [
+    "No account email, credential, account dropdown or private identifier is visible in either accepted capture",
+    "The visible request concerns real software verification and remains unsent",
+    "No invented flight, customer, operational approval, generated reply or business result is shown",
+    "Screenshots are fixed recorded evidence; actual normal-motion and pause-control observations are separate browser evidence"
+  ],
+  "reviewer_pixel_alteration": false,
+  "paused_pixel_stability_claim": false,
+  "new_model_calls": 0,
+  "source_changes": false,
+  "operational_acceptance": false,
+  "success": true
+}

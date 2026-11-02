@@ -1,0 +1,89 @@
+{
+  "at": "2026-11-02T07:49:32.075143+00:00",
+  "state": "Prepared locally; not source-pushed, saved or deployed",
+  "site_checkout": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-publishing",
+  "base_site_source": "3639b489b2c36df8846c39f80f713c8733149f4c",
+  "site_project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+  "hosting_manifest_unchanged": true,
+  "scope": "Existing Airspace project page only, with actual reviewed desktop/mobile captures. Current published033 release and every historical download retained.",
+  "changed_files": [
+    {
+      "path": "public/projects/airspace-operations.html",
+      "bytes": 29797,
+      "sha256": "a3610307a9a851d7fc2cf63e1e6a3b27c4cda307976f08287dcbe89e15dcbd52"
+    },
+    {
+      "path": "templates/airspace-operations.html",
+      "bytes": 29797,
+      "sha256": "a3610307a9a851d7fc2cf63e1e6a3b27c4cda307976f08287dcbe89e15dcbd52"
+    },
+    {
+      "path": "internal/airspace034-publication.json",
+      "bytes": 1270,
+      "sha256": "e020793c27f84373843deaad80d5a84c0c2aef882afcf0944a119de4e4012aad"
+    },
+    {
+      "path": "tests/airspace-operations034.test.mjs",
+      "bytes": 2403,
+      "sha256": "19bdc8257eef7deb033b0ddda68e7f198758d7fffd1f5390fa729de96396427c"
+    },
+    {
+      "path": "public/airspace-operations/media/0.3.4-rc.1/draft-continuity.jpg",
+      "bytes": 113135,
+      "sha256": "8949e97f7f3c8ed0ac778d29bcaa24c056116bf8c8363e2348dce7093c1f8c14"
+    },
+    {
+      "path": "public/airspace-operations/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e"
+    }
+  ],
+  "tracked_unrelated_changes": [],
+  "verification": [
+    {
+      "command": [
+        "node",
+        "scripts/build-projects.mjs",
+        "--project=airspace-operations"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/airspace-operations.test.mjs",
+        "tests/airspace-operations032.test.mjs",
+        "tests/airspace-operations033.test.mjs",
+        "tests/airspace-operations034.test.mjs"
+      ],
+      "exit_code": 0,
+      "tests_passed": 8,
+      "duration_ms": 522.1437,
+      "includes": "All historical release/media identity assertions"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/build-verified.mjs"
+      ],
+      "exit_code": 0,
+      "result": "All five Vinext build stages completed",
+      "warnings": [
+        "Node punycode deprecation",
+        "Node experimental glob warning",
+        "Plugin timing diagnostic",
+        "Nine routes classified Unknown by current Vinext static analysis; no warning-free claim"
+      ]
+    }
+  ],
+  "retained_preparation_failure": "Initial raw hosting-manifest comparison mixed working-copy CRLF with Git LF. A subsequent parsed-JSON comparison and tracked-change inventory confirmed no hosting configuration change; the manifest was never rewritten.",
+  "supported_secret_pattern_matches": 0,
+  "private_release_finalizer": "F:\\SystemLabAirspaceOperationsEngineering\\cycle-20261102T072227Z\\finalize-site034.py",
+  "finalizer_executed": false,
+  "publication_blocker": "Actual034 release/source/CI/archive/installation and anonymous9-asset receipts are required before root finalizes source, reruns checks/build/scan and publishes through the existing Site workflow.",
+  "browser_QA_of_changed_Site_page": false,
+  "remote_mutations": false,
+  "new_model_calls": 0,
+  "success": true
+}

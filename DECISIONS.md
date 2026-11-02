@@ -1,3 +1,11 @@
+## Publication and installation boundaries, 2 November 2026
+
+Current publication aliases follow version-matched independent receipts. A released archive, a public Site, model/dataset presentations and the installed primary are separate states. Preserve frozen source, archives, historical assembly receipts and the exact prior current-status snapshot. A metadata-only checkpoint cannot promote the application, alter a role or change any original requirement status.
+
+## Windows installation diagnostics, 2 November 2026
+
+Expose configuration and representative path limits without changing registry values, relocating records or weakening failed gates. Environment checks must not create a database or key. Report supported schema separately from an inspected database. Keep the original deep-path failures and same-case reproduction alongside the passing short-path suite. New screenshots use actual browser pixels and exclude the account header; rejected captures stay private.
+
 # Architecture decisions
 
 31 October 2026: use a standard-library container-format guard for future candidate screenshots, alongside separate browser decoding, visual review and rights checks. Validate the selected screenshot and the candidate media namespace; bound bytes, total entries, depth and raster count. An independent review identified the need for the total-entry and depth bounds, which were added and tested. The verified development source is c6839aeda8276685ea55bae724d90669ae2e9bcd; it does not amend frozen release0.3.1.

@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-02T07:29:15.342026+00:00",
+  "scope": "Controlled identical content-addressed layout with short and deep roots; isolated owned C temp directory. No registry changes, product changes, model call or primary data mutation.",
+  "interpreter": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.2\\.venv\\Scripts\\python.exe",
+  "registry_query": {
+    "exit_code": 0,
+    "stdout": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\n    LongPathsEnabled    REG_DWORD    0x0",
+    "stderr": ""
+  },
+  "results": [
+    {
+      "case": "short",
+      "root_characters": 61,
+      "parent_characters": 106,
+      "target_characters": 171,
+      "parent_exists": true,
+      "normal_parent_resolves": true,
+      "input_kind": "Isolated software test bytes; no operational data",
+      "normal_write_succeeded": true,
+      "normal_read_matches": true,
+      "same_target_extended_read_matches": true
+    },
+    {
+      "case": "deep",
+      "root_characters": 180,
+      "parent_characters": 225,
+      "target_characters": 290,
+      "parent_exists": true,
+      "normal_parent_resolves": true,
+      "input_kind": "Isolated software test bytes; no operational data",
+      "normal_write_succeeded": false,
+      "error_type": "FileNotFoundError",
+      "errno": 2,
+      "winerror": null,
+      "same_target_extended_read_matches": true
+    }
+  ],
+  "same_content_and_relative_object_layout": true,
+  "extended_prefix_positive_control": true,
+  "observed_limitation": "Normal Win32 path access fails for the deep target although the parent exists; the exact same deep target is writable and readable with an extended-length path. Registry opt-in is disabled. This is a platform configuration/path support limitation, not sufficient evidence alone to waive the software test gate.",
+  "product_code_edited": false,
+  "primary_data_writes": false,
+  "new_model_calls": 0
+}

@@ -225,7 +225,8 @@ def test_raster_count_bound_is_retained(candidate, monkeypatch):
     ("0.3.1-rc.1", ("0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
     ("0.3.2-rc.1", ("0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
     ("0.3.3-rc.1", ("0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
-    ("0.4.0-rc.1", ("0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
+    ("0.3.4-rc.1", ("0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
+    ("0.4.0-rc.1", ("0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
 ])
 def test_release_history_adds_new_prior_candidate_without_changing_frozen_history(tmp_path, version, previous):
     if version == "0.3.0-rc.1":
@@ -247,6 +248,15 @@ def test_release_history_adds_new_prior_candidate_without_changing_frozen_histor
     (evidence / "standalone-archive-verification.json").write_text(json.dumps({"test_suite": {"stdout": "1 passed"}}), encoding="utf-8")
     archive = tmp_path / f"System-Lab-Airspace-Operations-{version}.zip"
     archive.write_bytes(b"Isolated history archive fixture")
+    source_bytes = {path: path.read_bytes() for path in tmp_path.rglob("*") if path.is_file()}
     result = publisher.candidate_notes(tmp_path, {"version": version, "sha": "a" * 40}, [archive])
-    history = next(line for line in result.splitlines() if line.startswith("Previous candidates: "))
-    assert history == "Previous candidates: " + ", ".join(f"[{value}](https://github.com/{publisher.REPOSITORY}/releases/tag/v{value})" for value in previous) + "."
+    expected_history = "Previous candidates: " + ", ".join(f"[{value}](https://github.com/{publisher.REPOSITORY}/releases/tag/v{value})" for value in previous) + "."
+    expected = (
+        f"# Release {version}\n\nIsolated release history fixture.\n\n"
+        f"![Companion workspace](https://raw.githubusercontent.com/{publisher.REPOSITORY}/{'a' * 40}/{image_relative})\n\n"
+        f"Source commit: `{'a' * 40}`. Download: `{archive.name}` (32 bytes). SHA-256: `{publisher.digest(archive)}`.\n\n"
+        "Engineering checks: 1 passed. Clean-install software suite: 1 passed. The original acceptance baseline remains partial; stable release and operational acceptance remain false.\n\n"
+        + expected_history + "\n"
+    )
+    assert result == expected
+    assert {path: path.read_bytes() for path in source_bytes} == source_bytes

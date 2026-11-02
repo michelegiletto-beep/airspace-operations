@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-02T07:43:17.417490+00:00",
+  "scope": "Actual read-only administrative check with a new isolated runtime path. No database/key initialisation or actual schema inspection is claimed.",
+  "command": [
+    "C:/Users/gilet/Documents/ChatGPT/SYSTEM LABS/products/airspace-operations/work/candidate-0.3.2/.venv/Scripts/python.exe",
+    "-m",
+    "airspace.cli",
+    "check"
+  ],
+  "cwd": "F:\\SystemLabAirspaceOperationsEngineering\\candidate-0.3.4",
+  "environment_overrides": {
+    "PYTHONPATH": "F:\\SystemLabAirspaceOperationsEngineering\\candidate-0.3.4\\backend",
+    "AIRSPACE_RUNTIME": "C:\\Users\\gilet\\AppData\\Local\\Temp\\aso-072227\\cli-check-uncreated",
+    "AIRSPACE_DATABASE_URL": "sqlite:///<isolated nonexistent runtime>/diagnostic-must-not-create.db"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"python\": \"3.13.1\",\n  \"database_profile\": \"SQLite portability\",\n  \"schema_version\": 3,\n  \"schema_status\": \"Not Inspected\",\n  \"schema_version_scope\": \"Supported schema; existing database not inspected or migrated\",\n  \"docker\": false,\n  \"pg_dump\": false,\n  \"runtime\": \"C:\\\\Users\\\\gilet\\\\AppData\\\\Local\\\\Temp\\\\aso-072227\\\\cli-check-uncreated\",\n  \"operational_acceptance\": false,\n  \"storage_paths\": {\n    \"windows_long_paths\": {\n      \"applicable\": true,\n      \"registry_enabled\": false,\n      \"registry_status\": \"Disabled\",\n      \"registry_scope\": \"Machine configuration only; process manifest and filesystem support are not verified\"\n    },\n    \"length_unit\": \"UTF-16 code units (Windows characters)\",\n    \"runtime_characters\": 64,\n    \"legacy_limit_characters_including_terminator\": 260,\n    \"representative_layouts\": [\n      {\n        \"name\": \"evidence_blob\",\n        \"component_assumptions\": [\n          {\n            \"name\": \"objects\",\n            \"characters\": 7\n          },\n          {\n            \"name\": \"tenant UUID\",\n            \"characters\": 36\n          },\n          {\n            \"name\": \"SHA-256 filename\",\n            \"characters\": 64\n          }\n        ],\n        \"separators\": 3,\n        \"additional_characters\": 110,\n        \"total_characters\": 174,\n        \"legacy_limit_reached\": false\n      },\n      {\n        \"name\": \"source_snapshot_temporary_file\",\n        \"component_assumptions\": [\n          {\n            \"name\": \"sources\",\n            \"characters\": 7\n          },\n          {\n            \"name\": \"tenant UUID\",\n            \"characters\": 36\n          },\n          {\n            \"name\": \"maximum accepted source identifier\",\n            \"characters\": 100\n          },\n          {\n            \"name\": \"SHA-256 directory\",\n            \"characters\": 64\n          },\n          {\n            \"name\": \"original.bin.tmp- plus 16 hexadecimal characters\",\n            \"characters\": 33\n          }\n        ],\n        \"separators\": 5,\n        \"additional_characters\": 245,\n        \"total_characters\": 309,\n        \"legacy_limit_reached\": true\n      }\n    ],\n    \"assessment\": \"Representative layout reaches the legacy Windows path limit\",\n    \"io_verified\": false,\n    \"configuration_only\": true,\n    \"scope\": \"Explicit path-layout examples, not a complete storage budget or proof that a directory exists, permits access, or supports writes. Other output roots, identifiers, temporary files and tools can require longer paths.\",\n    \"guidance\": \"Choose a shorter private AIRSPACE_RUNTIME and a short isolated test temporary directory when needed. Back up and restore existing data and its audit key before relocating it. See docs/administrator-handbook.md. This command does not change Windows settings or perform a storage write test.\"\n  }\n}\n",
+  "stderr": "",
+  "runtime_existed_before": false,
+  "runtime_exists_after": false,
+  "source_sha256": {
+    "backend/airspace/cli.py": "b4242e382665c3321c10e32ab123fcb40616fbd09208b5a9bed119ca525ef115",
+    "backend/airspace/environment_checks.py": "c2832a919f1404bf65b9f8785875b0ae95c9b48eb4935594308b28779e4f0262"
+  },
+  "registry_modified": false,
+  "primary_data_writes": false,
+  "new_model_calls": 0,
+  "success": true
+}

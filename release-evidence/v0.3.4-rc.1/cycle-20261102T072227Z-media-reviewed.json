@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-02T07:41:37.261Z",
+  "review": "Actual fresh browser screenshot clipped below account header; pixels unedited",
+  "supersedes_media_hash": "1226af5451ff5a6683dd6e9552852b12b3bed65a5a6898dd751503d709857d88",
+  "rejected_capture": "Privately retained; not staged or published",
+  "browser_clip": {
+    "x": 0,
+    "y": 58,
+    "width": 1280,
+    "height": 902
+  },
+  "desktop": {
+    "path": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
+    "bytes": 113135,
+    "sha256": "8949e97f7f3c8ed0ac778d29bcaa24c056116bf8c8363e2348dce7093c1f8c14",
+    "encoding": "JPEG",
+    "width": 1280,
+    "height": 902,
+    "account_header_excluded": true
+  },
+  "mobile": {
+    "path": "publication/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+    "bytes": 42148,
+    "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e"
+  },
+  "capture_tool_issue": "One attempted clip followed an unexpectedly retained85px viewport and produced an unsuitable layout. That file is private and rejected. Explicit1280x960desktop verification preceded this accepted capture.",
+  "viewport_reset_requested": true
+}

@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-11-02T13:42:29.541270+00:00",
+  "state": "Independently Retrieved per destination",
+  "application_version": "0.3.4-rc.1",
+  "frozen_source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "github_actual_nine_downloads": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json",
+  "github_fresh_release_metadata": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-github-release-current.json",
+  "huggingface": {
+    "model": {
+      "head": "a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2",
+      "direct_parent": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+      "changed_targets_exact": 2,
+      "unlisted_prior_files_actual_bytes_and_identity_unchanged": 14,
+      "provider_metadata_delta": null,
+      "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-model-a69c0e2c-reviewed-lfs.json",
+      "receipt_sha256": "c112d24c49060c465f1abc0cfbb0b3bdcd5e73f833ee33fd3bd4c3c2118a9d53"
+    },
+    "dataset": {
+      "head": "2747c70da9c9188fe36254475babb435ef5db003",
+      "direct_parent": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+      "changed_targets_exact": 1,
+      "unlisted_prior_files_actual_bytes_and_identity_unchanged": 6,
+      "provider_metadata_delta": null,
+      "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-dataset-2747c70d-reviewed-lfs.json",
+      "receipt_sha256": "f7c0b5e139e50e673fd778a9aed56628558c67fdd0522686310eac0330931f3d"
+    },
+    "space": {
+      "head": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+      "direct_parent": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "changed_targets_exact": 3,
+      "unlisted_prior_files_actual_bytes_and_identity_unchanged": 25,
+      "provider_metadata_delta": null,
+      "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-space-54b72461-reviewed-lfs.json",
+      "receipt_sha256": "4a7332e4a0792d26885c172ecb26f013b84eb44fed41caaad02b53dabe799824"
+    }
+  },
+  "changed_presentation_targets": 6,
+  "unlisted_prior_files_preserved": 45,
+  "all_original_model_and_dataset_artifacts_unchanged": true,
+  "live_space": {
+    "head": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+    "exact_live_files": 7,
+    "negative_controls": 4,
+    "only_pinned_hosting_nodes": 5,
+    "all_authored_bytes_exact": true,
+    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-verify-space-live.json"
+  },
+  "system_lab": {
+    "native_version": 101,
+    "source_commit": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65",
+    "deployment_id": "appgdep_6ae844298a708191bbc919b3a71969de",
+    "saved_version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+    "checks": {
+      "expected": 80,
+      "http_200": 80,
+      "verified": 80,
+      "exact": 77,
+      "authored_html": 3
+    },
+    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-site101-public.json"
+  },
+  "review_boundaries": [
+    "No new local-model generation, training, operational record, authority action, email or external communication was performed by this reviewer.",
+    "The GitHub release and provider presentation updates are separate from the current main source checkpoint. Main was fef47a at the recorded pre-upload check; no later main promotion is inferred.",
+    "Static evaluation hosting does not execute the operational platform or establish aviation certification, legal completeness or operational acceptance.",
+    "Earlier source, release, failed preparation and native-publication receipts remain unchanged."
+  ],
+  "remote_mutations_by_reviewer": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_acceptance": false,
+  "success": true
+}

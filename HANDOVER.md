@@ -1,3 +1,13 @@
+## Current publication checkpoint, 2 November 2026, 13:21 UTC cycle
+
+GitHub [0.3.4-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1) is published and independently retrieved from frozen source `f5dd93a7c5c7367101ea63147a5da99cb085addb`. All nine assets match their public digests. The ZIP contains 15,377,087 bytes and has SHA-256 `c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57`. System Lab 101 is independently verified: 80 resources, comprising 77 exact assets and 3 authored pages. All three Hugging Face presentations now have independent 0.3.4 retrieval receipts.
+
+Actual CI 41408782094 passed 576 source tests with 20 skipped, 180 interface tests and 19 PostgreSQL tests, with real containers, worker completion and restoration. The exact archive installation separately passed 576 tests with 20 skipped in 64.01 seconds. The local Windows result of 575 passed, 21 skipped and 7 warnings is a distinct measurement. Warnings and failed earlier runs remain preserved.
+
+The primary application is separately verified at 0.3.4 using the exact installed archive source and existing optional interpreter. The previous C project application source remains preserved. This metadata update does not replace application files, dependencies, databases or models. The 170 original and 28 revision requirements retain their texts and statuses; original acceptance, stable release and operational acceptance remain false. No model generation, training, operational record or external operational action was added.
+
+Read `improvement/cycles/2026-11-02T132104Z-publication-completion.json` and `publication/status.json`. Earlier sections are historical source-assembly checkpoints. Next bounded task: explain disabled Maintenance and Fleet sharing workflow controls using the current role and prerequisites, with server permissions unchanged.
+
 ## Current saved-task recovery checkpoint, 1 November 2026
 
 GitHub [0.3.3-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.3-rc.1) is published and independently retrieved from frozen source `6f8364df25b942d49eb1b4ccaa40f27f70578dbb`. Its 14,192,874-byte ZIP has SHA-256 `067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5`. All nine assets match their actual public digests.

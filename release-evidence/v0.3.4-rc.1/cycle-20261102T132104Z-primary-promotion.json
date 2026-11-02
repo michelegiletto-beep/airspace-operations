@@ -1,0 +1,149 @@
+{
+  "at": "2026-11-02T13:54:24.526181+00:00",
+  "state": "Verified local primary application source promoted",
+  "version": "0.3.4-rc.1",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "archive_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+  "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+  "runtime": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3",
+  "profile": "Exact independently retrieved archive source with existing verified core and optional neural interpreter; not a fresh optional-neural installation",
+  "interpreter": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+  "compatibility": {
+    "module": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations\\backend\\airspace\\__init__.py",
+    "version": "0.3.4-rc.1",
+    "distribution_version": "0.3.4rc1",
+    "packages": {
+      "torch": "2.14.1",
+      "transformers": "5.21.0",
+      "huggingface-hub": "2.3.0",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "numpy": "2.5.4",
+      "pypdf": "6.21.4",
+      "fastapi": "0.162.0",
+      "uvicorn": "0.54.0",
+      "sqlalchemy": "2.0.55",
+      "psycopg": "3.2.13",
+      "pydantic": "2.14.1",
+      "httpx": "0.28.1",
+      "PyJWT": "2.15.1",
+      "ortools": "9.15.6755",
+      "pyproj": "3.7.2",
+      "defusedxml": "0.7.1",
+      "protobuf": "6.33.5"
+    },
+    "model_status": {
+      "state": "Not Loaded",
+      "mode": "local_causal",
+      "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "message": "Local files are present. Integrity verification and loading happen when the worker starts a reply.",
+      "hosted_provider": false,
+      "generative_model_used": false
+    }
+  },
+  "source_environment": {
+    "PYTHONPATH": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations\\backend",
+    "AIRSPACE_RUNTIME": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3",
+    "AIRSPACE_AGENT_MODEL_DIR": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\models\\pretrained\\controller",
+    "AIRSPACE_MODEL_DIR": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\models\\pretrained",
+    "AIRSPACE_INFERENCE_DEVICE": "cpu",
+    "AIRSPACE_AGENT_DEVICE": "cpu",
+    "AIRSPACE_NEURAL_RETRIEVAL": "disabled",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "new_launcher_pids": {
+    "api": 23344,
+    "worker": 28584
+  },
+  "stopped_owned_process_ids": [
+    31128,
+    33932,
+    22168,
+    17672,
+    12520,
+    28512
+  ],
+  "commands": {
+    "api": [
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "airspace.cli",
+      "serve",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8787"
+    ],
+    "worker": [
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "airspace.cli",
+      "worker"
+    ]
+  },
+  "api_health": {
+    "status": "ok",
+    "version": "0.3.4-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "anonymous_boundaries": [
+    {
+      "status": 401
+    },
+    {
+      "status": 401
+    }
+  ],
+  "worker_health": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 1.970155
+  },
+  "before": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "after": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "all_table_rows_and_schema_unchanged": true,
+  "audit_key_unchanged": true,
+  "old_source_dependency_environment_preserved": true,
+  "backup_private": true,
+  "backup_database_sha256": "055d3a6f88240515322fbaf075493023627765bd677974da325cbc109897d3a3",
+  "policy_environment_scope": "Inherited current launch environment is retained rather than scrubbed; named Process/User/Machine review-policy and OIDC fields were all unconfigured, and parent reported prior launcher only set source/runtime/controller paths. Prior child process environment not independently read.",
+  "retrieval_configuration_scope": "disabled; named Process/User/Machine environment values were unset and parent reported no explicit prior enablement; prior process environment was not read or claimed",
+  "new_model_calls": 0,
+  "new_operational_records": 0,
+  "authentication_performed": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "success": true
+}

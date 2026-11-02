@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-11-02T13:41:46.057566+00:00",
+  "state": "Preserved earlier failed F attempt; no deletion or retry against that directory",
+  "source_of_observation": "Root reported the actual subprocess TimeoutExpired tool result; the original helper did not catch it before command receipt creation",
+  "command": [
+    "uv",
+    "sync",
+    "--frozen",
+    "--extra",
+    "dev"
+  ],
+  "cwd": "F:/SystemLabAirspaceOperationsEngineering/installed034/airspace-operations",
+  "timeout_seconds": 240,
+  "success": false,
+  "stdout_or_stderr_reconstructed": false,
+  "original_helper_sha256": "f0292012718ae05d8962ace748f9c20ae3b5df7a62d8b93d7a46b731267d794f",
+  "partial_directory_preserved": true,
+  "primary_database_accessed": false,
+  "promotion_performed": false
+}

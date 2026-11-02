@@ -1,0 +1,93 @@
+{
+  "cycle_id": "2026-11-02T072227Z-windows-and-draft-verification",
+  "triggered_at": "2026-11-02T07:22:27.729Z",
+  "checkpoint_at": "2026-11-02T07:45:40.388763+00:00",
+  "state": "Current local source verified; distinct candidate remote engineering and exact-archive publication gates pending",
+  "starting_main": "fef47a96232a4d3e182e3d785031f2ced7e05e8c",
+  "starting_development_source": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+  "published_software_at_source_checkpoint": "0.3.3-rc.1",
+  "candidate": "0.3.4-rc.1",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-01",
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-004",
+    "ASO3-006",
+    "ASO3-007",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "implemented": [
+    "Read-only CLI environment check with actual Windows long-path configuration and explicit representative path lengths",
+    "Supported schema and uninspected database status are separate",
+    "Current publication README references and actual privacy-reviewed desktop/mobile screenshots"
+  ],
+  "verified": {
+    "final_windows_passed": 575,
+    "final_windows_skipped": 21,
+    "final_windows_warnings": 7,
+    "source_inputs_unchanged": true,
+    "focused_boundary_passed": 75,
+    "interface_previous_source_passed": 180,
+    "same_13_cases_short": {
+      "passed": 13
+    },
+    "same_13_cases_deep": {
+      "failed": 6,
+      "errors": 7
+    },
+    "browser_draft_navigation_reload": true,
+    "browser_persisted_engineering_tasks": 2,
+    "mobile_width": 390,
+    "mobile_height": 844,
+    "normal_motion_distinct_frames": 4,
+    "paused_frame_pixels_verified": false
+  },
+  "evidence": {
+    "windows-schema-full": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-schema-full.json",
+    "path-pair": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-path-pair.json",
+    "windows-path-control": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-path-control.json",
+    "cli-check-readonly": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-cli-check-readonly.json",
+    "draft-boundary-audit": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-draft-boundary-audit.json",
+    "browser": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-browser.json",
+    "media-reviewed": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-media-reviewed.json",
+    "capture-privacy-reviewed": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-capture-privacy-reviewed.json",
+    "preview-after-browser": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-preview-after-browser.json",
+    "public-review-reviewed": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-review-reviewed.json"
+  },
+  "data_boundary": {
+    "primary_records": 20,
+    "primary_tasks": 2,
+    "primary_completed_jobs": 6,
+    "primary_audit": 48,
+    "preview_audit": 49,
+    "only_preview_mutation": "One actual existing-user sign-in/session/outbox entry",
+    "operational_records": 0,
+    "model_calls": 0,
+    "training_runs": 0
+  },
+  "preserved_failures": [
+    "Original missing-corpus and heartbeat read failures",
+    "Original deep-path Windows full suite failures",
+    "Controlled deep-path reproduction of the same13cases",
+    "Initial off-by-one diagnostic test",
+    "Two paused CDP screenshot timeouts",
+    "Rejected collapsed-viewport screenshot",
+    "Automatic review rejected a broad README rewrite before execution; a narrower explicit paragraph patch succeeded"
+  ],
+  "publication_at_source_checkpoint": {
+    "github_release": "0.3.3-rc.1",
+    "huggingface_presentation": "0.3.3-rc.1",
+    "system_lab_version": 100,
+    "new_candidate_uploaded": false,
+    "exact_new_archive_verified": false
+  },
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "retrospective": "Controlled path pairs reproduced every previous deep-path failure and the final short-path suite passed without relaxing assertions. A read-only installation diagnostic makes the limitation inspectable. Browser review confirmed draft continuity and unchanged persistent records. Privacy review rejected two unsuitable captures and accepted actual new desktop/mobile images. Publication is a separate gated action.",
+  "next_bounded_prompt": "Read STATUS.md, publication/status.json and this cycle. Preserve all frozen releases and failed receipts. Reconcile the exact current candidate source, engineering run, archive installation and public destination receipts before claiming a new release. The final Windows source suite passed575/21; the earlier deep-path failures are diagnosed, not erased. Keep the CLI environment check read-only and distinguish supported schema from an inspected database. Use actual reviewed desktop/mobile media and preserve their capture/privacy receipts. Do not upload rejected private captures. If release gates pass, publish the distinct candidate to the existing verified GitHub/Hugging Face/System Lab destinations, then independently retrieve downloads and authored media. Otherwise checkpoint the exact missing gate. Next improve actual novice workflow completion and bounded local-model assistance, with current actor permissions, explicit typed confirmations and persistent evidence. Do not substitute animation-state labels for actual motion evidence; the paused screenshot tool timeout remains a limitation. Remain within45minutes and two actual local-model evaluations. No email, contact with people, aircraft commands, self-approval, authority submissions, credential expansion or substantial charges. Keep all original incomplete requirements and operational acceptance explicit. End with a concise retrospective and the next concrete prompt."
+}

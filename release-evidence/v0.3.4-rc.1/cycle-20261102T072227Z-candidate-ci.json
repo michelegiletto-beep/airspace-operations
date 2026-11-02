@@ -1,0 +1,300 @@
+{
+  "checked_at": "2026-11-02 07:58:36 UTC",
+  "version": "0.3.4-rc.1",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "state": "Actual candidate CI completed successfully; release assets independently retrieved",
+  "run": {
+    "id": 41408782094,
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/41408782094",
+    "source": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+    "branch": "release/0.3.4-rc.1",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-02T07:49:31Z",
+    "updated_at": "2026-11-02T07:56:14Z",
+    "attempt": 1
+  },
+  "jobs": [
+    {
+      "id": 125156786253,
+      "name": "containers-postgresql",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41408782094,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Prepare isolated ephemeral configuration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Full software suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Build actual application and spatial database containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Start and verify container health",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Actual running container worker and authenticated API",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "PostgreSQL extensions, concurrency and workflow isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Actual PostgreSQL backup and restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Stop this isolated verification deployment",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22
+        },
+        {
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23
+        },
+        {
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        }
+      ]
+    },
+    {
+      "id": 125157804042,
+      "name": "publish-candidate",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41408782094,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Validate candidate identity without publishing",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Install hash-locked verification dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Record actual successful engineering dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Verify current software and dependency gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Package and verify clean installation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Publish new candidate after exact asset verification",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        },
+        {
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23
+        }
+      ]
+    }
+  ],
+  "actual_engineering_log_excerpts": [
+    "2026-11-02T07:51:06.4328424Z 576 passed, 20 skipped, 3 warnings in 75.60s (0:01:15)",
+    "2026-11-02T07:52:04.8654235Z {'status': 'ok', 'version': '0.3.4-rc.1', 'deployment_profile': 'postgresql', 'operational_acceptance': False}",
+    "2026-11-02T07:52:08.4876797Z {\"actual_running_container_worker_completed_job\": true, \"result\": {\"cases\": [], \"external_actions\": []}, \"audit_valid\": true, \"operational_acceptance\": false}",
+    "2026-11-02T07:52:17.8429127Z 19 passed, 1 warning in 8.37s",
+    "2026-11-02T07:52:20.7382230Z {\"postgresql_restoration_verified\": true, \"audit_count\": 2, \"audit_valid\": true, \"operational_acceptance\": false}"
+  ],
+  "results": {
+    "engineering_linux": {
+      "passed": 576,
+      "skipped": 20,
+      "warnings": 3,
+      "pytest_seconds": 75.6
+    },
+    "postgresql": {
+      "passed": 19,
+      "warnings": 1,
+      "pytest_seconds": 8.37
+    },
+    "publisher_recorded_source_suite": {
+      "passed": 576,
+      "skipped": 20,
+      "warnings": 9,
+      "pytest_seconds": 89.79,
+      "command_elapsed_seconds": 94.65
+    },
+    "publisher_interface": {
+      "passed": 180,
+      "test_files": 25,
+      "command_exit": 0,
+      "build_exit": 0
+    },
+    "exact_archive_installation": {
+      "passed": 576,
+      "skipped": 20,
+      "warnings": 3,
+      "pytest_seconds": 64.01,
+      "success": true
+    },
+    "container_profile": "postgresql",
+    "container_version": "0.3.4-rc.1",
+    "actual_worker_completed_job": true,
+    "worker_audit_valid": true,
+    "postgresql_restoration_verified": true,
+    "restoration_audit_count": 2,
+    "restoration_audit_valid": true
+  },
+  "release": {
+    "id": 431194091,
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1",
+    "archive_bytes": 15377087,
+    "archive_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+    "actual_assets": 9,
+    "manifest_hashed_files": 962,
+    "ci_bound_source_hashes": 217,
+    "sbom_components": 240,
+    "independent_downloads": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json",
+    "archive_integrity": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-archive-integrity.json",
+    "formal_sbom": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-sbom-validation.json"
+  },
+  "method": "Read-only GitHub connector workflow/job/completed-log responses plus anonymously downloaded digest-bound released JSON/ZIP artifacts. Full raw logs are not republished.",
+  "scope": "Engineering job, source/interface/dependency gates, exact archive installation and actual nine-asset publication are separate successful checks for immutable f5dd93a7. Historical failed Windows and browser attempts remain preserved. This receipt does not claim Hugging Face/System Lab034publication or operational acceptance.",
+  "warnings": "Actual warning counts remain distinct for each run. Formal SBOM validation also emits the existing jsonschema.RefResolver deprecation warning; no warning-free claim is made.",
+  "stable_release_allowed": false,
+  "full_original_specification_accepted": false,
+  "operational_acceptance": false,
+  "reviewer_remote_mutations": false,
+  "reviewer_model_calls": 0,
+  "reviewer_operational_writes": false
+}

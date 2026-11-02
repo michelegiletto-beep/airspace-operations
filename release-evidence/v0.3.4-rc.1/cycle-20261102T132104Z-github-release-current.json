@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-02T13:28:48.495886+00:00",
+  "release_id": 431194091,
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "published_at": "2026-11-02T07:56:10Z",
+  "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1",
+  "metadata_url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/releases/tags/v0.3.4-rc.1",
+  "response_sha256": "1891948fc1174cebe22d5890444a3ea21928ba146757e38f0201a704771abe1a",
+  "all9asset_ids_sizes_digests_urls_unchanged": true,
+  "previous_exact_downloads": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json",
+  "scope": "Fresh actual release metadata compared with the completed nine exact downloads. This check does not claim another ZIP download or installation. Site101separately retrieved the exact same archive today.",
+  "authenticated": false,
+  "remote_mutations": false,
+  "success": true
+}

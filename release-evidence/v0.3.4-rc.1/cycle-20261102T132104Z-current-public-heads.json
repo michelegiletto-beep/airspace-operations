@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-11-02T13:25:25.904088+00:00",
+  "scope": "Anonymous current destination heads before any new Hub presentation upload; not an upload or newlegal currentness check.",
+  "heads": [
+    {
+      "kind": "github_main",
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/commits/main",
+      "status": 200,
+      "response_sha256": "b9fc214bae2c06bf9aa933cff76b8a2c39f819b805b99451837ee8a8d5d8c938",
+      "commit": "fef47a96232a4d3e182e3d785031f2ced7e05e8c"
+    },
+    {
+      "kind": "github_034tag",
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.4-rc.1",
+      "status": 200,
+      "response_sha256": "a10b64f6e2f2c611db1c168bcedd3905e60736bab9e54e479d4ead21f54c79a3",
+      "commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb"
+    },
+    {
+      "kind": "model",
+      "url": "https://huggingface.co/api/models/Magic51/system-lab-airspace-shall-router",
+      "status": 200,
+      "response_sha256": "2b1d64492e8800b97c688d1cf9e6ddeb119b27e0e90dcb9be310fdbe80f228be",
+      "commit": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6"
+    },
+    {
+      "kind": "dataset",
+      "url": "https://huggingface.co/api/datasets/Magic51/system-lab-airspace-source-annotations",
+      "status": 200,
+      "response_sha256": "24e71ae038ce35a116b7d933490bac6165ceefabab8960f04cbd87d1ecc4f0c4",
+      "commit": "73c59f1f658b4d295fa53c416c84938e4fee2147"
+    },
+    {
+      "kind": "space",
+      "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+      "status": 200,
+      "response_sha256": "1076099b3a61f150488c3a8bc08b8586181d576a5518deca020bd860df941d54",
+      "commit": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "runtime_stage": "RUNNING",
+      "host": "https://magic51-system-lab-airspace-evaluation.static.hf.space"
+    }
+  ],
+  "remote_mutations": false,
+  "new_model_calls": 0,
+  "success": true
+}

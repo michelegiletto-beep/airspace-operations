@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-02T13:54:09.873582+00:00",
+  "state": "Verified and backed up before owned process restart",
+  "summary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "records_raw_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "backup_database_sha256": "055d3a6f88240515322fbaf075493023627765bd677974da325cbc109897d3a3",
+  "backup_key_sha256": "e3b44c80c00f5d9abe711f7a195281d97cd4fa0997647343a530ffa41ce9bdaa",
+  "source_files_verified": 962,
+  "backup_private": true,
+  "runtime": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3",
+  "old_source_preserved": true,
+  "existing_optional_interpreter_preserved": true,
+  "new_model_calls": 0
+}
