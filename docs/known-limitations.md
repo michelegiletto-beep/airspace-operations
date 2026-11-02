@@ -50,3 +50,6 @@ Planner and pilot roles can prepare mission proposals under the existing server 
 ## 0.3.3 saved-task request recovery
 
 The 0.3.3 candidate separates failed task-list requests from confirmed empty lists and adds a request-scoped retry. Its current full software, browser, exact-archive and publication gates remain pending. Cancelling or ignoring an obsolete browser request does not prove delivery, change stored records or replace server tenant/actor permissions. Retry is an internal read-only list refresh; it does not retry a model action or an authority/provider operation. Existing operational acceptance and original feature gaps remain unchanged.
+
+
+Development0.3.4 is not a published candidate. Draft/context hardening has isolated concurrency and identity-transition checks; the normal App sign-out path already unmounts the companion. A native browser URL-policy stop prevented actual034visual verification and a new capture. No production tenant incident or new model result is asserted. The current downloadable software remains0.3.3.

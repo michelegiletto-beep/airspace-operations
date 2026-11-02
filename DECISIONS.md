@@ -26,3 +26,8 @@ Core runtime remains frozen. Added a separate hash-locked publication-only profi
 ## 0.3.1 companion presentation and release selection
 
 Compare complete task titles and descriptions with whitespace normalisation only; preserve distinct text and the underlying records. Do not use fuzzy deletion for legal or safety guidance. The current contract has no versioned guidance-equivalence metadata, so semantic overlap remains explicit. Use the package version as the UI version source. Size the fixed companion against the layout viewport rather than scrollbar-inclusive `100vw`; actual mobile bounds are checked in the browser. New candidate publication requires a strict version-specific notes and screenshot manifest, rather than inheriting 0.3 materials. Original artwork, model weights, operational rules and schema marker 3 remain unchanged.
+
+
+## 2 November2026 development checkpoint
+
+Use a separate owned F volume checkout after the C volume reached zero free bytes; retain all original releases, runtime data and models. A rejected cache deletion is not retried through another mechanism. Current publication aliases are derived from matching saved/deployed/public receipts. Development0.3.4 stays unreleased until native browser verification and the remaining release gates pass.

@@ -1,3 +1,7 @@
+## Current development checkpoint, 2 November 2026
+
+Published software remains0.3.3-rc.1. Development0.3.4 hardens private drafts and companion context transitions and reconciles publication aliases. Native browser verification stopped because the tool could not identify the Chrome URL. No current0.3.4 screenshot, release, installation acceptance or production promotion is claimed. Read `improvement/cycles/2026-11-02T011950Z-draft-boundaries.json` for exact evidence, retained failures and the next bounded action. The original baseline remains incomplete. Earlier checkpoint sections are historical.
+
 # System Lab Airspace Operations
 
 This checkout contains development candidate **0.3.3-rc.1**. It addresses recovery from a failed saved-task request and keeps failed, loading and confirmed empty states distinct. The read-only request hook is being hardened against outdated responses from a previous request context. Its own source, interface, installation and publication gates remain under verification. No 0.3.3 download or completed validation is claimed here. The current published software remains 0.3.2-rc.1. [Candidate notes](publication/releases/0.3.3-rc.1/release-notes.md) and [publication status](publication/status.json) identify the current scope.

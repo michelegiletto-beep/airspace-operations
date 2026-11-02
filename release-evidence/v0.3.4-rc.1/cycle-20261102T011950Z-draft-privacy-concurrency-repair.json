@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-02T01:36:51.179524+00:00",
+  "state": "Focused verification after confirmed concurrent-render availability repair; development only",
+  "supersedes_for_current_source": "cycle-20261102T011950Z-draft-privacy-engineering.json",
+  "prior_receipt_preserved_unchanged": true,
+  "prior_ref_mutating_source_sha256": {
+    "frontend/src/useDraft.ts": "7bb682a1e54b57963f11fc1573c4173eddefe1488cf5cd2049535adfc6a987fe",
+    "frontend/src/useDraft.test.tsx": "7491d98ba78dbb034ceba81cc77725fa288b37e69f47dac2e0928b53cff94ffe",
+    "frontend/src/CompanionDock.tsx": "1f82493eeb7c9265503b5130c813f1d90af997866b76544751a9cdc82666db4b",
+    "frontend/src/CompanionPrivacy.test.tsx": "3030e2b7985aa6fc07ea4d28100f472232cae06bdc47af774dd88fa416379e25"
+  },
+  "source_sha256": {
+    "frontend/src/useDraft.ts": "28fc6570ff552ae3083e36a5ef6af14d2b77e72bd2d4b81b7f3efdd9bf250053",
+    "frontend/src/useDraft.test.tsx": "8366fb8ce686f92e1a43b2ca22713341224a77beff980ec871b973344ccf9497",
+    "frontend/src/CompanionDock.tsx": "b49a768d388bbec39716f767622288b402f7cace7b0f7784673598e14302071a",
+    "frontend/src/CompanionPrivacy.test.tsx": "436a324901fc7590f5090f078da46e4085afad6530748dd95cdb4646775cbfc5"
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "src/useDraft.test.tsx",
+        "src/CompanionPrivacy.test.tsx",
+        "src/TaskRecovery.test.tsx",
+        "src/CompanionDock.test.tsx",
+        "src/useRemote.test.tsx",
+        "--cache=false"
+      ],
+      "cwd": "frontend",
+      "exit_code": 0,
+      "result": "5 files passed;75 tests passed",
+      "vitest": "4.1.12",
+      "duration_seconds": 9.86
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "-p",
+        "tsconfig.json"
+      ],
+      "cwd": "frontend",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "adversarial_review": {
+    "confirmed_issue": "An uncommitted suspended B render changed a shared identity ref and prevented the still-committed A draft from accepting edits. This was an isolated concurrent-render availability defect, not demonstrated operational data leakage.",
+    "repair": "Draft scope and value use React state adjustment on key changes; stale setters compare snapshot scope identity. Dock parent only keys its child; child layout cleanup retires callbacks at commit/unmount. No identity refs are mutated during render.",
+    "regressions": [
+      "An A to B suspended transition leaves A editable and creates no B draft",
+      "Companion A remains usable when sibling B suspends",
+      "StrictMode effect replay preserves functional updates",
+      "A to B to A stale setters remain rejected",
+      "An old already-started request may finish; it cannot launch a follow-on message or model request after committed identity change",
+      "New actor draft and reply boundaries, role/token remount, normal logout unmount, malformed storage and quota fallback"
+    ]
+  },
+  "operational_boundary": {
+    "normal_App_logout_unmounts": true,
+    "primary_UI_incident_claimed": false,
+    "new_browser_proof": false,
+    "new_model_calls": 0,
+    "training_runs": 0,
+    "primary_data_mutations": 0,
+    "server_permission_changes": false,
+    "stable_release": false,
+    "operational_acceptance": false,
+    "candidate_released": false
+  },
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "success": true
+}

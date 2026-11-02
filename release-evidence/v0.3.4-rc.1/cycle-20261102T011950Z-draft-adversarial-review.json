@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-02T01:35:00.427629+00:00",
+  "scope": "Read-only adversarial engineering review of draft context and companion identity retirement. Private isolated React/jsdom reproduction; no native UI, login, model, operational record or aircraft action.",
+  "reviewed_source_sha256": {
+    "frontend/src/useDraft.ts": "28fc6570ff552ae3083e36a5ef6af14d2b77e72bd2d4b81b7f3efdd9bf250053",
+    "frontend/src/useDraft.test.tsx": "7491d98ba78dbb034ceba81cc77725fa288b37e69f47dac2e0928b53cff94ffe",
+    "frontend/src/CompanionDock.tsx": "b3a9581cb9309a9ecac198e33e951cea229d96e39a4b887a8cb9753058e26f86",
+    "frontend/src/CompanionPrivacy.test.tsx": "3030e2b7985aa6fc07ea4d28100f472232cae06bdc47af774dd88fa416379e25",
+    "frontend/src/CompanionDock.test.tsx": "d057ea3356e9cfebc79db30444d38a6059834046444bb96cb8e46931d6844a02"
+  },
+  "review_findings": [
+    {
+      "severity": "Availability and draft continuity; no established cross-tenant disclosure",
+      "finding": "Render-time mutation of a shared ref invalidates the still-committed actor A draft setter when a concurrent actor B render suspends without committing.",
+      "reproduction": "startTransition requests B; B calls useDraftState then suspends forever. A remains displayed. Editing A expects A after but received A before.",
+      "actual_result": "1 failed, 0 passed;3.26seconds",
+      "test_framework": "Vitest4.1.12, React, jsdom; existing installed locked dependencies",
+      "source_editing": false,
+      "confirmed_scope": "useDraftState minimal isolated reproduction",
+      "related_code_review": "CompanionDock has a related render-time boundary ref mutation; analogous abandoned-render behavior is a code-review concern, not separately reproduced here.",
+      "resolution": "Reported immediately to root and draft owner; owner will fix and rerun regression tests."
+    }
+  ],
+  "reviewed_scenarios": [
+    "Committed A to B to A scope tokens and stale direct/functional setters",
+    "Async conversation creation stops follow-up on retired session",
+    "Token or role change keyed session remount",
+    "Storage read/write failure remains in memory without wrong-key carryover",
+    "Distinct mock sent-message IDs fix a test fixture duplicate-key warning without changing product behavior"
+  ],
+  "limitations": [
+    "Normal App sign-out clears local session/drafts and unmounts the companion. No production exploit across normal sign-out was demonstrated.",
+    "Current App has no Suspense/startTransition identity-change path found in the reviewed source.",
+    "This is a bounded source/test review, not operational acceptance, domain certification, full security assurance or proof of absence of other defects.",
+    "No full suite was rerun by this reviewer; root owns the concurrent integration run.",
+    "The private harness initially failed configuration import resolution; explicit installed config.js import repaired the harness before the actual failing test."
+  ],
+  "models_called": 0,
+  "training_runs": 0,
+  "operational_mutation": false,
+  "external_communication": false,
+  "pending_source_owner_fix": true
+}

@@ -1,3 +1,7 @@
+## Current development checkpoint, 2 November 2026
+
+Published software remains0.3.3-rc.1. Development0.3.4 hardens private drafts and companion context transitions and reconciles publication aliases. Native browser verification stopped because the tool could not identify the Chrome URL. No current0.3.4 screenshot, release, installation acceptance or production promotion is claimed. Read `improvement/cycles/2026-11-02T011950Z-draft-boundaries.json` for exact evidence, retained failures and the next bounded action. The original baseline remains incomplete. Earlier checkpoint sections are historical.
+
 ## Current saved-task recovery checkpoint, 1 November 2026
 
 GitHub [0.3.3-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.3-rc.1) is published and independently retrieved from frozen source `6f8364df25b942d49eb1b4ccaa40f27f70578dbb`. Its 14,192,874-byte ZIP has SHA-256 `067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5`. All nine assets match their actual public digests.

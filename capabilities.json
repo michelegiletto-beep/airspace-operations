@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "release": "0.3.2-rc.1",
+  "release": "0.3.4-rc.1",
   "stable_release": false,
   "features": [
     {
@@ -359,6 +359,20 @@
       "implementation": "scripts/publication_media.py;scripts/publish_candidate.py",
       "evidence": "tests/test_publication_raster_guard.py;tests/test_publication_material.py",
       "limitation": "Checks raster container structure and filename extension, not decoded pixels, evidence truth or rights."
+    },
+    {
+      "capability": "Key-bound private drafts and committed companion context",
+      "status": "Implemented",
+      "implementation": "frontend/src/useDraft.ts;frontend/src/CompanionDock.tsx",
+      "evidence": "frontend/src/useDraft.test.tsx;frontend/src/CompanionPrivacy.test.tsx",
+      "limitation": "Isolated software checks pass; current native browser verification and release promotion remain blocked."
+    },
+    {
+      "capability": "Receipt-bound publication alias reconciliation",
+      "status": "Verified",
+      "implementation": "scripts/publication_checkpoint.py",
+      "evidence": "tests/test_publication_checkpoint.py;release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-retrieval.json",
+      "limitation": "Binds current software presentation records only; does not establish operational acceptance or source currentness."
     }
   ]
 }
