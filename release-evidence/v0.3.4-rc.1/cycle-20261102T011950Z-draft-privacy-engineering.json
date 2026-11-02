@@ -1,0 +1,68 @@
+{
+  "at": "2026-11-02T01:32:53.029653+00:00",
+  "state": "Verified focused engineering increment; no browser release proof",
+  "source_sha256": {
+    "frontend/src/useDraft.ts": "7bb682a1e54b57963f11fc1573c4173eddefe1488cf5cd2049535adfc6a987fe",
+    "frontend/src/useDraft.test.tsx": "7491d98ba78dbb034ceba81cc77725fa288b37e69f47dac2e0928b53cff94ffe",
+    "frontend/src/CompanionDock.tsx": "1f82493eeb7c9265503b5130c813f1d90af997866b76544751a9cdc82666db4b",
+    "frontend/src/CompanionPrivacy.test.tsx": "3030e2b7985aa6fc07ea4d28100f472232cae06bdc47af774dd88fa416379e25"
+  },
+  "results": [
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "src/useDraft.test.tsx",
+        "src/CompanionPrivacy.test.tsx",
+        "src/TaskRecovery.test.tsx",
+        "src/CompanionDock.test.tsx",
+        "src/useRemote.test.tsx",
+        "--cache=false"
+      ],
+      "cwd": "frontend",
+      "started_at": "2026-11-02T01:32:32.111788+00:00",
+      "elapsed_seconds": 13.081385,
+      "exit_code": 0,
+      "stdout": "\n RUN  v4.1.12 F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4/frontend\n\n\n Test Files  5 passed (5)\n      Tests  72 passed (72)\n   Start at  02:32:33\n   Duration  11.29s (transform 15.95s, setup 0ms, import 19.83s, tests 6.44s, environment 12.00s)\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "-p",
+        "tsconfig.json"
+      ],
+      "cwd": "frontend",
+      "started_at": "2026-11-02T01:32:45.193224+00:00",
+      "elapsed_seconds": 7.795206,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "red_before_fix": {
+    "scope": "Actual previous useDraft.ts imported in isolated software harness; no production records",
+    "observed_failures": 2,
+    "observations": [
+      "Actor A draft appeared on the first actor B render and was written into actor B storage",
+      "A stale actor A setter changed the actor B draft"
+    ],
+    "normal_app_boundary": "App sign-out unmounts the companion; this is not evidence of a live cross-tenant incident."
+  },
+  "constraints": {
+    "new_model_calls": 0,
+    "training_runs": 0,
+    "primary_data_mutations": 0,
+    "backend_permission_changes": false,
+    "browser_actions": false,
+    "release_published": false
+  },
+  "retained_verification_attempts": [
+    "Initial private Dock fixture inherited an unrelated workspace PostCSS configuration; no product failure claimed.",
+    "Initial new-test typecheck found optional RequestInit values; test guards were corrected before final checks."
+  ],
+  "success": true
+}

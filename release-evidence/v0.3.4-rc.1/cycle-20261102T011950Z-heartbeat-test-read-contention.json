@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-02T01:48:50.499808+00:00",
+  "scope": "Test-only repair of independent heartbeat timestamp observation during concurrent atomic replacement on Windows NTFS. Product monitor and worker code unchanged.",
+  "filesystem_observed": {
+    "drive": "F",
+    "filesystem": "NTFS",
+    "drive_type": "Fixed",
+    "health": "Healthy"
+  },
+  "changed_source": "tests/test_worker_health.py",
+  "source_sha256": "29a980dfba691b0553afbaf8c90bc7ad8a29ab34ffe5fc40a60c06be37f09543",
+  "prior_head_source_sha256": "758ab2a6565e4505752d0e3062f3b861d7efed3d0a54d2733c062a916c287a6b",
+  "root_initial_full_suite_report": {
+    "passed": 554,
+    "skipped": 21,
+    "failed": 2,
+    "failures": [
+      "Missing actual sources/corpus.json prerequisite",
+      "Independent direct read during real heartbeat daemon update raised transient PermissionError13"
+    ],
+    "preserved": true,
+    "this_reviewer_did_not_execute_that_full_run": true
+  },
+  "actual_focused_command": "PYTHONPATH=backend TEMP=F:/SystemLabAirspaceOperationsEngineering/temp TMP=F:/SystemLabAirspaceOperationsEngineering/temp <existing C032venv>/Scripts/python.exe -m pytest -q tests/test_worker_health.py",
+  "focused_actual_result": {
+    "exit_code": 0,
+    "passed": 21,
+    "failed": 0,
+    "warnings": 1,
+    "elapsed_seconds": 14.45,
+    "warning": "Existing StarletteDeprecationWarning: httpx with starlette.testclient"
+  },
+  "fault_proofs": [
+    "One or two transient injected Windows PermissionError reads recover the changed timestamp with exactly denials plus one reads",
+    "Persistent injected denial consumes the same2second deadline, leaves timestamp unchanged, and the original timestamp-change assertion still fails",
+    "Non-Windows PermissionError propagates instead of receiving Windows contention handling"
+  ],
+  "unchanged_assertions": [
+    "Real daemon is alive and daemonized",
+    "Main thread does not invoke a refresh",
+    "Actual timestamp must change before existing2second deadline",
+    "PID and record keys must match",
+    "Actual product health check must pass",
+    "Daemon stops and no temporary write files remain"
+  ],
+  "limits": [
+    "No skip, unconditional success, extended or unbounded timeout, product health relaxation, fabricated operational record or external action was added",
+    "The initial synchronous sample read and JSON schema failures are not converted into a passing observation",
+    "Full source integration, remoteCI and native browser gates remain separate; this receipt does not mark the full gate or release green"
+  ],
+  "product_code_changed": false,
+  "new_model_calls": 0,
+  "new_training": false,
+  "operational_data_writes": false,
+  "full_gate_claimed_passed": false,
+  "release_published": false
+}

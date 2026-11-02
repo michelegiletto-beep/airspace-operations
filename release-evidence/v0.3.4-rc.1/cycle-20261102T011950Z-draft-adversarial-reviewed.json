@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-11-02T01:37:10.420382+00:00",
+  "state": "Concurrency finding repaired; independent minimal regression passes. Native browser verification and publication remain blocked.",
+  "scope": "Independent bounded source review and private isolated React test, without native UI, login, model call, operational mutation or source editing by this reviewer.",
+  "earlier_review_receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-review.json",
+  "earlier_receipt_clarification": "The earlier summary captured source hashes after the owner had begun the concurrency fix. Those summary-time hashes do not identify the code that produced the earlier failing test. Pre-fix hashes below come from the separately preserved initial owner engineering receipt. Both failed proof and corrected proof are retained.",
+  "pre_fix_hash_evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-engineering.json",
+  "pre_fix_source_sha256": {
+    "frontend/src/useDraft.ts": "7bb682a1e54b57963f11fc1573c4173eddefe1488cf5cd2049535adfc6a987fe",
+    "frontend/src/CompanionDock.tsx": "1f82493eeb7c9265503b5130c813f1d90af997866b76544751a9cdc82666db4b"
+  },
+  "current_reviewed_source_sha256": {
+    "frontend/src/useDraft.ts": "28fc6570ff552ae3083e36a5ef6af14d2b77e72bd2d4b81b7f3efdd9bf250053",
+    "frontend/src/useDraft.test.tsx": "8366fb8ce686f92e1a43b2ca22713341224a77beff980ec871b973344ccf9497",
+    "frontend/src/CompanionDock.tsx": "b49a768d388bbec39716f767622288b402f7cace7b0f7784673598e14302071a",
+    "frontend/src/CompanionPrivacy.test.tsx": "436a324901fc7590f5090f078da46e4085afad6530748dd95cdb4646775cbfc5",
+    "frontend/src/CompanionDock.test.tsx": "d057ea3356e9cfebc79db30444d38a6059834046444bb96cb8e46931d6844a02"
+  },
+  "independent_regression": {
+    "scenario": "Committed actor A input remains editable while a startTransition render of actor B calls useDraftState and suspends forever without committing.",
+    "initial_actual_result": {
+      "failed": 1,
+      "passed": 0,
+      "duration_seconds": 3.26,
+      "expected": "A after",
+      "received": "A before"
+    },
+    "after_owner_fix_actual_result": {
+      "failed": 0,
+      "passed": 1,
+      "duration_seconds": 2.35
+    },
+    "same_private_test_reused": true,
+    "tested_fixed_useDraft_sha256": "28fc6570ff552ae3083e36a5ef6af14d2b77e72bd2d4b81b7f3efdd9bf250053",
+    "framework": "Vitest4.1.12 with actual installed React and jsdom",
+    "test_input_kind": "Isolated software test strings; no operational records or customer data",
+    "harness_startup_attempt": "First config import failed to resolve the installed package export. Explicit installed dist/config.js import repaired the harness before the real test executed."
+  },
+  "source_review": {
+    "draft_fix": "Scope changes use state local to the render, so an abandoned render does not mutate the committed identity ref. Current setter checks the committed scope token and layout cleanup retires an unmounted instance.",
+    "companion_fix": "Parent is a pure keyed session boundary. Child retirement is in a layout-effect cleanup, so an abandoned replacement render does not retire the committed session. Awaited action continuations check that boundary before follow-up state or change callbacks.",
+    "fixture_warning": "Each isolated mocked sent-message POST now supplies its own message ID and consistent job message_id. Product message IDs and backend behavior were not changed for this fixture correction.",
+    "other_reviewed_paths": [
+      "Committed A to B to A stale direct and functional setters",
+      "Token and role keyed remount",
+      "Storage read/write failure and malformed string data",
+      "Late conversation-create response does not send a message for the replacement identity",
+      "Existing operator confirmation and server permission/version checks remain in force"
+    ]
+  },
+  "critical_blockers_found_after_fix": [],
+  "limitations": [
+    "Normal App sign-out already clears the local session/drafts and unmounts the companion. No live cross-tenant incident or exploit was demonstrated.",
+    "No Suspense/startTransition identity-change path was found in the current App. The reproduced issue concerned component concurrency and draft availability.",
+    "The independent regression covers the shared draft hook; the owner separately added companion Suspense and StrictMode cases. These owner results must remain distinct from this reviewer single-test run.",
+    "Native browser verification is unavailable this cycle. No screenshot, end-to-end operational acceptance or new candidate publication is inferred from source/tests.",
+    "This is not domain approval, certification, complete security assurance or proof that all defects are absent."
+  ],
+  "new_model_calls": 0,
+  "new_training_runs": 0,
+  "reviewer_source_edits": false,
+  "operational_data_writes": false,
+  "success": true
+}

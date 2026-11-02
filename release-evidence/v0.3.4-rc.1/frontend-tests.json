@@ -1,0 +1,13 @@
+{
+  "name": "frontend-tests",
+  "command": [
+    "npm.cmd",
+    "test"
+  ],
+  "cwd": "frontend",
+  "started_at": "2026-11-02T01:45:01.255727+00:00",
+  "elapsed_seconds": 141.24,
+  "exit_code": 0,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.4-rc.1 test\n> vitest run\n\n\n RUN  v4.1.12 F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4/frontend\n\n\n Test Files  25 passed (25)\n      Tests  180 passed (180)\n   Start at  02:45:07\n   Duration  37.89s (transform 27.98s, setup 0ms, import 43.57s, tests 22.65s, environment 55.73s)\n\n",
+  "stderr": "npm notice\nnpm notice New major version of npm available! 10.9.2 -> 12.2.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1\nnpm notice To update run: npm install -g npm@12.2.1\nnpm notice\n"
+}

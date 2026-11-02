@@ -1,0 +1,184 @@
+{
+  "checked_at": "2026-11-02 01:56:33 UTC",
+  "state": "Completed development CI; candidate remains unreleased",
+  "version": "0.3.4-rc.1",
+  "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+  "branch": "codex/airspace-draft-boundaries-034",
+  "run": {
+    "id": 41374729360,
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/41374729360",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-02T01:52:33Z",
+    "updated_at": "2026-11-02T01:55:00Z",
+    "attempt": 1
+  },
+  "jobs": [
+    {
+      "id": 125052396512,
+      "name": "containers-postgresql",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41374729360,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Prepare isolated ephemeral configuration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Full software suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Build actual application and spatial database containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Start and verify container health",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Actual running container worker and authenticated API",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "PostgreSQL extensions, concurrency and workflow isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Actual PostgreSQL backup and restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Stop this isolated verification deployment",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22
+        },
+        {
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23
+        },
+        {
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        }
+      ]
+    },
+    {
+      "id": 125052997466,
+      "name": "publish-candidate",
+      "status": "completed",
+      "conclusion": "skipped",
+      "run_id": 41374729360,
+      "logs_url": null,
+      "steps": null
+    }
+  ],
+  "actual_test_output": [
+    "2026-11-02T01:53:45.0668658Z 561 passed, 20 skipped, 3 warnings in 57.81s",
+    "2026-11-02T01:54:44.2719526Z 19 passed, 1 warning in 5.86s"
+  ],
+  "results": {
+    "linux_python_passed": 561,
+    "linux_python_skipped": 20,
+    "linux_python_warnings": 3,
+    "linux_python_seconds": 57.81,
+    "postgresql_passed": 19,
+    "postgresql_warnings": 1,
+    "postgresql_seconds": 5.86,
+    "container_version": "0.3.4-rc.1",
+    "container_profile": "postgresql",
+    "container_worker_completed_job": true,
+    "container_worker_audit_valid": true,
+    "postgresql_restoration_verified": true,
+    "restoration_audit_count": 2,
+    "restoration_audit_valid": true
+  },
+  "evidence_sources": {
+    "workflow_run": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/41374729360",
+    "jobs": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/41374729360/jobs",
+    "job_logs": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/jobs/125052396512/logs",
+    "method": "Read-only GitHub connector responses; decoded completed job log inspected. Full raw logs are not republished to minimise unnecessary configuration and account data."
+  },
+  "warnings": [
+    "The full Linux suite reported one Starlette TestClient/httpx deprecation warning and two boolean bitwise-inversion deprecation warnings.",
+    "The PostgreSQL suite reported the same Starlette deprecation warning. Passing CI is not a warning-free claim."
+  ],
+  "scope": "Actual Ubuntu24.04 engineering job for the independently retrieved development source, including running containers, authenticated worker/API, PostgreSQL isolation and backup/restoration. The publisher job was explicitly skipped on the codex development branch.",
+  "retained_local_failure": {
+    "full_windows_suite": "554passed,2failed,21skipped; original output is preserved in python-tests.json",
+    "subsequent_focused_repairs": "The missing corpus was prepared and its source-grounded test passed; the repaired Windows heartbeat suite passed21tests. No successful full Windows rerun is claimed."
+  },
+  "release_boundaries": {
+    "browser_proof": "Blocked by the recorded native Chrome URL policy stop; no new screenshot or browser acceptance proof.",
+    "github_release": false,
+    "release_tag": false,
+    "downloadable_archive": false,
+    "clean_archive_installation": false,
+    "huggingface_upload": false,
+    "system_lab_update": false,
+    "production_or_operational_acceptance": false,
+    "source_checkpoint_only": true
+  },
+  "operational_acceptance": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_mutations_by_reviewer": false,
+  "operational_writes_by_reviewer": false
+}

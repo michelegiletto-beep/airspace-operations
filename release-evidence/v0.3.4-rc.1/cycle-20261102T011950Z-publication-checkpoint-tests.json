@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-11-02T01:31:56.364954+00:00",
+  "scope": "Pure receipt-bound current publication reconciliation. No network or operational action in the utility. Candidate0.3.4 remains Prepared.",
+  "command": "C:/Users/gilet/Documents/ChatGPT/SYSTEM LABS/products/airspace-operations/.venv/Scripts/python.exe -B -m pytest tests/test_publication_checkpoint.py -q -p no:cacheprovider",
+  "exit_code": 0,
+  "stdout": ".......... [100%]\n10 passed in 0.32s\n",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "remote_mutations": false,
+  "existing_primary_files_modified": false,
+  "previous_verified_snapshots_unchanged": true,
+  "top_release": "0.3.3-rc.1",
+  "development_candidate_published": false,
+  "copied_public_receipts": [
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-archive-integrity.json",
+      "bytes": 1060,
+      "sha256": "1b744a31529089106788a411a06794fb11f9423f72d1b0f49e6a233c28efb9f2"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "bytes": 6367,
+      "sha256": "914c38b48b9f0c488528a4530d05965882612fb4982bf3b8792796f9a6f9f7d4"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-model-53ab0273-reviewed-lfs.json",
+      "bytes": 11337,
+      "sha256": "8395c0be3b9b3f69913e3f3237a20d7591d04a21c97e1d64b9b1ddab0572a8b7"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "bytes": 19268,
+      "sha256": "df3a510a6df54c0f9fe5dcb0589982ef065da83827083f204cccb37d161000a1"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
+      "bytes": 18485,
+      "sha256": "f1ae920d21177f553be5d2df729c2075e469bafb7c3aa1a5be1e3ec59e610e23"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-reconciliation.json",
+      "bytes": 13901,
+      "sha256": "3f93f0e6bf5fdfa50eb5986d79c015a6a1e9cd921f16150293640e50695df071"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-public-downloads.json",
+      "bytes": 6169,
+      "sha256": "78d187c69884e0e7093c5752c566671652c89f70def661017cf478941cf8f6ea"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-public-media.json",
+      "bytes": 800,
+      "sha256": "f796deae6030d8da65fe0d9a8da4905ab8cb57e012400238bf1ea629255330a7"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-review-index.json",
+      "bytes": 8530,
+      "sha256": "3e53a7d75d407a453c691e5b457b6a728164f3097c14f45c4dfa7c11ef2d7166"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-sbom-validation.json",
+      "bytes": 898,
+      "sha256": "98ba964b889abda036f0c7f7aa9de889782a57dba8fbf8744984ecfc9a5ccd61"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-site100-public.json",
+      "bytes": 69129,
+      "sha256": "a0c891ae3c173662d3b102b7961491ec4188798e089b15f87e4e556e2339f3ba"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-verify-space-live.json",
+      "bytes": 6724,
+      "sha256": "c1251df33fde65317f44d3b82bbe91acf685b40e3d5c6d67448a0198ad5b2764"
+    }
+  ],
+  "code_hashes": {
+    "scripts/publication_checkpoint.py": "bbcaeed4f80b1daa00517c03c46a096b7730314f725ec0689aeaa4e5042b9c70",
+    "tests/test_publication_checkpoint.py": "dd6bb8121c4332e48d842031956cc0fa2b4be26c90436222adb1f3acc3e74f95"
+  },
+  "retained_preparation_failure": "An initial status-application assertion expected the older033live-evidence path while the reconciler intentionally selected the fresh same-version receipt. It failed before status write. The comparison was corrected without changing the frozen evidence;10regression tests then passed.",
+  "limitations": [
+    "This is publication metadata verification, not new browser, installation, aviation certification or operational acceptance evidence.",
+    "Fresh runtime restart evidence is root-owned; the current environment text deliberately cites only the previous actual033installed verification.",
+    "The new candidate has no claimed release assets, source commit, GitHub release or HF/Site upload."
+  ]
+}

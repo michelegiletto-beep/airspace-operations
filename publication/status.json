@@ -254,7 +254,7 @@
   ],
   "states_reached_scope": "Destination-specific evidence is authoritative. System Lab remains at verified version 100 for 0.3.3-rc.1. Hugging Face model presentation: 0.3.3-rc.1 at `53ab0273fe6f3a11297b6243bbfa8fc0032209e6`; Hugging Face dataset presentation: 0.3.3-rc.1 at `73c59f1f658b4d295fa53c416c84938e4fee2147`; Hugging Face recorded evaluation Space: 0.3.3-rc.1 at `b92dfde086f057b3836eed4790f3e0f7f7c81655`. Each destination retains its own receipt; no upload is inferred from source preparation.",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-11-02T01:26:22.804550+00:00",
+  "last_checked_at": "2026-11-02T02:03:07.572654+00:00",
   "release_blockers": [],
   "candidate_ci": {
     "commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
@@ -279,7 +279,7 @@
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
     "version": "0.3.4-rc.1",
-    "state": "Prepared",
+    "state": "Unreleased development source; CI passed, browser and Windows full verification blocked",
     "published": false,
     "changes": [
       "Reconciled current publication aliases with exact canonical receipts",
@@ -295,9 +295,36 @@
     "new_candidate_screenshot": null,
     "provider_presentation_uploaded": false,
     "blockers": [
-      "The first native Chrome get_window_state call could not determine the current URL and stopped under the Computer Use URL policy. Root stopped all browser input for this turn and used no fallback.",
-      "A new0.3.4browser workflow proof and actual screenshot are unavailable. The engineering candidate must not be released or described as operationally accepted."
-    ]
+      "Native browser URL-policy stop; no current0.3.4visual proof or capture",
+      "Last full Windows suite still fails; investigate recorded deep temporary paths",
+      "No0.3.4exact archive, clean installation or publication gates executed"
+    ],
+    "source_uploaded": true,
+    "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+    "branch": "codex/airspace-draft-boundaries-034",
+    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/ea47156010c4c7ec0806a546ac0ee93ab507a361",
+    "source_evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-source-retrieval.json",
+    "development_ci": {
+      "run": 41374729360,
+      "state": "success",
+      "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+      "linux_passed": 561,
+      "linux_skipped": 20,
+      "postgresql_passed": 19,
+      "publisher": "Skipped",
+      "evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-ci.json"
+    },
+    "local_canonical_full_suite_passed": false,
+    "local_post_repair_full_attempt": {
+      "exit_code": 1,
+      "passed": 547,
+      "failed": 6,
+      "errors": 7,
+      "skipped": 21,
+      "seconds": 209.746,
+      "evidence": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+      "limitation": "Several failing Windows file paths exceed 259 characters under the selected deep C test directory. This is an observed path-length correlation requiring diagnosis, not a waived gate or a passing full run."
+    }
   },
   "known_presentation_defects": [
     "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
@@ -346,21 +373,20 @@
   "documentation_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
-    "commit": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
-    "exact_files": 40,
-    "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
-    "scope": "Published documentation and evidence; frozen software source remains 6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
+    "commit": "eefa8aa542fc9f8706ea3666f20ef0b223592c6f",
+    "exact_files": 15,
+    "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-retrieval.json",
+    "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
   },
   "publication_access_blockers": [],
-  "latest_cycle": "improvement/cycles/2026-11-01T105140Z-task-recovery.json",
+  "latest_cycle": "improvement/cycles/2026-11-02T011950Z-draft-boundaries.json",
   "publication_metadata_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
-    "commit": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
-    "exact_files": 40,
-    "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
-    "scope": "Previously published metadata payload; any new corrective payload requires its own later publication receipt",
-    "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
+    "commit": "eefa8aa542fc9f8706ea3666f20ef0b223592c6f",
+    "exact_files": 15,
+    "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-retrieval.json",
+    "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
   },
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",

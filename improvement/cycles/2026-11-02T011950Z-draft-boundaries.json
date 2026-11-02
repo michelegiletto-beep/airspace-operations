@@ -1,0 +1,124 @@
+{
+  "cycle_id": "2026-11-02T011950Z-draft-boundaries",
+  "triggered_at": "2026-11-02T01:19:50.956Z",
+  "checkpoint_at": "2026-11-02T02:03:07.572654+00:00",
+  "state": "Development source independently retrieved and CI passed; Windows full verification and native browser remain blocked",
+  "starting_main": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
+  "published_software": "0.3.3-rc.1",
+  "development_candidate": "0.3.4-rc.1",
+  "engineering_checkout": "F:\\SystemLabAirspaceOperationsEngineering\\candidate-0.3.4",
+  "requirements": [
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-004",
+    "ASO3-005",
+    "ASO3-006",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "implemented": [
+    "Key-bound draft state and stale-setter rejection",
+    "Companion identity remount and committed-session callback retirement",
+    "Concurrent suspended identity transition preserves the committed draft",
+    "Removal of one decorative empty-state dash and replacement of one generic companion prompt",
+    "Unique accepted-message identifiers in an isolated retry fixture",
+    "Receipt-bound current publication aliases with historical snapshot preservation"
+  ],
+  "evidence": {
+    "core": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-privacy-concurrency-repair.json",
+    "adversarial": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-draft-adversarial-reviewed.json",
+    "publication_tests": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-publication-checkpoint-tests-final.json",
+    "primary_recovery": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-primary-recovered-reviewed.json",
+    "public_review": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-review-index.json",
+    "metadata_publication": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-retrieval.json"
+  },
+  "metadata_commit": "eefa8aa542fc9f8706ea3666f20ef0b223592c6f",
+  "metadata_files_exact": 15,
+  "focused_verification": {
+    "draft_and_companion_tests_passed": 75,
+    "typescript_exit": 0,
+    "publication_checkpoint_tests_passed": 12,
+    "publisher_tests_passed": 136,
+    "publisher_tests_skipped": 1
+  },
+  "browser_blocker": "First native Chrome get_window_state was stopped because the tool could not determine the browser URL with enough confidence to enforce policy. No subsequent browser input or fallback automation was attempted.",
+  "new_screenshot": null,
+  "new_release_published": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_records_created": 0,
+  "primary_login_count": 0,
+  "normal_application_boundary": "Normal App sign-out already unmounts the companion. Isolated prop-transition tests demonstrate a hardening and draft-continuity issue, not an observed production cross-tenant disclosure.",
+  "resource_events": [
+    "C volume reached zero free bytes and one new verifier copy failed before completion; existing evidence was preserved.",
+    "Native cache removal was rejected by automatic policy review before execution. No alternative deletion mechanism was attempted.",
+    "A new owned F volume checkout was created; existing C source, release archives, databases, model files and unrelated projects were preserved.",
+    "C free space later increased without a confirmed cleanup by this run; no reclaimed-byte claim is made."
+  ],
+  "retained_failures": [
+    "Two original isolated draft assertions failed before the fix.",
+    "A suspended concurrent render exposed an availability regression in the first attempted implementation; peer reproduction and the superseding fix are retained.",
+    "An initial typecheck of a new test found optional RequestInit references and passed after correction.",
+    "Initial recovery digest/interpreter comparisons used different representations; the reviewed receipt verifies exact raw rows and the actual venv launcher.",
+    "The initial new public-review summary timestamp was corrected in a separate append-only index."
+  ],
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "retrospective": "The current0.3.3 service was recovered without new records or audit entries. Publication alias errors were corrected and fifteen files independently retrieved. Draft/context hardening passed180interface tests and full Linux/container/PostgreSQL CI; adversarial review repaired an abandoned-render regression. Both full Windows attempts remain failed and preserved. Native browser policy prevented visual verification. These unresolved gates prevent a0.3.4release.",
+  "next_bounded_prompt": "Read STATUS.md, publication/status.json and this cycle. Preserve published0.3.3, development source ea47156010c4c7ec0806a546ac0ee93ab507a361 and all failed receipts. Investigate the six failures and seven errors in the last Windows full run, measuring the deep temporary-path failures and comparing a short, uniquely owned test directory; do not infer that Linux CI or targeted passes satisfy this gate. Run corpus preparation before a fresh checkout suite. Resume browser work only through a supported tool that can enforce URL policy, without evading the recorded native stop. Verify actual same-account draft continuity, actor boundaries, tasks, typed confirmations and motion preferences through browser, API and persistent records. Only after current engineering, rights, secret, browser, exact-archive and installation gates pass, publish a distinct candidate and retrieve every destination. Otherwise checkpoint the exact blocker. Limit the run to45minutes and two actual local-model evaluations; no email, human contact, aircraft commands, self-approval, external submissions, credential expansion or substantial charges. Preserve all incomplete original requirements and finish with a retrospective and next action.",
+  "local_full_attempt": {
+    "passed": 554,
+    "failed": 2,
+    "skipped": 21,
+    "seconds": 753.346,
+    "evidence": "release-evidence/v0.3.4-rc.1/python-tests.json",
+    "failures": [
+      "Missing expanded sources/corpus.json in the new checkout",
+      "Transient Windows raw heartbeat read denial in an independent test"
+    ]
+  },
+  "targeted_repairs": {
+    "corpus_expansion": "9833 actual permitted passages, no network or training",
+    "corpus_reference_test": "1 passed; release-evidence/v0.3.4-rc.1/corpus-repair.xml",
+    "windows_heartbeat_tests": "21 passed; release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-heartbeat-test-read-contention.json",
+    "full_suite_after_repairs": "Not rerun locally; do not replace the initial failed receipt or infer a full pass"
+  },
+  "interface_checks": {
+    "passed": 180,
+    "test_files": 25,
+    "build_exit": 0,
+    "duplicate_key_warnings": false,
+    "limitation": "Recorded test runner output, not a current native browser run"
+  },
+  "dependency_audits": {
+    "core_exit": 0,
+    "frontend_exit": 0,
+    "optional_neural_exit": 0
+  },
+  "development_branch": "codex/airspace-draft-boundaries-034",
+  "development_source_state": "Uploaded and independently retrieved; no new tagged release",
+  "development_source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+  "development_ci": {
+    "run": 41374729360,
+    "state": "success",
+    "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+    "linux_passed": 561,
+    "linux_skipped": 20,
+    "postgresql_passed": 19,
+    "publisher": "Skipped",
+    "evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-ci.json"
+  },
+  "local_post_repair_full_attempt": {
+    "exit_code": 1,
+    "passed": 547,
+    "failed": 6,
+    "errors": 7,
+    "skipped": 21,
+    "seconds": 209.746,
+    "evidence": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+    "limitation": "Several failing Windows file paths exceed 259 characters under the selected deep C test directory. This is an observed path-length correlation requiring diagnosis, not a waived gate or a passing full run."
+  },
+  "local_canonical_full_suite_passed": false
+}
