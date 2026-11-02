@@ -1,0 +1,247 @@
+{
+  "checked_at": "2026-11-02T01:26:22.804823+00:00",
+  "state": "Review findings only; no source/status mutation performed",
+  "publication_status_sha256_at_public_main": "bf6baf7833ba6c1588da22baa3c2ac255cfd358efb91757f9331618b9dbf0538",
+  "github_main": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
+  "corrections": [
+    {
+      "path": "/destinations/2/saved_version_id",
+      "observed": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_2b9c5421282c8191be759e7adf9afab0",
+      "proposed": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_92b5891849208191b095937eaa8f99fd",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site-native.json",
+      "reason": "The native saved/deployed100receipt binds the actual version ID; current field is99."
+    },
+    {
+      "path": "/destinations/2/prepared_source_commit",
+      "observed": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+      "proposed": "3639b489b2c36df8846c39f80f713c8733149f4c",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site-native.json",
+      "reason": "Current100source is3639; ed44is the preserved99source."
+    },
+    {
+      "path": "/destinations/2/remote_source_commit",
+      "observed": "ed44e6bde44c6213862fe952250a6a804d02d1f0",
+      "proposed": "3639b489b2c36df8846c39f80f713c8733149f4c",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-site-native.json",
+      "reason": "Current100source is3639; ed44is the preserved99source."
+    },
+    {
+      "path": "/destinations/2/prior_release",
+      "observed": "0.3.1-rc.1",
+      "proposed": "0.3.2-rc.1",
+      "evidence": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-site99-public.json",
+      "reason": "The immediately previous verified Site is99/0.3.2."
+    },
+    {
+      "path": "/destinations/3/current_published_revision",
+      "observed": "d2bba8b30845cced9293cabe0b7287c481f6cee7",
+      "proposed": "53ab0273fe6f3a11297b6243bbfa8fc0032209e6",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "reason": "Current metadata and independently retrieved exact033files agree."
+    },
+    {
+      "path": "/destinations/3/prepared_application_version",
+      "observed": "0.3.2-rc.1",
+      "proposed": "0.3.3-rc.1",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "reason": "Published033presentation was prepared from the033pack."
+    },
+    {
+      "path": "/destinations/3/prepared_files_manifest",
+      "observed": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "proposed": "publication/releases/0.3.3-rc.1/huggingface/manifest.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "reason": "The033pack manifest is independently retrieved in this checkpoint."
+    },
+    {
+      "path": "/destinations/3/preparation_evidence",
+      "observed": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "proposed": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-publication.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "reason": "This actual033publication receipt names the exact current pack and heads."
+    },
+    {
+      "path": "/destinations/3/prior_release",
+      "observed": "0.3.1-rc.1",
+      "proposed": "0.3.2-rc.1",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "reason": "The direct prior presentation is032."
+    },
+    {
+      "path": "/destinations/3/prior_revision",
+      "observed": "a6a24fc396ce7e86eb9f9c096231f0378e355ef7",
+      "proposed": "d2bba8b30845cced9293cabe0b7287c481f6cee7",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-model-53ab0273-reviewed-lfs.json",
+      "reason": "The displayed direct parent is verified; previous field refers to031."
+    },
+    {
+      "path": "/destinations/4/current_published_revision",
+      "observed": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+      "proposed": "73c59f1f658b4d295fa53c416c84938e4fee2147",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "reason": "Current metadata and independently retrieved exact033files agree."
+    },
+    {
+      "path": "/destinations/4/prepared_application_version",
+      "observed": "0.3.2-rc.1",
+      "proposed": "0.3.3-rc.1",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "reason": "Published033presentation was prepared from the033pack."
+    },
+    {
+      "path": "/destinations/4/prepared_files_manifest",
+      "observed": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "proposed": "publication/releases/0.3.3-rc.1/huggingface/manifest.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "reason": "The033pack manifest is independently retrieved in this checkpoint."
+    },
+    {
+      "path": "/destinations/4/preparation_evidence",
+      "observed": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "proposed": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-publication.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "reason": "This actual033publication receipt names the exact current pack and heads."
+    },
+    {
+      "path": "/destinations/4/prior_release",
+      "observed": "0.3.1-rc.1",
+      "proposed": "0.3.2-rc.1",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "reason": "The direct prior presentation is032."
+    },
+    {
+      "path": "/destinations/4/prior_revision",
+      "observed": "88c470dd521d63a90a6361e762e73167823317a1",
+      "proposed": "2d6dff6b1b1a17d4aa096ee36eb9da6be8f63fca",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "reason": "The displayed direct parent is verified; previous field refers to031."
+    },
+    {
+      "path": "/destinations/5/current_published_revision",
+      "observed": "e690dc6b5f8ef26f700188300475b668dae2500e",
+      "proposed": "b92dfde086f057b3836eed4790f3e0f7f7c81655",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "reason": "Current metadata and independently retrieved exact033files agree."
+    },
+    {
+      "path": "/destinations/5/prepared_application_version",
+      "observed": "0.3.2-rc.1",
+      "proposed": "0.3.3-rc.1",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "reason": "Published033presentation was prepared from the033pack."
+    },
+    {
+      "path": "/destinations/5/prepared_files_manifest",
+      "observed": "publication/releases/0.3.2-rc.1/huggingface/manifest.json",
+      "proposed": "publication/releases/0.3.3-rc.1/huggingface/manifest.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "reason": "The033pack manifest is independently retrieved in this checkpoint."
+    },
+    {
+      "path": "/destinations/5/preparation_evidence",
+      "observed": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-hub-finalized.json",
+      "proposed": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-publication.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "reason": "This actual033publication receipt names the exact current pack and heads."
+    },
+    {
+      "path": "/destinations/5/prior_release",
+      "observed": "0.3.1-rc.1",
+      "proposed": "0.3.2-rc.1",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "reason": "The direct prior presentation is032."
+    },
+    {
+      "path": "/destinations/5/prior_revision",
+      "observed": "7aae1c50c4a7556d3f067bcf8992cf8219fa51cf",
+      "proposed": "e690dc6b5f8ef26f700188300475b668dae2500e",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "reason": "The displayed direct parent is verified; previous field refers to031."
+    },
+    {
+      "path": "/destinations/5/live_host_evidence",
+      "observed": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-verify-space-live.json",
+      "proposed": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-verify-space-live.json",
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-verify-space-live.json",
+      "reason": "The canonical033live receipt verifies b92and033authored bytes;032receipt remains historical."
+    },
+    {
+      "path": "/documentation_checkpoint",
+      "observed": {
+        "state": "Independently Retrieved",
+        "published": true,
+        "commit": "3d0ab7f75de1e3ccba1faa44c4c7884c69be5570",
+        "exact_files": 48,
+        "receipt": "release-evidence/v0.3.2-rc.1/cycle-20261101T044904Z-final-github-retrieval.json",
+        "scope": "Current0.3.2 publication and installed-application evidence; software source remains frozen2ebb8b20e515d9863a69b072bd963890e219e050"
+      },
+      "proposed": {
+        "state": "Independently Retrieved",
+        "published": true,
+        "commit": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
+        "exact_files": 40,
+        "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
+        "scope": "Published033post-release documentation/evidence; frozen software source remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
+      },
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
+      "reason": "The current main and all40declared documentation files were retrieved today. Preserve older checkpoint under history."
+    },
+    {
+      "path": "/publication_metadata_checkpoint",
+      "observed": {
+        "state": "Prepared",
+        "published": false,
+        "scope": "This current metadata payload requires its own GitHub commit and independent retrieval; frozen software source remains unchanged",
+        "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
+      },
+      "proposed": {
+        "state": "Independently Retrieved",
+        "published": true,
+        "commit": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
+        "exact_files": 40,
+        "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
+        "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+        "scope": "Previously assembled metadata payload published at9d0589; any new reconciliation payload needs its own later publication receipt."
+      },
+      "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
+      "reason": "Prepared is stale for the payload already retrieved from9d0589. A future unpublished update must remain distinct."
+    }
+  ],
+  "development_environment": {
+    "observed": {
+      "api": "Promoted to0.3.2; current browser and persistence receipt being finalized by root",
+      "worker": "Current state requires the separate latest worker receipt",
+      "data_snapshot_unchanged": true,
+      "remaining_free_bytes": 2933145600,
+      "new_model_calls": 0,
+      "evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-loopback-data-after-restart.json",
+      "browser_evidence": "release-evidence/v0.3.1-rc.1/cycle-20261031T224658Z-browser-review.json"
+    },
+    "last_canonical_version": "0.3.3-rc.1",
+    "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261101T105140Z-installed-persistence.json",
+    "facts": "Actual last installed persistence receipt is033at2026-11-01T11:31:38Zwith48valid audit rows,20records,2tasks and6Completed jobs. Current field references031receipts and provisional032wording. Do not claim current process health or reuse old disk-free values without fresh runtime evidence.",
+    "proposed_handling": "Replace provisional text with explicit last-verified033scope, date and current separate runtime receipt if root obtains one; keep old receipts as history."
+  },
+  "preserve": [
+    "All previous_verified/history objects and frozen releases",
+    "Original acceptance, stable release and operational acceptance remain false",
+    "Actual unchanged model/student/dataset artifacts",
+    "Exact supported hosting exceptions and comparator assertions"
+  ],
+  "remaining_ambiguities": [
+    "The published verification-source698checkpoint is historical. Preserve it unless a later actual source receipt authoritatively supersedes that particular two-file scope.",
+    "New corrective documentation does not inherit publication merely from prior9d0589retrieval."
+  ],
+  "retained_failure": {
+    "at": "2026-11-02T01:23:22Z",
+    "operation": "Initial append-only verifier copy",
+    "error": "OSError28No space left on device",
+    "partial_new_file": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-verify-public-release.py",
+    "partial_file_bytes": 0,
+    "existing_files_changed": false,
+    "recovery": "Space was observed478445568Bfree later with no cleanup by this reviewer. The recovered script uses a separate name; failure file remains."
+  },
+  "remote_writes": false,
+  "status_or_source_changed": false,
+  "new_model_calls": 0
+}

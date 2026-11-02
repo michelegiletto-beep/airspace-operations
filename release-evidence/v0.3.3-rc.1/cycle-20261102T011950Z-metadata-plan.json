@@ -1,0 +1,104 @@
+{
+  "prepared_at": "2026-11-02T01:34:55.171417+00:00",
+  "state": "Prepared only; no remote publication",
+  "expected_parent": "9d0589d5875c5a0423b029d3c8674d8376d8d0a6",
+  "frozen_software_source": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "published_software_release": "0.3.3-rc.1",
+  "scope": "Narrow current033publication metadata reconciliation and independently retrieved public evidence. Separate034engineering source is excluded.",
+  "files": [
+    {
+      "path": "publication/status.json",
+      "bytes": 22531,
+      "sha256": "0ba6e85ef72c84adc0fc35af811b99ec223cbb2d660349d773ee58be73b3e57f",
+      "git_blob": "e2b44c48d9a9e97dcfd4e9825a4293e422f5f6e0"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-archive-integrity.json",
+      "bytes": 1060,
+      "sha256": "1b744a31529089106788a411a06794fb11f9423f72d1b0f49e6a233c28efb9f2",
+      "git_blob": "99dfe1fb8744d14b565073370381facc058a0378"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-dataset-73c59f1f-reviewed-lfs.json",
+      "bytes": 6367,
+      "sha256": "914c38b48b9f0c488528a4530d05965882612fb4982bf3b8792796f9a6f9f7d4",
+      "git_blob": "843b8cf73fd84085e595b7e19a765e640633d12c"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-model-53ab0273-reviewed-lfs.json",
+      "bytes": 11337,
+      "sha256": "8395c0be3b9b3f69913e3f3237a20d7591d04a21c97e1d64b9b1ddab0572a8b7",
+      "git_blob": "cd05097ef5d1957961824e945296dc764dab561a"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-hub-space-b92dfde0-reviewed-lfs.json",
+      "bytes": 19268,
+      "sha256": "df3a510a6df54c0f9fe5dcb0589982ef065da83827083f204cccb37d161000a1",
+      "git_blob": "0a5188ad4440d2929077cce13c7fc4e15d4beda0"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-main-checkpoint.json",
+      "bytes": 18485,
+      "sha256": "f1ae920d21177f553be5d2df729c2075e469bafb7c3aa1a5be1e3ec59e610e23",
+      "git_blob": "723aa9783abee14f6b56f1d8c225ecd18f39ca4a"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-reconciliation.json",
+      "bytes": 13901,
+      "sha256": "3f93f0e6bf5fdfa50eb5986d79c015a6a1e9cd921f16150293640e50695df071",
+      "git_blob": "b3fcbbef20429fbdb09dfae08070b63bbc2279d2"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-primary-recovered-reviewed.json",
+      "bytes": 2950,
+      "sha256": "429561303f2daf6f65bfb0ca4ef4d3fa3806d42a525fecab39c8249d302a39aa",
+      "git_blob": "af62d7cc96ae935c7ece36a1fc6360fff5ef4f6d"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-public-downloads.json",
+      "bytes": 6169,
+      "sha256": "78d187c69884e0e7093c5752c566671652c89f70def661017cf478941cf8f6ea",
+      "git_blob": "d10507d13af5048517a78a6c95f0173f0910d41e"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-public-media.json",
+      "bytes": 800,
+      "sha256": "f796deae6030d8da65fe0d9a8da4905ab8cb57e012400238bf1ea629255330a7",
+      "git_blob": "97aec16a0b1e6f4ec57bc90a7d75ed74235c3398"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-review-index.json",
+      "bytes": 8530,
+      "sha256": "3e53a7d75d407a453c691e5b457b6a728164f3097c14f45c4dfa7c11ef2d7166",
+      "git_blob": "aa4e3c1e027b237ed99f7e3b6478045e266c577a"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-sbom-validation.json",
+      "bytes": 898,
+      "sha256": "98ba964b889abda036f0c7f7aa9de889782a57dba8fbf8744984ecfc9a5ccd61",
+      "git_blob": "48d009d224640fd5dac70e26de2601d6c65c0f97"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-site100-public.json",
+      "bytes": 69129,
+      "sha256": "a0c891ae3c173662d3b102b7961491ec4188798e089b15f87e4e556e2339f3ba",
+      "git_blob": "8fec4e6338db9fb2b8e3d71e89c999aec29f23ea"
+    },
+    {
+      "path": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-verify-space-live.json",
+      "bytes": 6724,
+      "sha256": "c1251df33fde65317f44d3b82bbe91acf685b40e3d5c6d67448a0198ad5b2764",
+      "git_blob": "c3ab1efab8d2c4407990d7696977c66617162dd1"
+    }
+  ],
+  "supported_secret_matches": 0,
+  "all_previous_release_assets_unchanged": true,
+  "root_augmentation_required": "Root may add its new cycle and handover documents after reviewing this plan. Rebuild the complete payload if any selected bytes change. The manifest itself is a private preparation artifact, not a claim of uploaded files.",
+  "excluded": [
+    "Any034application source or new release claim",
+    "Existing frozen history and release assets",
+    "The zero-byte initial copy and manually misdated preliminary commands index",
+    "Private runtime keys, accounts, snapshots or browser data"
+  ],
+  "baseline_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30"
+}

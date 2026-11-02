@@ -1,0 +1,75 @@
+{
+  "started_at": "2026-11-02T01:31:18.261211+00:00",
+  "checked_at": "2026-11-02T01:31:18.855007+00:00",
+  "scope": "Read-only recovery verification: anonymous loopback GET, SQLite mode=ro snapshots, HMAC audit, existing protected heartbeat and CIM process. No reviewer authentication, model calls, source changes, process control or operational writes.",
+  "version": "0.3.3-rc.1",
+  "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "health_and_auth_boundary": [
+    {
+      "route": "/api/v1/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.3-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "route": "/api/v1/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "worker": {
+    "pid": 11836,
+    "heartbeat_at": "2026-11-02T01:31:17.600854+00:00",
+    "age_seconds": 0.744,
+    "primary_venv_launcher_command_matches": true,
+    "cim_executable_resolves_expected_base_python": true,
+    "venv_launcher_resolution_note": "Windows CIM exposes the base interpreter executable while the actual command line retains the primary protected .venv launcher."
+  },
+  "database": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "records_jobs_versions_exact_with_previous_isolated_snapshot": true,
+    "records_canonical_sha256": "c82a83d952814fdba140efc5a346f7ac872205ea584867a28eef0429c19c1680",
+    "canonical_representation": "Sorted SQLite rows with JSON columns retained as their stored strings, matching the preceding installed receipt.",
+    "records_digest_matches_previous_installed_receipt": true,
+    "task_states_versions": [
+      {
+        "status": "Open",
+        "version": 1
+      },
+      {
+        "status": "Completed",
+        "version": 2
+      }
+    ],
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0
+  },
+  "audit": {
+    "valid": true,
+    "count": 48,
+    "previous_installed_count": 48,
+    "additional_actions_since_previous_check": [],
+    "unchanged_from_previous_check": true
+  },
+  "frontend_package_version": "0.3.3-rc.1",
+  "initial_receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-primary-recovered.json",
+  "initial_check_correction": "Initial health, counts, integrity and HMAC checks passed. Its two strict comparisons failed because parsed JSON was compared to a raw SQLite-string hash and the CIM base executable was compared directly with a venv launcher path. This receipt repeats checks with explicit representations and full row comparison; the failed receipt is preserved.",
+  "model_calls": 0,
+  "training_runs": 0,
+  "reviewer_authentication": false,
+  "operational_data_writes": false,
+  "source_or_process_changes": false,
+  "success": true
+}

@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-02T01:25:12.999550+00:00",
+  "version": "0.3.3-rc.1",
+  "source_commit": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+  "state": "Independently Retrieved",
+  "media": [
+    {
+      "path": "publication/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "encoding": "JPEG",
+      "container_validated": true,
+      "matches_public_source_and_exact_archive": true,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/michelegiletto-beep/airspace-operations/6f8364df25b942d49eb1b4ccaa40f27f70578dbb/publication/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+      "redirect_hosts": [],
+      "authenticated_read": false
+    }
+  ]
+}
