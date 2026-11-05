@@ -1,0 +1,240 @@
+{
+  "checked_at": "2026-11-05T16:19:51.716399+00:00",
+  "state": "Actual completed development-source engineering CI verified",
+  "repository": "michelegiletto-beep/airspace-operations",
+  "run": 42062319116,
+  "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/42062319116",
+  "run_attempt": 1,
+  "event": "push",
+  "workflow_id": 399301176,
+  "path": ".github/workflows/engineering.yml",
+  "branch": "codex/airspace-workflow-guidance-035",
+  "commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-05T16:14:13Z",
+  "updated_at": "2026-11-05T16:17:06Z",
+  "run_response": {
+    "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/42062319116",
+    "status": 200,
+    "bytes": 14884,
+    "sha256": "0bb682efbf82fb82f75ca7590b4524cc6550b47c2b975075b52622ae43a7ab2f"
+  },
+  "jobs_response": {
+    "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/42062319116/jobs?per_page=100",
+    "status": 200,
+    "bytes": 5047,
+    "sha256": "7c079c849d5bfef7b9896330f4f418d7a1e170c232f42197a4940261ae2378ac"
+  },
+  "jobs": [
+    {
+      "id": 127367073369,
+      "name": "containers-postgresql",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-05T16:14:16Z",
+      "completed_at": "2026-11-05T16:17:05Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": 1,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 4,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare isolated ephemeral configuration",
+          "number": 5,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Full software suite",
+          "number": 6,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build actual application and spatial database containers",
+          "number": 7,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Start and verify container health",
+          "number": 8,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Actual running container worker and authenticated API",
+          "number": 9,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "PostgreSQL extensions, concurrency and workflow isolation",
+          "number": 10,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Actual PostgreSQL backup and restoration",
+          "number": 11,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Stop this isolated verification deployment",
+          "number": 12,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 22,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 23,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 24,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "number": 25,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 127368730164,
+      "name": "publish-candidate",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-11-05T16:17:06Z",
+      "completed_at": "2026-11-05T16:17:05Z",
+      "steps": []
+    }
+  ],
+  "actual_results": {
+    "linux_software_suite": {
+      "passed": 577,
+      "skipped": 20,
+      "warnings": 3,
+      "pytest_seconds": 77.46
+    },
+    "postgresql_tests": {
+      "passed": 19,
+      "warnings": 1,
+      "pytest_seconds": 8.56
+    },
+    "actual_container_health": {
+      "status": "ok",
+      "version": "0.3.5-rc.1",
+      "deployment_profile": "postgresql",
+      "operational_acceptance": false
+    },
+    "actual_worker_completed_job": true,
+    "worker_audit_valid": true,
+    "postgresql_restoration_verified": true,
+    "restoration_audit_count": 2,
+    "restoration_audit_valid": true,
+    "actual_container_build_and_start_steps": "success",
+    "publisher": "Skipped because this is a development branch, not a release branch"
+  },
+  "local_measurements_separate": {
+    "windows_before_release_history_increment": {
+      "passed": 575,
+      "skipped": 21,
+      "warnings": 1,
+      "pytest_seconds": 175.45,
+      "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-windows-parent-fixed.json"
+    },
+    "later_release_history_focused": {
+      "passed": 49,
+      "skipped": 1,
+      "warnings": 1,
+      "pytest_seconds": 2.41,
+      "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-release-history-tests.json"
+    },
+    "frontend_final_local": {
+      "passed": 196,
+      "failed": 0,
+      "test_files": 26,
+      "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final.json",
+      "results": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final-vitest.json"
+    },
+    "scope": "These are distinct invocations, platforms and scopes. Counts are not added together. This development CI job compiled the actual interface in its container build; it did not run a new Vitest suite or archive-install publisher job."
+  },
+  "log_evidence": {
+    "retrieval_tool": "GitHub fetch_workflow_job_logs",
+    "job_id": 127367073369,
+    "retrieved_decoded_characters": 172357,
+    "selected_exact_lines": [
+      "2026-11-05T16:15:43.9206942Z =============================== warnings summary ===============================",
+      "2026-11-05T16:15:43.9209495Z   /home/runner/work/airspace-operations/airspace-operations/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.",
+      "2026-11-05T16:15:43.9215915Z   <frozen importlib._bootstrap>:488: DeprecationWarning: Bitwise inversion '~' on bool is deprecated and will be removed in Python 3.16. This returns the bitwise inversion of the underlying int object and is usually not what you expect from negating a bool. Use the 'not' operator for boolean negation or ~int(x) if you really want the bitwise inversion of the underlying int.",
+      "2026-11-05T16:15:43.9219045Z 577 passed, 20 skipped, 3 warnings in 77.46s (0:01:17)",
+      "2026-11-05T16:16:36.5996893Z {'status': 'ok', 'version': '0.3.5-rc.1', 'deployment_profile': 'postgresql', 'operational_acceptance': False}",
+      "2026-11-05T16:16:40.3075436Z {\"actual_running_container_worker_completed_job\": true, \"result\": {\"cases\": [], \"external_actions\": []}, \"audit_valid\": true, \"operational_acceptance\": false}",
+      "2026-11-05T16:16:49.8321051Z =============================== warnings summary ===============================",
+      "2026-11-05T16:16:49.8324702Z   /home/runner/work/airspace-operations/airspace-operations/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.",
+      "2026-11-05T16:16:49.8327201Z 19 passed, 1 warning in 8.56s",
+      "2026-11-05T16:16:52.6650300Z {\"postgresql_restoration_verified\": true, \"audit_count\": 2, \"audit_valid\": true, \"operational_acceptance\": false}"
+    ],
+    "selected_excerpt_file_bytes": 1762,
+    "selected_excerpt_sha256": "808dbeec9190ea94c4f4c412836ca96a566399e11af6a713911a7817d3900f37",
+    "raw_complete_log_saved_locally": false,
+    "scope": "The supported connector returned the complete decoded log. This receipt retains only the exact concise result and warning lines; the full external job log remains accessible through the cited job/run."
+  },
+  "retained_tool_failure": {
+    "action": "Attempt to save the complete fetched CI log privately through one Node REPL execution",
+    "result": "Automatic review rejected the invocation before execution",
+    "reported_reason": "JavaScript execution exceeds the 64000-byte strict auto-review limit",
+    "large_invocation_retried": false,
+    "safer_completion": "Preserved concise exact connector-returned result/warning excerpts and independently verified run/job metadata. No size or safety limit was changed or bypassed."
+  },
+  "remaining_release_gates": [
+    "Actual supported-browser desktop/mobile/keyboard, error recovery and companion motion review",
+    "New privacy-reviewed current-candidate media",
+    "Exact candidate archive installation and controlled publication job",
+    "Independent retrieval of any future new release or presentation"
+  ],
+  "source_uploaded": true,
+  "candidate_release_published": false,
+  "release_job_executed": false,
+  "browser_verified": false,
+  "original_acceptance_complete": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "remote_mutations_by_verification": false,
+  "model_calls": 0,
+  "training_runs": 0
+}

@@ -352,7 +352,7 @@
   ],
   "states_reached_scope": "Destination-specific evidence is authoritative. GitHub 0.3.4 and System Lab 101 are independently retrieved. The three Hugging Face 0.3.4 presentations are independently retrieved. The primary application is separately verified at 0.3.4 using the exact installed archive source and existing optional interpreter. The previous C project application source remains preserved. ",
   "assembly_snapshot_note": "Frozen tag, ZIP and raw evidence preserve their pre-publication assembly fields. Current receipts are post-publication documentation; released bytes and original model/student/dataset artifacts are unchanged.",
-  "last_checked_at": "2026-11-02T13:56:56.152525+00:00",
+  "last_checked_at": "2026-11-02T14:56:56.152525+01:00",
   "release_blockers": [],
   "candidate_ci": {
     "commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
@@ -417,10 +417,10 @@
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
     "version": "0.3.5-rc.1",
-    "state": "Local software and actual API verified; browser and release gates pending",
+    "state": "Development source and actual CI independently verified; browser and release gates pending",
     "published": false,
     "source_checkout": "C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5",
-    "source_uploaded": false,
+    "source_uploaded": true,
     "current_candidate_release_gates_passed": false,
     "current_candidate_installation_verified": false,
     "current_candidate_publication_verified": false,
@@ -429,12 +429,26 @@
     "training_runs": 0,
     "blockers": [
       "Actual desktop/mobile/keyboard, error recovery and motion review in a supported browser",
-      "Current distinct-source container/PostgreSQL/worker/restoration CI",
       "Actual reviewed current-candidate media",
       "Exact candidate archive installation and controlled publication gates"
     ],
     "local_frontend_tests_passed": 196,
-    "local_backend_tests_passed": 575
+    "local_backend_tests_passed": 575,
+    "source_commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+    "branch": "codex/airspace-workflow-guidance-035",
+    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+    "source_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-source-retrieval.json",
+    "development_ci": {
+      "linux_passed": 577,
+      "linux_skipped": 20,
+      "commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+      "run": 42062319116,
+      "postgresql_passed": 19,
+      "publisher": "Skipped on development branch",
+      "scope": "Actual development source, containers, PostgreSQL, worker and restoration; not a released archive or browser acceptance",
+      "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-ci.json",
+      "state": "success"
+    }
   },
   "known_presentation_defects": [
     "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
@@ -451,7 +465,7 @@
   },
   "development_environment": {
     "last_verified_application_version": "0.3.4-rc.1",
-    "last_verified_at": "2026-11-05T16:09:33.637662+00:00",
+    "last_verified_at": "2026-11-05T17:09:33.637662+01:00",
     "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-primary-recovery.json",
     "api": {
       "status": "ok",
@@ -476,7 +490,7 @@
     "scope": "Exact released source is served using a separately verified installation and the existing optional interpreter. Original C source, dependencies, records and audit key are preserved.",
     "previous_verified": {
       "last_verified_application_version": "0.3.3-rc.1",
-      "last_verified_at": "2026-11-02T01:31:18.855007+00:00",
+      "last_verified_at": "2026-11-02T02:31:18.855007+01:00",
       "evidence": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-primary-recovered-reviewed.json",
       "api": {
         "version": "0.3.3-rc.1",
@@ -487,7 +501,7 @@
       },
       "worker": {
         "pid": 11836,
-        "heartbeat_at": "2026-11-02T01:31:17.600854+00:00",
+        "heartbeat_at": "2026-11-02T02:31:17.600854+01:00",
         "age_seconds": 0.744,
         "primary_venv_launcher_command_matches": true,
         "cim_executable_resolves_expected_base_python": true,
@@ -585,11 +599,11 @@
     }
   },
   "latest_documentation_checkpoint": {
-    "commit": "fef47a96232a4d3e182e3d785031f2ced7e05e8c",
-    "state": "Independently Retrieved",
-    "files": 31,
-    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-retrieval.json",
-    "scope": "Separate from the narrower historical eefa alias receipt"
+    "files": 78,
+    "scope": "Verified current main after 0.3.4 source/evidence merge; all release tags remain frozen",
+    "commit": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-main-retrieval.json",
+    "state": "Independently Retrieved"
   },
   "installed_application": {
     "version": "0.3.4-rc.1",
@@ -606,10 +620,10 @@
     "new_model_calls": 0
   },
   "pending_documentation_checkpoint": {
-    "state": "Prepared",
+    "scope": "Development source and CI receipts, actual browser availability and exact continuation; published software remains0.3.4",
     "published": false,
-    "cycle": "improvement/cycles/2026-11-02T132104Z-publication-completion.json",
-    "scope": "Current post-release publication facts, primary-installation boundary and exact continuation; no software source/tag rewrite"
+    "cycle": "improvement/cycles/2026-11-05T155456Z-workflow-guidance.json",
+    "state": "Prepared post-source checkpoint"
   },
   "published_engineering_evidence": {
     "release_gates": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-release-gates.json",

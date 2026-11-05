@@ -1,0 +1,678 @@
+{
+  "checked_at": "2026-11-02T14:05:40.259764+00:00",
+  "commit": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+  "tree": "bcbeed34ca1b593a1e8705833f4518e63c1494d5",
+  "parents": [
+    "fef47a96232a4d3e182e3d785031f2ced7e05e8c",
+    "f5dd93a7c5c7367101ea63147a5da99cb085addb"
+  ],
+  "state": "Independently Retrieved main merge; CI status separate",
+  "expected": 78,
+  "exact": 78,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": 200,
+      "bytes": 17309,
+      "sha256": "6ad8a88d904c06696ed61eb3f4ea64cbca522f532b34c5fc9a053ceda2b1f80e",
+      "git_blob": "41f1ebe86500ab21b04b6afd935ea0ba1637c9c6",
+      "exact": true
+    },
+    {
+      "path": "DECISIONS.md",
+      "status": 200,
+      "bytes": 7202,
+      "sha256": "2f81ab2d3d14fe37bf2f50cb984db443c845e871b7fcdc7b5a7ed1de8966b4b2",
+      "git_blob": "4dc539b0d706cb79b69753dd101ef0a5113d40d7",
+      "exact": true
+    },
+    {
+      "path": "HANDOVER.md",
+      "status": 200,
+      "bytes": 18671,
+      "sha256": "749ff62b61d5f3765cee58d77000153edfcf688d54baa88ecb4a6585e34a377a",
+      "git_blob": "470e36bcd97b85eaa89d88ede8e8a09818f3f4f0",
+      "exact": true
+    },
+    {
+      "path": "PLAN.md",
+      "status": 200,
+      "bytes": 15400,
+      "sha256": "f96f81998f7a85668505fd8e8b16d364a418e400904d1599c930b5806a201ace",
+      "git_blob": "f28a79c6f2007878c62bbb462706c16929d3936c",
+      "exact": true
+    },
+    {
+      "path": "README.md",
+      "status": 200,
+      "bytes": 13186,
+      "sha256": "77edb035fe7a973ee55433c5869758b3fcaa7b48433e4453a1961023cabee120",
+      "git_blob": "67093145b90c315c527eaaf32e620316da7ee8fa",
+      "exact": true
+    },
+    {
+      "path": "STATUS.md",
+      "status": 200,
+      "bytes": 46086,
+      "sha256": "1e5dd0377453628436fb9c6d0ad6799218a55472e6487807aaa12faf9720d2b8",
+      "git_blob": "532f09f4d6ac29b9015d41f8d911ea97e0d6535f",
+      "exact": true
+    },
+    {
+      "path": "improvement/cycles/2026-11-02T132104Z-publication-completion.json",
+      "status": 200,
+      "bytes": 9995,
+      "sha256": "7d0e5f0d1d83dd9a7b9e41abea205066eb852a9a497b7fc5a3e88e35e43817cd",
+      "git_blob": "03ad069ae0468f3dc6f2954121d30afa3c69c32d",
+      "exact": true
+    },
+    {
+      "path": "publication/history/0.3.3-rc.1.json",
+      "status": 200,
+      "bytes": 25110,
+      "sha256": "cf6c21282fe74166dfbbc1808b96d2a437d69fd31f603590963e1a16fce9de36",
+      "git_blob": "40a9d8341475df9e0b1dec26e61280315774baa6",
+      "exact": true
+    },
+    {
+      "path": "publication/history/0.3.4-rc.1.json",
+      "status": 200,
+      "bytes": 34782,
+      "sha256": "2b23c45ef674d2c5931c9dee8b745dc83970bc15fda222d9959e629ace87c289",
+      "git_blob": "6e99d97f41759040d23a020b4cf33e7b2e9bf4a6",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/dataset/README.md",
+      "status": 200,
+      "bytes": 11210,
+      "sha256": "04a9ec149f0102c12bc21af36d910e473ee55eb4d241497588136a95c5a5bd28",
+      "git_blob": "4f41c7f51954f5726bd4acf8201ebf3a372d0be6",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/manifest.json",
+      "status": 200,
+      "bytes": 5468,
+      "sha256": "e5342c0e838bb29fcd14218a62ca524b27005f076e71a3fff2b67b43e2a3fdeb",
+      "git_blob": "457afb04c4f6194e005f156527f446f406c96459",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/model/NOTICE.md",
+      "status": 200,
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "git_blob": "c60596442e790ca993f3845e54a168b353f223e8",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/model/README.md",
+      "status": 200,
+      "bytes": 14684,
+      "sha256": "66a3e2634f1933514aa17ca773e4b61b72611c9edc43f111423a0fa8618f95c8",
+      "git_blob": "4b7293575b431754d24016275bee074df21c5eea",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/model/media/companion-tasks.png",
+      "status": 200,
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "git_blob": "bf1e96dac756f24fad206764cda898b016963c79",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/model/media/draft-continuity-mobile.jpg",
+      "status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "git_blob": "ed80820e6abd0a74db3d9a2664adf38e56dbe805",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/model/media/operations-permissions-mobile.jpg",
+      "status": 200,
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "git_blob": "31ccc2eb57137cac3fb269406993ba513296baf1",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/model/media/task-recovery-mobile.jpg",
+      "status": 200,
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "git_blob": "09cf2f19fdcfb1d5e1ea3ce93d9f61a93cbc0065",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/NOTICE.md",
+      "status": 200,
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "git_blob": "c62b4a25f65676b1355091414efcd1af58f76853",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/README.md",
+      "status": 200,
+      "bytes": 10640,
+      "sha256": "425af233fb07869c8c85ed2ad3852407bf15c74680d86bff4527072c368f16db",
+      "git_blob": "6469af1bcc1efb89d1e8d44895d1c3318e47deb1",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/index.html",
+      "status": 200,
+      "bytes": 15581,
+      "sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952",
+      "git_blob": "c2a5626df09c31a1f0ce04122fd336c5e41efcb1",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/media/application-tasks.png",
+      "status": 200,
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "git_blob": "79a9038f6bb6cd6884ad5e81e0ce28ef9c75dfcc",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "status": 200,
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "git_blob": "1b3a4c9d0e9388b209420bdc42ad76798ab511a0",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/media/draft-continuity-mobile.jpg",
+      "status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "git_blob": "ed80820e6abd0a74db3d9a2664adf38e56dbe805",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/media/operations-permissions-mobile.jpg",
+      "status": 200,
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "git_blob": "31ccc2eb57137cac3fb269406993ba513296baf1",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/media/task-recovery-mobile.jpg",
+      "status": 200,
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "git_blob": "09cf2f19fdcfb1d5e1ea3ce93d9f61a93cbc0065",
+      "exact": true
+    },
+    {
+      "path": "publication/releases/0.3.4-rc.1/huggingface/space/styles.css",
+      "status": 200,
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "git_blob": "ff545f371402cd66d21d9c12b5a859f51294c49d",
+      "exact": true
+    },
+    {
+      "path": "publication/status.json",
+      "status": 200,
+      "bytes": 36682,
+      "sha256": "323c8689646062f7e90ca43c0733a1448793201d11ca8f275772b2fe5b06a9c3",
+      "git_blob": "988fea043bd9f339827084912e1d24c2a4c32f3b",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-manifest.json",
+      "status": 200,
+      "bytes": 7735,
+      "sha256": "3cee683ad1f7bab7c35f312c80c5a60fffce6002e9c2c622f969d741ab21b97e",
+      "git_blob": "4fed28d29b8c08cddc0ea7ae6581b109d9670eac",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-retrieval.json",
+      "status": 200,
+      "bytes": 15533,
+      "sha256": "44a8e7ee5f9aa75f3d96822fe5be45d2830253f50f69042a7475ba595df19d66",
+      "git_blob": "2554fd0a27b8f145e8e0b8d2df6cab353e4df20d",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-ci.json",
+      "status": 200,
+      "bytes": 6642,
+      "sha256": "cfc015ef8985f5fe9b033f6cd172c695ed533e316923be07668d691c9f04932a",
+      "git_blob": "d1e744d1544662c8c3c421359b620ba74b206e72",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-source-retrieval.json",
+      "status": 200,
+      "bytes": 31881,
+      "sha256": "7d3af6c6dbe81a1fd7bc3341371d37e985ddaa1da3b41ddc897deb2cd098f543",
+      "git_blob": "8e7e7f0d8cfb900a9bcbd74eaebe94851f848ca3",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-archive-integrity.json",
+      "status": 200,
+      "bytes": 1070,
+      "sha256": "1d12dd2ec630074be33e9f2ce4e9d1e0c3602eb3b1b2dfdc3ddb804d2e0341ca",
+      "git_blob": "666c44a644974ec41ecaa62f4a73e4aaeec01ef5",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-candidate-ci.json",
+      "status": 200,
+      "bytes": 10219,
+      "sha256": "60c29464f8a67b299ac57519f2006b84cdae34cae5bdf9efbcebbf5f425f624f",
+      "git_blob": "a43cc0b94fb6d2000956f9bf9e99e432e5dce5e8",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-downloads.json",
+      "status": 200,
+      "bytes": 6169,
+      "sha256": "d8a44ad633ccf125c8d4ebe0ad17bdfb60672abdce0d1386d04f80a184dfe776",
+      "git_blob": "4c16f014be158a38c33cdaf64700bc51d1abe0ba",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-public-media.json",
+      "status": 200,
+      "bytes": 793,
+      "sha256": "f5f2c048a10147d0dc4029bfc336a3f0468e50c55dc8275302abd0850602458a",
+      "git_blob": "afa01b25fcc25483dccce7a4c94886eed6b3bd7d",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-sbom-validation.json",
+      "status": 200,
+      "bytes": 898,
+      "sha256": "2b0597d60e072ee01b267e92578764a04ffab571f384bfcb783c5ca8515e4330",
+      "git_blob": "2b181dee993bc49bd6ebafe0c70a8ac0028b0322",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-site-native.json",
+      "status": 200,
+      "bytes": 2165,
+      "sha256": "7fcbd1358c185d7fb77c3bad5d88938b7bf6f6ee41128ea0498a4d271ceeec06",
+      "git_blob": "38b6327d31833edebd3928f39a827ab425854d25",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-site-package.json",
+      "status": 200,
+      "bytes": 638,
+      "sha256": "c3d75de42d1b99e40f68bec6566af4ec1b47ff83380f6b6ae6f7482fa835691c",
+      "git_blob": "5cd8cc15037554b88f482037bbbed6753a476d53",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-site-preparation.json",
+      "status": 200,
+      "bytes": 3624,
+      "sha256": "84e49e81bb0c76aa58d40d9af8fb0ad265c6e6298d72d3906c4d3c95a432ba4a",
+      "git_blob": "9184ef429e6c3f7eef4b8046a93c4e3e7a6ba31e",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-source-retrieval.json",
+      "status": 200,
+      "bytes": 27589,
+      "sha256": "9ff4ff0b91fcee7773884ce2b6205488a6e1e82fe6cc76a476dbddc91a64e1a2",
+      "git_blob": "7fcd4b8946d66c97fcc82751216b8d3cdb6611e2",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-current-public-heads.json",
+      "status": 200,
+      "bytes": 1987,
+      "sha256": "033a0bd283a116d39b81629d691f7d74993afbefd855e3a56e20dd2a0452e3cf",
+      "git_blob": "afc706daf3f3c891f33c11ed5d5b4a6841637ab2",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-github-release-current.json",
+      "status": 200,
+      "bytes": 954,
+      "sha256": "5da3636b5e3abcf150dfd641fcdae2c2a909854b4d403b4b60485080b5ccbb90",
+      "git_blob": "93c0ba19854f5aeda01026650a0b9a5c9df37f87",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-historical-checkpoint-tests.json",
+      "status": 200,
+      "bytes": 1208,
+      "sha256": "7c58fe8248a9a0d37de3ab76a5732a1cdda80153ced7daadbe21fc2dd390e1bd",
+      "git_blob": "0e4a7a3b2f8dd29a0a44bd0e422d3416d069caea",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-historical-checkpoint-tests.xml",
+      "status": 200,
+      "bytes": 1976,
+      "sha256": "bc6e2db20faaf0bfca398403e064623772ac127745ff20d45a5caf8a20403b3b",
+      "git_blob": "a0c307325d446b124082ba6d30c737f64f0efb3a",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-browser.json",
+      "status": 200,
+      "bytes": 2768,
+      "sha256": "6e9c234e6aa85b6fee327e81a04739657d30030601dc71f77d44b396b091d84d",
+      "git_blob": "41877402589abf1a8f8041de78269b033b3513c5",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-dataset-2747c70d-reviewed-lfs.json",
+      "status": 200,
+      "bytes": 6368,
+      "sha256": "f7c0b5e139e50e673fd778a9aed56628558c67fdd0522686310eac0330931f3d",
+      "git_blob": "b7b037e08ef0d5cd7178dd77062533adbe0b8aa2",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-model-a69c0e2c-reviewed-lfs.json",
+      "status": 200,
+      "bytes": 12019,
+      "sha256": "c112d24c49060c465f1abc0cfbb0b3bdcd5e73f833ee33fd3bd4c3c2118a9d53",
+      "git_blob": "9c3d6f5e47ccd7924ee40124b0632985a9d262c8",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-parent-heads.json",
+      "status": 200,
+      "bytes": 1222,
+      "sha256": "099b3f72faf9f840780a4a0a75efa236eecd3f55a910950042bd66d3d4b65036",
+      "git_blob": "b49dcb39d507f91ed27f211a14635b8a0e749be0",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-preparation.json",
+      "status": 200,
+      "bytes": 2903,
+      "sha256": "695b89763705fd194818b2a9f6485f4d7581a67b5e519d3b1c017480af85de49",
+      "git_blob": "c72bc5216cb5082ff0482fef4a06b5b594186644",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-reviewed.json",
+      "status": 200,
+      "bytes": 2193,
+      "sha256": "4860edf97b5cb5c422dbb279678168e133bfa49a5d9f429bb890640428d3334f",
+      "git_blob": "95bf5476415a8da47d9dd8387af971f0d819d1b8",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-source-media.json",
+      "status": 200,
+      "bytes": 854,
+      "sha256": "74181fb52d37c9f9bc7d31270eddbaf01b677adcb2b9c026f7d9a65ecca15f80",
+      "git_blob": "ced41e7d55f9658688af903b18a1d276f97b2707",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-hub-space-54b72461-reviewed-lfs.json",
+      "status": 200,
+      "bytes": 19954,
+      "sha256": "4a7332e4a0792d26885c172ecb26f013b84eb44fed41caaad02b53dabe799824",
+      "git_blob": "3cd784d6e42edfe7e9db1a9edecca7857ddaad3f",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-independent-publication-summary.json",
+      "status": 200,
+      "bytes": 3746,
+      "sha256": "bff71918618abcd0512bb41e4aada073b5249e34722ba9a4d7693a18afd20017",
+      "git_blob": "6acd945af836abf225b81e1c0be837ccd713d57c",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-core-install.json",
+      "status": 200,
+      "bytes": 2683,
+      "sha256": "f203c67582c9bd1b46fe824d080ce2c382a5b56a6f52df09cd96f3c58745acc2",
+      "git_blob": "e003100af9b25d17e1d1aca92a7a382693afa706",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-core-tests.json",
+      "status": 200,
+      "bytes": 2445,
+      "sha256": "12c4bd098eaefd0c0e69fc45f3acf3771dc0229c69c34efa2fed8b65005370b8",
+      "git_blob": "a6da8788223d9711f8a9eb09fd9f39f334334064",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-corpus.json",
+      "status": 200,
+      "bytes": 593,
+      "sha256": "7b1dd073274a492b8cefd29dd554626af62ae162046f4f664bc54eb69060529d",
+      "git_blob": "7466e1607526b541ec608062bd692d1a12ddfe3e",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-empty-service.json",
+      "status": 200,
+      "bytes": 1566,
+      "sha256": "a2a88cef9e373fd6b745698a4551e9b6a2f9af277951cbb22c70e2f2c6f533db",
+      "git_blob": "c26062b68de62bc87d74a3338c9c11e95e43d44a",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-extraction.json",
+      "status": 200,
+      "bytes": 534,
+      "sha256": "8d4b98bd216fa142d4071a421dd990602382777995cebb91aed00ec41102ff83",
+      "git_blob": "6fbd75d00bc1b73a3305c1867a6f5dcbaf3061d6",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-previous-F-timeout.json",
+      "status": 200,
+      "bytes": 797,
+      "sha256": "6e521d23db03b38646259f71465de591e8d3d131453bd6327f070a77a36319b1",
+      "git_blob": "7f0f01b01e96b4a7366003b1f99ea3303a9fbbdd",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-readonly-cli.json",
+      "status": 200,
+      "bytes": 3659,
+      "sha256": "f6450fa1a920d58ed098414f537edbd9831e1f5fcf0c609cef7b8e4198e1fb6e",
+      "git_blob": "7eff6ffef5b4e5c2afe4c76dddb65a61566e76e9",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-installed-C-verified.json",
+      "status": 200,
+      "bytes": 971,
+      "sha256": "915e28aca9578e637d6eff8e48fec0718cacbb1f64ee0f35b7172a87205bd57c",
+      "git_blob": "860da00366f9bf1796e34dc85a446a1219b365ce",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion-before.json",
+      "status": 200,
+      "bytes": 943,
+      "sha256": "e8ad886042e89bb258934fe4ad21f76a516bc3487664b51f621d0c836a1e12da",
+      "git_blob": "6204dd729cec1e995ca983cc3e90a15e5495072b",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion-peer-review.json",
+      "status": 200,
+      "bytes": 2378,
+      "sha256": "5a277038c17e780188918dbb5bc9ac300cde3a24949d2e65d831768b3ff65a60",
+      "git_blob": "38bc6db202b59f9bc3e3fa0c62e7790f5d6edb3c",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion.json",
+      "status": 200,
+      "bytes": 5499,
+      "sha256": "7343eafd18eeb0653cb457887e4dc8a4daf859e94598432c6ff541d5cc496aa6",
+      "git_blob": "6f3504c40b1fbad77e28964ef418cd21596f66f1",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-ci-verification.json",
+      "status": 200,
+      "bytes": 23953,
+      "sha256": "e523839a7e30a9a1df7e6ed361eb9e2d9a017bb9c6697a2e111e62d549ebc543",
+      "git_blob": "6b50f21497578b9f2eb8739364611e632df72f75",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "d4b13ebde30cd405338dcd291b529fba5c94d3c3ff2842e123ae9c31bce45770",
+      "git_blob": "9dc661b1a329405182bd224b10d0783aeda96a53",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-published-standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 8911,
+      "sha256": "7f76f86158fc00dbffef8d0a26ff2494277fc62d6e8e9002b80e06fc9285aaab",
+      "git_blob": "4c1cc86a4dc4d55bcbdd185c92f2a3443f944f75",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-site101-public.json",
+      "status": 200,
+      "bytes": 80010,
+      "sha256": "6b2e8bcd56f92cf2fd56c5c6047a412e0f764671cc3fc3a667a64b9b3611372d",
+      "git_blob": "57fd0ffcccc2e0680a4ab0a7af39eff8e9781d4d",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-space-frame-http-review.json",
+      "status": 200,
+      "bytes": 3123,
+      "sha256": "aa8724a61f0847653c2e435b9c9857182365b01b9b4c43007a5e9f35421e9aff",
+      "git_blob": "c534c7cb154e485eb4592cc004a8e4ff41efa931",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-space-upload-observation.json",
+      "status": 200,
+      "bytes": 687,
+      "sha256": "638f244310a896391823eddc1932b4edb807b92275dd6e4867dd9cadba115a81",
+      "git_blob": "65795611a63ccc927fe8a4ef4b3a61cd9a6240fc",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-verify-space-live.json",
+      "status": 200,
+      "bytes": 7363,
+      "sha256": "125af4150b191bd0cb057afe2a2d9635ebec2ffbe776d1f67c2daf05efabbada",
+      "git_blob": "bb9e5944b99fe91da601f61ab1ac34a73082fd4c",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/post-repair/pytest.xml",
+      "status": 200,
+      "bytes": 154977,
+      "sha256": "ded69bc3bf436aed2a7279efb127233f2f67eb4acc4381314e83aa24384bb612",
+      "git_blob": "a243e00c4c2d78a33b885881b0ecde47aab6e64d",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+      "status": 200,
+      "bytes": 60162,
+      "sha256": "d7436d424c70ec3d934b991ecc79430fecd305416aed7df0ca2de4e34db6f402",
+      "git_blob": "7ebd627689a9f09eb480e1cb37651970ea0d4f4e",
+      "exact": true
+    },
+    {
+      "path": "tests/test_publication_checkpoint.py",
+      "status": 200,
+      "bytes": 5076,
+      "sha256": "81e34ec2a374382e0317edd420df8991c20534daa4d616df4693d20ac14dd0bc",
+      "git_blob": "9dc8fcfe4beefaf0086644e82795c050f0497a38",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-browser.json",
+      "status": 200,
+      "bytes": 823,
+      "sha256": "c4696865d0c96bc3e09ee7093fbc389b30bfa699e660e52142e1ffda09886e9a",
+      "git_blob": "48e32577de84f5429e6c672f123d661e4ea6669c",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-post-browser.json",
+      "status": 200,
+      "bytes": 2463,
+      "sha256": "9c0d13f52c2bd54d7f21a43507a6df400618708ab6f27af4c80746c3a0e32b66",
+      "git_blob": "053952b67804199b6ecd8557b70a454957cac92f",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-C-metadata-tests.json",
+      "status": 200,
+      "bytes": 2106,
+      "sha256": "201fd0c468d282bc76adc43032ceecc26e48ea7050baa96f24f0fbcce877e2b7",
+      "git_blob": "28fcc1f3c2092e8ecb6d263a9d7aac677ecc5c5e",
+      "exact": true
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-C-metadata-tests.xml",
+      "status": 200,
+      "bytes": 1976,
+      "sha256": "0403dadc23169c5f070d4191f0ee98bf3a8985170e2e617009cdcb5a62861299",
+      "git_blob": "9a6074a3b2962d99a49e15e570ccdc0d37b50ee8",
+      "exact": true
+    }
+  ],
+  "complete_tree_matches_frozen034_plus_declared_payload_and5preserved_evidence": true,
+  "preserved_fef_only_evidence": [
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-current-docs-manifest.json",
+      "git_blob": "4fed28d29b8c08cddc0ea7ae6581b109d9670eac"
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-ci.json",
+      "git_blob": "d1e744d1544662c8c3c421359b620ba74b206e72"
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/cycle-20261102T011950Z-development-source-retrieval.json",
+      "git_blob": "8e7e7f0d8cfb900a9bcbd74eaebe94851f848ca3"
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/post-repair/pytest.xml",
+      "git_blob": "a243e00c4c2d78a33b885881b0ecde47aab6e64d"
+    },
+    {
+      "path": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+      "git_blob": "7ebd627689a9f09eb480e1cb37651970ea0d4f4e"
+    }
+  ],
+  "unchanged_frozen_application_blobs": 167,
+  "frozen034_tag_unchanged": true,
+  "current_main_matches": true,
+  "ci_at_check": [
+    {
+      "id": 41457999912,
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/41457999912"
+    }
+  ],
+  "new_candidate_or_retag": false,
+  "retained_preparation_failure": "An initial composition attempt failed a local assertion before writing a receipt. This receipt uses the explicit78-file upload manifest and directly checks the complete actual tree; prior command output is retained.",
+  "authenticated": false,
+  "remote_mutations": false,
+  "success": true
+}

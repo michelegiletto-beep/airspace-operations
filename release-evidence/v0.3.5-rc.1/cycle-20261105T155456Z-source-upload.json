@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-05T16:16:37.1059055Z",
+  "scope": "Development source upload only; no release branch, tag, release asset, main change, model/dataset change or site deployment",
+  "repository": "michelegiletto-beep/airspace-operations",
+  "branch": "codex/airspace-workflow-guidance-035",
+  "commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+  "tree": "c124500016ab1dae5eb9b20a2cd3a0b3d85906ef",
+  "parent": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+  "exact_files": 47,
+  "deleted_old_bundles_in_new_tree": 2,
+  "independent_receipt": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-source-retrieval.json",
+  "ci_run": 42062319116,
+  "ci_state": "in_progress at independent check",
+  "published_release": "0.3.4-rc.1",
+  "actual_tool_actions": [
+    "github.create_blob returned internal error; no success inferred",
+    "github.create_tree created application tree b56324572dbc5638bc9d84cb17e59443dac62b3e",
+    "github.create_tree created metadata v1 tree cde53444276b2e3b3535eaad09713799856d48b4; unreferenced, replaced before commit",
+    "github.create_tree created metadata v2 final tree c124500016ab1dae5eb9b20a2cd3a0b3d85906ef",
+    "github.create_commit created f8d311ab0563777527bcb809e309a27e4fdbc3ea with the verified main as its parent",
+    "github.update_ref returned422 Reference does not exist for a new branch; no force or existing ref change",
+    "github.create_branch created the new development branch at f8d311ab0563777527bcb809e309a27e4fdbc3ea"
+  ],
+  "browser_gate_passed": false,
+  "release_gate_passed": false,
+  "new_model_calls": 0,
+  "training_runs": 0
+}

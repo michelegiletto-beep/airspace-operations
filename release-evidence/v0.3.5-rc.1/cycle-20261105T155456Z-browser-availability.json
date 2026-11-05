@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-05T16:15:34.1479236Z",
+  "state": "Browser rendering gate pending",
+  "fresh_inventory_supported_browser_providers": 0,
+  "installed_browser_launch": "Existing Google Chrome executable launched through the supported CUA computer API without flags or settings changes",
+  "supported_browser_providers_after_launch": 0,
+  "browser_navigation_attempted": false,
+  "native_browser_window_binding_attempted": false,
+  "browser_rendering_verified": false,
+  "new_screenshots": 0,
+  "security_or_permission_changes": false,
+  "new_model_calls": 0,
+  "scope": "No supported browser provider was exposed by either observation. No other UI mechanism was used. This is a current availability limitation, not a new URL-policy rejection."
+}

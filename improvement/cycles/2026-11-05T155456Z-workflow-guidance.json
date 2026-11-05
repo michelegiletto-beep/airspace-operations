@@ -1,8 +1,8 @@
 {
   "cycle_id": "2026-11-05T155456Z-workflow-guidance",
   "triggered_at": "2026-11-05T15:54:56.544Z",
-  "checkpoint_at": "2026-11-05T16:09:33.624689+00:00",
-  "state": "Local software and actual API verification complete; browser and release gates pending",
+  "checkpoint_at": "2026-11-05T16:20:56.2095380Z",
+  "state": "Development source and actual CI independently verified; browser and release gates pending",
   "starting_source": "0e4140976c761b5f4ddad19a6a7408721d75060a",
   "candidate": "0.3.5-rc.1",
   "published_software": "0.3.4-rc.1",
@@ -29,22 +29,39 @@
     "rendering_verified": false,
     "navigation_attempted": false,
     "screenshots_created": false,
-    "scope": "Fresh CUA inventory exposed no browser provider. No native fallback, URL-policy bypass or browser settings change was attempted. The November 3 policy stop remains a historical event, not a new rejection."
+    "scope": "No supported browser provider was exposed before or after launching the existing Chrome executable without flags or settings changes. No browser navigation or native window binding was attempted.",
+    "availability_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-browser-availability.json"
   },
   "new_model_calls": 0,
   "training_runs": 0,
   "release": {
-    "source_uploaded": false,
+    "source_uploaded": true,
     "published": false,
     "engineering_gates_passed": false,
     "stable_release": false,
     "operational_acceptance": false,
     "blockers": [
       "Actual desktop/mobile/keyboard, error recovery and motion review in a supported browser",
-      "Current distinct-source container/PostgreSQL/worker/restoration CI",
       "Actual reviewed current-candidate media",
       "Exact candidate archive installation and controlled publication gates"
-    ]
+    ],
+    "source_commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+    "branch": "codex/airspace-workflow-guidance-035",
+    "source_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-source-retrieval.json",
+    "ci_run": 42062319116,
+    "ci_state": "success",
+    "ci_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-ci.json",
+    "ci_results": {
+      "linux_passed": 577,
+      "linux_skipped": 20,
+      "container_version": "0.3.5-rc.1",
+      "postgresql_passed": 19,
+      "linux_warnings": 3,
+      "restoration_audit_verified": true,
+      "postgresql_warnings": 1,
+      "publisher": "Skipped on development branch",
+      "worker_audit_verified": true
+    }
   },
   "evidence": {
     "primary_recovery": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-primary-recovery.json",
@@ -62,7 +79,9 @@
     "source_preparation": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-application-delta-preparation.json",
     "core_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-python-dependency-audit.json",
     "optional_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-optional-neural-dependency-audit.json",
-    "frontend_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-dependency-audit.json"
+    "frontend_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-dependency-audit.json",
+    "browser_availability": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-browser-availability.json",
+    "final_snapshot": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-final-persistent-snapshot.json"
   },
   "retained_failures": [
     "First pytest invocation omitted the caller-supplied basetemp parent: 191 passed, 19 skipped, 386 setup errors; the separate repaired invocation passed 575 tests with 21 skipped.",
