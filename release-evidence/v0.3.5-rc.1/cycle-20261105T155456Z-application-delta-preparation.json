@@ -1,0 +1,369 @@
+{
+  "prepared_at": "2026-11-05T16:06:01.467729+00:00",
+  "state": "Prepared development application delta only; not uploaded",
+  "repository": "michelegiletto-beep/airspace-operations",
+  "base_commit": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+  "base_tree": "bcbeed34ca1b593a1e8705833f4518e63c1494d5",
+  "branch_boundary": "Distinct codex/airspace-* branch only. No release branch, tag, published assets or primary runtime promotion.",
+  "deletions": [
+    {
+      "path": "frontend/dist/assets/index--LT1GvRU.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": null,
+      "scope": "New development tree only; frozen old commits/tags unchanged"
+    },
+    {
+      "path": "frontend/dist/assets/index-DhXRzvbU.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": null,
+      "scope": "New development tree only; frozen old commits/tags unchanged"
+    }
+  ],
+  "summary": {
+    "files": 15,
+    "deleted_tree_entries": 2,
+    "decoded_upload_bytes": 874603,
+    "working_bytes": 877502
+  },
+  "normalization": "Only CRLF pairs in these explicitly reviewed text files become LF in uploaded bytes. Working files and protected/frozen files are not rewritten. Base64 decodes to the exact separately hashed upload content.",
+  "gates": {
+    "secret_pattern_scan_passed": true,
+    "secret_pattern_matches": 0,
+    "protected_files": [
+      {
+        "path": "SPECIFICATION.md",
+        "bytes": 45776,
+        "sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+        "unchanged": true
+      },
+      {
+        "path": "SPECIFICATION_V2_ADDENDUM.md",
+        "bytes": 4765,
+        "sha256": "cfb285cdc619c5f7ca13c9ed0309d7d1ce60fd80c015c65fe23b38a3d403d3f2",
+        "unchanged": true
+      },
+      {
+        "path": "SPECIFICATION_V3_ADDENDUM.md",
+        "bytes": 4557,
+        "sha256": "071e62b043707e15a019cad4f922f369b09508b5c0a2044228f992795eb91f66",
+        "unchanged": true
+      },
+      {
+        "path": "REQUIREMENTS_TRACEABILITY.csv",
+        "bytes": 116004,
+        "sha256": "da11afd3051186138a8d2485e5f7990d2c499a123108e0f2ba8d51f8e49ea645",
+        "unchanged": true
+      },
+      {
+        "path": "capabilities.json",
+        "bytes": 20235,
+        "sha256": "51cef400bf5b98be2f6b76d775a7046e35680b171035293e195d34b71b232076",
+        "unchanged": true
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "unchanged": true
+      },
+      {
+        "path": "NOTICE",
+        "bytes": 1358,
+        "sha256": "fba0caa03b08d24dfdada78cda470ed2dae365f611c339f1fbce4c5bf852cb4f",
+        "unchanged": true
+      },
+      {
+        "path": "DATA_REGISTER.md",
+        "bytes": 1847,
+        "sha256": "2653ce530f4c557c362e8c464bc0436dd361b17d4cc5e61fc40478709e1ae771",
+        "unchanged": true
+      },
+      {
+        "path": "SOURCE_REGISTER.md",
+        "bytes": 9621,
+        "sha256": "2c05c90f3708f12db17b8a7b822bdc777281ec53ccdee437db2ac98a0f004360",
+        "unchanged": true
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "bytes": 12993,
+        "sha256": "be76812c6ae43d89adb0751285bf26f1cffc3787d8ba91f029383af0c0286825",
+        "unchanged": true
+      }
+    ],
+    "requirements_original": 170,
+    "requirements_revision": 28,
+    "requirements_texts_and_statuses_unchanged": true,
+    "owned_asset_and_tracked_model_files_unchanged": 20,
+    "whitespace_check_command": [
+      "git",
+      "-c",
+      "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+      "diff",
+      "--check",
+      "--",
+      "backend/airspace/__init__.py",
+      "pyproject.toml",
+      "uv.lock",
+      "frontend/package.json",
+      "frontend/package-lock.json",
+      "frontend/src/AgentWorkspace.tsx",
+      "frontend/src/AgentWorkspace.test.tsx",
+      "frontend/src/WorkflowPermissions.test.tsx",
+      "frontend/src/workflows.css",
+      "frontend/src/responsive.css",
+      "scripts/publish_candidate.py",
+      "tests/test_publication_material.py",
+      "frontend/dist/index.html",
+      "frontend/dist/assets/index-DGJm9J-b.js",
+      "frontend/dist/assets/index-HjclQKgW.css"
+    ],
+    "whitespace_exit": 0,
+    "new_media_or_model_assets": false,
+    "source_snapshot_unchanged_during_preparation": true
+  },
+  "exclusions": [
+    "All runtime data, keys, credentials and private logs",
+    "Untracked derived corpus and source-derived training records",
+    "Current cycle metadata and evidence pending root review",
+    "All unrelated projects and unavailable F filesystem"
+  ],
+  "release_blockers": [
+    "Current desktop/mobile/keyboard/motion browser verification unavailable",
+    "No new privacy-reviewed media for this increment",
+    "Current release-container and exact-archive gates not established by this preparation"
+  ],
+  "remote_mutations": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "root_documentation_changes_excluded": [
+    "AGENTS.md",
+    "STATUS.md",
+    "docs/operator-handbook.md",
+    "publication/status.json"
+  ],
+  "preserved_preparation_failure": {
+    "attempt": 1,
+    "result": "Stopped before writing payload because docs/operator-handbook.md was newly changed outside the application allowlist",
+    "resolution": "Explicitly exclude that root-owned documentation change for separate review. No application or release gate was waived."
+  },
+  "files": [
+    {
+      "path": "backend/airspace/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 92,
+      "sha256": "4e4b74dedf0ab2e04a55c2c35de2f9e34451988c44259bda4d68b3c9fc9af7c1",
+      "git_blob": "6e5a3dce12e1e8a0a90c1cd6a574af2787f6f49f",
+      "working_bytes": 95,
+      "working_sha256": "93b4b8e93599d8553a2320c5acc7ba8cc0ac070b201932f204edfc746ac8fcc4",
+      "crlf_pairs_normalized": 3,
+      "base_git_blob": "b027fde3ac2e2156ac71b2520c6b21fb4dd0bb12",
+      "status": "modified"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 907,
+      "sha256": "4dc173a4b3879ac6c6b526f4be0feda3903b2bf6f78e58a0c21c7acb86cae641",
+      "git_blob": "25ec71aab59c7d6a4234e06397368c1a76dff204",
+      "working_bytes": 944,
+      "working_sha256": "106501e2bab659c20df3236825591bae4f2eaa896d3e0183a0fa727fad7e9b07",
+      "crlf_pairs_normalized": 37,
+      "base_git_blob": "770736cf318acbd784901a1c79822806638355b8",
+      "status": "modified"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 121202,
+      "sha256": "a38cfd979e91e447fd481050bcd51f76c9ebd59892cd70a0bbe91df0122799d2",
+      "git_blob": "cd51a6abb525858c5ba99314700bcbaab5e7ce37",
+      "working_bytes": 121202,
+      "working_sha256": "a38cfd979e91e447fd481050bcd51f76c9ebd59892cd70a0bbe91df0122799d2",
+      "crlf_pairs_normalized": 0,
+      "base_git_blob": "306d9050feb7a629fdbe4d482d58ce6b8e26c70b",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 734,
+      "sha256": "f568c1f8e3a272f562a23398835c2ea811f766b5c33ec0efd14f18edb3004c8f",
+      "git_blob": "9dcff7571248607efc4f24ec2509dc23616ee037",
+      "working_bytes": 765,
+      "working_sha256": "32903a2ccb4287193fc73dd4c841d1cc032ea78ab5b2259d26ecd070cacc1f3f",
+      "crlf_pairs_normalized": 31,
+      "base_git_blob": "083ea913f3423a3d8eff9fb3d221d2e25cd15e20",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 68587,
+      "sha256": "01c766fddc31f0e303f488248b05ed100e3931840a86ca0515d9032958e11072",
+      "git_blob": "fa40e6a5406b19edca197a8ec8ba9496e42e5f8d",
+      "working_bytes": 70617,
+      "working_sha256": "16b9966c19c77c6ceca7986f32970583d4a6a3e2d3e671899de41f363ac30bbb",
+      "crlf_pairs_normalized": 2030,
+      "base_git_blob": "832e305c0f1daa931f8e7c83f010f1720686811b",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/AgentWorkspace.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 20580,
+      "sha256": "7f6a9b52dfd0e0bf5c8f0f0dd5a5bc2432d92c495dc7345b4776869075bcb243",
+      "git_blob": "f807580c54039af375f8d65082c8911bc40f3e04",
+      "working_bytes": 20643,
+      "working_sha256": "8f705b257c2b4a88925aebcf4bf73e5ab0f3ed3aa19cc761f594eb421c46612f",
+      "crlf_pairs_normalized": 63,
+      "base_git_blob": "8362052fff6c67484989f7a87228c9ac3bf109e3",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/AgentWorkspace.test.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 5005,
+      "sha256": "23ce53871ddfb71453b456ef0847cd6ce0ede9157c3cd3c76b426b03be98f04e",
+      "git_blob": "b5b5cf1cad8c802ea958fa36fc78738aca230d26",
+      "working_bytes": 5019,
+      "working_sha256": "dc3846be09851183c3b03d74650b2ee5760ad0c1ab6dd5040dc56ee0e575790c",
+      "crlf_pairs_normalized": 14,
+      "base_git_blob": "44040c5aa74624bc9587d54916834b7f7418de7d",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/WorkflowPermissions.test.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 11294,
+      "sha256": "9e42818857530d2045309f4cfc21e0259a128ffaebb4d2bd36360e3e0b0ce642",
+      "git_blob": "230b7b83a5fee872d637025177bf05dac90d30d6",
+      "working_bytes": 11421,
+      "working_sha256": "4285e76eb15e601fbc033251b1e360e973431b9b264f7b2c3a0e906b5b5813eb",
+      "crlf_pairs_normalized": 127,
+      "base_git_blob": null,
+      "status": "new"
+    },
+    {
+      "path": "frontend/src/workflows.css",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 11696,
+      "sha256": "e3306e0346507689d60ef5e375411e99f541b2839f0641b56adb8095bb3b0926",
+      "git_blob": "d6d500ec14d2a4fe41e240d7838d65e2cc84fc33",
+      "working_bytes": 11703,
+      "working_sha256": "64ea406fc65c034ed9d7d57c5f7a001344ff26af9d60afcfd40becf086943cc3",
+      "crlf_pairs_normalized": 7,
+      "base_git_blob": "30dede62e9d9383bac82f0d7f0cf670aeefa61b6",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/responsive.css",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 14104,
+      "sha256": "04a465924024fb7529f55a29f2a7b2bc4b9e11e9080d919d7b67016ad9ad487d",
+      "git_blob": "ad8e9e347111b1e0da8c9e5c1ef857f0d81a3612",
+      "working_bytes": 14109,
+      "working_sha256": "7a2d67adf1f2f8c639693f9f4461411e0f77b7591260febb28cca224a58405e7",
+      "crlf_pairs_normalized": 5,
+      "base_git_blob": "b14e2a7a9885c46e7744f8614d6c1727e3dd33ee",
+      "status": "modified"
+    },
+    {
+      "path": "scripts/publish_candidate.py",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 22388,
+      "sha256": "b19fd73963ab2a2f502b4fc9a2580728b4508fcc00499fd070ec0ae70125970c",
+      "git_blob": "a8dab3ca5b9d89e8ef00d93004121ee80212d819",
+      "working_bytes": 22705,
+      "working_sha256": "eed4537e0e8659c28d12bdf96861b1a29e26c6ca9dfba7e5daf21f415300dbe2",
+      "crlf_pairs_normalized": 317,
+      "base_git_blob": "e57506c896ab7b09caed93bd4ab8b488c962d51b",
+      "status": "modified"
+    },
+    {
+      "path": "tests/test_publication_material.py",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 14080,
+      "sha256": "b58d7c2871ab57fe9ecad0c0e134b960d727c47ae4b3bc586015c4fac9544358",
+      "git_blob": "267b5adffa6a2af7a41874f6f44e4adb545bd50b",
+      "working_bytes": 14343,
+      "working_sha256": "61ce72c9b2cbfd47bae38306f2e700c7274c046ceadefc67d1426e2ea0e2cced",
+      "crlf_pairs_normalized": 263,
+      "base_git_blob": "8f1c8321ef65bdfdafae8514d83b35d51362309a",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/dist/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 536,
+      "sha256": "7429db44072e00cfd804e6649880450327c3f6e81c25da7aa2b8d56c040558b6",
+      "git_blob": "220b6513186a189a30fe57dc733f89ca38f6cb34",
+      "working_bytes": 538,
+      "working_sha256": "956c863ac41a900477c898118a7846e669d96a120965f86a7c03137d8890c7ed",
+      "crlf_pairs_normalized": 2,
+      "base_git_blob": "3cae098b7739c0348dbfb73de7822ac0f9717150",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/dist/assets/index-DGJm9J-b.js",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 478079,
+      "sha256": "936f07b1c6f8c682ba622e9076419a84b0b85aa67646931222aebc97fe5d9197",
+      "git_blob": "340c46c14c53d878b64e454ff752ae04c356d9d2",
+      "working_bytes": 478079,
+      "working_sha256": "936f07b1c6f8c682ba622e9076419a84b0b85aa67646931222aebc97fe5d9197",
+      "crlf_pairs_normalized": 0,
+      "base_git_blob": null,
+      "status": "new"
+    },
+    {
+      "path": "frontend/dist/assets/index-HjclQKgW.css",
+      "mode": "100644",
+      "type": "blob",
+      "encoding": "base64",
+      "bytes": 105319,
+      "sha256": "f65ab45025fd74c440a166dcd27bd537f55dc61611a3b583954e03071773b46c",
+      "git_blob": "29a71c4a3ce5486d5dc1308e150723af0177a9bd",
+      "working_bytes": 105319,
+      "working_sha256": "f65ab45025fd74c440a166dcd27bd537f55dc61611a3b583954e03071773b46c",
+      "crlf_pairs_normalized": 0,
+      "base_git_blob": null,
+      "status": "new"
+    }
+  ],
+  "private_payload": {
+    "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\checkpoints\\cycle-20261105T155456Z-publication\\application-delta.json",
+    "bytes": 1179560,
+    "sha256": "b8f89efb97b51ac01c16c3cee5f931145d6c1a0b3107cd3cfdab56d25633f53c"
+  }
+}

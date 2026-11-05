@@ -226,7 +226,8 @@ def test_raster_count_bound_is_retained(candidate, monkeypatch):
     ("0.3.2-rc.1", ("0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
     ("0.3.3-rc.1", ("0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
     ("0.3.4-rc.1", ("0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
-    ("0.4.0-rc.1", ("0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
+    ("0.3.5-rc.1", ("0.3.4-rc.1", "0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
+    ("0.4.0-rc.1", ("0.3.4-rc.1", "0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1")),
 ])
 def test_release_history_adds_new_prior_candidate_without_changing_frozen_history(tmp_path, version, previous):
     if version == "0.3.0-rc.1":

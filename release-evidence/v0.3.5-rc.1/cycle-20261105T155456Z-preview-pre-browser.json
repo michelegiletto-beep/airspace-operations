@@ -1,0 +1,78 @@
+{
+  "at": "2026-11-05T16:05:08.451391+00:00",
+  "phase": "pre-browser",
+  "scope": "Read-only actual HTTP and private consistent SQLite comparison; browser rendering/actions must be described in a separate browser receipt",
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "candidate": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "primary_all_tables_unchanged": true,
+  "candidate_protected_tables_unchanged": [
+    "fleet_reservations",
+    "idempotency",
+    "jobs",
+    "record_versions",
+    "records",
+    "resource_locks",
+    "resource_reservations",
+    "schema_versions",
+    "sharing_agreements",
+    "users"
+  ],
+  "only_additional_candidate_actions": [
+    "identity.login"
+  ],
+  "expected_existing_user_signins": 1,
+  "current_role": "regulatory",
+  "scoped_personal_tasks": 2,
+  "actual_capability_roles": {
+    "maintenance_planning": [
+      "fleet_manager",
+      "planner",
+      "reviewer"
+    ],
+    "fleet_sharing_review": [
+      "fleet_manager",
+      "planner",
+      "reviewer"
+    ]
+  },
+  "candidate_health": {
+    "status": "ok",
+    "version": "0.3.5-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "anonymous_identity_and_tasks_401": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_writes": false,
+  "browser_rendering_verified_by_this_command": false,
+  "success": true
+}

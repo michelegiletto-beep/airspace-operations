@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.2\\.venv\\Scripts\\python.exe",
+    "scripts/prepare_corpus.py"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+  "started_at": "2026-11-05T15:57:49.963724+00:00",
+  "elapsed_seconds": 0.557,
+  "exit_code": 0,
+  "stdout": "Expanded actual permitted regulatory passages: 9833\nPreserved experimental lineage is available\n",
+  "stderr": "",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "primary_data_writes": false
+}

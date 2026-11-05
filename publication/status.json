@@ -416,108 +416,25 @@
   },
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
-    "version": "0.3.4-rc.1",
-    "state": "Published and independently retrieved on GitHub and System Lab; Hugging Face presentations independently retrieved",
-    "published": true,
-    "changes": [
-      "Reconciled current publication aliases with exact canonical receipts",
-      "Receipt-bound publication checkpoint reconciliation with regression tests"
-    ],
+    "version": "0.3.5-rc.1",
+    "state": "Local software and actual API verified; browser and release gates pending",
+    "published": false,
+    "source_checkout": "C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5",
+    "source_uploaded": false,
+    "current_candidate_release_gates_passed": false,
+    "current_candidate_installation_verified": false,
+    "current_candidate_publication_verified": false,
+    "browser_verified": false,
     "new_model_calls": 0,
     "training_runs": 0,
-    "current_candidate_release_gates_passed": true,
-    "current_candidate_installation_verified": true,
-    "current_candidate_publication_verified": true,
-    "source_checkout": "F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4",
-    "browser_verified": true,
-    "new_candidate_screenshot": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
-    "provider_presentation_uploaded": true,
-    "blockers": [],
-    "source_uploaded": true,
-    "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
-    "branch": "release/0.3.4-rc.1",
-    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/f5dd93a7c5c7367101ea63147a5da99cb085addb",
-    "source_evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-source-retrieval.json",
-    "development_ci": {
-      "commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
-      "run": 41408782094,
-      "state": "success",
-      "scope": "Actual release engineering, source/interface, PostgreSQL containers/worker/restoration and exact-archive gates",
-      "results": {
-        "engineering_linux": {
-          "passed": 576,
-          "skipped": 20,
-          "warnings": 3,
-          "pytest_seconds": 75.6
-        },
-        "postgresql": {
-          "passed": 19,
-          "warnings": 1,
-          "pytest_seconds": 8.37
-        },
-        "publisher_recorded_source_suite": {
-          "passed": 576,
-          "skipped": 20,
-          "warnings": 9,
-          "pytest_seconds": 89.79,
-          "command_elapsed_seconds": 94.65
-        },
-        "publisher_interface": {
-          "passed": 180,
-          "test_files": 25,
-          "command_exit": 0,
-          "build_exit": 0
-        },
-        "exact_archive_installation": {
-          "passed": 576,
-          "skipped": 20,
-          "warnings": 3,
-          "pytest_seconds": 64.01,
-          "success": true
-        },
-        "container_profile": "postgresql",
-        "container_version": "0.3.4-rc.1",
-        "actual_worker_completed_job": true,
-        "worker_audit_valid": true,
-        "postgresql_restoration_verified": true,
-        "restoration_audit_count": 2,
-        "restoration_audit_valid": true
-      },
-      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-candidate-ci.json"
-    },
-    "local_canonical_full_suite_passed": true,
-    "local_post_repair_full_attempt": {
-      "exit_code": 1,
-      "passed": 547,
-      "failed": 6,
-      "errors": 7,
-      "skipped": 21,
-      "seconds": 209.746,
-      "evidence": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
-      "limitation": "Several failing Windows file paths exceed 259 characters under the selected deep C test directory. This is an observed path-length correlation requiring diagnosis, not a waived gate or a passing full run."
-    },
-    "previous_uploaded_source": {
-      "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
-      "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/ea47156010c4c7ec0806a546ac0ee93ab507a361",
-      "source_evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-source-retrieval.json",
-      "development_ci": {
-        "run": 41374729360,
-        "state": "success",
-        "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
-        "linux_passed": 561,
-        "linux_skipped": 20,
-        "postgresql_passed": 19,
-        "publisher": "Skipped",
-        "evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-ci.json"
-      }
-    },
-    "local_final_windows": {
-      "passed": 575,
-      "skipped": 21,
-      "warnings": 7,
-      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-schema-full.json"
-    },
-    "browser_scope": "Draft navigation/reload, existing tasks, normal motion, actual desktop/mobile, keyboard. Paused pixel capture unavailable; actor transitions separately component-tested."
+    "blockers": [
+      "Actual desktop/mobile/keyboard, error recovery and motion review in a supported browser",
+      "Current distinct-source container/PostgreSQL/worker/restoration CI",
+      "Actual reviewed current-candidate media",
+      "Exact candidate archive installation and controlled publication gates"
+    ],
+    "local_frontend_tests_passed": 196,
+    "local_backend_tests_passed": 575
   },
   "known_presentation_defects": [
     "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
@@ -534,8 +451,8 @@
   },
   "development_environment": {
     "last_verified_application_version": "0.3.4-rc.1",
-    "last_verified_at": "2026-11-02T13:54:24.526181+00:00",
-    "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion.json",
+    "last_verified_at": "2026-11-05T16:09:33.637662+00:00",
+    "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-primary-recovery.json",
     "api": {
       "status": "ok",
       "version": "0.3.4-rc.1",
@@ -598,7 +515,7 @@
     "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
   },
   "publication_access_blockers": [],
-  "latest_cycle": "improvement/cycles/2026-11-02T132104Z-publication-completion.json",
+  "latest_cycle": "improvement/cycles/2026-11-05T155456Z-workflow-guidance.json",
   "publication_metadata_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
@@ -706,5 +623,109 @@
     "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
     "optional_neural_packages_installed": false,
     "primary_promoted_by_that_check": false
+  },
+  "previous_verified_candidate": {
+    "version": "0.3.4-rc.1",
+    "state": "Published and independently retrieved on GitHub and System Lab; Hugging Face presentations independently retrieved",
+    "published": true,
+    "changes": [
+      "Reconciled current publication aliases with exact canonical receipts",
+      "Receipt-bound publication checkpoint reconciliation with regression tests"
+    ],
+    "new_model_calls": 0,
+    "training_runs": 0,
+    "current_candidate_release_gates_passed": true,
+    "current_candidate_installation_verified": true,
+    "current_candidate_publication_verified": true,
+    "source_checkout": "F:/SystemLabAirspaceOperationsEngineering/candidate-0.3.4",
+    "browser_verified": true,
+    "new_candidate_screenshot": "publication/media/0.3.4-rc.1/draft-continuity.jpg",
+    "provider_presentation_uploaded": true,
+    "blockers": [],
+    "source_uploaded": true,
+    "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+    "branch": "release/0.3.4-rc.1",
+    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/f5dd93a7c5c7367101ea63147a5da99cb085addb",
+    "source_evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-source-retrieval.json",
+    "development_ci": {
+      "commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+      "run": 41408782094,
+      "state": "success",
+      "scope": "Actual release engineering, source/interface, PostgreSQL containers/worker/restoration and exact-archive gates",
+      "results": {
+        "engineering_linux": {
+          "passed": 576,
+          "skipped": 20,
+          "warnings": 3,
+          "pytest_seconds": 75.6
+        },
+        "postgresql": {
+          "passed": 19,
+          "warnings": 1,
+          "pytest_seconds": 8.37
+        },
+        "publisher_recorded_source_suite": {
+          "passed": 576,
+          "skipped": 20,
+          "warnings": 9,
+          "pytest_seconds": 89.79,
+          "command_elapsed_seconds": 94.65
+        },
+        "publisher_interface": {
+          "passed": 180,
+          "test_files": 25,
+          "command_exit": 0,
+          "build_exit": 0
+        },
+        "exact_archive_installation": {
+          "passed": 576,
+          "skipped": 20,
+          "warnings": 3,
+          "pytest_seconds": 64.01,
+          "success": true
+        },
+        "container_profile": "postgresql",
+        "container_version": "0.3.4-rc.1",
+        "actual_worker_completed_job": true,
+        "worker_audit_valid": true,
+        "postgresql_restoration_verified": true,
+        "restoration_audit_count": 2,
+        "restoration_audit_valid": true
+      },
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-candidate-ci.json"
+    },
+    "local_canonical_full_suite_passed": true,
+    "local_post_repair_full_attempt": {
+      "exit_code": 1,
+      "passed": 547,
+      "failed": 6,
+      "errors": 7,
+      "skipped": 21,
+      "seconds": 209.746,
+      "evidence": "release-evidence/v0.3.4-rc.1/python-tests-post-repair.json",
+      "limitation": "Several failing Windows file paths exceed 259 characters under the selected deep C test directory. This is an observed path-length correlation requiring diagnosis, not a waived gate or a passing full run."
+    },
+    "previous_uploaded_source": {
+      "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+      "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/ea47156010c4c7ec0806a546ac0ee93ab507a361",
+      "source_evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-source-retrieval.json",
+      "development_ci": {
+        "run": 41374729360,
+        "state": "success",
+        "source_commit": "ea47156010c4c7ec0806a546ac0ee93ab507a361",
+        "linux_passed": 561,
+        "linux_skipped": 20,
+        "postgresql_passed": 19,
+        "publisher": "Skipped",
+        "evidence": "release-evidence\\v0.3.4-rc.1\\cycle-20261102T011950Z-development-ci.json"
+      }
+    },
+    "local_final_windows": {
+      "passed": 575,
+      "skipped": 21,
+      "warnings": 7,
+      "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-schema-full.json"
+    },
+    "browser_scope": "Draft navigation/reload, existing tasks, normal motion, actual desktop/mobile, keyboard. Paused pixel capture unavailable; actor transitions separately component-tested."
   }
 }

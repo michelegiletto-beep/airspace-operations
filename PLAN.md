@@ -1,3 +1,7 @@
+## 5 November 2026: workflow preparation guidance
+
+Completed the bounded role guidance, capability recovery, current-actor retirement and sharing schedule-selector changes with recorded local tests and actual API/persistence checks. Browser, exact candidate archive and publication gates remain open. Continue from `improvement/cycles/2026-11-05T155456Z-workflow-guidance.json`; keep primary and public 0.3.4 unchanged.
+
 ## Current publication checkpoint, 2 November 2026, 13:21 UTC cycle
 
 GitHub [0.3.4-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1) is published and independently retrieved from frozen source `f5dd93a7c5c7367101ea63147a5da99cb085addb`. All nine assets match their public digests. The ZIP contains 15,377,087 bytes and has SHA-256 `c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57`. System Lab 101 is independently verified: 80 resources, comprising 77 exact assets and 3 authored pages. All three Hugging Face presentations now have independent 0.3.4 retrieval receipts.

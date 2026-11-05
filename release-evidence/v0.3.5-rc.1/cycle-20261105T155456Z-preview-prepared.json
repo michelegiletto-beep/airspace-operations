@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-05T15:59:11.634783+00:00",
+  "state": "Prepared isolated real-record review copy",
+  "summary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "method": "SQLite online backup from pinned read-only transaction; separate private audit key copy",
+  "all_tables_equal_to_primary": true,
+  "primary_all_tables_unchanged": true,
+  "worker_started": false,
+  "api_started": false,
+  "authentication_performed": false,
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_writes": false,
+  "private_records_excluded_from_public_artifacts": true
+}

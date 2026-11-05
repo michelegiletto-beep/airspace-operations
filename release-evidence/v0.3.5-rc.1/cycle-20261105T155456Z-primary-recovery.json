@@ -1,0 +1,96 @@
+{
+  "at": "2026-11-05T15:57:54.043415+00:00",
+  "state": "Recovered and independently checked published local primary",
+  "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+  "source_files_verified": 962,
+  "version": "0.3.4-rc.1",
+  "source_environment_preserved": true,
+  "policy_environment_presence": {
+    "AIRSPACE_DATABASE_URL": false,
+    "AIRSPACE_AUDIT_KEY": false,
+    "AIRSPACE_REQUIRE_TWO_REVIEWERS": false,
+    "AIRSPACE_OIDC_ISSUER": false,
+    "AIRSPACE_OIDC_JWKS_URL": false,
+    "AIRSPACE_OIDC_AUDIENCE": false,
+    "AIRSPACE_OIDC_SUBJECTS": false
+  },
+  "policy_environment_scope": "Inherited named current process configuration; no settings or approval requirements changed",
+  "processes": {
+    "api": 19796,
+    "worker": 22516
+  },
+  "api": [
+    {
+      "route": "/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.4-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "route": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "worker": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 0.914541
+  },
+  "before": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "after": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "all_database_tables_unchanged": true,
+  "private_consistent_backup": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_data_writes": false,
+  "authentication_performed": false,
+  "optional_interpreter": {
+    "torch": "2.14.1",
+    "transformers": "5.21.0",
+    "model_loaded": false
+  },
+  "limitations": [
+    "Worker receipt proves process liveness, not a new job completion",
+    "No new operational acceptance or qualified national review"
+  ]
+}

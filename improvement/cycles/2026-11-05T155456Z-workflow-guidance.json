@@ -1,0 +1,146 @@
+{
+  "cycle_id": "2026-11-05T155456Z-workflow-guidance",
+  "triggered_at": "2026-11-05T15:54:56.544Z",
+  "checkpoint_at": "2026-11-05T16:09:33.624689+00:00",
+  "state": "Local software and actual API verification complete; browser and release gates pending",
+  "starting_source": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+  "candidate": "0.3.5-rc.1",
+  "published_software": "0.3.4-rc.1",
+  "requirements": [
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-004",
+    "ASO3-005",
+    "ASO3-006",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "issue": "Disabled workflow controls lack role and tool-input guidance; sharing review cannot select its required schedule.",
+  "original_specification_changed": false,
+  "requirement_texts_or_statuses_changed": false,
+  "environment": {
+    "previous_F_drive_available": false,
+    "recovery": "Fresh public main checkout; primary uses the pinned existing 0.3.4 installation."
+  },
+  "browser": {
+    "inventory_at": "2026-11-05T16:05Z",
+    "supported_browser_providers": 0,
+    "rendering_verified": false,
+    "navigation_attempted": false,
+    "screenshots_created": false,
+    "scope": "Fresh CUA inventory exposed no browser provider. No native fallback, URL-policy bypass or browser settings change was attempted. The November 3 policy stop remains a historical event, not a new rejection."
+  },
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "release": {
+    "source_uploaded": false,
+    "published": false,
+    "engineering_gates_passed": false,
+    "stable_release": false,
+    "operational_acceptance": false,
+    "blockers": [
+      "Actual desktop/mobile/keyboard, error recovery and motion review in a supported browser",
+      "Current distinct-source container/PostgreSQL/worker/restoration CI",
+      "Actual reviewed current-candidate media",
+      "Exact candidate archive installation and controlled publication gates"
+    ]
+  },
+  "evidence": {
+    "primary_recovery": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-primary-recovery.json",
+    "public_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-public-audit.json",
+    "windows": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-windows-parent-fixed.json",
+    "release_history": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-release-history-tests.json",
+    "frontend": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final.json",
+    "frontend_results": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final-vitest.json",
+    "frontend_build": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-build.json",
+    "frontend_review": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-guidance-review.json",
+    "domain_review": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-domain-security-review.json",
+    "preview": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-preview-api.json",
+    "preview_snapshot": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-preview-pre-browser.json",
+    "models": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-local-model-integrity.json",
+    "source_preparation": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-application-delta-preparation.json",
+    "core_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-python-dependency-audit.json",
+    "optional_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-optional-neural-dependency-audit.json",
+    "frontend_dependency_audit": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-dependency-audit.json"
+  },
+  "retained_failures": [
+    "First pytest invocation omitted the caller-supplied basetemp parent: 191 passed, 19 skipped, 386 setup errors; the separate repaired invocation passed 575 tests with 21 skipped.",
+    "First interface invocation through a virtualized alias collected no tests; canonical cwd recovered collection.",
+    "A fixture using Vitest it.each with an empty array spread a row; explicit wrapping repaired the test fixture. Final 196 tests passed.",
+    "GitHub create_blob returned an internal connector error. A subsequent inline-content create_tree succeeded; no branch or release was moved by that tree operation."
+  ],
+  "retrospective": "The primary was recovered without changing its data. The bounded change fixes both unexplained permissions and a missing schedule selector. Full UI and actual API checks support the implementation, while the absence of a supported browser provider prevents a new release claim. Harness and connector failures remain recorded; technical identifiers, source law, old releases and approval rules remain unchanged.",
+  "next_bounded_prompt": "Read STATUS.md, publication/status.json, this cycle and any later source/CI receipt. Preserve all frozen 0.3.4 and earlier tags/assets. Use the new owned C checkout; the old F drive was unavailable, not deleted. First inspect actual development source/CI status. Verify the 0.3.5 Workflows in a supported browser at the isolated preview, with current regulatory-role handoff, GET-only permission recovery, unsent draft continuity, keyboard/mobile layout, and normal/pause/reduced motion behavior. Check the independently saved database snapshot and only expected sign-in changes. Use artificial schedule/maintenance records only in isolated tests, never production or release media. Do not substitute component tests for browser acceptance. If the provider is unavailable, keep that gate explicit and do not change browser security or install access. Complete fresh exact archive and publication gates before a distinct candidate release. Only then update the three existing public destinations and independently retrieve downloads/media. Use at most 45 minutes and two actual local-model evaluations. No emails, people contact, purchases, aircraft commands, self-approval, authority decisions or external operational submissions. Keep original 198 requirements and acceptance limitations intact. End with exact evidence, retrospective and next concrete action.",
+  "verification": {
+    "windows_suite": {
+      "passed": 575,
+      "skipped": 21,
+      "warnings": 1,
+      "pytest_seconds": 175.45,
+      "scope": "Same backend before the separate release-history test-case increment; no coverage instrumentation in this invocation."
+    },
+    "subsequent_release_history_tests": {
+      "passed": 49,
+      "skipped": 1,
+      "warnings": 1,
+      "seconds": 2.41
+    },
+    "final_frontend": {
+      "passed": 196,
+      "failed": 0,
+      "files": 26,
+      "seconds": 38.75
+    },
+    "frontend_build_exit": 0,
+    "dependency_audits": {
+      "core_python": 0,
+      "optional_neural": 0,
+      "frontend": 0,
+      "scope": "Actual current advisory checks of pinned lockfile inputs. Audit warnings remain in command receipts."
+    },
+    "persistent_data": {
+      "primary_records": 20,
+      "primary_tasks": 2,
+      "primary_audit": 48,
+      "primary_all_tables_unchanged": true,
+      "preview_records": 20,
+      "preview_tasks": 2,
+      "preview_audit": 49,
+      "only_preview_mutation": "One existing engineering account sign-in, session and outbox event",
+      "operational_records": 0,
+      "jobs": {
+        "Completed": 6
+      },
+      "workflow_records": 0,
+      "hmac_audits_valid": true
+    },
+    "actual_role_denials": {
+      "maintenance_planning": 422,
+      "fleet_sharing_review": 422,
+      "records_or_jobs_created": false
+    },
+    "local_model_provenance": {
+      "files_verified": 11,
+      "model_loaded": false,
+      "generation_calls": 0,
+      "training_runs": 0
+    }
+  },
+  "changes": [
+    "Current server roles replace the local preparation-role fallback; loading, missing, malformed and failed responses fail closed.",
+    "Current-role handoff and accessible tool-input guidance remain readable beside disabled controls.",
+    "Permission retry performs only the scoped GET and retains the current actor draft.",
+    "Tenant, actor, role and token changes retire open workflow form state.",
+    "Sharing preparation can include its required saved schedule; unrelated context selectors remain scoped.",
+    "New candidate release notes retain 0.3.4 first without changing historical version output.",
+    "Operator handbook explains permission recovery and the required saved context."
+  ],
+  "public_audit": {
+    "exact_downloads": 71,
+    "identities": 15,
+    "authored_site_pages": 3,
+    "current_published_release": "0.3.4-rc.1",
+    "new_destinations_changed": false
+  }
+}

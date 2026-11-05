@@ -39,3 +39,8 @@ Compare complete task titles and descriptions with whitespace normalisation only
 ## 2 November 2026 development checkpoint
 
 Use a separate owned F volume checkout after the C volume reached zero free bytes; retain all original releases, runtime data and models. A rejected cache deletion is not retried through another mechanism. Current publication aliases are derived from matching saved/deployed/public receipts. Development 0.3.4 stays unreleased until native browser verification and the remaining release gates pass.
+
+
+## 5 November 2026: current-role workflow preparation
+
+Use only the current server capability response for preparation controls. Explain current roles and deterministic tool inputs outside disabled buttons; permit the sharing workflow to select its required saved schedule. Retire local form state on identity changes. Keep 0.3.5 a development increment until browser, archive and release gates pass. A fresh C checkout replaces the unavailable working location for this cycle; the preserved 0.3.4 installation remains the primary source.

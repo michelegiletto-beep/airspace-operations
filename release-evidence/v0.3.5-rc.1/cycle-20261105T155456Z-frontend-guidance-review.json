@@ -1,0 +1,112 @@
+{
+  "checked_at": "2026-11-05T16:05:08.342355+00:00",
+  "base_commit": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+  "scope": "Workflow permission guidance, typed context selection and current-identity component state. Software tests use isolated artificial records only. Browser, persistent-data and publication verification are separate.",
+  "implemented": [
+    "Server capability role lists are the sole preparation UI input; no local fallback",
+    "Pending, failed, malformed and missing role lists keep affected controls disabled; explicit empty lists remain truthful unavailable-role states",
+    "Scoped GET-only capability retry",
+    "Readable adjacent current-role handoff with aria-describedby and keyboard-accessible tool-input details",
+    "Form and request state retire on tenant, actor, role or token change",
+    "The sharing workflow can select its required saved schedule; unrelated scopes retain their existing record kinds",
+    "All new handoff and prerequisite body text uses 12px minimum type and explicit line height"
+  ],
+  "backend_reference": {
+    "file": "backend/airspace/orchestration.py",
+    "TASK_ROLES_maintenance_planning": [
+      "fleet_manager",
+      "planner",
+      "reviewer"
+    ],
+    "TASK_ROLES_fleet_sharing_review": [
+      "fleet_manager",
+      "planner",
+      "reviewer"
+    ],
+    "maintenance_input_fields": [
+      "maintenance_assessment",
+      "maintenance_plan_input"
+    ],
+    "sharing_context": "One scoped schedule with assignments and input aircraft/mission snapshots; country coordination input must match its current scoped mission and organisation",
+    "permission_enforcement_changed": false,
+    "independent_review_changed": false
+  },
+  "verification": {
+    "focused_repaired_tests": 15,
+    "full_initial_tests": 192,
+    "full_final_tests": 196,
+    "full_final_failed": 0,
+    "test_files": 26,
+    "vitest_reported_suites": 52,
+    "full_final_elapsed_seconds": 38.75,
+    "build_exit_code": 0,
+    "build_elapsed_seconds": 13.109,
+    "build_application_source_changed_since_build": false,
+    "new_model_calls": 0,
+    "training_runs": 0,
+    "browser_verified_by_this_agent": false,
+    "operational_record_writes": false
+  },
+  "preserved_failures": [
+    {
+      "receipt": "cycle-20261105T155456Z-frontend-focused.json",
+      "result": "Two suites failed before test collection because the aliased working root did not resolve /src files; canonical real working directory used subsequently"
+    },
+    {
+      "receipt": "cycle-20261105T155456Z-frontend-focused-canonical.json",
+      "result": "14 passed, 1 failed. Isolated invalid-role fixture used it.each array spreading; invalid row values now wrapped and explicit valid empty role list tested separately"
+    },
+    {
+      "receipt": "cycle-20261105T155456Z-frontend-focused-final.json",
+      "result": "Repeated pre-repair fixture failure after a patch helper ran from the wrong working directory; exact receipt preserved. Correct root applied the repair before the successful focused run"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "frontend/src/AgentWorkspace.tsx",
+      "bytes": 20643,
+      "sha256": "8f705b257c2b4a88925aebcf4bf73e5ab0f3ed3aa19cc761f594eb421c46612f"
+    },
+    {
+      "path": "frontend/src/AgentWorkspace.test.tsx",
+      "bytes": 5019,
+      "sha256": "dc3846be09851183c3b03d74650b2ee5760ad0c1ab6dd5040dc56ee0e575790c"
+    },
+    {
+      "path": "frontend/src/WorkflowPermissions.test.tsx",
+      "bytes": 11421,
+      "sha256": "4285e76eb15e601fbc033251b1e360e973431b9b264f7b2c3a0e906b5b5813eb"
+    },
+    {
+      "path": "frontend/src/workflows.css",
+      "bytes": 11703,
+      "sha256": "64ea406fc65c034ed9d7d57c5f7a001344ff26af9d60afcfd40becf086943cc3"
+    },
+    {
+      "path": "frontend/src/responsive.css",
+      "bytes": 14109,
+      "sha256": "7a2d67adf1f2f8c639693f9f4461411e0f77b7591260febb28cca224a58405e7"
+    }
+  ],
+  "evidence": {
+    "final_command": "cycle-20261105T155456Z-frontend-final.json",
+    "final_vitest": "cycle-20261105T155456Z-frontend-final-vitest.json",
+    "build": "cycle-20261105T155456Z-frontend-build.json",
+    "focused_success": "cycle-20261105T155456Z-frontend-focused-repaired.json"
+  },
+  "react_review": {
+    "skill": "vercel:react-best-practices",
+    "checks": [
+      "Identity key is stable for unchanged actor context and retires local state at identity changes",
+      "Components are defined at module scope",
+      "Native disabled buttons preserve server enforcement and explanatory text sits outside disabled controls",
+      "Capability lookup is bounded to the existing typed GET and retry does not start workflows",
+      "No dependency, animation, network egress or aviation command changes"
+    ]
+  },
+  "limitations": [
+    "No real browser or operational acceptance is inferred from component tests",
+    "Application version and backend tests are coordinated separately by the parent",
+    "No original requirement status was upgraded by this change"
+  ]
+}

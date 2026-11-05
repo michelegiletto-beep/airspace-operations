@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-05T16:03:50.521910+00:00",
+  "command": [
+    "npm.cmd",
+    "test",
+    "--",
+    "--reporter=json",
+    "--outputFile=../release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final-vitest.json"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\frontend",
+  "exit_code": 0,
+  "elapsed_seconds": 38.75,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.5-rc.1 test\n> vitest run --reporter=json --outputFile=../release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final-vitest.json\n\nJSON report written to C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SystemLabAirspaceEngineering/candidate-0.3.5/release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-final-vitest.json\n",
+  "stderr": ""
+}

@@ -1,5 +1,9 @@
 # Operator handbook
 
+In **Workflows**, preparation controls use the current permissions returned by the server. The text beneath a disabled control identifies your role and the permitted preparation roles. An organisation administrator can assign the work to a permitted colleague. If permissions cannot be retrieved or validated, use **Retry workflow permissions**. This retries the permission lookup without creating or starting a workflow.
+
+For **Maintenance planning**, open **Records needed for the tools** to inspect the required saved assessment and planning inputs. For **Fleet sharing review**, include the current saved schedule and the mission with its country coordination inputs. The sharing workflow's record selector includes schedules. Missing or stale evidence remains subject to server checks; preparing a workflow does not change consent, reserve aircraft or release dispatch.
+
 System Lab Airspace Operations · 0.2.0-rc.1 engineering candidate
 
 Use the application to prepare, review and coordinate civilian UAS operations using actual records and evidence. Regulatory applicability, safety review, legal operating basis, site/airspace permission, U-space authorisation, internal readiness, pilot acknowledgement and actual execution remain separate decisions. The software does not issue permissions, activate a provider or control an aircraft. Read the [safety boundary](../SAFETY_BOUNDARY.md), [coverage statement](regulatory-coverage.md) and [known limitations](known-limitations.md) before operational adoption.

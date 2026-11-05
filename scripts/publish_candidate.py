@@ -264,7 +264,8 @@ def candidate_notes(root, context, assets):
                                 else ("0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1") if context["version"] == "0.3.1-rc.1"
                                 else ("0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1") if context["version"] == "0.3.2-rc.1"
                                 else ("0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1") if context["version"] == "0.3.3-rc.1"
-                                else ("0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1"))) + ".\n")
+                                else ("0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1") if context["version"] == "0.3.4-rc.1"
+                                else ("0.3.4-rc.1", "0.3.3-rc.1", "0.3.2-rc.1", "0.3.1-rc.1", "0.3.0-rc.1", "0.2.0-rc.1", "0.1.0-rc.1"))) + ".\n")
 
 
 def publish(root, context, assets, *, release_body=None):

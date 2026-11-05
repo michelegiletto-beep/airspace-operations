@@ -1,0 +1,104 @@
+{
+  "at": "2026-11-05T16:03:16.141747+00:00",
+  "state": "Verified isolated candidate API against real persistent engineering records",
+  "health": {
+    "status": "ok",
+    "version": "0.3.5-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "api_launcher_pid": 9876,
+  "worker_started": false,
+  "anonymous_protected_routes_401": [
+    "/me",
+    "/agent-capabilities",
+    "/companion/tasks"
+  ],
+  "current_role": "regulatory",
+  "capability_contract": "system-lab-agent-contracts/1.0",
+  "task_roles": {
+    "maintenance_planning": [
+      "fleet_manager",
+      "planner",
+      "reviewer"
+    ],
+    "fleet_sharing_review": [
+      "fleet_manager",
+      "planner",
+      "reviewer"
+    ]
+  },
+  "scoped_personal_tasks": 2,
+  "scoped_workflows": 0,
+  "direct_nonpermitted_preparation": {
+    "maintenance_planning": 422,
+    "fleet_sharing_review": 422,
+    "detail": "Role is not admitted for this specialist task",
+    "new_record_created": false
+  },
+  "before": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "after": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "protected_tables_unchanged": [
+    "fleet_reservations",
+    "idempotency",
+    "jobs",
+    "record_versions",
+    "records",
+    "resource_locks",
+    "resource_reservations",
+    "schema_versions",
+    "sharing_agreements",
+    "users"
+  ],
+  "only_preview_mutation": "One real existing-user sign-in, corresponding session, login audit and outbox record",
+  "primary_all_tables_unchanged": true,
+  "primary_summary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "new_operational_records": 0,
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+  "frontend_index_sha256": "956c863ac41a900477c898118a7846e669d96a120965f86a7c03137d8890c7ed",
+  "scope": "Actual HTTP API and read-only consistent SQLite snapshots. Browser rendering is a separate gate; no browser acceptance is claimed."
+}

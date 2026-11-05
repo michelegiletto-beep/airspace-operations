@@ -1,0 +1,67 @@
+{
+  "recorded_at": "2026-11-05T16:12:01.554535+00:00",
+  "scope": "Source-publication selection manifest for preserved raw test evidence. These local records remain available in the engineering checkout; their hashes are published without copying all raw outputs. Successful reruns have separate receipts and do not erase failures.",
+  "raw_files": [
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-windows-full.json",
+      "bytes": 321976,
+      "sha256": "d5066fcf9d74a8c51fec7236e9d1ae3edd5df7289480c15006304314dc937fbf",
+      "uploaded_in_this_increment": false,
+      "reason": "Failed initial test invocation: caller-supplied temporary parent was absent; 191 passed, 19 skipped and 386 setup errors. The distinct repaired invocation passed; this raw failure is preserved, not overwritten or waived."
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-focused-canonical.json",
+      "bytes": 18045,
+      "sha256": "923b00b64213f0a1c757f33a7330e1a73b38666b5b8e1dfbae5eca3ad437a302",
+      "uploaded_in_this_increment": false,
+      "reason": "Failed isolated fixture assertion: 14 passed and 1 failed. Superseded by the separately recorded repaired and final suites; raw failure preserved locally."
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-frontend-focused-final.json",
+      "bytes": 18040,
+      "sha256": "c77576978b1c8c8b5316c7f42901725154e037f3dd96a2eb26a992635648d4f2",
+      "uploaded_in_this_increment": false,
+      "reason": "Failed isolated fixture assertion: 14 passed and 1 failed. Despite its historical filename this is not the passing final suite; raw failure preserved locally."
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-windows-junit.xml",
+      "bytes": 394246,
+      "sha256": "8f00008aa0a703aa541e72c72c6776d2fc8699dfa5eb51880986b698f5b4a817",
+      "uploaded_in_this_increment": false,
+      "reason": "Raw JUnit for the initial failed invocation; local preservation and digest only in this source increment."
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-windows-parent-fixed-junit.xml",
+      "bytes": 106281,
+      "sha256": "370d51401d9535c8cfc5a1ad294b3cb280f3da013eadd0e8b1cd23e95a6f6dd5",
+      "uploaded_in_this_increment": false,
+      "reason": "Raw JUnit for the distinct successful 575-test invocation; actual JSON command/result receipt is selected for publication."
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-release-history-junit.xml",
+      "bytes": 7892,
+      "sha256": "dc86404dd3c933c4213e94dd5cba07ce29c87121acf2d38581779f753d50098b",
+      "uploaded_in_this_increment": false,
+      "reason": "Raw JUnit for the successful focused 49-test invocation; actual JSON command/result receipt is selected for publication."
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-preview-post-browser.json",
+      "bytes": 2015,
+      "sha256": "4c6e4bc13d22ff8944c53b715def964e169535df83b247153e1e417a17e9cd90",
+      "uploaded_in_this_increment": false,
+      "reason": "Raw helper phase is named post-browser, but no rendering or navigation occurred. The selected final-persistent-snapshot wrapper contains this full aggregate snapshot and explicitly states the nonvisual scope."
+    }
+  ],
+  "raw_failures_deleted": false,
+  "raw_receipts_overwritten": false,
+  "operational_acceptance": false,
+  "release_gate_waived": false,
+  "current_success_receipts": [
+    "cycle-20261105T155456Z-windows-parent-fixed.json",
+    "cycle-20261105T155456Z-frontend-final.json",
+    "cycle-20261105T155456Z-frontend-final-vitest.json",
+    "cycle-20261105T155456Z-release-history-tests.json"
+  ],
+  "limits": "This manifest provides identity and selection provenance. A digest is not a publicly retrievable raw result; omitted raw files are not claimed to be uploaded.",
+  "updated_at": "2026-11-05T16:13:10.896577+00:00"
+}

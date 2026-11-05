@@ -1,0 +1,61 @@
+{
+  "at": "2026-11-05T16:04:19.043839+00:00",
+  "scope": "Independent source/domain and actual local HTTP/persistence review of bounded workflow guidance increment; browser rendering remains separate",
+  "checks": [
+    {
+      "area": "Current preparation roles",
+      "result": "Maintenance and fleet-sharing preparation roles are derived from the actual authenticated server catalogue. No local role fallback remains. Invalid/missing roles and loading/error states disable affected preparation controls."
+    },
+    {
+      "area": "Current actor privacy",
+      "result": "Organisation, actor ID, role and token key the workflow context. Capability retrieval includes actor context. Retired actor forms unmount; the existing draft hook retains actor-scoped drafts. Server actor/tenant/version admission code is unchanged."
+    },
+    {
+      "area": "Accessible handoff",
+      "result": "Disabled button descriptions are adjacent outside the button and associated with aria-describedby. Input explanations use keyboard-accessible details. Role labels are presentation text; technical contract identifiers remain intact."
+    },
+    {
+      "area": "Maintenance inputs",
+      "result": "Tool explanations match exactly-one maintenance_assessment and maintenance_plan_input scoped records, allowing both contracts on one record. These inputs are execution dependencies; the UI does not claim authority or maintenance release."
+    },
+    {
+      "area": "Fleet sharing inputs",
+      "result": "Only sharing preparation now permits selection of a saved schedule. Tool explanation identifies current assignments/aircraft/mission snapshots and country coordination, consistent with deterministic tool code. Consent, reservations and dispatch remain separate server workflows."
+    },
+    {
+      "area": "Server permission enforcement",
+      "result": "Actual existing regulatory actor receives HTTP422 for maintenance and sharing preparation; neither request creates a record/job. Both capabilities report fleet_manager/planner/reviewer. This directly verifies current-role rejection independent of disabled UI controls."
+    },
+    {
+      "area": "Persistent data",
+      "result": "Primary all tables remain unchanged at audit48. Isolated preview has20records,2personal engineering tasks,6Completedjobs and audit49; only one existing-user login/session/outbox entry was added. Zero operational records, workflows or model calls."
+    }
+  ],
+  "protected_backend_files_identical_to_published034": 29,
+  "only_backend_python_difference": [
+    "backend/airspace/__init__.py"
+  ],
+  "source_sha256": {
+    "frontend/src/AgentWorkspace.tsx": "8f705b257c2b4a88925aebcf4bf73e5ab0f3ed3aa19cc761f594eb421c46612f",
+    "frontend/src/WorkflowPermissions.test.tsx": "4285e76eb15e601fbc033251b1e360e973431b9b264f7b2c3a0e906b5b5813eb",
+    "backend/airspace/orchestration.py": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89",
+    "backend/airspace/coordination_api.py": "26be452a5f66d648a1326abf4f1e34156b44652408e6cc714aad194f087d6684",
+    "backend/airspace/identity.py": "39e0a737301ff339c3127b04f2e9a22ba37f28b9ad1da10684383e2a03594cc5",
+    "backend/airspace/sharing.py": "25d4451d777b230f9ce207040df421b1ec6ce6666c189496613c0da70957ad8d",
+    "backend/airspace/fleet.py": "8071d887ca7b120950b79318d4b20511c23bc62d687c2869ae2dd336f1085c25",
+    "backend/airspace/planning.py": "65abe7d1b51da0bf4cfe63c5972aba1763cb2f87d238db4e84d06b1e84db8c61",
+    "backend/airspace/dispatch.py": "7e5f7971fee9df154d53b7d5b97c6c0785b6fffa134abd7dac3228b275f666e7"
+  },
+  "critical_finding_in_reviewed_scope": false,
+  "review_is_aviation_certification": false,
+  "current_browser_verification": false,
+  "full_original_specification_accepted": false,
+  "operational_acceptance": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "limitations": [
+    "No real operator case, schedule or flight records are present; no live operational acceptance is implied",
+    "Browser layout, keyboard journey and motion require their own actual receipts",
+    "The existing default reviewer-count policy is inherited unchanged; this increment does not change approval requirements"
+  ]
+}

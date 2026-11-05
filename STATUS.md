@@ -1,3 +1,11 @@
+## Development checkpoint, 5 November 2026
+
+Local 0.3.5 verification: 196 interface tests, a successful build and all three current dependency audits passed. The backend invocation passed 575 tests with 21 skipped; subsequent release-history verification passed 49 tests with 1 skipped. Actual current-role API rejection and unchanged records were verified. No supported browser provider was exposed, so browser review and new release publication remain pending. No new model call or training run occurred.
+
+Current published and primary software remains 0.3.4-rc.1. A separate 0.3.5 development checkout at `C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5` was cloned from verified main `0e4140976c761b5f4ddad19a6a7408721d75060a` because the previous F drive is unavailable. No loss or deletion of the F checkout is inferred. The primary API and worker were recovered from the pinned 0.3.4 installation; existing records and HMAC audit remain unchanged.
+
+The new increment explains workflow preparation roles and tool inputs, fails closed while role data is unavailable, and allows the sharing review to include its required saved schedule. It is not a published release. Read `improvement/cycles/2026-11-05T155456Z-workflow-guidance.json` for exact test, browser and publication states. Original acceptance, stable release and operational acceptance remain false.
+
 ## Current publication checkpoint, 2 November 2026, 13:21 UTC cycle
 
 GitHub [0.3.4-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1) is published and independently retrieved from frozen source `f5dd93a7c5c7367101ea63147a5da99cb085addb`. All nine assets match their public digests. The ZIP contains 15,377,087 bytes and has SHA-256 `c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57`. System Lab 101 is independently verified: 80 resources, comprising 77 exact assets and 3 authored pages. All three Hugging Face presentations now have independent 0.3.4 retrieval receipts.
