@@ -1,0 +1,104 @@
+{
+  "at": "2026-11-07T13:58:20.325898+00:00",
+  "scope": "Independent read-only visual privacy, JPEG integrity and pixel-region review of actual native current-candidate captures, followed by exact-byte promotion to unpublished035 media paths. No image editing or remote upload.",
+  "files": [
+    {
+      "source_capture_basename": "desktop-guidance-final-safe.jpg",
+      "public_path": "publication/media/0.3.5-rc.1/workflow-context.jpg",
+      "bytes": 90666,
+      "sha256": "d7409cb329527790f73df0eb5b3c27e11c6ef910186e197dd0d49b1fe4740b69",
+      "format": "JPEG",
+      "width": 1905,
+      "height": 904,
+      "mode": "RGB",
+      "exif_items": 0,
+      "container_and_pixel_decode_validated": true,
+      "transformation": "None; byte-identical native browser capture"
+    },
+    {
+      "source_capture_basename": "phone-context-final.jpg",
+      "public_path": "publication/media/0.3.5-rc.1/workflow-context-mobile.jpg",
+      "bytes": 32817,
+      "sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+      "format": "JPEG",
+      "width": 375,
+      "height": 812,
+      "mode": "RGB",
+      "exif_items": 0,
+      "container_and_pixel_decode_validated": true,
+      "transformation": "None; byte-identical native browser capture"
+    }
+  ],
+  "privacy_review": {
+    "approved": true,
+    "desktop": "Naturally scrolled viewport excludes account header, email and organisation identifier; shows actual current-role guidance and existing owned companion.",
+    "mobile": "Explicit unsent engineering-review draft with keyboard focus; closed launcher no longer obscures records guidance. No account header, credentials, private operational record or fabricated mission.",
+    "provisional_captures_preserved_privately": [
+      "desktop-private.jpg",
+      "desktop-context-final.jpg",
+      "phone-context-settled.jpg"
+    ],
+    "provisional_note": "The earlier phone overlapped the records panel; the earlier final desktop exposed the account header. Neither is the selected public capture."
+  },
+  "ownership": {
+    "screen_capture": "Actual authorised application engineering review; no external operational/customer material shown.",
+    "owned_companion_provenance": "frontend/public/vendor/systemlab-companion/provenance.json",
+    "owned_companion_provenance_sha256": "555b4bbfb2ccec8bd42d6ea622f73131794ae5670e97472cf04c15376c4730d1",
+    "reserved_rights_notice": "LICENSES/LicenseRef-SystemLab-Assets.txt",
+    "reserved_rights_notice_sha256": "477f6cc13ff19fcfc62b9598c138a50816058eaa7e84b31ee62dbe997ce9e752",
+    "rights": "Existing owner-authorised presentation use; proprietary companion rights remain reserved and are not relicensed under the application code licence."
+  },
+  "motion_pixels": {
+    "normal": {
+      "pair": [
+        "desktop-normal-settling.jpg",
+        "desktop-guidance-final-safe.jpg"
+      ],
+      "roi": {
+        "x": 1112,
+        "y": 527,
+        "width": 78,
+        "height": 78
+      },
+      "different_pixels": 4269,
+      "total_pixels": 6084,
+      "absolute_channel_difference_sum": 146329,
+      "claim": "Actual current normal-motion image region progresses; this pair is not a timing/performance measurement."
+    },
+    "paused": {
+      "pair": [
+        "motion-paused-stable-1.jpg",
+        "motion-paused-stable-2.jpg"
+      ],
+      "roi": {
+        "x": 1112,
+        "y": 527,
+        "width": 78,
+        "height": 78
+      },
+      "different_pixels": 0,
+      "total_pixels": 6084,
+      "absolute_channel_difference_sum": 0,
+      "both_file_sha256": "c3cd9b332a78db202c7f559d24773ef75334c2b7ddbc796ea2b609c0f4629d82",
+      "claim": "Two fresh settled paused native captures are byte-identical and their companion region is unchanged."
+    },
+    "failed_transition_pair": {
+      "pair": [
+        "motion-paused-1.jpg",
+        "motion-paused-2.jpg"
+      ],
+      "same_roi_different_pixels": 6083,
+      "total_pixels": 6084,
+      "finding": "First image still displayed Pause motion at an earlier scroll position; second displayed Resume motion after scrolling. This straddled transition does not prove pause stability and is retained as failed proof."
+    },
+    "reduced_motion_browser_emulated": false,
+    "reduced_motion_scope": "Current preference was normal; component coverage remains separate. No new reduced-motion browser acceptance is claimed."
+  },
+  "reviewed_manifest": "publication/releases/0.3.5-rc.1/manifest.json",
+  "existing_publication_material_contract_passed": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_records_created_by_review": 0,
+  "remote_mutations": false,
+  "publication_state": "Prepared only; current release/container/archive gates and independent new publication retrieval remain separate."
+}

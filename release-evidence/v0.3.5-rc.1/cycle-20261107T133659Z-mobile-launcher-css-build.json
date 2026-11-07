@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-07T13:54:19.382828+00:00",
+  "command": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\frontend",
+  "started_at": "2026-11-07T13:54:11.864199+00:00",
+  "elapsed_seconds": 7.519,
+  "exit_code": 0,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.5-rc.1 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n\u2713 51 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.53 kB \u2502 gzip:   0.33 kB\ndist/assets/index-Dw5mB-Lk.css  105.42 kB \u2502 gzip:  22.16 kB\ndist/assets/index-CtS_QQqi.js   480.06 kB \u2502 gzip: 131.57 kB\n\n\u2713 built in 346ms\n",
+  "stderr": "",
+  "scope": "CSS-only fix of actual mobile launcher overlap; no JavaScript semantics or backend changes. Root owns browser hide/restoration verification.",
+  "rule": ".app-shell:has(.record-panel) > .companion-launcher:not(.dock-is-open){visibility:hidden;pointer-events:none}",
+  "source_sha256": "ad9c92164380fb21302eca47252bae91efab27b0c029771c617aa96f87b4f611",
+  "diff_check_exit": 0,
+  "dist_files": {
+    "frontend/dist/assets/index-CtS_QQqi.js": "8bfecb1cfbff7583f58246a99cc53dfdedbfe2f15a37b158f0e32f0518584731",
+    "frontend/dist/assets/index-Dw5mB-Lk.css": "926c5eba86de62f4af040b793bc1ab746d391e3c952c4854be40baf1a48f53b9"
+  },
+  "test_scope": "205 frontend tests passed before this CSS-only change. No mirror unit test or full test repeat was run, per assigned scope.",
+  "browser_verification": "Pending parent verification; this receipt makes no browser acceptance claim."
+}

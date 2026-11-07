@@ -416,39 +416,24 @@
   },
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
-    "version": "0.3.5-rc.1",
-    "state": "Development source and actual CI independently verified; browser and release gates pending",
-    "published": false,
+    "browser_verified": true,
+    "browser_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261107T133659Z-browser.json",
     "source_checkout": "C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5",
-    "source_uploaded": true,
-    "current_candidate_release_gates_passed": false,
-    "current_candidate_installation_verified": false,
-    "current_candidate_publication_verified": false,
-    "browser_verified": false,
     "new_model_calls": 0,
-    "training_runs": 0,
     "blockers": [
-      "Actual desktop/mobile/keyboard, error recovery and motion review in a supported browser",
-      "Actual reviewed current-candidate media",
-      "Exact candidate archive installation and controlled publication gates"
+      "New exact-source CI and current package gates",
+      "Exact candidate archive installation",
+      "Controlled publication and independent retrieval"
     ],
-    "local_frontend_tests_passed": 196,
-    "local_backend_tests_passed": 575,
-    "source_commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
-    "branch": "codex/airspace-workflow-guidance-035",
-    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/f8d311ab0563777527bcb809e309a27e4fdbc3ea",
-    "source_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-source-retrieval.json",
-    "development_ci": {
-      "linux_passed": 577,
-      "linux_skipped": 20,
-      "commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
-      "run": 42062319116,
-      "postgresql_passed": 19,
-      "publisher": "Skipped on development branch",
-      "scope": "Actual development source, containers, PostgreSQL, worker and restoration; not a released archive or browser acceptance",
-      "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-ci.json",
-      "state": "success"
-    }
+    "current_candidate_release_gates_passed": false,
+    "source_uploaded": false,
+    "version": "0.3.5-rc.1",
+    "training_runs": 0,
+    "current_candidate_publication_verified": false,
+    "published": false,
+    "state": "Browser and local software verified; exact new source CI and publication pending",
+    "current_candidate_installation_verified": false,
+    "local_frontend_tests_passed": 205
   },
   "known_presentation_defects": [
     "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
@@ -529,7 +514,7 @@
     "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
   },
   "publication_access_blockers": [],
-  "latest_cycle": "improvement/cycles/2026-11-05T155456Z-workflow-guidance.json",
+  "latest_cycle": "improvement/cycles/2026-11-07T133659Z-context-verification.json",
   "publication_metadata_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
@@ -741,5 +726,40 @@
       "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T072227Z-windows-schema-full.json"
     },
     "browser_scope": "Draft navigation/reload, existing tasks, normal motion, actual desktop/mobile, keyboard. Paused pixel capture unavailable; actor transitions separately component-tested."
+  },
+  "previous_verified_development_source": {
+    "version": "0.3.5-rc.1",
+    "state": "Development source and actual CI independently verified; browser and release gates pending",
+    "published": false,
+    "source_checkout": "C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5",
+    "source_uploaded": true,
+    "current_candidate_release_gates_passed": false,
+    "current_candidate_installation_verified": false,
+    "current_candidate_publication_verified": false,
+    "browser_verified": false,
+    "new_model_calls": 0,
+    "training_runs": 0,
+    "blockers": [
+      "Actual desktop/mobile/keyboard, error recovery and motion review in a supported browser",
+      "Actual reviewed current-candidate media",
+      "Exact candidate archive installation and controlled publication gates"
+    ],
+    "local_frontend_tests_passed": 196,
+    "local_backend_tests_passed": 575,
+    "source_commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+    "branch": "codex/airspace-workflow-guidance-035",
+    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+    "source_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-source-retrieval.json",
+    "development_ci": {
+      "linux_passed": 577,
+      "linux_skipped": 20,
+      "commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+      "run": 42062319116,
+      "postgresql_passed": 19,
+      "publisher": "Skipped on development branch",
+      "scope": "Actual development source, containers, PostgreSQL, worker and restoration; not a released archive or browser acceptance",
+      "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-development-ci.json",
+      "state": "success"
+    }
   }
 }

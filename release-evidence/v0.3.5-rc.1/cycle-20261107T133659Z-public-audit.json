@@ -1,0 +1,2665 @@
+{
+  "started_at": "2026-11-07T13:43:19.082149+00:00",
+  "scope": "Fresh anonymous exact downloads of all nine published GitHub 0.3.4 assets, all 51 pinned Hugging Face files, all 77 exact Site 101 resources and three authored Site pages; current release/development/CI identity and bounded source copy review. No installation, rendering, inference or operational acceptance.",
+  "remote_mutations": false,
+  "model_calls": 0,
+  "cookies_credentials_environment_proxies": false,
+  "failures": [],
+  "exact_files": [
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/ci-verification.json",
+      "status": 200,
+      "bytes": 23953,
+      "sha256": "e523839a7e30a9a1df7e6ed361eb9e2d9a017bb9c6697a2e111e62d549ebc543",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 23953,
+      "expected_sha256": "e523839a7e30a9a1df7e6ed361eb9e2d9a017bb9c6697a2e111e62d549ebc543",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "d4b13ebde30cd405338dcd291b529fba5c94d3c3ff2842e123ae9c31bce45770",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 1046,
+      "expected_sha256": "d4b13ebde30cd405338dcd291b529fba5c94d3c3ff2842e123ae9c31bce45770",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 123906,
+      "sha256": "b5cd00cea54de3191ad1138ddd8e44de2eac47267f9adce7804cd429adb19f61",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 123906,
+      "expected_sha256": "b5cd00cea54de3191ad1138ddd8e44de2eac47267f9adce7804cd429adb19f61",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 80300,
+      "sha256": "7e3550373b0fc5020f9916dbde5d6ead8e14c76d6d60f5296f5edb4c13a79cfd",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 80300,
+      "expected_sha256": "7e3550373b0fc5020f9916dbde5d6ead8e14c76d6d60f5296f5edb4c13a79cfd",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 112,
+      "sha256": "1b3c0cc861f99d25c687bf371ecb7bbe04fbedec5820cdec1aded356ef42d08b",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 112,
+      "expected_sha256": "1b3c0cc861f99d25c687bf371ecb7bbe04fbedec5820cdec1aded356ef42d08b",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 8911,
+      "sha256": "7f76f86158fc00dbffef8d0a26ff2494277fc62d6e8e9002b80e06fc9285aaab",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 8911,
+      "expected_sha256": "7f76f86158fc00dbffef8d0a26ff2494277fc62d6e8e9002b80e06fc9285aaab",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/System-Lab-Airspace-Operations-0.3.4-rc.1.zip",
+      "status": 200,
+      "bytes": 15377087,
+      "sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 15377087,
+      "expected_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+      "exact": true
+    },
+    {
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.4-rc.1/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "final_host": "release-assets.githubusercontent.com",
+      "scope": "github_current_asset",
+      "path": null,
+      "expected_bytes": 13971,
+      "expected_sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/README.md",
+      "status": 200,
+      "bytes": 14684,
+      "sha256": "66a3e2634f1933514aa17ca773e4b61b72611c9edc43f111423a0fa8618f95c8",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "README.md",
+      "expected_bytes": 14684,
+      "expected_sha256": "66a3e2634f1933514aa17ca773e4b61b72611c9edc43f111423a0fa8618f95c8",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/media/draft-continuity-mobile.jpg",
+      "status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "media/draft-continuity-mobile.jpg",
+      "expected_bytes": 42148,
+      "expected_sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/.gitattributes",
+      "status": 200,
+      "bytes": 1647,
+      "sha256": "6eff29f0c1f407177e61ff4ab93cc337ec49d14ad6151283304bee8d97eed469",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": ".gitattributes",
+      "expected_bytes": 1647,
+      "expected_sha256": "6eff29f0c1f407177e61ff4ab93cc337ec49d14ad6151283304bee8d97eed469",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/NOTICE",
+      "status": 200,
+      "bytes": 1071,
+      "sha256": "02bceefb0cb54543b7d2053b1f728eccc74decf418968738c8238bd047dc9877",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "NOTICE",
+      "expected_bytes": 1071,
+      "expected_sha256": "02bceefb0cb54543b7d2053b1f728eccc74decf418968738c8238bd047dc9877",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/NOTICE.md",
+      "status": 200,
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "NOTICE.md",
+      "expected_bytes": 1750,
+      "expected_sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/current-inference-verification.json",
+      "status": 200,
+      "bytes": 5137,
+      "sha256": "0fc31a7282caefcaeaf392a9f3643b5cfc36bf2974a39671ba1b25d4b327d67f",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "current-inference-verification.json",
+      "expected_bytes": 5137,
+      "expected_sha256": "0fc31a7282caefcaeaf392a9f3643b5cfc36bf2974a39671ba1b25d4b327d67f",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/inference.py",
+      "status": 200,
+      "bytes": 2322,
+      "sha256": "900c096b793d52b4bd7255d1d88d5c8a15b628464805b92acdab3584c95a30c6",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "inference.py",
+      "expected_bytes": 2322,
+      "expected_sha256": "900c096b793d52b4bd7255d1d88d5c8a15b628464805b92acdab3584c95a30c6",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/media/agent-orchestration.jpg",
+      "status": 200,
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_model_file",
+      "path": "media/agent-orchestration.jpg",
+      "expected_bytes": 211029,
+      "expected_sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/media/companion-tasks.png",
+      "status": 200,
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_model_file",
+      "path": "media/companion-tasks.png",
+      "expected_bytes": 123755,
+      "expected_sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/media/operations-permissions-mobile.jpg",
+      "status": 200,
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "media/operations-permissions-mobile.jpg",
+      "expected_bytes": 35517,
+      "expected_sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/media/orchestration-pipeline.svg",
+      "status": 200,
+      "bytes": 4561,
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "media/orchestration-pipeline.svg",
+      "expected_bytes": 4561,
+      "expected_sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/media/task-recovery-mobile.jpg",
+      "status": 200,
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "media/task-recovery-mobile.jpg",
+      "expected_bytes": 35896,
+      "expected_sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/requirements.txt",
+      "status": 200,
+      "bytes": 245,
+      "sha256": "bc1cfaaec7f645ad72ee45c3dfa7a601a15a3901fa4a6abb1d491ce22baea60a",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "requirements.txt",
+      "expected_bytes": 245,
+      "expected_sha256": "bc1cfaaec7f645ad72ee45c3dfa7a601a15a3901fa4a6abb1d491ce22baea60a",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/run.json",
+      "status": 200,
+      "bytes": 18937,
+      "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_file",
+      "path": "run.json",
+      "expected_bytes": 18937,
+      "expected_sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2/student.safetensors",
+      "status": 200,
+      "bytes": 49824,
+      "sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_model_file",
+      "path": "student.safetensors",
+      "expected_bytes": 49824,
+      "expected_sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/README.md",
+      "status": 200,
+      "bytes": 11210,
+      "sha256": "04a9ec149f0102c12bc21af36d910e473ee55eb4d241497588136a95c5a5bd28",
+      "final_host": "huggingface.co",
+      "scope": "hf_dataset_file",
+      "path": "README.md",
+      "expected_bytes": 11210,
+      "expected_sha256": "04a9ec149f0102c12bc21af36d910e473ee55eb4d241497588136a95c5a5bd28",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/.gitattributes",
+      "status": 200,
+      "bytes": 2504,
+      "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb",
+      "final_host": "huggingface.co",
+      "scope": "hf_dataset_file",
+      "path": ".gitattributes",
+      "expected_bytes": 2504,
+      "expected_sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/annotations.json.gz",
+      "status": 200,
+      "bytes": 27789,
+      "sha256": "2ba4bd57c8c31b831e0d75532eb37046bfd815ca8baa973d87209fb6bb197662",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_dataset_file",
+      "path": "annotations.json.gz",
+      "expected_bytes": 27789,
+      "expected_sha256": "2ba4bd57c8c31b831e0d75532eb37046bfd815ca8baa973d87209fb6bb197662",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/dataset.jsonl.gz",
+      "status": 200,
+      "bytes": 72466,
+      "sha256": "0f58b949d1e81e714976693fb01a5cfc75dbc5a2a0f3198c4873ee17c1e11948",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_dataset_file",
+      "path": "dataset.jsonl.gz",
+      "expected_bytes": 72466,
+      "expected_sha256": "0f58b949d1e81e714976693fb01a5cfc75dbc5a2a0f3198c4873ee17c1e11948",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/media/agent-orchestration.jpg",
+      "status": 200,
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_dataset_file",
+      "path": "media/agent-orchestration.jpg",
+      "expected_bytes": 211029,
+      "expected_sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/media/orchestration-pipeline.svg",
+      "status": 200,
+      "bytes": 4561,
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "final_host": "huggingface.co",
+      "scope": "hf_dataset_file",
+      "path": "media/orchestration-pipeline.svg",
+      "expected_bytes": 4561,
+      "expected_sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/Magic51/system-lab-airspace-source-annotations/resolve/2747c70da9c9188fe36254475babb435ef5db003/source-change-log.json",
+      "status": 200,
+      "bytes": 700,
+      "sha256": "8cdfa3610cde9ab287a353f7c1ec627c005cd3a3ae956d57db6c939b47e75dce",
+      "final_host": "huggingface.co",
+      "scope": "hf_dataset_file",
+      "path": "source-change-log.json",
+      "expected_bytes": 700,
+      "expected_sha256": "8cdfa3610cde9ab287a353f7c1ec627c005cd3a3ae956d57db6c939b47e75dce",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/README.md",
+      "status": 200,
+      "bytes": 10640,
+      "sha256": "425af233fb07869c8c85ed2ad3852407bf15c74680d86bff4527072c368f16db",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "README.md",
+      "expected_bytes": 10640,
+      "expected_sha256": "425af233fb07869c8c85ed2ad3852407bf15c74680d86bff4527072c368f16db",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/index.html",
+      "status": 200,
+      "bytes": 15581,
+      "sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "index.html",
+      "expected_bytes": 15581,
+      "expected_sha256": "87302945a07afc46968ffb7b2551a804f85abac52675c2f31a09a3c594957952",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/draft-continuity-mobile.jpg",
+      "status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/draft-continuity-mobile.jpg",
+      "expected_bytes": 42148,
+      "expected_sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/.gitattributes",
+      "status": 200,
+      "bytes": 1843,
+      "sha256": "56792e4e03db3ea9c98cbb0ba19814585984bbe45b0b65f18cc081411f08f6b4",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": ".gitattributes",
+      "expected_bytes": 1843,
+      "expected_sha256": "56792e4e03db3ea9c98cbb0ba19814585984bbe45b0b65f18cc081411f08f6b4",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/NOTICE.md",
+      "status": 200,
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "NOTICE.md",
+      "expected_bytes": 3244,
+      "expected_sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/app.js",
+      "status": 200,
+      "bytes": 9956,
+      "sha256": "98a23b3f43a7b9d24750bd72d3b83f4837ae7455ee1e7ea5fb1e1aa1d5d1547d",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "app.js",
+      "expected_bytes": 9956,
+      "expected_sha256": "98a23b3f43a7b9d24750bd72d3b83f4837ae7455ee1e7ea5fb1e1aa1d5d1547d",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/data/actual-ui-workflow.json",
+      "status": 200,
+      "bytes": 133118,
+      "sha256": "f6e8d7927bb9ffdd6a2355e8b0f2b8a33c327155c2cb33eba03e6b6ab6ed549f",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "data/actual-ui-workflow.json",
+      "expected_bytes": 133118,
+      "expected_sha256": "f6e8d7927bb9ffdd6a2355e8b0f2b8a33c327155c2cb33eba03e6b6ab6ed549f",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/data/causal-comparison.json",
+      "status": 200,
+      "bytes": 546869,
+      "sha256": "2c1fda31cb48b2308ee68de062957b4d9c458903de4a77000e6945079ae2eb75",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "data/causal-comparison.json",
+      "expected_bytes": 546869,
+      "expected_sha256": "2c1fda31cb48b2308ee68de062957b4d9c458903de4a77000e6945079ae2eb75",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/data/evidence.json",
+      "status": 200,
+      "bytes": 39490,
+      "sha256": "b2bc32950ddd50ac1df1e4d0cacdbc6b2ee8e1ba155c1eb2f11b285c7ad9ae69",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "data/evidence.json",
+      "expected_bytes": 39490,
+      "expected_sha256": "b2bc32950ddd50ac1df1e4d0cacdbc6b2ee8e1ba155c1eb2f11b285c7ad9ae69",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/data/first-causal-run.json",
+      "status": 200,
+      "bytes": 129419,
+      "sha256": "52e2a1bbf7d022bbe6540c28036e8136ce0a93c707c9222848485639d4936747",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "data/first-causal-run.json",
+      "expected_bytes": 129419,
+      "expected_sha256": "52e2a1bbf7d022bbe6540c28036e8136ce0a93c707c9222848485639d4936747",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/data/provenance.json",
+      "status": 200,
+      "bytes": 2417,
+      "sha256": "1d0e1906c5bae9a5c24bd599c23e1afb9b57e8294513a3a9b6fb23e182f479b1",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "data/provenance.json",
+      "expected_bytes": 2417,
+      "expected_sha256": "1d0e1906c5bae9a5c24bd599c23e1afb9b57e8294513a3a9b6fb23e182f479b1",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/data/student-run.json",
+      "status": 200,
+      "bytes": 18937,
+      "sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "data/student-run.json",
+      "expected_bytes": 18937,
+      "expected_sha256": "de42928bb7ea440fcf2b23356479eddc47cae6c0a61839a519ea5fba14a859fb",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/agent-orchestration-detail.jpg",
+      "status": 200,
+      "bytes": 71132,
+      "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/agent-orchestration-detail.jpg",
+      "expected_bytes": 71132,
+      "expected_sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/agent-orchestration.jpg",
+      "status": 200,
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_space_file",
+      "path": "media/agent-orchestration.jpg",
+      "expected_bytes": 211029,
+      "expected_sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/airspace-planning.jpg",
+      "status": 200,
+      "bytes": 112044,
+      "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_space_file",
+      "path": "media/airspace-planning.jpg",
+      "expected_bytes": 112044,
+      "expected_sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/application-tasks.png",
+      "status": 200,
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_space_file",
+      "path": "media/application-tasks.png",
+      "expected_bytes": 424587,
+      "expected_sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/companion-tasks-mobile.jpg",
+      "status": 200,
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/companion-tasks-mobile.jpg",
+      "expected_bytes": 34227,
+      "expected_sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/european-coordination.jpg",
+      "status": 200,
+      "bytes": 127424,
+      "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_space_file",
+      "path": "media/european-coordination.jpg",
+      "expected_bytes": 127424,
+      "expected_sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/fleet-maintenance.jpg",
+      "status": 200,
+      "bytes": 75096,
+      "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/fleet-maintenance.jpg",
+      "expected_bytes": 75096,
+      "expected_sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/mission-control.jpg",
+      "status": 200,
+      "bytes": 129906,
+      "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "final_host": "us.aws.cdn.hf.co",
+      "scope": "hf_space_file",
+      "path": "media/mission-control.jpg",
+      "expected_bytes": 129906,
+      "expected_sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/operations-permissions-mobile.jpg",
+      "status": 200,
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/operations-permissions-mobile.jpg",
+      "expected_bytes": 35517,
+      "expected_sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/orchestration-pipeline.svg",
+      "status": 200,
+      "bytes": 4561,
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/orchestration-pipeline.svg",
+      "expected_bytes": 4561,
+      "expected_sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/scheduling.jpg",
+      "status": 200,
+      "bytes": 98935,
+      "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/scheduling.jpg",
+      "expected_bytes": 98935,
+      "expected_sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/media/task-recovery-mobile.jpg",
+      "status": 200,
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "media/task-recovery-mobile.jpg",
+      "expected_bytes": 35896,
+      "expected_sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/prepare.py",
+      "status": 200,
+      "bytes": 6735,
+      "sha256": "65cf5e3cd9171c95b5880cb8395b97ee96580a1fa8e89f5ebd538db3adf47d98",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "prepare.py",
+      "expected_bytes": 6735,
+      "expected_sha256": "65cf5e3cd9171c95b5880cb8395b97ee96580a1fa8e89f5ebd538db3adf47d98",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/style.css",
+      "status": 200,
+      "bytes": 388,
+      "sha256": "789bfd541c9f06658ac410d968e9c39fa8c63a48a08643b36071b984c699a9f4",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "style.css",
+      "expected_bytes": 388,
+      "expected_sha256": "789bfd541c9f06658ac410d968e9c39fa8c63a48a08643b36071b984c699a9f4",
+      "exact": true
+    },
+    {
+      "url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/54b724611886e5ff299527ed6a0ba1ad1e5f20d7/styles.css",
+      "status": 200,
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_file",
+      "path": "styles.css",
+      "expected_bytes": 1800,
+      "expected_sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/ci-release-source-verification.json",
+      "status": 200,
+      "bytes": 4157,
+      "sha256": "fdf966cc477d9a533fd693227e89378c2317751265d08b188e9c68710c34de5f",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/ci-release-source-verification.json",
+      "expected_bytes": 4157,
+      "expected_sha256": "fdf966cc477d9a533fd693227e89378c2317751265d08b188e9c68710c34de5f",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/publication-dependency-audit-current.json",
+      "status": 200,
+      "bytes": 389,
+      "sha256": "a86bbdfdc41e56f421e6e3eca0ff181f0e48da12f15a26ef5ed1ceec8df8d2a7",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/publication-dependency-audit-current.json",
+      "expected_bytes": 389,
+      "expected_sha256": "a86bbdfdc41e56f421e6e3eca0ff181f0e48da12f15a26ef5ed1ceec8df8d2a7",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/release-gates.json",
+      "status": 200,
+      "bytes": 1075,
+      "sha256": "d3415f8fed896f1e109e9e0eba662b47adee817162a63f25e84ea133450c6054",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/release-gates.json",
+      "expected_bytes": 1075,
+      "expected_sha256": "d3415f8fed896f1e109e9e0eba662b47adee817162a63f25e84ea133450c6054",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 47464,
+      "sha256": "74c6a0d9d3d0bc620945615323f17617ce0091826d692a2c4344e0932cd76304",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/RELEASE_PROVENANCE.json",
+      "expected_bytes": 47464,
+      "expected_sha256": "74c6a0d9d3d0bc620945615323f17617ce0091826d692a2c4344e0932cd76304",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/sbom-validation.json",
+      "status": 200,
+      "bytes": 757,
+      "sha256": "695fa0440aed83b6d87af83308cb01ceb5adba629afcb2d617ed57e6bd7d5d9f",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/sbom-validation.json",
+      "expected_bytes": 757,
+      "expected_sha256": "695fa0440aed83b6d87af83308cb01ceb5adba629afcb2d617ed57e6bd7d5d9f",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 82424,
+      "sha256": "230f296f5433873ecb97bb0c7d4f3b3d759986e861c3138535a17ec751f85ebe",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/SBOM.cdx.json",
+      "expected_bytes": 82424,
+      "expected_sha256": "230f296f5433873ecb97bb0c7d4f3b3d759986e861c3138535a17ec751f85ebe",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 775,
+      "sha256": "ce96d2bc949031b17904807983bcc0bb9009f70e1b77a1b5d49f6477f0424c92",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/SHA256SUMS.txt",
+      "expected_bytes": 775,
+      "expected_sha256": "ce96d2bc949031b17904807983bcc0bb9009f70e1b77a1b5d49f6477f0424c92",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 5690,
+      "sha256": "e981c080457a59de1a67b8a22f062094e9832f0ff1fcc21bc68400a7ccd63109",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/standalone-archive-verification.json",
+      "expected_bytes": 5690,
+      "expected_sha256": "e981c080457a59de1a67b8a22f062094e9832f0ff1fcc21bc68400a7ccd63109",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+      "status": 200,
+      "bytes": 10122929,
+      "sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/System-Lab-Airspace-Operations-0.2.0-rc.1.zip",
+      "expected_bytes": 10122929,
+      "expected_sha256": "a66a23080654a34133b377c47d549fd83a02907ea6b04805ce272f5619c7273f",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/agent-orchestration-detail.jpg",
+      "status": 200,
+      "bytes": 71132,
+      "sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/agent-orchestration-detail.jpg",
+      "expected_bytes": 71132,
+      "expected_sha256": "9f31e2ac3509cae278d9e3f1618eed113ce79ad2d849f0a1dcd3a0c7873befcb",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/agent-orchestration.jpg",
+      "status": 200,
+      "bytes": 211029,
+      "sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/agent-orchestration.jpg",
+      "expected_bytes": 211029,
+      "expected_sha256": "c1febc279d98049b3f9e5cc7e3e7ec5c2f0a7504310dcf27824189701535e987",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/airspace-planning.jpg",
+      "status": 200,
+      "bytes": 112044,
+      "sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/airspace-planning.jpg",
+      "expected_bytes": 112044,
+      "expected_sha256": "92d9ff07f5072903a0e158fdccc6d0a747298aa5475cf21db47583bbd0ff4bf4",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/browser-verification.json",
+      "status": 200,
+      "bytes": 811,
+      "sha256": "b564879ed0e1c3221bbb9db53563f5816af051510d2f9c6077463a55014b05c5",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/browser-verification.json",
+      "expected_bytes": 811,
+      "expected_sha256": "b564879ed0e1c3221bbb9db53563f5816af051510d2f9c6077463a55014b05c5",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/coral.webp",
+      "status": 200,
+      "bytes": 30036,
+      "sha256": "37b2a36c2d8829af8942da772f79ae8c1ad4d0a528fb974487577298c969e432",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/coral.webp",
+      "expected_bytes": 30036,
+      "expected_sha256": "37b2a36c2d8829af8942da772f79ae8c1ad4d0a528fb974487577298c969e432",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/european-coordination.jpg",
+      "status": 200,
+      "bytes": 127424,
+      "sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/european-coordination.jpg",
+      "expected_bytes": 127424,
+      "expected_sha256": "b1ec9b92307cb53d1131497e8cded8248b31ad77067ee67ea64a924f62ae747f",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/fleet-maintenance.jpg",
+      "status": 200,
+      "bytes": 75096,
+      "sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/fleet-maintenance.jpg",
+      "expected_bytes": 75096,
+      "expected_sha256": "58482ca38b65d9d3dbc2691df0c0d024697f8d146600d9e82b2313ffe3acd30b",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/indigo.webp",
+      "status": 200,
+      "bytes": 35496,
+      "sha256": "f9b5f823f7de8e046608166a22ed93b8a8148a61f329da9282f4fe932003e3e1",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/indigo.webp",
+      "expected_bytes": 35496,
+      "expected_sha256": "f9b5f823f7de8e046608166a22ed93b8a8148a61f329da9282f4fe932003e3e1",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/mission-control.jpg",
+      "status": 200,
+      "bytes": 129906,
+      "sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/mission-control.jpg",
+      "expected_bytes": 129906,
+      "expected_sha256": "6d5cbebae670f90c92cc65df007132fbdf7cdd74a87c8b79c7328a8251063787",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/mobile-mission-control.jpg",
+      "status": 200,
+      "bytes": 79822,
+      "sha256": "ccd4e905c904023e722a51990bd67eddb8c3f61878b36f2b6c6cbd46afe71bab",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/mobile-mission-control.jpg",
+      "expected_bytes": 79822,
+      "expected_sha256": "ccd4e905c904023e722a51990bd67eddb8c3f61878b36f2b6c6cbd46afe71bab",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/orchestration-pipeline.svg",
+      "status": 200,
+      "bytes": 4561,
+      "sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/orchestration-pipeline.svg",
+      "expected_bytes": 4561,
+      "expected_sha256": "9c81fc6333678b94038be1b59d1844623fafa5bac8522b89cdcda43d0b60ae35",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/scheduling.jpg",
+      "status": 200,
+      "bytes": 98935,
+      "sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/scheduling.jpg",
+      "expected_bytes": 98935,
+      "expected_sha256": "2bb6d9cdda1460491200a8cd9cc0c454d2760f36d3c2c02ee6824d1b36ccb8f0",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/System-Lab-Airspace-Operations-0.1.0-rc.1.zip",
+      "status": 200,
+      "bytes": 2090705,
+      "sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/System-Lab-Airspace-Operations-0.1.0-rc.1.zip",
+      "expected_bytes": 2090705,
+      "expected_sha256": "a114fa757fe60c9ded044092fac986ce3558cc5ddc5f0c3bd924e9de2caa9d87",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/ci-verification.json",
+      "status": 200,
+      "bytes": 21246,
+      "sha256": "a2911001a8f32728f625ffaf1f6efe520e3ec49325447c4e36d385c153194190",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/ci-verification.json",
+      "expected_bytes": 21246,
+      "expected_sha256": "a2911001a8f32728f625ffaf1f6efe520e3ec49325447c4e36d385c153194190",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "4d87fcbad8fc6bcca43af07364fa3d5157d268d4bc74ac8389a02748c2fa5305",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/release-gates.json",
+      "expected_bytes": 1046,
+      "expected_sha256": "4d87fcbad8fc6bcca43af07364fa3d5157d268d4bc74ac8389a02748c2fa5305",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 65482,
+      "sha256": "a34882892043a1504e676bed4062302089011719edca909ab3d036e836fab075",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/RELEASE_PROVENANCE.json",
+      "expected_bytes": 65482,
+      "expected_sha256": "a34882892043a1504e676bed4062302089011719edca909ab3d036e836fab075",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 80300,
+      "sha256": "663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/SBOM.cdx.json",
+      "expected_bytes": 80300,
+      "expected_sha256": "663b3ab4b3e421dffb618c0f1261f94a44f172b7af1b5e752747e4f56a468d95",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 112,
+      "sha256": "0450f296020fed005b8f4903bc022a5bd4668408575c6326e14d6aeacf5a4729",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/SHA256SUMS.txt",
+      "expected_bytes": 112,
+      "expected_sha256": "0450f296020fed005b8f4903bc022a5bd4668408575c6326e14d6aeacf5a4729",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 6003,
+      "sha256": "ba0168f4d1456fd74a0d5b80008df2f6dbff08ddd359fe1147dd3df1fd533668",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/standalone-archive-verification.json",
+      "expected_bytes": 6003,
+      "expected_sha256": "ba0168f4d1456fd74a0d5b80008df2f6dbff08ddd359fe1147dd3df1fd533668",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+      "status": 200,
+      "bytes": 11675616,
+      "sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/System-Lab-Airspace-Operations-0.3.0-rc.1.zip",
+      "expected_bytes": 11675616,
+      "expected_sha256": "4a004e21dd04633e82c330f191745ad9b31bd65d8424183d0b66cfd00243763e",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.0-rc.1/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.0-rc.1/THIRD_PARTY_NOTICES.md",
+      "expected_bytes": 13971,
+      "expected_sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/v0.3/desktop-companion.jpg",
+      "status": 200,
+      "bytes": 160189,
+      "sha256": "9b898da12f13da8abc90a9a2d5f68cdefbe1e5cad28a0d65a2c4f3dc7fd6b4f8",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/v0.3/desktop-companion.jpg",
+      "expected_bytes": 160189,
+      "expected_sha256": "9b898da12f13da8abc90a9a2d5f68cdefbe1e5cad28a0d65a2c4f3dc7fd6b4f8",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/v0.3/mobile-companion.jpg",
+      "status": 200,
+      "bytes": 42049,
+      "sha256": "5d6e2d3b91f3d34cbbb4f111507ced693f158a22cead1341caa36f643680c7bc",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/v0.3/mobile-companion.jpg",
+      "expected_bytes": 42049,
+      "expected_sha256": "5d6e2d3b91f3d34cbbb4f111507ced693f158a22cead1341caa36f643680c7bc",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/assets/airspace-project.css",
+      "status": 200,
+      "bytes": 8231,
+      "sha256": "ad2c5f80782041d796488edb0b93fdfd6656e8f4af6e69024e8493ba8e106fad",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/assets/airspace-project.css",
+      "expected_bytes": 8231,
+      "expected_sha256": "ad2c5f80782041d796488edb0b93fdfd6656e8f4af6e69024e8493ba8e106fad",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/ci-verification.json",
+      "status": 200,
+      "bytes": 22095,
+      "sha256": "fd8e6b20e3b44692ce9bca2482d9bfe21365fdad56785eb2f85ba50a89313747",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/ci-verification.json",
+      "expected_bytes": 22095,
+      "expected_sha256": "fd8e6b20e3b44692ce9bca2482d9bfe21365fdad56785eb2f85ba50a89313747",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "91848a143f98f26e8c293c97cc66ea7f1b93de41bb40fd34cc529b4be33e85c7",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/release-gates.json",
+      "expected_bytes": 1046,
+      "expected_sha256": "91848a143f98f26e8c293c97cc66ea7f1b93de41bb40fd34cc529b4be33e85c7",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 77030,
+      "sha256": "91307f2e4e2c9fb792af12c149cb4fa4dae85dd56958899cf80a8c98164e070b",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/RELEASE_PROVENANCE.json",
+      "expected_bytes": 77030,
+      "expected_sha256": "91307f2e4e2c9fb792af12c149cb4fa4dae85dd56958899cf80a8c98164e070b",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 80300,
+      "sha256": "13dfa8bd2f218a8c157f5566af9cabc49279590c701dcb6d9efb3edbbd0d67b1",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/SBOM.cdx.json",
+      "expected_bytes": 80300,
+      "expected_sha256": "13dfa8bd2f218a8c157f5566af9cabc49279590c701dcb6d9efb3edbbd0d67b1",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 112,
+      "sha256": "8bc1740917f4faeac6f2812a14fc8d56ffdcc9b89909a0045614e0343b601ebc",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/SHA256SUMS.txt",
+      "expected_bytes": 112,
+      "expected_sha256": "8bc1740917f4faeac6f2812a14fc8d56ffdcc9b89909a0045614e0343b601ebc",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 6084,
+      "sha256": "053195c16579068dfad45ec3ac6d8b8278a727c843bbd5f3a9ae7e4d795351dc",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/standalone-archive-verification.json",
+      "expected_bytes": 6084,
+      "expected_sha256": "053195c16579068dfad45ec3ac6d8b8278a727c843bbd5f3a9ae7e4d795351dc",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+      "status": 200,
+      "bytes": 12504321,
+      "sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/System-Lab-Airspace-Operations-0.3.1-rc.1.zip",
+      "expected_bytes": 12504321,
+      "expected_sha256": "0917f468624e35c64829f1591d389fadf51f4528f027d7dc614f1c3fb2b7b750",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.1-rc.1/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 13971,
+      "sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.1-rc.1/THIRD_PARTY_NOTICES.md",
+      "expected_bytes": 13971,
+      "expected_sha256": "451f0560becbd8880670bc1d9d0a657b07addb8beaf7010546ba9af203ffdedf",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.1-rc.1/companion-tasks.png",
+      "status": 200,
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.1-rc.1/companion-tasks.png",
+      "expected_bytes": 123755,
+      "expected_sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg",
+      "status": 200,
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.1-rc.1/companion-tasks-mobile.jpg",
+      "expected_bytes": 34227,
+      "expected_sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.1-rc.1/application-tasks.png",
+      "status": 200,
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.1-rc.1/application-tasks.png",
+      "expected_bytes": 424587,
+      "expected_sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/ci-verification.json",
+      "status": 200,
+      "bytes": 22860,
+      "sha256": "f5453e0cadd211d5f0f0603b7eda7bf094db54aaa7ed0bd38702bc70499dda6f",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/ci-verification.json",
+      "expected_bytes": 22860,
+      "expected_sha256": "f5453e0cadd211d5f0f0603b7eda7bf094db54aaa7ed0bd38702bc70499dda6f",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "a2b48a6efe90c86163e04f2f8b59ea04920ca0d00bd676382ee53b306c87dec4",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/release-gates.json",
+      "expected_bytes": 1046,
+      "expected_sha256": "a2b48a6efe90c86163e04f2f8b59ea04920ca0d00bd676382ee53b306c87dec4",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 96695,
+      "sha256": "77d3be9d718f627dee37396c485f4f8a68e23c6d16292adb56a58526758672d3",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/RELEASE_PROVENANCE.json",
+      "expected_bytes": 96695,
+      "expected_sha256": "77d3be9d718f627dee37396c485f4f8a68e23c6d16292adb56a58526758672d3",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 80300,
+      "sha256": "0fb6d94cc9659e8cd72e8e72fafae376430366a1211acdc77aca91c684d7e75e",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/SBOM.cdx.json",
+      "expected_bytes": 80300,
+      "expected_sha256": "0fb6d94cc9659e8cd72e8e72fafae376430366a1211acdc77aca91c684d7e75e",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 112,
+      "sha256": "b2462434b4e52eb980a5f87daba40cbeffa26ae78f8ec93bf10a23bcebae9f4c",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/SHA256SUMS.txt",
+      "expected_bytes": 112,
+      "expected_sha256": "b2462434b4e52eb980a5f87daba40cbeffa26ae78f8ec93bf10a23bcebae9f4c",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 6165,
+      "sha256": "73a6edfa361c4950ff19c551b8436ad2a6c3a2165576b086e296aaf22d5f9dd6",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/standalone-archive-verification.json",
+      "expected_bytes": 6165,
+      "expected_sha256": "73a6edfa361c4950ff19c551b8436ad2a6c3a2165576b086e296aaf22d5f9dd6",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/System-Lab-Airspace-Operations-0.3.2-rc.1.zip",
+      "status": 200,
+      "bytes": 13796258,
+      "sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/System-Lab-Airspace-Operations-0.3.2-rc.1.zip",
+      "expected_bytes": 13796258,
+      "expected_sha256": "1634b9b7e36bd2b80b179a4e0429da7f0c9165434747fc9a62f03ede78cc772e",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.2-rc.1/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.2-rc.1/THIRD_PARTY_NOTICES.md",
+      "expected_bytes": 13971,
+      "expected_sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+      "status": 200,
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.2-rc.1/operations-permissions-mobile.jpg",
+      "expected_bytes": 35517,
+      "expected_sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/ci-verification.json",
+      "status": 200,
+      "bytes": 23290,
+      "sha256": "5a3cae3cec74ca39545e7de676e283633c6ea8623b67d3b16c2534f1edba2c47",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/ci-verification.json",
+      "expected_bytes": 23290,
+      "expected_sha256": "5a3cae3cec74ca39545e7de676e283633c6ea8623b67d3b16c2534f1edba2c47",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "6054f7fe25e0d7058042df4fae26b0384d9ac3bc951c5b948ff4e57f4946d5e8",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/release-gates.json",
+      "expected_bytes": 1046,
+      "expected_sha256": "6054f7fe25e0d7058042df4fae26b0384d9ac3bc951c5b948ff4e57f4946d5e8",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 107547,
+      "sha256": "3409e80dae5a8a85632b38f667fff1b4b46a63af9570b1519967d45dd169f64b",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/RELEASE_PROVENANCE.json",
+      "expected_bytes": 107547,
+      "expected_sha256": "3409e80dae5a8a85632b38f667fff1b4b46a63af9570b1519967d45dd169f64b",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 80300,
+      "sha256": "7b7af05db5b27b1e627be34dfb24d4d128de38ddba83133ec081fa3ed6808887",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/SBOM.cdx.json",
+      "expected_bytes": 80300,
+      "expected_sha256": "7b7af05db5b27b1e627be34dfb24d4d128de38ddba83133ec081fa3ed6808887",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 112,
+      "sha256": "c4ba4f5b12113c7c3970afa4ca4f034989bbae015aec30a7c39466acdd319061",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/SHA256SUMS.txt",
+      "expected_bytes": 112,
+      "expected_sha256": "c4ba4f5b12113c7c3970afa4ca4f034989bbae015aec30a7c39466acdd319061",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 6155,
+      "sha256": "3d45d34097904f7bf8f55e8cca7e1bc3fe96f3944c90c2db08054e17995db99a",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/standalone-archive-verification.json",
+      "expected_bytes": 6155,
+      "expected_sha256": "3d45d34097904f7bf8f55e8cca7e1bc3fe96f3944c90c2db08054e17995db99a",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/System-Lab-Airspace-Operations-0.3.3-rc.1.zip",
+      "status": 200,
+      "bytes": 14192874,
+      "sha256": "067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/System-Lab-Airspace-Operations-0.3.3-rc.1.zip",
+      "expected_bytes": 14192874,
+      "expected_sha256": "067c1b940d520177695402cd469823e35183e4a96d0bbc7af403fd9effb0d6f5",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.3-rc.1/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.3-rc.1/THIRD_PARTY_NOTICES.md",
+      "expected_bytes": 13971,
+      "expected_sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+      "status": 200,
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.3-rc.1/task-recovery-mobile.jpg",
+      "expected_bytes": 35896,
+      "expected_sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/ci-verification.json",
+      "status": 200,
+      "bytes": 23953,
+      "sha256": "e523839a7e30a9a1df7e6ed361eb9e2d9a017bb9c6697a2e111e62d549ebc543",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/ci-verification.json",
+      "expected_bytes": 23953,
+      "expected_sha256": "e523839a7e30a9a1df7e6ed361eb9e2d9a017bb9c6697a2e111e62d549ebc543",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/LICENSE",
+      "expected_bytes": 11358,
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/release-gates.json",
+      "status": 200,
+      "bytes": 1046,
+      "sha256": "d4b13ebde30cd405338dcd291b529fba5c94d3c3ff2842e123ae9c31bce45770",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/release-gates.json",
+      "expected_bytes": 1046,
+      "expected_sha256": "d4b13ebde30cd405338dcd291b529fba5c94d3c3ff2842e123ae9c31bce45770",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/RELEASE_PROVENANCE.json",
+      "status": 200,
+      "bytes": 123906,
+      "sha256": "b5cd00cea54de3191ad1138ddd8e44de2eac47267f9adce7804cd429adb19f61",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/RELEASE_PROVENANCE.json",
+      "expected_bytes": 123906,
+      "expected_sha256": "b5cd00cea54de3191ad1138ddd8e44de2eac47267f9adce7804cd429adb19f61",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/SBOM.cdx.json",
+      "status": 200,
+      "bytes": 80300,
+      "sha256": "7e3550373b0fc5020f9916dbde5d6ead8e14c76d6d60f5296f5edb4c13a79cfd",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/SBOM.cdx.json",
+      "expected_bytes": 80300,
+      "expected_sha256": "7e3550373b0fc5020f9916dbde5d6ead8e14c76d6d60f5296f5edb4c13a79cfd",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/SHA256SUMS.txt",
+      "status": 200,
+      "bytes": 112,
+      "sha256": "1b3c0cc861f99d25c687bf371ecb7bbe04fbedec5820cdec1aded356ef42d08b",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/SHA256SUMS.txt",
+      "expected_bytes": 112,
+      "expected_sha256": "1b3c0cc861f99d25c687bf371ecb7bbe04fbedec5820cdec1aded356ef42d08b",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/standalone-archive-verification.json",
+      "status": 200,
+      "bytes": 8911,
+      "sha256": "7f76f86158fc00dbffef8d0a26ff2494277fc62d6e8e9002b80e06fc9285aaab",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/standalone-archive-verification.json",
+      "expected_bytes": 8911,
+      "expected_sha256": "7f76f86158fc00dbffef8d0a26ff2494277fc62d6e8e9002b80e06fc9285aaab",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/System-Lab-Airspace-Operations-0.3.4-rc.1.zip",
+      "status": 200,
+      "bytes": 15377087,
+      "sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/System-Lab-Airspace-Operations-0.3.4-rc.1.zip",
+      "expected_bytes": 15377087,
+      "expected_sha256": "c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.4-rc.1/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/releases/0.3.4-rc.1/THIRD_PARTY_NOTICES.md",
+      "expected_bytes": 13971,
+      "expected_sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.4-rc.1/draft-continuity.jpg",
+      "status": 200,
+      "bytes": 113135,
+      "sha256": "8949e97f7f3c8ed0ac778d29bcaa24c056116bf8c8363e2348dce7093c1f8c14",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.4-rc.1/draft-continuity.jpg",
+      "expected_bytes": 113135,
+      "expected_sha256": "8949e97f7f3c8ed0ac778d29bcaa24c056116bf8c8363e2348dce7093c1f8c14",
+      "exact": true
+    },
+    {
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "scope": "site_current_asset",
+      "path": "/airspace-operations/media/0.3.4-rc.1/draft-continuity-mobile.jpg",
+      "expected_bytes": 42148,
+      "expected_sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "exact": true
+    }
+  ],
+  "pages": [
+    {
+      "scope": "site_authored_page",
+      "path": "/",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/",
+      "status": 200,
+      "bytes": 135199,
+      "sha256": "85c4076ac0754be2b52cbfefd8ed7661a5a140d7724f584d9e071847183c8cde",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "source_sha256": "dbad83aa333c48a8e4f02a68b717f92d0a126b96de4be9c03a40c4ff8e8aad4d",
+      "authored_sha256": "dbad83aa333c48a8e4f02a68b717f92d0a126b96de4be9c03a40c4ff8e8aad4d",
+      "authored_exact_after_one_pinned_hosting_script": true
+    },
+    {
+      "scope": "site_authored_page",
+      "path": "/projects/airspace-operations",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+      "status": 200,
+      "bytes": 34358,
+      "sha256": "923d351b67b2203f0c8a40686d9abd80fe4218b8e1772b798e2cc04276361cc3",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "source_sha256": "009cca2f2b89585669bc546a83eaee07ec306b1464e18ffe9c3957684429edce",
+      "authored_sha256": "009cca2f2b89585669bc546a83eaee07ec306b1464e18ffe9c3957684429edce",
+      "authored_exact_after_one_pinned_hosting_script": true,
+      "current_release_visible": true,
+      "current_zip_link_present": true,
+      "current_capture_links_present": true
+    },
+    {
+      "scope": "site_authored_page",
+      "path": "/projects/multiagentic-systems",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/multiagentic-systems",
+      "status": 200,
+      "bytes": 17226,
+      "sha256": "7bd6d49d83ee39dcc68d0a6551f5d5ed1abf32cf9d10810fb513d76f50d98389",
+      "final_host": "giletto-systems-lab.michele-giletto.chatgpt.site",
+      "source_sha256": "01af99b6202e4ac3c6e5b08b55f65f79f0b09b0b4a6de523fa323d608286392b",
+      "authored_sha256": "01af99b6202e4ac3c6e5b08b55f65f79f0b09b0b4a6de523fa323d608286392b",
+      "authored_exact_after_one_pinned_hosting_script": true
+    }
+  ],
+  "identity": [
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/heads/main",
+      "status": 200,
+      "bytes": 376,
+      "sha256": "735a1392544a3e2753070bfb7f64e64923baf4f867ddb83ede023ca4f8633cfb",
+      "final_host": "api.github.com",
+      "scope": "github_main",
+      "expected": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+      "actual": "0e4140976c761b5f4ddad19a6a7408721d75060a",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.4-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "a10b64f6e2f2c611db1c168bcedd3905e60736bab9e54e479d4ead21f54c79a3",
+      "final_host": "api.github.com",
+      "scope": "github_tag",
+      "expected": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+      "actual": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/releases/tags/v0.3.4-rc.1",
+      "status": 200,
+      "bytes": 21741,
+      "sha256": "bd3838c23bcbd2227c69ba8ffa5230f63b601d0347ad988cf7897680a81a8c05",
+      "final_host": "api.github.com",
+      "scope": "github_release",
+      "expected_id": 431194091,
+      "actual_id": 431194091,
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "ci-verification.json",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "LICENSE",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "release-gates.json",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "RELEASE_PROVENANCE.json",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "SBOM.cdx.json",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "SHA256SUMS.txt",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "standalone-archive-verification.json",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "System-Lab-Airspace-Operations-0.3.4-rc.1.zip",
+      "matches": true
+    },
+    {
+      "scope": "github_asset_metadata",
+      "name": "THIRD_PARTY_NOTICES.md",
+      "matches": true
+    },
+    {
+      "url": "https://huggingface.co/api/models/Magic51/system-lab-airspace-shall-router",
+      "status": 200,
+      "bytes": 1613,
+      "sha256": "664fe0dad100f7fcdb1cd4727534bcf85b9744e94775813ac7b5cb31ff927050",
+      "final_host": "huggingface.co",
+      "scope": "hf_model_head_and_paths",
+      "expected": "a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2",
+      "actual": "a69c0e2c157ce8cd04bd4dfa96c55dd5d3eedae2",
+      "expected_file_count": 16,
+      "actual_file_count": 16,
+      "matches": true
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/Magic51/system-lab-airspace-source-annotations",
+      "status": 200,
+      "bytes": 1613,
+      "sha256": "ff48fc665771d03f3541a23714ea2360bd73e7ec4cd7af36a97fb2ee31d2566d",
+      "final_host": "huggingface.co",
+      "scope": "hf_dataset_head_and_paths",
+      "expected": "2747c70da9c9188fe36254475babb435ef5db003",
+      "actual": "2747c70da9c9188fe36254475babb435ef5db003",
+      "expected_file_count": 7,
+      "actual_file_count": 7,
+      "matches": true
+    },
+    {
+      "url": "https://huggingface.co/api/spaces/Magic51/system-lab-airspace-evaluation",
+      "status": 200,
+      "bytes": 1961,
+      "sha256": "a0f2dce2a8be1aef35933476c3d81364eea8982be9d1deb584d351d04c578ef9",
+      "final_host": "huggingface.co",
+      "scope": "hf_space_head_and_paths",
+      "expected": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+      "actual": "54b724611886e5ff299527ed6a0ba1ad1e5f20d7",
+      "expected_file_count": 28,
+      "actual_file_count": 28,
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/heads/codex/airspace-workflow-guidance-035",
+      "status": 200,
+      "bytes": 485,
+      "sha256": "03aeee8b0833eac028901d97541e5101486023ed79deb70cf7e8831bdff05b27",
+      "final_host": "api.github.com",
+      "scope": "github_development_branch",
+      "expected": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+      "actual": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/commits/ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+      "status": 200,
+      "bytes": 110463,
+      "sha256": "da644f79c9fa4d0bcf28b648444f84a138ba96ca52e4e03f8f68ff96f91139cf",
+      "final_host": "api.github.com",
+      "scope": "github_development_metadata_parent",
+      "expected": {
+        "sha": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+        "parents": [
+          "f8d311ab0563777527bcb809e309a27e4fdbc3ea"
+        ]
+      },
+      "actual": {
+        "sha": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+        "parents": [
+          "f8d311ab0563777527bcb809e309a27e4fdbc3ea"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/42062319116",
+      "status": 200,
+      "bytes": 14884,
+      "sha256": "0bb682efbf82fb82f75ca7590b4524cc6550b47c2b975075b52622ae43a7ab2f",
+      "final_host": "api.github.com",
+      "scope": "github_development_ci",
+      "expected": {
+        "id": 42062319116,
+        "head_sha": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+        "head_branch": "codex/airspace-workflow-guidance-035",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "path": ".github/workflows/engineering.yml"
+      },
+      "actual": {
+        "id": 42062319116,
+        "head_sha": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+        "head_branch": "codex/airspace-workflow-guidance-035",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "path": ".github/workflows/engineering.yml"
+      },
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs/42062319116/jobs?per_page=100",
+      "status": 200,
+      "bytes": 5047,
+      "sha256": "7c079c849d5bfef7b9896330f4f418d7a1e170c232f42197a4940261ae2378ac",
+      "final_host": "api.github.com",
+      "scope": "github_development_ci_jobs",
+      "expected": {
+        "engineering_success": 1,
+        "publisher_skipped": 1
+      },
+      "actual": {
+        "engineering_success": 1,
+        "publisher_skipped": 1
+      },
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/actions/runs?branch=codex%2Fairspace-workflow-guidance-035&per_page=100",
+      "status": 200,
+      "bytes": 14920,
+      "sha256": "8cec9b69e7c6154518746cb546ad91941902541f5db5d96c833ef3b84aa8cc81",
+      "final_host": "api.github.com",
+      "scope": "github_development_branch_runs",
+      "expected": {
+        "known_code_run_present": true,
+        "metadata_head_ci_claimed": false
+      },
+      "actual": {
+        "known_code_run_present": true,
+        "metadata_head_runs": []
+      },
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/releases?per_page=100",
+      "status": 200,
+      "bytes": 137386,
+      "sha256": "4f467267d7f74bac0016dcdd0eb3c6e1bb67d761b0fc44daad2db178876a3c9a",
+      "final_host": "api.github.com",
+      "scope": "github_release_inventory",
+      "expected": {
+        "newest_tag": "v0.3.4-rc.1",
+        "035_present": false
+      },
+      "actual": {
+        "newest_tag": "v0.3.4-rc.1",
+        "035_present": false,
+        "count": 7
+      },
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.1.0-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "f80cc1a8339ab86d5dabd0b9a9d5e86a4383ed85f63964098a69b8f6fc97be50",
+      "final_host": "api.github.com",
+      "scope": "github_frozen_tag_v0.1.0-rc.1",
+      "expected": "921996c4db20c449b21dcd03bd21f438911eed62",
+      "actual": "921996c4db20c449b21dcd03bd21f438911eed62",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.2.0-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "bcf311a188fa111f0626fc06741240630c147b8fd64ae5151ae72e732ef1701e",
+      "final_host": "api.github.com",
+      "scope": "github_frozen_tag_v0.2.0-rc.1",
+      "expected": "3d5376758493f8e791dce85968947878990c6b6f",
+      "actual": "3d5376758493f8e791dce85968947878990c6b6f",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.0-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "b3e9f499319657fc27612abc5219faf2ae7e61aa40c07f0824f5181665b44a04",
+      "final_host": "api.github.com",
+      "scope": "github_frozen_tag_v0.3.0-rc.1",
+      "expected": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+      "actual": "331b6e220fec5254c4c2f167cab3ad86d8905456",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.1-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "2aa03e2f9d97de6761cd11ced594034346b8b9969120af618d7274b2ec4f14c4",
+      "final_host": "api.github.com",
+      "scope": "github_frozen_tag_v0.3.1-rc.1",
+      "expected": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+      "actual": "433e89a66038ee7f7c34cb443c03eeafdee92f36",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.2-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "46adc0eda849669ac6c2a97d7a170d606089ec105b404b9ae863bd3e12bf96c9",
+      "final_host": "api.github.com",
+      "scope": "github_frozen_tag_v0.3.2-rc.1",
+      "expected": "2ebb8b20e515d9863a69b072bd963890e219e050",
+      "actual": "2ebb8b20e515d9863a69b072bd963890e219e050",
+      "matches": true
+    },
+    {
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/ref/tags/v0.3.3-rc.1",
+      "status": 200,
+      "bytes": 396,
+      "sha256": "d5efb8e08eff490393ed625b1e40f0a1303195de3d1fe6ca02b84d2479d47cd4",
+      "final_host": "api.github.com",
+      "scope": "github_frozen_tag_v0.3.3-rc.1",
+      "expected": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+      "actual": "6f8364df25b942d49eb1b4ccaa40f27f70578dbb",
+      "matches": true
+    },
+    {
+      "scope": "github_connector_identity",
+      "expected": {
+        "account_id": "294864383",
+        "nickname": "michelegiletto-beep",
+        "repository_id": "1436116533",
+        "repository_full_name": "michelegiletto-beep/airspace-operations",
+        "public": true,
+        "push": true
+      },
+      "actual": {
+        "account_id": "294864383",
+        "nickname": "michelegiletto-beep",
+        "repository_id": "1436116533",
+        "repository_full_name": "michelegiletto-beep/airspace-operations",
+        "public": true,
+        "push": true
+      },
+      "matches": true
+    },
+    {
+      "scope": "site_connector_current_identity",
+      "expected": {
+        "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+        "status": "active",
+        "access_mode": "public",
+        "current_user_role": "owner",
+        "latest_version_number": 101,
+        "current_live_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site"
+      },
+      "actual": {
+        "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+        "status": "active",
+        "access_mode": "public",
+        "current_user_role": "owner",
+        "latest_version_number": 101,
+        "current_live_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site"
+      },
+      "matches": true
+    },
+    {
+      "scope": "site_connector_saved_version",
+      "expected": {
+        "version_number": 101,
+        "source_commit": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65",
+        "deployment_id": "appgdep_6ae844298a708191bbc919b3a71969de"
+      },
+      "actual": {
+        "version_number": 101,
+        "source_commit": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65",
+        "deployment_id": "appgdep_6ae844298a708191bbc919b3a71969de"
+      },
+      "matches": true
+    },
+    {
+      "scope": "site_connector_deployment",
+      "expected": {
+        "id": "appgdep_6ae844298a708191bbc919b3a71969de",
+        "status": "succeeded",
+        "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site"
+      },
+      "actual": {
+        "id": "appgdep_6ae844298a708191bbc919b3a71969de",
+        "status": "succeeded",
+        "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+        "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site"
+      },
+      "matches": true
+    }
+  ],
+  "summary": {
+    "exact_files": 137,
+    "exact_matches": 137,
+    "identities": 31,
+    "identity_matches": 31,
+    "pages": 3,
+    "authored_pages_exact": 3,
+    "exact_downloads_by_scope": {
+      "github_current_asset": 9,
+      "hf_dataset_file": 7,
+      "hf_model_file": 16,
+      "hf_space_file": 28,
+      "site_current_asset": 77
+    }
+  },
+  "success": true,
+  "limitations": [
+    "Complete GitHub main/development trees were not redownloaded; ref/commit/CI identities are fresh.",
+    "All current GitHub release assets, all files in the three Hugging Face repositories and all Site 101 resources were downloaded. Historical GitHub release assets retain prior receipts; all historical release tags were freshly checked.",
+    "No native browser review, installation, new inference, model load, training or operational acceptance check.",
+    "Static Space live-host hosting additions are outside this audit; pinned Space repository bytes are checked.",
+    "Source-literal absence is not rendered-copy acceptance. Preserved historical publication sources are kept distinct from current public pages."
+  ],
+  "completed_at": "2026-11-07T13:43:42.836778+00:00",
+  "development_ci": {
+    "id": 42062319116,
+    "head_sha": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+    "head_branch": "codex/airspace-workflow-guidance-035",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "path": ".github/workflows/engineering.yml",
+    "html_url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/42062319116",
+    "created_at": "2026-11-05T16:14:13Z",
+    "updated_at": "2026-11-05T16:17:06Z",
+    "scope": "Fresh run identity; historical 577 Linux/20 skipped and 19 PostgreSQL test measurements are retained in the 5 November CI receipt and were not rerun.",
+    "jobs": [
+      {
+        "id": 127367073369,
+        "name": "containers-postgresql",
+        "head_sha": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+            "conclusion": "success"
+          },
+          {
+            "name": "Prepare isolated ephemeral configuration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Full software suite",
+            "conclusion": "success"
+          },
+          {
+            "name": "Build actual application and spatial database containers",
+            "conclusion": "success"
+          },
+          {
+            "name": "Start and verify container health",
+            "conclusion": "success"
+          },
+          {
+            "name": "Actual running container worker and authenticated API",
+            "conclusion": "success"
+          },
+          {
+            "name": "PostgreSQL extensions, concurrency and workflow isolation",
+            "conclusion": "success"
+          },
+          {
+            "name": "Actual PostgreSQL backup and restoration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Stop this isolated verification deployment",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 127368730164,
+        "name": "publish-candidate",
+        "head_sha": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+        "status": "completed",
+        "conclusion": "skipped",
+        "steps": []
+      }
+    ]
+  },
+  "development_branch_runs": [
+    {
+      "id": 42062319116,
+      "head_sha": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-05T16:14:13Z",
+      "updated_at": "2026-11-05T16:17:06Z"
+    }
+  ],
+  "release_inventory": [
+    {
+      "id": 431194091,
+      "tag_name": "v0.3.4-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-11-02T07:56:10Z"
+    },
+    {
+      "id": 430536496,
+      "tag_name": "v0.3.3-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-11-01T11:26:24Z"
+    },
+    {
+      "id": 430378177,
+      "tag_name": "v0.3.2-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-11-01T05:16:08Z"
+    },
+    {
+      "id": 429437042,
+      "tag_name": "v0.3.1-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-10-30T19:58:48Z"
+    },
+    {
+      "id": 427384485,
+      "tag_name": "v0.3.0-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-10-29T01:58:58Z"
+    },
+    {
+      "id": 426614412,
+      "tag_name": "v0.2.0-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-10-28T12:02:24Z"
+    },
+    {
+      "id": 425859835,
+      "tag_name": "v0.1.0-rc.1",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-10-27T18:54:52Z"
+    }
+  ],
+  "copy_ablation_review": {
+    "checked_at": "2026-11-07T13:43:42.763614+00:00",
+    "scope": "Current development source and prior ablation literals; current public authored Site bytes are separately exact. No visual/browser review or blanket slogan-free claim.",
+    "source_commit": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+    "files": [
+      {
+        "path": "frontend/src/AgentWorkspace.tsx",
+        "bytes": 21106,
+        "sha256": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf"
+      },
+      {
+        "path": "frontend/src/CompanionDock.tsx",
+        "bytes": 32956,
+        "sha256": "b49a768d388bbec39716f767622288b402f7cace7b0f7784673598e14302071a"
+      },
+      {
+        "path": "frontend/src/components.tsx",
+        "bytes": 5819,
+        "sha256": "67c81042d1896e856c7388c36cff4f5ad78de19ad314e2737117067d1ae401db"
+      },
+      {
+        "path": "docs/operator-handbook.md",
+        "bytes": 25701,
+        "sha256": "08b0be6d52320306caf881268d6fd78355515eb4ed0e54795bdbd19bc5b0c827"
+      },
+      {
+        "path": "backend/airspace/orchestration.py",
+        "bytes": 52036,
+        "sha256": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89"
+      },
+      {
+        "path": "SPECIFICATION_V3_ADDENDUM.md",
+        "bytes": 4557,
+        "sha256": "071e62b043707e15a019cad4f922f369b09508b5c0a2044228f992795eb91f66"
+      },
+      {
+        "path": "publication/v0.3/ablation-inventory.json",
+        "bytes": 24096,
+        "sha256": "c7def4f397233821382b82c5342d2ef99ed44050aa333883458a004bd336a581"
+      }
+    ],
+    "ablation_inventory_rows": [
+      {
+        "id": "ASO3-COPY-001",
+        "source": "frontend/src/AgentWorkspace.tsx",
+        "observed_text": "One operational context. Bounded specialist work.",
+        "literal_present_now": false,
+        "source_sha256": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-002",
+        "source": "frontend/src/AgentWorkspace.tsx",
+        "observed_text": "Choose the work. Keep the evidence.",
+        "literal_present_now": false,
+        "source_sha256": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-003",
+        "source": "frontend/src/AgentWorkspace.tsx",
+        "observed_text": "Bounded objective",
+        "literal_present_now": false,
+        "source_sha256": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-004",
+        "source": "frontend/src/AgentWorkspace.tsx",
+        "observed_text": "Prepare scoped workflow",
+        "literal_present_now": false,
+        "source_sha256": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-005",
+        "source": "frontend/src/AgentWorkspace.tsx",
+        "observed_text": "Start bounded workflow",
+        "literal_present_now": false,
+        "source_sha256": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-006",
+        "source": "frontend/src/MissionDesk.tsx",
+        "observed_text": "01 \u00b7 Operation",
+        "literal_present_now": false,
+        "source_sha256": "fa0c8c0aea641634f6ce3d38d0311b6395e75074101081600a31db5daee61e59",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-007",
+        "source": "frontend/src/MissionDesk.tsx",
+        "observed_text": "02 \u00b7 Intended resources",
+        "literal_present_now": false,
+        "source_sha256": "fa0c8c0aea641634f6ce3d38d0311b6395e75074101081600a31db5daee61e59",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-008",
+        "source": "frontend/src/MissionDesk.tsx",
+        "observed_text": "Each permission keeps its own boundary",
+        "literal_present_now": false,
+        "source_sha256": "fa0c8c0aea641634f6ce3d38d0311b6395e75074101081600a31db5daee61e59",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-009",
+        "source": "frontend/src/CoordinationDesk.tsx",
+        "observed_text": "One intended mission, distinct national conditions",
+        "literal_present_now": false,
+        "source_sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-010",
+        "source": "frontend/src/CoordinationDesk.tsx",
+        "observed_text": "Select actual registration",
+        "literal_present_now": false,
+        "source_sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-011",
+        "source": "frontend/src/CoordinationDesk.tsx",
+        "observed_text": "Select actual recipient",
+        "literal_present_now": false,
+        "source_sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-012",
+        "source": "frontend/src/CoordinationDesk.tsx",
+        "observed_text": "Actual agreement reference",
+        "literal_present_now": false,
+        "source_sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-013",
+        "source": "frontend/src/CoordinationDesk.tsx",
+        "observed_text": "Allowlisted terms and asset snapshot",
+        "literal_present_now": false,
+        "source_sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-014",
+        "source": "frontend/src/CoordinationDesk.tsx",
+        "observed_text": "Saved country-pack review",
+        "literal_present_now": false,
+        "source_sha256": "5fbba9b719590731853124d519b140fe4a691c58a1ad8b025ada87c34dbc12c8",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-015",
+        "source": "frontend/src/SchedulingDesk.tsx",
+        "observed_text": "Cancel internal proposal / reservation",
+        "literal_present_now": false,
+        "source_sha256": "6ac19e2ed7562c7b6ed27f72c83b7f258f3b4a56f07caa7e636ce5e96833a741",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-016",
+        "source": "frontend/src/SchedulingDesk.tsx",
+        "observed_text": "Accountable rationale",
+        "literal_present_now": false,
+        "source_sha256": "6ac19e2ed7562c7b6ed27f72c83b7f258f3b4a56f07caa7e636ce5e96833a741",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-017",
+        "source": "frontend/src/SchedulingDesk.tsx",
+        "observed_text": "Actual independent reviewer accounts",
+        "literal_present_now": false,
+        "source_sha256": "6ac19e2ed7562c7b6ed27f72c83b7f258f3b4a56f07caa7e636ce5e96833a741",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-018",
+        "source": "frontend/src/SchedulingDesk.tsx",
+        "observed_text": "Actual decision receipt",
+        "literal_present_now": false,
+        "source_sha256": "6ac19e2ed7562c7b6ed27f72c83b7f258f3b4a56f07caa7e636ce5e96833a741",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-019",
+        "source": "frontend/src/SchedulingDesk.tsx",
+        "observed_text": "Exact solver input, result and verifier receipt",
+        "literal_present_now": false,
+        "source_sha256": "6ac19e2ed7562c7b6ed27f72c83b7f258f3b4a56f07caa7e636ce5e96833a741",
+        "historical_publication_source": false
+      },
+      {
+        "id": "ASO3-COPY-020",
+        "source": "publication/site-project.html",
+        "observed_text": "Review remains accountable.",
+        "literal_present_now": true,
+        "source_sha256": "1e90ec6f787be456043a9ff39ebcd56e416289aecdbbf428910bbeea1baf5b2c",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-021",
+        "source": "publication/site-project.html",
+        "observed_text": "01 / The application",
+        "literal_present_now": true,
+        "source_sha256": "1e90ec6f787be456043a9ff39ebcd56e416289aecdbbf428910bbeea1baf5b2c",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-022",
+        "source": "publication/site-project.html",
+        "observed_text": "Local LLM orchestration.",
+        "literal_present_now": true,
+        "source_sha256": "1e90ec6f787be456043a9ff39ebcd56e416289aecdbbf428910bbeea1baf5b2c",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-023",
+        "source": "publication/github-readme-v2.md",
+        "observed_text": "A generative controller with bounded specialist tools",
+        "literal_present_now": true,
+        "source_sha256": "98be319aa61146979e7b1665fd975ae194e9fd3643cbda43c3d49c0351990b3f",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-024",
+        "source": "publication/hf-space/index.html",
+        "observed_text": "Inspect each completed step.",
+        "literal_present_now": true,
+        "source_sha256": "79a3cabb0580553979cc2459cff180e66cf45af35a61793c492765ebf42eb4b8",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-025",
+        "source": "publication/hf-space/index.html",
+        "observed_text": "Source-linked passages.",
+        "literal_present_now": true,
+        "source_sha256": "79a3cabb0580553979cc2459cff180e66cf45af35a61793c492765ebf42eb4b8",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-026",
+        "source": "publication/hf-space/index.html",
+        "observed_text": "A limited routing experiment.",
+        "literal_present_now": true,
+        "source_sha256": "79a3cabb0580553979cc2459cff180e66cf45af35a61793c492765ebf42eb4b8",
+        "historical_publication_source": true
+      },
+      {
+        "id": "ASO3-COPY-027",
+        "source": "publication/hf-space/index.html",
+        "observed_text": "Original records and boundaries.",
+        "literal_present_now": true,
+        "source_sha256": "79a3cabb0580553979cc2459cff180e66cf45af35a61793c492765ebf42eb4b8",
+        "historical_publication_source": true
+      }
+    ],
+    "literal_counts": {
+      "total": 27,
+      "present_in_current_application_sources": 0,
+      "present_in_preserved_historical_publication_sources": 8
+    },
+    "factual_findings": [
+      "Maintenance guidance matches the exactly-one maintenance_assessment and maintenance_plan_input contracts in orchestration.py; one record may supply both.",
+      "Sharing guidance matches the scoped schedule assignments/aircraft/mission snapshots and saved coordination inputs; consent, reservations, maintenance release and dispatch remain separate.",
+      "Current-role and retry text describes server-derived preparation permissions and organisation handoff. This review contacts no administrator or other person.",
+      "Companion prompt is Choose a task or write a request.; generic Empty component contains no decorative em dash. Technical identifiers, source/legal text and essential safety copy are retained.",
+      "Eight old ablation literals remain in preserved historical publication source files. Their presence is recorded; this is not evidence of their presence on current public pages or current application rendering."
+    ],
+    "rendered_copy_verified": false,
+    "ASO3_001_accepted": false,
+    "product_files_changed": false
+  },
+  "next_packaging_gate": {
+    "candidate": "0.3.5-rc.1",
+    "executed": false,
+    "current_state": "Browser/media, reviewed version-specific publication material, current release gate/CI binding and exact archive installation remain open.",
+    "existing_paths": {
+      "frontend/dist/index.html": true,
+      "frontend/verification/0.3.5-rc.1": false,
+      "publication/releases/0.3.5-rc.1/manifest.json": false,
+      "publication/media/0.3.5-rc.1": false,
+      "release-evidence/v0.3.5-rc.1/release-gates.json": false,
+      "release-evidence/v0.3.5-rc.1/ci-verification.json": false,
+      "release-evidence/v0.3.5-rc.1/standalone-archive-verification.json": false
+    },
+    "browser_prerequisites": [
+      "Use a supported browser to inspect the actual isolated http://127.0.0.1:8790/#agents rendering and API-to-persistence journey.",
+      "Verify permission handoff and scoped GET retry, actor/tenant changes and draft continuity, keyboard and mobile states, companion normal/pause/reduced motion against fresh persistent snapshots.",
+      "Capture actual privacy-reviewed current-candidate media; validate real raster encoding and rights. Do not reuse older media as evidence of the new candidate."
+    ],
+    "existing_local_commands_after_prerequisites": [
+      ".venv/Scripts/python.exe scripts/verify_release.py",
+      ".venv/Scripts/python.exe scripts/package_release.py",
+      ".venv/Scripts/python.exe scripts/verify_archive.py"
+    ],
+    "local_command_working_directory": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+    "local_command_environment": {
+      "PYTHONPATH": "backend",
+      "AIRSPACE_SOURCE_COMMIT": "Use the actual reviewed git rev-parse HEAD; do not substitute the earlier CI commit or invent GitHub Actions variables."
+    },
+    "reviewed_publication_contract": "publish_candidate.reviewed_publication_material requires a real bounded publication/releases/0.3.5-rc.1/manifest.json with exactly version, notes_path and screenshot_path; actual notes in that version directory and a privacy/rights-reviewed encoded raster under publication/media. None was created in this audit.",
+    "release_ci_workflow": ".github/workflows/engineering.yml",
+    "release_ci_required_branch": "release/0.3.5-rc.1",
+    "release_ci_commands_in_order": [
+      "uv run --no-project python scripts/publish_candidate.py",
+      "uv sync --frozen --extra dev",
+      "npm ci --prefix frontend",
+      "uv run python scripts/prepare_corpus.py",
+      "uv run python scripts/publish_candidate.py --record-engineering",
+      "uv run python scripts/verify_release.py",
+      "uv run python scripts/package_release.py",
+      "uv run python scripts/verify_archive.py",
+      "uv run python scripts/publish_candidate.py --publish"
+    ],
+    "boundary": "Publishing requires the exact push event/source and successful engineering dependency in a new release-branch CI run. The existing development CI is not a publication run. No push, upload, tag, main update, release or manifest/media creation is authorised by this receipt."
+  },
+  "command": {
+    "argv": [
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+      "-B",
+      "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\checkpoints\\cycle-20261107T133659Z-publication\\audit.py"
+    ],
+    "cwd": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations",
+    "helper_sha256": "be968d06e9ccb6d8cb6146993fcc1bd928fe7f5303c213914dad61ed921a6732",
+    "prior_helper_sha256": "0160d10e175b4c244942869aa5df1b824d2f2984c6a4a8aada0696b264001f20",
+    "comparator_sha256": "c6844bc39cef935252797b72e2b0f22424c7ccb3a088270669dfed44fcfd3e4e",
+    "transformations": [
+      "Fresh cycle output path",
+      "All 77 exact Site resources instead of current-version subset",
+      "Additional read-only GitHub branch/CI/release/frozen-tag identity and source-copy/packaging review"
+    ],
+    "exit_code": 0
+  },
+  "connector_identity": {
+    "checked_at": "2026-11-07 13:43:44 UTC",
+    "github": {
+      "account_id": "294864383",
+      "nickname": "michelegiletto-beep",
+      "repository_id": "1436116533",
+      "repository_full_name": "michelegiletto-beep/airspace-operations",
+      "public": true,
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "profile_email_excluded": true
+    },
+    "site": {
+      "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+      "title": "Michele Giletto | Systems Portfolio",
+      "status": "active",
+      "access_mode": "public",
+      "current_user_role": "owner",
+      "latest_version_number": 101,
+      "current_live_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+      "updated_at": "2026-11-02T08:06:02.747515+00:00"
+    },
+    "saved_site_version": {
+      "id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+      "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+      "version_number": 101,
+      "source": {
+        "commit_sha": "cf0edd4a2cc722d0db27f75c89f65bf58b416a65"
+      },
+      "deployment_id": "appgdep_6ae844298a708191bbc919b3a71969de",
+      "archive": {
+        "format": "tar",
+        "content_hash": "sha256:c177a517b98f9a018515b359cebebfd3fb6d288c2b2c43a53b5c05723e395012",
+        "size_bytes": 239134720,
+        "file_count": 687
+      }
+    },
+    "site_deployment": {
+      "id": "appgdep_6ae844298a708191bbc919b3a71969de",
+      "project_id": "appgprj_6a8fdd39ede88191898e6f386864c331",
+      "status": "succeeded",
+      "version_id": "appgprj_6a8fdd39ede88191898e6f386864c331~appgver_717b15a4f438819199336e93c6a5d4aa",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site",
+      "updated_at": "2026-11-02T08:06:02.703822+00:00"
+    },
+    "scope": "Fresh read-only connector responses, reduced to identity, permission, hosting and provenance fields. No credentials, profile email or signed screenshot URL retained."
+  },
+  "local_development_identity": {
+    "checked_at": "2026-11-07T13:44:45.915555+00:00",
+    "path": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+    "head": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+    "tracked_status": "M frontend/src/AgentWorkspace.tsx",
+    "head_matches_public_branch": true,
+    "scope": "Read-only local Git identity; untracked/generated evidence is deliberately separate."
+  },
+  "new_candidate_version": "0.3.5-rc.1",
+  "current_published_version": "0.3.4-rc.1",
+  "new_candidate_published": false,
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "product_files_changed": false,
+  "new_model_calls": 0,
+  "model_loads": 0,
+  "training_runs": 0,
+  "people_contacted": 0,
+  "publication_readiness_assessed": true,
+  "publication_ready": false,
+  "finalization": {
+    "at": "2026-11-07T13:44:45.915618+00:00",
+    "helper_sha256": "1aebdf2b33eb7eea680cea64a5ce1b6faa1a2d9c8b2df46554423f52dbbc6b3d",
+    "connector_receipt_sha256": "f9ffe92245017ff84a46be181f8e52405824b8ff4608d8f29f150b4055184417",
+    "scope": "Merge fresh reduced read-only connector receipts and copy exact cycle evidence; no remote operation."
+  },
+  "saved_evidence_paths": [
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release-evidence\\v0.3.5-rc.1\\cycle-20261107T133659Z-public-audit.json",
+    "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\release-evidence\\v0.3.5-rc.1\\cycle-20261107T133659Z-public-audit.json"
+  ]
+}

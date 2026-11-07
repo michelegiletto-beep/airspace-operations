@@ -1,0 +1,13 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\frontend",
+  "started_at": "2026-11-07T13:44:50.873637+00:00",
+  "elapsed_seconds": 15.208,
+  "exit_code": 0,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.5-rc.1 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n\u00e2\u0153\u201c 51 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.53 kB \u00e2\u201d\u201a gzip:   0.33 kB\ndist/assets/index-HjclQKgW.css  105.31 kB \u00e2\u201d\u201a gzip:  22.12 kB\ndist/assets/index-BipE-kpN.js   480.06 kB \u00e2\u201d\u201a gzip: 131.57 kB\n\n\u00e2\u0153\u201c built in 873ms\n",
+  "stderr": ""
+}

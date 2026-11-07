@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-07T13:59:04Z",
+  "scope": "Actual supported Chrome browser to isolated API to persistent engineering records. No real-world flight or operational acceptance.",
+  "starting_source": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+  "working_increment": ["frontend/src/AgentWorkspace.tsx", "frontend/src/useWorkflowContext.ts", "frontend/src/WorkflowContextRecovery.test.tsx", "frontend/src/companion.css", "frontend/dist/"],
+  "candidate": "0.3.5-rc.1",
+  "backend_policy_changed": false,
+  "existing_account_signins": 1,
+  "permission_recovery": {
+    "initial_upstream_status": 200,
+    "isolated_delivered_status": 503,
+    "retry_control": "Retry workflow permissions",
+    "subsequent_delivered_status": 200,
+    "regulatory_research_enabled": true,
+    "maintenance_planning_enabled": false,
+    "fleet_sharing_review_enabled": false,
+    "current_role_handoff_visible": true
+  },
+  "context_recovery": {
+    "old_bug_reproduced": "A failed aircraft GET was shown as an empty context; the creation control stayed enabled.",
+    "repaired_failure": "Saved workflow records are unavailable; Create workflow is disabled.",
+    "retry_control": "Retry workflow records",
+    "retry_requests": "Exactly nine current workspace-record GETs; all returned 200. No capability retry or POST in that retry batch.",
+    "actual_unsent_engineering_draft_preserved": true,
+    "valid_empty_state_only_after_success": true,
+    "workflow_created_or_started": false
+  },
+  "keyboard": {
+    "maintenance_input_disclosure_opened_with_enter": true,
+    "objective_tab_moves_to_jurisdiction": true,
+    "escape_closes_planner_and_restores_launcher": true
+  },
+  "responsive": {
+    "desktop_viewport": {"width": 1920, "height": 911},
+    "phone_viewport": {"width": 390, "height": 844},
+    "phone_panel": {"x": 0, "y": 0, "width": 375, "height": 844, "scroll_height": 1153},
+    "horizontal_overflow": false,
+    "observed_launcher_overlap_repaired": true,
+    "closed_launcher_hidden_only_while_panel_open": true,
+    "owned_animated_companion_remains_inside_panel": true,
+    "viewport_override_reset": true
+  },
+  "motion": {
+    "observed_engines": ["webgl-mesh-2.5d", "webgl-mesh-2.5d"],
+    "renderer_states": ["active", "active"],
+    "normal_frame_progression": "Independent companion-region pixel comparison found actual frame changes; exact counts and bounds are in publication-media-review.json.",
+    "pause_control": "Pause companion animation",
+    "paused_control": "Enable companion animation",
+    "settled_paused_frames": "Byte-identical captures; zero differing pixels in the 78 by 78 companion region.",
+    "normal_motion_restored": true,
+    "current_reduced_motion_preference": false,
+    "reduced_motion_true_browser_emulated": false,
+    "reduced_motion_and_fallback_scope": "Existing component fault/lifecycle and preference tests remain separate from actual browser normal/pause verification. No new browser fallback fault is claimed."
+  },
+  "final_tab_warn_or_error_messages": 0,
+  "intentional_http_faults": "One capability and two separately recorded aircraft read faults in the private isolated harness; no production faults.",
+  "persistent_data_evidence": "cycle-20261107T133659Z-preview-post-browser.json",
+  "media_evidence": "cycle-20261107T133659Z-publication-media-review.json",
+  "privacy": "Only native JPEGs independently approved after viewing were promoted. The account header, email, tenant identifier, credentials and rejected captures remain excluded. The mobile text is an actual unsent engineering request, not an intended or flown UAS operation.",
+  "retained_verification_failures": [
+    "The first createBrowserTab attempt used an unsupported visibility option; supported tabs.new/goto succeeded.",
+    "A textarea value-attribute check returned false; its actual live DOM value matched the unsent draft.",
+    "The guessed Resume companion animation selector did not exist; the observed Enable companion animation control restored motion.",
+    "An initial paused pair straddled a scroll/render transition; independently reviewed settled frames passed.",
+    "The first phone capture preceded the panel paint and was not promoted. The first desktop final capture exposed account details and was rejected."
+  ],
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "primary_records_changed": false,
+  "preview_operational_records": 0,
+  "original_acceptance_complete": false,
+  "stable_release": false,
+  "operational_acceptance": false
+}

@@ -1,0 +1,55 @@
+{
+  "cycle_id": "2026-11-07T133659Z-context-verification",
+  "triggered_at": "2026-11-07T13:36:59.534Z",
+  "state": "Browser and local software verified; new source CI and exact archive publication pending",
+  "starting_development_source": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+  "published_software": "0.3.4-rc.1",
+  "candidate": "0.3.5-rc.1",
+  "requirements": [
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-004",
+    "ASO3-005",
+    "ASO3-006",
+    "ASO3-007",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "issue": "A failed workflow-context GET was rendered as an empty workspace and left draft creation enabled.",
+  "browser": {
+    "supported_provider_available": true,
+    "existing_account_signins": 1,
+    "permission_read_fault_recovery_verified": true,
+    "old_context_error_reproduced": true,
+    "final_context_repair_verification": "Passed actual fault/retry with unchanged protected data and preserved draft",
+    "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261107T133659Z-browser.json",
+    "media_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261107T133659Z-publication-media-review.json",
+    "motion_normal_and_settled_pause_verified": true
+  },
+  "software": {
+    "final_frontend_passed": 205,
+    "test_files": 27,
+    "build_exit": 0,
+    "current_dependency_audits": "All three selected lockfile audits passed; warnings preserved",
+    "new_source_ci": "Not run"
+  },
+  "public_audit": {
+    "exact_downloads": 137,
+    "identities": 31,
+    "authored_site_pages": 3,
+    "scope": "Existing published 0.3.4 artifacts and prior development source; no new publication inferred"
+  },
+  "primary_runtime": "Recovered published 0.3.4 with unchanged records and verified HMAC audit; preview is a fresh isolated copy of real engineering records",
+  "fault_injection": "Private isolated ASGI harness only; no production fault or fabricated operational record",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "source_uploaded_this_cycle": false,
+  "new_candidate_release_published": false,
+  "original_specification_changed": false,
+  "requirement_texts_or_statuses_changed": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "Actual browser review exposed both misleading context recovery and a floating launcher obscuring the phone form. Both were repaired and rechecked against the API, native screenshots and unchanged persistent records. Earlier failed or privacy-rejected captures remain private, and actual release gates remain separate.",
+  "next_bounded_prompt": "Finish the actual browser fault/retry, draft continuity, keyboard/mobile and companion motion review using the final built source. Capture only real privacy-reviewed media. Preserve all previous releases, the original specification and all incomplete requirements. Bind a new source snapshot to actual CI and exact archive installation before publication. Independently retrieve any changed destination; never infer Published from Prepared. Use no email, people contact, purchases, aircraft commands, self-approval, authority decisions or external operational submissions. Stay within 45 minutes and two local-model calls; checkpoint unfinished work with exact evidence and the next concrete action."
+}

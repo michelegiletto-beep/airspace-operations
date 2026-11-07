@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm.cmd",
+    "test",
+    "--",
+    "--reporter=json",
+    "--outputFile=../release-evidence/v0.3.5-rc.1/cycle-20261107T133659Z-frontend-focused-vitest.json",
+    "src/WorkflowContextRecovery.test.tsx",
+    "src/WorkflowPermissions.test.tsx",
+    "src/AgentWorkspace.test.tsx"
+  ],
+  "cwd": "C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5/frontend",
+  "exit_code": 1,
+  "elapsed_seconds": 7.2576882,
+  "observed": "Cannot find module /src/*.test.tsx; 0 tests collected. Actual Vitest report is retained as frontend-focused-vitest.json. Canonical cwd retry passed.",
+  "scope": "Records the actual observed tool invocation; no additional command was run by this receipt writer."
+}

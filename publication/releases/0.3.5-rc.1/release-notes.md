@@ -1,0 +1,15 @@
+# Release 0.3.5-rc.1
+
+Engineering candidate for self-hosted civilian UAS planning and decision support. The original specification remains incomplete. Stable release and operational acceptance remain false.
+
+Workflow preparation now explains the current server-provided roles beneath each task. Missing, malformed, loading or failed permission responses keep the relevant controls disabled. The permission retry reads the current permissions without creating or starting a workflow. Maintenance guidance identifies the saved assessment and planning inputs. Fleet-sharing guidance identifies the current saved schedule and country-coordination context, and its record selector includes schedules.
+
+Saved workflow context has separate loading, unavailable and confirmed-empty states. A failed or invalid record collection no longer appears as an empty workspace. Creating a workflow is blocked until the complete context response is valid. An explicit retry reloads the nine context record collections using GET requests and preserves the unsent form. Request identity includes the current token, actor, tenant, role, revision and retry attempt; late or aborted responses cannot restore retired records or a fetch timestamp. Server permission, ownership, input-version and review checks remain authoritative.
+
+The closed Indigo launcher is hidden while a record panel is open so it cannot cover the form. The companion inside the form remains available, and an explicitly opened assistant panel retains its existing controls.
+
+The current browser review exercised temporary permission and saved-context read failures, explicit recovery and an unsent engineering-review draft. The desktop and mobile captures show actual interface states; they contain no fabricated operation or completed workflow. Current test, browser, persistence, motion, dependency, container and archive results remain separately scoped in the release evidence. Two current normal-motion companion image regions differ, while two settled paused captures are identical. The first pause comparison straddled a state/scroll transition and is preserved separately. Reduced-motion support retains its component evidence; this browser review did not newly emulate the reduced-motion preference. A screenshot does not establish operational acceptance.
+
+The original 170 requirements and 28 revision requirements retain their texts and statuses. Legal text, source quotations, technical identifiers, units and essential safety meaning are preserved. Existing experimental weights and datasets remain unchanged and unpromoted. No new local-model generation, student training, model-performance improvement, authority permission, aircraft command, external communication or operational record is claimed.
+
+Earlier release tags, archives, publication media and receipts remain frozen. This candidate requires its own current-source engineering CI, exact archive installation, rights and security checks, followed by independently retrieved publication assets. Prepared source and passing interface checks do not establish publication.

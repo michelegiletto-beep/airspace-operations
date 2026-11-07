@@ -1,0 +1,147 @@
+{
+  "at": "2026-11-07T13:48:21.644661+00:00",
+  "state": "Read-only persistent browser-review checkpoint",
+  "phase": "after-repaired-retry",
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "candidate": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "primary_all_tables_unchanged": true,
+  "candidate_protected_tables_unchanged": [
+    "fleet_reservations",
+    "idempotency",
+    "jobs",
+    "record_versions",
+    "records",
+    "resource_locks",
+    "resource_reservations",
+    "schema_versions",
+    "sharing_agreements",
+    "users"
+  ],
+  "only_additional_candidate_actions": [
+    "identity.login"
+  ],
+  "expected_existing_user_signins": 1,
+  "sessions_and_outbox_additions_match_logins": true,
+  "organisation_changes_only_matching_audit_sequence": true,
+  "primary_health": {
+    "route": "/health",
+    "status": 200,
+    "authenticated": false,
+    "health": {
+      "status": "ok",
+      "version": "0.3.4-rc.1",
+      "deployment_profile": "sqlite-portable",
+      "operational_acceptance": false
+    }
+  },
+  "candidate_health": {
+    "route": "/health",
+    "status": 200,
+    "authenticated": false,
+    "health": {
+      "status": "ok",
+      "version": "0.3.5-rc.1",
+      "deployment_profile": "sqlite-portable",
+      "operational_acceptance": false
+    }
+  },
+  "anonymous_identity_routes_401": true,
+  "fault_harness": {
+    "/api/v1/agent-capabilities": {
+      "authenticated_get_count": 3,
+      "injections": 1,
+      "authenticated_statuses": [
+        {
+          "at": "2026-11-07T13:43:10.546604+00:00",
+          "upstream": 200,
+          "delivered": 503,
+          "fault_injected": true,
+          "fault_occurrence": 1
+        },
+        {
+          "at": "2026-11-07T13:43:34.275759+00:00",
+          "upstream": 200,
+          "delivered": 200,
+          "fault_injected": false,
+          "fault_occurrence": null
+        },
+        {
+          "at": "2026-11-07T13:46:59.170885+00:00",
+          "upstream": 200,
+          "delivered": 200,
+          "fault_injected": false,
+          "fault_occurrence": null
+        }
+      ]
+    },
+    "/api/v1/records/aircraft": {
+      "authenticated_get_count": 3,
+      "injections": 2,
+      "authenticated_statuses": [
+        {
+          "at": "2026-11-07T13:43:10.547831+00:00",
+          "upstream": 200,
+          "delivered": 503,
+          "fault_injected": true,
+          "fault_occurrence": 1
+        },
+        {
+          "at": "2026-11-07T13:46:59.174000+00:00",
+          "upstream": 200,
+          "delivered": 503,
+          "fault_injected": true,
+          "fault_occurrence": 2
+        },
+        {
+          "at": "2026-11-07T13:47:11.283653+00:00",
+          "upstream": 200,
+          "delivered": 200,
+          "fault_injected": false,
+          "fault_occurrence": null
+        }
+      ]
+    }
+  },
+  "observed_mutation_requests": [
+    {
+      "method": "POST",
+      "path": "/api/v1/session",
+      "status": 200
+    }
+  ],
+  "frontend_index_sha256": "653330c2002c5fa1b9611c471c4357f8f9f66f4576c51b3b7302252d775143aa",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_writes": false,
+  "browser_rendering_verified_by_this_command": false,
+  "scope": "Read-only consistent SQLite, HMAC audit and health checks. Browser rendering and user actions need a separate browser receipt.",
+  "success": true
+}

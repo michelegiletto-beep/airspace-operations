@@ -1,0 +1,294 @@
+{
+  "at": "2026-11-07T13:48:07.048976+00:00",
+  "state": "Actual isolated browser HTTP observations",
+  "phase": "repaired-review-in-progress",
+  "scope": "The private wrapper forwards the actual candidate API and injects only recorded read failures after genuine upstream 200 responses. This receipt supplies request evidence; separate browser observations establish the visible controls and user actions.",
+  "source_files_modified_by_harness": false,
+  "permissions_changed_by_harness": false,
+  "target_get_trace": {
+    "/api/v1/agent-capabilities": [
+      {
+        "at": "2026-11-07T13:43:10.546604+00:00",
+        "method": "GET",
+        "upstream_status": 200,
+        "delivered_status": 503,
+        "fault_injected": true,
+        "fault_occurrence": 1
+      },
+      {
+        "at": "2026-11-07T13:43:34.275759+00:00",
+        "method": "GET",
+        "upstream_status": 200,
+        "delivered_status": 200,
+        "fault_injected": false,
+        "fault_occurrence": null
+      },
+      {
+        "at": "2026-11-07T13:46:59.170885+00:00",
+        "method": "GET",
+        "upstream_status": 200,
+        "delivered_status": 200,
+        "fault_injected": false,
+        "fault_occurrence": null
+      }
+    ],
+    "/api/v1/records/aircraft": [
+      {
+        "at": "2026-11-07T13:43:10.547831+00:00",
+        "method": "GET",
+        "upstream_status": 200,
+        "delivered_status": 503,
+        "fault_injected": true,
+        "fault_occurrence": 1
+      },
+      {
+        "at": "2026-11-07T13:46:59.174000+00:00",
+        "method": "GET",
+        "upstream_status": 200,
+        "delivered_status": 503,
+        "fault_injected": true,
+        "fault_occurrence": 2
+      },
+      {
+        "at": "2026-11-07T13:47:11.283653+00:00",
+        "method": "GET",
+        "upstream_status": 200,
+        "delivered_status": 200,
+        "fault_injected": false,
+        "fault_occurrence": null
+      }
+    ]
+  },
+  "workspace_collection_batches": [
+    {
+      "batch": 1,
+      "started_at": "2026-11-07T13:43:10.547831+00:00",
+      "finished_at": "2026-11-07T13:43:10.586392+00:00",
+      "request_count": 9,
+      "unique_collections": 9,
+      "all_nine_expected_collections_once": true,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/v1/records/aircraft",
+          "upstream_status": 200,
+          "delivered_status": 503,
+          "fault_injected": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/personnel",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/mission",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/route",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/site",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/permission",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/case",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/alert",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/schedule",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "started_at": "2026-11-07T13:46:59.174000+00:00",
+      "finished_at": "2026-11-07T13:46:59.211510+00:00",
+      "request_count": 9,
+      "unique_collections": 9,
+      "all_nine_expected_collections_once": true,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/v1/records/aircraft",
+          "upstream_status": 200,
+          "delivered_status": 503,
+          "fault_injected": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/personnel",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/mission",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/route",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/site",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/permission",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/case",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/schedule",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/alert",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "started_at": "2026-11-07T13:47:11.278226+00:00",
+      "finished_at": "2026-11-07T13:47:11.292474+00:00",
+      "request_count": 9,
+      "unique_collections": 9,
+      "all_nine_expected_collections_once": true,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/v1/records/mission",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/personnel",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/aircraft",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/site",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/route",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/permission",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/case",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/schedule",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/records/alert",
+          "upstream_status": 200,
+          "delivered_status": 200,
+          "fault_injected": false
+        }
+      ]
+    }
+  ],
+  "observed_mutation_requests": [
+    {
+      "method": "POST",
+      "path": "/api/v1/session",
+      "status": 200
+    }
+  ],
+  "workflow_or_companion_mutation_requests": 0,
+  "request_bodies_headers_tokens_and_response_content_included": false,
+  "private_trace_sha256": "6894432e4ff650dbef3690b725b6ecd524140486c76013845584d4abc0d4d872",
+  "frontend_index_sha256": "653330c2002c5fa1b9611c471c4357f8f9f66f4576c51b3b7302252d775143aa"
+}

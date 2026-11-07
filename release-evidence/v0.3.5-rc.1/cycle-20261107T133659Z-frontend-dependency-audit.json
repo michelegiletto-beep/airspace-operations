@@ -1,0 +1,15 @@
+{
+  "command": [
+    "npm.cmd",
+    "audit",
+    "--json"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\frontend",
+  "started_at": "2026-11-07T13:39:22.406818+00:00",
+  "elapsed_seconds": 7.882,
+  "exit_code": 0,
+  "stdout": "{\n  \"auditReportVersion\": 2,\n  \"vulnerabilities\": {},\n  \"metadata\": {\n    \"vulnerabilities\": {\n      \"info\": 0,\n      \"low\": 0,\n      \"moderate\": 0,\n      \"high\": 0,\n      \"critical\": 0,\n      \"total\": 0\n    },\n    \"dependencies\": {\n      \"prod\": 4,\n      \"dev\": 130,\n      \"optional\": 27,\n      \"peer\": 0,\n      \"peerOptional\": 0,\n      \"total\": 133\n    }\n  }\n}\n",
+  "stderr": "",
+  "lockfile_sha256": "16b9966c19c77c6ceca7986f32970583d4a6a3e2d3e671899de41f363ac30bbb",
+  "scope": "Current advisory lookup of pinned lockfile; no dependency installation or model loading."
+}

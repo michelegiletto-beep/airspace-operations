@@ -1,3 +1,9 @@
+## Browser and context recovery checkpoint, 7 November 2026
+
+The current 0.3.5 development increment fixes failed context reads being displayed as an empty workspace and keeps the assistant launcher clear of open forms. Actual Chrome review verified permission and context retry, unsent draft continuity, keyboard and phone layout, actual normal frame changes and settled paused frame stability. Protected database tables remain unchanged; the isolated preview contains only one additional existing-user login. The final interface suite passed 205 tests, and the final build and three current dependency audits passed.
+
+Published software remains 0.3.4 until the new exact-source CI, archive and publication gates pass. No new model call or training ran. Read improvement/cycles/2026-11-07T133659Z-context-verification.json and its browser, media and persistent-data receipts. Original acceptance, stable release and operational acceptance remain false.
+
 ## Development checkpoint, 5 November 2026
 
 Local 0.3.5 verification: 196 interface tests, a successful build and all three current dependency audits passed. The backend invocation passed 575 tests with 21 skipped; subsequent release-history verification passed 49 tests with 1 skipped. Actual current-role API rejection and unchanged records were verified. No supported browser provider was exposed, so browser review and new release publication remain pending. No new model call or training run occurred.

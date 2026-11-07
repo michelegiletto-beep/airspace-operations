@@ -15,7 +15,8 @@
     "cycles/2026-11-01T105140Z-task-recovery.json",
     "cycles/2026-11-02T011950Z-draft-boundaries.json",
     "cycles/2026-11-02T072227Z-windows-and-draft-verification.json",
-    "cycles/2026-11-05T155456Z-workflow-guidance.json"
+    "cycles/2026-11-05T155456Z-workflow-guidance.json",
+    "cycles/2026-11-07T133659Z-context-verification.json"
   ],
   "future_cycles": "Unlisted cycle files are excluded from release payloads until reviewed and deliberately added. Do not list private records, credentials, correspondence or operational customer data."
 }

@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-07T13:46:28.948350+00:00",
+  "parent_source": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+  "issue": "Pending or failed saved workflow context was presented as an empty record list and allowed contextless scope creation.",
+  "requirement_ids": [
+    "ASO3-004",
+    "ASO3-005",
+    "ASO3-006"
+  ],
+  "changed_source": {
+    "frontend/src/AgentWorkspace.tsx": "24b18026ad2f50b3aacb7b8162034e14095519d9329b8c9025f60b4cff91dcbf",
+    "frontend/src/useWorkflowContext.ts": "23d2f018990a0f42119f7bb9287e84709490ec930b4a1cd430565f93a310c7e5",
+    "frontend/src/WorkflowContextRecovery.test.tsx": "0bbbb301486064e37ccbd329086cdd261c6b9c182c8f697a46b7bcab7cd88c50"
+  },
+  "changes": [
+    "Dedicated atomic context loader with token, revision, actor/tenant/role and retry identity; late and aborted responses cannot restore records or fetch time.",
+    "Current nine record kinds fetched in parallel; malformed or duplicate collections fail closed.",
+    "Planner distinguishes pending, unavailable and successfully empty context; scope submission is blocked while context is unknown.",
+    "Independent GET-only record retry preserves unsent planner fields and saved record selections; server scope, role and input-version checks unchanged."
+  ],
+  "validation": {
+    "focused_tests": {
+      "passed": 28,
+      "failed": 0,
+      "files": 3
+    },
+    "full_frontend": {
+      "passed": 205,
+      "failed": 0,
+      "files": 27
+    },
+    "build_exit": 0,
+    "git_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'frontend/dist/index.html', CRLF will be replaced by LF the next time Git touches it\n"
+    }
+  },
+  "unchanged_baseline_and_policy_files": {
+    "SPECIFICATION.md": {
+      "sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+      "matches_parent_git_blob": true
+    },
+    "SPECIFICATION_V2_ADDENDUM.md": {
+      "sha256": "cfb285cdc619c5f7ca13c9ed0309d7d1ce60fd80c015c65fe23b38a3d403d3f2",
+      "matches_parent_git_blob": true
+    },
+    "SPECIFICATION_V3_ADDENDUM.md": {
+      "sha256": "071e62b043707e15a019cad4f922f369b09508b5c0a2044228f992795eb91f66",
+      "matches_parent_git_blob": true
+    },
+    "REQUIREMENTS_TRACEABILITY.csv": {
+      "sha256": "da11afd3051186138a8d2485e5f7990d2c499a123108e0f2ba8d51f8e49ea645",
+      "matches_parent_git_blob": true
+    },
+    "requirements.lock.txt": {
+      "sha256": "c59d750631e51ea32d2d9d1a8f507be6c427b449232ca995b7c0527fe1d3126d",
+      "matches_parent_git_blob": true
+    },
+    "requirements-neural.lock.txt": {
+      "sha256": "09f695419dd9949cf4dc55fb04360bd99b8ccec935486c898ebef0f9a9931ab1",
+      "matches_parent_git_blob": true
+    },
+    "frontend/package-lock.json": {
+      "sha256": "16b9966c19c77c6ceca7986f32970583d4a6a3e2d3e671899de41f363ac30bbb",
+      "matches_parent_git_blob": false,
+      "git_worktree_filter_hash": "fa40e6a5406b19edca197a8ec8ba9496e42e5f8d",
+      "parent_git_blob": "fa40e6a5406b19edca197a8ec8ba9496e42e5f8d",
+      "matches_parent_after_git_attributes": true,
+      "matches_prechange_advisory_lock_hash": true,
+      "note": "The existing worktree uses CRLF for this lockfile. Its raw bytes match the earlier cycle advisory input; Git filters confirm no lockfile source change."
+    },
+    "backend/airspace/orchestration.py": {
+      "sha256": "98c35b3838fb5897db7f5040223bda9e20c7cb8c52965815db8a2c713091fd89",
+      "matches_parent_git_blob": true
+    }
+  },
+  "actual_browser_verification": "Delegated to parent; this receipt does not claim browser acceptance.",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "backend_tests_rerun": false,
+  "release_published": false,
+  "retained_failures": [
+    "First short virtualized AppData cwd focused test invocation: exit 1, zero tests collected; canonical cwd retry passed.",
+    "First full test run passed 205/205 but simultaneous build failed six TypeScript optional-init assertions in the new tests. Assertions were corrected; exact-source final full tests and build pass. Failed first receipts retained."
+  ],
+  "tracked_diff_paths": [
+    "frontend/dist/assets/index-DGJm9J-b.js",
+    "frontend/dist/index.html",
+    "frontend/src/AgentWorkspace.tsx"
+  ],
+  "review": "React checklist: independent context reads run in parallel; no module-level mutable state; effect cleanup aborts and retires commits; current-scope render masks old records and timestamps; loading and failure use accessible status/alert text with a real button; no dependencies or backend policy changes.",
+  "dist_index": "frontend/dist/assets/index-BipE-kpN.js",
+  "source_commit_scope": "No source commit or publication was made by this subtask. The parent must explicitly include the newly built ignored dist asset when assembling the current candidate source."
+}

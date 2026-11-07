@@ -1,0 +1,86 @@
+{
+  "at": "2026-11-07T13:41:25.400538+00:00",
+  "state": "Isolated candidate ready for browser verification",
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "candidate": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "all_primary_tables_unchanged": true,
+  "all_preview_tables_equal_to_primary_baseline": true,
+  "authentication_performed": false,
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+  "source_commit": "ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6",
+  "application_commit": "f8d311ab0563777527bcb809e309a27e4fdbc3ea",
+  "source_ci_run": 42062319116,
+  "frontend_index_sha256": "956c863ac41a900477c898118a7846e669d96a120965f86a7c03137d8890c7ed",
+  "frontend_index_equal_to_previous_verified_build": true,
+  "health": {
+    "route": "/health",
+    "status": 200,
+    "authenticated": false,
+    "health": {
+      "status": "ok",
+      "version": "0.3.5-rc.1",
+      "deployment_profile": "sqlite-portable",
+      "operational_acceptance": false
+    }
+  },
+  "anonymous_protected_checks": [
+    {
+      "route": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/agent-capabilities",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "api_launcher_pid": 2448,
+  "worker_started": false,
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_writes": false,
+  "browser_rendering_verified": false,
+  "private_fault_harness": {
+    "target": "First authenticated GET /api/v1/agent-capabilities with upstream 200",
+    "delivered_status": 503,
+    "maximum_injections": 1,
+    "other_requests": "Unmodified upstream responses",
+    "product_source_changed": false,
+    "permissions_changed": false,
+    "logs": "Only timestamp, method, path, statuses and authorization-header presence; no credentials or response content"
+  }
+}

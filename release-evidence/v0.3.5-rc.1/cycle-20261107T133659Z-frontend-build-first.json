@@ -1,0 +1,13 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\frontend",
+  "started_at": "2026-11-07T13:43:57.116764+00:00",
+  "elapsed_seconds": 13.887,
+  "exit_code": 1,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.5-rc.1 build\n> tsc -b && vite build\n\nsrc/WorkflowContextRecovery.test.tsx(43,50): error TS18048: 'init' is possibly 'undefined'.\nsrc/WorkflowContextRecovery.test.tsx(43,65): error TS18048: 'init' is possibly 'undefined'.\nsrc/WorkflowContextRecovery.test.tsx(64,50): error TS18048: 'init' is possibly 'undefined'.\nsrc/WorkflowContextRecovery.test.tsx(64,65): error TS18048: 'init' is possibly 'undefined'.\nsrc/WorkflowContextRecovery.test.tsx(103,50): error TS18048: 'init' is possibly 'undefined'.\nsrc/WorkflowContextRecovery.test.tsx(103,65): error TS18048: 'init' is possibly 'undefined'.\n",
+  "stderr": ""
+}
