@@ -590,10 +590,10 @@
   "publication_metadata_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
-    "commit": "eefa8aa542fc9f8706ea3666f20ef0b223592c6f",
-    "exact_files": 15,
-    "receipt": "release-evidence/v0.3.3-rc.1/cycle-20261102T011950Z-metadata-retrieval.json",
-    "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
+    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
+    "exact_files": 31,
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
+    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
   },
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",
@@ -696,11 +696,12 @@
     }
   },
   "latest_documentation_checkpoint": {
-    "files": 78,
-    "scope": "Verified current main after 0.3.4 source/evidence merge; all release tags remain frozen",
-    "commit": "0e4140976c761b5f4ddad19a6a7408721d75060a",
-    "receipt": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-main-retrieval.json",
-    "state": "Independently Retrieved"
+    "state": "Independently Retrieved",
+    "published": true,
+    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
+    "exact_files": 31,
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
+    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
   },
   "installed_application": {
     "version": "0.3.4-rc.1",
@@ -717,9 +718,12 @@
     "new_model_calls": 0
   },
   "pending_documentation_checkpoint": {
-    "state": "Prepared for publication",
-    "published": false,
-    "scope": "November 8 post-release evidence and publication aliases; this is an assembly snapshot, not proof of its own upload. Frozen release source remains 9eead371e8afb5d38293e35d6e4ffef588ae7951."
+    "state": "Independently Retrieved",
+    "published": true,
+    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
+    "exact_files": 31,
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
+    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
   },
   "published_engineering_evidence": {
     "version": "0.3.5-rc.1",

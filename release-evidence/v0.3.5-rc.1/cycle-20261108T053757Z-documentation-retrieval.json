@@ -1,0 +1,201 @@
+{
+  "at": "2026-11-08T06:18:02.887017+00:00",
+  "state": "Independently Retrieved",
+  "success": true,
+  "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
+  "parent": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "tree": "00bcdfecba5ac862d918eaafb9d3e49b7a550f93",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 21699,
+      "sha256": "f992e2cf36e078ced25110d45dc674e889b407556b2aaf0e38ef6b05abd1718a",
+      "verified": true
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 50942,
+      "sha256": "4f7fa90eecfc79c6d1596447cd6db6f421f914fd09cacacc3b2f633248ffa4ac",
+      "verified": true
+    },
+    {
+      "path": "HANDOVER.md",
+      "bytes": 20431,
+      "sha256": "c5b376051d899aa59be04745e1da26bcc4a28132fa4dac8d77253455bacad680",
+      "verified": true
+    },
+    {
+      "path": "publication/status.json",
+      "bytes": 43044,
+      "sha256": "c5a3c944c3b3cfe2e6abef27bf48cc1a691da14c86bfdf6f5fc69552bd4c8b27",
+      "verified": true
+    },
+    {
+      "path": "publication/history/0.3.4-rc.1.json",
+      "bytes": 34782,
+      "sha256": "2b23c45ef674d2c5931c9dee8b745dc83970bc15fda222d9959e629ace87c289",
+      "verified": true
+    },
+    {
+      "path": "improvement/cycles/2026-11-08T053757Z-publication-repair.json",
+      "bytes": 7578,
+      "sha256": "6a58f9692994c608f403ed7395456bebef4ea2aa5a7ef6728ec69bff3d32b03c",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-destinations-rechecked.json",
+      "bytes": 141992,
+      "sha256": "85d49789087395f3748d3c7ea79f99c91931b5d0822211cb6a77693478f2585a",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-destinations.json",
+      "bytes": 143900,
+      "sha256": "4e2ce81090cf395af22e74ae792bb64a6cfb247b6c5ae401f880a9c18b2fd5b5",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-public-downloads.json",
+      "bytes": 4716,
+      "sha256": "b93e733a5453711874c1b397eb74edfe26ed05f9bb3e6049dec80bcb839a7ed2",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-site-native.json",
+      "bytes": 1282,
+      "sha256": "decd7b734b72add98c039af9eca46b6208d84543b1621f0b0aa5ac70a31cc72e",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-space-live.json",
+      "bytes": 2131,
+      "sha256": "76c25082037fd77425bdebd8a0be38b3b217360b193eaafaad3637749e2d19ac",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-terminal.json",
+      "bytes": 2976,
+      "sha256": "22f0779830eee256b231be5391c36cdeadf8442fca572139ba621a153f3ff5ad",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/manifest.json",
+      "bytes": 5992,
+      "sha256": "5dee9e7d01a31216256711fcd3d88e82994b7ecc0e587ec6257c86842b90aff0",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/dataset/README.md",
+      "bytes": 14742,
+      "sha256": "4df3511ce8c81321179c3d10130daac3edabf6a9da5d36d0c2d0b17e11e3e579",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/NOTICE.md",
+      "bytes": 1750,
+      "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/README.md",
+      "bytes": 18503,
+      "sha256": "a2f76a18b8bf9d2203dd9bfda9e9760f3806a8a40591d03296414c48dcd6ae81",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/index.html",
+      "bytes": 19328,
+      "sha256": "29b6fe77dbf6e19aeefd5973c74a4e4e1f0b55332c667d581c30a136c239af3b",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/NOTICE.md",
+      "bytes": 3244,
+      "sha256": "e3854731c722d7d4c680ddfaa234c556e998685dce3c3131518e4700c113b3bb",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/README.md",
+      "bytes": 14490,
+      "sha256": "b8a7b3af8f67a32729eb2b503506f344160426b13c650f39a52c229503757d70",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/media/companion-tasks-mobile.jpg",
+      "bytes": 34227,
+      "sha256": "e2fa3b2d733158e93cfe9e7f0e78497fd8c033f0143b5e96dfe9a50daa691b4c",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/space/media/workflow-context-mobile.jpg",
+      "bytes": 32817,
+      "sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/media/companion-tasks.png",
+      "bytes": 123755,
+      "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "verified": true
+    },
+    {
+      "path": "publication/releases/0.3.5-rc.1/huggingface/model/media/workflow-context-mobile.jpg",
+      "bytes": 32817,
+      "sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+      "verified": true
+    }
+  ],
+  "exact_files": 31,
+  "all_unlisted_tree_entries_unchanged": true,
+  "application_model_rule_and_requirement_blobs_unchanged": true,
+  "secret_pattern_scan": "No matched credential patterns; bounded heuristic. Check completed before default-branch promotion.",
+  "prior_release_tag_untouched": true
+}

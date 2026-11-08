@@ -110,6 +110,16 @@
   "verification_tool_failures": [
     "The initial independent download script wrongly expected SHA256SUMS to list all nine assets; its actual scope is the ZIP. All nine API asset digests and the listed checksum were verified after correcting the assertion.",
     "The first Site preparation assertion used a Windows backslash relative path against a forward-slash page exception. Git proved only the intended controlled page changed; all 656 other controlled public files and historical asset tests were preserved.",
-    "The first strict destination comparison retained fixed 0.3.0 presentation assumptions. A separate retained recheck uses explicit 0.3.5 values while retaining exact authored-byte, active-content, link/image and repeated-host checks, with four rejecting negative controls."
-  ]
+    "The first strict destination comparison retained fixed 0.3.0 presentation assumptions. A separate retained recheck uses explicit 0.3.5 values while retaining exact authored-byte, active-content, link/image and repeated-host checks, with four rejecting negative controls.",
+    "The documentation delta comparison initially expected the already existing identical 0.3.4 history file to change. The corrected assertion allows only that exact unchanged selected path and verifies all 31 public bytes; unlisted tree entries remain identical."
+  ],
+  "documentation_checkpoint": {
+    "state": "Independently Retrieved",
+    "published": true,
+    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
+    "exact_files": 31,
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
+    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
+  },
+  "main_updated_with_expected_parent": true
 }
