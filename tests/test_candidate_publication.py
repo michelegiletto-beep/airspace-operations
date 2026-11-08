@@ -48,6 +48,22 @@ def test_generated_egg_info_does_not_hide_real_untracked_or_modified_source(tmp_
     assert "?? backend/airspace/new_module.py" in status and ".egg-info" not in status
 
 
+def test_changed_source_diagnostic_is_bounded_and_never_publishes(tmp_path, monkeypatch):
+    monkeypatch.setattr(publisher, "ROOT", tmp_path)
+    monkeypatch.setattr(publisher, "validate_context", lambda *args: context())
+    changed = " M frontend/dist/index.html\n" + "?? frontend/isolated-untracked-file.txt\n" * 200
+    monkeypatch.setattr(publisher.subprocess, "run", lambda arguments, **kwargs: SimpleNamespace(
+        stdout="a" * 40 if arguments[1] == "rev-parse" else changed))
+    monkeypatch.setattr(publisher, "gh", lambda *args, **kwargs: pytest.fail("Changed source must never reach publication"))
+    monkeypatch.setattr(sys, "argv", ["publish_candidate.py", "--publish"])
+    with pytest.raises(ValueError) as raised:
+        publisher.main()
+    message = str(raised.value)
+    assert "frontend/dist/index.html" in message
+    assert message.endswith("[Additional paths omitted]")
+    assert len(message) < 4200
+
+
 def client_for(assets, calls, *, corrupt=False):
     def client(arguments, **kwargs):
         calls.append(arguments)

@@ -300,7 +300,9 @@ def main():
     context = validate_context(ROOT, os.environ, head)
     clean = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all", "--", "backend", "frontend", "scripts", "tests", "deploy", "migrations", ".github", "publication", ".gitignore", "Dockerfile", "compose.yaml", "pyproject.toml", "uv.lock"], cwd=ROOT, text=True, capture_output=True, check=True)
     if clean.stdout.strip():
-        raise ValueError("Controlled application source changed after checkout")
+        changes = clean.stdout.strip()
+        diagnostic = changes[:4000] + ("\n[Additional paths omitted]" if len(changes) > 4000 else "")
+        raise ValueError("Controlled application source changed after checkout:\n" + diagnostic)
     if args.publish or args.record_engineering:
         if not os.environ.get("GITHUB_TOKEN"):
             raise ValueError("Only the ephemeral repository-scoped CI token is supported")
