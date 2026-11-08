@@ -1,0 +1,115 @@
+{
+  "cycle_id": "2026-11-08T053757Z-publication-repair",
+  "triggered_at": "2026-11-08T05:37:57.988Z",
+  "state": "Published engineering candidate and presentations independently retrieved",
+  "published_software": "0.3.5-rc.1",
+  "candidate": "0.3.5-rc.1",
+  "requirements": [
+    "ASO3-002",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO3-011"
+  ],
+  "previous_cycle": "improvement/cycles/2026-11-07T133659Z-context-verification.json",
+  "failed_run": {
+    "id": 42379773014,
+    "commit": "f3bc0afe02ba4d97f72909e5e06c41af3add13a4",
+    "engineering_job": 128424732205,
+    "engineering_conclusion": "success",
+    "publisher_job": 128425391948,
+    "publisher_conclusion": "failure",
+    "software_and_dependency_gates": "Passed",
+    "package_and_exact_archive_installation": "Passed",
+    "archive_sha256": "0ecdaa0cc6451d44fe5c6dad4633a1eeaa89e3c6fd114064c934a6c42ba15dfe",
+    "archive_bytes": 16605513,
+    "archive_tests": {
+      "passed": 577,
+      "skipped": 20,
+      "warnings": 3,
+      "seconds": 72.99
+    },
+    "final_rejection": "Controlled application source changed after checkout",
+    "new_tag_or_release_created": false,
+    "downloadable_artifact_claimed": false,
+    "private_exact_logs": "runtime/checkpoints/cycle-20261108T053757Z/logs"
+  },
+  "diagnostic_increment": {
+    "commit": "45421a4932f4e1742419e896b27120e0fb6df96d",
+    "tree": "b4e39940882011600d1f52d66ef7c63b32b0a0b7",
+    "run": 42451939034,
+    "state": "Failed at unchanged source-integrity gate",
+    "change": "Include a bounded list of changed paths in the existing rejection. Publication remains blocked on every changed controlled source file.",
+    "focused_tests": {
+      "passed": 48,
+      "warnings": 1,
+      "seconds": 1.36
+    },
+    "approval_or_publication_gate_weakened": false,
+    "changed_path": "frontend/dist/index.html",
+    "archive_tests": {
+      "passed": 578,
+      "skipped": 20,
+      "warnings": 3,
+      "seconds": 69.5
+    }
+  },
+  "local_reproduction": "Raw byte comparison reproduced the CRLF/LF discrepancy hidden by Windows Git line-ending filters. Normalizing the input and rebuilding returns the exact recorded 536-byte output. The earlier cp1252 output-print failure is retained separately.",
+  "parallel_review": "The previous three agents reported account usage limits. No upgrade or purchase was attempted; root continues the bounded repair and preserves their completed evidence.",
+  "browser_scope": "The actual November 7 browser/API/persistence and privacy-reviewed screenshots remain evidence for the unchanged application interface. No new browser session or local-model run is claimed by this checkpoint.",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "original_specification_changed": false,
+  "requirement_texts_or_statuses_changed": false,
+  "new_candidate_release_published": true,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The unchanged source-integrity gate correctly rejected two otherwise passing builds. A bounded path diagnostic exposed CRLF/LF drift in the authored HTML input. Normalising that input restored byte-reproducible output, and exact-source CI then published the candidate. Nine GitHub assets, 53 Hub files and 91 Site resources now verify. Primary Windows promotion is a separate next step; no new model result, operational record, full specification acceptance or certification is claimed.",
+  "next_bounded_prompt": "Read STATUS.md, the latest cycle, release evidence and publication/status.json. Preserve frozen 0.3.5 source 9eead371e8afb5d38293e35d6e4ffef588ae7951 and all earlier releases. First reconcile the documentation checkpoint and verify current downloads. Then install the exact independently retrieved 0.3.5 ZIP into a distinct Windows directory, validate configuration, retain the existing optional interpreter and named actor policy, and verify browser to API to the unchanged persistent records before any primary promotion. Do not overwrite the original 0.3.3 source, rotate the audit key, broaden roles or start duplicate workers. Use at most two actual local-model evaluations only when needed for a bounded interaction or confirmed internal-draft check. Review plain authored copy, role guidance, error recovery, animation/fallback, pause and reduced motion. Preserve input versions, tenant/actor isolation, deterministic constraints and independent review. Do not alter unrelated Site projects to hide their six reproduced baseline failures. No emails, outreach, aircraft commands, authority decisions, external submissions, purchases or approval changes. Publish only a distinct candidate after its actual gates and independent retrieval. Limit active work to 45 minutes, preserve failures, report actual model calls and finish with a retrospective and exact next prompt.",
+  "root_cause": {
+    "observed": "The authored frontend/index.html Git blob retained two CRLF line endings; Vite preserved them in generated output while the recorded dist/index.html blob used LF.",
+    "repair": "Normalize only the authored HTML input to LF. No source exclusion, policy, content or UI behaviour change.",
+    "before_input_bytes": 439,
+    "after_input_bytes": 437,
+    "rebuilt_output_bytes": 536,
+    "rebuilt_output_sha256": "7a02d5131c276f28435c5a4a58839e36cb29bc861546190bcb67154843049cf4",
+    "rebuilt_output_equals_recorded_git_blob": true,
+    "build_exit_code": 0,
+    "repair_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+    "repair_tree": "f8d594f79f34e1a0726819d4da05ee3e6997a80c",
+    "repair_run": 42452497352,
+    "guard_weakened": false
+  },
+  "successful_run": 42452497352,
+  "successful_source": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "github_release_id": 438064291,
+  "archive": {
+    "name": "System-Lab-Airspace-Operations-0.3.5-rc.1.zip",
+    "bytes": 16605809,
+    "sha256": "4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794",
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.5-rc.1/System-Lab-Airspace-Operations-0.3.5-rc.1.zip",
+    "http_status": 200,
+    "matches_public_digest": true
+  },
+  "public_verification": {
+    "github_assets": 9,
+    "huggingface_files": 53,
+    "site_resources": 91,
+    "site_version": 102,
+    "combined_destination_checks": 144,
+    "live_space_assets": 6,
+    "all_passed": true
+  },
+  "primary_application_unchanged": "0.3.4-rc.1",
+  "persistent_check": "release-evidence/v0.3.5-rc.1/cycle-20261107T133659Z-preview-cycle1108-final.json",
+  "site_global_tests": {
+    "passed": 68,
+    "failed": 6,
+    "same_failures_reproduced_on_unmodified_baseline": true,
+    "airspace_tests_passed": 9
+  },
+  "verification_tool_failures": [
+    "The initial independent download script wrongly expected SHA256SUMS to list all nine assets; its actual scope is the ZIP. All nine API asset digests and the listed checksum were verified after correcting the assertion.",
+    "The first Site preparation assertion used a Windows backslash relative path against a forward-slash page exception. Git proved only the intended controlled page changed; all 656 other controlled public files and historical asset tests were preserved.",
+    "The first strict destination comparison retained fixed 0.3.0 presentation assumptions. A separate retained recheck uses explicit 0.3.5 values while retaining exact authored-byte, active-content, link/image and repeated-host checks, with four rejecting negative controls."
+  ]
+}

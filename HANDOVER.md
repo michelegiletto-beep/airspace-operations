@@ -1,3 +1,13 @@
+## Published candidate checkpoint, 8 November 2026
+
+GitHub 0.3.5-rc.1 is published from frozen source `9eead371e8afb5d38293e35d6e4ffef588ae7951`. All nine assets verify; the ZIP contains 16605809 bytes with SHA-256 `4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794`. Exact-source CI 42452497352 passed 578 source tests with 20 skipped, 205 interface tests, 19 PostgreSQL tests, actual containers, worker completion and restoration. The separate exact archive installation passed 578 tests with 20 skipped and 3 warnings in 72.05 seconds. Two blocked prior publication attempts remain recorded.
+
+System Lab 102 and all three Hugging Face presentations are published and independently retrieved: 91 Site resources, 53 Hub files, strict authored-byte checks and unchanged model weights/data. The static Space also verifies its current HTML and six referenced assets. Nine Airspace Site tests pass. Six global Site failures reproduce unchanged on the previous Site source; no unrelated project was edited.
+
+The installed primary remains 0.3.4. Its records, two engineering tasks and audit 48 remain unchanged; the separate 0.3.5 preview has audit 49 from one existing-user login only. No operational record, model call or training run was added. All original and revision requirement texts/statuses and the specification remain unchanged. Original acceptance, stable release and operational acceptance remain false. Read `improvement/cycles/2026-11-08T053757Z-publication-repair.json` and `publication/status.json`; earlier sections below are historical.
+
+Next bounded action: install and verify the exact 0.3.5 Windows archive separately before primary promotion. Preserve the existing actor policy, audit key and optional interpreter.
+
 ## Current publication checkpoint, 2 November 2026, 13:21 UTC cycle
 
 GitHub [0.3.4-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.4-rc.1) is published and independently retrieved from frozen source `f5dd93a7c5c7367101ea63147a5da99cb085addb`. All nine assets match their public digests. The ZIP contains 15,377,087 bytes and has SHA-256 `c34bca925553743ef6ce310c909b370a2662e5d5cd098f222d9a5ea6d28a7e57`. System Lab 101 is independently verified: 80 resources, comprising 77 exact assets and 3 authored pages. All three Hugging Face presentations now have independent 0.3.4 retrieval receipts.

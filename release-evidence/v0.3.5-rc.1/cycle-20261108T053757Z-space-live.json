@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-08T06:13:18.581865+00:00",
+  "success": true,
+  "state": "Independently Retrieved",
+  "version": "0.3.5-rc.1",
+  "head": "41432c0991cfb2fddf5bba777130afb7cf450508",
+  "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/index.html",
+  "source_sha256": "29b6fe77dbf6e19aeefd5973c74a4e4e1f0b55332c667d581c30a136c239af3b",
+  "response_sha256": [
+    "ba70de54ab7e4675c07171c0e448c9086573fed6263a55471d3d87893f6389da",
+    "ba70de54ab7e4675c07171c0e448c9086573fed6263a55471d3d87893f6389da"
+  ],
+  "two_authored_byte_comparisons_passed": true,
+  "fixed_hosting_additions_sha256": "ee6af1c6bf0bc523fd0fde3fa94a0900529b5de23eaa8a7bf1c56f52f1609d6f",
+  "normalisation": "Only one exact observed creator-variable script and the four exact provider social metadata elements. No arbitrary script or authored-byte exclusion.",
+  "negative_changed_version_rejected": true,
+  "assets": [
+    {
+      "path": "media/application-tasks.png",
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "verified": true
+    },
+    {
+      "path": "media/draft-continuity-mobile.jpg",
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "verified": true
+    },
+    {
+      "path": "media/operations-permissions-mobile.jpg",
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "verified": true
+    },
+    {
+      "path": "media/task-recovery-mobile.jpg",
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "verified": true
+    },
+    {
+      "path": "media/workflow-context-mobile.jpg",
+      "bytes": 32817,
+      "sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+      "verified": true
+    },
+    {
+      "path": "styles.css",
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "verified": true
+    }
+  ],
+  "live_inference": false
+}

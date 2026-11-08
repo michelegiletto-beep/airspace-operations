@@ -1,3 +1,13 @@
+## Published candidate checkpoint, 8 November 2026
+
+GitHub 0.3.5-rc.1 is published from frozen source `9eead371e8afb5d38293e35d6e4ffef588ae7951`. All nine assets verify; the ZIP contains 16605809 bytes with SHA-256 `4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794`. Exact-source CI 42452497352 passed 578 source tests with 20 skipped, 205 interface tests, 19 PostgreSQL tests, actual containers, worker completion and restoration. The separate exact archive installation passed 578 tests with 20 skipped and 3 warnings in 72.05 seconds. Two blocked prior publication attempts remain recorded.
+
+System Lab 102 and all three Hugging Face presentations are published and independently retrieved: 91 Site resources, 53 Hub files, strict authored-byte checks and unchanged model weights/data. The static Space also verifies its current HTML and six referenced assets. Nine Airspace Site tests pass. Six global Site failures reproduce unchanged on the previous Site source; no unrelated project was edited.
+
+The installed primary remains 0.3.4. Its records, two engineering tasks and audit 48 remain unchanged; the separate 0.3.5 preview has audit 49 from one existing-user login only. No operational record, model call or training run was added. All original and revision requirement texts/statuses and the specification remain unchanged. Original acceptance, stable release and operational acceptance remain false. Read `improvement/cycles/2026-11-08T053757Z-publication-repair.json` and `publication/status.json`; earlier sections below are historical.
+
+Next bounded action: install and verify the exact 0.3.5 Windows archive separately before primary promotion. Preserve the existing actor policy, audit key and optional interpreter.
+
 ## Browser and context recovery checkpoint, 7 November 2026
 
 The current 0.3.5 development increment fixes failed context reads being displayed as an empty workspace and keeps the assistant launcher clear of open forms. Actual Chrome review verified permission and context retry, unsent draft continuity, keyboard and phone layout, actual normal frame changes and settled paused frame stability. Protected database tables remain unchanged; the isolated preview contains only one additional existing-user login. The final interface suite passed 205 tests, and the final build and three current dependency audits passed.
@@ -5,6 +15,8 @@ The current 0.3.5 development increment fixes failed context reads being display
 Published software remains 0.3.4 until the new exact-source CI, archive and publication gates pass. No new model call or training ran. Read improvement/cycles/2026-11-07T133659Z-context-verification.json and its browser, media and persistent-data receipts. Original acceptance, stable release and operational acceptance remain false.
 
 ## Development checkpoint, 5 November 2026
+
+Development source f8d311ab0563777527bcb809e309a27e4fdbc3ea is independently retrieved on codex/airspace-workflow-guidance-035. Actual CI 42062319116 passed 577 Linux tests with 20 skipped, 19 PostgreSQL tests, containers, worker and restoration. The publisher skipped this development branch. Browser and exact archive gates remain open; no new release is published.
 
 Current published and primary software remains 0.3.4-rc.1. A separate 0.3.5 development checkout at `C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5` was cloned from verified main `0e4140976c761b5f4ddad19a6a7408721d75060a` because the previous F drive is unavailable. No loss or deletion of the F checkout is inferred. The primary API and worker were recovered from the pinned 0.3.4 installation; existing records and HMAC audit remain unchanged.
 
@@ -78,6 +90,4 @@ Current GitHub release is now **0.3.1-rc.1**, frozen source `433e89a66038ee7f7c3
 
 Current continuation, 31 October 2026, 23:13 UTC: the earlier access and storage checkpoints above are historical. Hugging Face model `a6a24fc396ce7e86eb9f9c096231f0378e355ef7`, dataset `88c470dd521d63a90a6361e762e73167823317a1` and static Space `7aae1c50c4a7556d3f067bcf8992cf8219fa51cf` are published and independently retrieved. All ten reviewed presentation targets match; the original artifacts are unchanged. Two exact provider-generated LFS path entries are recorded separately. System Lab version 98 is deployed at source `7e96d2431d993a6acef01d8ea37dfa6fce40a80c`; all 49 resources are independently verified:46 exact assets and 3 authored pages under the hardened hosting comparator. Both earlier failed current-image assertions are preserved. Read the latest cycle and destination-specific receipts before claiming completion. The API and worker were restarted and read-only database/audit checks passed. Handover checkpoint `e9b92066b97314ea83736761009c2809844bf7e1` is published and independently retrieved. The media guard remains unreleased, all frozen releases remain unchanged, and the original specification remains incomplete.
 
-
-Development source f8d311ab0563777527bcb809e309a27e4fdbc3ea is independently retrieved on codex/airspace-workflow-guidance-035. Actual CI 42062319116 passed 577 Linux tests with 20 skipped, 19 PostgreSQL tests, containers, worker and restoration. The publisher skipped this development branch. Browser and exact archive gates remain open; no new release is published.
-
+Metadata checkpoint ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6 is independently retrieved, with all 239 application blobs unchanged. The new C checkout is aligned to that checkpoint with clean tracked files; generated test and evidence files remain separately recorded. Read `release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-terminal.json` before continuing.

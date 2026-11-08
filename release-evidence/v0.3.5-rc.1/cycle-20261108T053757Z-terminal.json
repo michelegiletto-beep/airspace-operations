@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-08T06:14:38.775183+00:00",
+  "cycle": "improvement/cycles/2026-11-08T053757Z-publication-repair.json",
+  "state": "Published engineering candidate and presentations independently retrieved",
+  "published_version": "0.3.5-rc.1",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "archive": {
+    "name": "System-Lab-Airspace-Operations-0.3.5-rc.1.zip",
+    "bytes": 16605809,
+    "sha256": "4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794",
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.5-rc.1/System-Lab-Airspace-Operations-0.3.5-rc.1.zip",
+    "http_status": 200,
+    "matches_public_digest": true
+  },
+  "verification": {
+    "github_assets": 9,
+    "huggingface_files": 53,
+    "site_resources": 91,
+    "site_version": 102,
+    "combined_destination_checks": 144,
+    "live_space_assets": 6,
+    "all_passed": true
+  },
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The unchanged source-integrity gate correctly rejected two otherwise passing builds. A bounded path diagnostic exposed CRLF/LF drift in the authored HTML input. Normalising that input restored byte-reproducible output, and exact-source CI then published the candidate. Nine GitHub assets, 53 Hub files and 91 Site resources now verify. Primary Windows promotion is a separate next step; no new model result, operational record, full specification acceptance or certification is claimed.",
+  "next_bounded_prompt": "Read STATUS.md, the latest cycle, release evidence and publication/status.json. Preserve frozen 0.3.5 source 9eead371e8afb5d38293e35d6e4ffef588ae7951 and all earlier releases. First reconcile the documentation checkpoint and verify current downloads. Then install the exact independently retrieved 0.3.5 ZIP into a distinct Windows directory, validate configuration, retain the existing optional interpreter and named actor policy, and verify browser to API to the unchanged persistent records before any primary promotion. Do not overwrite the original 0.3.3 source, rotate the audit key, broaden roles or start duplicate workers. Use at most two actual local-model evaluations only when needed for a bounded interaction or confirmed internal-draft check. Review plain authored copy, role guidance, error recovery, animation/fallback, pause and reduced motion. Preserve input versions, tenant/actor isolation, deterministic constraints and independent review. Do not alter unrelated Site projects to hide their six reproduced baseline failures. No emails, outreach, aircraft commands, authority decisions, external submissions, purchases or approval changes. Publish only a distinct candidate after its actual gates and independent retrieval. Limit active work to 45 minutes, preserve failures, report actual model calls and finish with a retrospective and exact next prompt."
+}
