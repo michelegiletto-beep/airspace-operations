@@ -110,6 +110,27 @@ def test_explicit_task_preview_requires_current_confirmation_and_persists(enviro
             json={"expected_version": completed.json()["version"], "state": "Cancelled"}).status_code == 404
 
 
+def test_selected_task_review_is_displayed_once_without_saving_the_preview(environment):
+    response = json.dumps({"guidance_id": "review_task_preview", "fact_ids": [],
+                           "next_step_ids": ["step_0", "step_1"], "action_ids": ["save_task"]})
+    store, client, author, auth, base, pending = begin(environment,
+        "Create a task to inspect the isolated software verification record",
+        service=TestOnlyReplyService(invalid=response))
+    _, detail = finish(store, client, auth, base)
+    reply = detail["messages"][-1]["data"]
+    assert reply["text"].split("\n\n") == [
+        ADMINISTRATIVE_GUIDANCE["review_task_preview"],
+        "Use the task list to track the personal task. Its state does not change an operation.",
+    ]
+    assert [step["id"] for step in reply["next_steps"]] == ["step_0", "step_1"]
+    assert reply["assistance_selection"]["next_step_ids"] == ["step_0", "step_1"]
+    assert detail["tasks"] == []
+    assert len(detail["action_previews"]) == 1
+    assert detail["action_previews"][0]["status"] == "Awaiting Confirmation"
+    assert detail["action_previews"][0]["data"]["requires_confirmation"] is True
+    assert store.verify_audit(author["organisation_id"])["valid"]
+
+
 def test_missing_model_keeps_honest_fallback_and_explicit_personal_task_preview(environment):
     store, client, author, auth, base, pending = begin(environment, "Remember to inspect the source register", service=TestOnlyReplyService(outage=True))
     outcome, detail = finish(store, client, auth, base)

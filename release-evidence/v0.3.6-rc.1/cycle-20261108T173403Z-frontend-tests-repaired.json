@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-11-08T17:42:59.034300+00:00",
+  "command": [
+    "npm.cmd",
+    "test"
+  ],
+  "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5\\frontend",
+  "exit_code": 0,
+  "seconds": 20.712,
+  "stdout": "\n> @system-lab/airspace-operations-ui@0.3.6-rc.1 test\n> vitest run\n\n\n RUN  v4.1.12 C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SystemLabAirspaceEngineering/candidate-0.3.5/frontend\n\n\n Test Files  27 passed (27)\n      Tests  205 passed (205)\n   Start at  18:43:00\n   Duration  19.60s (transform 2.23s, setup 0ms, import 12.97s, tests 19.13s, environment 37.62s)\n\n",
+  "stderr": ""
+}

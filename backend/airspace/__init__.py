@@ -1,3 +1,3 @@
 """System Lab Airspace Operations decision-support services."""
 
-__version__ = "0.3.5-rc.1"
+__version__ = "0.3.6-rc.1"

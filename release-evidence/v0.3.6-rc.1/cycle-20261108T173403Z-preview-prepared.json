@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-08T17:44:10.009855+00:00",
+  "success": true,
+  "candidate": "0.3.6-rc.1",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+  "base_commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "historical_engineering_copy": {
+    "records": 25,
+    "tasks": 3,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 7
+    },
+    "audit_count": 55,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "0c8b62b483009e7b00a844af5c0ed28f44aeeee66c4ac5fb479ab19c68f99ad1"
+  },
+  "all_source_records_unchanged": true,
+  "primary_all_tables_unchanged": true,
+  "worker_started": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "scope": "A distinct restored copy of actual November 8 engineering records. Historical replies and tasks remain historical; no operational records are manufactured."
+}

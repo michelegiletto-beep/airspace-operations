@@ -27,7 +27,7 @@ from .orchestration import TASK_ROLES, WorkflowRequest, WorkflowRepository, dige
 from systemlab_agentic import AgentBudget, AgentScope, Capability, TaskContract, admit
 
 ROOT = Path(__file__).resolve().parents[2]
-COMPANION_VERSION = "companion/1.2"
+COMPANION_VERSION = "companion/1.3"
 PRIVATE_KINDS = {"companion_conversation", "companion_message", "companion_action", "companion_task"}
 WORKSPACES = {
     "operations": "Operations", "scheduling": "Scheduling", "airspace": "Airspace planning",
@@ -316,7 +316,7 @@ def _facts_and_steps(rows, workspace, request, actor=None):
             missing.append("Choose the operating country or regulatory jurisdiction.")
         if not request.operation_date:
             missing.append("Enter the intended operation date. No date is assumed.")
-    texts = ["Review the personal task text and confirm it only if it matches your request.",
+    texts = [ADMINISTRATIVE_GUIDANCE["review_task_preview"],
              "Use the task list to track the personal task. Its state does not change an operation."] if _intent(request.message) == {"task_draft"} else GUIDES[workspace]
     steps = [{"id": f"step_{index}", "text": text} for index, text in enumerate(texts)]
     return facts, steps, list(dict.fromkeys(missing))[:10]
@@ -419,6 +419,14 @@ def validate_reply(raw, view):
     if guidance_id == "inspect_workflow" and not any(item.get("kind") == "agent_workflow" and item["id"] in proposed.fact_ids for item in view["facts"]):
         raise ValueError("Workflow guidance requires the matching recorded workflow fact")
     return proposed.model_copy(update={"guidance_id": guidance_id, "guidance": guidance[guidance_id]})
+
+
+def _reply_text(guidance, facts, steps):
+    """Preserve facts verbatim; render a repeated registered instruction once."""
+    registered = guidance in ADMINISTRATIVE_GUIDANCE.values()
+    additional = [item["text"] for item in steps
+                  if not (registered and item["text"] == guidance and not item.get("source_ref"))]
+    return "\n\n".join([guidance] + [item["text"] for item in facts] + additional)
 
 
 class LocalCompanionServices:
@@ -799,7 +807,7 @@ def run_companion_reply(store, job, actor, services=None):
                 "proposal_source": "local_llm" if success else "deterministic_fallback_from_explicit_request", "expires_at": message["data"]["scope"]["deadline"]}, "Awaiting Confirmation"))
         # Consequential facts are deterministic quotations of actual record state;
         # free generated language is restricted to advisory next-step guidance.
-        text = "\n\n".join([guidance] + [item["text"] for item in chosen_facts] + [item["text"] for item in chosen_steps])
+        text = _reply_text(guidance, chosen_facts, chosen_steps)
         reply_kind = "procedure_guidance" if procedure_only else "local_llm" if success else "fallback"
         current_message = _own(conn, actor, "companion_message", message_id)
         reply = _new(store, conn, actor, "companion_message", "Incident procedure guidance" if procedure_only else "Local companion reply" if success else "Companion fallback guidance", {"conversation_id": conversation_id, "role": "assistant", "text": text,

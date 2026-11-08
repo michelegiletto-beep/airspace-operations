@@ -487,25 +487,20 @@
   },
   "software_defects_remaining": "Original feature and assurance gaps remain in capabilities.json and original traceability. The reviewed release has no unresolved critical finding in the exercised scope.",
   "development_candidate": {
-    "browser_verified": true,
-    "browser_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261107T133659Z-browser.json",
-    "source_checkout": "C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5",
-    "new_model_calls": 0,
-    "blockers": [],
-    "current_candidate_release_gates_passed": true,
-    "source_uploaded": true,
-    "version": "0.3.5-rc.1",
+    "version": "0.3.6-rc.1",
+    "state": "Local engineering and actual-model checks passed; exact-source release gates pending",
+    "base_commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+    "published": false,
+    "local_python_passed": 582,
+    "local_interface_passed": 205,
+    "model_calls": 1,
     "training_runs": 0,
-    "current_candidate_publication_verified": true,
-    "published": true,
-    "state": "Published and independently retrieved engineering candidate",
-    "current_candidate_installation_verified": true,
-    "local_frontend_tests_passed": 205,
-    "diagnostic_source": "45421a4932f4e1742419e896b27120e0fb6df96d",
-    "diagnostic_ci_run": 42451939034,
-    "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
-    "installation_scope": "Actual exact-archive Linux installation plus a separate fresh Windows core environment and primary source promotion. The primary retains its existing optional interpreter.",
-    "local_windows_installation_verified": true
+    "blockers": [
+      "Exact-source containers and archive installation",
+      "Anonymous release and presentation verification"
+    ],
+    "browser_verified": true,
+    "browser_evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-browser-model.json"
   },
   "known_presentation_defects": [
     "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
@@ -587,14 +582,15 @@
     "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
   },
   "publication_access_blockers": [],
-  "latest_cycle": "improvement/cycles/2026-11-08T113227Z-windows-installation.json",
+  "latest_cycle": "improvement/cycles/2026-11-08T173403Z-confirmation-copy.json",
   "publication_metadata_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
-    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
-    "exact_files": 31,
-    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
-    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
+    "commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+    "exact_files": 15,
+    "default_branch_verified": true,
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-public-checkpoint.json",
+    "scope": "Post-release Windows installation, actual local-assistance and primary-promotion evidence. No software tag, weight, dataset or application byte change."
   },
   "published_verification_source": {
     "commit": "69864960bab8d542818292157685bf38cca474d1",
@@ -698,11 +694,12 @@
   },
   "latest_documentation_checkpoint": {
     "state": "Independently Retrieved",
-    "commit": "b39ba54ac9728da41b0578b83791435db58fffac",
-    "files": 4,
+    "published": true,
+    "commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+    "exact_files": 15,
     "default_branch_verified": true,
-    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-readme-follow-up.json",
-    "scope": "Later README and metadata follow-up; frozen application release remains 9eead371e8afb5d38293e35d6e4ffef588ae7951. This current local receipt is a post-publication checkpoint."
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-public-checkpoint.json",
+    "scope": "Post-release Windows installation, actual local-assistance and primary-promotion evidence. No software tag, weight, dataset or application byte change."
   },
   "installed_application": {
     "version": "0.3.5-rc.1",
@@ -723,12 +720,10 @@
     "private_restored_review_model_calls": 1
   },
   "pending_documentation_checkpoint": {
-    "state": "Independently Retrieved",
+    "state": "Completed",
     "published": true,
-    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
-    "exact_files": 31,
-    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
-    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
+    "commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-public-checkpoint.json"
   },
   "published_engineering_evidence": {
     "version": "0.3.5-rc.1",

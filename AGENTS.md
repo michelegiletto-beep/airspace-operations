@@ -1,3 +1,7 @@
+## Confirmation-copy candidate, 8 November 2026, 17:34 UTC cycle
+
+Read improvement/cycles/2026-11-08T173403Z-confirmation-copy.json. Candidate 0.3.6 removes the observed repeated registered task-confirmation instruction, preserves verbatim source facts and selected step identities, and keeps explicit typed confirmation and server permissions. Actual local generation, pending preview, explicit save and preserved historical records were verified on a separate restored engineering copy. One model call ran; no training or operational record was added. Local checks passed 582 Python tests with 21 skipped and 205 interface tests. The first encoding-related interface failure and its repair remain recorded. The primary and published software remain 0.3.5 until new exact-source CI, archive and publication receipts exist. Original acceptance, stable release and operational acceptance remain false.
+
 ## Verified Windows installation and primary checkpoint, 8 November 2026
 
 The primary at http://127.0.0.1:8787 now runs the exact separately installed 0.3.5-rc.1 source `9eead371e8afb5d38293e35d6e4ffef588ae7951`. Read `runtime/review-v3/active-recovery.json` for the current private recovery manifest; historical recovery mains still target 0.3.4 and must not be used to restart the current primary. The original C application source remains 0.3.3 and is preserved.
@@ -27,8 +31,6 @@ The current 0.3.5 development increment fixes failed context reads being display
 Published software remains 0.3.4 until the new exact-source CI, archive and publication gates pass. No new model call or training ran. Read improvement/cycles/2026-11-07T133659Z-context-verification.json and its browser, media and persistent-data receipts. Original acceptance, stable release and operational acceptance remain false.
 
 ## Development checkpoint, 5 November 2026
-
-Development source f8d311ab0563777527bcb809e309a27e4fdbc3ea is independently retrieved on codex/airspace-workflow-guidance-035. Actual CI 42062319116 passed 577 Linux tests with 20 skipped, 19 PostgreSQL tests, containers, worker and restoration. The publisher skipped this development branch. Browser and exact archive gates remain open; no new release is published.
 
 Current published and primary software remains 0.3.4-rc.1. A separate 0.3.5 development checkout at `C:/Users/gilet/AppData/Local/SystemLabAirspaceEngineering/candidate-0.3.5` was cloned from verified main `0e4140976c761b5f4ddad19a6a7408721d75060a` because the previous F drive is unavailable. No loss or deletion of the F checkout is inferred. The primary API and worker were recovered from the pinned 0.3.4 installation; existing records and HMAC audit remain unchanged.
 
@@ -102,4 +104,6 @@ Current GitHub release is now **0.3.1-rc.1**, frozen source `433e89a66038ee7f7c3
 
 Current continuation, 31 October 2026, 23:13 UTC: the earlier access and storage checkpoints above are historical. Hugging Face model `a6a24fc396ce7e86eb9f9c096231f0378e355ef7`, dataset `88c470dd521d63a90a6361e762e73167823317a1` and static Space `7aae1c50c4a7556d3f067bcf8992cf8219fa51cf` are published and independently retrieved. All ten reviewed presentation targets match; the original artifacts are unchanged. Two exact provider-generated LFS path entries are recorded separately. System Lab version 98 is deployed at source `7e96d2431d993a6acef01d8ea37dfa6fce40a80c`; all 49 resources are independently verified:46 exact assets and 3 authored pages under the hardened hosting comparator. Both earlier failed current-image assertions are preserved. Read the latest cycle and destination-specific receipts before claiming completion. The API and worker were restarted and read-only database/audit checks passed. Handover checkpoint `e9b92066b97314ea83736761009c2809844bf7e1` is published and independently retrieved. The media guard remains unreleased, all frozen releases remain unchanged, and the original specification remains incomplete.
 
-Metadata checkpoint ad938c86252ca35d6ae65e77efdb6f9f0dc18ec6 is independently retrieved, with all 239 application blobs unchanged. The new C checkout is aligned to that checkpoint with clean tracked files; generated test and evidence files remain separately recorded. Read `release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-terminal.json` before continuing.
+
+Development source f8d311ab0563777527bcb809e309a27e4fdbc3ea is independently retrieved on codex/airspace-workflow-guidance-035. Actual CI 42062319116 passed 577 Linux tests with 20 skipped, 19 PostgreSQL tests, containers, worker and restoration. The publisher skipped this development branch. Browser and exact archive gates remain open; no new release is published.
+

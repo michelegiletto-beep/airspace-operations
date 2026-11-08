@@ -1,0 +1,61 @@
+{
+  "cycle_id": "2026-11-08T173403Z-confirmation-copy",
+  "triggered_at": "2026-11-08T17:34:03.531Z",
+  "state": "Local engineering and actual-model checks passed; exact-source release gates pending",
+  "candidate": "0.3.6-rc.1",
+  "published_version": "0.3.5-rc.1",
+  "primary_version": "0.3.5-rc.1",
+  "base_commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+  "requirements": [
+    "ASO3-001",
+    "ASO3-004",
+    "ASO3-005",
+    "ASO3-009",
+    "ASO3-010",
+    "ASO-22-01"
+  ],
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "change": "Canonical registered task-review wording and exact instruction composition avoid the observed duplicate. Verbatim facts and source-backed steps are preserved; selected identities and action confirmation semantics remain unchanged. Initial guidance asks directly for the work to prepare.",
+  "rule_version": "companion/1.3",
+  "red_regression": {
+    "failed": 1,
+    "evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-red-task-copy.json"
+  },
+  "focused_tests": {
+    "passed": 72,
+    "warnings": 1
+  },
+  "local_python": {
+    "passed": 582,
+    "skipped": 21,
+    "warnings": 1,
+    "pytest_seconds": 124.82
+  },
+  "interface": {
+    "passed": 205,
+    "files": 27,
+    "build_exit": 0
+  },
+  "dependency_audits": {
+    "frontend_exit": 0,
+    "python_exit": 0,
+    "optional_neural_exit": 0
+  },
+  "failures_preserved": [
+    "The first UI suite failed because a Windows default-code-page read corrupted the edited component UTF-8 punctuation. The exact base UTF-8 file was restored and only three intended strings reapplied; the repaired suite passed all 205 tests. The failed receipt and intermediate build remain preserved."
+  ],
+  "historical_dirty_state": "New owned branch aligned to 263a82a without deleting working files; the prior tracked/staged binary patches and index are retained privately. Old source branch and raw receipts remain intact.",
+  "parallel_review": "Existing review agents remain unavailable due account usage limits; no purchase or budget increase attempted. No independent expert review is inferred.",
+  "model_calls": 1,
+  "training_runs": 0,
+  "original_requirement_texts_or_statuses_changed": false,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The exact registered instruction is now rendered once. The actual Qwen reply retained both selected step identities and produced a typed preview without saving a task. An explicit confirmation saved one real engineering task; all historical records and the primary remained unchanged. Current-source CI, archive and publication are next.",
+  "next_bounded_prompt": "Finish the single bounded actual local model request on the separate restored engineering copy. Verify one confirmation instruction, preserved history, Awaiting Confirmation before an explicit save and current server/version boundaries. Preserve the unchanged 0.3.5 primary. Publish 0.3.6 only after current-source CI, exact archive, rights/secret checks and anonymous retrieval. Preserve every prior release. At most two actual local-model calls, no training claims, external communication, aircraft commands or approval changes. Checkpoint within the 45 minute cycle.",
+  "browser_verified": true,
+  "browser_evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-browser-model.json",
+  "historical_reply_preserved": true,
+  "primary_all_tables_unchanged": true
+}

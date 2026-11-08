@@ -1,3 +1,7 @@
+## Confirmation-copy candidate, 8 November 2026, 17:34 UTC cycle
+
+Read improvement/cycles/2026-11-08T173403Z-confirmation-copy.json. Candidate 0.3.6 removes the observed repeated registered task-confirmation instruction, preserves verbatim source facts and selected step identities, and keeps explicit typed confirmation and server permissions. Actual local generation, pending preview, explicit save and preserved historical records were verified on a separate restored engineering copy. One model call ran; no training or operational record was added. Local checks passed 582 Python tests with 21 skipped and 205 interface tests. The first encoding-related interface failure and its repair remain recorded. The primary and published software remain 0.3.5 until new exact-source CI, archive and publication receipts exist. Original acceptance, stable release and operational acceptance remain false.
+
 ## Verified Windows installation and primary checkpoint, 8 November 2026
 
 The primary at http://127.0.0.1:8787 now runs the exact separately installed 0.3.5-rc.1 source `9eead371e8afb5d38293e35d6e4ffef588ae7951`. Read `runtime/review-v3/active-recovery.json` for the current private recovery manifest; historical recovery mains still target 0.3.4 and must not be used to restart the current primary. The original C application source remains 0.3.3 and is preserved.

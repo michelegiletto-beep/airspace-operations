@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-08T17:50:53.721709+00:00",
+  "success": true,
+  "candidate": "0.3.6-rc.1",
+  "base_commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
+  "primary_all_tables_unchanged": true,
+  "historical_twenty_five_records_unchanged": true,
+  "original_users_and_roles_unchanged": true,
+  "before_explicit_confirmation": {
+    "tasks": 3,
+    "preview_state": "Awaiting Confirmation"
+  },
+  "after_explicit_confirmation": {
+    "records": 30,
+    "tasks": 4,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 8
+    },
+    "audit_count": 62,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "79ca517bf15679c486b8438677835d51f95a3ae1823b10df6c24b0b3fe7089cf"
+  },
+  "new_records": "One real engineering conversation, request, reply, typed preview and explicitly confirmed personal task only",
+  "rule_version": "companion/1.3",
+  "reply_paragraphs": 2,
+  "registered_review_instruction_occurrences": 1,
+  "selected_next_step_ids_preserved": [
+    "step_0",
+    "step_1"
+  ],
+  "model": {
+    "attempts": [
+      {
+        "mode": "local_causal",
+        "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "generative_model_used": true,
+        "hosted_provider": false,
+        "input_tokens": 582,
+        "output_tokens": 45,
+        "seconds": 22.489376200013794,
+        "model_load_seconds": 66.8606640000362,
+        "prompt_checksum": "027e6340734321b8ee3944b1b133e7f9ed7975b80413078a3215d05c68bd23bb",
+        "response_checksum": "9cb9e8eb4d1e5e3505731f1f0e2d6f8daf35bee94cc73c224b4decfd4f87ede6",
+        "remote_code": false,
+        "thinking_output_requested": false,
+        "generation_reservation_id": "e757761e-6324-454b-ab5a-0bf3ed41f6e5"
+      }
+    ],
+    "model_calls": 1,
+    "generation_budget": {
+      "version": "companion-generation-budget/1.0",
+      "max_model_calls": 2,
+      "reserved_calls": 1,
+      "reservation_ids": [
+        "e757761e-6324-454b-ab5a-0bf3ed41f6e5"
+      ],
+      "accounting": "Reservations survive retries and may include generation whose outcome was not recorded. They are not a count of proven model executions."
+    },
+    "failure_type": null,
+    "status": {
+      "state": "Ready",
+      "mode": "local_causal",
+      "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "message": "A local reply passed the advisory output and reference checks.",
+      "hosted_provider": false,
+      "generative_model_used": true
+    }
+  },
+  "actual_local_model_calls": 1,
+  "training_runs": 0,
+  "student_unchanged": true,
+  "external_actions": [],
+  "legal_conclusion_generated": false,
+  "actual_browser_checks": [
+    "Candidate version and current regulatory role",
+    "Historical saved reply retained its exact original wording",
+    "Direct new-conversation instructions and request placeholder",
+    "One actual local-model reply with one confirmation instruction",
+    "Awaiting Confirmation before explicit save; no task created before confirmation"
+  ],
+  "media": {
+    "path": "publication/media/0.3.6-rc.1/confirmation-review.jpg",
+    "bytes": 35457,
+    "sha256": "a74f0ed613b5ac341e93e841d4d7aecb488b573a7da7f2e9598741abe1000426",
+    "width": 470,
+    "height": 766,
+    "encoding": "JPEG",
+    "privacy": "Native dock capture excludes the account header; the engineering reply contains no operational or customer record, credential or private contact.",
+    "rights": "Existing owner-authorised companion/presentation rights remain reserved; no training-data use is inferred."
+  },
+  "limitations": [
+    "One actual local generation is software integration evidence, not a model-quality benchmark or training run.",
+    "Animation code is unchanged. This cycle has existing component evidence and actual active rendering; it does not newly claim a reduced-motion or fallback-fault browser exercise.",
+    "The primary remains separately installed at 0.3.5; candidate publication and installation are separate gates."
+  ]
+}

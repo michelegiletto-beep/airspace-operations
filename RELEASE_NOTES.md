@@ -1,3 +1,5 @@
+0.3.6-rc.1 is a development candidate for concise personal-task confirmation and direct operator instructions. Current-source release, archive and public download checks remain pending. The current published and primary software remains 0.3.5-rc.1. See publication/status.json and release-evidence/v0.3.6-rc.1. No full original acceptance or operational acceptance is claimed.
+
 # 0.2.0-rc.1
 
 A distinct engineering candidate expands the first release with actual local generative LLM orchestration, a reusable domain-neutral System Lab coordination core, typed specialist execution, persisted receipts and independent-review checkpoints. The pretrained Qwen controller was actually executed with neural retrieval, reranking and the unchanged experimental student. No new student training or operational prediction performance is claimed.
