@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-08T11:36:29.866456+00:00",
+  "success": true,
+  "state": "Exact source installed; fresh environment and service checks pending",
+  "version": "0.3.5-rc.1",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.5-rc.1\\airspace-operations",
+  "download_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.5-rc.1/System-Lab-Airspace-Operations-0.3.5-rc.1.zip",
+  "archive_bytes": 16605809,
+  "archive_sha256": "4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794",
+  "archive_origin": "Cached exact independently retrieved November 8 archive after two HTTP 504 responses",
+  "new_public_download_performed": false,
+  "source_manifest_files_verified": 1096,
+  "fresh_interpreter_created": false,
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "primary_all_tables_unchanged": true,
+  "private_consistent_backup_verified": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_writes": false
+}

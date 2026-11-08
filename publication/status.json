@@ -448,9 +448,9 @@
       }
     }
   ],
-  "states_reached_scope": "GitHub 0.3.5, System Lab 102 and three Hugging Face presentations are independently retrieved. The exact archive passed a fresh Linux installation. The separate primary Windows installation remains 0.3.4; original C application source remains preserved.",
-  "assembly_snapshot_note": "Published software is 0.3.5-rc.1. The original C application source remains 0.3.3 and the separately installed primary remains 0.3.4. Do not infer primary promotion from publication.",
-  "last_checked_at": "2026-11-08T06:14:38.767275+00:00",
+  "states_reached_scope": "Published 0.3.5 and earlier destination receipts remain authoritative. The exact archive now has a separate actual Windows core installation and primary promotion receipt. Three pinned Hub cards and the Site checksum were retrieved again; anonymous GitHub API/ZIP retrieval failed this cycle and is not claimed. The original C application source and all frozen software assets remain preserved.",
+  "assembly_snapshot_note": "This post-release installation checkpoint does not alter frozen software 0.3.5. The primary is now separately installed at 0.3.5; original C application source remains 0.3.3.",
+  "last_checked_at": "2026-11-08T12:02:27.499897+00:00",
   "release_blockers": [],
   "candidate_ci": {
     "commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
@@ -504,7 +504,8 @@
     "diagnostic_source": "45421a4932f4e1742419e896b27120e0fb6df96d",
     "diagnostic_ci_run": 42451939034,
     "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
-    "installation_scope": "Actual exact archive Linux installation; primary Windows installation remains 0.3.4 and is separately recorded"
+    "installation_scope": "Actual exact-archive Linux installation plus a separate fresh Windows core environment and primary source promotion. The primary retains its existing optional interpreter.",
+    "local_windows_installation_verified": true
   },
   "known_presentation_defects": [
     "Frozen0.3.1 mobile.png contains validJPEG bytes; preserve it. New0.3.2 phone uses.jpg and passes encoding checks. Older presentation copies remain byte-identical."
@@ -586,7 +587,7 @@
     "scope": "Current0.3.3publication alias corrections; frozen software remains6f8364df25b942d49eb1b4ccaa40f27f70578dbb"
   },
   "publication_access_blockers": [],
-  "latest_cycle": "improvement/cycles/2026-11-08T053757Z-publication-repair.json",
+  "latest_cycle": "improvement/cycles/2026-11-08T113227Z-windows-installation.json",
   "publication_metadata_checkpoint": {
     "state": "Independently Retrieved",
     "published": true,
@@ -697,25 +698,29 @@
   },
   "latest_documentation_checkpoint": {
     "state": "Independently Retrieved",
-    "published": true,
-    "commit": "288112b1494812b582d8a3c6f7ddf26185d2456d",
-    "exact_files": 31,
-    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-documentation-retrieval.json",
-    "scope": "Verified November 8 publication checkpoint and default-branch fast-forward. This later README and metadata follow-up is a separate assembly snapshot; no software tag is changed."
+    "commit": "b39ba54ac9728da41b0578b83791435db58fffac",
+    "files": 4,
+    "default_branch_verified": true,
+    "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-readme-follow-up.json",
+    "scope": "Later README and metadata follow-up; frozen application release remains 9eead371e8afb5d38293e35d6e4ffef588ae7951. This current local receipt is a post-publication checkpoint."
   },
   "installed_application": {
-    "version": "0.3.4-rc.1",
-    "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
-    "state": "Verified separate primary-source promotion",
-    "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+    "version": "0.3.5-rc.1",
+    "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+    "state": "Verified separate Windows installation and owned primary promotion",
+    "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.5-rc.1\\airspace-operations",
     "interpreter": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
-    "profile": "Exact independently retrieved archive source with existing verified core and optional neural interpreter; not a fresh optional-neural installation",
+    "profile": "Primary uses preserved optional interpreter; the separate fresh core Windows installation passed its own tests",
     "runtime": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3",
-    "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion.json",
+    "active_recovery_manifest": "runtime/review-v3/active-recovery.json",
+    "evidence": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-primary-promotion.json",
+    "browser_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-primary-browser.json",
+    "fresh_windows_evidence": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-fresh-windows-installation.json",
     "source_workspace_version": "0.3.3-rc.1",
-    "source_workspace_scope": "Previous C project application code remains preserved; the running primary imports the exact separate installed 0.3.4 source.",
+    "source_workspace_scope": "Original C application source preserved; primary imports the exact separately installed 0.3.5 source.",
     "data_records_unchanged": true,
-    "new_model_calls": 0
+    "primary_new_model_calls": 0,
+    "private_restored_review_model_calls": 1
   },
   "pending_documentation_checkpoint": {
     "state": "Independently Retrieved",
@@ -752,7 +757,7 @@
     },
     "history": "publication/history/0.3.4-rc.1.json"
   },
-  "latest_cycle_terminal": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-terminal.json",
+  "latest_cycle_terminal": "release-evidence/v0.3.5-rc.1/cycle-20261108T113227Z-terminal.json",
   "latest_publication_audit": "release-evidence/v0.3.5-rc.1/cycle-20261108T053757Z-destinations-rechecked.json",
   "previous_verified_development_source": {
     "version": "0.3.5-rc.1",
@@ -804,5 +809,32 @@
     "files": 9,
     "receipt": "release-evidence/v0.3.5-rc.1/cycle-20261105T155456Z-post-ci-checkpoint-retrieval.json",
     "scope": "Development metadata only. Published software remains 0.3.4; browser and exact 0.3.5 archive gates remain open."
+  },
+  "previous_installed_application": {
+    "version": "0.3.4-rc.1",
+    "source_commit": "f5dd93a7c5c7367101ea63147a5da99cb085addb",
+    "state": "Verified separate primary-source promotion",
+    "installation": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.4-rc.1\\airspace-operations",
+    "interpreter": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "profile": "Exact independently retrieved archive source with existing verified core and optional neural interpreter; not a fresh optional-neural installation",
+    "runtime": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3",
+    "evidence": "release-evidence/v0.3.4-rc.1/cycle-20261102T132104Z-primary-promotion.json",
+    "source_workspace_version": "0.3.3-rc.1",
+    "source_workspace_scope": "Previous C project application code remains preserved; the running primary imports the exact separate installed 0.3.4 source.",
+    "data_records_unchanged": true,
+    "new_model_calls": 0
+  },
+  "latest_cycle_improvement": {
+    "version": "0.3.5-rc.1",
+    "fresh_windows": {
+      "passed": 577,
+      "skipped": 21
+    },
+    "primary_promoted": true,
+    "model_calls": 1,
+    "model_scope": "Private restored real engineering-record review",
+    "training_runs": 0,
+    "software_bytes_changed": false,
+    "next_issue": "Remove the observed overlapping task-confirmation instruction in a separate candidate."
   }
 }

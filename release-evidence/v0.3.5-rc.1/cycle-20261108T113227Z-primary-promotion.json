@@ -1,0 +1,88 @@
+{
+  "at": "2026-11-08T11:55:15.142818+00:00",
+  "success": true,
+  "state": "Exact installed source promoted to the owned local primary",
+  "version": "0.3.5-rc.1",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.5-rc.1\\airspace-operations",
+  "interpreter": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+  "fresh_core_interpreter": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.5-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+  "profile": "Primary uses preserved optional interpreter; the separate fresh core Windows installation passed its own tests",
+  "source_files_verified": 1096,
+  "processes": {
+    "api": 23204,
+    "worker": 18400
+  },
+  "api": {
+    "status": "ok",
+    "version": "0.3.5-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "worker": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 0.778683
+  },
+  "before": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "after": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 48,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "all_database_tables_unchanged": true,
+  "audit_key_unchanged": true,
+  "old_api_and_worker_stopped": true,
+  "operator_policy_presence": {
+    "AIRSPACE_DATABASE_URL": false,
+    "AIRSPACE_AUDIT_KEY": false,
+    "AIRSPACE_REQUIRE_TWO_REVIEWERS": false,
+    "AIRSPACE_OIDC_ISSUER": false,
+    "AIRSPACE_OIDC_JWKS_URL": false,
+    "AIRSPACE_OIDC_AUDIENCE": false,
+    "AIRSPACE_OIDC_SUBJECTS": false
+  },
+  "operator_policy_changed": false,
+  "idempotent_schema_migration_exit": 0,
+  "private_backup": {
+    "consistent_database_and_original_audit_key": true,
+    "objects_and_sources": {
+      "objects": {
+        "present": false,
+        "files": 0
+      },
+      "sources": {
+        "present": false,
+        "files": 0
+      }
+    }
+  },
+  "active_recovery_pointer": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\runtime\\review-v3\\active-recovery.json",
+  "new_primary_model_calls": 0,
+  "training_runs": 0,
+  "operational_acceptance": false
+}

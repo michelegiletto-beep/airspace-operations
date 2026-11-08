@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-08T11:52:23.461331+00:00",
+  "success": true,
+  "state": "Actual installed-source companion and explicit personal-task confirmation verified",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "version": "0.3.5-rc.1",
+  "primary_all_tables_unchanged": true,
+  "preview_before_confirmation": {
+    "records": 24,
+    "tasks": 2,
+    "operational_records": 0,
+    "action": "Awaiting Confirmation"
+  },
+  "preview_after_confirmation": {
+    "records": 25,
+    "tasks": 3,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 7
+    },
+    "audit_count": 55,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "0c8b62b483009e7b00a844af5c0ed28f44aeeee66c4ac5fb479ab19c68f99ad1"
+  },
+  "all_twenty_original_records_unchanged": true,
+  "original_users_and_roles_unchanged": true,
+  "new_records": "One real engineering conversation, its request and reply, one typed action preview and one explicitly confirmed personal engineering task",
+  "audit_actions": [
+    "companion.action.confirmed",
+    "companion.created",
+    "companion.generation.reserved",
+    "companion.message.queued",
+    "companion.reply.completed",
+    "identity.login",
+    "job.finished"
+  ],
+  "actual_local_model_calls": 1,
+  "model": {
+    "attempts": [
+      {
+        "mode": "local_causal",
+        "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "generative_model_used": true,
+        "hosted_provider": false,
+        "input_tokens": 583,
+        "output_tokens": 45,
+        "seconds": 21.109686600015266,
+        "model_load_seconds": 73.53715240000747,
+        "prompt_checksum": "e894867b1ea47995f78c120a8614377b152e18c3ea66df8280c31a81afa8a1a1",
+        "response_checksum": "9cb9e8eb4d1e5e3505731f1f0e2d6f8daf35bee94cc73c224b4decfd4f87ede6",
+        "remote_code": false,
+        "thinking_output_requested": false,
+        "generation_reservation_id": "31866bc7-aa05-4f4c-84e4-6fc86a0654ae"
+      }
+    ],
+    "model_calls": 1,
+    "generation_budget": {
+      "version": "companion-generation-budget/1.0",
+      "max_model_calls": 2,
+      "reserved_calls": 1,
+      "reservation_ids": [
+        "31866bc7-aa05-4f4c-84e4-6fc86a0654ae"
+      ],
+      "accounting": "Reservations survive retries and may include generation whose outcome was not recorded. They are not a count of proven model executions."
+    },
+    "failure_type": null,
+    "status": {
+      "state": "Ready",
+      "mode": "local_causal",
+      "version": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "message": "A local reply passed the advisory output and reference checks.",
+      "hosted_provider": false,
+      "generative_model_used": true
+    }
+  },
+  "assistance_selection": {
+    "guidance_id": "review_task_preview",
+    "guidance": "Review the personal task preview and confirm it only if it matches your request.",
+    "fact_ids": [],
+    "next_step_ids": [
+      "step_0",
+      "step_1"
+    ],
+    "action_ids": [
+      "save_task"
+    ]
+  },
+  "external_actions": [],
+  "legal_conclusion_generated": false,
+  "training_runs": 0,
+  "student_unchanged": true,
+  "normal_motion": {
+    "region": [
+      1435,
+      155,
+      95,
+      100
+    ],
+    "different_pixels": 3767,
+    "total_pixels": 9500,
+    "engine": "webgl-mesh-2.5d",
+    "reduced_motion_preference": false
+  },
+  "pause_control": {
+    "observed_paused_and_resume_states": true,
+    "normal_motion_restored": true,
+    "paused_frame_pixel_verification": false,
+    "reason": "The first paused screenshot timed out before a frame was returned. No paused stability claim is made in this cycle; earlier component and November 7 settled-frame evidence remain separately scoped."
+  },
+  "reviewed_media": {
+    "path": "publication/media/0.3.5-rc.1/installed-companion-task.jpg",
+    "bytes": 32954,
+    "sha256": "f4af29ab09319eddb2858a362cdd3eb2cf5088b807832ee58ec01e843c4974f1",
+    "width": 470,
+    "height": 710,
+    "privacy": "Native dock capture excludes the account header and contains only an actual engineering request and saved task; no operational/customer record or credential",
+    "rights": "Existing owned companion/presentation rights remain reserved; this is software evidence, not training data"
+  },
+  "observed_copy_issue": "The model-selected trusted confirmation sentence and first deterministic next step repeat the same confirmation instruction. Preserve the actual reply; consider a separately tested future copy change without removing the explicit confirmation."
+}

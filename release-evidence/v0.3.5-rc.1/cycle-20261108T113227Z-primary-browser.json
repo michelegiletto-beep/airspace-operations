@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-08T11:58:45.246490+00:00",
+  "success": true,
+  "version": "0.3.5-rc.1",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "browser": "Actual 8787 sign-in with the existing regulatory account; current 0.3.5 navigation, role guidance and original two task rows retrieved",
+  "protected_tables_equal_to_pre_upgrade": [
+    "fleet_reservations",
+    "idempotency",
+    "jobs",
+    "record_versions",
+    "records",
+    "resource_locks",
+    "resource_reservations",
+    "schema_versions",
+    "sharing_agreements",
+    "users"
+  ],
+  "records_and_tasks_unchanged": true,
+  "only_added_audit_actions": [
+    "identity.login"
+  ],
+  "sessions_and_outbox_additions": 1,
+  "organisation_changes_only_matching_audit_sequence": true,
+  "summary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "api": [
+    {
+      "route": "/health",
+      "status": 200,
+      "authenticated": false
+    },
+    {
+      "route": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/records/case",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "console_warnings_or_errors_observed": 0,
+  "new_primary_model_calls": 0,
+  "training_runs": 0,
+  "preview_task_not_copied_into_primary": true,
+  "operational_acceptance": false
+}

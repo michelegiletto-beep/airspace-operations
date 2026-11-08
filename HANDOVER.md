@@ -1,3 +1,15 @@
+## Verified Windows installation and primary checkpoint, 8 November 2026
+
+The primary at http://127.0.0.1:8787 now runs the exact separately installed 0.3.5-rc.1 source `9eead371e8afb5d38293e35d6e4ffef588ae7951`. Read `runtime/review-v3/active-recovery.json` for the current private recovery manifest; historical recovery mains still target 0.3.4 and must not be used to restart the current primary. The original C application source remains 0.3.3 and is preserved.
+
+A fresh Windows core environment passed 577 tests, 21 skipped and 3 warnings in 114.83 seconds, plus the read-only CLI and empty database/API checks. The primary preserves the existing optional interpreter, policy and audit key. All twenty records and two tasks are unchanged. Primary audit 49 includes exactly one new existing-user sign-in.
+
+One actual local Qwen3-1.7B reply prepared a typed personal-task preview in a restored private engineering workspace. No task existed before explicit confirmation; the saved task survived reload. That copy has 25 records, three tasks and valid audit 55 and is stopped after verification. It was not copied into the primary. This is software interaction evidence, not training, a model-quality benchmark or operational acceptance. Normal companion frames differ; a paused capture timed out, so no new paused-pixel claim is made.
+
+Three pinned Hugging Face cards and the System Lab checksum match current public bytes. The project page was inspected in the browser. Fresh anonymous GitHub API/ZIP requests timed out; the existing independently retrieved archive and exact checksum were used explicitly. No tag, release asset, model weight, dataset row or unrelated project changed. Original acceptance, stable release and operational acceptance remain false.
+
+Read `improvement/cycles/2026-11-08T113227Z-windows-installation.json` and `publication/status.json`. Next bounded change: remove the observed redundant task-confirmation sentence in a separately tested new candidate, while preserving explicit confirmation and all server boundaries. Earlier sections below are historical.
+
 ## Published candidate checkpoint, 8 November 2026
 
 GitHub 0.3.5-rc.1 is published from frozen source `9eead371e8afb5d38293e35d6e4ffef588ae7951`. All nine assets verify; the ZIP contains 16605809 bytes with SHA-256 `4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794`. Exact-source CI 42452497352 passed 578 source tests with 20 skipped, 205 interface tests, 19 PostgreSQL tests, actual containers, worker completion and restoration. The separate exact archive installation passed 578 tests with 20 skipped and 3 warnings in 72.05 seconds. Two blocked prior publication attempts remain recorded.

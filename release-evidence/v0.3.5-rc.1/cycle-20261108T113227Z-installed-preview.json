@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-08T11:41:23.198316+00:00",
+  "success": true,
+  "state": "Exact installed source serving restored private copy",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceOperations\\0.3.5-rc.1\\airspace-operations",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "source_manifest_files_verified": 1096,
+  "version": "0.3.5-rc.1",
+  "port": 8791,
+  "launcher_pid": 2640,
+  "worker_started": false,
+  "health": {
+    "status": "ok",
+    "version": "0.3.5-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "primary_all_tables_unchanged": true,
+  "preview_all_tables_equal_to_primary": true,
+  "optional_interpreter": {
+    "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\.venv\\Scripts\\python.exe",
+    "torch": "2.14.1",
+    "transformers": "5.21.0",
+    "fresh_optional_installation": false
+  },
+  "local_controller": {
+    "repository": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "licence": "Apache-2.0; upstream LICENSE applies",
+    "files_verified": 11,
+    "bytes_verified": 4079448540,
+    "remote_code": false,
+    "model_loaded": false
+  },
+  "policy": "Named inherited policy remains unchanged; exact prior recovery environment overrides plus installed source and private runtime paths",
+  "new_model_calls": 0,
+  "training_runs": 0
+}

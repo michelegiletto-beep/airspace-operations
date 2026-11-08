@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-08T12:02:27.499916+00:00",
+  "state": "Exact 0.3.5 Windows installation, real local reply and owned primary promotion verified",
+  "version": "0.3.5-rc.1",
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "primary_records": 20,
+  "primary_tasks": 2,
+  "primary_audit": 49,
+  "preview_tasks": 3,
+  "preview_audit": 55,
+  "actual_local_model_calls": 1,
+  "training_runs": 0,
+  "software_build_created": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The exact release now passes a fresh Windows installation and serves the primary from its separately installed source, with the existing optional interpreter and policy unchanged. A real local model prepared a typed personal-task preview; explicit confirmation and reload persistence succeeded in a restored private copy. The primary retains its original twenty records and two tasks. The model response exposed one redundant confirmation instruction for the next focused improvement. Network and capture failures are retained with precise limits; no new software build, training result or operational acceptance is claimed.",
+  "next_bounded_prompt": "Read STATUS.md, publication/status.json, the latest installation cycle and its final public retrieval receipt. The primary is the exact installed 0.3.5 source 9eead371e8afb5d38293e35d6e4ffef588ae7951, using runtime/review-v3/active-recovery.json. Do not run the historical 0.3.4 recovery main or overwrite the original C application source. First recheck current primary health, named policy, source provenance, two original tasks and audit integrity, and reconcile any unfinished documentation publication without retagging a release. Then address the observed overlapping task-confirmation guidance in a separate 0.3.6 development increment: the actual response repeated the model-selected trusted review sentence and the first registered next step. Remove the redundant rendered instruction while preserving typed previews, explicit confirmation, source facts, references, action semantics, current actor/tenant boundaries and input versions. Review the generic empty conversation prompt in context; keep useful operator instructions and essential safety meaning. Define focused tests before claiming the copy improvement, run the required verification and inspect the actual browser/API/persistent result. The November 8 model run was one real Qwen3-1.7B call in a private restored engineering workspace; it created one personal task only after explicit confirmation and was not copied into the primary. Its source and database remain private. No new training or operational prediction is supported. Use at most 45 minutes and two actual local-model calls. Preserve the failed anonymous GitHub requests and screenshot timeout; recheck public access when relevant. Keep all 198 incomplete original/revision requirements explicit, all previous releases, independent review, owned animation/fallback, pause and reduced-motion preferences. No email, human contact, authority decisions, aircraft commands, external submissions, purchases, new automation or approval changes. Publish a distinct candidate only after its own actual engineering, rights, secret, archive and retrieval gates. End with a factual retrospective and exact next bounded prompt."
+}

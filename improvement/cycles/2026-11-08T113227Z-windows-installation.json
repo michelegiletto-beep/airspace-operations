@@ -1,0 +1,96 @@
+{
+  "cycle_id": "2026-11-08T113227Z-windows-installation",
+  "triggered_at": "2026-11-08T11:32:27.586Z",
+  "state": "Exact 0.3.5 Windows installation, real local reply and owned primary promotion verified",
+  "previous_cycle": "improvement/cycles/2026-11-08T053757Z-publication-repair.json",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-03",
+    "ASO3-002",
+    "ASO3-009",
+    "ASO3-010"
+  ],
+  "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+  "archive_sha256": "4c326d37066d6d787aeebe48eeba9932122e3ce052b64dc5bc474bc9ea6e3794",
+  "primary_version": "0.3.5-rc.1",
+  "primary_changed": true,
+  "records": 20,
+  "engineering_tasks": 2,
+  "operational_records": 0,
+  "audit_before": 48,
+  "network_failures": [
+    "Two fresh anonymous GitHub release API requests returned HTTP 504 before extraction.",
+    "The existing exact independently retrieved cached archive is used explicitly; no new anonymous download is claimed."
+  ],
+  "read_only_probes": [
+    "The optional metadata command initially raised PackageNotFoundError for sentence-transformers. A bounded complete inventory records it as not installed; torch 2.14.1, transformers 5.21.0 and safetensors 0.8.0 remain present. Sentence-transformers is not needed by the existing direct Transformers controller."
+  ],
+  "parallel_review": "Existing review agents still report account usage limits. No new budget, upgrade or paid call was requested.",
+  "new_model_calls": 1,
+  "training_runs": 0,
+  "original_specification_changed": false,
+  "requirement_statuses_changed": false,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The exact release now passes a fresh Windows installation and serves the primary from its separately installed source, with the existing optional interpreter and policy unchanged. A real local model prepared a typed personal-task preview; explicit confirmation and reload persistence succeeded in a restored private copy. The primary retains its original twenty records and two tasks. The model response exposed one redundant confirmation instruction for the next focused improvement. Network and capture failures are retained with precise limits; no new software build, training result or operational acceptance is claimed.",
+  "next_bounded_prompt": "Read STATUS.md, publication/status.json, the latest installation cycle and its final public retrieval receipt. The primary is the exact installed 0.3.5 source 9eead371e8afb5d38293e35d6e4ffef588ae7951, using runtime/review-v3/active-recovery.json. Do not run the historical 0.3.4 recovery main or overwrite the original C application source. First recheck current primary health, named policy, source provenance, two original tasks and audit integrity, and reconcile any unfinished documentation publication without retagging a release. Then address the observed overlapping task-confirmation guidance in a separate 0.3.6 development increment: the actual response repeated the model-selected trusted review sentence and the first registered next step. Remove the redundant rendered instruction while preserving typed previews, explicit confirmation, source facts, references, action semantics, current actor/tenant boundaries and input versions. Review the generic empty conversation prompt in context; keep useful operator instructions and essential safety meaning. Define focused tests before claiming the copy improvement, run the required verification and inspect the actual browser/API/persistent result. The November 8 model run was one real Qwen3-1.7B call in a private restored engineering workspace; it created one personal task only after explicit confirmation and was not copied into the primary. Its source and database remain private. No new training or operational prediction is supported. Use at most 45 minutes and two actual local-model calls. Preserve the failed anonymous GitHub requests and screenshot timeout; recheck public access when relevant. Keep all 198 incomplete original/revision requirements explicit, all previous releases, independent review, owned animation/fallback, pause and reduced-motion preferences. No email, human contact, authority decisions, aircraft commands, external submissions, purchases, new automation or approval changes. Publish a distinct candidate only after its own actual engineering, rights, secret, archive and retrieval gates. End with a factual retrospective and exact next bounded prompt.",
+  "primary_records_unchanged": true,
+  "primary_audit_after": 49,
+  "primary_audit_change": "One actual existing-user browser sign-in only",
+  "model_run_scope": "One actual local pretrained Qwen3-1.7B generation in a private restored engineering workspace, with an explicitly confirmed personal task. No operational record, training annotation or benchmark result.",
+  "preview": {
+    "records": 25,
+    "tasks": 3,
+    "audit_count": 55,
+    "audit_valid": true,
+    "original_twenty_records_unchanged": true,
+    "new_engineering_task_copied_to_primary": false,
+    "api_stopped_after_verification": true,
+    "worker_once_completed_and_exited": true,
+    "private_runtime": "runtime/checkpoints/cycle-20261108T113227Z/installed-preview"
+  },
+  "tests": {
+    "fresh_windows": {
+      "passed": 577,
+      "skipped": 21,
+      "warnings": 3,
+      "pytest_seconds": 114.83,
+      "command_seconds": 119.656
+    },
+    "fresh_install_exit": 0,
+    "cli_read_only_exit": 0,
+    "empty_database_api_exit": 0,
+    "primary_browser_and_database_verified": true,
+    "normal_motion_different_pixels": 3767,
+    "paused_pixels_newly_verified": false
+  },
+  "recovery_manifest": "runtime/review-v3/active-recovery.json",
+  "publication_review": {
+    "github_commit_and_main_connector_verified": true,
+    "main_at_review": "b39ba54ac9728da41b0578b83791435db58fffac",
+    "new_anonymous_github_release_or_zip_retrieval": false,
+    "git_public_failures": [
+      "Two HTTP 504 release API failures",
+      "One bounded release ZIP read timeout"
+    ],
+    "huggingface_three_pinned_cards_exact": true,
+    "site_current_page_and_checksum_verified": true,
+    "site_raw_probe_403_preserved": true,
+    "canonical_site_checksum_exact": true,
+    "software_release_version_unchanged": "0.3.5-rc.1",
+    "frozen_assets_and_tags_unchanged": true
+  },
+  "helper_repairs": [
+    "A metadata inventory initially treated an absent optional sentence-transformers package as an exception; the complete inventory records it as absent. The controller uses direct Transformers and no dependency was added.",
+    "A source-location assertion compared a logical import path with a Windows virtualised absolute spelling. Resolving both paths proved they identify the exact installed file. No import or source boundary was weakened.",
+    "A read-only reply helper initially assumed a dotted job kind and an inline job budget. It was corrected against the actual companion_reply contract and the immutable request record before any worker started.",
+    "A read-only result probe initially treated JSON null as an iterable; no records changed.",
+    "After stopping the inspected old worker child, its launcher exited naturally. PowerShell returned nonzero when the stop helper reached the now-absent parent. The API remained on 0.3.4. The helper now treats an already absent inspected process as stopped, verifies disappearance, and resumed the controlled cutover. No unrelated process or database was changed.",
+    "The paused screenshot timed out before returning bytes. Normal motion was restored immediately and no new paused-pixel stability claim is made.",
+    "Image pixel measurement emitted the preserved Pillow getdata deprecation warning; it did not alter or generate image bytes.",
+    "A finalizer initially compared all CSV columns between the preserved 0.3.3 source and installed 0.3.5, including eight previously extended evidence-reference fields. Comparison confirms all 198 texts, IDs, sections, statuses, implementation and limitation fields are unchanged; only historical tests_evidence references differ. No requirement file was edited."
+  ],
+  "completed_at": "2026-11-08T12:02:27.490992+00:00"
+}
