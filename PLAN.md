@@ -1,3 +1,11 @@
+## Published confirmation candidate, 8 November 2026, 17:34 UTC cycle
+
+[0.3.6-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.6-rc.1) is published and independently retrieved from `d36509ef90cdf72d08aa342ef87259d47ab71814`. All nine GitHub assets match their public digests. ZIP: 17,599,454 bytes, SHA-256 `a5d8661dbfc635de631926ca3482a318999c5d7849efc91042b85be53ff5456e`. Exact-source CI 42507531487 and the separate archive installation passed 583 tests with 20 skipped; the interface passed 205 and PostgreSQL passed 19. Actual container, worker and restoration checks passed.
+
+One real offline Qwen reply displayed one confirmation instruction. The task stayed unsaved until explicit confirmation; historical records and the 0.3.5 primary remain unchanged. No training or operational record was added. System Lab 103 and all three Hugging Face presentations are published and independently verified. The corrected Site package preserves 667 prior public files and links the new GitHub ZIP. Ten Airspace Site tests pass; six global Site failures match the prior recorded baseline. Rejections and failed intermediate commands are preserved.
+
+Original acceptance, stable release and operational acceptance remain false. Read `improvement/cycles/2026-11-08T173403Z-confirmation-copy.json` and `publication/status.json`. Next: verify a separate exact 0.3.6 Windows installation before primary promotion. Earlier sections below are historical.
+
 ## 5 November 2026: workflow preparation guidance
 
 Completed the bounded role guidance, capability recovery, current-actor retirement and sharing schedule-selector changes with recorded local tests and actual API/persistence checks. Browser, exact candidate archive and publication gates remain open. Continue from `improvement/cycles/2026-11-05T155456Z-workflow-guidance.json`; keep primary and public 0.3.4 unchanged.

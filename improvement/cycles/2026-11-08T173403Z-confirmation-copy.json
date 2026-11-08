@@ -1,9 +1,9 @@
 {
   "cycle_id": "2026-11-08T173403Z-confirmation-copy",
   "triggered_at": "2026-11-08T17:34:03.531Z",
-  "state": "Local engineering and actual-model checks passed; exact-source release gates pending",
+  "state": "Published and independently retrieved engineering candidate",
   "candidate": "0.3.6-rc.1",
-  "published_version": "0.3.5-rc.1",
+  "published_version": "0.3.6-rc.1",
   "primary_version": "0.3.5-rc.1",
   "base_commit": "263a82a9b0abb146ae4f297241a4201b81d19ab6",
   "requirements": [
@@ -42,7 +42,8 @@
     "optional_neural_exit": 0
   },
   "failures_preserved": [
-    "The first UI suite failed because a Windows default-code-page read corrupted the edited component UTF-8 punctuation. The exact base UTF-8 file was restored and only three intended strings reapplied; the repaired suite passed all 205 tests. The failed receipt and intermediate build remain preserved."
+    "The first UI suite failed because a Windows default-code-page read corrupted the edited component UTF-8 punctuation. The exact base UTF-8 file was restored and only three intended strings reapplied; the repaired suite passed all 205 tests. The failed receipt and intermediate build remain preserved.",
+    "Private preparation commands failed on an older default Python lacking tomllib, quoting, an incorrect working directory and literal PowerShell file globs; corrected commands ran. A large private log write was rejected by the 64,000-byte tool limit and succeeded in bounded segments. Two browser snapshots timed out during uploads; actual commits were subsequently observed and independently verified. Site archive size rejection and unchanged-scope credential expiry were repaired. The first raw Space HTML equality check rejected fixed provider additions; the exact known additions and a negative authored-version check then passed."
   ],
   "historical_dirty_state": "New owned branch aligned to 263a82a without deleting working files; the prior tracked/staged binary patches and index are retained privately. Old source branch and raw receipts remain intact.",
   "parallel_review": "Existing review agents remain unavailable due account usage limits; no purchase or budget increase attempted. No independent expert review is inferred.",
@@ -52,10 +53,38 @@
   "original_acceptance": false,
   "stable_release": false,
   "operational_acceptance": false,
-  "retrospective": "The exact registered instruction is now rendered once. The actual Qwen reply retained both selected step identities and produced a typed preview without saving a task. An explicit confirmation saved one real engineering task; all historical records and the primary remained unchanged. Current-source CI, archive and publication are next.",
-  "next_bounded_prompt": "Finish the single bounded actual local model request on the separate restored engineering copy. Verify one confirmation instruction, preserved history, Awaiting Confirmation before an explicit save and current server/version boundaries. Preserve the unchanged 0.3.5 primary. Publish 0.3.6 only after current-source CI, exact archive, rights/secret checks and anonymous retrieval. Preserve every prior release. At most two actual local-model calls, no training claims, external communication, aircraft commands or approval changes. Checkpoint within the 45 minute cycle.",
+  "retrospective": "The exact registered instruction now appears once in a real offline local-model reply. History, source facts, selected identities and explicit confirmation remain intact. Current-source and exact-archive gates passed. A rejected oversized Site package was repaired by linking the independently verified new GitHub ZIP while preserving all 667 prior public files. The expired source credential was renewed with unchanged scope. Known provider HTML additions required exact bounded comparison; no authored content was excluded. Earlier failed tests and commands remain evidence. Parallel review remained unavailable due account usage limits.",
+  "next_bounded_prompt": "Within 45 minutes, read the current status and publication receipts. Verify the exact 0.3.6 archive in a new short Windows installation path, run its core suite and read-only CLI/empty API checks, preserve the optional interpreter, named policy, audit key and all primary records, and promote only after passing current gates. Recheck the published page, media and downloads. If GitHub main still shows 0.3.5, reconcile it with the verified d36509e source and this checkpoint using a curated compare-and-swap commit; never rewrite a frozen release. Keep all 198 requirements and incomplete original acceptance explicit. At most two actual local-model calls; no training claims, aircraft actions, external submissions, communication or approval changes. End with exact receipts and the next bounded prompt.",
   "browser_verified": true,
   "browser_evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-browser-model.json",
   "historical_reply_preserved": true,
-  "primary_all_tables_unchanged": true
+  "primary_all_tables_unchanged": true,
+  "source_commit": "d36509ef90cdf72d08aa342ef87259d47ab71814",
+  "release_id": 438422602,
+  "ci_run": 42507531487,
+  "remote_python": {
+    "passed": 583,
+    "skipped": 20,
+    "warnings": 3
+  },
+  "archive_installation": {
+    "passed": 583,
+    "skipped": 20,
+    "warnings": 3,
+    "seconds": 73.02
+  },
+  "postgresql_passed": 19,
+  "site_version": 103,
+  "site_source": "d0d7179a41f124471e34a428b04e8cafb09a3bb5",
+  "huggingface_heads": {
+    "model": "99c41ce3f2f25318d8f3e34be22db15b696580a7",
+    "dataset": "258ad532534246203e6d196368212e47fd905938",
+    "space": "0016bc05b24bab5de1760a2a473f7502531c77e1"
+  },
+  "site_tests_passed": 10,
+  "site_global": {
+    "passed": 70,
+    "failed": 6,
+    "same_as_recorded_baseline": true
+  }
 }

@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-08T18:17:58.850438+00:00",
+  "success": true,
+  "state": "Independently Retrieved",
+  "site_version": 103,
+  "site_source": "d0d7179a41f124471e34a428b04e8cafb09a3bb5",
+  "site_page_verified": true,
+  "site_exact_assets": [
+    {
+      "name": "ci-verification.json",
+      "bytes": 24411,
+      "sha256": "e562b8481a93216cdf64db96573ecc9cfb6a9f50748aa048d1b0e789c240888b",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/ci-verification.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/ci-verification.json",
+      "verified": true
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/LICENSE",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/LICENSE",
+      "verified": true
+    },
+    {
+      "name": "release-gates.json",
+      "bytes": 1046,
+      "sha256": "dca74996cf4f1bb34bf54c8a491dd90bc02f80b4d2b2dec1f5cb856271c2a1b2",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/release-gates.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/release-gates.json",
+      "verified": true
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "bytes": 151155,
+      "sha256": "c30cb0a54dc07803957372ce8a3994a14b22c525b954908592bf37e16b6eee60",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/RELEASE_PROVENANCE.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/RELEASE_PROVENANCE.json",
+      "verified": true
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "e2ae4e3656bfdb9370621deed96c6df70c105c0c8c72dd388ca6f490509dd70f",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/SBOM.cdx.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/SBOM.cdx.json",
+      "verified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "d94172cba6bb9dec51708b8f673a7706ba9ba7c2cbfac80cfcf6fa12bfe77106",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/SHA256SUMS.txt",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/SHA256SUMS.txt",
+      "verified": true
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "bytes": 8911,
+      "sha256": "3a0a551c3b31535edec5b990e470be20af8f520d4cf048844b3983aa4e154804",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/standalone-archive-verification.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/standalone-archive-verification.json",
+      "verified": true
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.6-rc.1/THIRD_PARTY_NOTICES.md",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.6-rc.1/THIRD_PARTY_NOTICES.md",
+      "verified": true
+    },
+    {
+      "path": "/airspace-operations/media/0.3.6-rc.1/confirmation-review.jpg",
+      "bytes": 35457,
+      "sha256": "a74f0ed613b5ac341e93e841d4d7aecb488b573a7da7f2e9598741abe1000426",
+      "verified": true,
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.6-rc.1/confirmation-review.jpg"
+    }
+  ],
+  "new_zip_hosting": "Exact previously verified GitHub release; earlier Site files preserved",
+  "space_live_html_verified": true,
+  "space_html_sha256": "f073f5f2aea1bce6d2543dbb307152c35cdb54bd1d093c0514c48ec96ce44467",
+  "model_calls": 1,
+  "training_runs": 0,
+  "operational_acceptance": false
+}
