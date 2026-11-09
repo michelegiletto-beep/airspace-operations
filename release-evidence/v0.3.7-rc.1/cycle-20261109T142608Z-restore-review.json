@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-09T17:59:22.957117+00:00",
+  "scope": "Read-only verification of files left by actual failing isolated red test. No existing-target overwrite is claimed.",
+  "red_temporary_directory": "C:\\Users\\gilet\\AppData\\Local\\Temp\\pytest-of-gilet\\pytest-267\\test_missing_restore_input_doe0",
+  "observed": {
+    "misspelled-backup.db": {
+      "exists_at_readonly_review": false,
+      "bytes": null,
+      "sha256": null
+    },
+    "new-restoration/airspace.db": {
+      "exists_at_readonly_review": false,
+      "bytes": null,
+      "sha256": null
+    }
+  },
+  "ordinary_existing_target_guard": "Present before and after fix; regression suite asserts same-source and existing-target bytes unchanged.",
+  "diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "backend/airspace/cli.py",
+      "tests/test_cli_restore.py"
+    ],
+    "exit_code": 2,
+    "stdout": "backend/airspace/cli.py:3: trailing whitespace.\n+from contextlib import closing\nbackend/airspace/cli.py:54: trailing whitespace.\n+        if not source.is_file() or source.stat().st_size == 0:\nbackend/airspace/cli.py:55: trailing whitespace.\n+            parser.error(\"Restoration requires an existing, non-empty regular backup file\")\nbackend/airspace/cli.py:56: trailing whitespace.\n+        try:\nbackend/airspace/cli.py:57: trailing whitespace.\n+            with closing(sqlite3.connect(source.as_uri() + \"?mode=ro\", uri=True)) as conn:\nbackend/airspace/cli.py:58: trailing whitespace.\n+                conn.execute(\"PRAGMA query_only=ON\")\nbackend/airspace/cli.py:59: trailing whitespace.\n+                conn.execute(\"BEGIN\")\nbackend/airspace/cli.py:60: trailing whitespace.\n+                if conn.execute(\"PRAGMA integrity_check\").fetchall() != [(\"ok\",)]:\nbackend/airspace/cli.py:61: trailing whitespace.\n+                    parser.error(\"Backup integrity failed\")\nbackend/airspace/cli.py:62: trailing whitespace.\n+                tables = {row[0] for row in conn.execute(\"SELECT name FROM sqlite_master WHERE type='table'\")}\nbackend/airspace/cli.py:63: trailing whitespace.\n+                if not set(metadata.tables).issubset(tables):\nbackend/airspace/cli.py:64: trailing whitespace.\n+                    parser.error(\"Backup does not contain the required Airspace application schema\")\nbackend/airspace/cli.py:65: trailing whitespace.\n+                for table in metadata.tables.values():\nbackend/airspace/cli.py:66: trailing whitespace.\n+                    columns = {row[1] for row in conn.execute(f'PRAGMA table_info(\"{table.name}\")')}\nbackend/airspace/cli.py:67: trailing whitespace.\n+                    if not set(table.columns.keys()).issubset(columns):\nbackend/airspace/cli.py:68: trailing whitespace.\n+                        parser.error(\"Backup does not contain the required Airspace application columns\")\nbackend/airspace/cli.py:69: trailing whitespace.\n+                versions = {row[0] for row in conn.execute(\"SELECT version FROM schema_versions\")}\nbackend/airspace/cli.py:70: trailing whitespace.\n+                if (not versions or any(type(version) is not int or version < 1 or version > CURRENT_SCHEMA_VERSION for version in versions)\nbackend/airspace/cli.py:71: trailing whitespace.\n+                        or versions != set(range(1, max(versions) + 1))):\nbackend/airspace/cli.py:72: trailing whitespace.\n+                    parser.error(\"Backup schema version is unsupported; use its matching application release\")\nbackend/airspace/cli.py:73: trailing whitespace.\n+                if conn.execute(\"PRAGMA foreign_key_check\").fetchone() is not None:\nbackend/airspace/cli.py:74: trailing whitespace.\n+                    parser.error(\"Backup foreign-key integrity failed\")\nbackend/airspace/cli.py:75: trailing whitespace.\n+                # Validate the same read transaction before creating any target path.\nbackend/airspace/cli.py:76: trailing whitespace.\n+                target.parent.mkdir(parents=True, exist_ok=True)\nbackend/airspace/cli.py:77: trailing whitespace.\n+                with target.open(\"xb\"):\nbackend/airspace/cli.py:78: trailing whitespace.\n+                    pass\nbackend/airspace/cli.py:79: trailing whitespace.\n+                with closing(sqlite3.connect(target.as_posix())) as destination:\nbackend/airspace/cli.py:80: trailing whitespace.\n+                    conn.backup(destination)\nbackend/airspace/cli.py:81: trailing whitespace.\n+        except (OSError, sqlite3.Error) as error:\nbackend/airspace/cli.py:82: trailing whitespace.\n+            parser.error(f\"Restoration failed: {error}\")\n",
+    "stderr": ""
+  },
+  "source_sha256": {
+    "backend/airspace/cli.py": "2bdd1dc9e610b7702601d7ec5a9fbeb1b920c265331f28eb438890115b2a1557",
+    "tests/test_cli_restore.py": "936ecc9a169196c4d3a489922c75d46b867a644381b6ca5c9395b6230bcd035a"
+  },
+  "valid_backup_scope": "No audit-key generation or migration. Restore reports original audit key is required; explicit audit verification remains part of the recovery runbook.",
+  "model_calls": 0,
+  "operator_data_changed": false,
+  "frozen036_changed": false
+}

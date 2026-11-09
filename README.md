@@ -1,3 +1,11 @@
+## Development candidate 0.3.7-rc.1
+
+0.3.7-rc.1 is an unpublished development candidate for CLI restore input validation. A missing SQLite backup path can otherwise be created as an empty database and accepted as a restore source, producing an empty target with a misleading success report. Existing target files are already refused; this issue concerns the missing input and false success for a new target. The repair is being verified separately; no new source-suite, interface, container, archive or operational acceptance result is claimed here.
+
+The published 0.3.6 release remains frozen and retains the earlier restore behavior. Before using restore in that release, verify that the backup file already exists and keep independent copies of the database, objects and audit key. Do not treat a successful restore message as proof that the expected application records were recovered. The primary remains at its separately verified 0.3.5 installation; no 0.3.6 primary promotion is claimed.
+
+Original specification acceptance, stable release and operational acceptance remain false. No model call, training run, operational record or external action is added by this metadata update. See [candidate notes](publication/releases/0.3.7-rc.1/release-notes.md). Earlier checkpoint sections below retain their historical scope.
+
 ## Published confirmation candidate, 8 November 2026, 17:34 UTC cycle
 
 [0.3.6-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.6-rc.1) is published and independently retrieved from `d36509ef90cdf72d08aa342ef87259d47ab71814`. All nine GitHub assets match their public digests. ZIP: 17,599,454 bytes, SHA-256 `a5d8661dbfc635de631926ca3482a318999c5d7849efc91042b85be53ff5456e`. Exact-source CI 42507531487 and the separate archive installation passed 583 tests with 20 skipped; the interface passed 205 and PostgreSQL passed 19. Actual container, worker and restoration checks passed.

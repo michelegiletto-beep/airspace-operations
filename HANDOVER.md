@@ -1,3 +1,7 @@
+## Restore-validation development checkpoint, 9 November 2026
+
+Read `improvement/cycles/2026-11-09T142608Z-restore-validation.json`. A missing-input SQLite restore false success is being repaired as separate candidate0.3.7. Existing targets were already refused; no primary data loss was observed. Published0.3.6 and installed0.3.5 remain unchanged. Exact-source CI, archive and new publication gates remain pending. Original acceptance, stable release and operational acceptance remain false. Earlier sections below are historical.
+
 ## Published confirmation candidate, 8 November 2026, 17:34 UTC cycle
 
 [0.3.6-rc.1](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.6-rc.1) is published and independently retrieved from `d36509ef90cdf72d08aa342ef87259d47ab71814`. All nine GitHub assets match their public digests. ZIP: 17,599,454 bytes, SHA-256 `a5d8661dbfc635de631926ca3482a318999c5d7849efc91042b85be53ff5456e`. Exact-source CI 42507531487 and the separate archive installation passed 583 tests with 20 skipped; the interface passed 205 and PostgreSQL passed 19. Actual container, worker and restoration checks passed.

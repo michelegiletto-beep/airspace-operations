@@ -1,0 +1,102 @@
+{
+  "at": "2026-11-09T18:00:18.691800+00:00",
+  "scope": "Requested037metadata only in DEV; CLI and restore regression tests owned separately.",
+  "files": [
+    {
+      "path": "backend/airspace/__init__.py",
+      "before_sha256": "597ae208de994a1e759c728467e119a3c081cc8d22d84ba06484ac2f68f28332",
+      "after_sha256": "b52e5984fc8f4fa6722129ab2e12f0459d69a68ba30455014ca5081821a273db"
+    },
+    {
+      "path": "pyproject.toml",
+      "before_sha256": "280b936b781c087063cb6b73328191ebdad2d12ac7de7e6bfee15c128e6d3a52",
+      "after_sha256": "1e04cc6800deaf9d2e6302586e3d1c9963185d5763bffb076ef0157831dd2207"
+    },
+    {
+      "path": "uv.lock",
+      "before_sha256": "e270f1d396cb216e6672c00b2e71c613476c67fcec4af6fc12cd793d2d7cc725",
+      "after_sha256": "2dd5ff0f68ca60a33a691be2a754ca44eab48132103bcf9964f416fcbda7afb5"
+    },
+    {
+      "path": "frontend/package.json",
+      "before_sha256": "3d1344d03aa0c8167daad60a2b77657da25736efb5b70d67c6502e9bafcd2f37",
+      "after_sha256": "41aa9dd78a7da6376b353ab5c587dd3412373993efa68ee4fd8617e55cc3f168"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "before_sha256": "848d625487638a78546615018038aebd29e2cd9e9509782897acc960a0aeacd8",
+      "after_sha256": "962afc1234c3ab0c6133babf4777da6dbbec81296c106f40eaad005a29a136ce"
+    },
+    {
+      "path": "capabilities.json",
+      "before_sha256": "39fffadfe00b810eb57e52b16f668b0fe548170141aec78d7b6032dd9bad8273",
+      "after_sha256": "c8d00e50959d67ebaef520d7b189b1cf6997d857f70c8e6e5cf583c84a189443"
+    },
+    {
+      "path": "docs/openapi.json",
+      "before_sha256": "7205b820889910335f634a83d8806c1ba0881b4aa08189aed5c8e98fb80b2003",
+      "after_sha256": "c4bd79cd8a0b283d496a8050c40877f82a4a929c2b0ea068d950efae9bef9d4d"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "81d9978ebee1090cd3a3a0bcf9956621444bdc2f4904618ad3e221239d33d2bb",
+      "after_sha256": "a8e05c621a3de190cf84d5aaf97597ec66c62f8e457016bae7fbfd209306d5cc"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "before_sha256": "6f650ca52969e3af553bcb6f45970d38d93dd5a61b43a3b908a06473605352cb",
+      "after_sha256": "83ebe0e2859c42749a6a97e48a4398467865e4b022cec92da37d5b5871df67aa"
+    },
+    {
+      "path": "scripts/publish_candidate.py",
+      "before_sha256": "776e1f7c3af18047a41dd5a1d1fe1ad995c5802659a5e0c56089b0af59281ab1",
+      "after_sha256": "2a10ec0cc436c0fae08b8d8ea9a7726567770f1f218e198acf9432bc82f196e9"
+    },
+    {
+      "path": "tests/test_publication_material.py",
+      "before_sha256": "862e592201d1d0083d575146748b768f4ccf84132548089d1a5d09e0825cc9ea",
+      "after_sha256": "2a132c96edfd4a5725872f74840770163874e6c19131f4cdc6050e2ff9b16f3e"
+    }
+  ],
+  "new_files": [
+    {
+      "path": "publication/releases/0.3.7-rc.1/release-notes.md",
+      "sha256": "4543ec699805ceb6294506623141df9e43be3a36a428b51d808275ea81fe0e59"
+    },
+    {
+      "path": "publication/releases/0.3.7-rc.1/manifest.json",
+      "sha256": "436c9dd8e71ccfbaf901a2a08ba76148715d0d9c509aea303a4437e51e6a2c3c"
+    }
+  ],
+  "restricted_version_edits": {
+    "backend/airspace/__init__.py": "Only the selected own version/release literal changed",
+    "pyproject.toml": "Only the selected own version/release literal changed",
+    "uv.lock": "Only the selected own version/release literal changed",
+    "frontend/package.json": "Only the selected own version/release literal changed",
+    "frontend/package-lock.json": "Only the selected own version/release literal changed",
+    "docs/openapi.json": "Only the selected own version/release literal changed",
+    "capabilities.json": "Only the selected own version/release literal changed"
+  },
+  "historical036capture_unchanged": {
+    "path": "publication/media/0.3.6-rc.1/confirmation-review.jpg",
+    "sha256": "a74f0ed613b5ac341e93e841d4d7aecb488b573a7da7f2e9598741abe1000426",
+    "caption_explicitly_historical": true
+  },
+  "actual_focused_publisher_tests": {
+    "passed": 51,
+    "skipped": 1,
+    "warnings": 1,
+    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-publication-material-tests.json"
+  },
+  "frozen_history_cases_preserved": true,
+  "new_restore_or_full_suite_results_claimed": false,
+  "source_commit_created": false,
+  "published": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "retained_preparation_attempt": {
+    "operation": "Read-only manifest validation",
+    "first_interpreter": "Unqualified system python lacked tomllib; no manifest/source mutation resulted",
+    "resolved": "Selected existing Python3.13 core032interpreter; actual focused tests already use this interpreter"
+  }
+}

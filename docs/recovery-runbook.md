@@ -1,3 +1,9 @@
+
+## SQLite input validation in candidate0.3.7
+
+A restore requires an existing non-empty regular SQLite backup with supported Airspace tables, columns and schema markers. Integrity and foreign keys are checked in the same read-only source transaction before a new target is created. Existing targets are refused. Keep the original audit key and verify each organisation audit after restoration; structural validation does not establish audit authenticity, complete attachments or operational readiness.
+
+Earlier0.3.6and preceding CLI versions can create an empty input file and a new empty target when a source path is missing, then report success. They already refuse existing targets. Check source existence, checksum and expected application tables before using an older command; do not treat its success message as recovery evidence. Frozen release bytes remain unchanged.
 # Backup and recovery runbook
 
 Back up the database, complete `runtime/objects/`, permitted source originals, model/experiment lineage and private audit key. The database alone does not contain attachment bytes. Restrict backup access and encrypt off-host storage. Keep an external audit-head checkpoint and document recovery point and recovery time objectives for the deployment.

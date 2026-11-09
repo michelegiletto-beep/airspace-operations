@@ -3,7 +3,7 @@
   "info": {
     "title": "System Lab Airspace Operations",
     "description": "Decision support. No aircraft control or authority-issued permissions.",
-    "version": "0.3.6-rc.1"
+    "version": "0.3.7-rc.1"
   },
   "paths": {
     "/api/v1/health": {

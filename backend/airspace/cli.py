@@ -1,5 +1,6 @@
 """Administrative commands. Credentials are supplied interactively or by environment."""
 import argparse
+from contextlib import closing
 import getpass
 import hashlib
 import json
@@ -50,12 +51,50 @@ def main():
         source = Path(args.input).resolve()
         if target.exists() or source == target:
             parser.error("Restoration requires a new target file")
-        with sqlite3.connect(source.as_posix()) as conn:
-            if conn.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
-                parser.error("Backup integrity failed")
-            target.parent.mkdir(parents=True, exist_ok=True)
-            with sqlite3.connect(target.as_posix()) as destination:
-                conn.backup(destination)
+        if not source.is_file() or source.stat().st_size == 0:
+            parser.error("Restoration requires an existing, non-empty regular backup file")
+        created_target_identity = None
+        try:
+            with closing(sqlite3.connect(source.as_uri() + "?mode=ro", uri=True)) as conn:
+                conn.execute("PRAGMA query_only=ON")
+                conn.execute("BEGIN")
+                if conn.execute("PRAGMA integrity_check").fetchall() != [("ok",)]:
+                    parser.error("Backup integrity failed")
+                tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+                if not set(metadata.tables).issubset(tables):
+                    parser.error("Backup does not contain the required Airspace application schema")
+                for table in metadata.tables.values():
+                    columns = {row[1] for row in conn.execute(f'PRAGMA table_info("{table.name}")')}
+                    if not set(table.columns.keys()).issubset(columns):
+                        parser.error("Backup does not contain the required Airspace application columns")
+                versions = {row[0] for row in conn.execute("SELECT version FROM schema_versions")}
+                if (not versions or any(type(version) is not int or version < 1 or version > CURRENT_SCHEMA_VERSION for version in versions)
+                        or versions != set(range(1, max(versions) + 1))):
+                    parser.error("Backup schema version is unsupported; use its matching application release")
+                if conn.execute("PRAGMA foreign_key_check").fetchone() is not None:
+                    parser.error("Backup foreign-key integrity failed")
+                # Validate the same read transaction before creating any target path.
+                target.parent.mkdir(parents=True, exist_ok=True)
+                with target.open("xb") as created:
+                    info = os.fstat(created.fileno())
+                    created_target_identity = (info.st_dev, info.st_ino)
+                with closing(sqlite3.connect(target.as_posix())) as destination:
+                    info = target.stat(follow_symlinks=False)
+                    if (info.st_dev, info.st_ino) != created_target_identity:
+                        raise sqlite3.OperationalError("Restoration target changed before copying")
+                    conn.backup(destination)
+                    info = target.stat(follow_symlinks=False)
+                    if (info.st_dev, info.st_ino) != created_target_identity:
+                        raise sqlite3.OperationalError("Restoration target changed during copying")
+        except (OSError, sqlite3.Error) as error:
+            if created_target_identity is not None:
+                try:
+                    info = target.stat(follow_symlinks=False)
+                    if (info.st_dev, info.st_ino) == created_target_identity:
+                        target.unlink()
+                except OSError:
+                    pass
+            parser.error(f"Restoration failed: {error}")
         print(json.dumps({"restored": str(target), "audit_key_required": True, "at": now()}))
         return
     if args.command == "check":

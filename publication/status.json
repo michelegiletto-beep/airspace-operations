@@ -75,5 +75,13 @@
   },
   "local_model_calls_this_cycle": 1,
   "training_runs_this_cycle": 0,
-  "next_action": "Verify the exact 0.3.6 Windows archive separately before considering primary promotion."
+  "next_action": "Verify the exact 0.3.6 Windows archive separately before considering primary promotion.",
+  "development_candidate": {
+    "version": "0.3.7-rc.1",
+    "state": "Development source; release gates pending",
+    "issue": "Missing restore input false success",
+    "primary_promotion": "Held; primary remains0.3.5",
+    "model_calls": 0,
+    "training_runs": 0
+  }
 }

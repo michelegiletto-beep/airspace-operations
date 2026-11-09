@@ -1,0 +1,29 @@
+{
+  "cycle_id": "2026-11-09T142608Z-restore-validation",
+  "triggered_at": "2026-11-09T14:26:08.995Z",
+  "host_interruption": "Clock observed14:28then17:52UTC with no intervening active engineering; freeC changed150MBto10.9GB without root cleanup. Resumed active work is bounded by18:29UTC.",
+  "state": "Development candidate; exact-source release gates pending",
+  "candidate": "0.3.7-rc.1",
+  "published_version": "0.3.6-rc.1",
+  "primary_version": "0.3.5-rc.1",
+  "base_commit": "5ca560e5cdb228d63de27fca818fec9c846ca4b9",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-04",
+    "ASO-22-02",
+    "ASO3-010"
+  ],
+  "issue": "A missing SQLite restore source silently creates an empty source and a NEW empty target and reports success. Existing targets were already refused; no ordinary existing-target overwrite or primary data loss was observed.",
+  "change": "Validate an existing non-empty source through a read-only transaction, integrity, required schema/columns/version and foreign keys before target creation. Retain exclusive new-target creation and preserve input bytes.",
+  "parallel_review": "Separate implementation, read-only recovery review and publication audit agents resumed; these are software reviews, not professional certification.",
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "model_calls": 0,
+  "training_runs": 0,
+  "primary_all_tables_unchanged": true,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The original Windows036verification uncovered a more valuable restore-input false-success defect. A precise reproduction corrected an initial overstatement about existing targets; all existing-target protections remain required. Frozen036is preserved, with a separate037repair candidate.",
+  "next_bounded_prompt": "Finish current-source and exact-archive gates for the narrow037restore validation fix. Verify a real permitted engineering backup through CLI to API to browser without changing the primary. Publish distinct037only after actual gates, rights/secret checks and independent retrieval; preserve all earlier releases. Keep all198requirement texts and statuses unchanged and original acceptance incomplete. At most two local-model calls, no training claims, communications, aircraft actions or permission changes. Checkpoint by18:29UTC after the host interruption."
+}
