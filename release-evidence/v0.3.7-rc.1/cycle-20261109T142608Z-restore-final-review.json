@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-09T18:03:58.557693+00:00",
+  "state": "Narrow restore fix and meaningful isolated CLI regressions verified",
+  "frozen036_source": "d36509ef90cdf72d08aa342ef87259d47ab71814",
+  "reproduction": "Actual old CLI returned exit 0 and restored JSON for a missing source and new target. Existing/same target refusal was already present; no ordinary overwrite of an existing target is claimed.",
+  "changed_source": {
+    "backend/airspace/cli.py": "f704f5dca9570a4241572fbab77d2c1b84d2618f83eb4008d95c314f21f5cef3",
+    "tests/test_cli_restore.py": "8aa23cc5bc7fda2970028677fe67840ece6054b66afa96baf17ab76b966b17aa"
+  },
+  "restore_branch_and_closing_import_only_compared_with_frozen036": true,
+  "line_endings": "CLI normalized to LF required by .gitattributes; no behavior outside restore changed.",
+  "behavior": [
+    "Reject missing, nonregular and zero-byte input before target-path creation.",
+    "Open input SQLite URI in read-only mode, query_only and a single read transaction; validate full integrity, required application tables/columns, contiguous supported schema markers and foreign keys.",
+    "Keep existing/same target refusal; exclusively claim a new target, capture physical file identity and check it before/after backup.",
+    "On failure remove only the same newly claimed target identity; preserve another writer replacement.",
+    "Restore a valid backup with identical source bytes, table contents and audit verification; original audit key is still required separately."
+  ],
+  "final_focused": {
+    "command": [
+      "C:/Users/gilet/Documents/ChatGPT/SYSTEM LABS/products/airspace-operations/work/candidate-0.3.2/.venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_cli_restore.py"
+    ],
+    "cwd": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+    "started_at": "2026-11-09T18:02:53.179097+00:00",
+    "seconds": 13.248,
+    "exit_code": 0,
+    "stdout": "...............                                                          [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.2\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.2\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n15 passed, 1 warning in 11.52s\n",
+    "stderr": "",
+    "scope": "Final isolated CLI restoration including read-only input validation, before/after target identity checks, interrupted owned-copy cleanup and rejection of replacement before backup is called."
+  },
+  "diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "backend/airspace/cli.py",
+      "tests/test_cli_restore.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "retained_failed_receipts": [
+    "cycle-20261109T142608Z-restore-red.json",
+    "cycle-20261109T142608Z-restore-cleanup-fixture-failure.json",
+    "cycle-20261109T142608Z-restore-review.json"
+  ],
+  "retained_failure_notes": [
+    "Red: one actual missing-input test fails against prior CLI.",
+    "First cleanup replacement fixture attempted to replace a still-open SQLite destination on Windows; the OS refused, so no replacement occurred. Injection moved to the actual claim-to-open window; final suite passes.",
+    "Initial review diff check rejected CRLF changed lines; LF normalization repaired it. Its old temporary-file probe did not locate the virtualized pytest artifacts and is not used as evidence of file sizes."
+  ],
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operator_data_changed": false,
+  "frozen036_changed": false,
+  "unrelated_tests": "Parent owns complete source suite and candidate CI; this subtask claims only the recorded focused CLI suite."
+}

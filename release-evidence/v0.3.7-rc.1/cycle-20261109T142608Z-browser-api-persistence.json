@@ -1,0 +1,79 @@
+{
+  "at": "2026-11-09T18:11:30.139180+00:00",
+  "success": true,
+  "version": "0.3.7-rc.1",
+  "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "story": "Real existing engineering backup restored through CLI, then read by actual8791browser and authenticated HTTP; both stored personal tasks retain their recorded states. No task or operation was created.",
+  "browser": "Actual regulatory sign-in, empty Operations, existing completed/open task rows and reload; no Send action",
+  "api": [
+    {
+      "path": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "path": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "path": "/records/case",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "path": "/companion/tasks",
+      "status": 200,
+      "authenticated": true
+    },
+    {
+      "path": "/me",
+      "status": 200,
+      "authenticated": true
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "authenticated": true
+    }
+  ],
+  "preview": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 51,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "protected_tables_unchanged": [
+    "fleet_reservations",
+    "idempotency",
+    "jobs",
+    "record_versions",
+    "records",
+    "resource_locks",
+    "resource_reservations",
+    "schema_versions",
+    "sharing_agreements",
+    "users"
+  ],
+  "audit_additions": [
+    "identity.login",
+    "identity.login"
+  ],
+  "primary_all_tables_unchanged": true,
+  "key_unchanged": true,
+  "model_calls": 0,
+  "training_runs": 0,
+  "worker_started": false,
+  "normal_motion": "DOM surface motion-enabled observed; no new frame-difference, paused stability or fallback browser claim",
+  "image": "runtime/checkpoints/cycle-20261109T142608Z/browser/restored-tasks.jpg",
+  "operational_acceptance": false
+}

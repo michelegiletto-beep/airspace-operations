@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-09T18:12:05.443Z",
+  "source": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "run": 42670873953,
+  "engineering_job": 129346738140,
+  "engineering_result": "success",
+  "source_tests": {
+    "passed": 599,
+    "skipped": 20,
+    "warnings": 3
+  },
+  "postgresql_passed": 19,
+  "publication_result": "Failed before publisher job creation: GitHub Actions internal server error",
+  "correlation_id": "c8ffe2d2-0866-4019-bebb-ca8fd5a64840",
+  "observed_in": "Actual GitHub run summary and annotation; REST jobs listed only successful engineering job",
+  "gate_removed": false
+}

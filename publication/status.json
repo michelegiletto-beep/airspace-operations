@@ -75,5 +75,28 @@
   },
   "local_model_calls_this_cycle": 1,
   "training_runs_this_cycle": 0,
-  "next_action": "Verify the exact 0.3.6 Windows archive separately before considering primary promotion."
+  "next_action": "Recheck GitHub platform recovery and complete the existing 0.3.7 pipeline and independent publication verification before promotion.",
+  "development_candidate": {
+    "version": "0.3.7-rc.1",
+    "state": "Prepared local engineering candidate; public publication blocked by GitHub platform errors",
+    "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "local_package": {
+      "state": "Prepared; short Windows path verified, default nested verifier failed; not uploaded or published",
+      "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release\\local-0.3.7-rc.1\\System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+      "bytes": 17621961,
+      "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+      "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825"
+    },
+    "ci_run": 42670873953,
+    "first_engineering_passed": true,
+    "full_workflow_succeeded": false,
+    "public_release": "Not Published",
+    "huggingface": "Not Uploaded",
+    "system_lab": "Not Updated",
+    "primary_promotion": "Held; primary remains 0.3.5",
+    "model_calls": 0,
+    "training_runs": 0,
+    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-github-platform-failure.json"
+  }
 }

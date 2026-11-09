@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-09T18:14:50.036Z",
+  "run": 42670873953,
+  "source": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "failed_only_api_retry": {
+    "http_status": 403,
+    "message": "This workflow run cannot be retried"
+  },
+  "full_retry": {
+    "accepted_in_ui": true,
+    "attempt": 2,
+    "result": "GitHub platform internal server error before jobs",
+    "correlation_id": "89c6600a-f91d-4aa7-a6bd-9c296eeab6d6"
+  },
+  "additional_retries_this_cycle": 0,
+  "publication": "Not published",
+  "gates_changed": false
+}

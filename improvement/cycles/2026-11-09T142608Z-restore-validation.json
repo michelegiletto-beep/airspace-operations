@@ -1,0 +1,191 @@
+{
+  "cycle_id": "2026-11-09T142608Z-restore-validation",
+  "triggered_at": "2026-11-09T14:26:08.995Z",
+  "host_interruption": "Clock observed14:28then17:52UTC with no intervening active engineering; freeC changed150MBto10.9GB without root cleanup. Resumed active work is bounded by18:29UTC.",
+  "state": "Restore fix verified; public candidate publication blocked by GitHub platform errors",
+  "candidate": "0.3.7-rc.1",
+  "published_version": "0.3.6-rc.1",
+  "primary_version": "0.3.5-rc.1",
+  "base_commit": "5ca560e5cdb228d63de27fca818fec9c846ca4b9",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-04",
+    "ASO-22-02",
+    "ASO3-010"
+  ],
+  "issue": "A missing SQLite restore source silently creates an empty source and a NEW empty target and reports success. Existing targets were already refused; no ordinary existing-target overwrite or primary data loss was observed.",
+  "change": "Validate an existing non-empty source through a read-only transaction, integrity, required schema/columns/version and foreign keys before target creation. Retain exclusive new-target creation and preserve input bytes.",
+  "parallel_review": "Separate implementation, read-only recovery review and publication audit agents resumed; these are software reviews, not professional certification.",
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "model_calls": 0,
+  "training_runs": 0,
+  "primary_all_tables_unchanged": true,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "A routine Windows verification uncovered a more valuable restore-input false-success defect. The first statement about replacing an existing target was corrected after full code inspection: existing targets were already refused. Isolated red and green tests now cover missing, invalid and unsupported inputs, source preservation, exclusive target creation, interrupted copy and another writer replacement. A real engineering backup was restored through the new CLI and read through the API and browser. The primary and all previous releases remain intact. GitHub passed the first exact-source engineering job but failed internally before publication; one supported full retry also failed internally. No publication or approval gate was removed.",
+  "next_bounded_prompt": "Read STATUS, this cycle, publication/status.json and exact local/public receipts. Recheck the GitHub run42670873953 platform state before retrying. The fixed source is bfc3c9627226e9e73d419a06406946f71f8ae825 on release/0.3.7-rc.1. A first engineering job passed599 Linux tests,20 skipped and19 PostgreSQL checks, but neither workflow attempt completed publication. If the platform has recovered, retry the existing unchanged pipeline once with all gates. Independently retrieve every actual release asset before executing the prepared presentation helper through the Sites skill, then publish and verify the existing HF destinations and only the Airspace Site page. If still unavailable, keep all candidate states Prepared and do useful independent verification; never fake publication or change approvals. Verify the exact final public Windows archive before any primary promotion. Preserve optional interpreter, policy, audit key,20 records,2 tasks, all198 requirement texts/statuses and previous releases. At most45 active minutes and two actual local-model calls, no communications, aircraft actions or purchases.",
+  "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "local_source": {
+    "passed": 598,
+    "skipped": 21,
+    "warnings": 1,
+    "seconds": 130.09
+  },
+  "interface": {
+    "passed": 205,
+    "build_exit": 0
+  },
+  "restore_regression": {
+    "passed": 15,
+    "warnings": 1,
+    "red_reproduced": true,
+    "review": "Separate implementation and recovery reviewers found no blocking issue in the bounded repair; no certification or complete filesystem-race immunity is claimed"
+  },
+  "first_remote_engineering": {
+    "run_id": 42670873953,
+    "attempt": 1,
+    "job_id": 129346738140,
+    "source_tests": {
+      "passed": 599,
+      "skipped": 20,
+      "warnings": 3
+    },
+    "postgresql_passed": 19,
+    "containers_worker_and_restoration_passed": true,
+    "workflow_publication_succeeded": false
+  },
+  "publication_attempts": [
+    {
+      "attempt": 1,
+      "result": "GitHub internal server error before publisher job creation",
+      "correlation_id": "c8ffe2d2-0866-4019-bebb-ca8fd5a64840"
+    },
+    {
+      "failed_only_retry": "HTTP403: This workflow run cannot be retried"
+    },
+    {
+      "attempt": 2,
+      "trigger": "Supported full-workflow retry in the existing GitHub account",
+      "result": "GitHub internal server error before jobs",
+      "correlation_id": "89c6600a-f91d-4aa7-a6bd-9c296eeab6d6"
+    }
+  ],
+  "local_package": {
+    "state": "Prepared; short Windows path verified, default nested verifier failed; not uploaded or published",
+    "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release\\local-0.3.7-rc.1\\System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+    "bytes": 17621961,
+    "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+    "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825"
+  },
+  "default_windows_archive_verifier": {
+    "success": false,
+    "error": "WinError206 during nested extraction",
+    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-local-package-verification.json"
+  },
+  "short_windows_archive": {
+    "at": "2026-11-09T18:26:45.876497+00:00",
+    "success": true,
+    "scope": "Independent exact archive extraction and fresh core Windows installation in a shorter path; default nested verification remains failed with WinError206",
+    "state": "Prepared local candidate; not published",
+    "version": "0.3.7-rc.1",
+    "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "archive_bytes": 17621961,
+    "archive_sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+    "source_files_verified": 1167,
+    "installation": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SLAV\\037v\\airspace-operations",
+    "steps": [
+      {
+        "at": "2026-11-09T18:24:13.662692+00:00",
+        "command": [
+          "uv",
+          "sync",
+          "--frozen",
+          "--extra",
+          "dev"
+        ],
+        "exit_code": 0,
+        "seconds": 7.181,
+        "stdout": "",
+        "stderr": "Using CPython 3.13.1 interpreter at: C:\\Python313\\python.exe\nCreating virtual environment at: .venv\n   Building system-lab-airspace-operations @ file:///C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SLAV/037v/airspace-operations\n      Built system-lab-airspace-operations @ file:///C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SLAV/037v/airspace-operations\nPrepared 1 package in 2.63s\nInstalled 70 packages in 4.16s\n + absl-py==2.5.1\n + annotated-doc==0.0.5\n + annotated-types==0.8.0\n + anyio==4.15.1\n + boolean-py==5.0\n + cachecontrol==0.14.4\n + certifi==2026.10.23\n + cffi==2.1.1\n + charset-normalizer==3.5.2\n + click==8.5.0\n + colorama==0.4.6\n + coverage==7.17.0\n + cryptography==50.0.2\n + cyclonedx-python-lib==11.12.0\n + defusedxml==0.7.1\n + fastapi==0.162.0\n + filelock==4.2.4\n + greenlet==3.5.6\n + h11==0.16.0\n + httpcore==1.0.9\n + httpx==0.28.1\n + hypothesis==6.151.9\n + idna==3.20\n + immutabledict==4.3.1\n + iniconfig==2.3.1\n + license-expression==30.4.4\n + markdown-it-py==4.2.0\n + mdurl==0.1.2\n + msgpack==1.2.4\n + numpy==2.5.4\n + opentelemetry-api==1.45.1\n + ortools==9.15.6755\n + packageurl-python==0.17.6\n + packaging==26.3\n + pandas==3.1.0\n + pip==26.2.2\n + pip-api==0.0.35\n + pip-audit==2.10.1\n + pip-requirements-parser==32.0.1\n + platformdirs==4.13.6\n + pluggy==1.7.0\n + protobuf==6.33.5\n + psycopg==3.2.13\n + psycopg-binary==3.2.13\n + py-serializable==2.1.0\n + pycparser==3.12\n + pydantic==2.14.1\n + pydantic-core==2.50.1\n + pygments==2.21.0\n + pyjwt==2.15.1\n + pyparsing==3.3.3\n + pypdf==6.21.4\n + pyproj==3.7.2\n + pytest==9.1.1\n + pytest-cov==7.1.0\n + python-dateutil==3.0.0\n + requests==2.34.2\n + rich==15.0.0\n + six==1.17.0\n + sortedcontainers==2.4.0\n + sqlalchemy==2.0.55\n + starlette==1.10.0\n + system-lab-airspace-operations==0.3.7rc1 (from file:///C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SLAV/037v/airspace-operations)\n + tomli==2.5.0\n + tomli-w==1.2.0\n + typing-extensions==4.16.0\n + typing-inspection==0.4.4\n + tzdata==2026.5\n + urllib3==2.8.0\n + uvicorn==0.54.0\n"
+      },
+      {
+        "at": "2026-11-09T18:24:14.793418+00:00",
+        "command": [
+          "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SLAV\\037v\\airspace-operations\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "airspace.cli",
+          "check"
+        ],
+        "exit_code": 0,
+        "seconds": 1.13,
+        "stdout": "{\n  \"python\": \"3.13.1\",\n  \"database_profile\": \"SQLite portability\",\n  \"schema_version\": 3,\n  \"schema_status\": \"Not Inspected\",\n  \"schema_version_scope\": \"Supported schema; existing database not inspected or migrated\",\n  \"docker\": false,\n  \"pg_dump\": false,\n  \"runtime\": \"C:\\\\Users\\\\gilet\\\\AppData\\\\Local\\\\Packages\\\\OpenAI.Codex_2p2nqsd0c76g0\\\\LocalCache\\\\Local\\\\SLAV\\\\037v\\\\airspace-operations\\\\runtime\\\\empty-short-check\",\n  \"operational_acceptance\": false,\n  \"storage_paths\": {\n    \"windows_long_paths\": {\n      \"applicable\": true,\n      \"registry_enabled\": false,\n      \"registry_status\": \"Disabled\",\n      \"registry_scope\": \"Machine configuration only; process manifest and filesystem support are not verified\"\n    },\n    \"length_unit\": \"UTF-16 code units (Windows characters)\",\n    \"runtime_characters\": 137,\n    \"legacy_limit_characters_including_terminator\": 260,\n    \"representative_layouts\": [\n      {\n        \"name\": \"evidence_blob\",\n        \"component_assumptions\": [\n          {\n            \"name\": \"objects\",\n            \"characters\": 7\n          },\n          {\n            \"name\": \"tenant UUID\",\n            \"characters\": 36\n          },\n          {\n            \"name\": \"SHA-256 filename\",\n            \"characters\": 64\n          }\n        ],\n        \"separators\": 3,\n        \"additional_characters\": 110,\n        \"total_characters\": 247,\n        \"legacy_limit_reached\": false\n      },\n      {\n        \"name\": \"source_snapshot_temporary_file\",\n        \"component_assumptions\": [\n          {\n            \"name\": \"sources\",\n            \"characters\": 7\n          },\n          {\n            \"name\": \"tenant UUID\",\n            \"characters\": 36\n          },\n          {\n            \"name\": \"maximum accepted source identifier\",\n            \"characters\": 100\n          },\n          {\n            \"name\": \"SHA-256 directory\",\n            \"characters\": 64\n          },\n          {\n            \"name\": \"original.bin.tmp- plus 16 hexadecimal characters\",\n            \"characters\": 33\n          }\n        ],\n        \"separators\": 5,\n        \"additional_characters\": 245,\n        \"total_characters\": 382,\n        \"legacy_limit_reached\": true\n      }\n    ],\n    \"assessment\": \"Representative layout reaches the legacy Windows path limit\",\n    \"io_verified\": false,\n    \"configuration_only\": true,\n    \"scope\": \"Explicit path-layout examples, not a complete storage budget or proof that a directory exists, permits access, or supports writes. Other output roots, identifiers, temporary files and tools can require longer paths.\",\n    \"guidance\": \"Choose a shorter private AIRSPACE_RUNTIME and a short isolated test temporary directory when needed. Back up and restore existing data and its audit key before relocating it. See docs/administrator-handbook.md. This command does not change Windows settings or perform a storage write test.\"\n  }\n}\n",
+        "stderr": ""
+      },
+      {
+        "at": "2026-11-09T18:24:17.454001+00:00",
+        "command": [
+          "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SLAV\\037v\\airspace-operations\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-c",
+          "from airspace.storage import local_store,records;from airspace.api import create_app;from fastapi.testclient import TestClient;from sqlalchemy import select,func;s=local_store();c=TestClient(create_app(s));assert c.get('/api/v1/health').json()['version']=='0.3.7-rc.1';assert c.get('/api/v1/companion/tasks').status_code==401;connection=s.engine.connect();assert connection.execute(select(func.count()).select_from(records)).scalar_one()==0;connection.close();c.close();s.engine.dispose();print('Actual empty database and authenticated boundary verified')"
+        ],
+        "exit_code": 0,
+        "seconds": 2.659,
+        "stdout": "Actual empty database and authenticated boundary verified\n",
+        "stderr": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SLAV\\037v\\airspace-operations\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n"
+      },
+      {
+        "at": "2026-11-09T18:26:45.875538+00:00",
+        "command": [
+          "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SLAV\\037v\\airspace-operations\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "-q"
+        ],
+        "exit_code": 0,
+        "seconds": 148.421,
+        "stdout": "........................................................................ [ 11%]\n........................................................................ [ 23%]\n........................................................................ [ 34%]\n........................................................................ [ 46%]\n..........................sssssssssssssssssss........................... [ 58%]\n...................s.................................................... [ 69%]\n.............s.......................................................... [ 81%]\n........................................................................ [ 93%]\n...........................................                              [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SLAV\\037v\\airspace-operations\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\ntests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct\ntests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct\n  <frozen importlib._bootstrap>:488: DeprecationWarning: Bitwise inversion '~' on bool is deprecated and will be removed in Python 3.16. This returns the bitwise inversion of the underlying int object and is usually not what you expect from negating a bool. Use the 'not' operator for boolean negation or ~int(x) if you really want the bitwise inversion of the underlying int.\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n598 passed, 21 skipped, 3 warnings in 144.49s (0:02:24)\n",
+        "stderr": ""
+      }
+    ],
+    "primary_unchanged": true,
+    "model_calls": 0,
+    "training_runs": 0,
+    "original_nested_gate_waived": false,
+    "operational_acceptance": false
+  },
+  "local_release_suite": {
+    "passed": 598,
+    "skipped": 21,
+    "warnings": 27,
+    "dependency_audits": 3,
+    "all_local_checks_passed": true,
+    "external_ci_gate_verified": false
+  },
+  "public_release": "Not Published",
+  "huggingface": "Existing 0.3.6 presentations unchanged; 0.3.7 preparation helper and actual image ready, not uploaded",
+  "system_lab": "Existing version103 preserved; 0.3.7 helper not executed and no Site content edited",
+  "browser_api_persistence": {
+    "success": true,
+    "records": 20,
+    "tasks": 2,
+    "preview_audit": 51,
+    "identity_login_additions": 2,
+    "source_backup_unchanged": true,
+    "primary_all_tables_unchanged": true,
+    "new_operational_records": 0,
+    "model_calls": 0
+  },
+  "windows036": {
+    "fresh_environment": true,
+    "passed": 582,
+    "skipped": 21,
+    "warnings": 3,
+    "promoted": false
+  }
+}

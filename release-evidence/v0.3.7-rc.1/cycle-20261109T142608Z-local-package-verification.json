@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-09T18:20:59.705575+00:00",
+  "success": false,
+  "version": "0.3.7-rc.1",
+  "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+  "source_git_bytes_verified": true,
+  "state": "Local verification failed; see exact step outputs",
+  "steps": [
+    {
+      "at": "2026-11-09T18:16:21.183328+00:00",
+      "command": [
+        "uv",
+        "sync",
+        "--frozen",
+        "--extra",
+        "dev"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 0,
+      "seconds": 12.261,
+      "stdout": "",
+      "stderr": "Using CPython 3.13.1 interpreter at: C:\\Python313\\python.exe\nCreating virtual environment at: .venv\n   Building system-lab-airspace-operations @ file:///C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SystemLabAirspaceOperations/0.3.7-rc.1/airspace-operations\n      Built system-lab-airspace-operations @ file:///C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SystemLabAirspaceOperations/0.3.7-rc.1/airspace-operations\nPrepared 1 package in 4.29s\nInstalled 70 packages in 5.36s\n + absl-py==2.5.1\n + annotated-doc==0.0.5\n + annotated-types==0.8.0\n + anyio==4.15.1\n + boolean-py==5.0\n + cachecontrol==0.14.4\n + certifi==2026.10.23\n + cffi==2.1.1\n + charset-normalizer==3.5.2\n + click==8.5.0\n + colorama==0.4.6\n + coverage==7.17.0\n + cryptography==50.0.2\n + cyclonedx-python-lib==11.12.0\n + defusedxml==0.7.1\n + fastapi==0.162.0\n + filelock==4.2.4\n + greenlet==3.5.6\n + h11==0.16.0\n + httpcore==1.0.9\n + httpx==0.28.1\n + hypothesis==6.151.9\n + idna==3.20\n + immutabledict==4.3.1\n + iniconfig==2.3.1\n + license-expression==30.4.4\n + markdown-it-py==4.2.0\n + mdurl==0.1.2\n + msgpack==1.2.4\n + numpy==2.5.4\n + opentelemetry-api==1.45.1\n + ortools==9.15.6755\n + packageurl-python==0.17.6\n + packaging==26.3\n + pandas==3.1.0\n + pip==26.2.2\n + pip-api==0.0.35\n + pip-audit==2.10.1\n + pip-requirements-parser==32.0.1\n + platformdirs==4.13.6\n + pluggy==1.7.0\n + protobuf==6.33.5\n + psycopg==3.2.13\n + psycopg-binary==3.2.13\n + py-serializable==2.1.0\n + pycparser==3.12\n + pydantic==2.14.1\n + pydantic-core==2.50.1\n + pygments==2.21.0\n + pyjwt==2.15.1\n + pyparsing==3.3.3\n + pypdf==6.21.4\n + pyproj==3.7.2\n + pytest==9.1.1\n + pytest-cov==7.1.0\n + python-dateutil==3.0.0\n + requests==2.34.2\n + rich==15.0.0\n + six==1.17.0\n + sortedcontainers==2.4.0\n + sqlalchemy==2.0.55\n + starlette==1.10.0\n + system-lab-airspace-operations==0.3.7rc1 (from file:///C:/Users/gilet/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/SystemLabAirspaceOperations/0.3.7-rc.1/airspace-operations)\n + tomli==2.5.0\n + tomli-w==1.2.0\n + typing-extensions==4.16.0\n + typing-inspection==0.4.4\n + tzdata==2026.5\n + urllib3==2.8.0\n + uvicorn==0.54.0\n"
+    },
+    {
+      "at": "2026-11-09T18:16:28.793234+00:00",
+      "command": [
+        "npm.cmd",
+        "ci",
+        "--prefix",
+        "frontend"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 0,
+      "seconds": 7.609,
+      "stdout": "\nadded 108 packages in 7s\n",
+      "stderr": "npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation\n"
+    },
+    {
+      "at": "2026-11-09T18:16:31.147248+00:00",
+      "command": [
+        "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "airspace.cli",
+        "check"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 0,
+      "seconds": 2.353,
+      "stdout": "{\n  \"python\": \"3.13.1\",\n  \"database_profile\": \"SQLite portability\",\n  \"schema_version\": 3,\n  \"schema_status\": \"Not Inspected\",\n  \"schema_version_scope\": \"Supported schema; existing database not inspected or migrated\",\n  \"docker\": false,\n  \"pg_dump\": false,\n  \"runtime\": \"C:\\\\Users\\\\gilet\\\\Documents\\\\ChatGPT\\\\SYSTEM LABS\\\\products\\\\airspace-operations\\\\runtime\\\\checkpoints\\\\cycle-20261109T142608Z\\\\local-package-empty\",\n  \"operational_acceptance\": false,\n  \"storage_paths\": {\n    \"windows_long_paths\": {\n      \"applicable\": true,\n      \"registry_enabled\": false,\n      \"registry_status\": \"Disabled\",\n      \"registry_scope\": \"Machine configuration only; process manifest and filesystem support are not verified\"\n    },\n    \"length_unit\": \"UTF-16 code units (Windows characters)\",\n    \"runtime_characters\": 136,\n    \"legacy_limit_characters_including_terminator\": 260,\n    \"representative_layouts\": [\n      {\n        \"name\": \"evidence_blob\",\n        \"component_assumptions\": [\n          {\n            \"name\": \"objects\",\n            \"characters\": 7\n          },\n          {\n            \"name\": \"tenant UUID\",\n            \"characters\": 36\n          },\n          {\n            \"name\": \"SHA-256 filename\",\n            \"characters\": 64\n          }\n        ],\n        \"separators\": 3,\n        \"additional_characters\": 110,\n        \"total_characters\": 246,\n        \"legacy_limit_reached\": false\n      },\n      {\n        \"name\": \"source_snapshot_temporary_file\",\n        \"component_assumptions\": [\n          {\n            \"name\": \"sources\",\n            \"characters\": 7\n          },\n          {\n            \"name\": \"tenant UUID\",\n            \"characters\": 36\n          },\n          {\n            \"name\": \"maximum accepted source identifier\",\n            \"characters\": 100\n          },\n          {\n            \"name\": \"SHA-256 directory\",\n            \"characters\": 64\n          },\n          {\n            \"name\": \"original.bin.tmp- plus 16 hexadecimal characters\",\n            \"characters\": 33\n          }\n        ],\n        \"separators\": 5,\n        \"additional_characters\": 245,\n        \"total_characters\": 381,\n        \"legacy_limit_reached\": true\n      }\n    ],\n    \"assessment\": \"Representative layout reaches the legacy Windows path limit\",\n    \"io_verified\": false,\n    \"configuration_only\": true,\n    \"scope\": \"Explicit path-layout examples, not a complete storage budget or proof that a directory exists, permits access, or supports writes. Other output roots, identifiers, temporary files and tools can require longer paths.\",\n    \"guidance\": \"Choose a shorter private AIRSPACE_RUNTIME and a short isolated test temporary directory when needed. Back up and restore existing data and its audit key before relocating it. See docs/administrator-handbook.md. This command does not change Windows settings or perform a storage write test.\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-09T18:16:31.556717+00:00",
+      "command": [
+        "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/prepare_corpus.py"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 0,
+      "seconds": 0.408,
+      "stdout": "Expanded actual permitted regulatory passages: 9833\nPreserved experimental lineage is available\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-09T18:20:51.939342+00:00",
+      "command": [
+        "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/verify_release.py"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 0,
+      "seconds": 260.381,
+      "stdout": "{\"check\": \"python-tests\", \"exit_code\": 0, \"seconds\": 212.19}\n{\"check\": \"frontend-tests\", \"exit_code\": 0, \"seconds\": 25.889}\n{\"check\": \"frontend-build\", \"exit_code\": 0, \"seconds\": 9.56}\n{\"check\": \"frontend-dependency-audit\", \"exit_code\": 0, \"seconds\": 1.914}\n{\"check\": \"python-dependency-audit\", \"exit_code\": 0, \"seconds\": 6.993}\n{\"check\": \"optional-neural-dependency-audit\", \"exit_code\": 0, \"seconds\": 3.651}\n{\n  \"version\": \"0.3.7-rc.1\",\n  \"at\": \"2026-11-09T18:20:51.923471+00:00\",\n  \"checks\": {\n    \"python_tests\": true,\n    \"frontend_tests\": true,\n    \"frontend_build\": true,\n    \"frontend_dependency_audit\": true,\n    \"python_dependency_audit\": true,\n    \"optional_neural_dependency_audit\": true,\n    \"baseline_integrity\": true\n  },\n  \"engineering_checks_passed\": true,\n  \"stable_release_allowed\": false,\n  \"operational_acceptance\": false,\n  \"external_ci\": {\n    \"verified\": false,\n    \"evidence\": null,\n    \"run_id\": null,\n    \"commit\": null,\n    \"scope\": \"Actual isolated container/PostgreSQL/worker/restoration run; local input hashes must remain identical\"\n  },\n  \"unverified_gates\": [\n    \"PostgreSQL/PostGIS/pgvector deployment and concurrency\",\n    \"Docker build and health checks\",\n    \"Qualified Luxembourg/Italy pack validation\",\n    \"Full methodology and operational data acceptance\",\n    \"Live provider and enterprise identity integration\",\n    \"Complete baseline feature/assurance acceptance\",\n    \"Production-scale resilience and deployment-specific security acceptance\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-09T18:20:58.751982+00:00",
+      "command": [
+        "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/package_release.py"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 0,
+      "seconds": 6.812,
+      "stdout": "{\n  \"path\": \"C:\\\\Users\\\\gilet\\\\AppData\\\\Local\\\\Packages\\\\OpenAI.Codex_2p2nqsd0c76g0\\\\LocalCache\\\\Local\\\\SystemLabAirspaceOperations\\\\0.3.7-rc.1\\\\airspace-operations\\\\release\\\\System-Lab-Airspace-Operations-0.3.7-rc.1.zip\",\n  \"bytes\": 17621939,\n  \"sha256\": \"feb0f47065aca2be4ad2e4b9f5154dae4a2ad9fdf5826d48ccc0fe1555c995b3\",\n  \"file_count\": 1167,\n  \"secret_pattern_scan\": \"No matched credential patterns; bounded heuristic, not a full secret-security proof\",\n  \"publication_status\": \"Prepared\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-09T18:20:59.704773+00:00",
+      "command": [
+        "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/verify_archive.py"
+      ],
+      "cwd": "C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations",
+      "exit_code": 1,
+      "seconds": 0.952,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\gilet\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SystemLabAirspaceOperations\\0.3.7-rc.1\\airspace-operations\\scripts\\verify_archive.py\", line 22, in <module>\n    content.extractall(destination)\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"C:\\Python313\\Lib\\zipfile\\__init__.py\", line 1775, in extractall\n    self._extract_member(zipinfo, path, pwd)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python313\\Lib\\zipfile\\__init__.py\", line 1824, in _extract_member\n    os.makedirs(upperdirs, exist_ok=True)\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen os>\", line 227, in makedirs\nFileNotFoundError: [WinError 206] Nome del file o estensione troppo lunga: 'C:\\\\Users\\\\gilet\\\\AppData\\\\Local\\\\Packages\\\\OpenAI.Codex_2p2nqsd0c76g0\\\\LocalCache\\\\Local\\\\SystemLabAirspaceOperations\\\\0.3.7-rc.1\\\\airspace-operations\\\\runtime\\\\archive-verification\\\\candidate-zm531frx\\\\airspace-operations\\\\frontend\\\\dist\\\\vendor\\\\systemlab-companion'\n"
+    }
+  ],
+  "primary_unchanged": true,
+  "model_calls": 0,
+  "training_runs": 0,
+  "github_platform_failure_not_waived": true,
+  "stable_release": false,
+  "operational_acceptance": false
+}

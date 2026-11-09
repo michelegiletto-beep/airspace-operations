@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-09T18:24:40.288Z",
+  "default_nested_verifier": {
+    "exit": 1,
+    "error": "WinError206 during extraction",
+    "gate_waived": false
+  },
+  "initial_local_package": {
+    "source_commit": null,
+    "disposition": "Retained privately in untraced-package; not offered as a release"
+  },
+  "corrected_local_package": {
+    "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "source_identity": "Actual independent git rev-parse plus exact tracked git blob bytes",
+    "bytes": 17621961,
+    "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+    "state": "Prepared; independent short Windows path verification pending"
+  },
+  "no_publication_gate_changed": true
+}
