@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-10T08:38:00.061450+00:00",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "run_id": 42783868306,
+  "run_status": "in_progress",
+  "run_conclusion": null,
+  "event": "push",
+  "new_release_independently_retrieved": false,
+  "primary": {
+    "version": "0.3.5-rc.1",
+    "status": "ok",
+    "records": 20,
+    "personal_tasks": 2,
+    "audit_rows": 49,
+    "sqlite_integrity": "ok",
+    "foreign_key_failures": 0,
+    "writes_performed": false
+  },
+  "manual_run": {
+    "id": 42743740862,
+    "source_commit": "27ee18c33e5f3a0ff72a0be3d53be2d58fb4cdc1",
+    "engineering": "success",
+    "publisher": "skipped; existing push-only gate"
+  },
+  "actual_windows_source_receipt": "cycle-20261109T202532Z-final-source-windows.json",
+  "windows_receipt_source": "27ee18c33e5f3a0ff72a0be3d53be2d58fb4cdc1",
+  "windows_passed": 619,
+  "windows_skipped": 21,
+  "windows_scope": "Full source suite before the workflow path-filter-only change; not exact final public ZIP",
+  "notes_preflight_passed": true,
+  "workflow_review": {
+    "success": true,
+    "scope": "Only add reviewed release material to the push path filter; no jobs, event permissions, branch rules, conditions or approval gates changed",
+    "base_source": "27ee18c33e5f3a0ff72a0be3d53be2d58fb4cdc1",
+    "workflow_sha256": "7b32ef78d5c6a31c247d6a9528318ba61ab68df4d8381a5d4b8b00e1c6182338",
+    "preserved_tail_from_line6": true,
+    "manual_run": 42743740862,
+    "manual_engineering": "success",
+    "manual_publisher": "skipped by existing push-only condition",
+    "new_publication_claim": false
+  },
+  "publisher_failure_log_sha256": "bf1cdee76960e8aa34ff44cd93169a5755b912557d46e540f514bfc88859d286",
+  "interruptions": [
+    "Host clock advanced from November9 20:25 to November10 02:07 during early inspection.",
+    "Session interrupted by compute usage limit around November10 02:39; resumed at08:34. Elapsed interruption is not active work."
+  ],
+  "model_calls": 0,
+  "training_runs": 0,
+  "stable_release": false,
+  "operational_acceptance": false
+}

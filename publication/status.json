@@ -73,13 +73,13 @@
     "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
     "records_unchanged": true
   },
-  "local_model_calls_this_cycle": 1,
+  "local_model_calls_this_cycle": 0,
   "training_runs_this_cycle": 0,
-  "next_action": "Recheck GitHub platform recovery and complete the existing 0.3.7 pipeline and independent publication verification before promotion.",
+  "next_action": "Read the current checkpoint, publication/status.json and push run 42783868306 for source 62f507d962cedda5c493c7639ecc230b5ef7b089. The earlier manual run verified engineering and skipped its push-only publisher. Finish the current unchanged publication gates. If they passed, independently retrieve all nine assets with retrieve_release.py --source-commit 62f507d962cedda5c493c7639ecc230b5ef7b089 --run-id 42783868306, then run verify_published_windows.py --source-commit 62f507d962cedda5c493c7639ecc230b5ef7b089 on the actual public ZIP. Read the private helpers before execution. Obtain a fresh Sites opening before updating this project page. Publish the six reviewed Hugging Face presentation files and eight small Site assets plus the retained real 0.3.7 capture, with the new ZIP linked to GitHub. Independently retrieve the authored pages, downloads and media. Keep the 27ee source Windows result of 619 passed and 21 skipped separate from the final public ZIP. Keep primary 0.3.5 until its consistent backup, separately installed preview, browser to API to persistent data checks and held promotion gates pass. Preserve every previous release, all 198 requirement texts and statuses, and remaining acceptance gaps. Use at most 45 active minutes and two model calls; no model call is needed for this continuation. Never contact people, send mail, add aircraft commands, change approval requirements or buy services.",
   "development_candidate": {
     "version": "0.3.7-rc.1",
-    "state": "Prepared local engineering candidate; public publication blocked by GitHub platform errors",
-    "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "state": "Final-source release gates or independent retrieval remain pending; no new release claim",
+    "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
     "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/bfc3c9627226e9e73d419a06406946f71f8ae825",
     "local_package": {
       "state": "Prepared; short Windows path verified, default nested verifier failed; not uploaded or published",
@@ -88,15 +88,17 @@
       "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
       "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825"
     },
-    "ci_run": 42670873953,
+    "ci_run": 42783868306,
     "first_engineering_passed": true,
     "full_workflow_succeeded": false,
     "public_release": "Not Published",
     "huggingface": "Not Uploaded",
     "system_lab": "Not Updated",
-    "primary_promotion": "Held; primary remains 0.3.5",
+    "primary_promotion": "Held; installed primary remains 0.3.5",
     "model_calls": 0,
     "training_runs": 0,
-    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-github-platform-failure.json"
+    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-github-platform-failure.json",
+    "cycle": "improvement/cycles/2026-11-09T202532Z-archive-verification.json",
+    "published": false
   }
 }

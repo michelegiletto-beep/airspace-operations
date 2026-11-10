@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-10T02:38:02.553588+00:00",
+  "source_commit": "27ee18c33e5f3a0ff72a0be3d53be2d58fb4cdc1",
+  "command": [
+    "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\037-archive-repair\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\037-archive-repair",
+  "exit_code": 0,
+  "seconds": 132.144,
+  "stdout": "........................................................................ [ 11%]\n........................................................................ [ 22%]\n........................................................................ [ 33%]\n........................................................................ [ 45%]\n...............................................sssssssssssssssssss...... [ 56%]\n........................................s............................... [ 67%]\n..................................s..................................... [ 78%]\n........................................................................ [ 90%]\n................................................................         [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\037-archive-repair\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\ntests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct\ntests/test_dispatch.py::test_actual_assigned_pilot_and_internal_dispatch_are_distinct\n  <frozen importlib._bootstrap>:488: DeprecationWarning: Bitwise inversion '~' on bool is deprecated and will be removed in Python 3.16. This returns the bitwise inversion of the underlying int object and is usually not what you expect from negating a bool. Use the 'not' operator for boolean negation or ~int(x) if you really want the bitwise inversion of the underlying int.\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n619 passed, 21 skipped, 3 warnings in 128.65s (0:02:08)\n",
+  "stderr": "",
+  "scope": "Full Windows source suite; not an exact final public archive installation"
+}

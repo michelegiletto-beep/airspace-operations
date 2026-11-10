@@ -1,0 +1,68 @@
+{
+  "cycle_id": "2026-11-09T202532Z-archive-verification",
+  "triggered_at": "2026-11-09T20:25:32.036Z",
+  "resumed_at": "2026-11-10T02:11:13.371082+00:00",
+  "host_interruption": "The clock advanced from November9 20:25 to November10 02:07 during a short inspection; this is an interruption, not continuous active work. Conservative checkpoint by02:43UTC.",
+  "state": "Final-source release gates or independent retrieval remain pending; no new release claim",
+  "candidate": "0.3.7-rc.1",
+  "published_version": "0.3.6-rc.1",
+  "primary_version": "0.3.5-rc.1",
+  "base_source": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "documentation_main": "99887e1395deeeeef5c9c2f0b670326a96748f2c",
+  "issue": "The default archive verifier extracts under the already long project runtime path and fails with WinError206. The earlier short-path run did not repair that default workflow.",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-04",
+    "ASO-22-02",
+    "ASO3-010"
+  ],
+  "implementation_scope": "Select and preflight a unique isolated verification workspace, retain full installation and tests, record actual paths, preserve operator environment and old runs. No OS settings or approval changes.",
+  "prior_037_archive_preserved": {
+    "bytes": 17621961,
+    "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+    "source": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "state": "Prepared; not published"
+  },
+  "prior_platform_failures_retained": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "original_requirement_texts_or_statuses_changed": false,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "The default verifier now selects one owned short workspace and preserves full installation, CLI, API and pytest gates. Production path refusal remained intact while a real publisher run exposed a cross-platform fixture assertion. The fixture repair uses realistic components and observes directory contents, with an explicit nested-TEMP case. Helper checks, earlier local packages and final-source release measurements retain separate scopes. No model, training or primary change occurred; failed and premature retrieval attempts remain evidence.",
+  "next_bounded_prompt": "Read the current checkpoint, publication/status.json and push run 42783868306 for source 62f507d962cedda5c493c7639ecc230b5ef7b089. The earlier manual run verified engineering and skipped its push-only publisher. Finish the current unchanged publication gates. If they passed, independently retrieve all nine assets with retrieve_release.py --source-commit 62f507d962cedda5c493c7639ecc230b5ef7b089 --run-id 42783868306, then run verify_published_windows.py --source-commit 62f507d962cedda5c493c7639ecc230b5ef7b089 on the actual public ZIP. Read the private helpers before execution. Obtain a fresh Sites opening before updating this project page. Publish the six reviewed Hugging Face presentation files and eight small Site assets plus the retained real 0.3.7 capture, with the new ZIP linked to GitHub. Independently retrieve the authored pages, downloads and media. Keep the 27ee source Windows result of 619 passed and 21 skipped separate from the final public ZIP. Keep primary 0.3.5 until its consistent backup, separately installed preview, browser to API to persistent data checks and held promotion gates pass. Preserve every previous release, all 198 requirement texts and statuses, and remaining acceptance gaps. Use at most 45 active minutes and two model calls; no model call is needed for this continuation. Never contact people, send mail, add aircraft commands, change approval requirements or buy services.",
+  "focused": {
+    "passed": 105,
+    "skipped": 1,
+    "warnings": 1
+  },
+  "path_tests": {
+    "passed": 20,
+    "warnings": 1
+  },
+  "review": "Initial main-wiring and nested-temp test defects were corrected before source submission; separate runtime review found no remaining blocker. This is software review, not certification.",
+  "completed_at": "2026-11-10T08:38:28.642441+00:00",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "ci_run": 42783868306,
+  "final_source_focused": {
+    "passed": 21,
+    "scope": "Actual fixture-repair receipt; not a full final-source suite"
+  },
+  "measured_final_release": null,
+  "final_ci_receipt": null,
+  "verified_current_destination_updates": [],
+  "final_public_receipts": [
+    "release-evidence/v0.3.7-rc.1/cycle-20261109T202532Z-continuation.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261109T202532Z-final-source-windows.json"
+  ],
+  "retained_failures": [
+    "Original default nested Windows extraction failed with WinError206; receipt retained.",
+    "First helper-only tests missed actual main integration; reviewed wiring and stubbed-main regression repaired it.",
+    "First source 8c7ed0c / CI42741567574 archive gate failed one fixture with Linux Errno36 after production preflight correctly refused nested TEMP; no gate was waived.",
+    "Premature release retrieval returned 404 while publisher gates were incomplete; failure is retained, not counted as retrieval.",
+    "Source 68163 passed all 620 publisher archive tests, then its publisher rejected the release-notes heading before any public 0.3.7 release. The notes-only 27ee manual run passed engineering but correctly skipped its push-only publisher. Final 62f507d adds only reviewed release material to the workflow push path filter; all jobs, permissions and publication conditions remain unchanged. Its new exact-source push run has separate pending gates."
+  ]
+}
