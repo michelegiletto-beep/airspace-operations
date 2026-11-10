@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-10T02:11:04.945637+00:00",
+  "changes": [
+    "Windows default OS temporary root, independent of long installed/project source path.",
+    "Optional explicit existing absolute local root; invalid/UNC/device/link/junction roots fail closed without fallback.",
+    "UTF16 extraction, package and test suffix budgets checked before allocation and against actual resolved unique workspace.",
+    "Unchanged full pytest suite with basetemp, package installation, empty API and diagnostics use the same private work location.",
+    "All inherited AIRSPACE_* removed before explicit isolated configuration; source version and all manifest hashes checked before executing gates."
+  ],
+  "mutated_files": {
+    "scripts/verify_archive.py": "91fac3a34e58a69837864bbc93fa1f94bbf245bbef7854a1c5630b8451eccb73",
+    "scripts/release_support.py": "4ee1e7d0fb3e96afe1f12d935e0f4fec491a8b49b4a2dc7cccb0b47c86b1bbc2",
+    "tests/test_archive_paths.py": "50a3235e9dc2ab5db746dea4ad53621b467d0efe0edec27fe9179c3233cde389"
+  },
+  "diff_check_exit": 0,
+  "diff_check_stdout": "",
+  "review_findings_repaired": [
+    "First helper-only18test success did not exercise main; review found legacy tempfile.mkdtemp integration and undefined path_plan. Wiring was corrected and distinct stubbed-main integration regression added. No real full archive verification was claimed or run.",
+    "Windows-default test initially depended on TEMP, unsuitable for Linux CI; real OS temp captured before patch and long-root test changed to platform-neutral default-root injection.",
+    "Archive verifier intentionally sets TEMP within its owned workspace; simulated nested Windows verification test now accepts its documented short-root preflight refusal and asserts there is no long-project fallback. Production budget unchanged."
+  ],
+  "version_changed": false,
+  "os_registry_changed": false,
+  "old_archive_or_workspaces_deleted": false,
+  "full_archive_run": false,
+  "full_suite_run": false,
+  "new_model_calls": 0,
+  "focused": {
+    "command": [
+      "C:/Users/gilet/Documents/ChatGPT/SYSTEM LABS/products/airspace-operations/work/candidate-0.3.2/.venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_archive_paths.py"
+    ],
+    "cwd": "C:\\Users\\gilet\\AppData\\Local\\SystemLabAirspaceEngineering\\candidate-0.3.5",
+    "started_at": "2026-11-10T02:12:41.206625+00:00",
+    "seconds": 2.123,
+    "exit_code": 0,
+    "stdout": "....................                                                     [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.2\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.2\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n20 passed, 1 warning in 0.43s\n",
+    "stderr": "",
+    "scope": "Final focused tests including nested configured TEMP fail-closed behavior; actual main path wired with four stubbed gates. No real archive install/full suite/model ran."
+  }
+}

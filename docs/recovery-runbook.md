@@ -1,3 +1,9 @@
+## Isolated archive verification
+
+Run `python scripts/verify_archive.py` from the candidate source after packaging. Windows verification selects a unique child of the OS temporary directory. An existing absolute local directory may be selected with `--work-root`; unsafe or overlong roots fail before extraction. Unix keeps the project verification directory. The verifier records canonical paths and keeps installation, isolated database, temporary files and the full pytest suite in that workspace. It does not change Windows settings or the operator database. Preserve failed-run evidence and previous workspaces.
+
+Path preflight is a bounded layout check; it does not replace actual installation and tests. The implementation follows the [Python temporary-directory API](https://docs.python.org/3.13/library/tempfile.html) and accounts for [Windows path constraints](https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation), checked on 10 November 2026. A successful verification requires every original gate; a preflight result alone is insufficient.
+
 
 ## SQLite input validation in candidate0.3.7
 

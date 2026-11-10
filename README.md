@@ -1,3 +1,15 @@
+## Archive verification update
+
+The unpublished 0.3.7 candidate also repairs the default Windows archive verification path. The complete installation, CLI, empty API and unfiltered pytest checks remain required. An explicit private work root is optional; paths and isolated child configuration are recorded. Existing Prepared artifacts and published releases remain unchanged. Final-source and actual default-run evidence define the result; focused helper tests alone do not establish installation success.
+
+## Restore validation checkpoint, 9 November 2026
+
+The 0.3.7 repair is implemented at `bfc3c9627226e9e73d419a06406946f71f8ae825`. Missing or invalid SQLite backups now fail before target creation. Existing targets were already refused; no ordinary existing-target overwrite was observed. Read-only input validation, exclusive target creation and guarded cleanup passed 15 focused regressions. The Windows source suite passed 598 tests with 21 skipped; the interface passed 205. The first remote engineering job passed 599 Linux tests with 20 skipped, 19 PostgreSQL checks and actual containers, worker and restoration.
+
+A real existing engineering backup was restored through the new CLI and read through the API and browser. The 20 records and two tasks are unchanged; the preview audit51 includes only two verification sign-ins. No model call, training or operational record was added. The primary remains 0.3.5 with valid audit49.
+
+GitHub failed internally before the publisher job; one full retry failed internally before jobs. The first engineering success is not a completed release. The default Windows archive verifier also failed during nested extraction with WinError206; a separate short-path check is recorded without waiving that failure. Published software remains 0.3.6, the three Hugging Face presentations remain at 0.3.6, and System Lab remains version103. A new local package is Prepared with a verified short-path Windows installation; its default nested verifier remains failed with WinError206. No new public candidate is claimed. Original acceptance, stable release and operational acceptance remain false. Read `improvement/cycles/2026-11-09T142608Z-restore-validation.json` and `publication/status.json`. Next: recheck platform recovery and finish the unchanged pipeline and independent downloads before publication or primary promotion. Earlier sections below are historical.
+
 ## Development candidate 0.3.7-rc.1
 
 0.3.7-rc.1 is an unpublished development candidate for CLI restore input validation. A missing SQLite backup path can otherwise be created as an empty database and accepted as a restore source, producing an empty target with a misleading success report. Existing target files are already refused; this issue concerns the missing input and false success for a new target. The repair is being verified separately; no new source-suite, interface, container, archive or operational acceptance result is claimed here.

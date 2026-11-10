@@ -1,3 +1,7 @@
+# Release 0.3.7 continuation
+
+The unpublished candidate now also addresses the default Windows archive-verification path. The verifier must select a unique isolated workspace, check actual resolved path lengths and run its full installation, CLI, empty API and pytest checks there. An optional work root must be explicit and validated. Test filters, OS settings, operator policy and publication gates are unchanged. Actual final-source receipts are required; the earlier bfc source and Prepared archive remain historical evidence.
+
 # Release 0.3.7-rc.1
 
 This is an unpublished development candidate for safer CLI restore source validation. Original specification acceptance, stable release and operational acceptance remain false.

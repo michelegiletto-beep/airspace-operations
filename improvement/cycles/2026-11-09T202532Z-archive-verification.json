@@ -1,0 +1,47 @@
+{
+  "cycle_id": "2026-11-09T202532Z-archive-verification",
+  "triggered_at": "2026-11-09T20:25:32.036Z",
+  "resumed_at": "2026-11-10T02:11:13.371082+00:00",
+  "host_interruption": "The clock advanced from November9 20:25 to November10 02:07 during a short inspection; this is an interruption, not continuous active work. Conservative checkpoint by02:43UTC.",
+  "state": "Reviewed development source; actual default execution and exact-source release gates pending",
+  "candidate": "0.3.7-rc.1",
+  "published_version": "0.3.6-rc.1",
+  "primary_version": "0.3.5-rc.1",
+  "base_source": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+  "documentation_main": "99887e1395deeeeef5c9c2f0b670326a96748f2c",
+  "issue": "The default archive verifier extracts under the already long project runtime path and fails with WinError206. The earlier short-path run did not repair that default workflow.",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-04",
+    "ASO-22-02",
+    "ASO3-010"
+  ],
+  "implementation_scope": "Select and preflight a unique isolated verification workspace, retain full installation and tests, record actual paths, preserve operator environment and old runs. No OS settings or approval changes.",
+  "prior_037_archive_preserved": {
+    "bytes": 17621961,
+    "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+    "source": "bfc3c9627226e9e73d419a06406946f71f8ae825",
+    "state": "Prepared; not published"
+  },
+  "prior_platform_failures_retained": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "original_requirement_texts_or_statuses_changed": false,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "retrospective": "Pending actual default-script execution and source-specific gates. Unit helper results alone must not be treated as a complete archive run.",
+  "next_bounded_prompt": "Finish the default archive-verifier path repair and review actual main integration. Run the unfiltered suite, actual clean archive installation and authenticated browser/API/persistence checks. Retry publication only on the final exact source through the unchanged gates, independently retrieve every release and presentation asset, preserve all previous releases and incomplete requirements. No more than two actual local-model calls or45 active minutes; checkpoint by02:43UTC after the interruption.",
+  "focused": {
+    "passed": 105,
+    "skipped": 1,
+    "warnings": 1
+  },
+  "path_tests": {
+    "passed": 20,
+    "warnings": 1
+  },
+  "review": "Initial main-wiring and nested-temp test defects were corrected before source submission; separate runtime review found no remaining blocker. This is software review, not certification."
+}

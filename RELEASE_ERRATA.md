@@ -1,3 +1,9 @@
+# SQLite restore input validation, 9 November 2026
+
+Frozen 0.3.6 and earlier CLI restore code can create an empty missing input file and a new empty target, then report success. Existing targets were already refused. Verify backup existence, checksum and expected Airspace schema before using an older command; keep the original audit key and object backups. No existing primary data loss was observed.
+
+The source repair is prepared at [bfc3c9627226e9e73d419a06406946f71f8ae825](https://github.com/michelegiletto-beep/airspace-operations/tree/bfc3c9627226e9e73d419a06406946f71f8ae825). It passed 15 focused regressions and independent software review. A separate short-path Windows archive installation passed. The default nested Windows archive verifier remains failed with WinError206, and two GitHub workflow attempts failed internally before publication. Version 0.3.7 is not a public release; published downloads remain 0.3.6. No release or operational acceptance gate was removed.
+
 # Release errata
 
 ## 0.1.0-rc.1

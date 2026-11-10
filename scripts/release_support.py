@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import re
+import sys
+import tempfile
 
 
 def current_version(root: Path) -> str:
@@ -32,7 +34,7 @@ def isolated_archive_environment(project: Path, inherited: dict[str, str]) -> di
     """Never let a standalone verification use an operator's database or identity."""
     environment = dict(inherited)
     for key in list(environment):
-        if key.startswith("AIRSPACE_OIDC_") or key in {
+        if key.startswith("AIRSPACE_") or key in {
             "AIRSPACE_DATABASE_URL", "AIRSPACE_TEST_POSTGRES_URL", "AIRSPACE_AUDIT_KEY",
             "AIRSPACE_AGENT_MODEL_DIR", "AIRSPACE_MODEL_DIR", "AIRSPACE_INFERENCE_TOKEN",
             "AIRSPACE_INITIAL_PASSWORD",
@@ -49,6 +51,53 @@ def isolated_archive_environment(project: Path, inherited: dict[str, str]) -> di
         PYTHONPATH=str(project / "backend"),
     )
     return environment
+
+
+def archive_workspace(root: Path, members: list[str], *, work_root: str | None = None,
+                      platform: str | None = None) -> tuple[Path, dict]:
+    """Choose one isolated workspace; never alter OS settings or remove old runs."""
+    platform = sys.platform if platform is None else platform
+    windows = platform == "win32"
+    if platform not in {"win32", "linux", "darwin"}:
+        raise ValueError("Unsupported archive verification platform")
+    for name in members:
+        if (not name or "\\" in name or ":" in name or PurePosixPath(name).is_absolute()
+                or PureWindowsPath(name).is_absolute() or ".." in PurePosixPath(name).parts):
+            raise ValueError("Unsafe archive member path")
+    if work_root is not None:
+        if not work_root.strip() or "\x00" in work_root:
+            raise ValueError("Work root must be an existing absolute private directory")
+        given = Path(work_root)
+        if not given.is_absolute() or (windows and (not PureWindowsPath(work_root).is_absolute()
+                or PureWindowsPath(work_root).drive.startswith("\\"))):
+            raise ValueError("Work root must be an absolute local directory")
+    else:
+        given = Path(tempfile.gettempdir()) if windows else root / "runtime/archive-verification"
+    for parent in (given, *given.parents):
+        if parent.is_symlink() or (hasattr(parent, "is_junction") and parent.is_junction()):
+            raise ValueError("Work root must not traverse symlinks or junctions")
+    if work_root is None and not windows:
+        given.mkdir(parents=True, exist_ok=True)
+    base = given.resolve(strict=True)
+    if not base.is_dir():
+        raise ValueError("Work root must be a directory")
+
+    def budget(destination: Path) -> dict:
+        paths = [destination / name for name in members]
+        # Include conservative installed-package and pytest/runtime suffix budgets.
+        paths.extend([destination / ("v" * 160), destination / ("t" * 200)])
+        maximum = max(len(str(path).encode("utf-16-le")) // 2 + 1 for path in paths)
+        if windows and maximum > 260:
+            raise ValueError("Windows archive path budget exceeds 260 UTF-16 units; choose a shorter --work-root")
+        return {"maximum_utf16_units_including_terminator": maximum,
+                "windows_legacy_budget": 260, "package_suffix_budget": 160,
+                "test_suffix_budget": 200, "scope": "Preflight layout budgets; actual full installation and tests still required"}
+
+    budget(base / "av-xxxxxxxx")
+    destination = Path(tempfile.mkdtemp(prefix="av-", dir=base)).resolve(strict=True)
+    return destination, {"work_root": str(base), "destination": str(destination),
+                         "selection": "explicit" if work_root is not None else "OS temporary directory" if windows else "project runtime",
+                         **budget(destination)}
 
 
 def github_payload_directory(root: Path, version: str, *, legacy: bool = False) -> Path:
