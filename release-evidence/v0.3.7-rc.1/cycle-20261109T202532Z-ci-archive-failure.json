@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-10T02:24:10.560Z",
+  "source": "8c7ed0cf343f83b197570e819d088ad3e9c09c4c",
+  "run": 42741567574,
+  "publisher_job": 129584492169,
+  "state": "Failed archive gate; no publication",
+  "source_tests": {
+    "passed": 619,
+    "skipped": 20
+  },
+  "postgresql_passed": 19,
+  "archive_tests": {
+    "passed": 618,
+    "failed": 1,
+    "skipped": 20
+  },
+  "failure": "Windows-simulation test catch branch statted an invalid single260character component on Linux and raised Errno36. The production path preflight correctly refused the long nested TEMP.",
+  "repair": "Fixture-only realistic nested components and owned directory-content snapshot; added explicit nested-TEMP case. Production guards unchanged.",
+  "focused_tests": {
+    "passed": 21,
+    "warnings": 1
+  },
+  "gate_waived": false
+}

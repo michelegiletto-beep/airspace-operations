@@ -11,11 +11,13 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from release_support import archive_workspace, isolated_archive_environment
 
 
-def test_windows_default_ignores_long_project_and_uses_short_os_temp(tmp_path, monkeypatch):
+@pytest.mark.parametrize("nested_temp", [False, True])
+def test_windows_default_ignores_long_project_and_uses_short_os_temp(tmp_path, monkeypatch, nested_temp):
     import tempfile
-    short = Path(tempfile.gettempdir()).resolve()
+    short = tmp_path.resolve() if nested_temp else Path(tempfile.gettempdir()).resolve()
     monkeypatch.setattr("release_support.tempfile.gettempdir", lambda: str(short))
-    project = tmp_path / ("long-project-" * 20)
+    project = tmp_path.joinpath(*(["long-project"] * 20))
+    before = {path.name for path in tmp_path.iterdir()}
     try:
         destination, plan = archive_workspace(project, ["airspace-operations/file.txt"], platform="win32")
     except ValueError as error:
@@ -23,8 +25,9 @@ def test_windows_default_ignores_long_project_and_uses_short_os_temp(tmp_path, m
         # directory. A second Windows verification may legitimately need an
         # explicit shorter root; it must fail closed rather than fall back.
         assert "shorter --work-root" in str(error)
-        assert not project.exists()
+        assert {path.name for path in tmp_path.iterdir()} == before
         return
+    assert not nested_temp, "The deliberately nested test temp must exercise preflight refusal"
     assert destination.parent == short
     assert plan["selection"] == "OS temporary directory"
     assert plan["maximum_utf16_units_including_terminator"] <= 260
