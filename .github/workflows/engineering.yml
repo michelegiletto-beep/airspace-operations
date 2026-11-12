@@ -50,6 +50,8 @@ jobs:
         run: uv run pytest -q
       - name: Build actual application and spatial database containers
         run: docker compose -f compose.yaml -f deploy/compose.ci.yaml build
+      - name: Reject incomplete database initialization
+        run: uv run python scripts/verify_database_readiness.py
       - name: Start and verify container health
         run: |
           docker compose -f compose.yaml -f deploy/compose.ci.yaml up -d --wait --wait-timeout 180

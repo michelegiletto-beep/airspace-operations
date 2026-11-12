@@ -153,7 +153,7 @@ def record_engineering(root, context, environment):
     result = json.loads(gh(["api", f"repos/{REPOSITORY}/actions/runs/{run_id}/jobs", "--paginate", "--slurp"]))
     jobs = [job for page in result for job in page["jobs"]]
     matches = [job for job in jobs if job["name"] == "containers-postgresql" and job["conclusion"] == "success" and job.get("head_sha") == context["sha"]]
-    required = {"Full software suite", "Build actual application and spatial database containers", "Start and verify container health", "Actual running container worker and authenticated API", "PostgreSQL extensions, concurrency and workflow isolation", "Actual PostgreSQL backup and restoration"}
+    required = {"Reject incomplete database initialization", "Full software suite", "Build actual application and spatial database containers", "Start and verify container health", "Actual running container worker and authenticated API", "PostgreSQL extensions, concurrency and workflow isolation", "Actual PostgreSQL backup and restoration"}
     if len(matches) != 1 or not required <= {step["name"] for step in matches[0]["steps"] if step["conclusion"] == "success"}:
         raise ValueError("Actual successful container, PostgreSQL, worker and restoration steps are required")
     from package_release import source_files

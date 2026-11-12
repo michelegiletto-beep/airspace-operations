@@ -1,0 +1,10 @@
+# Only the generated CI negative-test project uses this deliberate init fault.
+services:
+  database:
+    image: ${AIRSPACE_READINESS_IMAGE:?Built database image identity required}
+    ports: !reset []
+    volumes:
+      - type: bind
+        source: ${AIRSPACE_READINESS_FAILURE_SQL:?Isolated SQL fixture required}
+        target: /docker-entrypoint-initdb.d/002_extensions.sql
+        read_only: true
