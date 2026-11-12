@@ -1,0 +1,41 @@
+{
+  "cycle_id": "2026-11-12T161203Z-container-recheck",
+  "triggered_at": "2026-11-12T16:12:03.795Z",
+  "checkpoint_at": "2026-11-12T16:30:05.018015+00:00",
+  "previous_cycle": "improvement/cycles/2026-11-10T143515Z-publication-completion.json",
+  "published_candidate": "0.3.7-rc.1",
+  "frozen_source": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "handover_before_recheck": "c01872b039dd24f77c7438b239ec426e04519177",
+  "new_container_run": 43258128561,
+  "run_source": "1fe5ecf9164c9b031053ca0fb6ab785903aca937",
+  "software_suite": "Passed before actual image build; retain raw output",
+  "image_build": "Passed",
+  "container_health": "Failed: worker unhealthy at2026-11-12T16:25:57Z",
+  "skipped_after_failure": [
+    "Actual container worker/API verification",
+    "PostgreSQL integration",
+    "PostgreSQL restoration"
+  ],
+  "failure_log_sha256": "0c207e7066f9497e39e05a502466873bb51126efea8de9bac1add94725385d8c",
+  "failed_job_retry_requested": true,
+  "retry_completed_successfully": false,
+  "retry_state": "Requested; not yet verified",
+  "sqlite_primary": {
+    "version": "0.3.7-rc.1",
+    "status": "Healthy with separate actual browser/API/data receipt",
+    "records": 20,
+    "tasks": 2,
+    "audit_count": 50,
+    "audit_valid": true
+  },
+  "container_deployment_acceptance": "Blocked pending diagnosis and verified repair",
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_records_added": 0,
+  "release_assets_modified": false,
+  "retrospective": "Completed publication, exact downloads and guarded SQLite promotion. A fresh post-handover container run then exposed a worker startup health failure despite passing source tests and image build. Earlier successful container receipts remain dated and unchanged; they are not presented as a pass for this new run. One bounded retry is pending; no failed gate was waived.",
+  "next_bounded_prompt": "Investigate actual Docker worker health failure in CI 43258128561 on the unchanged 0.3.7 application code. One failed-job retry was requested; read its actual result before changing code. Collect worker/API stdout, healthcheck output, database readiness and startup timing before cleanup. Diagnose the root cause, reproduce it in an isolated deployment and repair the mechanism without weakening health checks or approval requirements. Preserve frozen 0.3.7 source/tag/assets and the healthy installed SQLite primary, its optional interpreter, policy, key, 20 records, 2 tasks and valid audit 50. Any software fix must be a distinct candidate with complete tests, containers/PostgreSQL/worker/restoration, installation, rights/secrets and publication gates. Keep stable/operational acceptance blocked until the failure is resolved. No model call is needed; no people contact, mail, purchases, aircraft commands or authority decisions. Maximum 45 active minutes and two actual model calls."
+}

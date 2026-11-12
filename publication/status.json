@@ -139,7 +139,7 @@
   },
   "local_model_calls_this_cycle": 0,
   "training_runs_this_cycle": 0,
-  "next_action": "Read this checkpoint, the separate actual primary browser receipt, publication/status.json and active-recovery.json. Primary 0.3.7 is installed from public source 62f507; cutover preserved audit 49 and the one real verification sign-in produced valid audit 50, with all 20 records and 2 tasks preserved. Never run historical recovery or promotion mains. For the next bounded improvement, simplify the existing project page overview for an inexperienced civilian UAS operator: lead with supported work and installation, move detailed restore mechanics into the current release section, retain every previous download and evidence link, remove promotional or generic AI phrasing, and keep exact acceptance limitations. Review the actual app alongside the page, preserve the animated companion and user motion preferences, and select one concrete guided-task friction if it can be safely resolved in the same bounded run. Verify browser to API to persistent data; use an isolated real-record copy for any actual local-model or typed-draft exercise. Maximum 45 active minutes and two actual model calls; no training or model-quality claim without real evidence. Preserve tenant/current-actor/version checks, approval requirements, all 198 requirement texts/statuses, source rights and incomplete original acceptance. Publish a distinct software candidate only for actual software changes after unchanged gates; independently retrieve every changed public artifact. No mail, people contact, purchases, aircraft actions, authority decisions or communication tools.",
+  "next_action": "Investigate actual Docker worker health failure in CI 43258128561 on the unchanged 0.3.7 application code. One failed-job retry was requested; read its actual result before changing code. Collect worker/API stdout, healthcheck output, database readiness and startup timing before cleanup. Diagnose the root cause, reproduce it in an isolated deployment and repair the mechanism without weakening health checks or approval requirements. Preserve frozen 0.3.7 source/tag/assets and the healthy installed SQLite primary, its optional interpreter, policy, key, 20 records, 2 tasks and valid audit 50. Any software fix must be a distinct candidate with complete tests, containers/PostgreSQL/worker/restoration, installation, rights/secrets and publication gates. Keep stable/operational acceptance blocked until the failure is resolved. No model call is needed; no people contact, mail, purchases, aircraft commands or authority decisions. Maximum 45 active minutes and two actual model calls.",
   "development_candidate": {
     "version": "0.3.7-rc.1",
     "state": "Published GitHub 0.3.7 independently retrieved; all three presentation destinations independently retrieved",
@@ -200,5 +200,13 @@
       "http_status": 200,
       "matches_public_digest": true
     }
+  },
+  "current_container_verification": {
+    "state": "Failed; one retry requested and not yet verified",
+    "run_id": 43258128561,
+    "source": "1fe5ecf9164c9b031053ca0fb6ab785903aca937",
+    "failed_step": "Start and verify container health: Docker worker unhealthy",
+    "container_deployment_acceptance": "Blocked",
+    "evidence": "improvement/cycles/2026-11-12T161203Z-container-recheck.json"
   }
 }
