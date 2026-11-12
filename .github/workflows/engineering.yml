@@ -71,6 +71,9 @@ jobs:
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database createdb -U airspace_admin -O airspace airspace_restoration
           docker compose -f compose.yaml -f deploy/compose.ci.yaml exec -T database pg_restore -U airspace_admin --dbname=airspace_restoration --exit-on-error --single-transaction /tmp/airspace.dump
           uv run python scripts/verify_postgres_recovery.py verify
+      - name: Collect isolated container failure diagnostics
+        if: failure()
+        run: uv run python scripts/collect_container_diagnostics.py
       - name: Stop this isolated verification deployment
         if: always()
         run: docker compose -f compose.yaml -f deploy/compose.ci.yaml down -v --remove-orphans

@@ -1,0 +1,34 @@
+{
+  "cycle_id": "2026-11-12T221300Z-worker-startup",
+  "triggered_at": "2026-11-12T22:13:00.144Z",
+  "started_at": "2026-11-12T22:16:09.065090+00:00",
+  "deadline": "2026-11-12T22:58:00Z",
+  "state": "Diagnosing repeated actual Docker worker startup-health failure",
+  "base_main": "f44aa243588f02775290a4b6392ecdf5b8c78219",
+  "frozen_published_version": "0.3.7-rc.1",
+  "frozen_source": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "engineering_checkout": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\candidate-0.3.8",
+  "primary_unchanged": true,
+  "original_failed_run": 43258128561,
+  "latest_failed_retry_job": 131325402087,
+  "observed": "Source suite620passed/20skipped and image builds succeeded; worker failed health roughly2seconds after start. Actual worker logs/health entries were discarded by cleanup; no root cause is yet established.",
+  "milestones": [
+    "Preserve actual failure logs and collect redacted container diagnostics before cleanup without changing gates.",
+    "Use the observed worker failure to reproduce and implement a justified fix, with independent negative tests.",
+    "Run actual source/container/PostgreSQL/worker/restoration and clean installation gates; prepare distinct0.3.8onlyifthosepass.",
+    "Publish only verified permitted artifacts, independently retrieve changed destinations and retain exact next checkpoint if time is insufficient."
+  ],
+  "local_compute": "No Docker/Podman/WSL available; use existing authorised GitHub Linux runner for isolated actual containers. Do not install infrastructure or change local services.",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-20-04",
+    "ASO-22-02",
+    "ASO3-010"
+  ],
+  "model_calls": 0,
+  "training_runs": 0,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "next_action": "Finish and test the bounded diagnostic collector, push only a diagnostic development branch, inspect actual container failure evidence and repair the demonstrated cause."
+}
