@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-12T16:15:40.520503+00:00",
+  "success": true,
+  "version": "0.3.7-rc.1",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "source_files_verified": 1179,
+  "api": {
+    "status": "ok",
+    "version": "0.3.7-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "worker": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 1.133944
+  },
+  "before": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "after": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "all_database_tables_unchanged": true,
+  "audit_key_unchanged": true,
+  "objects_and_sources_unchanged": true,
+  "operator_policy_changed": false,
+  "idempotent_schema_migration_exit": 0,
+  "published_archive_sha256": "6efa4bec842092e8e87bf75b10514e009336c5cc35b68ca35f3aaaf16cdf7fd3",
+  "published_archive_bytes": 17656358,
+  "public_manifest_sha256": "7b7417c8139b322bd9fc52c2fbd97a49cb352f3e987faeb177a87dbff7ebe05d",
+  "default_published_archive_verified": true,
+  "new_primary_model_calls": 0,
+  "training_runs": 0,
+  "operational_acceptance": false,
+  "sanitized_public_receipt": true,
+  "scope": "Actual primary cutover/API/persistence; no new primary browser review"
+}

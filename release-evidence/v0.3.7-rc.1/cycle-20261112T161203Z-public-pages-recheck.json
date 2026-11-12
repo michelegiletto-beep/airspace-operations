@@ -1,0 +1,381 @@
+{
+  "at": "2026-11-12T16:14:00.382089+00:00",
+  "success": true,
+  "state": "Independently Retrieved",
+  "version": "0.3.7-rc.1",
+  "application_source": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "site_version": 104,
+  "site_source": "7cc13c7dfd65a8f99089b21fac0981484e154676",
+  "deployment_id": "appgdep_6af32e6077fc8191a5e0815c34bd2a43",
+  "site_page_verified": true,
+  "site_authored_sha256": "d4663cab05bb196a14995c193acb9dc13a2000fe335dda83f23ca2b34732bdd7",
+  "site_exact_assets": [
+    {
+      "name": "ci-verification.json",
+      "bytes": 24615,
+      "sha256": "0b739a02a20f79e7e561b7e06fba6808638c100d922b90a0ca3c620ac7d4c852",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/ci-verification.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/ci-verification.json",
+      "verified": true
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/LICENSE",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/LICENSE",
+      "verified": true
+    },
+    {
+      "name": "release-gates.json",
+      "bytes": 1046,
+      "sha256": "9304ea134f8563c697c1d0661a021777cec5edb07ca72ed2b7155c9a1955934f",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/release-gates.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/release-gates.json",
+      "verified": true
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "bytes": 155832,
+      "sha256": "7b7417c8139b322bd9fc52c2fbd97a49cb352f3e987faeb177a87dbff7ebe05d",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/RELEASE_PROVENANCE.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/RELEASE_PROVENANCE.json",
+      "verified": true
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "01e829beaf21d704a22c5abb86d05e44847e4a3a9d5802167764119c7a9f4d63",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/SBOM.cdx.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/SBOM.cdx.json",
+      "verified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "6517d1bc4bed8f1069664aba22a395b3db26d1b241331b1f635b87fab4c9a865",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/SHA256SUMS.txt",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/SHA256SUMS.txt",
+      "verified": true
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "bytes": 9553,
+      "sha256": "a015ee71d633c93110a7cd73d908ecb14263f5b37011d868a8eeceabde8d2b9b",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/standalone-archive-verification.json",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/standalone-archive-verification.json",
+      "verified": true
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "7c8354fdf9d47973341c57f9dcba94230fa4e4597ff205559011ff0707e65595",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/releases/0.3.7-rc.1/THIRD_PARTY_NOTICES.md",
+      "http_status": 200,
+      "matches_public_digest": true,
+      "path": "/airspace-operations/releases/0.3.7-rc.1/THIRD_PARTY_NOTICES.md",
+      "verified": true
+    },
+    {
+      "path": "/airspace-operations/media/0.3.7-rc.1/restored-tasks.jpg",
+      "bytes": 35868,
+      "sha256": "7ddd8b4a761aaa6c7a46da90ae51fe22f0a7be0a2fdb7c623d26ad90e4edb973",
+      "width": 470,
+      "height": 766,
+      "transformation": "None; exact independently PIL-verified native JPEG",
+      "url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/airspace-operations/media/0.3.7-rc.1/restored-tasks.jpg",
+      "verified": true
+    }
+  ],
+  "new_zip_hosting": "Exact independently retrieved GitHub release; previous Site files preserved",
+  "external_release_assets": [
+    {
+      "name": "System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+      "bytes": 17656358,
+      "sha256": "6efa4bec842092e8e87bf75b10514e009336c5cc35b68ca35f3aaaf16cdf7fd3",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.7-rc.1/System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+      "http_status": 200,
+      "matches_public_digest": true
+    }
+  ],
+  "space_live_html_verified": true,
+  "space_html_sha256": "fa7d96d18512762007e9232301eb0361486e5de0e6790561ae4fae8340940a98",
+  "space_live_assets_verified": true,
+  "space_live_asset_count": 8,
+  "space_live_assets": [
+    {
+      "path": "styles.css",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/styles.css",
+      "expected_bytes": 1800,
+      "expected_sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "references": [
+        {
+          "element": "link",
+          "attribute": "href",
+          "value": "styles.css"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 1800,
+      "sha256": "dc8f46a91a6a685740e6d1a870508ff62d35b0a0ddece22f9fbdd834b6195d16",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/styles.css"
+        },
+        "redirects": []
+      }
+    },
+    {
+      "path": "media/restored-tasks037.jpg",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/restored-tasks037.jpg",
+      "expected_bytes": 35868,
+      "expected_sha256": "7ddd8b4a761aaa6c7a46da90ae51fe22f0a7be0a2fdb7c623d26ad90e4edb973",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/restored-tasks037.jpg"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 35868,
+      "sha256": "7ddd8b4a761aaa6c7a46da90ae51fe22f0a7be0a2fdb7c623d26ad90e4edb973",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/media/restored-tasks037.jpg"
+        },
+        "redirects": []
+      }
+    },
+    {
+      "path": "media/confirmation-review.jpg",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/confirmation-review.jpg",
+      "expected_bytes": 35457,
+      "expected_sha256": "a74f0ed613b5ac341e93e841d4d7aecb488b573a7da7f2e9598741abe1000426",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/confirmation-review.jpg"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 35457,
+      "sha256": "a74f0ed613b5ac341e93e841d4d7aecb488b573a7da7f2e9598741abe1000426",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/media/confirmation-review.jpg"
+        },
+        "redirects": []
+      }
+    },
+    {
+      "path": "media/workflow-context-mobile.jpg",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/workflow-context-mobile.jpg",
+      "expected_bytes": 32817,
+      "expected_sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/workflow-context-mobile.jpg"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 32817,
+      "sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/media/workflow-context-mobile.jpg"
+        },
+        "redirects": []
+      }
+    },
+    {
+      "path": "media/draft-continuity-mobile.jpg",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/draft-continuity-mobile.jpg",
+      "expected_bytes": 42148,
+      "expected_sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/draft-continuity-mobile.jpg"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 42148,
+      "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/media/draft-continuity-mobile.jpg"
+        },
+        "redirects": []
+      }
+    },
+    {
+      "path": "media/task-recovery-mobile.jpg",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/task-recovery-mobile.jpg",
+      "expected_bytes": 35896,
+      "expected_sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/task-recovery-mobile.jpg"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 35896,
+      "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/media/task-recovery-mobile.jpg"
+        },
+        "redirects": []
+      }
+    },
+    {
+      "path": "media/application-tasks.png",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/application-tasks.png",
+      "expected_bytes": 424587,
+      "expected_sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/application-tasks.png"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 424587,
+      "sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "us.aws.cdn.hf.co",
+          "path": "/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733"
+        },
+        "redirects": [
+          {
+            "status": 302,
+            "from": {
+              "scheme": "https",
+              "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+              "path": "/media/application-tasks.png"
+            },
+            "to": {
+              "scheme": "https",
+              "host": "us.aws.cdn.hf.co",
+              "path": "/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733"
+            }
+          }
+        ]
+      },
+      "pinned_provider_transport": {
+        "pinned_repo_head": "28dd24bf8d84e83a86af2e918f58969dc8d47b8f",
+        "provider_host": "us.aws.cdn.hf.co",
+        "provider_path": "/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733",
+        "pinned_repository_url": "https://huggingface.co/spaces/Magic51/system-lab-airspace-evaluation/resolve/28dd24bf8d84e83a86af2e918f58969dc8d47b8f/media/application-tasks.png",
+        "pinned_bytes": 424587,
+        "pinned_sha256": "d9dc642caa8d4c01da331fb5ca91857b9b7664b8d5e901a928889965bba3a4d7",
+        "pinned_transport": {
+          "http_status": 200,
+          "final": {
+            "scheme": "https",
+            "host": "us.aws.cdn.hf.co",
+            "path": "/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733"
+          },
+          "redirects": [
+            {
+              "status": 302,
+              "from": {
+                "scheme": "https",
+                "host": "huggingface.co",
+                "path": "/spaces/Magic51/system-lab-airspace-evaluation/resolve/28dd24bf8d84e83a86af2e918f58969dc8d47b8f/media/application-tasks.png"
+              },
+              "to": {
+                "scheme": "https",
+                "host": "us.aws.cdn.hf.co",
+                "path": "/xet-bridge-us/6ae1d850aa85985ef6982f0b/ac4cb92fb36aa90bc63673ed62cd54cc89a5df3079d8403823842c5de1f51733"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "media/operations-permissions-mobile.jpg",
+      "url": "https://magic51-system-lab-airspace-evaluation.static.hf.space/media/operations-permissions-mobile.jpg",
+      "expected_bytes": 35517,
+      "expected_sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "references": [
+        {
+          "element": "img",
+          "attribute": "src",
+          "value": "media/operations-permissions-mobile.jpg"
+        }
+      ],
+      "http_status": 200,
+      "bytes": 35517,
+      "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+      "verified": true,
+      "transport": {
+        "http_status": 200,
+        "final": {
+          "scheme": "https",
+          "host": "magic51-system-lab-airspace-evaluation.static.hf.space",
+          "path": "/media/operations-permissions-mobile.jpg"
+        },
+        "redirects": []
+      }
+    }
+  ],
+  "space_asset_scope": "Direct URLs from expected staged HTML remain same-origin and inside the resolved pack. External authored references and traversal fail. The sole provider transport exception is the exact observed HTTPS application-tasks.png CDN object, independently reached through the pinned current Space repository resolve and verified byte-for-byte; all other external redirects fail. Redirect receipts exclude signed query values.",
+  "strict_authored_negative_controls": true,
+  "model_calls": 0,
+  "training_runs": 0,
+  "remote_mutations": false,
+  "operational_acceptance": false,
+  "capture_scope": "Retained earlier037restore-review JPEG; no fresh final-verifier/Windows-installation capture implied."
+}

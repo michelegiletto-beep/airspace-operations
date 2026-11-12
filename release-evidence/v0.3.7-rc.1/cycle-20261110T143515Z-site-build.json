@@ -1,0 +1,14 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-publishing",
+  "started_at": "2026-11-10T14:41:14.183410+00:00",
+  "seconds": 14.004,
+  "exit_code": 0,
+  "stdout": "\n> giletto-systems-lab@0.1.0 build\n> node scripts/build-verified.mjs\n\n\n  vinext build  (Vite 8.0.13)\n\n[1/5] analyze client references...\n\u001b[2K\ntransforming...\u2713 143 modules transformed.\nrendering chunks...\n\u2713 built in 2.52s\n[2/5] analyze server references...\n\u001b[2K\ntransforming...\u2713 92 modules transformed.\nrendering chunks...\n\u2713 built in 251ms\n[3/5] build rsc environment...\n\u001b[2K\ntransforming...\u2713 149 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u2713 built in 1.43s\n[4/5] build client environment...\n\u001b[2K\ntransforming...\u2713 209 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u2713 built in 1.44s\n[5/5] build ssr environment...\n\u001b[2K\ntransforming...\u2713 98 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u2713 built in 363ms\n\u001b[0m\n  Route (app)\n  \u250c ? /                                    \n  \u251c ? /eora-embodied-operations-allocation \n  \u251c ? /mecyron-physical-ai-uptime          \n  \u251c ? /mecyron-physical-ai-uptime/audit    \n  \u251c ? /mecyron-physical-ai-uptime/dashboard\n  \u251c ? /mecyron-physical-ai-uptime/research \n  \u251c ? /research-lab                        \n  \u251c ? /scilla-passive                      \n  \u2514 ? /scilla-passive/validation           \n\n  ? Unknown\n\n  ? Some routes could not be classified. vinext currently uses static analysis\n    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.\n    Automatic classification will be improved in a future release.\n\n  Build complete. Run `vinext start` to start the production server.\n\n",
+  "stderr": "(node:29076) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n(node:29076) ExperimentalWarning: glob is an experimental feature and might change at any time\n",
+  "scope": "Only focused Airspace tests/build; no full global Site baseline rerun, content edit or publication."
+}

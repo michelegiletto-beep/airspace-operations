@@ -1,0 +1,89 @@
+{
+  "cycle_id": "2026-11-10T143515Z-publication-completion",
+  "triggered_at": "2026-11-10T14:35:15Z",
+  "checkpoint_at": "2026-11-12T16:20:35.044868+00:00",
+  "state": "Published GitHub 0.3.7 independently retrieved; all three presentation destinations independently retrieved",
+  "candidate": "0.3.7-rc.1",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "ci_run": 42783868306,
+  "published_version": "0.3.7-rc.1",
+  "primary_version": "0.3.7-rc.1",
+  "previous_cycle": "improvement/cycles/2026-11-09T202532Z-archive-verification.json",
+  "requirements": [
+    "ASO-05-04",
+    "ASO-05-06",
+    "ASO-20-04",
+    "ASO-22-02",
+    "ASO3-009",
+    "ASO3-010"
+  ],
+  "actual_final_release": {
+    "source": {
+      "passed": 620,
+      "skipped": 20
+    },
+    "interface": {
+      "passed": 205,
+      "skipped": 0
+    },
+    "archive": {
+      "passed": 620,
+      "skipped": 20
+    },
+    "scope": "Actual final-source and separately installed published archive receipts"
+  },
+  "actual_public_windows": {
+    "passed": 619,
+    "skipped": 21
+  },
+  "full_workflow_succeeded": true,
+  "public_receipts": [
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-browser-api-persistence.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-default-public-windows.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-exact-source-ci.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-huggingface.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-primary-promotion.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-provider-guard-checks.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-downloads.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-pages.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-site-build.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-site-native.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-site-tests.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261112T161203Z-primary-browser.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261112T161203Z-public-pages-recheck.json",
+    "release-evidence/v0.3.7-rc.1/cycle-20261112T161203Z-publication-recheck.json"
+  ],
+  "github_independently_retrieved": true,
+  "huggingface_independently_retrieved": true,
+  "system_lab_independently_retrieved": true,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "primary_changed": true,
+  "primary_promotion_receipt": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-primary-promotion.json",
+  "new_primary_browser_review_claimed": false,
+  "original_specification_sha256": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+  "original_requirement_texts_or_statuses_changed": false,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "preserved_failure_scope": "Earlier WinError206, Linux Errno36 fixture failure, notes-heading rejection, premature404 and skipped manual publisher remain in their original immutable cycle/receipts.",
+  "retrospective": "Exact-source CI and actual publication are distinguished from anonymous asset retrieval, Windows archive execution and each presentation destination. The new metadata replaces stale source URLs and workflow flags only when matching receipts pass validation. Historical Prepared packages and all failures stay explicit. No current model, training, operator policy or primary-data change is inferred from publishing. An optional primary version update requires a separate sanitized actual cutover receipt; preview rendering is never treated as new primary browser proof.",
+  "next_bounded_prompt": "Read this checkpoint, the separate actual primary browser receipt, publication/status.json and active-recovery.json. Primary 0.3.7 is installed from public source 62f507; cutover preserved audit 49 and the one real verification sign-in produced valid audit 50, with all 20 records and 2 tasks preserved. Never run historical recovery or promotion mains. For the next bounded improvement, simplify the existing project page overview for an inexperienced civilian UAS operator: lead with supported work and installation, move detailed restore mechanics into the current release section, retain every previous download and evidence link, remove promotional or generic AI phrasing, and keep exact acceptance limitations. Review the actual app alongside the page, preserve the animated companion and user motion preferences, and select one concrete guided-task friction if it can be safely resolved in the same bounded run. Verify browser to API to persistent data; use an isolated real-record copy for any actual local-model or typed-draft exercise. Maximum 45 active minutes and two actual model calls; no training or model-quality claim without real evidence. Preserve tenant/current-actor/version checks, approval requirements, all 198 requirement texts/statuses, source rights and incomplete original acceptance. Publish a distinct software candidate only for actual software changes after unchanged gates; independently retrieve every changed public artifact. No mail, people contact, purchases, aircraft actions, authority decisions or communication tools.",
+  "execution_interruptions": [
+    "Compute usage interrupted this run around 10 November 14:55; resumed 12 November 16:12. Interruption was not active engineering."
+  ],
+  "resumed_at": "2026-11-12T16:12:03.795Z",
+  "primary_browser_evidence": "release-evidence/v0.3.7-rc.1/cycle-20261112T161203Z-primary-browser.json",
+  "actual_primary_browser_audit": 50,
+  "verification_failure_and_repair": {
+    "failure_at": "2026-11-10T14:47:52Z",
+    "failure": "The stricter live Space media check rejected an external redirect for historical application-tasks.png. Asset bytes were not corrupted.",
+    "preserved_private_failure_sha256": "795d59bbe18df691fd4e0d6eebb783ecb3e2feea699d31032293eb1281a54ec0",
+    "investigation": "Both the pinned repository and static Space resolved to the same HF-owned HTTPS CDN object and exact expected424587bytes/SHA256.",
+    "repair": "Retain same-origin authored references and exact size/hash checks. Permit only the proven provider host and object path bound to the pinned Space revision; reject unrelated hosts, objects, traversal and extra hops before network follow. Signed query values are excluded from receipts.",
+    "isolated_negative_checks": 19,
+    "isolated_checks_receipt": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-provider-guard-checks.json",
+    "actual_full_verifier_pass": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-pages.json",
+    "fresh_full_verifier_pass": "release-evidence/v0.3.7-rc.1/cycle-20261112T161203Z-public-pages-recheck.json"
+  }
+}

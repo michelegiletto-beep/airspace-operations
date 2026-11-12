@@ -1,0 +1,108 @@
+{
+  "at": "2026-11-10T14:53:52.688155+00:00",
+  "scope": "Isolated extracted guard definitions only. All network reads mocked or not invoked; no full verifier execution, operational record, model call or public mutation.",
+  "helper_sha256": "1e8c90df76d96fe8028207b0dcb9869fb868363d3f2a17c79870119a21c87eb3",
+  "passed": 19,
+  "failed": 0,
+  "results": [
+    {
+      "case": "same-origin staged style/image/poster/srcset references",
+      "expected": "allow",
+      "passed": true
+    },
+    {
+      "case": "external authored image",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "path traversal",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "encoded traversal",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "external base URL",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "encoded backslash traversal",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "exact pinned provider object redirect",
+      "expected": "allow",
+      "passed": true
+    },
+    {
+      "case": "external host",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "provider object mismatch",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "HTTP downgrade",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "provider without pinned binding",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "encoded alternate object route",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "provider URL credentials",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "second redirect exceeds hop bound",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "unreviewed pinned Space head",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "signed query values excluded from receipt chain",
+      "expected": "redacted",
+      "passed": true
+    },
+    {
+      "case": "pinned repository bytes and exact object jointly verified",
+      "expected": "allow",
+      "passed": true
+    },
+    {
+      "case": "pinned repository byte mismatch",
+      "expected": "reject before network",
+      "passed": true
+    },
+    {
+      "case": "pinned resolve object mismatch",
+      "expected": "reject before network",
+      "passed": true
+    }
+  ],
+  "AST_valid": true,
+  "full_helper_executed": false,
+  "network_requests": 0,
+  "public_mutations": false
+}

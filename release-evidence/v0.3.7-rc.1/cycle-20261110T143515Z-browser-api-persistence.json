@@ -1,0 +1,123 @@
+{
+  "at": "2026-11-10T14:47:02.223172+00:00",
+  "success": true,
+  "phase": "post-browser",
+  "version": "0.3.7-rc.1",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "source_root": "C:\\Users\\gilet\\AppData\\Local\\SLAV\\037p\\airspace-operations",
+  "archive_sha256": "6efa4bec842092e8e87bf75b10514e009336c5cc35b68ca35f3aaaf16cdf7fd3",
+  "health": {
+    "status": "ok",
+    "version": "0.3.7-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "primary": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 49,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "candidate": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 50,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "primary_all_tables_unchanged": true,
+  "candidate_protected_tables_unchanged": [
+    "fleet_reservations",
+    "idempotency",
+    "jobs",
+    "record_versions",
+    "records",
+    "resource_locks",
+    "resource_reservations",
+    "schema_versions",
+    "sharing_agreements",
+    "users"
+  ],
+  "only_additional_candidate_actions": [
+    "identity.login"
+  ],
+  "expected_existing_user_browser_signins": 1,
+  "audit_key_unchanged": true,
+  "worker_started": false,
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "operational_writes": false,
+  "browser_rendering_verified_by_this_command": false,
+  "state": "Verified isolated actual-public-source browser, API and persistent data",
+  "browser_observations": {
+    "performed_by": "Root through the supported browser UI; independently retained native frames support the motion comparison",
+    "existing_user_browser_signins": 1,
+    "operational_record_count_displayed": 0,
+    "create_mission_control_disabled": true,
+    "assistant_tasks_tab_label": "Tasks (1)",
+    "actual_saved_task_rows": 2,
+    "saved_task_states": [
+      "Completed",
+      "Open"
+    ],
+    "same_task_titles_and_states_after_app_reload_and_reopen": true,
+    "task_or_conversation_sent_or_saved": false,
+    "model_generation_or_training_requested": false,
+    "raw_dom_account_email_and_credentials_included": false
+  },
+  "normal_motion": {
+    "dom_renderer_data_motion_reported_by_root": "animated",
+    "native_frames": [
+      {
+        "name": "public-install-tasks-a.jpg",
+        "sha256": "2a0119a10a69ad07bfc76ffaf19a5d7ce16c2068619ec9f707fbded1dc4662f2",
+        "format": "JPEG",
+        "width": 470,
+        "height": 766,
+        "publication": "Retained privately outside release payloads"
+      },
+      {
+        "name": "public-install-tasks-b.jpg",
+        "sha256": "4dc8f8c84a01b98dde96ea750c23bbd42e63b588d927a76ffcd5fdf74274642c",
+        "format": "JPEG",
+        "width": 470,
+        "height": 766,
+        "publication": "Retained privately outside release payloads"
+      }
+    ],
+    "full_frame_difference_bbox": [
+      0,
+      0,
+      113,
+      208
+    ],
+    "full_frame_changed_pixels": 5925,
+    "companion_crop_difference_bbox_reported_by_root": [
+      22,
+      15,
+      88,
+      81
+    ],
+    "motion_preferences_changed": false,
+    "new_paused_or_reduced_motion_pixel_claim": false
+  },
+  "browser_rendering_verified_by_root": true,
+  "scope": "Root observed the actual installed public 0.3.7 UI. This command independently compared native JPEG frames and the post-browser read-only persistence checkpoint. No private DOM, account email, credentials, task bodies or operational evidence is released."
+}

@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-12T16:13:12.744797+00:00",
+  "success": true,
+  "version": "0.3.7-rc.1",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "release_id": 440117067,
+  "github_asset_metadata_unchanged": 9,
+  "hf_pinned_heads": {
+    "model": "acb87049183b9721de9d7d40a80bda8fb31af4f8",
+    "dataset": "e8401f7aa61a2f8bef1ee512c89deea5f77d2dbd",
+    "space": "28dd24bf8d84e83a86af2e918f58969dc8d47b8f"
+  },
+  "hf_exact_files": 22,
+  "site_exact_assets": 9,
+  "expected_default_branch": "6d17189637b45909b66f55061fbbc350cdd79ca3",
+  "primary_health": {
+    "status": "ok",
+    "version": "0.3.5-rc.1",
+    "deployment_profile": "sqlite-portable",
+    "operational_acceptance": false
+  },
+  "scope": "Fresh resumed check of published identity, asset metadata, all pinned HF bytes and nine Site asset bytes. Original full source/Windows/Site/Space proofs remain separately dated November10.",
+  "new_model_calls": 0,
+  "training_runs": 0,
+  "no_remote_mutations": true,
+  "interruption": "Session stopped at the compute usage limit aroundNovember10 14:55 and resumedNovember12 16:12; the interruption was not active engineering."
+}

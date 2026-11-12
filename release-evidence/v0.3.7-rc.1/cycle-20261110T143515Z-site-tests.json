@@ -1,0 +1,20 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "tests/airspace-operations.test.mjs",
+    "tests/airspace-operations032.test.mjs",
+    "tests/airspace-operations033.test.mjs",
+    "tests/airspace-operations034.test.mjs",
+    "tests/airspace-operations035.test.mjs",
+    "tests/airspace-operations036.test.mjs",
+    "tests/airspace-operations037.test.mjs"
+  ],
+  "cwd": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\work\\site-publishing",
+  "started_at": "2026-11-10T14:41:14.183159+00:00",
+  "seconds": 1.459,
+  "exit_code": 0,
+  "stdout": "TAP version 13\n# Subtest: Airspace belongs to the real catalogue and uses an authentic capture card\nok 1 - Airspace belongs to the real catalogue and uses an authentic capture card\n  ---\n  duration_ms: 12.113\n  ...\n# Subtest: 0.3 page uses verified release downloads, frozen source links and real captures\nok 2 - 0.3 page uses verified release downloads, frozen source links and real captures\n  ---\n  duration_ms: 55.2474\n  ...\n# Subtest: Previous release bytes and checksum assets remain unchanged\nok 3 - Previous release bytes and checksum assets remain unchanged\n  ---\n  duration_ms: 74.1008\n  ...\n# Subtest: 0.3.1 is current and preserves exact published downloads and recorded media\nok 4 - 0.3.1 is current and preserves exact published downloads and recorded media\n  ---\n  duration_ms: 53.7166\n  ...\n# Subtest: programme keeps its existing application boundaries and Interval relationship\nok 5 - programme keeps its existing application boundaries and Interval relationship\n  ---\n  duration_ms: 0.6697\n  ...\n# Subtest: 0.3.2 publication preserves exact independently retrieved assets and actual mobile capture\nok 6 - 0.3.2 publication preserves exact independently retrieved assets and actual mobile capture\n  ---\n  duration_ms: 63.6283\n  ...\n# Subtest: 0.3.3 dossier preserves independently retrieved assets, actual capture and all prior exact assets\nok 7 - 0.3.3 dossier preserves independently retrieved assets, actual capture and all prior exact assets\n  ---\n  duration_ms: 263.6011\n  ...\n# Subtest: 0.3.4 page uses actual reviewed captures and preserves the verified release state\nok 8 - 0.3.4 page uses actual reviewed captures and preserves the verified release state\n  ---\n  duration_ms: 77.0391\n  ...\n# Subtest: 0.3.5 dossier binds exact independently downloaded assets and preserves prior pages\nok 9 - 0.3.5 dossier binds exact independently downloaded assets and preserves prior pages\n  ---\n  duration_ms: 938.9818\n  ...\n# Subtest: 0.3.6 dossier binds exact independently downloaded assets and preserves prior pages\nok 10 - 0.3.6 dossier binds exact independently downloaded assets and preserves prior pages\n  ---\n  duration_ms: 907.3789\n  ...\n# Subtest: 0.3.7 binds the eight local release assets and exact external GitHub ZIP\nok 11 - 0.3.7 binds the eight local release assets and exact external GitHub ZIP\n  ---\n  duration_ms: 11.063\n  ...\n# warning: in the working copy of 'public/projects/airspace-operations.html', LF will be replaced by CRLF the next time Git touches it\n# warning: in the working copy of 'templates/airspace-operations.html', LF will be replaced by CRLF the next time Git touches it\n# Subtest: 0.3.7 keeps the real retained capture and all earlier controlled public files exact\nok 12 - 0.3.7 keeps the real retained capture and all earlier controlled public files exact\n  ---\n  duration_ms: 830.333\n  ...\n# Subtest: 0.3.7 source changes stay inside the reviewed Airspace scope\nok 13 - 0.3.7 source changes stay inside the reviewed Airspace scope\n  ---\n  duration_ms: 117.9519\n  ...\n1..13\n# tests 13\n# suites 0\n# pass 13\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1388.003\n",
+  "stderr": "",
+  "scope": "Only focused Airspace tests/build; no full global Site baseline rerun, content edit or publication."
+}
