@@ -208,5 +208,13 @@
     "failed_step": "Start and verify container health: Docker worker unhealthy",
     "container_deployment_acceptance": "Blocked",
     "evidence": "improvement/cycles/2026-11-12T161203Z-container-recheck.json"
+  },
+  "candidate_work": {
+    "version": "0.3.8-rc.1",
+    "state": "Development verified; release gates pending",
+    "source": "3f1e338d1d9ebf4ff110a5b6f4a64ba5b519ec8e",
+    "run_id": 43320866252,
+    "cycle": "improvement/cycles/2026-11-13T150730Z-container-release.json",
+    "published": false
   }
 }

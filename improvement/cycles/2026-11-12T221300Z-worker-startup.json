@@ -3,7 +3,7 @@
   "triggered_at": "2026-11-12T22:13:00.144Z",
   "started_at": "2026-11-12T22:16:09.065090+00:00",
   "deadline": "2026-11-12T22:58:00Z",
-  "state": "Diagnosing repeated actual Docker worker startup-health failure",
+  "state": "Development fix verified remotely; session interrupted before publication",
   "base_main": "f44aa243588f02775290a4b6392ecdf5b8c78219",
   "frozen_published_version": "0.3.7-rc.1",
   "frozen_source": "62f507d962cedda5c493c7639ecc230b5ef7b089",
@@ -30,5 +30,37 @@
   "original_acceptance": false,
   "stable_release": false,
   "operational_acceptance": false,
-  "next_action": "Finish and test the bounded diagnostic collector, push only a diagnostic development branch, inspect actual container failure evidence and repair the demonstrated cause."
+  "next_action": "Finish reviewed0.3.8release source, execute unchanged gated release pipeline, independently retrieve exact archives and complete destination-specific publication.",
+  "root_cause": "PostgreSQL17.8 loading newer PostGIS failed with undefined symbol heap_datum_check; init aborted before ordinary role creation; pg_isready subsequently admitted incomplete restarted PGDATA.",
+  "diagnostic_source": "2c82046258294970e0dd5281da14f0707496dae7",
+  "diagnostic_run": 43319005679,
+  "development_source": "3f1e338d1d9ebf4ff110a5b6f4a64ba5b519ec8e",
+  "development_run": 43320866252,
+  "actual_remote": {
+    "source_tests": {
+      "passed": 644,
+      "skipped": 20,
+      "warnings": 3,
+      "seconds": 77.49
+    },
+    "postgresql_tests": {
+      "passed": 19,
+      "warnings": 1,
+      "seconds": 7.64
+    },
+    "partial_init_negative": true,
+    "container_worker_api": true,
+    "backup_restoration": true
+  },
+  "local": {
+    "focused": {
+      "passed": 43,
+      "warnings": 1,
+      "seconds": 3.26
+    },
+    "frontend_tests": 205,
+    "frontend_build": true,
+    "full_windows_suite": "Interrupted session output unavailable; no complete result claimed"
+  },
+  "interrupted": "Session paused after22:35UTC; resumed13November15:07UTC; gap is not active work."
 }
