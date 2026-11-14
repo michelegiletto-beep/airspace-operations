@@ -1,3 +1,26 @@
+# System Lab Airspace Operations
+
+A self-hosted application for civilian UAS planning, authorisation evidence, fleet and personnel records, scheduling, incident records and local workflow assistance. It includes the interface, Python API, persistent database and workers. A new operational workspace starts empty.
+
+## Current candidate
+
+Version 0.3.8-rc.1 repairs PostgreSQL extension compatibility and rejects incomplete database initialisation. Read the [candidate notes](publication/releases/0.3.8-rc.1/release-notes.md), [release pipeline](https://github.com/michelegiletto-beep/airspace-operations/actions) and [release downloads](https://github.com/michelegiletto-beep/airspace-operations/releases). Publication requires successful exact-source, dependency, container, rights, secrets and clean-installation gates. The attached receipts identify actual results. Original specification acceptance, stable release and operational acceptance remain false.
+
+Start with the [operator handbook](docs/operator-handbook.md). Choose a task, provide actual records and evidence, review missing inputs and confirm only the internal drafts your role permits. The local companion can prepare work; server permissions, input versions, deterministic checks and independent review remain authoritative. Internal review, authority permissions, U-space authorisation, dispatch and flight execution remain separate.
+
+For installation, use the [administrator handbook](docs/administrator-handbook.md), [model setup guide](docs/model-administration.md) and [upgrade procedure](docs/upgrading-to-0.3.md). PostgreSQL deployments need separate administrator and application credentials. An incomplete existing volume requires [controlled recovery](docs/recovery-runbook.md); the readiness check does not repair or discard it. Local model weights are an optional separate installation.
+
+The previously verified [0.3.7 release](https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.7-rc.1) remains available. [Publication status](publication/status.json) records each destination separately. Previous tags, downloads, source text, artwork rights and measurements remain preserved. The experimental student is unchanged and unpromoted. This repair adds no model call, training or operational record.
+
+![Historical companion task confirmation](publication/media/0.3.6-rc.1/confirmation-review.jpg)
+
+Recorded 0.3.6 software review. This fixed capture is not a 0.3.8 container test or an operational flight. The installed companion animates and honours pause and reduced-motion preferences. See [reserved artwork rights](THIRD_PARTY_NOTICES.md).
+
+<details>
+<summary>Earlier README checkpoints and installation records</summary>
+
+The following sections retain their original dates, versions and evidence. They do not describe the current release state.
+
 ## Archive verification update
 
 The unpublished 0.3.7 candidate also repairs the default Windows archive verification path. The complete installation, CLI, empty API and unfiltered pytest checks remain required. An explicit private work root is optional; paths and isolated child configuration are recorded. Existing Prepared artifacts and published releases remain unchanged. Final-source and actual default-run evidence define the result; focused helper tests alone do not establish installation success.
@@ -143,3 +166,5 @@ New application code uses Apache-2.0. Existing System Lab artwork and presentati
 ## Upgrade compatibility
 
 Version 0.3 uses schema marker 3 because older applications do not protect actor-private companion records. Stop every old API, worker and scheduled client before upgrading; mixed-version rolling deployment is unsafe. Follow [the upgrade procedure](docs/upgrading-to-0.3.md). Never remove marker 3 to force an older version to start.
+
+</details>
