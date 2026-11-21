@@ -1,0 +1,147 @@
+{
+  "at": "2026-11-21T09:27:32.061016+00:00",
+  "success": true,
+  "state": "Independently Retrieved",
+  "main_commit": "6d6288a36a285ec8881b0c94a4e8a09cfcdd1d52",
+  "main_tree": "910fb68994103bf25e03f783ca5545bc4a568bfe",
+  "frozen_release_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+  "frozen_release_tag_unchanged": true,
+  "metadata_paths_verified": [
+    {
+      "path": "publication/history/0.3.7-rc.1-before-0.3.8-handover.json",
+      "bytes": 14380,
+      "sha256": "e79b8b1a00115b1f1937536c79a07a94c1ecb2a38ff87568555f534d74558dff",
+      "verified": true
+    },
+    {
+      "path": "publication/status.json",
+      "bytes": 20324,
+      "sha256": "477c0ffaec5b172901f0bc5792d88358281fda6cda528be3c1571cf5d528fc1f",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-publication-readonly.json",
+      "bytes": 9319,
+      "sha256": "8d8b026fe10103a14861d1ee7d49d7309d35d79b7e2fd9bf394d73621446adbe",
+      "verified": true
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 43033,
+      "sha256": "fce8747cde8af88c5911e593d6a597b97e5f056ee4ec89eea3f2848a00809aa5",
+      "verified": true
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 72140,
+      "sha256": "c42ef1472012b87c83e0c2c3b64516ba2f014a8eddc2171d2d4dcfbb088b1e0e",
+      "verified": true
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 34543,
+      "sha256": "bfddcd3943b19d02f07e2ee9a2710d16c128bc9bc989837bc23b2dfbc9c6e38e",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/cycle-20261114T053519Z-default-public-windows.json",
+      "bytes": 9488,
+      "sha256": "4bcbe77c2b10239ce1972878ebca430d3cb58de40f17ab1b52e7adba8b0e22c7",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/cycle-20261114T053519Z-dependency-repair.json",
+      "bytes": 2951,
+      "sha256": "032ada29ee9d67a43ad24897b898700bf15d90b8996786f86f30e5740eab9134",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/cycle-20261114T053519Z-public-downloads.json",
+      "bytes": 4840,
+      "sha256": "5e309fffe30ca0b71abf875e21de0eac75b557036b94293aef883bbc14456eb5",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/ci-verification.json",
+      "bytes": 25383,
+      "sha256": "e4ebd91ebc9bd7152e7ac097ae6e5d5d5a42520ae770a6bb88013611d0ee61c8",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/release-gates.json",
+      "bytes": 1046,
+      "sha256": "50f9f5f11263880e071d18ed647dbc75b29dcecbf06048f7edc04996e7f4f397",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/standalone-archive-verification.json",
+      "bytes": 9644,
+      "sha256": "de5df27cdae6a0036f183c262ebd3a64a323ffa1374f4392f0ac515f3217baca",
+      "verified": true
+    },
+    {
+      "path": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-primary-recovery.json",
+      "bytes": 1531,
+      "sha256": "0726574bb2bd119f5feaf58254c6e75bf074069858d753ad52d246b629acee25",
+      "verified": true
+    },
+    {
+      "path": "improvement/cycles/2026-11-21T091249Z-publication-handover.json",
+      "bytes": 3183,
+      "sha256": "f166e9ced75373cc62ccbc7e40266ba007a8e1481215d87f103a2dd23ce81ca7",
+      "verified": true
+    }
+  ],
+  "all_other_source_blobs_unchanged": true,
+  "no_deleted_blobs": true,
+  "specification_and_198_requirement_csv_unchanged": true,
+  "software_version": "0.3.8-rc.1",
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_acceptance": false,
+  "scope": "Actual main compare-and-swap acknowledgement followed by anonymous exact byte retrieval and complete blob-tree comparison against frozen038source; current main CI is a separate result",
+  "ci": {
+    "at": "2026-11-21T09:30:31Z",
+    "source_commit": "6d6288a36a285ec8881b0c94a4e8a09cfcdd1d52",
+    "run_id": 44889604396,
+    "job_id": 136802336236,
+    "conclusion": "success",
+    "source_tests": {
+      "passed": 645,
+      "skipped": 20,
+      "warnings": 3,
+      "seconds": 58.02,
+      "command": "uv run pytest -q"
+    },
+    "postgresql_tests": {
+      "passed": 19,
+      "warnings": 1,
+      "seconds": 5.62,
+      "command": "uv run pytest -q tests/test_postgres_integration.py tests/test_postgres_coordination.py"
+    },
+    "container_build": true,
+    "interrupted_bootstrap_rejected": true,
+    "container_health": true,
+    "authenticated_worker_api": true,
+    "backup_restoration": true,
+    "publisher": "Skipped on main; frozen release not republished",
+    "scope": "Actual main CI; software tests and isolated containers, not operational acceptance",
+    "job_url": "https://github.com/michelegiletto-beep/airspace-operations/actions/runs/44889604396/job/136802336236"
+  },
+  "release_metadata_synchronized": [
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "6aa1ff3470f87534076283428d7724b8b251d45df6db967bbb861cafa2baf113",
+      "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "b6d25fa98ecd2ed3363c9a17b4ca5f41adb83f4a68be01795c20f198418dd32c",
+      "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+    }
+  ],
+  "optional_dependency_licence_context": "27 optional dependency licence rows retain CI-build NOASSERTION because those packages were not installed. This is not a licence waiver or new clearance.",
+  "publication_complete": false,
+  "software_changed": false,
+  "acknowledgement_scope": "This record acknowledges independently retrieved handover commit 6d6288a; the acknowledgement changes documentation and release metadata only."
+}

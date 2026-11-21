@@ -1,7 +1,7 @@
 {
   "cycle_id": "2026-11-21T091249Z-publication-handover",
   "triggered_at": "2026-11-21T09:12:49.162Z",
-  "state": "Prepared default-branch metadata handover; exact branch update requires independent verification",
+  "state": "Primary recovery and main handover verified; remaining publication blocked",
   "frozen_release": "0.3.8-rc.1",
   "frozen_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
   "frozen_source_tree": "791e717a237c64e4fb992d6075b8ce11ef35b273",
@@ -26,7 +26,7 @@
     "browser_verified": false,
     "promoted_to_038": false
   },
-  "retrospective": "The public 0.3.8 release and model presentation are now independently reconciled while destination versions remain separate. The missing 0.3.7 source was restored from its exact verified archive and matching services recovered with unchanged data and audit. Current browser-policy restrictions prevented remaining uploads and visual review. The stale default branch can be repaired by a metadata handover based on frozen0.3.8 without a new software release or changes to frozen artifacts.",
+  "retrospective": "Restored the missing exact 0.3.7 source without changing data, independently verified GitHub 0.3.8 and model documentation, aligned the default branch, and corrected stale source SBOM/notices with exact verified release artifacts. Browser policy and absent noninteractive HF credentials prevented remaining uploads. Frozen releases, original requirements and approval boundaries remain intact.",
   "next_action": "Preserve frozen 0.3.8 source, tag and nine assets. Independently verified HF model README71e2 needs no duplicate upload. Dataset, Space and System Lab remain at 0.3.7. Resume only with a permitted browser or an adequate authorized connector; never bypass a browser policy stop or broaden credentials. Reconcile the prepared Site checkout through a fresh owned Site opening, then complete the remaining publication and exact retrieval gates. Verify actual primary recovery separately before promotion. Keep all 198 requirement texts/statuses and the original specification unchanged. Maximum 45 active minutes and two model calls; no model call is needed. No mail, people contact, purchases, aircraft actions, authority decisions or approval changes.",
   "model_calls": 0,
   "training_runs": 0,
@@ -34,5 +34,38 @@
   "baseline_and_requirement_status_changes": false,
   "operational_acceptance": false,
   "stable_release_allowed": false,
-  "full_original_specification_accepted": false
+  "full_original_specification_accepted": false,
+  "main_branch_handover": {
+    "state": "Independently Retrieved",
+    "handover_commit": "6d6288a36a285ec8881b0c94a4e8a09cfcdd1d52",
+    "release_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-main-handover.json",
+    "main_ci_run": 44889604396,
+    "main_ci_conclusion": "success",
+    "current_main_release_metadata": [
+      {
+        "path": "SBOM.cdx.json",
+        "sha256": "6aa1ff3470f87534076283428d7724b8b251d45df6db967bbb861cafa2baf113",
+        "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "b6d25fa98ecd2ed3363c9a17b4ca5f41adb83f4a68be01795c20f198418dd32c",
+        "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+      }
+    ]
+  },
+  "release_metadata_synchronized": [
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "6aa1ff3470f87534076283428d7724b8b251d45df6db967bbb861cafa2baf113",
+      "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "b6d25fa98ecd2ed3363c9a17b4ca5f41adb83f4a68be01795c20f198418dd32c",
+      "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+    }
+  ],
+  "publication_complete": false
 }

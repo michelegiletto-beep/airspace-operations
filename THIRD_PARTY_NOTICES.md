@@ -14,7 +14,7 @@ Dependency metadata is recorded below; original licences remain controlling. Pyt
 | Python | cffi | 2.1.1 | MIT-0 |
 | Python | charset-normalizer | 3.5.2 | MIT |
 | Python | click | 8.5.0 | BSD-3-Clause |
-| Python | colorama | 0.4.6 | NOASSERTION |
+| Python | colorama | 0.4.6 | NOASSERTION (locked dependency, not installed in build environment) |
 | Python | coverage | 7.17.0 | Apache-2.0 |
 | Python | cryptography | 50.0.2 | Apache-2.0 OR BSD-3-Clause |
 | Python | cyclonedx-python-lib | 11.12.0 | Apache-2.0 |
@@ -34,7 +34,7 @@ Dependency metadata is recorded below; original licences remain controlling. Pyt
 | Python | mdurl | 0.1.2 | NOASSERTION |
 | Python | msgpack | 1.2.4 | Apache-2.0 |
 | Python | numpy | 2.5.4 | BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0 |
-| Python | opentelemetry-api | 1.45.1 | Apache-2.0 |
+| Python | opentelemetry-api | 1.45.2 | Apache-2.0 |
 | Python | ortools | 9.15.6755 | Apache 2.0 |
 | Python | packageurl-python | 0.17.6 | MIT |
 | Python | packaging | 26.3 | Apache-2.0 OR BSD-2-Clause |
@@ -55,7 +55,7 @@ Dependency metadata is recorded below; original licences remain controlling. Pyt
 | Python | pygments | 2.21.0 | BSD-2-Clause |
 | Python | pyjwt | 2.15.1 | MIT |
 | Python | pyparsing | 3.3.3 | MIT |
-| Python | pypdf | 6.21.3 | BSD-3-Clause |
+| Python | pypdf | 6.21.4 | BSD-3-Clause |
 | Python | pyproj | 3.7.2 | MIT |
 | Python | pytest | 9.1.1 | MIT |
 | Python | pytest-cov | 7.1.0 | MIT |
@@ -73,33 +73,33 @@ Dependency metadata is recorded below; original licences remain controlling. Pyt
 | Python | tzdata | 2026.5 | Apache-2.0 |
 | Python | urllib3 | 2.8.0 | MIT |
 | Python | uvicorn | 0.54.0 | BSD-3-Clause |
-| Optional Python (requirements-neural.lock.txt) | fsspec | 2026.9.0 | BSD-3-Clause |
-| Optional Python (requirements-neural.lock.txt) | hf-xet | 1.7.0 | Apache-2.0 |
-| Optional Python (requirements-neural.lock.txt) | httpcore2 | 2.16.0 | BSD-3-Clause |
-| Optional Python (requirements-neural.lock.txt) | httpx2 | 2.16.0 | BSD-3-Clause |
-| Optional Python (requirements-neural.lock.txt) | huggingface-hub | 2.3.0 | Apache-2.0 |
-| Optional Python (requirements-neural.lock.txt) | jinja2 | 3.1.6 | NOASSERTION |
-| Optional Python (requirements-neural.lock.txt) | markupsafe | 3.0.4 | BSD-3-Clause |
-| Optional Python (requirements-neural.lock.txt) | mpmath | 1.3.0 | BSD |
-| Optional Python (requirements-neural.lock.txt) | networkx | 3.7 | BSD-3-Clause |
-| Optional Python (requirements-neural.lock.txt) | pyyaml | 6.0.3 | MIT |
-| Optional Python (requirements-neural.lock.txt) | regex | 2026.9.29 | Apache-2.0 AND CNRI-Python |
-| Optional Python (requirements-neural.lock.txt) | safetensors | 0.8.0 | NOASSERTION |
-| Optional Python (requirements-neural.lock.txt) | setuptools | 84.2.1 | MIT |
-| Optional Python (requirements-neural.lock.txt) | shellingham | 1.5.4 | ISC License |
-| Optional Python (requirements-neural.lock.txt) | sympy | 1.14.0 | BSD |
-| Optional Python (requirements-neural.lock.txt) | tokenizers | 0.23.3 | NOASSERTION |
-| Optional Python (requirements-neural.lock.txt) | torch | 2.14.1 | Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT |
-| Optional Python (requirements-neural.lock.txt) | tqdm | 4.70.1 | MPL-2.0 AND MIT |
-| Optional Python (requirements-neural.lock.txt) | transformers | 5.21.0 | Apache 2.0 License |
-| Optional Python (requirements-neural.lock.txt) | truststore | 0.10.5 | MIT |
-| Optional Python (requirements-neural.lock.txt) | typer | 0.27.3 | MIT |
-| Optional Python (requirements-publication.lock.txt) | attrs | 26.1.0 | MIT |
-| Optional Python (requirements-publication.lock.txt) | jsonschema | 4.26.0 | MIT |
-| Optional Python (requirements-publication.lock.txt) | jsonschema-specifications | 2025.9.1 | MIT |
-| Optional Python (requirements-publication.lock.txt) | pillow | 13.0.0 | MIT-CMU |
-| Optional Python (requirements-publication.lock.txt) | referencing | 0.37.0 | MIT |
-| Optional Python (requirements-publication.lock.txt) | rpds-py | 2026.9.1 | MIT |
+| Optional Python (requirements-neural.lock.txt) | fsspec | 2026.9.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | hf-xet | 1.7.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | httpcore2 | 2.16.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | httpx2 | 2.16.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | huggingface-hub | 2.3.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | jinja2 | 3.1.6 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | markupsafe | 3.0.4 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | mpmath | 1.3.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | networkx | 3.7 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | pyyaml | 6.0.3 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | regex | 2026.9.29 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | safetensors | 0.8.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | setuptools | 84.2.1 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | shellingham | 1.5.4 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | sympy | 1.14.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | tokenizers | 0.23.3 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | torch | 2.14.1 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | tqdm | 4.70.1 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | transformers | 5.21.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | truststore | 0.10.5 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-neural.lock.txt) | typer | 0.27.3 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-publication.lock.txt) | attrs | 26.1.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-publication.lock.txt) | jsonschema | 4.26.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-publication.lock.txt) | jsonschema-specifications | 2025.9.1 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-publication.lock.txt) | pillow | 13.0.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-publication.lock.txt) | referencing | 0.37.0 | NOASSERTION (optional locked dependency, not installed) |
+| Optional Python (requirements-publication.lock.txt) | rpds-py | 2026.9.1 | NOASSERTION (optional locked dependency, not installed) |
 | Optional pretrained model | Qwen/Qwen3-1.7B | 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e | Apache-2.0; upstream terms and provenance apply; weights excluded |
 | Optional pretrained model | sentence-transformers/all-MiniLM-L6-v2 | 1110a243fdf4706b3f48f1d95db1a4f5529b4d41 | Apache-2.0; upstream terms and provenance apply; weights excluded |
 | Optional pretrained model | cross-encoder/ms-marco-MiniLM-L6-v2 | 233902d25c440f23af6f7d6e94d2946bac0bee0a | Apache-2.0; upstream terms and provenance apply; weights excluded |

@@ -1,7 +1,7 @@
 {
   "release": "0.3.8-rc.1",
   "release_kind": "Engineering candidate",
-  "at": "2026-11-21T09:18:35.246719+00:00",
+  "at": "2026-11-21T09:33:49.118666+00:00",
   "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
   "full_original_specification_accepted": false,
   "stable_release_allowed": false,
@@ -357,7 +357,7 @@
       "bypass_attempts": 0
     },
     "next_action": "Preserve frozen 0.3.8 source, tag and nine assets. Independently verified HF model README71e2 needs no duplicate upload. Dataset, Space and System Lab remain at 0.3.7. Resume only with a permitted browser or an adequate authorized connector; never bypass a browser policy stop or broaden credentials. Reconcile the prepared Site checkout through a fresh owned Site opening, then complete the remaining publication and exact retrieval gates. Verify actual primary recovery separately before promotion. Keep all 198 requirement texts/statuses and the original specification unchanged. Maximum 45 active minutes and two model calls; no model call is needed. No mail, people contact, purchases, aircraft actions, authority decisions or approval changes.",
-    "default_main_handover": "Prepared metadata only; no branch update performed by this helper",
+    "default_main_handover": "Published and independently retrieved at 6d6288a36a285ec8881b0c94a4e8a09cfcdd1d52",
     "primary_recovery": {
       "state": "Restored and Verified",
       "version": "0.3.7-rc.1",
@@ -375,5 +375,25 @@
     "container_deployment_acceptance": "Blocked",
     "evidence": "improvement/cycles/2026-11-12T161203Z-container-recheck.json"
   },
-  "publication_complete": false
+  "publication_complete": false,
+  "main_branch_handover": {
+    "state": "Independently Retrieved",
+    "handover_commit": "6d6288a36a285ec8881b0c94a4e8a09cfcdd1d52",
+    "release_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-main-handover.json",
+    "main_ci_run": 44889604396,
+    "main_ci_conclusion": "success",
+    "current_main_release_metadata": [
+      {
+        "path": "SBOM.cdx.json",
+        "sha256": "6aa1ff3470f87534076283428d7724b8b251d45df6db967bbb861cafa2baf113",
+        "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "b6d25fa98ecd2ed3363c9a17b4ca5f41adb83f4a68be01795c20f198418dd32c",
+        "scope": "Exact previously verified 0.3.8 release-build artifact; not a new build or audit"
+      }
+    ]
+  }
 }

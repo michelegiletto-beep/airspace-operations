@@ -3,11 +3,11 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-28T11:53:48.296083+00:00",
+    "timestamp": "2026-11-14T05:51:04.443163+00:00",
     "component": {
       "type": "application",
       "name": "System Lab Airspace Operations",
-      "version": "0.2.0-rc.1"
+      "version": "0.3.8-rc.1"
     }
   },
   "components": [
@@ -139,7 +139,7 @@
       "properties": [
         {
           "name": "upstream-licence-metadata",
-          "value": "NOASSERTION"
+          "value": "NOASSERTION (locked dependency, not installed in build environment)"
         }
       ]
     },
@@ -374,8 +374,8 @@
     {
       "type": "library",
       "name": "opentelemetry-api",
-      "version": "1.45.1",
-      "purl": "pkg:pypi/opentelemetry-api@1.45.1",
+      "version": "1.45.2",
+      "purl": "pkg:pypi/opentelemetry-api@1.45.2",
       "properties": [
         {
           "name": "upstream-licence-metadata",
@@ -626,8 +626,8 @@
     {
       "type": "library",
       "name": "pypdf",
-      "version": "6.21.3",
-      "purl": "pkg:pypi/pypdf@6.21.3",
+      "version": "6.21.4",
+      "purl": "pkg:pypi/pypdf@6.21.4",
       "properties": [
         {
           "name": "upstream-licence-metadata",
@@ -852,7 +852,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD-3-Clause"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -869,7 +869,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "Apache-2.0"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -886,7 +886,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD-3-Clause"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -903,7 +903,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD-3-Clause"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -920,7 +920,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "Apache-2.0"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -937,7 +937,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "NOASSERTION"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -954,7 +954,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD-3-Clause"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -971,7 +971,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -988,7 +988,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD-3-Clause"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1005,7 +1005,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1022,7 +1022,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "Apache-2.0 AND CNRI-Python"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1039,7 +1039,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "NOASSERTION"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1056,7 +1056,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1073,7 +1073,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "ISC License"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1090,7 +1090,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "BSD"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1107,7 +1107,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "NOASSERTION"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1124,7 +1124,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1141,7 +1141,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MPL-2.0 AND MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1158,7 +1158,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "Apache 2.0 License"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1175,7 +1175,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1192,7 +1192,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1209,7 +1209,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1226,7 +1226,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1243,7 +1243,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1260,7 +1260,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT-CMU"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1277,7 +1277,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },
@@ -1294,7 +1294,7 @@
         },
         {
           "name": "upstream-licence-metadata",
-          "value": "MIT"
+          "value": "NOASSERTION (optional locked dependency, not installed)"
         }
       ]
     },

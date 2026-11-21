@@ -58,3 +58,7 @@ Use a separate owned F volume checkout after the C volume reached zero free byte
 ## 5 November 2026: current-role workflow preparation
 
 Use only the current server capability response for preparation controls. Explain current roles and deterministic tool inputs outside disabled buttons; permit the sharing workflow to select its required saved schedule. Retire local form state on identity changes. Keep 0.3.5 a development increment until browser, archive and release gates pass. A fresh C checkout replaces the unavailable working location for this cycle; the preserved 0.3.4 installation remains the primary source.
+
+## 21 November 2026: source and release publication consistency
+
+Advance main from the verified frozen 0.3.8 source with separately verified metadata. Keep GitHub, model documentation, dataset, Space, Site and installed primary states independent. Synchronize the source SBOM and notices from the exact verified 0.3.8 assets rather than presenting obsolete 0.2.0 dependency metadata. Preserve every old commit, release tag, asset and licence caveat. No operational or stable acceptance follows from this handover.

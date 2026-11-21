@@ -1,3 +1,9 @@
+## Verified main handover, 21 November 2026
+
+Handover commit `6d6288a36a285ec8881b0c94a4e8a09cfcdd1d52` was published and all 14 metadata/evidence files were independently retrieved. All other source blobs, SPECIFICATION and the 198-row requirement CSV match frozen 0.3.8 source. Actual main CI44889604396 passed 645 source tests with 20 skipped, 19 PostgreSQL checks, containers, interrupted-bootstrap rejection, authenticated worker/API and restoration. Its publisher correctly skipped the main branch.
+
+The source SBOM and notices now use the exact verified 0.3.8 release-build artifacts. The previous source SBOM still identified 0.2.0 and old dependency versions. Legal prose and pretrained-model terms are unchanged; optional dependency NOASSERTION entries remain unresolved licence metadata, not a waiver. This acknowledgement adds no software, model, training or operational approval. See `release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-main-handover.json` and the current cycle for the next bounded action. Remaining dataset, Space and System Lab updates stay blocked; primary recovery remains separately verified at 0.3.7. Earlier sections retain their dated scope.
+
 ## Software release and publication handover, 21 November 2026
 
 The current software release is 0.3.8-rc.1 at frozen source `dc43fa6856fc256ad0c16ca6d9b3ff79353d185e`. Fresh anonymous checks verified all nine GitHub assets and 1203 archive-member hashes. The model card at `71e2db138bd2713535ed89151090467b82535bc9` is independently verified: README alone changed; all other model-tree entries and nine staged presentation files remain exact. Dataset, Space and System Lab still retain 0.3.7. The current Windows browser policy stopped this turn; no further UI action or security-setting change is authorized by this checkpoint.
