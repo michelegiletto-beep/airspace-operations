@@ -1,0 +1,125 @@
+{
+  "cycle_id": "2026-11-21T151325Z-publication-completion",
+  "triggered_at": "2026-11-21T15:13:25Z",
+  "completed_at": "2026-11-21T15:35:41.380009+00:00",
+  "state": "All five presentation destinations independently retrieved; metadata handover prepared",
+  "requirement_ids": [
+    "ASO-25-01",
+    "ASO-25-02",
+    "ASO-25-03",
+    "ASO-25-04",
+    "ASO-25-05",
+    "ASO-25-06",
+    "ASO-25-07",
+    "ASO-25-08",
+    "ASO3-001",
+    "ASO3-002",
+    "ASO3-006",
+    "ASO3-007",
+    "ASO3-009",
+    "ASO3-011",
+    "ASO3-012"
+  ],
+  "requirement_evidence_scope": "Publication, authored copy, fonts, page retrieval and observed normal companion motion only. Publication requirements retain their existing Partial status. This is not verification or completion of the full acceptance baseline.",
+  "frozen_release": "0.3.8-rc.1",
+  "frozen_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+  "release_run": 43563061620,
+  "expected_main": "e5f65af9146116436f9c09edeaba006fece03908",
+  "evidence": {
+    "hf": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-huggingface.json",
+    "pages": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-public-pages.json",
+    "native": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-site-native.json",
+    "primary": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-primary-readonly.json",
+    "browser": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-browser-review.json"
+  },
+  "site_version": 105,
+  "site_source": "afa269b12e67bbf8218f6343712dd0f12f117746",
+  "site_deployment_id": "appgdep_6b01b7eb950881918f3e99c4418afcaf",
+  "hf_heads": {
+    "model": "71e2db138bd2713535ed89151090467b82535bc9",
+    "dataset": "2cd6f2720097592ab4aaea8fd3944a6607387b38",
+    "space": "073e54c89ec3f5184dc31a412c61a641235f5858"
+  },
+  "hf_exact_files": 22,
+  "site_exact_resources": 9,
+  "rendered_space_exact_assets": 8,
+  "primary_version": "0.3.7-rc.1",
+  "primary_promoted": false,
+  "primary_verification_at": "2026-11-21T15:18:25.943373+00:00",
+  "commands_and_results": [
+    {
+      "command": "verify_hub038.py",
+      "result": "Passed 22 actual exact files and the reviewed tree deltas",
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-huggingface.json"
+    },
+    {
+      "command": "Sites source helper open",
+      "result": "Fresh owned Site opening succeeded at source 7cc13c7dfd65a8f99089b21fac0981484e154676"
+    },
+    {
+      "command": "node --test tests/airspace-operations038.test.mjs; npm run build, through the Site source helper",
+      "result": "Four tests and the framework build passed; the exact prepared source was pushed at afa269b12e67bbf8218f6343712dd0f12f117746",
+      "focused_test_duration_ms": 1231.0552
+    },
+    {
+      "command": "Sites save version and deploy",
+      "result": "Saved version 105 and its matching deployment succeeded",
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-site-native.json"
+    },
+    {
+      "command": "verify_public_pages.py",
+      "result": "Passed strict Site page and nine resources, plus rendered Space and eight assets",
+      "reported_seconds": 3.9,
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-public-pages.json"
+    },
+    {
+      "command": "verify_primary_readonly.py",
+      "result": "Passed source, API, process, persistent-state and audit checks; no mutations",
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T151325Z-primary-readonly.json"
+    }
+  ],
+  "packaging": {
+    "source_archive_scope": "Actual root-reviewed source helper package; gzip size, expanded members and bytes are separate from native saved tar metadata",
+    "gzip_bytes": 213182620,
+    "expanded_member_bytes": 256593935,
+    "source_archive_members": 817,
+    "gzip_sha256": "b81ac8688a9156437cb43089b988df7d8716d41c2fca96cf0828fef0e4fa8982",
+    "below_256_mib": true,
+    "native_archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000057088243a045b1f25fde6581",
+      "content_hash": "sha256:6d13fb80267857de67e580842447d5cea937671c604b9a5f3800138dc36c6132",
+      "size_bytes": 257167360,
+      "file_count": 724
+    }
+  },
+  "browser_review_scope": "Actual public desktop and local prepared 390 CSS pixel review. The public viewport override remained 1920 CSS pixels; no public mobile capture is claimed. Companion motion was observed at the existing 0.3.7 sign-in boundary without sign-in or preference changes.",
+  "preserved_failures": [
+    "Earlier release-history and dependency gates remain recorded",
+    "Morning browser policy stop remains historical",
+    "The first rendered-Space verification harness lacked the standard re import and failed before network access; the repaired harness passed and both attempts are retained privately",
+    "The first raw-only and clean-only Git identity checks encountered existing Windows line-ending differences; the final per-file Git identity checks and all 685 prior working-byte hashes passed without accepting changed content",
+    "The initial preview command used a nonexistent Site virtual environment and failed with exit 1; the corrected absolute candidate Python preview returned HTTP 200",
+    "Initial native JSON persistence failed because btoa was undefined, before file writing; the corrected literal UTF-8 persistence succeeded",
+    "The later public viewport override stayed at 1920 CSS pixels rather than 390; its receipt explicitly excludes a public mobile capture",
+    "The afternoon primary verifier process-date serialization mismatch was repaired using explicit ISO representation; full process equality remains required"
+  ],
+  "retrospective": "Completed the remaining lawful presentation updates using actual current accounts and exact independent retrieval. Prior data, media, source releases, original requirements and approval boundaries remain preserved. Documentation completion is not operational acceptance or a new model result.",
+  "next_action": "Read this completed publication cycle, publication/status.json and current private process identities. All five presentation destinations now identify frozen version 0.3.8; do not overwrite its tag, nine assets, earlier releases or model and data artifacts. Next, verify a separately installed preview from the exact public 0.3.8 archive, using a consistent copy of the existing primary database, evidence, original audit key and current actor and approval policy. Confirm source availability and current process identities. The older ownership pointer is stale and must be reconciled through a reviewed recovery record before any restart or cutover; never kill stale PIDs or rerun historical recovery mains. Promote only after source, API, worker, data and audit, browser and rollback gates pass, preserving the existing 0.3.7 instance. Keep all 198 original and revision requirement texts and statuses unchanged, and keep operational and stable acceptance gaps visible. After that, select one measured guided-task friction for an inexperienced civilian UAS operator; review role guidance, saved tasks, typed draft confirmation, animation preferences, responsive layout, error recovery and authored copy. Maximum 45 active minutes and two actual local model evaluations; no model call is required for installation and promotion verification. Never contact people, send mail, buy services, broaden permissions, add aircraft commands, self-approval, authority decisions or communication tools. Record actual commands, failures, exact evidence, a retrospective and the next bounded prompt.",
+  "baseline_and_csv_hashes_preserved": {
+    "workspace": {
+      "SPECIFICATION.md": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+      "REQUIREMENTS_TRACEABILITY.csv": "00b6908f4ed201fc994a75f3d6df34230e87967c1a7e659a8c24a9dd056d0c6a"
+    },
+    "canonical_source": {
+      "SPECIFICATION.md": "43755041cbfa555158b51979de4c726bf52f7e82dc113e840c1488d974ba9b30",
+      "REQUIREMENTS_TRACEABILITY.csv": "5555bbae77c6f497343abda9375cb380a880ce33f19bce28de171a3ae98b2fe7"
+    }
+  },
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_records_created": 0,
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false,
+  "operational_acceptance": false
+}

@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-21T15:18:25.943373+00:00",
+  "scope": "Fresh read-only source, persistence, API protection, audit and owned-process check",
+  "version": "0.3.7-rc.1",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "source_root_exists": true,
+  "model_calls": 0,
+  "training_runs": 0,
+  "authentication_performed": false,
+  "services_changed": false,
+  "operational_records_created": 0,
+  "migration_or_promotion": false,
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false,
+  "source_files_verified": 1179,
+  "baseline_verified": true,
+  "api": [
+    {
+      "route": "/health",
+      "status": 200,
+      "authenticated": false,
+      "health": {
+        "status": "ok",
+        "version": "0.3.7-rc.1",
+        "deployment_profile": "sqlite-portable",
+        "operational_acceptance": false
+      }
+    },
+    {
+      "route": "/me",
+      "status": 401,
+      "authenticated": false
+    },
+    {
+      "route": "/companion/tasks",
+      "status": 401,
+      "authenticated": false
+    }
+  ],
+  "worker": {
+    "healthy": true,
+    "scope": "Process liveness only; queue progress is not verified",
+    "age_seconds": 2.589105
+  },
+  "owned_process_identity_matches_morning": true,
+  "audit_key_matches_consistent_backup": true,
+  "all_tables_unchanged_during_check": true,
+  "data_summary_matches_morning_recovery": true,
+  "old_active_pointer_unchanged": true,
+  "success": true,
+  "persistent_state": {
+    "records": 20,
+    "tasks": 2,
+    "operational_records": 0,
+    "jobs": {
+      "Completed": 6
+    },
+    "audit_count": 50,
+    "audit_valid": true,
+    "integrity": [
+      "ok"
+    ],
+    "foreign_key_errors": 0,
+    "records_raw_sha256": "4e22422353aac15b47415cfc9e56fb207f8104578665e9608379f94a4bf89e9e"
+  },
+  "limitations": [
+    "Worker liveness is not a new completed job",
+    "No browser or authenticated task read was performed",
+    "No operational acceptance or primary promotion is inferred"
+  ]
+}

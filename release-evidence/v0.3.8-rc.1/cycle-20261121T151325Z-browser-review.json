@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-21T15:26:36.430Z",
+  "success": true,
+  "application_version": "0.3.8-rc.1",
+  "application_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+  "site_version": 105,
+  "site_source": "afa269b12e67bbf8218f6343712dd0f12f117746",
+  "site_url": "https://giletto-systems-lab.michele-giletto.chatgpt.site/projects/airspace-operations",
+  "public_desktop_review": true,
+  "local_prepared_mobile": {
+    "viewport_width_css_px": 390,
+    "document_width_css_px": 375,
+    "body_and_regular_paragraph_px": 16,
+    "application_anchor_top_css_px": 147
+  },
+  "application_anchor_verified": true,
+  "broken_images_observed": 0,
+  "mobile_scope": "The actual local prepared page was reviewed at 390 CSS pixels. The published authored HTML independently matches that page. The later public viewport override remained 1920 CSS pixels; no public mobile capture is claimed.",
+  "public_mobile_capture": false,
+  "viewport_reset": true,
+  "primary_version": "0.3.7-rc.1",
+  "primary_review_scope": "Sign-in boundary only; no sign-in or task mutation. This is not a browser review of an installed 0.3.8 application.",
+  "companion_normal_motion_observed": true,
+  "companion_frame_scope": "Two actual 58 by 58 pixel frames were analysed separately. User pause and reduced motion preferences were unchanged.",
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_acceptance": false,
+  "source_receipt_sha256": "a1fa7a8854ba2ad54a13a4c76d212e9b84b7d126a55076ab2cb8ce8c12e87e03"
+}

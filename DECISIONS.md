@@ -62,3 +62,8 @@ Use only the current server capability response for preparation controls. Explai
 ## 21 November 2026: source and release publication consistency
 
 Advance main from the verified frozen 0.3.8 source with separately verified metadata. Keep GitHub, model documentation, dataset, Space, Site and installed primary states independent. Synchronize the source SBOM and notices from the exact verified 0.3.8 assets rather than presenting obsolete 0.2.0 dependency metadata. Preserve every old commit, release tag, asset and licence caveat. No operational or stable acceptance follows from this handover.
+
+
+## 21 November 2026 afternoon: completed presentation publication
+
+Record GitHub, model card, dataset card, rendered Space and the owned System Lab project page as independently retrieved only after their exact source and receipt gates match. Preserve the previous status snapshot and each destination history. Keep software publication separate from installed-primary promotion and operational acceptance. This completion changes documentation and evidence metadata only; the frozen 0.3.8 software and experimental model and data remain unchanged.
