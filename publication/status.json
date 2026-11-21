@@ -1,8 +1,8 @@
 {
-  "release": "0.3.7-rc.1",
+  "release": "0.3.8-rc.1",
   "release_kind": "Engineering candidate",
-  "at": "2026-11-12T16:20:35.044868+00:00",
-  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "at": "2026-11-21T09:18:35.246719+00:00",
+  "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
   "full_original_specification_accepted": false,
   "stable_release_allowed": false,
   "operational_acceptance": false,
@@ -21,27 +21,39 @@
     "publication/history/0.3.3-rc.1.json",
     "publication/history/0.3.4-rc.1.json",
     "publication/history/0.3.5-rc.1.json",
-    "publication/history/0.3.6-rc.1.json"
+    "publication/history/0.3.6-rc.1.json",
+    "publication/history/0.3.7-rc.1-before-0.3.8-handover.json"
   ],
   "destinations": [
     {
       "destination": "GitHub engineering candidate",
-      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.7-rc.1",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.8-rc.1",
       "state": "Independently Retrieved",
-      "commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
-      "release_id": 440117067,
+      "version": "0.3.8-rc.1",
+      "commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+      "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+      "release_id": 445053869,
       "assets": 9,
-      "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-downloads.json",
-      "version": "0.3.7-rc.1",
-      "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-publication-readonly.json",
       "previous_verified": {
         "destination": "GitHub engineering candidate",
-        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.6-rc.1",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.7-rc.1",
         "state": "Independently Retrieved",
-        "commit": "d36509ef90cdf72d08aa342ef87259d47ab71814",
-        "release_id": 438422602,
+        "commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+        "release_id": 440117067,
         "assets": 9,
-        "evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-public-downloads.json"
+        "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-downloads.json",
+        "version": "0.3.7-rc.1",
+        "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+        "previous_verified": {
+          "destination": "GitHub engineering candidate",
+          "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.6-rc.1",
+          "state": "Independently Retrieved",
+          "commit": "d36509ef90cdf72d08aa342ef87259d47ab71814",
+          "release_id": 438422602,
+          "assets": 9,
+          "evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-public-downloads.json"
+        }
       }
     },
     {
@@ -72,18 +84,28 @@
       "destination": "Hugging Face model presentation",
       "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
       "state": "Independently Retrieved",
-      "revision": "acb87049183b9721de9d7d40a80bda8fb31af4f8",
+      "version": "0.3.8-rc.1",
+      "application_source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+      "revision": "71e2db138bd2713535ed89151090467b82535bc9",
       "unchanged_weights_and_data": true,
-      "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-huggingface.json",
-      "version": "0.3.7-rc.1",
-      "application_source": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-publication-readonly.json",
       "previous_verified": {
         "destination": "Hugging Face model presentation",
         "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
         "state": "Independently Retrieved",
-        "revision": "99c41ce3f2f25318d8f3e34be22db15b696580a7",
+        "revision": "acb87049183b9721de9d7d40a80bda8fb31af4f8",
         "unchanged_weights_and_data": true,
-        "evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-huggingface.json"
+        "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-huggingface.json",
+        "version": "0.3.7-rc.1",
+        "application_source": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+        "previous_verified": {
+          "destination": "Hugging Face model presentation",
+          "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router",
+          "state": "Independently Retrieved",
+          "revision": "99c41ce3f2f25318d8f3e34be22db15b696580a7",
+          "unchanged_weights_and_data": true,
+          "evidence": "release-evidence/v0.3.6-rc.1/cycle-20261108T173403Z-huggingface.json"
+        }
       }
     },
     {
@@ -129,58 +151,112 @@
     "records_unchanged": true,
     "actor_and_operator_policy_unchanged": true,
     "audit_key_unchanged": true,
-    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-primary-promotion.json",
+    "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-primary-recovery.json",
     "previous_verified": {
       "version": "0.3.5-rc.1",
       "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
       "records_unchanged": true
     },
-    "verification_scope": "Actual cutover, API health, worker liveness and persistent-data equivalence; no new primary browser review claimed"
+    "verification_scope": "Actual same-version 0.3.7 source restoration and recovery; read-only API, source, persistent-data and audit checks. No browser or authenticated task read.",
+    "previous_verified_record": {
+      "version": "0.3.7-rc.1",
+      "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+      "records_unchanged": true,
+      "actor_and_operator_policy_unchanged": true,
+      "audit_key_unchanged": true,
+      "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-primary-promotion.json",
+      "previous_verified": {
+        "version": "0.3.5-rc.1",
+        "source_commit": "9eead371e8afb5d38293e35d6e4ffef588ae7951",
+        "records_unchanged": true
+      },
+      "verification_scope": "Actual cutover, API health, worker liveness and persistent-data equivalence; no new primary browser review claimed"
+    },
+    "state": "Restored and Verified",
+    "current_health_verified": true,
+    "promoted_to_038": false,
+    "verified_at": "2026-11-21T09:21:54.765484+00:00"
   },
   "local_model_calls_this_cycle": 0,
   "training_runs_this_cycle": 0,
-  "next_action": "Investigate actual Docker worker health failure in CI 43258128561 on the unchanged 0.3.7 application code. One failed-job retry was requested; read its actual result before changing code. Collect worker/API stdout, healthcheck output, database readiness and startup timing before cleanup. Diagnose the root cause, reproduce it in an isolated deployment and repair the mechanism without weakening health checks or approval requirements. Preserve frozen 0.3.7 source/tag/assets and the healthy installed SQLite primary, its optional interpreter, policy, key, 20 records, 2 tasks and valid audit 50. Any software fix must be a distinct candidate with complete tests, containers/PostgreSQL/worker/restoration, installation, rights/secrets and publication gates. Keep stable/operational acceptance blocked until the failure is resolved. No model call is needed; no people contact, mail, purchases, aircraft commands or authority decisions. Maximum 45 active minutes and two actual model calls.",
+  "next_action": "Preserve frozen 0.3.8 source, tag and nine assets. Independently verified HF model README71e2 needs no duplicate upload. Dataset, Space and System Lab remain at 0.3.7. Resume only with a permitted browser or an adequate authorized connector; never bypass a browser policy stop or broaden credentials. Reconcile the prepared Site checkout through a fresh owned Site opening, then complete the remaining publication and exact retrieval gates. Verify actual primary recovery separately before promotion. Keep all 198 requirement texts/statuses and the original specification unchanged. Maximum 45 active minutes and two model calls; no model call is needed. No mail, people contact, purchases, aircraft actions, authority decisions or approval changes.",
   "development_candidate": {
-    "version": "0.3.7-rc.1",
-    "state": "Published GitHub 0.3.7 independently retrieved; all three presentation destinations independently retrieved",
-    "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
-    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/62f507d962cedda5c493c7639ecc230b5ef7b089",
-    "ci_run": 42783868306,
+    "version": "0.3.8-rc.1",
+    "state": "Published software; remaining dataset, Space and System Lab updates incomplete",
+    "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "ci_run": 43563061620,
     "first_engineering_passed": true,
     "full_workflow_succeeded": true,
     "public_release": "Independently Retrieved",
-    "huggingface": "Independently Retrieved at 0.3.7",
-    "system_lab": "Independently Retrieved at 0.3.7",
-    "primary_promotion": "Verified exact 0.3.7 cutover/API/persistence; primary browser review remains separately scoped",
+    "huggingface": "Model independently retrieved; dataset and Space retain 0.3.7",
+    "system_lab": "Public version104 retains 0.3.7",
+    "primary_promotion": "Not performed",
     "model_calls": 0,
     "training_runs": 0,
-    "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-downloads.json",
+    "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-publication-readonly.json",
     "cycle": "improvement/cycles/2026-11-10T143515Z-publication-completion.json",
     "published": true,
     "previous_checkpoint": {
       "version": "0.3.7-rc.1",
-      "state": "Final-source release gates or independent retrieval remain pending; no new release claim",
+      "state": "Published GitHub 0.3.7 independently retrieved; all three presentation destinations independently retrieved",
       "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
-      "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/bfc3c9627226e9e73d419a06406946f71f8ae825",
-      "local_package": {
+      "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/62f507d962cedda5c493c7639ecc230b5ef7b089",
+      "ci_run": 42783868306,
+      "first_engineering_passed": true,
+      "full_workflow_succeeded": true,
+      "public_release": "Independently Retrieved",
+      "huggingface": "Independently Retrieved at 0.3.7",
+      "system_lab": "Independently Retrieved at 0.3.7",
+      "primary_promotion": "Verified exact 0.3.7 cutover/API/persistence; primary browser review remains separately scoped",
+      "model_calls": 0,
+      "training_runs": 0,
+      "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-public-downloads.json",
+      "cycle": "improvement/cycles/2026-11-10T143515Z-publication-completion.json",
+      "published": true,
+      "previous_checkpoint": {
+        "version": "0.3.7-rc.1",
+        "state": "Final-source release gates or independent retrieval remain pending; no new release claim",
+        "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+        "source_url": "https://github.com/michelegiletto-beep/airspace-operations/tree/bfc3c9627226e9e73d419a06406946f71f8ae825",
+        "local_package": {
+          "state": "Prepared; short Windows path verified, default nested verifier failed; not uploaded or published",
+          "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release\\local-0.3.7-rc.1\\System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+          "bytes": 17621961,
+          "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
+          "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825"
+        },
+        "ci_run": 42783868306,
+        "first_engineering_passed": true,
+        "full_workflow_succeeded": false,
+        "public_release": "Not Published",
+        "huggingface": "Not Uploaded",
+        "system_lab": "Not Updated",
+        "primary_promotion": "Held; installed primary remains 0.3.5",
+        "model_calls": 0,
+        "training_runs": 0,
+        "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-github-platform-failure.json",
+        "cycle": "improvement/cycles/2026-11-09T202532Z-archive-verification.json",
+        "published": false
+      },
+      "historical_local_package": {
         "state": "Prepared; short Windows path verified, default nested verifier failed; not uploaded or published",
         "path": "C:\\Users\\gilet\\Documents\\ChatGPT\\SYSTEM LABS\\products\\airspace-operations\\release\\local-0.3.7-rc.1\\System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
         "bytes": 17621961,
         "sha256": "44ae7b80506e57ff67474fe954fc79ac6178f42d75e3968c26de432b37a790a2",
         "source_commit": "bfc3c9627226e9e73d419a06406946f71f8ae825"
       },
-      "ci_run": 42783868306,
-      "first_engineering_passed": true,
-      "full_workflow_succeeded": false,
-      "public_release": "Not Published",
-      "huggingface": "Not Uploaded",
-      "system_lab": "Not Updated",
-      "primary_promotion": "Held; installed primary remains 0.3.5",
-      "model_calls": 0,
-      "training_runs": 0,
-      "evidence": "release-evidence/v0.3.7-rc.1/cycle-20261109T142608Z-github-platform-failure.json",
-      "cycle": "improvement/cycles/2026-11-09T202532Z-archive-verification.json",
-      "published": false
+      "full_workflow_scope": "Exact GitHub run; Windows archive and each public destination have separate receipts",
+      "windows_archive_verified": true,
+      "windows_archive_evidence": "release-evidence/v0.3.7-rc.1/cycle-20261110T143515Z-default-public-windows.json",
+      "published_archive": {
+        "name": "System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+        "bytes": 17656358,
+        "sha256": "6efa4bec842092e8e87bf75b10514e009336c5cc35b68ca35f3aaaf16cdf7fd3",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.7-rc.1/System-Lab-Airspace-Operations-0.3.7-rc.1.zip",
+        "http_status": 200,
+        "matches_public_digest": true
+      }
     },
     "historical_local_package": {
       "state": "Prepared; short Windows path verified, default nested verifier failed; not uploaded or published",
@@ -202,6 +278,96 @@
     }
   },
   "current_container_verification": {
+    "state": "Verified isolated engineering run",
+    "source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "run_id": 43563061620,
+    "evidence": "release-evidence/v0.3.8-rc.1/ci-verification.json",
+    "operational_acceptance": false
+  },
+  "candidate_work": {
+    "version": "0.3.8-rc.1",
+    "source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "run_id": 43563061620,
+    "state": "GitHub and model independently retrieved; dataset, Space and Site remain incomplete",
+    "cycle": "improvement/cycles/2026-11-21T091249Z-publication-handover.json",
+    "github": {
+      "state": "Independently Retrieved",
+      "source": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+      "run_id": 43563061620,
+      "release_id": 445053869,
+      "assets": 9,
+      "archive": {
+        "name": "System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+        "bytes": 17715262,
+        "sha256": "c75ac401d6bafef7d858aa8b055c7f6c1d07cf75155b0df691c30e83b45ca857",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+        "http_status": 200,
+        "matches_public_digest": true
+      },
+      "receipt": "release-evidence/v0.3.8-rc.1/cycle-20261114T053519Z-public-downloads.json"
+    },
+    "windows": {
+      "success": true,
+      "passed": 644,
+      "skipped": 21,
+      "warnings": 3,
+      "reported_seconds": 159.77,
+      "receipt": "release-evidence/v0.3.8-rc.1/cycle-20261114T053519Z-default-public-windows.json",
+      "source_only_extraction": "C:/Users/gilet/AppData/Local/SLAV/038p/airspace-operations",
+      "primary_promotion": false
+    },
+    "huggingface": {
+      "model": {
+        "state": "Independently Retrieved",
+        "revision": "71e2db138bd2713535ed89151090467b82535bc9",
+        "version": "0.3.8-rc.1",
+        "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-publication-readonly.json",
+        "unchanged_weights_and_data": true,
+        "verified_at": "2026-11-21T09:15:12.133324+00:00"
+      },
+      "dataset": {
+        "state": "Previous037 retained; upload not completed",
+        "revision": "e8401f7aa61a2f8bef1ee512c89deea5f77d2dbd"
+      },
+      "space": {
+        "state": "Previous037 retained; upload not started",
+        "revision": "28dd24bf8d84e83a86af2e918f58969dc8d47b8f"
+      },
+      "prepared_files": 4,
+      "model_calls": 0,
+      "training_runs": 0
+    },
+    "site": {
+      "state": "038 Prepared locally; public104 remains037",
+      "source_open_commit": "7cc13c7dfd65a8f99089b21fac0981484e154676",
+      "focused_tests_passed": 4,
+      "framework_build_passed": true,
+      "prior_public_files_preserved": 685,
+      "new_small_assets": 8,
+      "new_media": 0,
+      "source_changes": 12,
+      "native_saved_or_deployed": false
+    },
+    "blocked_publication": {
+      "stage": "Dataset upload file chooser recovery",
+      "model_upload_completed": true,
+      "dataset_files_selected": false,
+      "outcome": "Computer Use stopped for this turn because current browser URL on Windows could not be determined with sufficient confidence to enforce policy",
+      "retries_after_policy_stop": 0,
+      "bypass_attempts": 0
+    },
+    "next_action": "Preserve frozen 0.3.8 source, tag and nine assets. Independently verified HF model README71e2 needs no duplicate upload. Dataset, Space and System Lab remain at 0.3.7. Resume only with a permitted browser or an adequate authorized connector; never bypass a browser policy stop or broaden credentials. Reconcile the prepared Site checkout through a fresh owned Site opening, then complete the remaining publication and exact retrieval gates. Verify actual primary recovery separately before promotion. Keep all 198 requirement texts/statuses and the original specification unchanged. Maximum 45 active minutes and two model calls; no model call is needed. No mail, people contact, purchases, aircraft actions, authority decisions or approval changes.",
+    "default_main_handover": "Prepared metadata only; no branch update performed by this helper",
+    "primary_recovery": {
+      "state": "Restored and Verified",
+      "version": "0.3.7-rc.1",
+      "evidence": "release-evidence/v0.3.8-rc.1/cycle-20261121T091249Z-primary-recovery.json",
+      "promoted_to_038": false,
+      "browser_verified": false
+    }
+  },
+  "publication_scope": "Software release 0.3.8 is published; GitHub and model are independently retrieved. Dataset, Space and System Lab updates remain incomplete. This staged default-branch handover requires a separate actual branch-update receipt.",
+  "historical_container_verification": {
     "state": "Failed; one retry requested and not yet verified",
     "run_id": 43258128561,
     "source": "1fe5ecf9164c9b031053ca0fb6ab785903aca937",
@@ -209,12 +375,5 @@
     "container_deployment_acceptance": "Blocked",
     "evidence": "improvement/cycles/2026-11-12T161203Z-container-recheck.json"
   },
-  "candidate_work": {
-    "version": "0.3.8-rc.1",
-    "state": "Development verified; release gates pending",
-    "source": "3f1e338d1d9ebf4ff110a5b6f4a64ba5b519ec8e",
-    "run_id": 43320866252,
-    "cycle": "improvement/cycles/2026-11-13T150730Z-container-release.json",
-    "published": false
-  }
+  "publication_complete": false
 }

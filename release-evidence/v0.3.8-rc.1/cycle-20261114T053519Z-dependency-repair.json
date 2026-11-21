@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-14T05:46:54.180998+00:00",
+  "version": "0.3.8-rc.1",
+  "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+  "scope": "Actual isolated Windows candidate dependency repair; source audit and focused software tests. This is separate from final-source CI, archive installation and publication.",
+  "upstream_advisory": "https://github.com/advisories/GHSA-mf5v-w3w3-f6cg",
+  "before": {
+    "dependency": "opentelemetry-api",
+    "version": "1.45.1",
+    "audit_exit_code": 1,
+    "vulnerabilities": [
+      {
+        "id": "CVE-2026-126360",
+        "alias": "GHSA-mf5v-w3w3-f6cg",
+        "fixed_version": "1.45.2"
+      }
+    ],
+    "seconds": 1.371
+  },
+  "repair": {
+    "explicit_project_constraint": "opentelemetry-api==1.45.2",
+    "only_resolved_third_party_version_change": {
+      "opentelemetry-api": {
+        "before": "1.45.1",
+        "after": "1.45.2"
+      }
+    },
+    "portable_command_equivalents": [
+      [
+        "uv",
+        "lock",
+        "--upgrade-package",
+        "opentelemetry-api"
+      ],
+      [
+        "uv",
+        "export",
+        "--locked",
+        "--no-dev",
+        "--no-emit-project",
+        "--format",
+        "requirements-txt",
+        "--output-file",
+        "requirements.lock.txt"
+      ],
+      [
+        "uv",
+        "sync",
+        "--frozen",
+        "--extra",
+        "dev"
+      ]
+    ],
+    "command_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "official_hash_locked_distribution": "https://pypi.org/project/opentelemetry-api/1.45.2/"
+  },
+  "after": {
+    "installed_dependency_version": "1.45.2",
+    "audit_exit_code": 0,
+    "audited_dependencies": 37,
+    "known_vulnerability_findings": 0,
+    "seconds": 1.662,
+    "portable_command_equivalent": [
+      "python",
+      "-m",
+      "pip_audit",
+      "--no-deps",
+      "--disable-pip",
+      "-r",
+      "requirements.lock.txt",
+      "--format=json"
+    ]
+  },
+  "focused_tests": {
+    "files": [
+      "tests/test_monitoring_api.py",
+      "tests/test_api.py",
+      "tests/test_worker_health.py",
+      "tests/test_database_health.py"
+    ],
+    "exit_code": 0,
+    "passed": 58,
+    "warnings": 1,
+    "warning": "Existing Starlette TestClient/httpx deprecation warning",
+    "command_elapsed_seconds": 39.339,
+    "reported_test_seconds": 37.1,
+    "scope": "Artificial records are confined to isolated software tests"
+  },
+  "source_file_sha256": {
+    "pyproject.toml": "2e2ab6bc93ae2b7ea5a3b9a6d98d155f2d4fb61dc0bef9e145b5c20f99ae3eb4",
+    "uv.lock": "4f33390564a4773fb632e46e005dc61c46c79a50a2759802784976f29d7e3ebf",
+    "requirements.lock.txt": "507db7eaae52d11be4500e5b1f14e51d03bf07185c582b8504fcbe7490cfab7f"
+  },
+  "model_calls": 0,
+  "training_runs": 0,
+  "stable_release_allowed": false,
+  "operational_acceptance": false,
+  "full_original_specification_accepted": false
+}

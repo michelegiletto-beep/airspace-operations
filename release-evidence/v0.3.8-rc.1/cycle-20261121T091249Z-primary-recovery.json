@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-21T09:21:54.765484+00:00",
+  "success": true,
+  "scope": "Actual same-version 0.3.7 source restoration and recovery; read-only API, source, persistent-data and audit checks. No browser or authenticated task read.",
+  "version": "0.3.7-rc.1",
+  "source_commit": "62f507d962cedda5c493c7639ecc230b5ef7b089",
+  "source_files_verified": 1179,
+  "consistent_private_backup_verified": true,
+  "all_tables_unchanged": true,
+  "records": 20,
+  "personal_engineering_tasks": 2,
+  "completed_historical_jobs": 6,
+  "audit_count": 50,
+  "audit_valid": true,
+  "integrity": [
+    "ok"
+  ],
+  "foreign_key_errors": 0,
+  "api_health_status": 200,
+  "unauthenticated_me_status": 401,
+  "unauthenticated_tasks_status": 401,
+  "worker_process_healthy": true,
+  "worker_scope": "Process liveness only; no new job completion verified",
+  "audit_key_unchanged": true,
+  "actor_and_approval_policy_changed": false,
+  "authentication_performed": false,
+  "migration_performed": false,
+  "promoted_to_038": false,
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_records_created": 0,
+  "old_ownership_manifest_changed": false,
+  "limitations": [
+    "The current recovery does not verify browser interaction or an authenticated task read.",
+    "Current private process identities require review before any further recovery or promotion.",
+    "Software checks do not establish operational acceptance."
+  ],
+  "operational_acceptance": false,
+  "full_original_specification_accepted": false,
+  "stable_release_allowed": false
+}

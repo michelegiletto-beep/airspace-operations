@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-14T05:53:19.263511+00:00",
+  "state": "Independently Retrieved",
+  "success": true,
+  "version": "0.3.8-rc.1",
+  "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+  "run_id": 43563061620,
+  "run_conclusion": "success",
+  "release_id": 445053869,
+  "release_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.8-rc.1",
+  "published_at": "2026-11-14T05:52:44Z",
+  "tag": {
+    "ref": "refs/tags/v0.3.8-rc.1",
+    "node_id": "REF_kwDOVZlmNbVyZWZzL3RhZ3MvdjAuMy44LXJjLjE",
+    "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/refs/tags/v0.3.8-rc.1",
+    "object": {
+      "sha": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+      "type": "commit",
+      "url": "https://api.github.com/repos/michelegiletto-beep/airspace-operations/git/commits/dc43fa6856fc256ad0c16ca6d9b3ff79353d185e"
+    }
+  },
+  "assets": [
+    {
+      "name": "ci-verification.json",
+      "bytes": 25383,
+      "sha256": "e4ebd91ebc9bd7152e7ac097ae6e5d5d5a42520ae770a6bb88013611d0ee61c8",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/ci-verification.json",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/LICENSE",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "release-gates.json",
+      "bytes": 1046,
+      "sha256": "50f9f5f11263880e071d18ed647dbc75b29dcecbf06048f7edc04996e7f4f397",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/release-gates.json",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "RELEASE_PROVENANCE.json",
+      "bytes": 159040,
+      "sha256": "b369f09f065df39586408c12eb1664bfa5711f6a49e53ceefd201b97cbdb251d",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/RELEASE_PROVENANCE.json",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "SBOM.cdx.json",
+      "bytes": 80300,
+      "sha256": "6aa1ff3470f87534076283428d7724b8b251d45df6db967bbb861cafa2baf113",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/SBOM.cdx.json",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "ee7a2e0411201dc73c948d5aa8feb423b19560b475653415775619759826237f",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/SHA256SUMS.txt",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "standalone-archive-verification.json",
+      "bytes": 9644,
+      "sha256": "de5df27cdae6a0036f183c262ebd3a64a323ffa1374f4392f0ac515f3217baca",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/standalone-archive-verification.json",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+      "bytes": 17715262,
+      "sha256": "c75ac401d6bafef7d858aa8b055c7f6c1d07cf75155b0df691c30e83b45ca857",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+      "http_status": 200,
+      "matches_public_digest": true
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "bytes": 13971,
+      "sha256": "b6d25fa98ecd2ed3363c9a17b4ca5f41adb83f4a68be01795c20f198418dd32c",
+      "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/THIRD_PARTY_NOTICES.md",
+      "http_status": 200,
+      "matches_public_digest": true
+    }
+  ],
+  "archive": {
+    "name": "System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+    "bytes": 17715262,
+    "sha256": "c75ac401d6bafef7d858aa8b055c7f6c1d07cf75155b0df691c30e83b45ca857",
+    "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+    "http_status": 200,
+    "matches_public_digest": true
+  },
+  "archive_file_count": 1204,
+  "baseline_and_media_bytes_verified": true,
+  "frontend_verification": {
+    "method": "Exact tracked frontend/dist/index.html fast path",
+    "success": true
+  },
+  "original_acceptance": false,
+  "stable_release": false,
+  "operational_acceptance": false
+}

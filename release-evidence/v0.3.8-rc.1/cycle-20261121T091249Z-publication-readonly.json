@@ -1,0 +1,187 @@
+{
+  "at": "2026-11-21T09:15:12.133324+00:00",
+  "success": true,
+  "scope": "Fresh anonymous public GitHub release and partial HF publication verification",
+  "remote_mutations": 0,
+  "model_calls": 0,
+  "training_runs": 0,
+  "operational_acceptance": false,
+  "github": {
+    "state": "Independently Retrieved",
+    "release_id": 445053869,
+    "source_commit": "dc43fa6856fc256ad0c16ca6d9b3ff79353d185e",
+    "run_id": 43563061620,
+    "release_url": "https://github.com/michelegiletto-beep/airspace-operations/releases/tag/v0.3.8-rc.1",
+    "assets_verified": 9,
+    "assets": [
+      {
+        "name": "ci-verification.json",
+        "bytes": 25383,
+        "sha256": "e4ebd91ebc9bd7152e7ac097ae6e5d5d5a42520ae770a6bb88013611d0ee61c8",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/ci-verification.json",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "LICENSE",
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/LICENSE",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "release-gates.json",
+        "bytes": 1046,
+        "sha256": "50f9f5f11263880e071d18ed647dbc75b29dcecbf06048f7edc04996e7f4f397",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/release-gates.json",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "RELEASE_PROVENANCE.json",
+        "bytes": 159040,
+        "sha256": "b369f09f065df39586408c12eb1664bfa5711f6a49e53ceefd201b97cbdb251d",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/RELEASE_PROVENANCE.json",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "SBOM.cdx.json",
+        "bytes": 80300,
+        "sha256": "6aa1ff3470f87534076283428d7724b8b251d45df6db967bbb861cafa2baf113",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/SBOM.cdx.json",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 112,
+        "sha256": "ee7a2e0411201dc73c948d5aa8feb423b19560b475653415775619759826237f",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/SHA256SUMS.txt",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "standalone-archive-verification.json",
+        "bytes": 9644,
+        "sha256": "de5df27cdae6a0036f183c262ebd3a64a323ffa1374f4392f0ac515f3217baca",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/standalone-archive-verification.json",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+        "bytes": 17715262,
+        "sha256": "c75ac401d6bafef7d858aa8b055c7f6c1d07cf75155b0df691c30e83b45ca857",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/System-Lab-Airspace-Operations-0.3.8-rc.1.zip",
+        "matches_prior_verified_bytes": true
+      },
+      {
+        "name": "THIRD_PARTY_NOTICES.md",
+        "bytes": 13971,
+        "sha256": "b6d25fa98ecd2ed3363c9a17b4ca5f41adb83f4a68be01795c20f198418dd32c",
+        "url": "https://github.com/michelegiletto-beep/airspace-operations/releases/download/v0.3.8-rc.1/THIRD_PARTY_NOTICES.md",
+        "matches_prior_verified_bytes": true
+      }
+    ],
+    "archive_member_hashes_verified": 1203,
+    "tag_unchanged": true,
+    "main_sha": "f44aa243588f02775290a4b6392ecdf5b8c78219",
+    "main_version_source": "\"\"\"System Lab Airspace Operations decision-support services.\"\"\"\n\n__version__ = \"0.3.7-rc.1\"\n",
+    "main_readme_first_lines": [
+      "## Archive verification update",
+      "",
+      "The unpublished 0.3.7 candidate also repairs the default Windows archive verification path. The complete installation, CLI, empty API and unfiltered pytest checks remain required. An explicit private work root is optional; paths and isolated child configuration are recorded. Existing Prepared artifacts and published releases remain unchanged. Final-source and actual default-run evidence define the result; focused helper tests alone do not establish installation success.",
+      "",
+      "## Restore validation checkpoint, 9 November 2026",
+      "",
+      "The 0.3.7 repair is implemented at `bfc3c9627226e9e73d419a06406946f71f8ae825`. Missing or invalid SQLite backups now fail before target creation. Existing targets were already refused; no ordinary existing-target overwrite was observed. Read-only input validation, exclusive target creation and guarded cleanup passed 15 focused regressions. The Windows source suite passed 598 tests with 21 skipped; the interface passed 205. The first remote engineering job passed 599 Linux tests with 20 skipped, 19 PostgreSQL checks and actual containers, worker and restoration.",
+      ""
+    ],
+    "release_vs_main": {
+      "status": "ahead",
+      "ahead_by": 5,
+      "behind_by": 0,
+      "total_commits": 5
+    },
+    "main_differs_from_release": true
+  },
+  "huggingface_heads": {
+    "model": "71e2db138bd2713535ed89151090467b82535bc9",
+    "dataset": "e8401f7aa61a2f8bef1ee512c89deea5f77d2dbd",
+    "space": "28dd24bf8d84e83a86af2e918f58969dc8d47b8f"
+  },
+  "huggingface_model": {
+    "state": "Independently Retrieved",
+    "head": "71e2db138bd2713535ed89151090467b82535bc9",
+    "prior": "acb87049183b9721de9d7d40a80bda8fb31af4f8",
+    "prior_is_ancestor": true,
+    "changed_paths": [
+      "README.md"
+    ],
+    "all_unlisted_tree_entries_unchanged": true,
+    "no_deletions": true,
+    "staged_files_verified": 9,
+    "checks": [
+      {
+        "path": "NOTICE.md",
+        "bytes": 1750,
+        "sha256": "76fe26fde8e843c8725802e6e39ae731c5edc93f438a60c077a9cec323418024",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/NOTICE.md"
+      },
+      {
+        "path": "README.md",
+        "bytes": 27410,
+        "sha256": "1714edfbb37b5cf444a5f07db62edaae66629159eb0aeb0936ed3f9bbd0fe102",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/README.md"
+      },
+      {
+        "path": "media/companion-tasks.png",
+        "bytes": 123755,
+        "sha256": "06a07c327e53f5242085ac026901a819e447297e8fd56a4574aefa79d81f5688",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/companion-tasks.png"
+      },
+      {
+        "path": "media/confirmation-review.jpg",
+        "bytes": 35457,
+        "sha256": "a74f0ed613b5ac341e93e841d4d7aecb488b573a7da7f2e9598741abe1000426",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/confirmation-review.jpg"
+      },
+      {
+        "path": "media/draft-continuity-mobile.jpg",
+        "bytes": 42148,
+        "sha256": "5d63ad75161e20dfa1a56c4051ee7bed7b3b6072fe2df6a3c5007d244c12205e",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/draft-continuity-mobile.jpg"
+      },
+      {
+        "path": "media/operations-permissions-mobile.jpg",
+        "bytes": 35517,
+        "sha256": "a82143bb86ed1baebff2f0518d27bb2ae826332a0b378c24786d342ab912b581",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/operations-permissions-mobile.jpg"
+      },
+      {
+        "path": "media/restored-tasks037.jpg",
+        "bytes": 35868,
+        "sha256": "7ddd8b4a761aaa6c7a46da90ae51fe22f0a7be0a2fdb7c623d26ad90e4edb973",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/restored-tasks037.jpg"
+      },
+      {
+        "path": "media/task-recovery-mobile.jpg",
+        "bytes": 35896,
+        "sha256": "b5e9f44969fcf6db6a6a24ff85922a643e40b957e2884d2741549689e0287a1b",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/task-recovery-mobile.jpg"
+      },
+      {
+        "path": "media/workflow-context-mobile.jpg",
+        "bytes": 32817,
+        "sha256": "c06cc09632b4cadcae7e5e9002143beae98a780a144c6500ad60bc5d743e5102",
+        "url": "https://huggingface.co/Magic51/system-lab-airspace-shall-router/resolve/71e2db138bd2713535ed89151090467b82535bc9/media/workflow-context-mobile.jpg"
+      }
+    ],
+    "student_bytes": 49824,
+    "student_sha256": "ff96770308c96b9d96c5f8f6535576e9d791834f76291bf08fce99dcf34d6e6c",
+    "actual_student_bytes_unchanged": true
+  },
+  "huggingface_dataset": {
+    "head": "e8401f7aa61a2f8bef1ee512c89deea5f77d2dbd",
+    "matches_previous037": true
+  },
+  "huggingface_space": {
+    "head": "28dd24bf8d84e83a86af2e918f58969dc8d47b8f",
+    "matches_previous037": true
+  }
+}
